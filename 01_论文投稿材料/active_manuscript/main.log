@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  12 SEP 2026 00:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  12 SEP 2026 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1250,14 +1250,21 @@ Underfull \hbox (badness 1067) in paragraph at lines 51--52
 m/n/10 (+20) ),
  []
 
-[9] (tables/table_information_budget.tex
-Underfull \hbox (badness 1931) in paragraph at lines 28--28
-[]|\T1/txr/m/n/8 (+20) D. Budget-Matched Scram-bled
+[9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(tables/table_information_budget.tex
+Underfull \hbox (badness 1286) in paragraph at lines 28--28
+[]|\T1/txr/m/n/8 (+20) C. Full-Historical Gen-uine Pri-or
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 28--28
-[]|\T1/txr/m/n/8 (+20) D. Budget-Matched Scram-bled
+Underfull \hbox (badness 1286) in paragraph at lines 28--28
+[]|\T1/txr/m/n/8 (+20) C. Full-Historical Gen-uine Pri-or
  []
 
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <7> not available
@@ -1290,54 +1297,42 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-(tables/table3_paired_bootstrap.tex) (tables/table4_zero_bid_diagnostic.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(tables/table3_paired_bootstrap.tex) [13 <./figures/fig_causal_ablation.pdf>]
+(tables/table4_zero_bid_diagnostic.tex
 Underfull \hbox (badness 2359) in paragraph at lines 33--33
 []|\T1/txr/m/n/8 (+20) Calibrated Pow-er Curve
  []
 
 )
-<figures/fig_market_decoupling.pdf, id=703, 758.835pt x 274.626pt>
+<figures/fig_market_decoupling.pdf, id=844, 758.835pt x 274.626pt>
 File: figures/fig_market_decoupling.pdf Graphic file (type pdf)
 <use figures/fig_market_decoupling.pdf>
 Package pdftex.def Info: figures/fig_market_decoupling.pdf  used on input line 
 84.
 (pdftex.def)             Requested size: 468.0pt x 169.37378pt.
- [13 <./figures/fig_causal_ablation.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [14 <./figures/fig_within_site_learning_curve.pdf> <./figures/fig_prior_corrup
 tion_gradient.pdf>]
-
-LaTeX Warning: Text page 15 contains only floats.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3219) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Warning: Text page 15 contains only floats.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3219) has occurred while \output is active []
 
  [15]
+(tables/table5_patchtst_and_rules.tex)) (sections/06_code_audit.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Text page 16 contains only floats.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <./figures/fig_market_decoupling.pdf>]
+
+LaTeX Warning: Text page 17 contains only floats.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1347,7 +1342,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Text page 16 contains only floats.
+LaTeX Warning: Text page 17 contains only floats.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1355,15 +1350,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-(tables/table5_patchtst_and_rules.tex)) (sections/06_code_audit.tex [17 <./figu
-res/fig_market_decoupling.pdf>]
-Underfull \vbox (badness 5681) has occurred while \output is active []
-
-
-Underfull \vbox (badness 5681) has occurred while \output is active []
-
-
+ [17]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 \T1/txr/m/n/10 (+20) In the Py-Torch C++ AT-en k-er-nel back-
  []
@@ -1386,16 +1374,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[18]
-<figures/fig_pct_loss_empirical_contrast.pdf, id=1137, 679.62384pt x 269.11604p
+[19]
+<figures/fig_pct_loss_empirical_contrast.pdf, id=1148, 679.62384pt x 269.11604p
 t>
 File: figures/fig_pct_loss_empirical_contrast.pdf Graphic file (type pdf)
 <use figures/fig_pct_loss_empirical_contrast.pdf>
 Package pdftex.def Info: figures/fig_pct_loss_empirical_contrast.pdf  used on i
 nput line 80.
 (pdftex.def)             Requested size: 468.0pt x 185.32478pt.
- [19]) (sections/07_theory.tex [20 <./figures/fig_pct_loss_empirical_contrast.p
-df>] [21]
+) (sections/07_theory.tex [20] [21 <./figures/fig_pct_loss_empirical_contrast.p
+df>]
 Underfull \hbox (badness 3849) in paragraph at lines 109--110
 [][]\T1/txr/m/it/10 (+20) Remark \T1/txr/m/n/10 (+20) 3 (Mech-a-nis-tic D-e-duc
 -tion 3: In-duc-tive
@@ -1459,21 +1447,21 @@ Underfull \hbox (badness 1824) in paragraph at lines 41--41
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[26] [27]) (sections/10_appendix.tex
+[26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+[28]) (sections/10_appendix.tex
 Underfull \hbox (badness 2726) in paragraph at lines 1--1
 \T1/txr/bx/n/10 (+20) Cal-i-bra-tion Bound-aries and Coun-
  []
 
-[28]
+
 Underfull \hbox (badness 10000) in paragraph at lines 58--58
 []\T1/txr/m/it/10 (+20) Counterexample 2: S-pa-tial Het-
  []
@@ -1501,14 +1489,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--177
 m ? id =
  []
 
-
-Underfull \vbox (badness 1173) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1173) has occurred while \output is active []
-
-) [32]
-(main.aux)
+) [32] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1517,13 +1498,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AC7235D701655E26826F24A1D77450C4;5538.
  ) 
 Here is how much of TeX's memory you used:
- 23811 strings out of 469789
- 423482 string characters out of 5472196
- 862450 words of memory out of 5000000
+ 23859 strings out of 469789
+ 423807 string characters out of 5472196
+ 864331 words of memory out of 5000000
  50714 multiletter control sequences out of 15000+600000
- 752387 words of font info for 942 fonts, out of 8000000 for 9000
+ 754458 words of font info for 979 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,17n,79p,2575b,2878s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,79p,3070b,2854s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <E:\MiKTeX-data\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <E:\MiKTeX-d
 ata\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <E:\MiKTeX-data\fonts/pk/lj
 four/jknappen/ec/dpi600\ectt0800.pk><E:/MiKTeX/fonts/type1/public/amsfonts/symb
@@ -1534,7 +1515,7 @@ fonts/rtxr.pfb><E:/MiKTeX/fonts/type1/public/txfonts/txex.pfb><E:/MiKTeX/fonts/
 type1/public/txfonts/txsy.pfb><E:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/M
 iKTeX/fonts/type1/urw/times/utmr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on main.pdf (33 pages, 730324 bytes).
+Output written on main.pdf (33 pages, 732933 bytes).
 PDF statistics:
  1765 PDF objects out of 2073 (max. 8388607)
  257 named destinations out of 1000 (max. 500000)

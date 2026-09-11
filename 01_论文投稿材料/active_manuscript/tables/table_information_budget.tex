@@ -3,32 +3,32 @@
 \footnotesize
 \renewcommand{\arraystretch}{0.82}
 \setlength{\tabcolsep}{3.0pt}
-\caption{Information-Budget Matched Controlled Ablation at $N_{\text{train}}=500$ ($\approx 21$ Days Training Telemetry): Disentangling Physical Inductive Bias from Auxiliary Historical Data Budgets (Quantile Calibrated $r=2, q=1/3$, 5 Seeds).}
+\caption{Controlled Robustness Ablation under Matched Sample Windows at $N_{\text{train}}=500$ ($\approx 21$ Days Training Telemetry): Disentangling Domain Prior Geometry from Auxiliary Historical Data Budgets (Quantile Calibrated $r=2, q=1/3$, All Prior Arms $\lambda=1.0$, 5 Seeds).}
 \label{tab:information_budget}
 \begin{threeparttable}
-\begin{tabularx}{\textwidth}{p{2.3cm}p{3.8cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{p{2.3cm}p{4.0cm}>{\centering\arraybackslash}p{2.0cm}>{\centering\arraybackslash}p{2.0cm}>{\centering\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Wind Farm} & \textbf{Controlled Experimental} & \textbf{Model Training} & \textbf{Prior Information} & \textbf{Cost ($r=2$)} & \textbf{Empirical Takeaway} \\
 \textbf{\& Topology} & \textbf{Arm Condition} & \textbf{Budget} & \textbf{Budget} & \textbf{(Mean $\pm$ Std)} & \textbf{\& Identification Rationale} \\
 \midrule
 \multirow{5}{=}{\textbf{Kelmarsh}\\(12.3 MW)\\\textit{Flat Open Terrain}} 
 & A. No Physical Prior ($\lambda=0$) & 500 samples & None & $0.09648 \pm 0.00314$ & Pure-data unconstrained baseline under data restriction \\
-& B. Budget-Matched Genuine Prior & 500 samples & 500 samples & $0.09499 \pm 0.00307$ & \textbf{Physical Inductive Gain} ($-1.54\%$): accounts for $77\%$ of full-history gain \\
-& C. Full-Historical Genuine Prior & 500 samples & 7 months (full) & \textbf{$0.09455 \pm 0.00285$} & Full gain ($-2.00\%$): historical seasonal pool adds incremental $-0.46\%$ \\
-& D. Budget-Matched Scrambled Control & 500 samples & 500 samples & $0.13827 \pm 0.02333$ & \textbf{Prior Specificity}: permuting mapping triggers $+43.3\%$ cost inflation \\
-& E. Full-Historical Scrambled Control & 500 samples & 7 months (full) & $0.13798 \pm 0.02338$ & Scrambling across full seasonal history remains severely harmful ($+43.0\%$) \\
+& B. Budget-Matched Genuine Prior ($\lambda=1.0$) & 500 samples & 500 samples & $0.09499 \pm 0.00307$ & \textbf{Domain Structure Effect} ($-1.54\%$ mean): retains $\approx 77\%$ of full-history mean gain \\
+& C. Full-Historical Genuine Prior ($\lambda=1.0$) & 500 samples & 7 months (full) & \textbf{$0.09455 \pm 0.00285$} & Full-history mean gain ($-2.00\%$): historical pool adds modest incremental gain ($-0.46\%$) \\
+& D. Budget-Matched Scrambled Control ($\lambda=1.0$) & 500 samples & 500 samples & $0.13827 \pm 0.02333$ & \textbf{Prior Specificity}: permuting mapping triggers $+43.3\%$ cost inflation \\
+& E. Full-Historical Scrambled Control ($\lambda=1.0$) & 500 samples & 7 months (full) & $0.13798 \pm 0.02338$ & Scrambling across full seasonal history remains severely harmful ($+43.0\%$) \\
 \midrule
 \multirow{5}{=}{\textbf{Hill of Towie}\\(48.3 MW)\\\textit{Complex Upland}} 
 & A. No Physical Prior ($\lambda=0$) & 500 samples & None & $0.10444 \pm 0.00312$ & Data-starved unconstrained baseline prone to overfitting \\
-& B. Budget-Matched Genuine Prior & 500 samples & 500 samples & $0.10095 \pm 0.00305$ & \textbf{Physical Inductive Gain} ($-3.34\%$): accounts for $92\%$ of full-history gain \\
-& C. Full-Historical Genuine Prior & 500 samples & 10 months (full) & \textbf{$0.10066 \pm 0.00307$} & Full gain ($-3.62\%$): historical seasonal pool adds incremental $-0.28\%$ \\
-& D. Budget-Matched Scrambled Control & 500 samples & 500 samples & $0.15248 \pm 0.00253$ & \textbf{Prior Specificity}: permuting mapping triggers $+46.0\%$ cost inflation \\
-& E. Full-Historical Scrambled Control & 500 samples & 10 months (full) & $0.17209 \pm 0.01703$ & Severe misspecification penalty under strong constraint ($+64.8\%$) \\
+& B. Budget-Matched Genuine Prior ($\lambda=1.0$) & 500 samples & 500 samples & $0.10095 \pm 0.00305$ & \textbf{Domain Structure Effect} ($-3.34\%$ mean): retains $\approx 92\%$ of full-history mean gain \\
+& C. Full-Historical Genuine Prior ($\lambda=1.0$) & 500 samples & 10 months (full) & \textbf{$0.10066 \pm 0.00307$} & Full-history mean gain ($-3.62\%$): historical pool adds modest incremental gain ($-0.28\%$) \\
+& D. Budget-Matched Scrambled Control ($\lambda=1.0$) & 500 samples & 500 samples & $0.15248 \pm 0.00253$ & \textbf{Prior Specificity}: permuting mapping triggers $+46.0\%$ cost inflation \\
+& E. Full-Historical Scrambled Control ($\lambda=1.0$) & 500 samples & 10 months (full) & $0.17209 \pm 0.01703$ & Severe misspecification penalty under strong constraint ($+64.8\%$) \\
 \bottomrule
 \end{tabularx}
 \begin{tablenotes}[flushleft]
 \scriptsize
-\item \textbf{Notes}: (1) All models share identical DLinear architectures, optimization parameters, and post-hoc quantile calibration offsets ($r=2, q=1/3$) evaluated over the full-year 2017 test timeline across 5 random seeds (42, 123, 456, 789, 1024). (2) Arms A, B, and D share the exact same 500-sample training information window ($\approx 21$ consecutive days), proving that the downside risk reduction of physical constraints persists even when the prior is barred from accessing external historical records. (3) The incremental benefit of extending the prior fitting window from 500 samples to 7--10 months is modest ($-0.46\%$ on Kelmarsh and $-0.28\%$ on Hill of Towie), indicating that domain physical structure rather than extra historical data volume drives the observed downside risk reduction.
+\item \textbf{Notes}: (1) All models share identical DLinear architectures, optimization parameters, and post-hoc quantile calibration offsets ($r=2, q=1/3$) evaluated over the full-year 2017 test timeline across 5 random seeds (42, 123, 456, 789, 1024). All genuine and scrambled prior arms (Arms B--E) evaluate under penalty weight $\lambda=1.0$. (2) Arms A, B, and D share the exact same 500-sample training data window ($\approx 21$ consecutive days). The budget-matched prior retains most of the mean improvement observed with the full-history prior (approximately $77\%$ on Kelmarsh and $92\%$ on Hill of Towie). Under paired differences across the 5 identical seeds, the budget-matched prior yields a mean paired risk reduction of $-0.00149$ ($95\%$ CI: $[-0.00174, -0.00124]$) on Kelmarsh and $-0.00349$ ($95\%$ CI: $[-0.00368, -0.00331]$) on Hill of Towie relative to Arm A, while expanding the prior to full historical records provides an incremental paired reduction of $-0.00044$ ($95\%$ CI: $[-0.00075, -0.00013]$) and $-0.00029$ ($95\%$ CI: $[-0.00041, -0.00016]$), respectively. (3) These paired comparisons indicate that domain-structured empirical prior effects under a matched temporal data window account for the majority of the observed risk reduction, rather than extra historical data volume alone.
 \end{tablenotes}
 \end{threeparttable}
 \end{table*}

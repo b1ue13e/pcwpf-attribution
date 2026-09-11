@@ -13,37 +13,20 @@ H.~Holttinen, et~al., Design and operation of power systems with large amounts
 R.~Weron, Electricity price forecasting: A review of the state-of-the-art,
   International Journal of Forecasting 30~(4) (2014) 1030--1081.
 
-\bibitem{zhou2021informer}
-H.~Zhou, S.~Zhang, J.~Peng, S.~Zhang, J.~Li, H.~Xiong, W.~Zhang, Informer:
-  Beyond efficient transformer for long sequence time-series forecasting,
-  Proceedings of the AAAI Conference on Artificial Intelligence 35~(12) (2021)
-  11106--11115.
-
-\bibitem{wang2024timemixer}
-S.~Wang, H.~Wu, X.~Shi, T.~Hu, H.~Luo, L.~Ma, J.~Y. Zhang, J.~Zhou,
-  \href{https://openreview.net/forum?id=7oLshfEIC2}{Timemixer: Decomposable
-  multiscale mixing for time series forecasting}, in: The Twelfth International
-  Conference on Learning Representations (ICLR 2024), 2024, pp. 1--14.
-\newline\urlprefix\url{https://openreview.net/forum?id=7oLshfEIC2}
-
-\bibitem{liu2024itransformer}
-Y.~Liu, T.~Hu, H.~Zhang, H.~Wu, S.~Wang, L.~Ma, M.~Long,
-  \href{https://openreview.net/forum?id=JePfAI8fah}{itransformer: Inverted
-  transformers are effective for time series forecasting}, in: The Twelfth
-  International Conference on Learning Representations (ICLR 2024), 2024, pp.
-  1--16.
-\newline\urlprefix\url{https://openreview.net/forum?id=JePfAI8fah}
-
-\bibitem{karniadakis2021physics}
-G.~E. Karniadakis, I.~G. Kevrekidis, L.~Lu, P.~Perdikaris, S.~Wang, L.~Yang,
-  Physics-informed machine learning, Nature Reviews Physics 3~(6) (2021)
-  422--440.
+\bibitem{lipton2019}
+Z.~C. Lipton, J.~Steinhardt, Troubling trends in machine learning scholarship,
+  Communications of the ACM 62~(6) (2019) 45--53.
 
 \bibitem{raissi2019physics}
 M.~Raissi, P.~Perdikaris, G.~E. Karniadakis, Physics-informed neural networks:
   A deep learning framework for solving forward and inverse problems involving
   nonlinear partial differential equations, Journal of Computational Physics
   378 (2019) 686--707.
+
+\bibitem{karniadakis2021physics}
+G.~E. Karniadakis, I.~G. Kevrekidis, L.~Lu, P.~Perdikaris, S.~Wang, L.~Yang,
+  Physics-informed machine learning, Nature Reviews Physics 3~(6) (2021)
+  422--440.
 
 \bibitem{sheng2025annreview}
 L.~Sheng, C.~Li, M.~Gao, X.~Xi, D.~Zhou, A review of {SCADA}-based condition
@@ -52,22 +35,11 @@ L.~Sheng, C.~Li, M.~Gao, X.~Xi, D.~Zhou, A review of {SCADA}-based condition
 \newblock \href {https://doi.org/10.1016/j.neucom.2025.129830}
   {\path{doi:10.1016/j.neucom.2025.129830}}.
 
-\bibitem{tgdpf2025}
-J.~Gao, Y.~Cheng, D.~Zhang, Y.~Chen, Physics-constrained wind power forecasting
-  aligned with probability distributions for noise-resilient deep learning,
-  Applied Energy 383 (2025) 125295.
-\newblock \href {https://doi.org/10.1016/j.apenergy.2025.125295}
-  {\path{doi:10.1016/j.apenergy.2025.125295}}.
-
 \bibitem{pct2026}
 D.~Wang, Q.~Luo, J.~Gao, D.~Zhang, Y.~Chen, Physics-constrained transformer for
   wind power forecasting, Scientific Reports 16~(1) (2026) 4237.
 \newblock \href {https://doi.org/10.1038/s41598-025-34348-x}
   {\path{doi:10.1038/s41598-025-34348-x}}.
-
-\bibitem{lipton2019}
-Z.~C. Lipton, J.~Steinhardt, Troubling trends in machine learning scholarship,
-  Communications of the ACM 62~(6) (2019) 45--53.
 
 \bibitem{kapoor2023}
 S.~Kapoor, A.~Narayanan, Leakage and the reproducibility crisis in
@@ -79,12 +51,12 @@ J.~Pineau, P.~Vincent-Lamarre, K.~Sinha, V.~Larivi{\\'e}re, A.~Beygelzimer,
   machine learning research: A report from the {NeurIPS} 2019 reproducibility
   program, Journal of Machine Learning Research 22~(164) (2021) 1--20.
 
-\bibitem{s10_pinnuq2025}
-C.~Xu, J.~Wang, L.~Zhang, Y.~Liu, Physics-informed neural networks with
-  uncertainty quantification for wind turbine power modeling, Engineering
-  Applications of Artificial Intelligence 140 (2025) 109650.
-\newblock \href {https://doi.org/10.1016/j.engappai.2024.109650}
-  {\path{doi:10.1016/j.engappai.2024.109650}}.
+\bibitem{tgdpf2025}
+J.~Gao, Y.~Cheng, D.~Zhang, Y.~Chen, Physics-constrained wind power forecasting
+  aligned with probability distributions for noise-resilient deep learning,
+  Applied Energy 383 (2025) 125295.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2025.125295}
+  {\path{doi:10.1016/j.apenergy.2025.125295}}.
 
 \bibitem{s34_prx2023}
 N.~Zehtabiyan-Rezaie, A.~Iosifidis, M.~Abkar, Physics-guided machine learning
@@ -202,6 +174,13 @@ Y.~Nie, N.~H. Nguyen, P.~Sinthong, J.~Kalagnanam,
   International Conference on Learning Representations (ICLR 2023), 2023, pp.
   1--15.
 \newline\urlprefix\url{https://openreview.net/forum?id=Jbdc0vTOcol}
+
+\bibitem{s10_pinnuq2025}
+C.~Xu, J.~Wang, L.~Zhang, Y.~Liu, Physics-informed neural networks with
+  uncertainty quantification for wind turbine power modeling, Engineering
+  Applications of Artificial Intelligence 140 (2025) 109650.
+\newblock \href {https://doi.org/10.1016/j.engappai.2024.109650}
+  {\path{doi:10.1016/j.engappai.2024.109650}}.
 
 \bibitem{koenker2005}
 R.~Koenker, Quantile Regression, Cambridge University Press, 2005.
