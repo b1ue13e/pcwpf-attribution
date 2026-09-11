@@ -16,6 +16,27 @@ When physical constraint formulations rely on meteorological proxies to query em
 \paragraph{Metric Decoupling and the Zero-Bid Diagnostic}
 Under standard two-settlement market design, total generator revenue is $R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q)$. Evaluations that drop the forward commitment term and report only balancing cashflow are measuring imbalance rent, not forecast skill. As an analytical imbalance-settlement and decision-risk diagnostic, the degenerate Zero-Bid baseline ($q \equiv 0$) provides a mathematical \textit{reductio ad absurdum}: it extracts £223k--£243k per turbine-year across all three farms without generating forecasts, simply by converting all physical generation into uncontracted spill rewarded at $P_{\text{imb}}$. This confirms that standalone unhedged balancing cashflows are decoupled from forecasting skill, and that assessing full commercial value requires joint modeling of forward contract revenue ($P_{\text{DA}} \cdot q$) and imbalance settlement. Operational evaluations must report asymmetric Pinball loss at the market penalty ratio or full two-settlement P\&L.
 
+\subsection{Attributional Identification: What Is Identified vs.\ What Is Not}
+\label{sec:identification}
+To maintain rigorous scientific standards and prevent inductive over-reach, we explicitly articulate the causal identification boundaries of this audit:
+
+\paragraph{What Is Formally Identified}
+\begin{enumerate}[leftmargin=*, label=(\alph*)]
+\item \textbf{Data-Starvation Dynamics (Within-Site)}: By subsampling training sequences while holding site topography, turbine hardware, and meteorological distributions strictly identical (Figure~\ref{fig:within_site_learning_curve}), we causally identify that physical constraints deliver measurable inductive protection primarily under restricted sample volumes ($N_{\text{train}} \le 1{,}000$).
+\item \textbf{Physical Specificity vs.\ Non-Specific Smoothing}: By comparing genuine power curves against scale-matched pseudo-scrambled controls under identical network architectures, optimization schedules, and loss parameters, we isolate true aerodynamic guidance from general numerical regularization.
+\item \textbf{Loss Sensitivity to Historical Proxy Latency}: By scanning proxy staleness $k \in \{6, \dots, 36\}$ steps within the training loss, we isolate the mathematical degradation induced by lagged meteorological inputs when forward weather forecasts are absent.
+\item \textbf{Software Discrepancy in Divergence Optimization}: Static AST analysis and gradient derivation isolate an exact algebraic inversion in the PCT code repository, establishing a concrete implementation divergence between published formulas and software execution.
+\item \textbf{Metric Decoupling of Imbalance Cashflows}: The degenerate Zero-Bid baseline mathematically separates standalone unhedged balancing cashflows from true predictive accuracy.
+\end{enumerate}
+
+\paragraph{What Is Not Identified (Confounding Disclaimers)}
+\begin{enumerate}[leftmargin=*, label=(\roman*)]
+\item \textbf{Cross-Site Topographical Causation}: Differences across Kelmarsh, Hill of Towie, and Penmanshiel confound topographic complexity with turbine ratings (2.05\,MW vs.\ 2.30\,MW), hub heights, wake geometry, and local micro-climates. We do not claim that complex terrain causally mandates physical constraints.
+\item \textbf{Global Generalization Beyond Scoped Cohort}: The 95.7\% code deficit and 50.0\% confounded ablation rates characterize the audited 46-study scoping cohort (2023--2026) under PRISMA-ScR protocols, not the entire machine learning or power engineering literature.
+\item \textbf{Software Bugs as Universal Practice}: Auditing PCT and PINN-UQ demonstrates that code-manuscript discrepancies can occur; it does not imply that all published physics-informed energy forecasting codebases contain errors.
+\item \textbf{Decoupled Calibration Universality}: Counterexamples 1 and 2 are formal existence / possibility proofs establishing the theoretical limits of scalar quantile offsets under spatial heteroscedasticity, not an empirical assertion that scalar calibration always underperforms joint asymmetric training.
+\end{enumerate}
+
 \subsection{External Validity Boundaries}
 \label{sec:boundary_contract}
 Five operational boundaries define the validity envelope of our empirical findings:

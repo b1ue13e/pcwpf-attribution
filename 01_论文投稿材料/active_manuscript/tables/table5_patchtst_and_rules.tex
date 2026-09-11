@@ -1,38 +1,41 @@
 \begin{table*}[!t]
 \centering
 \footnotesize
-\renewcommand{\arraystretch}{0.85}
-\setlength{\tabcolsep}{2.8pt}
-\caption{Exploratory Cross-Backbone Architectural Sensitivity Analysis: Modern Deep Transformer (PatchTST, ICLR 2023) under BSC 30-Minute Physical Netting Settlement (5-Seed Mean $\pm$ Std).}
+\renewcommand{\arraystretch}{0.90}
+\setlength{\tabcolsep}{3.2pt}
+\caption{Exploratory Cross-Backbone Architectural Sensitivity Analysis: Deep Transformer (PatchTST) under BSC 30-Minute Physical Netting Settlement (5-Seed Mean $\pm$ Std).}
 \label{tab:patchtst_and_rules}
 \begin{threeparttable}
-\begin{tabularx}{\textwidth}{p{2.0cm}p{3.0cm}l>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{p{2.0cm}p{3.2cm}l>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
 \toprule
 \textbf{Site} & \textbf{PatchTST Model} & \textbf{Policy} & \textbf{RMSE} & \textbf{Normalized Dynamic} & \textbf{Shortfall Cashout} & \textbf{Balancing Imbalance} \\
  & \textbf{Variant} & & \textbf{(pu)} & \textbf{Cost $\text{Cost}_{\text{dyn}}$} & \textbf{(\pounds/(turb$\cdot$yr))} & \textbf{Cashflow (\pounds/(turb$\cdot$yr))} \\
 \midrule
-\multirow{6}{=}{\textbf{Hill of Towie}\\(48.3 MW, Upland)} & \multirow{2}{=}{Unconstrained PatchTST} & Uncalibrated & 0.1176 & 0.10518 & \pounds 21,753.77 & \pounds 12,292.64 \\
- &  & \textbf{Calibrated} & 0.1202 & 0.10220 & \pounds 18,168.11 & \pounds 20,822.29 \\
- & Power Curve ($\lambda=0.01$) & Calibrated & 0.1201 & 0.10212 & \pounds 18,163.56 & \pounds 20,765.01 \\
- & \multirow{2}{=}{Distribution Prior ($\lambda=0.01$)} & Uncalibrated & 0.1162 & 0.10507 & \pounds 22,362.12 & \pounds 9,762.57 \\
- &  & \textbf{Calibrated} & 0.1192 & 0.10129 & \textbf{\pounds 17,935.67} & \textbf{\pounds 20,253.61} \\
-\cmidrule(lr){1-7}
-\multirow{6}{=}{\textbf{Kelmarsh}\\(12.3 MW, Flat)} & \multirow{2}{=}{Unconstrained PatchTST} & Uncalibrated & 0.1092 & 0.10889 & \pounds 22,630.77 & \pounds 4,523.36 \\
- &  & \textbf{Calibrated} & 0.1118 & 0.10222 & \textbf{\pounds 16,808.90} & \textbf{\pounds 17,411.89} \\
- & Power Curve ($\lambda=0.01$) & Calibrated & 0.1117 & 0.10212 & \pounds 16,774.31 & \pounds 17,431.54 \\
- & \multirow{2}{=}{Distribution Prior ($\lambda=0.01$)} & Uncalibrated & 0.1075 & 0.10870 & \pounds 23,336.46 & \pounds 1,528.06 \\
- &  & \textbf{Calibrated} & 0.1097 & 0.10075 & \pounds 16,681.41 & \pounds 16,046.77 \\
-\cmidrule(lr){1-7}
-\multirow{6}{=}{\textbf{Penmanshiel}\\(28.7 MW, Upland)} & \multirow{2}{=}{Unconstrained PatchTST} & Uncalibrated & 0.1268 & 0.12107 & \pounds 26,956.48 & \pounds 3,001.45 \\
- &  & \textbf{Calibrated} & 0.1304 & 0.11270 & \pounds 19,129.15 & \pounds 20,453.24 \\
- & Power Curve ($\lambda=0.01$) & Calibrated & 0.1303 & 0.11264 & \pounds 19,118.38 & \pounds 20,444.41 \\
- & \multirow{2}{=}{Distribution Prior ($\lambda=0.01$)} & Uncalibrated & 0.1265 & 0.11729 & \pounds 24,606.87 & \pounds 6,473.07 \\
- &  & \textbf{Calibrated} & 0.1300 & 0.11134 & \textbf{\pounds 18,338.64} & \textbf{\pounds 21,117.53} \\
+\multirow{5}{=}{\textbf{Hill of Towie}\\(48.3 MW, Upland)} 
+& Unconstrained PatchTST & Uncalibrated & 0.1176 & 0.10518 & \pounds 21,753.77 & \pounds 12,292.64 \\
+& Unconstrained PatchTST & \textbf{Calibrated} & 0.1202 & 0.10220 & \pounds 18,168.11 & \pounds 20,822.29 \\
+& Power Curve ($\lambda=0.01$) & Calibrated & 0.1201 & 0.10212 & \pounds 18,163.56 & \pounds 20,765.01 \\
+& Distribution Prior ($\lambda=0.01$) & Uncalibrated & 0.1162 & 0.10507 & \pounds 22,362.12 & \pounds 9,762.57 \\
+& Distribution Prior ($\lambda=0.01$) & \textbf{Calibrated} & 0.1192 & 0.10129 & \textbf{\pounds 17,935.67} & \textbf{\pounds 20,253.61} \\
+\midrule
+\multirow{5}{=}{\textbf{Kelmarsh}\\(12.3 MW, Flat)} 
+& Unconstrained PatchTST & Uncalibrated & 0.1092 & 0.10889 & \pounds 22,630.77 & \pounds 4,523.36 \\
+& Unconstrained PatchTST & \textbf{Calibrated} & 0.1118 & 0.10222 & \textbf{\pounds 16,808.90} & \textbf{\pounds 17,411.89} \\
+& Power Curve ($\lambda=0.01$) & Calibrated & 0.1117 & 0.10212 & \pounds 16,774.31 & \pounds 17,431.54 \\
+& Distribution Prior ($\lambda=0.01$) & Uncalibrated & 0.1075 & 0.10870 & \pounds 23,336.46 & \pounds 1,528.06 \\
+& Distribution Prior ($\lambda=0.01$) & \textbf{Calibrated} & 0.1097 & 0.10075 & \pounds 16,681.41 & \pounds 16,046.77 \\
+\midrule
+\multirow{5}{=}{\textbf{Penmanshiel}\\(28.7 MW, Upland)} 
+& Unconstrained PatchTST & Uncalibrated & 0.1268 & 0.12107 & \pounds 26,956.48 & \pounds 3,001.45 \\
+& Unconstrained PatchTST & \textbf{Calibrated} & 0.1304 & 0.11270 & \pounds 19,129.15 & \pounds 20,453.24 \\
+& Power Curve ($\lambda=0.01$) & Calibrated & 0.1303 & 0.11264 & \pounds 19,118.38 & \pounds 20,444.41 \\
+& Distribution Prior ($\lambda=0.01$) & Uncalibrated & 0.1265 & 0.11729 & \pounds 24,606.87 & \pounds 6,473.07 \\
+& Distribution Prior ($\lambda=0.01$) & \textbf{Calibrated} & 0.1300 & 0.11134 & \textbf{\pounds 18,338.64} & \textbf{\pounds 21,117.53} \\
 \bottomrule
 \end{tabularx}
 \begin{tablenotes}[flushleft]
 \footnotesize
-\item \textbf{Notes}: Exploratory sensitivity results for PatchTST (ICLR 2023, patch length 6, stride 4, channel-independent RevIN) evaluate capacity-aligned architectural sensitivity under identical BSC 30-minute physical netting settlement. Results confirm site-dependent divergence: at flat, high-SNR Kelmarsh, unconstrained PatchTST secures higher balancing cashflow (+\pounds 1,365.12/(turb$\cdot$yr) over distribution prior); at upland Penmanshiel and Hill of Towie, distribution regularization provides inductive protection, saving \pounds 790.51/(turb$\cdot$yr) and \pounds 232.44/(turb$\cdot$yr) in single-sided shortfall. Evaluated under univariate power input and fixed $\lambda=0.01$ as an architectural sensitivity probe without hyperparameter retuning.
+\item \textbf{Notes}: Exploratory sensitivity results for PatchTST (Nie et al., ICLR 2023; patch length 6, stride 4, channel-independent RevIN) evaluate capacity-aligned architectural sensitivity under identical BSC 30-minute physical netting settlement across five random initialization seeds. At flat Kelmarsh, unconstrained PatchTST secures higher balancing cashflow (+\pounds 1,365.12/(turb$\cdot$yr) over distribution prior); at upland Penmanshiel and Hill of Towie, distribution regularization provides inductive protection, saving \pounds 790.51/(turb$\cdot$yr) and \pounds 232.44/(turb$\cdot$yr) in single-sided shortfall. Evaluated under univariate power input and nominal penalty $\lambda=0.01$ as an architectural sensitivity probe.
 \end{tablenotes}
 \end{threeparttable}
 \end{table*}

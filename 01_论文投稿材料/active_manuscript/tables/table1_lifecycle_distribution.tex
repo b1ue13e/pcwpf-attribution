@@ -1,11 +1,11 @@
 \begin{table*}[!t]
 \centering
 \footnotesize
-\renewcommand{\arraystretch}{0.92}
+\renewcommand{\arraystretch}{0.90}
 \setlength{\tabcolsep}{3.5pt}
-\caption{Empirical Distribution of Constraint Lifecycle Dimensions Across 46 Audited Studies (2023--2026).}
+\caption{Empirical Distribution of Constraint Lifecycle Dimensions ($\mathcal{D}_1$--$\mathcal{D}_5$) Across 46 Audited Scoping Studies (2023--2026).}
 \label{tab:lifecycle_distribution}
-\begin{tabularx}{\textwidth}{p{3.6cm}p{3.0cm}rrX}
+\begin{tabularx}{\textwidth}{p{3.4cm}p{2.8cm}rrX}
 \toprule
 \textbf{Lifecycle Dimension} & \textbf{Taxonomic Category} & \textbf{Count ($N=46$)} & \textbf{Proportion (\%)} & \textbf{Typical Exemplars in Audited Literature} \\
 \midrule
@@ -29,6 +29,11 @@
 & \texttt{not-found} & 44 & 95.7\% & No accessible public repository or open-source software identified under recorded protocol \\
 & \texttt{code-mismatch} & 1 & 2.2\% & PCT: loss function calculates reverse-argument JS form rather than specified standard JS \\
 & \texttt{code-aligned} & 1 & 2.2\% & PINN-UQ: algebraic electromechanical tie constraints faithfully matching published equations \\
+\midrule
+\multirow{3}{*}{\textbf{D5: Ablation Semantics}} 
+& \texttt{module-ablation} & 23 & 50.0\% & Excises multi-layer neural submodule; conflates parametric capacity with physical bias \\
+& \texttt{constraint-on-off} & 17 & 37.0\% & Toggles penalty multiplier ($\lambda=0$ vs.\ $\lambda>0$) under strictly identical network capacity \\
+& \texttt{both} & 6 & 13.0\% & Implements both parameter toggles and architectural ablations across comparative baselines \\
 \bottomrule
 \end{tabularx}
 \end{table*}

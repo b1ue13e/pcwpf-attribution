@@ -1,21 +1,13 @@
-\section{Ablations, Implementation Fidelity, and Diagnostic Case Study}
+\section{Software Implementation Fidelity: The Physics-Constrained Transformer}
 \label{sec:code_audit}
 
-Verifying physical constraint claims requires evaluating both the causal isolation of published ablation designs and the algebraic execution fidelity of released computational graphs.
+Verifying physical constraint claims requires examining not only published mathematical equations, but also the computational fidelity of the source code executed during training and evaluation.
 
-\subsection{Causal Confounding in Published Ablation Studies}
-Deep full-text extraction of all 46 studies revealed that only \textbf{50.0\% (23/46)} performed strict physical constraint isolation, as summarized in Table~\ref{tab:ablation_semantics}.
+\subsection{Code Availability and Audit Scope}
+As established in our scoping audit (Section~\ref{sec:protocol}), exactly two of the 46 scoping studies provided accessible software repositories: PINN-UQ \cite{s10_pinnuq2025}, which we audited and verified as code-aligned with its published electromechanical formulations ($\mathcal{D}_4 = \texttt{code-aligned}$), and the \textbf{Physics-Constrained Transformer (PCT)} \cite{pct2026} (\textit{Scientific Reports} 2026, DOI: 10.1038/s41598-025-34348-x; official GitHub repository commit \texttt{65941ec}). PCT represents the sole publicly accessible training codebase for end-to-end physics-constrained Transformers and the sole audited repository exhibiting an implementation divergence between published equations and computational execution ($\mathcal{D}_4 = \texttt{code-mismatch}$). We conducted an in-depth static and empirical audit of this codebase to investigate how statistical distribution constraints are realized in software.
 
-\input{tables/table4_ablation_semantics.tex}
-
-In 23 of the 46 studies (50.0\%), the ablation experiment consisted of excising an entire neural submodule---such as a spatial Graph Attention block, a cross-attention fusion layer, or a multi-scale decomposition module. When a model exhibits degraded performance after an entire GNN submodule is removed, it is impossible to disentangle whether the degradation stems from the loss of domain physical equations or from the simultaneous removal of thousands of trainable neural parameters and non-linear feature representations. Such module-level ablation designs evaluate the collective capacity of the neural architecture rather than causally isolating the contribution of the physical domain prior.
-
-\subsection{Case Study: The Physics-Constrained Transformer (PCT)}
-\label{sec:pct_case}
-As established in our scoping audit (Section~\ref{sec:protocol}), exactly two of the 46 scoping studies released public software repositories: PINN-UQ \cite{s10_pinnuq2025}, which was verified as strictly code-aligned with its published electromechanical formulations ($\mathcal{D}_4 = \texttt{code-aligned}$, 2.2\%), and the \textbf{Physics-Constrained Transformer (PCT)} \cite{pct2026} (\textit{Scientific Reports} 2026, DOI: 10.1038/s41598-025-34348-x; official GitHub repository commit \texttt{65941ec}). PCT represents the sole publicly accessible training codebase for end-to-end physics-constrained Transformers and the sole audited repository exhibiting an implementation divergence between code and paper ($\mathcal{D}_4 = \texttt{divergent-code}$, 2.2\%). We conducted an in-depth static code audit of this codebase to investigate how statistical distribution constraints are realized in software.
-
-\subsubsection{Paper Mathematical Specification versus Code Execution}
-In Section 2 of the PCT paper, the authors propose regularizing a Transformer forecaster by penalizing the statistical divergence between the empirical joint probability distribution of historical wind speed and turbine power ($P_{\text{ref}}$) and the joint distribution predicted by the model ($P_{\text{pred}}$). The paper explicitly specifies the symmetric \textbf{Jensen--Shannon (JS) divergence}:
+\subsection{Mathematical Specification versus Computational Execution}
+In Section 2 of the PCT paper, the authors propose regularizing a Transformer forecaster by penalizing statistical divergence between the empirical joint distribution of historical wind speed and turbine power ($P_{\text{ref}}$) and the joint distribution predicted by the model ($P_{\text{pred}}$). The paper explicitly specifies the symmetric \textbf{Jensen--Shannon (JS) divergence}:
 \begin{equation}
 \begin{aligned}
 \mathcal{L}_{\text{JS}}(P_{\text{pred}} \parallel P_{\text{ref}}) &= \frac{1}{2} \text{KL}\left(P_{\text{pred}} \,\Big\|\, \frac{P_{\text{pred}} + P_{\text{ref}}}{2}\right) \\
@@ -23,9 +15,9 @@ In Section 2 of the PCT paper, the authors propose regularizing a Transformer fo
 \end{aligned}
 \label{eq:js_divergence}
 \end{equation}
-where $\text{KL}(p \parallel q) = \sum_i p_i \log \frac{p_i}{q_i}$ denotes standard Kullback--Leibler divergence. The paper emphasizes that the symmetry and boundedness of JS divergence ($0 \le \mathcal{L}_{\text{JS}} \le \ln 2$) provide numerical stability and prevent gradient explosion.
+where $\text{KL}(p \parallel q) = \sum_i p_i \log \frac{p_i}{q_i}$ denotes standard Kullback--Leibler divergence. The paper notes that the symmetry and boundedness of JS divergence ($0 \le \mathcal{L}_{\text{JS}} \le \ln 2$) provide numerical stability.
 
-However, static AST parsing of the official training script (\texttt{train\_clean.py}, lines 349--352; commit \texttt{65941ec}) traces the loss node to:
+However, static AST inspection of the official training script (\texttt{train\_clean.py}, lines 349--352; commit \texttt{65941ec}) traces the loss execution to:
 \begin{center}
 \small
 \begin{minipage}{0.95\columnwidth}
@@ -52,16 +44,15 @@ Consequently, the computational graph generated in \texttt{train\_clean.py} exec
 \end{aligned}
 \label{eq:reverse_js}
 \end{equation}
-Equation~\eqref{eq:reverse_js} establishes an altered objective, which we refer to hereafter as the \textbf{reverse-argument JS form} (or reverse-argument implementation). The formulation remains symmetric between $P_{\text{pred}}$ and $P_{\text{ref}}$. However, transposing the KL arguments fundamentally alters the underlying gradient mechanics. Because the mixture distribution $M = \frac{1}{2}(P_{\text{pred}} + P_{\text{ref}})$ explicitly depends on $P_{\text{pred}}$ with $\frac{\partial M_i}{\partial P_{\text{pred}, i}} = \frac{1}{2}$, differentiating $\mathcal{L}_{\text{code}}$ directly with respect to the predicted probability mass $P_{\text{pred}, i}$ yields:
+Equation~\eqref{eq:reverse_js} establishes an altered objective, which we designate the \textbf{reverse-argument JS form}. The formulation remains symmetric between $P_{\text{pred}}$ and $P_{\text{ref}}$. However, transposing the KL arguments alters the underlying gradient mechanics. Because the mixture distribution $M = \frac{1}{2}(P_{\text{pred}} + P_{\text{ref}})$ explicitly depends on $P_{\text{pred}}$ with $\frac{\partial M_i}{\partial P_{\text{pred}, i}} = \frac{1}{2}$, differentiating $\mathcal{L}_{\text{code}}$ directly with respect to predicted probability mass $P_{\text{pred}, i}$ yields:
 \begin{equation}
 \begin{aligned}
-\frac{\partial \mathcal{L}_{\text{code}}}{\partial P_{\text{pred}, i}} &= \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{pred}, i}} \right] \\
-&\quad + \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{ref}, i}} \right] \\
+\frac{\partial \mathcal{L}_{\text{code}}}{\partial P_{\text{pred}, i}} &= \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{pred}, i}} \right] + \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{ref}, i}} \right] \\
 &= \frac{1}{4} \left[ \log \left(\frac{M_i^2}{P_{\text{pred}, i} P_{\text{ref}, i}}\right) + 1 - \frac{P_{\text{ref}, i}}{P_{\text{pred}, i}} \right].
 \end{aligned}
 \label{eq:reverse_js_gradient}
 \end{equation}
-Equation~\eqref{eq:reverse_js_gradient} exposes an analytical \textbf{inverse-density singularity}: whenever the model assigns near-zero probability to a region where empirical training observations exist ($P_{\text{pred}, i} \to 0$ while $P_{\text{ref}, i} > 0$), the ratio $\frac{P_{\text{ref}, i}}{P_{\text{pred}, i}}$ diverges to infinity. Even under machine-precision clamping ($P_{\text{pred}, i} \ge \epsilon$), this term scales as $\mathcal{O}(1/\epsilon)$, generating violent negative gradient surges.
+Equation~\eqref{eq:reverse_js_gradient} exposes an analytical \textbf{inverse-density singularity}: whenever the model assigns near-zero probability to a region where empirical training observations exist ($P_{\text{pred}, i} \to 0$ while $P_{\text{ref}, i} > 0$), the ratio $\frac{P_{\text{ref}, i}}{P_{\text{pred}, i}}$ diverges. Even under machine-precision clamping ($P_{\text{pred}, i} \ge \epsilon$), this term scales as $\mathcal{O}(1/\epsilon)$, generating steep negative gradient responses.
 
 In contrast, for the standard mathematically specified Jensen--Shannon divergence $\mathcal{L}_{\text{JS}}$ in Equation~\eqref{eq:js_divergence}, differentiating with respect to $P_{\text{pred}, i}$ gives:
 \begin{equation}
@@ -76,14 +67,12 @@ As predicted probabilities approach zero ($P_{\text{pred}, i} \to \epsilon$ with
 \begin{equation}
 \left| \frac{\partial \mathcal{L}_{\text{JS}}}{\partial P_{\text{pred}, i}} \right| \sim \mathcal{O}(|\log \epsilon|).
 \end{equation}
-By comparison, the reverse-argument JS form induces an unmitigated first-order \textbf{inverse-density singularity}:
-\begin{equation}
-\left| \frac{\partial \mathcal{L}_{\text{code}}}{\partial P_{\text{pred}, i}} \right| \sim \mathcal{O}(1/\epsilon).
-\end{equation}
-Because the logarithmic divergence of Standard-JS grows slowly ($\lim_{\epsilon \to 0^+} \epsilon \log \epsilon = 0$) and possesses a finite upper bound ($\frac{1}{2}\ln 2$), this logarithmic divergence is substantially milder than the $\mathcal{O}(1/\epsilon)$ inverse-density pole of the reverse-argument JS form and is consistent with the empirically lower gradient norms observed in Figure~\ref{fig:pct_contrast}. Conversely, the $\mathcal{O}(1/\epsilon)$ pole in the reverse-argument form generates unbounded gradient surges near empirical support boundaries. Transposing the divergence arguments thus replaces an integrable regularizer with an ill-conditioned optimization landscape.
+Because the logarithmic divergence of Standard-JS grows slowly ($\lim_{\epsilon \to 0^+} \epsilon \log \epsilon = 0$) and possesses a finite upper bound ($\frac{1}{2}\ln 2$), this divergence is substantially milder than the $\mathcal{O}(1/\epsilon)$ inverse-density pole of the reverse-argument JS form, consistent with the lower gradient norms observed empirically in Figure~\ref{fig:pct_contrast}. Transposing divergence arguments thus alters optimization dynamics near empirical support boundaries.
 
-\paragraph{Empirical Optimization Contrast: Official Reverse-JS Form vs.\ Corrected Standard-JS}
-To determine whether this implementation divergence materially alters neural training and operational dispatch, we trained models across Kelmarsh and Penmanshiel under five random seeds across $\lambda \in \{0.01, 0.1, 1.0\}$, benchmarked against unconstrained baselines (Figure~\ref{fig:pct_contrast}). The empirical results reveal two structural consequences. First, the reverse-argument JS form induces marked gradient instability: at $\lambda = 1.0$, it produces an average gradient $L_2$ norm of $0.1665 \pm 0.0160$ on Kelmarsh and $0.2465 \pm 0.0217$ on Penmanshiel, representing a $2.20\times$ and $2.72\times$ amplification over Corrected Standard-JS ($0.0756 \pm 0.0048$ on Kelmarsh and $0.0907 \pm 0.0067$ on Penmanshiel; Figure~\ref{fig:pct_contrast}a). This spike is the empirical manifestation of the $-\frac{P_{\text{ref}, i}}{4 P_{\text{pred}, i}}$ derivative singularity ($\mathcal{O}(1/\epsilon)$ in Equation~\eqref{eq:reverse_js_gradient}) as predicted probabilities approach zero near empirical support boundaries. Second, at weak regularization ($\lambda = 0.01$ on Penmanshiel), Corrected Standard-JS achieves a dispatch cost of $0.09804 \pm 0.00024$ (outperforming the unconstrained baseline of $0.09864$), whereas the official reverse-argument implementation inflates dispatch cost to $0.09997 \pm 0.00086$ (a $+1.35\%$ premature degradation; Figure~\ref{fig:pct_contrast}b). However, at strong regularization ($\lambda=1.0$), both divergence variants degrade performance relative to the unconstrained baseline, with Corrected Standard-JS reaching $0.10549 \pm 0.00149$ compared to $0.10292 \pm 0.00103$ for the reverse form. Correcting the implementation divergence mitigates artificial gradient explosion and eliminates premature degradation under weak penalties, but does not prevent performance loss under excessive regularization.
+\subsection{Empirical Optimization Contrast: Official Reverse-JS vs.\ Corrected Standard-JS}
+To determine whether this implementation divergence materially alters neural training and operational dispatch, we trained models across Kelmarsh and Penmanshiel under five random seeds across $\lambda \in \{0.01, 0.1, 1.0\}$, benchmarked against unconstrained baselines (Figure~\ref{fig:pct_contrast}). The empirical results reveal two distinct operational effects:
+
+First, the reverse-argument JS form induces marked gradient amplification: at $\lambda = 1.0$, it produces an average gradient $L_2$ norm of $0.1665 \pm 0.0160$ on Kelmarsh and $0.2465 \pm 0.0217$ on Penmanshiel, representing a $2.20\times$ and $2.72\times$ amplification over Corrected Standard-JS ($0.0756 \pm 0.0048$ on Kelmarsh and $0.0907 \pm 0.0067$ on Penmanshiel; Figure~\ref{fig:pct_contrast}a). This elevation reflects the $-\frac{P_{\text{ref}, i}}{4 P_{\text{pred}, i}}$ derivative term as predicted densities approach boundary limits. Second, at weak regularization ($\lambda = 0.01$ on Penmanshiel), Corrected Standard-JS achieves a dispatch cost of $0.09804 \pm 0.00024$ (outperforming the unconstrained baseline of $0.09864$), whereas the official reverse-argument implementation inflates dispatch cost to $0.09997 \pm 0.00086$ (a $+1.35\%$ degradation; Figure~\ref{fig:pct_contrast}b). However, at strong regularization ($\lambda=1.0$), both divergence variants degrade performance relative to the unconstrained baseline, with Corrected Standard-JS reaching $0.10549 \pm 0.00149$ compared to $0.10292 \pm 0.00103$ for the reverse form. Correcting the implementation divergence mitigates gradient amplification and eliminates premature degradation under weak penalties, but does not prevent performance loss under excessive regularization.
 
 \begin{figure*}[!t]
 \centering
@@ -92,13 +81,13 @@ To determine whether this implementation divergence materially alters neural tra
 \label{fig:pct_contrast}
 \end{figure*}
 
-\subsubsection{Negative Control: Algebraic Equivalence of 2D Product-Kernel KDE}
-We establish an algebraic negative control to verify whether tensor outer-product operations preserve empirical feature coupling. A published conjecture regarding the tensor outer-product:
+\subsection{Negative Control: Algebraic Verification of 2D Product-Kernel KDE}
+We establish an algebraic negative control to verify whether tensor outer-product operations preserve empirical feature coupling in the audited codebase. A potential concern regarding the tensor outer-product:
 \begin{equation}
 G = K_p^\top K_w \in \mathbb{R}^{B_p \times B_w}
 \label{eq:outer_product}
 \end{equation}
-is that it assumes statistical independence between wind speed and turbine power ($p(w, P) = p(w)p(P)$), which would compromise joint density estimation.
+is that it might assume statistical independence between wind speed and turbine power ($p(w, P) = p(w)p(P)$).
 
 Formal algebraic expansion refutes this concern. Let $\{ (P_s, w_s) \}_{s=1}^N$ denote paired empirical observations in a batch. Let $\{b_i^p\}_{i=1}^{B_p}$ and $\{b_j^w\}_{j=1}^{B_w}$ denote 1D evaluation bin centers for power and wind speed, respectively. The 1D Gaussian kernel vectors evaluated in the codebase are:
 \begin{equation}
@@ -107,10 +96,7 @@ Formal algebraic expansion refutes this concern. Let $\{ (P_s, w_s) \}_{s=1}^N$ 
 \end{equation}
 where $\phi(u) = \frac{1}{\sqrt{2\pi}} e^{-u^2/2}$ is the standard Gaussian kernel, and $h_p, h_w$ denote bandwidths. Expanding the matrix product element at grid coordinate $(i,j)$ yields:
 \begin{equation}
-\begin{aligned}
-\left[ K_p^\top K_w \right]_{i,j} &= \sum_{s=1}^N \left[K_p\right]_{s,i} \cdot \left[K_w\right]_{s,j} \\
-&= \sum_{s=1}^N \phi\left( \frac{b_i^p - P_s}{h_p} \right) \cdot \phi\left( \frac{b_j^w - w_s}{h_w} \right).
-\end{aligned}
+\left[ K_p^\top K_w \right]_{i,j} = \sum_{s=1}^N \left[K_p\right]_{s,i} \cdot \left[K_w\right]_{s,j} = \sum_{s=1}^N \phi\left( \frac{b_i^p - P_s}{h_p} \right) \cdot \phi\left( \frac{b_j^w - w_s}{h_w} \right).
 \label{eq:kde_proof}
 \end{equation}
-Equation~\eqref{eq:kde_proof} is the exact analytical definition of a standard \textbf{paired 2D product-kernel Kernel Density Estimator} on correlated bivariate data. Because the summation contracts over concurrent sample index $s$, empirical joint coupling between $P_s$ and $w_s$ is preserved. The algebraic expansion confirms that the outer product executes authentic bivariate density estimation.
+Equation~\eqref{eq:kde_proof} is the exact analytical definition of a standard \textbf{paired 2D product-kernel Kernel Density Estimator} on correlated bivariate data. Because the summation contracts over concurrent sample index $s$, empirical joint coupling between $P_s$ and $w_s$ is preserved. The algebraic expansion confirms that the outer product executes authentic bivariate density estimation, confirming that code discrepancies are localized to divergence argument order rather than upstream kernel construction.
