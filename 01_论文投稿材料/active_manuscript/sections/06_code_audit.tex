@@ -47,7 +47,8 @@ Consequently, the computational graph generated in \texttt{train\_clean.py} exec
 Equation~\eqref{eq:reverse_js} establishes an altered objective, which we designate the \textbf{reverse-argument JS form}. The formulation remains symmetric between $P_{\text{pred}}$ and $P_{\text{ref}}$. However, transposing the KL arguments alters the underlying gradient mechanics. Because the mixture distribution $M = \frac{1}{2}(P_{\text{pred}} + P_{\text{ref}})$ explicitly depends on $P_{\text{pred}}$ with $\frac{\partial M_i}{\partial P_{\text{pred}, i}} = \frac{1}{2}$, differentiating $\mathcal{L}_{\text{code}}$ directly with respect to predicted probability mass $P_{\text{pred}, i}$ yields:
 \begin{equation}
 \begin{aligned}
-\frac{\partial \mathcal{L}_{\text{code}}}{\partial P_{\text{pred}, i}} &= \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{pred}, i}} \right] + \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{ref}, i}} \right] \\
+\frac{\partial \mathcal{L}_{\text{code}}}{\partial P_{\text{pred}, i}} &= \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{pred}, i}} \right] \\
+&\quad + \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{ref}, i}} \right] \\
 &= \frac{1}{4} \left[ \log \left(\frac{M_i^2}{P_{\text{pred}, i} P_{\text{ref}, i}}\right) + 1 - \frac{P_{\text{ref}, i}}{P_{\text{pred}, i}} \right].
 \end{aligned}
 \label{eq:reverse_js_gradient}
@@ -96,7 +97,10 @@ Formal algebraic expansion refutes this concern. Let $\{ (P_s, w_s) \}_{s=1}^N$ 
 \end{equation}
 where $\phi(u) = \frac{1}{\sqrt{2\pi}} e^{-u^2/2}$ is the standard Gaussian kernel, and $h_p, h_w$ denote bandwidths. Expanding the matrix product element at grid coordinate $(i,j)$ yields:
 \begin{equation}
-\left[ K_p^\top K_w \right]_{i,j} = \sum_{s=1}^N \left[K_p\right]_{s,i} \cdot \left[K_w\right]_{s,j} = \sum_{s=1}^N \phi\left( \frac{b_i^p - P_s}{h_p} \right) \cdot \phi\left( \frac{b_j^w - w_s}{h_w} \right).
+\begin{aligned}
+\left[ K_p^\top K_w \right]_{i,j} &= \sum_{s=1}^N \left[K_p\right]_{s,i} \cdot \left[K_w\right]_{s,j} \\
+&= \sum_{s=1}^N \phi\left( \frac{b_i^p - P_s}{h_p} \right) \cdot \phi\left( \frac{b_j^w - w_s}{h_w} \right).
+\end{aligned}
 \label{eq:kde_proof}
 \end{equation}
 Equation~\eqref{eq:kde_proof} is the exact analytical definition of a standard \textbf{paired 2D product-kernel Kernel Density Estimator} on correlated bivariate data. Because the summation contracts over concurrent sample index $s$, empirical joint coupling between $P_s$ and $w_s$ is preserved. The algebraic expansion confirms that the outer product executes authentic bivariate density estimation, confirming that code discrepancies are localized to divergence argument order rather than upstream kernel construction.

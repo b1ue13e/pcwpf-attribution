@@ -122,130 +122,131 @@
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces 3D Controlled Ablation Benchmark: Evaluating Physical Prior Specificity, Weak-Regularization Mimicry, and Training-Proxy Lag Across Three Operational Wind Farms (Quantile Calibrated $r=2, q=1/3$).}}{12}{table.caption.15}\protected@file@percent }
 \newlabel{tab:controlled_ablation}{{3}{12}{3D Controlled Ablation Benchmark: Evaluating Physical Prior Specificity, Weak-Regularization Mimicry, and Training-Proxy Lag Across Three Operational Wind Farms (Quantile Calibrated $r=2, q=1/3$)}{table.caption.15}{}}
 \def\@LN@column{1}
-\newlabel{eq:two_settlement_disc}{{4}{12}{Degenerate Zero-Bid Settlement Anomaly and Two-Settlement Accounting (Figure~\ref {fig:market_decoupling}a)}{equation.4}{}}
 \def\@LN@column{2}
-\citation{nie2023patchtst}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Prospective 3D Controlled Ablation Benchmark across Three Operational Wind Farms. (a) High sensitivity to prior misspecification under strong constraints on Penmanshiel ($N_{\text  {train}}=1,583$): authentic physical guidance provides downside risk protection ($-1.22\%$), whereas disrupting the physical mapping (Pseudo-Scrambled prior) triggers a $+68.1\%$ surge in operational dispatch cost. (b) Low-$\lambda $ numerical regularization mimicry on Kelmarsh ($N=5,098$), where genuine and scrambled priors yield near-identical decision costs at $\lambda = 0.01$, indicating non-specific numerical regularization rather than physical domain reasoning. (c) Monotonic cost inflation under training proxy staleness: dispatch cost escalation across all three farms as historical wind proxy lag $k$ in the training loss increases from 1h to 6h. (d) Decoupling of symmetric point error (RMSE) from asymmetric decision risk ($r=2$), demonstrating that point metrics mask tail operational hazards.}}{13}{figure.caption.17}\protected@file@percent }
 \newlabel{fig:causal_ablation}{{4}{13}{Prospective 3D Controlled Ablation Benchmark across Three Operational Wind Farms. (a) High sensitivity to prior misspecification under strong constraints on Penmanshiel ($N_{\text {train}}=1,583$): authentic physical guidance provides downside risk protection ($-1.22\%$), whereas disrupting the physical mapping (Pseudo-Scrambled prior) triggers a $+68.1\%$ surge in operational dispatch cost. (b) Low-$\lambda $ numerical regularization mimicry on Kelmarsh ($N=5,098$), where genuine and scrambled priors yield near-identical decision costs at $\lambda = 0.01$, indicating non-specific numerical regularization rather than physical domain reasoning. (c) Monotonic cost inflation under training proxy staleness: dispatch cost escalation across all three farms as historical wind proxy lag $k$ in the training loss increases from 1h to 6h. (d) Decoupling of symmetric point error (RMSE) from asymmetric decision risk ($r=2$), demonstrating that point metrics mask tail operational hazards}{figure.caption.17}{}}
 \def\@LN@column{1}
-\@writefile{toc}{\contentsline {paragraph}{Empirical Metric Inversion on Hill of Towie (Figure~\ref {fig:market_decoupling}b)}{13}{section*.30}\protected@file@percent }
+\newlabel{eq:two_settlement_disc}{{4}{13}{Degenerate Zero-Bid Settlement Anomaly and Two-Settlement Accounting (Figure~\ref {fig:market_decoupling}a)}{equation.4}{}}
 \def\@LN@column{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Cross-Backbone Architectural Sensitivity Probe (PatchTST)}{13}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Empirical Metric Inversion on Hill of Towie (Figure~\ref {fig:market_decoupling}b)}{13}{section*.30}\protected@file@percent }
+\citation{nie2023patchtst}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Within-Site Learning Curves across Sample Sizes $N_{\text  {train}} \in \{500, 1000, 1500, 3000, 5000\}$ on Kelmarsh and Hill of Towie (Multi-seed means and standard deviations). Decoupling sample volume from topography confirms that fixed historical physical priors provide lower dispatch costs across both sites under restricted model training windows ($N_{\text  {train}} \le 1,000$, $-2.00\%$ on Kelmarsh and $-3.62\%$ on Hill of Towie), whereas expanding model training windows to $N_{\text  {train}} = 5,000$ closes this gap and slightly reverses the ranking (+0.33\% on Kelmarsh, +1.73\% on Hill of Towie). In contrast, misspecified scrambled priors under strong regularization ($\lambda =1.0$) induce severe dispatch cost penalties ($+43\%$ to $+98\%$) across all sample regimes.}}{14}{figure.caption.18}\protected@file@percent }
 \newlabel{fig:within_site_learning_curve}{{5}{14}{Within-Site Learning Curves across Sample Sizes $N_{\text {train}} \in \{500, 1000, 1500, 3000, 5000\}$ on Kelmarsh and Hill of Towie (Multi-seed means and standard deviations). Decoupling sample volume from topography confirms that fixed historical physical priors provide lower dispatch costs across both sites under restricted model training windows ($N_{\text {train}} \le 1,000$, $-2.00\%$ on Kelmarsh and $-3.62\%$ on Hill of Towie), whereas expanding model training windows to $N_{\text {train}} = 5,000$ closes this gap and slightly reverses the ranking (+0.33\% on Kelmarsh, +1.73\% on Hill of Towie). In contrast, misspecified scrambled priors under strong regularization ($\lambda =1.0$) induce severe dispatch cost penalties ($+43\%$ to $+98\%$) across all sample regimes}{figure.caption.18}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Continuous Prior Corruption and Engineering Drift Severity Response Curves. (a) Continuous interpolation between authentic and scrambled priors $\alpha \in [0.0, 1.0]$, identifying an empirical crossover region around $\alpha \approx 0.07$ on Penmanshiel before physical regularizers worsen unconstrained dispatch costs. (b) Turbine aerodynamic aging: capacity derating exceeding 10\% flips nominal physical priors into economic penalties. (c) Anemometer sensor calibration drift: Penmanshiel retains an advantage under positive wind speed drift up to $+15\%$, whereas negative sensor under-reporting systematically inflates shortfall.}}{14}{figure.caption.19}\protected@file@percent }
 \newlabel{fig:corruption_gradient}{{6}{14}{Continuous Prior Corruption and Engineering Drift Severity Response Curves. (a) Continuous interpolation between authentic and scrambled priors $\alpha \in [0.0, 1.0]$, identifying an empirical crossover region around $\alpha \approx 0.07$ on Penmanshiel before physical regularizers worsen unconstrained dispatch costs. (b) Turbine aerodynamic aging: capacity derating exceeding 10\% flips nominal physical priors into economic penalties. (c) Anemometer sensor calibration drift: Penmanshiel retains an advantage under positive wind speed drift up to $+15\%$, whereas negative sensor under-reporting systematically inflates shortfall}{figure.caption.19}{}}
 \def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Cross-Backbone Architectural Sensitivity Probe (PatchTST)}{14}{subsection.5.4}\protected@file@percent }
 \def\@LN@column{2}
-\citation{s10_pinnuq2025}
-\citation{pct2026}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces 7-Day Circular Block Paired Bootstrap Contrasts vs. Unconstrained DLinear under Calibrated Policy (2,000 Replications).}}{15}{table.caption.24}\protected@file@percent }
 \newlabel{tab:paired_bootstrap}{{4}{15}{7-Day Circular Block Paired Bootstrap Contrasts vs. Unconstrained DLinear under Calibrated Policy (2,000 Replications)}{table.caption.24}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Market Settlement Decoupling and Metric Inversion Diagnostic under UK BSC Netting. (a) Reductio ad absurdum: the degenerate zero-bid settlement anomaly ($\hat  {y} \equiv 0$) incurs zero shortfall penalty and extracts over \pounds  220k/turb$\cdot $yr in apparent cashflow without generating forecasts, exposing single-settlement cashflow as an unhedged evaluation trap. (b) Empirical metric inversion on Hill of Towie, where distribution constraints increase nominal balancing cashflow by $+42.5\%$ while concurrently degrading genuine decision risk by $+6.5\%$ and RMSE by $+3.5\%$.}}{15}{figure.caption.28}\protected@file@percent }
 \newlabel{fig:market_decoupling}{{7}{15}{Market Settlement Decoupling and Metric Inversion Diagnostic under UK BSC Netting. (a) Reductio ad absurdum: the degenerate zero-bid settlement anomaly ($\hat {y} \equiv 0$) incurs zero shortfall penalty and extracts over \pounds 220k/turb$\cdot $yr in apparent cashflow without generating forecasts, exposing single-settlement cashflow as an unhedged evaluation trap. (b) Empirical metric inversion on Hill of Towie, where distribution constraints increase nominal balancing cashflow by $+42.5\%$ while concurrently degrading genuine decision risk by $+6.5\%$ and RMSE by $+3.5\%$}{figure.caption.28}{}}
 \def\@LN@column{1}
 \def\@LN@column{2}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Software Implementation Fidelity: The Physics-Constrained Transformer}{15}{section.6}\protected@file@percent }
-\newlabel{sec:code_audit}{{6}{15}{Software Implementation Fidelity: The Physics-Constrained Transformer}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Code Availability and Audit Scope}{15}{subsection.6.1}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Market Settlement Diagnostic Audit: Exposing the Pitfalls of Standalone Imbalance Cashflow via the Degenerate Zero-Bid ($\hat  {y} \equiv 0$) Counter-Baseline (Evaluated on Full 2017 UK Elexon SBP Timeline Across Three Wind Farms).}}{16}{table.caption.26}\protected@file@percent }
 \newlabel{tab:zero_bid_diagnostic}{{5}{16}{Market Settlement Diagnostic Audit: Exposing the Pitfalls of Standalone Imbalance Cashflow via the Degenerate Zero-Bid ($\hat {y} \equiv 0$) Counter-Baseline (Evaluated on Full 2017 UK Elexon SBP Timeline Across Three Wind Farms)}{table.caption.26}{}}
 \def\@LN@column{1}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Mathematical Specification versus Computational Execution}{16}{subsection.6.2}\protected@file@percent }
 \def\@LN@column{2}
-\newlabel{eq:js_divergence}{{5}{16}{Mathematical Specification versus Computational Execution}{equation.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Exploratory Cross-Backbone Architectural Sensitivity Analysis: Deep Transformer (PatchTST) under BSC 30-Minute Physical Netting Settlement (5-Seed Mean $\pm $ Std).}}{17}{table.caption.31}\protected@file@percent }
-\newlabel{tab:patchtst_and_rules}{{6}{17}{Exploratory Cross-Backbone Architectural Sensitivity Analysis: Deep Transformer (PatchTST) under BSC 30-Minute Physical Netting Settlement (5-Seed Mean $\pm $ Std)}{table.caption.31}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Software Implementation Fidelity: The Physics-Constrained Transformer}{16}{section.6}\protected@file@percent }
+\newlabel{sec:code_audit}{{6}{16}{Software Implementation Fidelity: The Physics-Constrained Transformer}{section.6}{}}
+\citation{s10_pinnuq2025}
+\citation{pct2026}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Exploratory Cross-Backbone Architectural Sensitivity Analysis: Deep Transformer (PatchTST) under BSC 30-Minute Physical Netting Settlement (5-Seed Means; Multi-Seed Dispersions Documented in Table Notes).}}{17}{table.caption.31}\protected@file@percent }
+\newlabel{tab:patchtst_and_rules}{{6}{17}{Exploratory Cross-Backbone Architectural Sensitivity Analysis: Deep Transformer (PatchTST) under BSC 30-Minute Physical Netting Settlement (5-Seed Means; Multi-Seed Dispersions Documented in Table Notes)}{table.caption.31}{}}
 \def\@LN@column{1}
-\newlabel{eq:pytorch_kl}{{6}{17}{Mathematical Specification versus Computational Execution}{equation.6}{}}
-\newlabel{eq:reverse_kl}{{7}{17}{Mathematical Specification versus Computational Execution}{equation.7}{}}
-\newlabel{eq:reverse_js}{{8}{17}{Mathematical Specification versus Computational Execution}{equation.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Code Availability and Audit Scope}{17}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Mathematical Specification versus Computational Execution}{17}{subsection.6.2}\protected@file@percent }
 \def\@LN@column{2}
-\newlabel{eq:reverse_js_gradient}{{9}{17}{Mathematical Specification versus Computational Execution}{equation.9}{}}
-\newlabel{eq:standard_js_gradient}{{10}{17}{Mathematical Specification versus Computational Execution}{equation.10}{}}
-\citation{weron2014,zhang2014wind}
+\newlabel{eq:js_divergence}{{5}{17}{Mathematical Specification versus Computational Execution}{equation.5}{}}
 \def\@LN@column{1}
+\newlabel{eq:pytorch_kl}{{6}{18}{Mathematical Specification versus Computational Execution}{equation.6}{}}
+\newlabel{eq:reverse_kl}{{7}{18}{Mathematical Specification versus Computational Execution}{equation.7}{}}
+\newlabel{eq:reverse_js}{{8}{18}{Mathematical Specification versus Computational Execution}{equation.8}{}}
+\newlabel{eq:reverse_js_gradient}{{9}{18}{Mathematical Specification versus Computational Execution}{equation.9}{}}
+\newlabel{eq:standard_js_gradient}{{10}{18}{Mathematical Specification versus Computational Execution}{equation.10}{}}
+\def\@LN@column{2}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Empirical Optimization Contrast: Official Reverse-JS vs.\ Corrected Standard-JS}{18}{subsection.6.3}\protected@file@percent }
-\def\@LN@column{2}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Negative Control: Algebraic Verification of 2D Product-Kernel KDE}{18}{subsection.6.4}\protected@file@percent }
-\newlabel{eq:outer_product}{{13}{18}{Negative Control: Algebraic Verification of 2D Product-Kernel KDE}{equation.13}{}}
-\newlabel{eq:kernel_eval}{{14}{18}{Negative Control: Algebraic Verification of 2D Product-Kernel KDE}{equation.14}{}}
-\newlabel{eq:kde_proof}{{15}{18}{Negative Control: Algebraic Verification of 2D Product-Kernel KDE}{equation.15}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Prediction-Decision Decoupling Theory and Excess Operational Risk}{18}{section.7}\protected@file@percent }
-\newlabel{sec:theory}{{7}{18}{Prediction-Decision Decoupling Theory and Excess Operational Risk}{section.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Operational Problem Formulation}{18}{subsection.7.1}\protected@file@percent }
-\citation{koenker2005}
-\citation{pinson2007trading}
-\citation{koenker2005,pinson2007trading}
+\citation{weron2014,zhang2014wind}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Empirical Contrast between Official Reverse-JS and Corrected Standard-JS across Regularization Scales $\lambda \in [0.01, 1.0]$ on Kelmarsh and Penmanshiel (Multi-seed means and standard deviations). (a) Mean gradient $L_2$ norm: the reverse-argument JS form induces substantial gradient amplification at $\lambda = 1.0$ ($2.20\times $ on Kelmarsh, $2.72\times $ on Penmanshiel) due to the $-\frac  {P_{\text  {ref}, i}}{4 P_{\text  {pred}, i}}$ inverse-density singularity ($\mathcal  {O}(1/\epsilon )$ in Equation~\eqref  {eq:reverse_js_gradient}), whereas for Corrected Standard-JS the signed partial derivative possesses a finite upper bound ($\frac  {1}{2}\ln 2$) while exhibiting only mild logarithmic divergence ($\mathcal  {O}(|\log \epsilon |)$) as $P_{\text  {pred}, i} \to 0$. (b) Operational dispatch cost ($r=2$): Corrected Standard-JS prevents premature performance degradation at weak $\lambda =0.01$, while excessive regularization degrades dispatch across both variants.}}{19}{figure.caption.33}\protected@file@percent }
 \newlabel{fig:pct_contrast}{{8}{19}{Empirical Contrast between Official Reverse-JS and Corrected Standard-JS across Regularization Scales $\lambda \in [0.01, 1.0]$ on Kelmarsh and Penmanshiel (Multi-seed means and standard deviations). (a) Mean gradient $L_2$ norm: the reverse-argument JS form induces substantial gradient amplification at $\lambda = 1.0$ ($2.20\times $ on Kelmarsh, $2.72\times $ on Penmanshiel) due to the $-\frac {P_{\text {ref}, i}}{4 P_{\text {pred}, i}}$ inverse-density singularity ($\mathcal {O}(1/\epsilon )$ in Equation~\eqref {eq:reverse_js_gradient}), whereas for Corrected Standard-JS the signed partial derivative possesses a finite upper bound ($\frac {1}{2}\ln 2$) while exhibiting only mild logarithmic divergence ($\mathcal {O}(|\log \epsilon |)$) as $P_{\text {pred}, i} \to 0$. (b) Operational dispatch cost ($r=2$): Corrected Standard-JS prevents premature performance degradation at weak $\lambda =0.01$, while excessive regularization degrades dispatch across both variants}{figure.caption.33}{}}
 \def\@LN@column{1}
-\newlabel{eq:pinball_loss}{{16}{19}{Operational Problem Formulation}{equation.16}{}}
-\newlabel{eq:norm_disp_loss}{{17}{19}{Operational Problem Formulation}{equation.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Lemma 1: Exact Integral Excess Operational Risk (Operational Baseline)}{19}{subsection.7.2}\protected@file@percent }
+\newlabel{eq:outer_product}{{13}{19}{Negative Control: Algebraic Verification of 2D Product-Kernel KDE}{equation.13}{}}
+\newlabel{eq:kernel_eval}{{14}{19}{Negative Control: Algebraic Verification of 2D Product-Kernel KDE}{equation.14}{}}
+\newlabel{eq:kde_proof}{{15}{19}{Negative Control: Algebraic Verification of 2D Product-Kernel KDE}{equation.15}{}}
 \def\@LN@column{2}
-\newlabel{eq:bayes_quantile}{{18}{19}{Lemma 1: Exact Integral Excess Operational Risk (Operational Baseline)}{equation.18}{}}
-\newlabel{lem:excess_risk}{{1}{19}{Exact Integral Excess Operational Risk \cite {koenker2005,pinson2007trading}}{lemma.1}{}}
-\newlabel{eq:exact_integral}{{19}{19}{Exact Integral Excess Operational Risk \cite {koenker2005,pinson2007trading}}{equation.19}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Prediction-Decision Decoupling Theory and Excess Operational Risk}{19}{section.7}\protected@file@percent }
+\newlabel{sec:theory}{{7}{19}{Prediction-Decision Decoupling Theory and Excess Operational Risk}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Operational Problem Formulation}{19}{subsection.7.1}\protected@file@percent }
+\newlabel{eq:pinball_loss}{{16}{19}{Operational Problem Formulation}{equation.16}{}}
+\citation{koenker2005}
+\citation{pinson2007trading}
+\citation{koenker2005,pinson2007trading}
 \def\@LN@column{1}
+\newlabel{eq:norm_disp_loss}{{17}{20}{Operational Problem Formulation}{equation.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Lemma 1: Exact Integral Excess Operational Risk (Operational Baseline)}{20}{subsection.7.2}\protected@file@percent }
+\newlabel{eq:bayes_quantile}{{18}{20}{Lemma 1: Exact Integral Excess Operational Risk (Operational Baseline)}{equation.18}{}}
+\newlabel{lem:excess_risk}{{1}{20}{Exact Integral Excess Operational Risk \cite {koenker2005,pinson2007trading}}{lemma.1}{}}
+\newlabel{eq:exact_integral}{{19}{20}{Exact Integral Excess Operational Risk \cite {koenker2005,pinson2007trading}}{equation.19}{}}
+\def\@LN@column{2}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Two-Stage Decomposition and Decoupled Decision Calibration}{20}{subsection.7.3}\protected@file@percent }
 \newlabel{eq:quadratic_approx}{{25}{20}{Two-Stage Decomposition and Decoupled Decision Calibration}{equation.25}{}}
 \newlabel{eq:three_terms}{{27}{20}{Two-Stage Decomposition and Decoupled Decision Calibration}{equation.27}{}}
-\def\@LN@column{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Mechanistic Deductions from Decision-Theoretic Decomposition}{20}{subsection.7.4}\protected@file@percent }
-\newlabel{rem:masking}{{1}{20}{Mechanistic Deduction 1: Pseudo-Advantage Masking in Uncalibrated Regimes}{remark.1}{}}
-\newlabel{rem:exposure}{{2}{20}{Mechanistic Deduction 2: Regularization Distortion under Well-Sampled Regimes}{remark.2}{}}
-\newlabel{rem:inductive_guardrails}{{3}{20}{Mechanistic Deduction 3: Inductive Guardrails and Prior Sensitivity under Sample Restriction}{remark.3}{}}
 \def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Mechanistic Deductions from Decision-Theoretic Decomposition}{21}{subsection.7.4}\protected@file@percent }
+\newlabel{rem:masking}{{1}{21}{Mechanistic Deduction 1: Pseudo-Advantage Masking in Uncalibrated Regimes}{remark.1}{}}
+\newlabel{rem:exposure}{{2}{21}{Mechanistic Deduction 2: Regularization Distortion under Well-Sampled Regimes}{remark.2}{}}
+\newlabel{rem:inductive_guardrails}{{3}{21}{Mechanistic Deduction 3: Inductive Guardrails and Prior Sensitivity under Sample Restriction}{remark.3}{}}
+\def\@LN@column{2}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Formal Boundary Counterexamples (Possibility Results)}{21}{subsection.7.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Dynamic Price Multiplier Effect and Settlement Decoupling}{21}{subsection.7.6}\protected@file@percent }
-\def\@LN@column{2}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion, Boundary Contracts, and Compliance Protocol}{21}{section.8}\protected@file@percent }
-\newlabel{sec:discussion}{{8}{21}{Discussion, Boundary Contracts, and Compliance Protocol}{section.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Four Empirical Boundary Conditions for Physics-Constrained Models}{21}{subsection.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Sample Restriction and Prior Misspecification Vulnerability}{21}{section*.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Low-Penalty Scale and Non-Specific Numerical Regularization}{21}{section*.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Monotonic Cost Inflation under Training Proxy Observation Staleness}{21}{section*.36}\protected@file@percent }
 \def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion, Boundary Contracts, and Compliance Protocol}{22}{section.8}\protected@file@percent }
+\newlabel{sec:discussion}{{8}{22}{Discussion, Boundary Contracts, and Compliance Protocol}{section.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Four Empirical Boundary Conditions for Physics-Constrained Models}{22}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sample Restriction and Prior Misspecification Vulnerability}{22}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Low-Penalty Scale and Non-Specific Numerical Regularization}{22}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Monotonic Cost Inflation under Training Proxy Observation Staleness}{22}{section*.36}\protected@file@percent }
+\def\@LN@column{2}
 \@writefile{toc}{\contentsline {paragraph}{Metric Decoupling and the Zero-Bid Diagnostic}{22}{section*.37}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Attributional Identification: What Is Identified vs.\ What Is Not}{22}{subsection.8.2}\protected@file@percent }
 \newlabel{sec:identification}{{8.2}{22}{Attributional Identification: What Is Identified vs.\ What Is Not}{subsection.8.2}{}}
 \@writefile{toc}{\contentsline {paragraph}{What Is Formally Identified}{22}{section*.38}\protected@file@percent }
-\def\@LN@column{2}
-\@writefile{toc}{\contentsline {paragraph}{What Is Not Identified (Confounding Disclaimers)}{22}{section*.39}\protected@file@percent }
-\citation{kapoor2024reforms}
-\citation{walsh2021dome}
 \def\@LN@column{1}
+\@writefile{toc}{\contentsline {paragraph}{What Is Not Identified (Confounding Disclaimers)}{23}{section*.39}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.3}External Validity Boundaries}{23}{subsection.8.3}\protected@file@percent }
 \newlabel{sec:boundary_contract}{{8.3}{23}{External Validity Boundaries}{subsection.8.3}{}}
+\def\@LN@column{2}
 \@writefile{toc}{\contentsline {paragraph}{Boundary 1: Sample Volume and Hypothesis-Space Saturation}{23}{section*.40}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Boundary 2: Proxy Misalignment and Observation Staleness}{23}{section*.41}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Boundary 3: Market Clearing and Two-Settlement Structure}{23}{section*.42}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Boundary 4: Computational Graph Audit and Implementation Parity}{23}{section*.43}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Boundary 5: Literature Scoping Scope and Architectural Probe Envelopes}{23}{section*.44}\protected@file@percent }
-\def\@LN@column{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Two Conjectures Falsified During the Audit}{23}{subsection.8.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}REFORMS-PCWPF Compliance Protocol}{23}{subsection.8.5}\protected@file@percent }
-\newlabel{sec:reforms_pcwpf}{{8.5}{23}{REFORMS-PCWPF Compliance Protocol}{subsection.8.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Operationalized REFORMS-PCWPF Reporting Checklist for Trustworthy Physics-Constrained Renewable Energy Forecasting (Five Modular Compliance Gates).}}{24}{table.caption.45}\protected@file@percent }
-\newlabel{tab:reforms_checklist}{{7}{24}{Operationalized REFORMS-PCWPF Reporting Checklist for Trustworthy Physics-Constrained Renewable Energy Forecasting (Five Modular Compliance Gates)}{table.caption.45}{}}
+\citation{kapoor2024reforms}
+\citation{walsh2021dome}
 \def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Two Conjectures Falsified During the Audit}{24}{subsection.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}REFORMS-PCWPF Compliance Protocol}{24}{subsection.8.5}\protected@file@percent }
+\newlabel{sec:reforms_pcwpf}{{8.5}{24}{REFORMS-PCWPF Compliance Protocol}{subsection.8.5}{}}
+\def\@LN@column{2}
 \@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{24}{section.9}\protected@file@percent }
 \newlabel{sec:conclusion}{{9}{24}{Conclusion}{section.9}{}}
-\def\@LN@column{2}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Operationalized REFORMS-PCWPF Reporting Checklist for Trustworthy Physics-Constrained Renewable Energy Forecasting (Five Modular Compliance Gates).}}{25}{table.caption.45}\protected@file@percent }
+\newlabel{tab:reforms_checklist}{{7}{25}{Operationalized REFORMS-PCWPF Reporting Checklist for Trustworthy Physics-Constrained Renewable Energy Forecasting (Five Modular Compliance Gates)}{table.caption.45}{}}
 \def\@LN@column{1}
 \@writefile{toc}{\contentsline {section}{\numberline {10}Open Data, Software Codebases, and Experimental Specifications}{25}{section.10}\protected@file@percent }
 \newlabel{sec:data_code_spec}{{10}{25}{Open Data, Software Codebases, and Experimental Specifications}{section.10}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Summary of Resources and Infrastructure}{25}{subsection.10.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Data and Code Availability}{25}{subsection.10.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Wind Farm Telemetry and Data Sanitation Protocols}{25}{subsection.10.3}\protected@file@percent }
 \def\@LN@column{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {10.4}Method Details and Statistical Estimation}{25}{subsection.10.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Wind Farm Telemetry and Data Sanitation Protocols}{25}{subsection.10.3}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Summary of Open Datasets, Audited Software Codebases, and Hardware Infrastructure.}}{26}{table.caption.47}\protected@file@percent }
 \newlabel{tab:key_resources}{{8}{26}{Summary of Open Datasets, Audited Software Codebases, and Hardware Infrastructure}{table.caption.47}{}}
 \def\@LN@column{1}
 \def\@LN@column{2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.4}Method Details and Statistical Estimation}{26}{subsection.10.4}\protected@file@percent }
 \def\@LN@column{1}
+\def\@LN@column{2}
 \@writefile{toc}{\let\numberline\tmptocnumberline}
 \@writefile{toc}{\contentsline {section}{\numberline {Appendix~A}Mathematical Analysis of Decoupled Calibration Boundaries and Counterexamples}{27}{appendix.A}\protected@file@percent }
 \newlabel{sec:appendix_proofs}{{Appendix~A}{27}{Mathematical Analysis of Decoupled Calibration Boundaries and Counterexamples}{appendix.A}{}}
@@ -253,21 +254,23 @@
 \newlabel{subsec:counterexample1}{{Appendix~A.1}{27}{Counterexample 1: Constant Shift Invariance and Zero Excess Risk}{subsection.A.1}{}}
 \newlabel{ex:constant_shift}{{1}{27}{Constant Shift Invariance}{example.1}{}}
 \@writefile{toc}{\contentsline {paragraph}{Prediction Representation Error (MSE)}{27}{section*.54}\protected@file@percent }
-\def\@LN@column{2}
-\@writefile{toc}{\contentsline {paragraph}{Uncalibrated Operational Dispatch Loss}{27}{section*.55}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Post-Hoc Decoupled Quantile Calibration}{27}{section*.56}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Theoretical Takeaway}{27}{section*.57}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~A.2}Counterexample 2: Spatial Heteroscedasticity and Risk Reversal}{27}{subsection.A.2}\protected@file@percent }
-\newlabel{subsec:counterexample2}{{Appendix~A.2}{27}{Counterexample 2: Spatial Heteroscedasticity and Risk Reversal}{subsection.A.2}{}}
-\newlabel{ex:heteroscedasticity}{{2}{27}{Spatial Heteroscedasticity}{example.2}{}}
 \def\@LN@column{1}
+\@writefile{toc}{\contentsline {paragraph}{Uncalibrated Operational Dispatch Loss}{28}{section*.55}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Post-Hoc Decoupled Quantile Calibration}{28}{section*.56}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Theoretical Takeaway}{28}{section*.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~A.2}Counterexample 2: Spatial Heteroscedasticity and Risk Reversal}{28}{subsection.A.2}\protected@file@percent }
+\newlabel{subsec:counterexample2}{{Appendix~A.2}{28}{Counterexample 2: Spatial Heteroscedasticity and Risk Reversal}{subsection.A.2}{}}
+\newlabel{ex:heteroscedasticity}{{2}{28}{Spatial Heteroscedasticity}{example.2}{}}
+\def\@LN@column{2}
 \@writefile{toc}{\contentsline {paragraph}{Prediction MSE Comparison}{28}{section*.58}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Post-Hoc Global Scalar Calibration}{28}{section*.59}\protected@file@percent }
-\def\@LN@column{2}
 \bibdata{refs}
 \bibcite{holttinen2021}{{1}{}{{}}{{}}}
 \bibcite{weron2014}{{2}{}{{}}{{}}}
 \bibcite{lipton2019}{{3}{}{{}}{{}}}
+\def\@LN@column{1}
+\def\@LN@column{2}
+\@writefile{toc}{\contentsline {paragraph}{Theoretical Takeaway}{29}{section*.60}\protected@file@percent }
 \bibcite{pinson2007trading}{{4}{}{{}}{{}}}
 \bibcite{raissi2019physics}{{5}{}{{}}{{}}}
 \bibcite{karniadakis2021physics}{{6}{}{{}}{{}}}
@@ -279,9 +282,6 @@
 \bibcite{s34_prx2023}{{12}{}{{}}{{}}}
 \bibcite{krishnapriyan2021}{{13}{}{{}}{{}}}
 \bibcite{madsen2005}{{14}{}{{}}{{}}}
-\def\@LN@column{1}
-\@writefile{toc}{\contentsline {paragraph}{Theoretical Takeaway}{29}{section*.60}\protected@file@percent }
-\def\@LN@column{2}
 \bibcite{optis2022}{{15}{}{{}}{{}}}
 \bibcite{zhang2014wind}{{16}{}{{}}{{}}}
 \bibcite{dao2018cointegration}{{17}{}{{}}{{}}}
@@ -295,6 +295,8 @@
 \bibcite{s27_uniwind2026}{{25}{}{{}}{{}}}
 \bibcite{zenodo_hilloftowie}{{26}{}{{}}{{}}}
 \bibcite{zenodo_kelmarsh}{{27}{}{{}}{{}}}
+\def\@LN@column{1}
+\def\@LN@column{2}
 \bibcite{zenodo_penmanshiel}{{28}{}{{}}{{}}}
 \bibcite{nie2023patchtst}{{29}{}{{}}{{}}}
 \bibcite{s10_pinnuq2025}{{30}{}{{}}{{}}}
@@ -304,4 +306,4 @@
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
 \def\@LN@column{1}
 \def\@LN@column{2}
-\gdef \@abspage@last{31}
+\gdef \@abspage@last{32}

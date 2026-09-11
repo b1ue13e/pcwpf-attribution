@@ -94,3 +94,26 @@ penmanshiel,42,zero_bid,baseline,0.0,0,uncalibrated,2,0.3333333333333333,0.33689
   - 单边欠发惩罚现金流：$\pounds/(\text{turb}\cdot\text{yr})$
   - 净不平衡结算现金流分量：$\pounds/(\text{turb}\cdot\text{yr})$
   - 现货与平衡清算电价：$\pounds/\text{MWh}$。
+
+---
+
+## 冲突 5: Section 8 英国电力市场远期结算价格符号不一致
+
+### 1. 发现问题
+在正文 Section 8（Discussion）第 17 行及第 72 行（Gate M4）中，两部制市场结算公式残留旧版集中日前市场符号：$R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q)$。而在 Section 4（Protocol）第 40 行与 Section 5（Results）第 92 行中，统一定义为 $R_{\text{total}} = P_{\text{F}} \cdot q + P_{\text{imb}} \cdot (y - q)$。
+
+### 2. 制度审计与归正
+在英国（GB BETTA / BSC）电力市场制度下，发电商主要通过场外双边合同（OTC Forward）与电力交易所自主申报物理通知（FPN），而非强制性日前集中调度池（Mandatory Day-Ahead Pool）。因此：
+- 采用通用远期合同电价符号 $P_{\text{F}}$（Forward Price），准确覆盖双边远期协议与日前交易；
+- 已将 Section 8 中所有残留的 $P_{\text{DA}}$ 统一修正为 $P_{\text{F}}$，保持全篇制度与数学表达 100% 严谨闭环。
+
+---
+
+## 冲突 6: 正文内部修改痕迹与元注释清理
+
+### 1. 发现问题
+在 Section 5.5 第 97 行及 Table 4 表注中，残留有内部协作修改痕迹（如“earlier drafts reported Penmanshiel Zero-Bid Decision Cost as 0.20584, which was an erroneous transcription that copy-pasted...”），带有工作草稿与评审注记性质。
+
+### 2. 归正方案
+将内部审校性陈述完全剥离至 `revision_outputs/` 归档报告中，正文彻底重写为成熟学术论文语言：“Under asymmetric operational loss ($r=2, q=1/3$), the Zero-Bid strategy yields a Decision Cost of 0.33689 on Penmanshiel (Table 4), correctly penalizing the policy for severe under-commitment ($\text{Cost}_{\text{static}} = \bar{y} \approx 0.337$, matching the site's mean capacity factor)...”，杜绝任何元注释。
+

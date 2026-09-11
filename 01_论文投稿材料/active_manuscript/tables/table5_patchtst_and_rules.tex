@@ -3,7 +3,7 @@
 \footnotesize
 \renewcommand{\arraystretch}{0.90}
 \setlength{\tabcolsep}{3.2pt}
-\caption{Exploratory Cross-Backbone Architectural Sensitivity Analysis: Deep Transformer (PatchTST) under BSC 30-Minute Physical Netting Settlement (5-Seed Mean $\pm$ Std).}
+\caption{Exploratory Cross-Backbone Architectural Sensitivity Analysis: Deep Transformer (PatchTST) under BSC 30-Minute Physical Netting Settlement (5-Seed Means; Multi-Seed Dispersions Documented in Table Notes).}
 \label{tab:patchtst_and_rules}
 \begin{threeparttable}
 \begin{tabularx}{\textwidth}{p{2.0cm}p{3.2cm}l>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
@@ -35,7 +35,7 @@
 \end{tabularx}
 \begin{tablenotes}[flushleft]
 \footnotesize
-\item \textbf{Notes}: Exploratory sensitivity results for PatchTST (Nie et al., ICLR 2023; patch length 6, stride 4, channel-independent RevIN) evaluate capacity-aligned architectural sensitivity under identical BSC 30-minute physical netting settlement across five random initialization seeds. At flat Kelmarsh, unconstrained PatchTST secures higher balancing cashflow (+\pounds 1,365.12/(turb$\cdot$yr) over distribution prior); at upland Penmanshiel and Hill of Towie, distribution regularization provides inductive protection, saving \pounds 790.51/(turb$\cdot$yr) and \pounds 232.44/(turb$\cdot$yr) in single-sided shortfall. Evaluated under univariate power input and nominal penalty $\lambda=0.01$ as an architectural sensitivity probe.
+\item \textbf{Notes}: (1) Exploratory sensitivity results for PatchTST (Nie et al., ICLR 2023; patch length 6, stride 4, channel-independent RevIN) evaluate capacity-aligned architectural sensitivity under identical BSC 30-minute physical netting settlement across five random initialization seeds under nominal regularization $\lambda=0.01$. At flat Kelmarsh, unconstrained PatchTST secures higher balancing cashflow (+\pounds 1,365.12/(turb$\cdot$yr) over distribution prior); at upland Penmanshiel and Hill of Towie, distribution regularization provides inductive protection, saving \pounds 790.51/(turb$\cdot$yr) and \pounds 232.44/(turb$\cdot$yr) in single-sided shortfall. (2) Multi-seed standard deviations across 5 seeds: on Hill of Towie, calibrated unconstrained RMSE is $0.1202 \pm 0.0009$, $\text{Cost}_{\text{dyn}}$ is $0.10220 \pm 0.00072$, and shortfall is \pounds $18,168.11 \pm 438.72$; on Kelmarsh, calibrated unconstrained RMSE is $0.1118 \pm 0.0019$, $\text{Cost}_{\text{dyn}}$ is $0.10222 \pm 0.00172$, and shortfall is \pounds $16,808.90 \pm 777.10$; on Penmanshiel, calibrated unconstrained RMSE is $0.1304 \pm 0.0013$, $\text{Cost}_{\text{dyn}}$ is $0.11270 \pm 0.00133$, and shortfall is \pounds $19,129.15 \pm 856.32$.
 \end{tablenotes}
 \end{threeparttable}
 \end{table*}

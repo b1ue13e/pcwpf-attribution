@@ -1,25 +1,25 @@
 \begin{table*}[!t]
 \centering
 \footnotesize
-\renewcommand{\arraystretch}{0.84}
-\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{0.82}
+\setlength{\tabcolsep}{2.6pt}
 \caption{3D Controlled Ablation Benchmark: Evaluating Physical Prior Specificity, Weak-Regularization Mimicry, and Training-Proxy Lag Across Three Operational Wind Farms (Quantile Calibrated $r=2, q=1/3$).}
 \label{tab:controlled_ablation}
 \begin{threeparttable}
-\begin{tabularx}{\textwidth}{p{2.2cm}p{3.2cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}Xp{3.8cm}}
+\begin{tabularx}{\textwidth}{p{2.2cm}p{3.2cm}>{\centering\arraybackslash}p{2.1cm}>{\centering\arraybackslash}p{1.5cm}>{\centering\arraybackslash}p{1.4cm}>{\centering\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Wind Farm} & \textbf{Controlled Experimental} & \textbf{Normalized Cost} & \textbf{Pinball Loss} & \textbf{RMSE} & \textbf{Shortfall} & \textbf{Empirical Takeaway} \\
 \textbf{\& Topology} & \textbf{Arm (Ablation Condition)} & \textbf{$\text{Cost}_{\text{static}}$ ($r=2$)} & \textbf{($q=1/3$)} & \textbf{(pu)} & \textbf{(\pounds/(turb$\cdot$yr))} & \textbf{\& Diagnostic Assessment} \\
 \midrule
-\multirow{6}{=}{\textbf{Kelmarsh}\\(12.3 MW, 6 turb)\\\textit{Flat Open Terrain}\\\textit{$N_{\text{train}}=5,098$}} 
+\multirow{6}{=}{\textbf{Kelmarsh}\\(12.3 MW, 6 turb)\\\textit{Flat Open Terrain}\\\textit{$N=5{,}098$}} 
 & Vanilla Unconstrained ($\lambda=0$) & $0.08812 \pm 0.00009$ & 0.02937 & 0.1717 & \pounds 5,831.79 & Pure-data power autoregressive baseline \\
 & Info-Symmetric (Power + Wind) & $0.08910 \pm 0.00039$ & 0.02970 & 0.1697 & \pounds 5,982.26 & Wind speed reduces RMSE but elevates tail dispatch cost \\
 & Genuine Curve Prior ($\lambda=0.1$) & \textbf{$0.08791 \pm 0.00009$} & \textbf{0.02930} & 0.1708 & \pounds 5,780.99 & Statistically verified risk reduction ($-0.24\%$) \\
-& Pseudo-Scrambled Prior ($\lambda=0.01$) & $0.08801 \pm 0.00008$ & 0.02934 & 0.1724 & \pounds 5,657.03 & \textbf{Regularization Mimicry}: closely matches genuine prior ($0.08810$ at $\lambda=0.01$) \\
+& Pseudo-Scrambled Prior ($\lambda=0.01$) & $0.08801 \pm 0.00008$ & 0.02934 & 0.1724 & \pounds 5,657.03 & \textbf{Regularization Mimicry}: matches genuine prior ($0.08810$ at $\lambda=0.01$) \\
 & Genuine Distribution ($\lambda=0.1$) & $0.09841 \pm 0.00085$ & 0.03280 & 0.1703 & \pounds 8,412.28 & Shortfall penalty surges $+44.2\%$ under distribution constraint \\
 & Stale Training Proxy ($k=36$, 6h) & $0.09043 \pm 0.00006$ & 0.03014 & 0.1729 & \pounds 5,888.58 & Monotonic degradation as lagged wind speed proxy decays \\
 \midrule
-\multirow{6}{=}{\textbf{Hill of Towie}\\(48.3 MW, 21 turb)\\\textit{Complex Upland}\\\textit{$N_{\text{train}}=7,035$}} 
+\multirow{6}{=}{\textbf{Hill of Towie}\\(48.3 MW, 21 turb)\\\textit{Complex Upland}\\\textit{$N=7{,}035$}} 
 & Vanilla Unconstrained ($\lambda=0$) & $0.08924 \pm 0.00005$ & 0.02975 & 0.1740 & \pounds 6,006.09 & Robust unconstrained benchmark \\
 & Info-Symmetric (Power + Wind) & $0.09042 \pm 0.00007$ & 0.03014 & 0.1733 & \pounds 6,297.16 & Wind channel adds high-frequency variance to dispatch \\
 & Genuine Curve Prior ($\lambda=0.1$) & \textbf{$0.08916 \pm 0.00007$} & \textbf{0.02972} & 0.1745 & \pounds 5,958.34 & Modest risk reduction ($-0.09\%$) under tuned penalty \\
@@ -27,7 +27,7 @@
 & Genuine Distribution ($\lambda=0.1$) & $0.09503 \pm 0.00022$ & 0.03168 & 0.1801 & \pounds 5,702.68 & \textbf{Metric Inversion}: cashflow rises to \pounds 12k while decision cost degrades $+6.5\%$ \\
 & Stale Training Proxy ($k=36$, 6h) & $0.09257 \pm 0.00007$ & 0.03086 & 0.1759 & \pounds 6,281.82 & Temporal proxy lag monotonically erodes prior guidance \\
 \midrule
-\multirow{6}{=}{\textbf{Penmanshiel}\\(28.7 MW, 14 turb)\\\textit{Complex Upland}\\\textit{$N_{\text{train}}=1,583$ (Scarce)}} 
+\multirow{6}{=}{\textbf{Penmanshiel}\\(28.7 MW, 14 turb)\\\textit{Complex Upland}\\\textit{$N=1{,}583$ (Scarce)}} 
 & Vanilla Unconstrained ($\lambda=0$) & $0.09881 \pm 0.00027$ & 0.03294 & 0.2058 & \pounds 6,713.83 & Data-scarce training partition prone to empirical over-fitting \\
 & Info-Symmetric (Power + Wind) & $0.10461 \pm 0.00005$ & 0.03487 & 0.2091 & \pounds 6,630.38 & Additional unconstrained input channels exacerbate over-fitting \\
 & Genuine Curve Prior ($\lambda=1.0$) & \textbf{$0.09760 \pm 0.00044$} & \textbf{0.03254} & 0.2054 & \pounds 6,808.40 & \textbf{Authentic Inductive Benefit} ($-1.22\%$) in low-data regime \\
@@ -37,7 +37,7 @@
 \bottomrule
 \end{tabularx}
 \begin{tablenotes}[flushleft]
-\footnotesize
+\scriptsize
 \item \textbf{Notes}: (1) Values report multi-seed mean $\pm$ seed standard deviation across clean operational test periods (Kelmarsh: 4 seeds [42, 43, 44, 45]; Hill of Towie and Penmanshiel: 3 seeds [42, 43, 44]). (2) $\text{Cost}_{\text{static}} = 3 \times \text{PinballLoss}(q=1/3)$ under post-hoc quantile calibration ($r=2$). (3) Pseudo-Scrambled arms permute the empirical wind-to-power mapping while preserving identical loss formulations and hyperparameters $\lambda$. At weak penalty ($\lambda=0.01$), genuine curve and scrambled curve yield near-identical loss ($0.08810$ vs.\ $0.08801$ on Kelmarsh; $0.08922$ vs.\ $0.08919$ on Hill of Towie). At strong penalty ($\lambda=1.0$) on Penmanshiel, genuine curve reduces loss ($-1.22\%$) whereas scrambled prior inflates loss ($+68.1\%$), isolating prior specificity. (4) Stale Training Proxy evaluates sensitivity to historical wind speed proxy lag $k \in \{6, 12, 18, 36\}$ (1h to 6h) in the training objective; the model takes only historical power at inference.
 \end{tablenotes}
 \end{threeparttable}

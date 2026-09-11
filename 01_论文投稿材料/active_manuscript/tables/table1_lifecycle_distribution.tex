@@ -2,35 +2,35 @@
 \centering
 \footnotesize
 \renewcommand{\arraystretch}{0.90}
-\setlength{\tabcolsep}{3.5pt}
+\setlength{\tabcolsep}{2.5pt}
 \caption{Empirical Distribution of Constraint Lifecycle Dimensions ($\mathcal{D}_1$--$\mathcal{D}_5$) Across 46 Audited Scoping Studies (2023--2026).}
 \label{tab:lifecycle_distribution}
-\begin{tabularx}{\textwidth}{p{3.4cm}p{2.8cm}rrX}
+\noindent\begin{tabularx}{\linewidth}{p{3.2cm}p{3.1cm}rrX}
 \toprule
 \textbf{Lifecycle Dimension} & \textbf{Taxonomic Category} & \textbf{Count ($N=46$)} & \textbf{Proportion (\%)} & \textbf{Typical Exemplars in Audited Literature} \\
 \midrule
-\multirow{3}{*}{\textbf{D1: Parameter Provenance}} 
+\multirow{3}{=}{\textbf{D1: Parameter Provenance}} 
 & \texttt{intrinsic} & 40 & 87.0\% & Betz aerodynamic limit ($C_p \le 16/27$), rated capacity $P_{\text{rated}}$, Jensen wake deficit \\
 & \texttt{historical-static} & 5 & 10.9\% & Empirical bivariate power curve ($P=f(v)$), 2D KDE distribution estimated offline on train SCADA \\
 & \texttt{learned-online} & 1 & 2.2\% & Auxiliary sub-network dynamically predicting time-varying aerodynamic coefficients $C_p(t)$ \\
 \midrule
-\multirow{4}{*}{\textbf{D2: Application Stage}} 
+\multirow{4}{=}{\textbf{D2: Application Stage}} 
 & \texttt{training-loss} & 21 & 45.7\% & Differentiable penalty term in backpropagation ($\mathcal{L} = \mathcal{L}_{\text{MSE}} + \lambda \mathcal{L}_{\text{phys}}$) \\
 & \texttt{inference-arch.} & 23 & 50.0\% & Wake-guided GNN adjacency matrix, monotonic activation layers, dual-stream physical fusion \\
 & \texttt{data-generation} & 1 & 2.2\% & Physics-guided generative diffusion model synthesizing extreme wind generation scenarios \\
 & \texttt{post-hoc-correction} & 1 & 2.2\% & Post-inference conformal prediction and residual projection layers \\
 \midrule
-\multirow{3}{*}{\textbf{D3: Inference Requirement}} 
+\multirow{3}{=}{\textbf{D3: Inference Requirement}} 
 & \texttt{none} & 38 & 82.6\% & Standard historical autoregressive SCADA sequence; zero runtime external dependencies \\
 & \texttt{forecast-input} & 6 & 13.0\% & Requires contemporaneous/future NWP meteorological forecasts over $[t+1, t+H]$ \\
 & \texttt{contemp.-state} & 2 & 4.3\% & Requires synchronized real-time operational SCADA from adjacent/upstream wind turbines \\
 \midrule
-\multirow{3}{*}{\textbf{D4: Implementation Fidelity}} 
+\multirow{3}{=}{\textbf{D4: Implementation Fidelity}} 
 & \texttt{not-found} & 44 & 95.7\% & No accessible public repository or open-source software identified under recorded protocol \\
 & \texttt{code-mismatch} & 1 & 2.2\% & PCT: loss function calculates reverse-argument JS form rather than specified standard JS \\
 & \texttt{code-aligned} & 1 & 2.2\% & PINN-UQ: algebraic electromechanical tie constraints faithfully matching published equations \\
 \midrule
-\multirow{3}{*}{\textbf{D5: Ablation Semantics}} 
+\multirow{3}{=}{\textbf{D5: Ablation Semantics}} 
 & \texttt{module-ablation} & 23 & 50.0\% & Excises multi-layer neural submodule; conflates parametric capacity with physical bias \\
 & \texttt{constraint-on-off} & 17 & 37.0\% & Toggles penalty multiplier ($\lambda=0$ vs.\ $\lambda>0$) under strictly identical network capacity \\
 & \texttt{both} & 6 & 13.0\% & Implements both parameter toggles and architectural ablations across comparative baselines \\

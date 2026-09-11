@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  11 SEP 2026 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  11 SEP 2026 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1179,35 +1179,15 @@ Underfull \vbox (badness 3861) has occurred while \output is active []
 Underfull \vbox (badness 3861) has occurred while \output is active []
 
  [7 <./figures/prisma_flow_diagram.pdf>]) (sections/05_results.tex [8]
-(tables/table1_lifecycle_distribution.tex
-Overfull \hbox (1.06248pt too wide) in paragraph at lines 38--38
-[]|\T1/cmtt/m/n/8 post-hoc-correction| 
- []
-
-
-Overfull \hbox (1.06882pt too wide) in paragraph at lines 38--38
-[]|[]| 
- []
-
-)
-<figures/fig_field_audit_distribution.pdf, id=627, 734.75395pt x 509.166pt>
+(tables/table1_lifecycle_distribution.tex)
+<figures/fig_field_audit_distribution.pdf, id=627, 831.105pt x 542.025pt>
 File: figures/fig_field_audit_distribution.pdf Graphic file (type pdf)
 <use figures/fig_field_audit_distribution.pdf>
 Package pdftex.def Info: figures/fig_field_audit_distribution.pdf  used on inpu
 t line 17.
-(pdftex.def)             Requested size: 468.0pt x 324.31128pt.
- (tables/table2_dynamic_settlement.tex
-Overfull \hbox (1.46007pt too wide) in paragraph at lines 38--38
- []|\T1/txr/bx/n/8 (-20) (¿/(turb$\OMS/txsy/m/n/8 ^^A$\T1/txr/bx/n/8 (-20) yr))
-| 
- []
+(pdftex.def)             Requested size: 468.0pt x 305.21913pt.
 
-
-Underfull \hbox (badness 1533) in paragraph at lines 38--38
-[]|\T1/txr/m/n/8 (+20) Pure-data pow-er au-tore-gres-sive
- []
-
-
+(tables/table2_dynamic_settlement.tex
 Underfull \hbox (badness 3219) in paragraph at lines 38--38
 []|\T1/txr/m/n/8 (+20) Info-Symmetric (Pow-er +
  []
@@ -1228,28 +1208,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--38
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 38--38
-[]|\T1/txr/m/n/8 (+20) Indistinguishable from gen-uine
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
-[]|\T1/txr/m/n/8 (+20) Data-scarce train-ing par-ti-tion
- []
-
-
 Underfull \hbox (badness 3219) in paragraph at lines 38--38
 []|\T1/txr/m/n/8 (+20) Info-Symmetric (Pow-er +
- []
-
-
-Underfull \hbox (badness 2126) in paragraph at lines 38--38
-[]|\T1/txr/m/n/8 (+20) Additional un-con-strained in-put
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
-[]|\T1/txr/bx/n/8 (+20) Authentic In-duc-tive Ben-e-fit
  []
 
 
@@ -1257,11 +1217,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--38
 []|\T1/txr/m/n/8 (+20) Pseudo-Scrambled Pri-or
  []
 
-
-Underfull \hbox (badness 6842) in paragraph at lines 38--38
-[]|\T1/txr/bx/n/8 (+20) Prior Speci-fici-ty Demon-stra-
- []
-
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <7> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 41.
 )
 <figures/fig_causal_ablation.pdf, id=630, 835.47508pt x 571.13252pt>
 File: figures/fig_causal_ablation.pdf Graphic file (type pdf)
@@ -1303,121 +1260,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 (tables/table4_zero_bid_diagnostic.tex
-Overfull \hbox (0.56651pt too wide) in paragraph at lines 32--32
- []|\T1/txr/bx/n/8 (-20) Imbalance 
- []
-
-
-Overfull \hbox (6.0553pt too wide) in paragraph at lines 32--32
- []|\T1/txr/bx/n/8 (-20) (¿/(turb$\OMS/txsy/m/n/8 ^^A$\T1/txr/bx/n/8 (-20) yr))
-| 
- []
-
-
-Overfull \hbox (4.48651pt too wide) in paragraph at lines 32--32
- []|\T1/txr/bx/n/8 (-20) Component 
- []
-
-
-Overfull \hbox (5.79129pt too wide) in paragraph at lines 32--32
- \T1/txr/bx/n/8 (-20) (¿/(turb$\OMS/txsy/m/n/8 ^^A$\T1/txr/bx/n/8 (-20) yr))| 
- []
-
-
-Overfull \hbox (9.78636pt too wide) in paragraph at lines 32--32
- []|\T1/txr/bx/n/8 (-20) +¿223,882.15| 
- []
-
-
-Overfull \hbox (1.63277pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿5,890.12| 
- []
-
-
-Overfull \hbox (1.63277pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿6,439.32| 
- []
-
-
-Overfull \hbox (1.63277pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿3,485.65| 
- []
-
-
-Overfull \hbox (9.78636pt too wide) in paragraph at lines 32--32
- []|\T1/txr/bx/n/8 (-20) +¿239,299.30| 
- []
-
-
-Overfull \hbox (1.63277pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿9,120.34| 
- []
-
-
-Overfull \hbox (1.63277pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿8,543.14| 
- []
-
-
-Overfull \hbox (5.55276pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿12,174.95| 
- []
-
-
-Underfull \hbox (badness 4072) in paragraph at lines 32--32
-[]|\T1/txr/m/n/8 (+20) Cashflow com-po-nen-t ris-es by
- []
-
-
-Overfull \hbox (9.78636pt too wide) in paragraph at lines 32--32
- []|\T1/txr/bx/n/8 (-20) +¿243,449.80| 
- []
-
-
-Underfull \hbox (badness 2635) in paragraph at lines 32--32
-[]|\T1/txr/bx/n/8 (+20) Degenerate Ar-ti-fac-t\T1/txr/m/n/8 (+20) : demon-
- []
-
-
-Overfull \hbox (1.63277pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿6,150.30| 
- []
-
-
-Overfull \hbox (1.63277pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿6,404.64| 
- []
-
-
-Overfull \hbox (1.63277pt too wide) in paragraph at lines 32--32
- []|\T1/txr/m/n/8 (-20) +¿6,234.24| 
+Underfull \hbox (badness 2359) in paragraph at lines 32--32
+[]|\T1/txr/m/n/8 (+20) Calibrated Pow-er Curve
  []
 
 )
-
-pdfTeX warning: pdflatex.exe (file ./figures/fig_market_decoupling.pdf): PDF in
-clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/fig_market_decoupling.pdf, id=667, 760.01942pt x 301.125pt>
+<figures/fig_market_decoupling.pdf, id=667, 758.835pt x 274.626pt>
 File: figures/fig_market_decoupling.pdf Graphic file (type pdf)
 <use figures/fig_market_decoupling.pdf>
 Package pdftex.def Info: figures/fig_market_decoupling.pdf  used on input line 
 82.
-(pdftex.def)             Requested size: 468.0pt x 185.4274pt.
-[11 <./figures/fig_field_audit_distribution.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(pdftex.def)             Requested size: 468.0pt x 169.37378pt.
+ [11 <./figures/fig_field_audit_distribution.pdf>]
+
+LaTeX Warning: Text page 12 contains only floats.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-[13 <./figures/fig_causal_ablation.pdf>] (tables/table5_patchtst_and_rules.tex)
-) (sections/06_code_audit.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (25.40495pt too high) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (25.40495pt too high) has occurred while \output is active []
 
 
+
+LaTeX Warning: Text page 12 contains only floats.
+
+
+Overfull \vbox (25.40495pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (25.40495pt too high) has occurred while \output is active []
+
+
+[12] [13 <./figures/fig_causal_ablation.pdf>]
+(tables/table5_patchtst_and_rules.tex)) (sections/06_code_audit.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1430,7 +1306,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15 <./figures/fig_market_decoupling.pdf>] [16]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./figures/fig_market_decoupling.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (32.03937pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (32.03937pt too high) has occurred while \output is active []
+
+
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 \T1/txr/m/n/10 (+20) In the Py-Torch C++ AT-en k-er-nel back-
  []
@@ -1453,40 +1348,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-
-Overfull \hbox (25.81728pt too wide) detected at line 54
-[][][][][]
- []
-
-
-Underfull \vbox (badness 1629) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1629) has occurred while \output is active []
-
- [17]
-<figures/fig_pct_loss_empirical_contrast.pdf, id=1344, 679.62384pt x 269.11604p
+[17]
+<figures/fig_pct_loss_empirical_contrast.pdf, id=1127, 679.62384pt x 269.11604p
 t>
 File: figures/fig_pct_loss_empirical_contrast.pdf Graphic file (type pdf)
 <use figures/fig_pct_loss_empirical_contrast.pdf>
 Package pdftex.def Info: figures/fig_pct_loss_empirical_contrast.pdf  used on i
-nput line 79.
+nput line 80.
 (pdftex.def)             Requested size: 468.0pt x 185.32478pt.
-
-Overfull \hbox (28.77942pt too wide) detected at line 101
-[][][][][] \OT1/txr/m/n/10 = [] [][] \OMS/txsy/m/n/10 ^^A [][] \OT1/txr/m/n/10 
-= [] \OML/txmi/m/it/10 ^^^ [] \OMS/txsy/m/n/10 ^^A \OML/txmi/m/it/10 ^^^ [] :
- []
-
-) (sections/07_theory.tex [18] [19 <./figures/fig_pct_loss_empirical_contrast.p
-df>]
+ [18]) (sections/07_theory.tex [19 <./figures/fig_pct_loss_empirical_contrast.p
+df>] [20]
 Underfull \hbox (badness 3849) in paragraph at lines 109--110
 [][]\T1/txr/m/it/10 (+20) Remark \T1/txr/m/n/10 (+20) 3 (Mech-a-nis-tic D-e-duc
 -tion 3: In-duc-tive
  []
 
-[20]) (sections/08_discussion.tex [21] [22] (tables/table_reforms_checklist.tex
-
+) (sections/08_discussion.tex [21] [22] [23]
+(tables/table_reforms_checklist.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--23
 []|\T1/txr/bx/n/8 (+20) Governance Di-men-
  []
@@ -1527,7 +1405,7 @@ Underfull \hbox (badness 2221) in paragraph at lines 69--70
 OT1/txr/m/n/10 (+20) = 0$ \T1/txr/m/n/10 (+20) vs.
  []
 
-) (sections/09_conclusion.tex [23] [24]) (sections/11_starmethods.tex
+) (sections/09_conclusion.tex [24]) (sections/11_starmethods.tex
 Underfull \hbox (badness 6445) in paragraph at lines 41--41
 []|\T1/txr/m/n/8 (+20) Python Pro-gram-ming Lan-guage
  []
@@ -1540,28 +1418,35 @@ Underfull \hbox (badness 1824) in paragraph at lines 41--41
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25] [26]) (sections/10_appendix.tex
+[25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26])
+(sections/10_appendix.tex
 Underfull \hbox (badness 2726) in paragraph at lines 1--1
 \T1/txr/bx/n/10 (+20) Cal-i-bra-tion Bound-aries and Coun-
  []
 
-
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 58--58
 []\T1/txr/m/it/10 (+20) Counterexample 2: S-pa-tial Het-
  []
 
-[27]) [28] (main.bbl
+[28]) (main.bbl [29]
 Underfull \hbox (badness 1024) in paragraph at lines 76--79
 \T1/txr/m/n/9 (+20) Ma-honey, Char-ac-ter-iz-ing pos-si-ble fail-ure modes in
  []
 
-[29]
+
 Underfull \hbox (badness 10000) in paragraph at lines 147--153
 \T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 5281 /
  zenodo .
  []
 
-
+[30]
 Underfull \hbox (badness 1859) in paragraph at lines 171--177
 \T1/txr/m/n/9 (+20) with trans-form-er-s[][], in: The Eleventh In-ter-na-tion-a
 l
@@ -1573,7 +1458,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--177
 m ? id =
  []
 
-) [30] (main.aux)
+) [31
+
+] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1582,13 +1469,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 98D89864B4035EED14A0C3175CE34859;5547.
  ) 
 Here is how much of TeX's memory you used:
- 23719 strings out of 469789
- 422538 string characters out of 5472196
- 869454 words of memory out of 5000000
- 50707 multiletter control sequences out of 15000+600000
- 745030 words of font info for 885 fonts, out of 8000000 for 9000
+ 23740 strings out of 469789
+ 422740 string characters out of 5472196
+ 865372 words of memory out of 5000000
+ 50710 multiletter control sequences out of 15000+600000
+ 748744 words of font info for 896 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,18n,79p,2107b,2845s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,79p,2113b,2897s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <E:\MiKTeX-data\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <E:\MiKTeX-d
 ata\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <E:\MiKTeX-data\fonts/pk/lj
 four/jknappen/ec/dpi600\ectt0800.pk><E:/MiKTeX/fonts/type1/public/amsfonts/symb
@@ -1599,9 +1486,9 @@ fonts/rtxr.pfb><E:/MiKTeX/fonts/type1/public/txfonts/txex.pfb><E:/MiKTeX/fonts/
 type1/public/txfonts/txsy.pfb><E:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/M
 iKTeX/fonts/type1/urw/times/utmr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on main.pdf (31 pages, 738156 bytes).
+Output written on main.pdf (32 pages, 721831 bytes).
 PDF statistics:
- 1963 PDF objects out of 2073 (max. 8388607)
- 253 named destinations out of 1000 (max. 500000)
- 121777 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1755 PDF objects out of 2073 (max. 8388607)
+ 254 named destinations out of 1000 (max. 500000)
+ 132017 words of extra memory for PDF output out of 154059 (max. 10000000)
 
