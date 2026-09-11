@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  12 SEP 2026 00:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  12 SEP 2026 00:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1276,7 +1276,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-[11 <./figures/fig_field_audit_distribution.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./figures/fig_field_audit_distribution.pdf>]
 
 LaTeX Warning: Text page 12 contains only floats.
 
@@ -1297,10 +1302,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1715) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1715) has occurred while \output is active []
 
 
 (tables/table3_paired_bootstrap.tex) [13 <./figures/fig_causal_ablation.pdf>]
@@ -1310,21 +1315,32 @@ Underfull \hbox (badness 2359) in paragraph at lines 33--33
  []
 
 )
-<figures/fig_market_decoupling.pdf, id=844, 758.835pt x 274.626pt>
+<figures/fig_market_decoupling.pdf, id=872, 758.835pt x 274.626pt>
 File: figures/fig_market_decoupling.pdf Graphic file (type pdf)
 <use figures/fig_market_decoupling.pdf>
 Package pdftex.def Info: figures/fig_market_decoupling.pdf  used on input line 
 84.
 (pdftex.def)             Requested size: 468.0pt x 169.37378pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [14 <./figures/fig_within_site_learning_curve.pdf> <./figures/fig_prior_corrup
 tion_gradient.pdf>]
-Underfull \vbox (badness 3219) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 3219) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-(tables/table5_patchtst_and_rules.tex)) (sections/06_code_audit.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1351,7 +1367,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
-[18]
+(tables/table5_patchtst_and_rules.tex)) (sections/06_code_audit.tex
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 \T1/txr/m/n/10 (+20) In the Py-Torch C++ AT-en k-er-nel back-
  []
@@ -1374,8 +1390,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[19]
-<figures/fig_pct_loss_empirical_contrast.pdf, id=1148, 679.62384pt x 269.11604p
+[18] [19]
+<figures/fig_pct_loss_empirical_contrast.pdf, id=1178, 679.62384pt x 269.11604p
 t>
 File: figures/fig_pct_loss_empirical_contrast.pdf Graphic file (type pdf)
 <use figures/fig_pct_loss_empirical_contrast.pdf>
@@ -1389,8 +1405,8 @@ Underfull \hbox (badness 3849) in paragraph at lines 109--110
 -tion 3: In-duc-tive
  []
 
-) (sections/08_discussion.tex [22] [23] [24]
-(tables/table_reforms_checklist.tex
+[22]) (sections/08_discussion.tex [23] [24] (tables/table_reforms_checklist.tex
+
 Underfull \hbox (badness 10000) in paragraph at lines 23--23
 []|\T1/txr/bx/n/8 (+20) Governance Di-men-
  []
@@ -1436,7 +1452,14 @@ Underfull \hbox (badness 2221) in paragraph at lines 69--70
 OT1/txr/m/n/10 (+20) = 0$ \T1/txr/m/n/10 (+20) vs.
  []
 
-) (sections/09_conclusion.tex [25]) (sections/11_starmethods.tex
+) (sections/09_conclusion.tex [25]
+Underfull \vbox (badness 3138) has occurred while \output is active []
+
+
+Underfull \vbox (badness 3138) has occurred while \output is active []
+
+)
+(sections/11_starmethods.tex
 Underfull \hbox (badness 6445) in paragraph at lines 41--41
 []|\T1/txr/m/n/8 (+20) Python Pro-gram-ming Lan-guage
  []
@@ -1446,17 +1469,18 @@ Underfull \hbox (badness 1824) in paragraph at lines 41--41
 []|\T1/txr/m/n/8 (+20) PyTorch Deep Learn-ing Li-brary
  []
 
+[26]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[26]
+[27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
-[28]) (sections/10_appendix.tex
+ [28])
+(sections/10_appendix.tex
 Underfull \hbox (badness 2726) in paragraph at lines 1--1
 \T1/txr/bx/n/10 (+20) Cal-i-bra-tion Bound-aries and Coun-
  []
@@ -1466,12 +1490,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--58
 []\T1/txr/m/it/10 (+20) Counterexample 2: S-pa-tial Het-
  []
 
-[29]) [30] (main.bbl
+[29] [30]) (main.bbl [31]
 Underfull \hbox (badness 1024) in paragraph at lines 76--79
 \T1/txr/m/n/9 (+20) Ma-honey, Char-ac-ter-iz-ing pos-si-ble fail-ure modes in
  []
 
-[31]
+
 Underfull \hbox (badness 10000) in paragraph at lines 147--153
 \T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 5281 /
  zenodo .
@@ -1498,13 +1522,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AC7235D701655E26826F24A1D77450C4;5538.
  ) 
 Here is how much of TeX's memory you used:
- 23859 strings out of 469789
- 423807 string characters out of 5472196
- 864331 words of memory out of 5000000
+ 23863 strings out of 469789
+ 423836 string characters out of 5472196
+ 864440 words of memory out of 5000000
  50714 multiletter control sequences out of 15000+600000
- 754458 words of font info for 979 fonts, out of 8000000 for 9000
+ 754623 words of font info for 982 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,17n,79p,3070b,2854s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,79p,3070b,2835s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <E:\MiKTeX-data\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <E:\MiKTeX-d
 ata\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <E:\MiKTeX-data\fonts/pk/lj
 four/jknappen/ec/dpi600\ectt0800.pk><E:/MiKTeX/fonts/type1/public/amsfonts/symb
@@ -1515,9 +1539,9 @@ fonts/rtxr.pfb><E:/MiKTeX/fonts/type1/public/txfonts/txex.pfb><E:/MiKTeX/fonts/
 type1/public/txfonts/txsy.pfb><E:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/M
 iKTeX/fonts/type1/urw/times/utmr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on main.pdf (33 pages, 732933 bytes).
+Output written on main.pdf (33 pages, 1473628 bytes).
 PDF statistics:
- 1765 PDF objects out of 2073 (max. 8388607)
+ 1796 PDF objects out of 2073 (max. 8388607)
  257 named destinations out of 1000 (max. 500000)
  136113 words of extra memory for PDF output out of 154059 (max. 10000000)
 

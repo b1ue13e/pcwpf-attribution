@@ -43,4 +43,4 @@ R_{\text{total}} = P_{\text{F}} \cdot q + P_{\text{imb}} \cdot (y - q),
 E_{SP} = \sum_{t \in SP} (y_t - q_t) P_{\text{rated}} \Delta t \quad [\text{MWh}], \quad \Delta t = \frac{1}{6}\text{ h},
 \label{eq:bsc_netting}
 \end{equation}
-其中 $P_{\text{rated}}$ 为风电场额定总装机容量（以 MW 计，Kelmarsh 为 12.3 MW，Hill of Towie 为 48.3 MW，Penmanshiel 为 36.8 MW），由此生成基于 BSC 电价的格式化不平衡现金流诊断指标，所有统计显著性均通过 2,000 次 7 天圆形块成对自举检验（Block Bootstrap）予以严密核验。
+其中 $P_{\text{rated}}$ 为风电场额定总装机容量（以 MW 计，Kelmarsh 为 12.3~MW，Hill of Towie 为 48.3~MW，Penmanshiel 为 28.7~MW）。风电场级现金流除以各场机组台数（$N_{\text{turb}} \in \{6, 21, 14\}$）并年化折算以报告 \pounds/(turb$\cdot$yr)，由此生成基于 BSC 电价的格式化不平衡现金流诊断指标，所有统计显著性均通过 2,000 次 7 天圆形块成对自举检验（Block Bootstrap）予以严密核验。
