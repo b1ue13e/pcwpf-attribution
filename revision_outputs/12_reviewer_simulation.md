@@ -10,12 +10,12 @@
 
 ## Panel Overview & Overall Recommendation Summary
 
-| Reviewer Persona | Domain Specialization | Overall Recommendation | Original Draft Score (Pre-Restructuring) | Revised Draft Score (Current Status) |
-| :--- | :--- | :--- | :---: | :---: |
-| **Reviewer A** | Applied Wind Energy & Aerodynamics | **Accept with Minor Revision** | 4/10 (Major Overclaim / Hostile) | **9/10 (Rigorous & Constructive)** |
-| **Reviewer B** | Electricity Markets & BSC Settlement | **Accept with Minor Revision** | 3/10 (Fatal Market Transposition) | **9.5/10 (Institutionally Precise)** |
-| **Reviewer C** | Scientific ML & Reproducibility (REFORMS) | **Accept as Landmark Paper** | 5/10 (Unsound Proposition 1 / Vague) | **9.5/10 (Exemplary Protocol)** |
-| **Handling Editor** | Applied Energy Senior Editorial Board | **Revise / Minor Polish** | **Reject / Resubmit** | **High-Priority Publication** |
+| Reviewer Persona | Domain Specialization | Initial Pre-Surgery Score | Post-Surgery Status (Current Audit) | Overall Recommendation |
+| :--- | :--- | :---: | :---: | :--- |
+| **Reviewer A** | Applied Wind Energy & Aerodynamics | 8.5/10 | **8.8/10** | **Minor Revision / Acceptable** |
+| **Reviewer B** | Electricity Markets & BSC Settlement | 6.5/10 (Major: FPN vs ECVN, strict BSC) | **8.6/10** | **Minor Revision / Cleared** |
+| **Reviewer C** | Scientific ML & Reproducibility (REFORMS) | 7.0/10 (Major: Info budget, gradient scale) | **8.8/10** | **Minor Revision / Cleared** |
+| **Handling Editor** | Applied Energy Senior Editorial Board | ≈ 7.8--8.0/10 (Major Revision) | **≈ 8.8/10** | **Strong Revision / Ready for Formal Submission** |
 
 ---
 
@@ -79,9 +79,14 @@ The three layers of evidence—the PRISMA-ScR systematic scoping review ($N=46$)
 
 ## Handling Editor Meta-Recommendation
 
-**Decision**: **ACCEPT PENDING MINOR ADMINISTRATIVE CHECKS (HIGH PRIORITY)**
+**Decision**: **RECOMMENDED FOR FORMAL SUBMISSION / PEER REVIEW (OVERALL: ≈ 8.8/10)**
 
 **Editor's Note**:  
-"The revised manuscript has resolved all foundational concerns. By de-escalating theoretical claims from novel propositions to classical decision-theoretic baselines, resolving the numerical transposition error in Table 4, contextualizing GB market settlement under BSC rules, and integrating negative-control scrambled priors, the authors have elevated this submission into an authoritative landmark audit. 
+"The revised manuscript has resolved the critical institutional and statistical attribution concerns raised in the independent review. Specifically:
+1. **Institutional Clarity**: $q$ is strictly defined as the stylized forward-contracted position, clearly distinguished from operational FPN, and cashflow modeling is correctly qualified as a stylized BSC-price-based diagnostic rather than statutory full settlement.
+2. **Attributional Rigor**: The newly added $2 \times 2$ information-budget matched experiment at $N_{\text{train}}=500$ successfully disentangles physical inductive bias from auxiliary historical sample expansion, showing that physical domain guidance alone accounts for $77\%$ to $92\%$ of downside protection under sample scarcity.
+3. **Hyperparameter Transparency**: The validation-only selection protocol for $\lambda \in \{0.01, 0.1, 1.0\}$ is explicitly documented, preventing test-set selection bias.
+4. **Appropriate Precision**: Claims of 'gradient-scale matched' have been replaced with 'form- and weight-matched' controls, and overclaims regarding causal identification and statistical verification have been systematically toned down.
+5. **Editorial Compliance**: The Generative AI disclosure complies with Elsevier's updated 2026 guidelines.
 
-The paper is of exceptional quality, directly addresses core topics of interest to the readership of *Applied Energy*, and provides an indispensable methodology for the entire field of physics-informed machine learning in energy systems. Recommended for publication upon completion of the 5 minor administrative verification checks."
+The manuscript presents an empirical audit that meets the rigorous standards of *Applied Energy* and is recommended for formal peer review."
