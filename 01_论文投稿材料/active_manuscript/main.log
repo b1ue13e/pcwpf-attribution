@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  12 SEP 2026 00:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  12 SEP 2026 01:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1137,12 +1137,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [5 <./figures/fig_constraint_lifecycle.pdf>]) (sections/04_protocol.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 \T1/txr/m/n/10 (+20) ti-tle queries---$\OML/txmi/m/it/10 Q[]$ \T1/txr/m/n/10 (+
@@ -1178,9 +1172,9 @@ Underfull \vbox (badness 3861) has occurred while \output is active []
 
 Underfull \vbox (badness 3861) has occurred while \output is active []
 
- [7 <./figures/prisma_flow_diagram.pdf>]) (sections/05_results.tex [8]
+ [7 <./figures/prisma_flow_diagram.pdf>] [8]) (sections/05_results.tex
 (tables/table1_lifecycle_distribution.tex)
-<figures/fig_field_audit_distribution.pdf, id=628, 831.105pt x 542.025pt>
+<figures/fig_field_audit_distribution.pdf, id=627, 831.105pt x 542.025pt>
 File: figures/fig_field_audit_distribution.pdf Graphic file (type pdf)
 <use figures/fig_field_audit_distribution.pdf>
 Package pdftex.def Info: figures/fig_field_audit_distribution.pdf  used on inpu
@@ -1218,20 +1212,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--39
  []
 
 )
-<figures/fig_causal_ablation.pdf, id=631, 835.47508pt x 571.13252pt>
+<figures/fig_causal_ablation.pdf, id=630, 835.47508pt x 571.13252pt>
 File: figures/fig_causal_ablation.pdf Graphic file (type pdf)
 <use figures/fig_causal_ablation.pdf>
 Package pdftex.def Info: figures/fig_causal_ablation.pdf  used on input line 29
 .
 (pdftex.def)             Requested size: 468.0pt x 319.91917pt.
-<figures/fig_within_site_learning_curve.pdf, id=632, 678.74428pt x 282.29088pt>
+<figures/fig_within_site_learning_curve.pdf, id=631, 678.74428pt x 282.29088pt>
 
 File: figures/fig_within_site_learning_curve.pdf Graphic file (type pdf)
 <use figures/fig_within_site_learning_curve.pdf>
 Package pdftex.def Info: figures/fig_within_site_learning_curve.pdf  used on in
 put line 36.
 (pdftex.def)             Requested size: 468.0pt x 194.64737pt.
-<figures/fig_prior_corruption_gradient.pdf, id=633, 932.98721pt x 268.7045pt>
+<figures/fig_prior_corruption_gradient.pdf, id=632, 932.98721pt x 268.7045pt>
 File: figures/fig_prior_corruption_gradient.pdf Graphic file (type pdf)
 <use figures/fig_prior_corruption_gradient.pdf>
 Package pdftex.def Info: figures/fig_prior_corruption_gradient.pdf  used on inp
@@ -1276,12 +1270,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <./figures/fig_field_audit_distribution.pdf>]
+[11 <./figures/fig_field_audit_distribution.pdf>]
 
 LaTeX Warning: Text page 12 contains only floats.
 
@@ -1302,14 +1291,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-Underfull \vbox (badness 1715) has occurred while \output is active []
+(tables/table3_paired_bootstrap.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 1715) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-(tables/table3_paired_bootstrap.tex) [13 <./figures/fig_causal_ablation.pdf>]
-(tables/table4_zero_bid_diagnostic.tex
+ [13 <./figures/fig_causal_ablation.pdf>] (tables/table4_zero_bid_diagnostic.te
+x
 Underfull \hbox (badness 2359) in paragraph at lines 33--33
 []|\T1/txr/m/n/8 (+20) Calibrated Pow-er Curve
  []
@@ -1321,18 +1310,6 @@ File: figures/fig_market_decoupling.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/fig_market_decoupling.pdf  used on input line 
 84.
 (pdftex.def)             Requested size: 468.0pt x 169.37378pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [14 <./figures/fig_within_site_learning_curve.pdf> <./figures/fig_prior_corrup
 tion_gradient.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1522,13 +1499,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AC7235D701655E26826F24A1D77450C4;5538.
  ) 
 Here is how much of TeX's memory you used:
- 23863 strings out of 469789
- 423836 string characters out of 5472196
- 864440 words of memory out of 5000000
+ 23859 strings out of 469789
+ 423811 string characters out of 5472196
+ 865601 words of memory out of 5000000
  50714 multiletter control sequences out of 15000+600000
- 754623 words of font info for 982 fonts, out of 8000000 for 9000
+ 754458 words of font info for 979 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,17n,79p,3070b,2835s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,79p,3079b,2835s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <E:\MiKTeX-data\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <E:\MiKTeX-d
 ata\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <E:\MiKTeX-data\fonts/pk/lj
 four/jknappen/ec/dpi600\ectt0800.pk><E:/MiKTeX/fonts/type1/public/amsfonts/symb
@@ -1539,7 +1516,7 @@ fonts/rtxr.pfb><E:/MiKTeX/fonts/type1/public/txfonts/txex.pfb><E:/MiKTeX/fonts/
 type1/public/txfonts/txsy.pfb><E:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/M
 iKTeX/fonts/type1/urw/times/utmr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on main.pdf (33 pages, 1473628 bytes).
+Output written on main.pdf (33 pages, 1473615 bytes).
 PDF statistics:
  1796 PDF objects out of 2073 (max. 8388607)
  257 named destinations out of 1000 (max. 500000)
