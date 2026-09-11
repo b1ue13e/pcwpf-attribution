@@ -97,23 +97,55 @@ penmanshiel,42,zero_bid,baseline,0.0,0,uncalibrated,2,0.3333333333333333,0.33689
 
 ---
 
-## 冲突 5: Section 8 英国电力市场远期结算价格符号不一致
+## 冲突 5: 英国电力市场结算符号与 FPN 概念混淆归正
 
 ### 1. 发现问题
-在正文 Section 8（Discussion）第 17 行及第 72 行（Gate M4）中，两部制市场结算公式残留旧版集中日前市场符号：$R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q)$。而在 Section 4（Protocol）第 40 行与 Section 5（Results）第 92 行中，统一定义为 $R_{\text{total}} = P_{\text{F}} \cdot q + P_{\text{imb}} \cdot (y - q)$。
+1. 在正文 Section 8 旧版中残留有集中日前市场符号 $P_{\text{DA}}$；
+2. 在原稿与初步审计中，曾将结算量 $q$ 误写为“申报物理通知（FPN）”。
 
 ### 2. 制度审计与归正
-在英国（GB BETTA / BSC）电力市场制度下，发电商主要通过场外双边合同（OTC Forward）与电力交易所自主申报物理通知（FPN），而非强制性日前集中调度池（Mandatory Day-Ahead Pool）。因此：
-- 采用通用远期合同电价符号 $P_{\text{F}}$（Forward Price），准确覆盖双边远期协议与日前交易；
-- 已将 Section 8 中所有残留的 $P_{\text{DA}}$ 统一修正为 $P_{\text{F}}$，保持全篇制度与数学表达 100% 严谨闭环。
+根据英国 BSC（Balancing and Settlement Code post-P305）规则：
+- Energy Imbalance 比较的是账户层面的合同量（通过 ECVN 通知）与实际计量物理发电量（Metered Volume）；
+- FPN（Final Physical Notification）是机组向系统调度机构（National Grid ESO）提交的物理运行出力曲线，用于系统实时平衡操作，并非直接用于结算双边财务头寸；
+- 因此将结算公式 $R_{\text{total}} = P_{\text{F}} \cdot q + P_{\text{imb}} \cdot (y - q)$ 中的 $q$ 统一定义为“forward-contracted / nominated energy position used in the stylized accounting model”，彻底杜绝 $q = \text{FPN}$ 的制度性概念瑕疵；
+- 将“computed strictly under Elexon BSC rules”降格定性为“a stylized BSC-price-based imbalance cashflow diagnostic”，承认当前建模未涉及账户级双边合同通知与 BM 接受量细则。
 
 ---
 
 ## 冲突 6: 正文内部修改痕迹与元注释清理
 
 ### 1. 发现问题
-在 Section 5.5 第 97 行及 Table 4 表注中，残留有内部协作修改痕迹（如“earlier drafts reported Penmanshiel Zero-Bid Decision Cost as 0.20584, which was an erroneous transcription that copy-pasted...”），带有工作草稿与评审注记性质。
+在 Section 5.5 及 Table 4 旧版表注中，残留有内部协作修改痕迹（如“earlier drafts reported Penmanshiel Zero-Bid Decision Cost as 0.20584...”），带有工作草稿性质。
 
 ### 2. 归正方案
 将内部审校性陈述完全剥离至 `revision_outputs/` 归档报告中，正文彻底重写为成熟学术论文语言：“Under asymmetric operational loss ($r=2, q=1/3$), the Zero-Bid strategy yields a Decision Cost of 0.33689 on Penmanshiel (Table 4), correctly penalizing the policy for severe under-commitment ($\text{Cost}_{\text{static}} = \bar{y} \approx 0.337$, matching the site's mean capacity factor)...”，杜绝任何元注释。
+
+---
+
+## 冲突 7: 数据稀缺与先验信息预算（Information Budget）混淆
+
+### 1. 发现问题
+原学习曲线在 $N_{\text{train}}=500$（约 21 天数据）时，真实先验是利用前序完整 7–10 个月历史数据拟合的。审稿人质疑：此时先验模型的优势可能来源于额外喂入的数月历史季节性信息，而非物理归纳偏置本身。原稿声称“we causally identify that physical constraints deliver measurable inductive protection primarily under restricted sample volumes”存在因果过推。
+
+### 2. 实证隔离与归正
+- 编写并执行 `run_information_budget_experiment.py`，在 $N_{\text{train}}=500$ 下补全严格信息预算对齐的 5 臂消融：
+  - Arm A: 无先验 (500 样本)
+  - Arm B: 严格预算对齐真实先验（先验仅由相同的 500 样本拟合）
+  - Arm C: 跨期大先验（先验由前序 7–10 个月拟合）
+  - Arm D: 严格预算对齐乱序对照（先验仅由相同的 500 样本拟合并置换）
+  - Arm E: 跨期大乱序对照
+- 实证结果证明：在完全禁止访问外部历史数据的严格预算下（Arm B vs Arm A），真实物理先验仍带来 $-1.54\%$（Kelmarsh）与 $-3.34\%$（Hill of Towie）的风险降幅，解释了总保护效应的 $77\%$ 至 $92\%$；扩充至数月历史数据（Arm C）仅带来额外 $-0.46\%$ 与 $-0.28\%$ 的微幅边际增益；
+- 论文正文将所有“causally identify”彻底降调为“an advantage observed under restricted model-training windows when the prior retains a larger historical information budget”，实现科学论断的完全诚实与严谨闭环。
+
+---
+
+## 冲突 8: 负对照“梯度尺度匹配（Gradient-Scale Matched）”表述过强
+
+### 1. 发现问题
+原稿称伪乱序先验对照（Pseudo-scrambled controls）“preserve identical loss formulas, parameter counts, and gradient scales”。然而，仅保持同一公式和置换映射，在数学上并不保证反向传播的梯度范数完全相同。
+
+### 2. 归正方案
+全文统一删除“gradient-scale matched”，精准修改为：
+“form- and weight-matched pseudo-scrambled controls preserving identical loss formulations, network architectures, and regularization weights $\lambda$”。
+杜绝无显式梯度归一化算法下的过强声称。
 

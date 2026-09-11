@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.5.30)  11 SEP 2026 22:05
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.5.30)  12 SEP 2026 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1272,10 +1272,10 @@ Underfull \vbox (badness 1917) has occurred while \output is active []
 
 
 ]
-Underfull \vbox (badness 7030) has occurred while \output is active []
+Underfull \vbox (badness 1824) has occurred while \output is active []
 
 
-Underfull \vbox (badness 7030) has occurred while \output is active []
+Underfull \vbox (badness 1824) has occurred while \output is active []
 
 )
 (sections/02_related.tex [2]
@@ -1338,7 +1338,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 [6]
 File: figures/prisma_flow_diagram.pdf Graphic file (type pdf)
 <use figures/prisma_flow_diagram.pdf>
- [7] [8]) (sections/05_results.tex (tables/table1_lifecycle_distribution.tex
+ [7] [8]) (sections/05_results.tex [9]
+(tables/table1_lifecycle_distribution.tex
 Underfull \hbox (badness 10000) in paragraph at lines 33--33
 []|\TU/SimSun(0)/m/n/7.52812 辅 助 子 网 络 动 态 预 测 在 线 时 变 气 动 系 数
  []
@@ -1346,7 +1347,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--33
 )
 File: figures/fig_field_audit_distribution.pdf Graphic file (type pdf)
 <use figures/fig_field_audit_distribution.pdf>
- [9] (tables/table2_dynamic_settlement.tex
+ (tables/table2_dynamic_settlement.tex
 Overfull \vbox (0.93916pt too high) detected at line 38
  []
 
@@ -1464,40 +1465,10 @@ Underfull \hbox (badness 1622) in paragraph at lines 53--54
 937 (\TU/SimSun(0)/m/it/10.53937 图 [][]\T1/lmr/m/it/10.53937 4[][]a,
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-Underfull \vbox (badness 6493) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6493) has occurred while \output is active []
-
-
+[10]
 Underfull \hbox (badness 3323) in paragraph at lines 60--61
  []\TU/SimSun(0)/m/it/10.53937 低 惩 罚 权 重 下 的 非 特 异 性 数 值 正 则 化 拟 态
  []
-
-[11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1454) in paragraph at lines 66--67
@@ -1505,20 +1476,7 @@ Underfull \hbox (badness 1454) in paragraph at lines 66--67
 Sun(0)/m/n/10.53937 向 无 约 束 模 型 直 接 提 供
  []
 
-[13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(tables/table3_paired_bootstrap.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
+[11] (tables/table3_paired_bootstrap.tex) [12]
 (tables/table4_zero_bid_diagnostic.tex
 Overfull \hbox (14.86557pt too wide) in paragraph at lines 32--32
  []|\T1/lmr/bx/n/7.52812 +¿223,882.15| 
@@ -1549,6 +1507,12 @@ Underfull \hbox (badness 3302) in paragraph at lines 32--32
 []|\TU/SimSun(0)/m/n/7.52812 真 实 物 理 先 验 成 功 降 低 实 际 调 度 决
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 )
 File: figures/fig_market_decoupling.pdf Graphic file (type pdf)
 <use figures/fig_market_decoupling.pdf>
@@ -1556,7 +1520,26 @@ File: figures/fig_market_decoupling.pdf Graphic file (type pdf)
 
 LaTeX Warning: Float too large for page by 4101.72562pt on input line 87.
 
-[15] (tables/table5_patchtst_and_rules.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(tables/table5_patchtst_and_rules.tex
 Overfull \vbox (3.52306pt too high) detected at line 32
  []
 
@@ -1592,20 +1575,34 @@ Overfull \vbox (3.52306pt too high) detected at line 32
 Overfull \vbox (3.52306pt too high) detected at line 32
  []
 
-)) (sections/06_code_audit.tex
-Underfull \vbox (badness 4739) has occurred while \output is active []
+)) (sections/06_code_audit.tex [15]
+
+LaTeX Warning: Text page 16 contains only floats.
 
 
-Underfull \vbox (badness 4739) has occurred while \output is active []
+Overfull \vbox (16.1179pt too high) has occurred while \output is active []
 
- [16]
-(tables/table4_ablation_semantics.tex
+
+Overfull \vbox (16.1179pt too high) has occurred while \output is active []
+
+
+
+LaTeX Warning: Text page 16 contains only floats.
+
+
+Overfull \vbox (16.1179pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (16.1179pt too high) has occurred while \output is active []
+
+
+[16] (tables/table4_ablation_semantics.tex
 Underfull \hbox (badness 1052) in paragraph at lines 18--18
 []|\TU/SimSun(0)/m/n/7.52812 现 有 文 献 中 仅 有 约 半 数 的 研 究 真 正 因 果 隔 离 了 物 理 约 束 本 
 身 的 作
  []
 
-)
+) [17]
 Overfull \hbox (0.91151pt too wide) detected at line 25
 [][][][][]
  []
@@ -1617,7 +1614,7 @@ Underfull \hbox (badness 1325) in paragraph at lines 25--27
 ][] \OML/cmm/m/it/10.53937 p[] [] []$ \TU/SimSun(0)/m/n/10.53937 为 经 典 的
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 \TU/SimSun(0)/m/n/10.53937 在 \T1/lmr/m/n/10.53937 Py-Torch C++ AT-en \TU/SimSun
 (0)/m/n/10.53937 内 核
@@ -1653,14 +1650,14 @@ Underfull \hbox (badness 1286) in paragraph at lines 95--1
 \TU/SimSun(0)/m/n/10.53937 公 式 [] 在 数 学 上 严 格 等 价 于 相 关 双 变 量
  []
 
-[19] [20]) (sections/08_discussion.tex [21] [22]
-(tables/table_reforms_checklist.tex) [23]) (sections/09_conclusion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[19] [20] [21]) (sections/08_discussion.tex
+Underfull \vbox (badness 1303) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1303) has occurred while \output is active []
 
- [24])
+ [22]
+(tables/table_reforms_checklist.tex) [23]) (sections/09_conclusion.tex [24])
 (sections/11_starmethods.tex
 Underfull \hbox (badness 10000) in paragraph at lines 31--31
 []|\T1/lmr/m/n/7.52812 DOI: 10.5281/zen-o-
@@ -1697,7 +1694,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [26]
 Underfull \hbox (badness 1454) in paragraph at lines 48--49
  []\TU/SimSun(0)/m/it/10.53937 静 态 代 码 与 计 算 图 审 计\T1/lmr/m/it/10.53937 . \TU/S
 imSun(0)/m/n/10.53937 软 件 代 码 通 过 抽 象
@@ -1727,19 +1724,13 @@ Underfull \hbox (badness 1648) in paragraph at lines 48--49
 10.53937 tst/loss.py \TU/SimSun(0)/m/n/10.53937 中 的 损 失
  []
 
-[26]) (sections/10_appendix.tex [27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28])
+) (sections/10_appendix.tex [27] [28])
 Underfull \hbox (badness 10000) in paragraph at lines 115--115
 [][]\TU/SimSun(0)/b/n/10.53937 作 者 贡 献 声 明 \T1/lmr/bx/n/10.53937 (Au-thor Con-t
 ri-bu-tion-s,
  []
 
-(main.bbl [29]
+[29] (main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 23--28
 \T1/lmr/m/n/9.03374 URL [][]$\T1/lmtt/m/n/9.03374 https : / / openreview . net 
 / forum ? id =
@@ -1771,12 +1762,12 @@ Underfull \hbox (badness 1688) in paragraph at lines 43--47
 []\T1/lmr/m/n/9.03374 M. Rais-si, P. Perdikaris, G. E. Kar-ni-adakis,
  []
 
-
+[30]
 Underfull \hbox (badness 1237) in paragraph at lines 90--95
 []\T1/lmr/m/n/9.03374 N. Zehtabiyan-Rezaie, A. Iosi-fidis, M. Abkar,
  []
 
-[30]
+
 Underfull \hbox (badness 10000) in paragraph at lines 175--181
 []\T1/lmr/m/n/9.03374 Renewable En-er-gy Sys-tem-s, The Re-new-
  []
@@ -1797,7 +1788,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--181
 5281 / zenodo .
  []
 
-
+[31]
 Underfull \hbox (badness 1571) in paragraph at lines 199--205
 \T1/lmr/m/n/9.03374 cast-ing with trans-form-er-s[][], in: The Eleventh
  []
@@ -1819,7 +1810,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--210
 74 doi :
  []
 
-[31]
+
 Underfull \hbox (badness 6944) in paragraph at lines 220--226
 []\T1/lmr/m/n/9.03374 I. Walsh, D. Fish-man, D. Garcia-Gasulla,
  []
@@ -1831,16 +1822,20 @@ Underfull \hbox (badness 6944) in paragraph at lines 220--226
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/07/14>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 47F4EE1BEDD49557DFA062EA59619D96;8774.
  ) 
 Here is how much of TeX's memory you used:
- 26670 strings out of 404937
- 592595 string characters out of 5482240
- 1039778 words of memory out of 5000000
- 54858 multiletter control sequences out of 15000+600000
+ 26671 strings out of 404937
+ 592614 string characters out of 5482240
+ 1055778 words of memory out of 5000000
+ 54859 multiletter control sequences out of 15000+600000
  689443 words of font info for 127 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 93i,17n,111p,1016b,2855s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,17n,111p,1016b,2841s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (35 pages).

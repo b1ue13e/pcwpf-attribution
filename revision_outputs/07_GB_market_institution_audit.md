@@ -21,11 +21,12 @@
   - **价格形成机制**：价格平均参考量（Price Average Reference, PAR）由 500 MWh 阶梯式压缩至 PAR50（2015年），并在 2018 年进一步压缩至 PAR1，直接将系统实时不平衡价格绑定至系统边际平衡动作成本。
   - **2017 年价格特征**：2017 全年 30 分钟 SBP 均值为 **£44.27/MWh**，最高尖峰达到 **£1,509.80/MWh**，且存在 68 个负电价周期（最低至 **-£73.15/MWh**）。
 
-### 3. BSC 30 分钟结算时段物理净额结算（30-Minute Physical Netting）
-- 依据 BSC Section X 与 Section T：
-  发电机在每一个 30 分钟结算周期（SP）结束时，由 Elexon 计算其实际计量出力（Metered Volume, $y_{\text{SP}}$）与最终申报实物通知（Final Physical Notification, FPN / Contracted Volume $q_{\text{SP}}$）之间的代数差值：
+### 3. BSC 30 分钟结算时段不平衡暴露建模（Half-Hour Imbalance Exposure Modeling）
+- 依据 BSC 结算制度（Trading Arrangements）：
+  Elexon 结算系统将市场主体的合同电量（Account Contracted Volume，通过合同电量通知 ECVN 申报）与其实际计量电量（Metered Volume, $y_{\text{SP}}$）进行代数比较，计算能量不平衡量（Energy Imbalance Volume）。
+  **必须严格区分 ECVN / Contracted Position 与 FPN**：最终物理通知（Final Physical Notification, FPN）是发电机向系统运行方（National Grid ESO/NESO）提交的预期物理出力曲线，用于系统调度与平衡机制（BM）动作；而合同持仓量（Contracted Volume）是通过双边交易通知（ECVN）确立的财务/结算头寸。在论文的单机简化核算模型中，$q_{\text{SP}}$ 严格定义为前瞻合同/申报头寸（forward-contracted / nominated energy position），而非物理通知 FPN。
   $$\Delta E_{\text{SP}} = y_{\text{SP}} - q_{\text{SP}} \quad [\text{MWh}]$$
-- **净额结算（Netting）**：在 30 分钟窗口内的 3 次 10 分钟 SCADA 脉冲首先在时域上进行标量累加，不平衡量以半小时净暴露进行统一现金结算。
+- **半小时时段暴露聚合（Half-Hour Aggregation）**：在建模实现中，将 30 分钟窗口内的 3 次 10 分钟 SCADA 功率累加转换为半小时能量暴露，以对应英国 30 分钟结算周期（Settlement Period）的单一出清价格。此为 SCADA 时间序列向市场结算周期的离散化建模映射，而非 BSC 官方直接规定累加 SCADA 脉冲。
 
 ---
 

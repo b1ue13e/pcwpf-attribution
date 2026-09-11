@@ -18,7 +18,7 @@
 \BOOKMARK [2][-]{subsection.5.1}{Reporting\040Patterns\040and\040Code\040Availability\040in\040the\040Audited\040Scoping\040Cohort}{section.5}% 18
 \BOOKMARK [2][-]{subsection.5.2}{Controlled\040Multi-Site\040Ablation:\040Prior\040Specificity,\040Numerical\040Regularization,\040and\040Training\040Proxy\040Staleness}{section.5}% 19
 \BOOKMARK [3][-]{subsubsection.5.2.1}{Primary\040Inferential\040Contrasts\040and\040Metric\040Framework}{subsection.5.2}% 20
-\BOOKMARK [2][-]{subsection.5.3}{Decoupled\040Decision\040Risk\040and\040Single-Settlement\040Imbalance\040Diagnostic\040\(The\040Zero-Bid\040Anomaly\)}{section.5}% 21
+\BOOKMARK [2][-]{subsection.5.3}{Decoupled\040Decision\040Risk\040and\040Stylized\040Imbalance\040Diagnostic\040\(The\040Zero-Bid\040Anomaly\)}{section.5}% 21
 \BOOKMARK [2][-]{subsection.5.4}{Cross-Backbone\040Architectural\040Sensitivity\040Probe\040\(PatchTST\)}{section.5}% 22
 \BOOKMARK [1][-]{section.6}{Software\040Implementation\040Fidelity:\040The\040Physics-Constrained\040Transformer}{}% 23
 \BOOKMARK [2][-]{subsection.6.1}{Code\040Availability\040and\040Audit\040Scope}{section.6}% 24

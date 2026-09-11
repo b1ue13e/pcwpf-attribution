@@ -1,0 +1,11 @@
+site,arm,prior_type,prior_budget,mean,std
+hill_of_towie,A_no_prior,none,500_samples,0.10443942546844483,0.003123153905508514
+hill_of_towie,B_genuine_local_budget,genuine,500_samples,0.1009464904665947,0.0030460661496170827
+hill_of_towie,C_genuine_full_historical,genuine,full_history,0.10065985023975373,0.003071873998269867
+hill_of_towie,D_scrambled_local_budget,scrambled,500_samples,0.15247782766819,0.0025270153637269965
+hill_of_towie,E_scrambled_full_historical,scrambled,full_history,0.17208849787712097,0.017032288863280794
+kelmarsh,A_no_prior,none,500_samples,0.09647631049156188,0.0031358431888777022
+kelmarsh,B_genuine_local_budget,genuine,500_samples,0.09498802125453949,0.00306875167502396
+kelmarsh,C_genuine_full_historical,genuine,full_history,0.09455034583806991,0.002853799845343753
+kelmarsh,D_scrambled_local_budget,scrambled,500_samples,0.13826671987771988,0.023326010019718815
+kelmarsh,E_scrambled_full_historical,scrambled,full_history,0.13798398822546004,0.023378879673477963
