@@ -1,0 +1,125 @@
+\section{预测-决策脱钩理论与超额运行风险}
+\label{sec:theory}
+
+在本节中，我们从统计决策理论出发，形式化推导第~\ref{sec:results}节中所记录的指标反转与地形分化现象背后的内在数学机理。我们推导了超额日前调度运行风险的精确积分恒等式，将其严格正交分解为表征误差与决策失配两个正交分量，并提出三个可检验的机理推论与形式化边界反例。
+
+\subsection{运行决策问题形式化}
+设 $X \in \mathcal{X} \subset \mathbb{R}^{L \times D}$ 为机组的历史多元时序遥测特征，$Y \in [0, 1]$ 为目标预测时段内经过额定装机归一化的风电实际输出功率。在电力系统实际经济调度运行中，电网运营商依据非对称 Pinball 调度惩罚函数对发电主体的申报出力进行考核结算 \cite{weron2014,zhang2014wind}：
+\begin{equation}
+\ell(p, Y; r) = c_+ \max(p - Y, 0) + c_- \max(Y - p, 0),
+\label{eq:pinball_loss}
+\end{equation}
+其中 $p \in [0, 1]$ 为日前申报的调度功率，$c_+$ 为短缺单位惩罚（欠发电，申报出力大于实际发电 $p > Y$，系统被迫启动昂贵的三级旋转备用），$c_-$ 为盈余单位惩罚（过发电 $Y > p$，迫使电网下调或弃风限电），$r = c_+ / c_-$ 代表成本非对称比率。以 $c_-$ 归一化后，非对称运行调度损失为：
+\begin{equation}
+\mathcal{L}_{\text{disp}}(p, Y) = r \max(p - Y, 0) + \max(Y - p, 0).
+\label{eq:norm_disp_loss}
+\end{equation}
+在决策策略 $p(X)$ 下的期望运行风险为 $\mathcal{R}(p) = \mathbb{E}_{X, Y} [\mathcal{L}_{\text{disp}}(p(X), Y)]$。
+
+\subsection{命题 1：精确积分超额运行风险}
+命题~\ref{prop:excess_risk} 形式化了统计决策理论与分位数回归中的经典超额风险解析恒等式，其理论根基立足于 Koenker 的经典分位数理论 \cite{koenker2005} 以及 Pinson 等人确立的电力市场出清协调竞价原理 \cite{pinson2007trading}。最小化运行风险 $\mathcal{R}(p)$ 的无约束贝叶斯最优调度决策为条件分位数：
+\begin{equation}
+q_\tau(X) = F_{Y|X}^{-1}(\tau), \quad \text{其中 } \tau = \frac{1}{r + 1}.
+\label{eq:bayes_quantile}
+\end{equation}
+当非对称比率 $r=2$ 时，临界最优出清分位数为 $\tau = 1/3 \approx 0.333$。
+
+\begin{proposition}[精确积分超额运行风险]
+\label{prop:excess_risk}
+对于任意给定的调度决策规则 $p(X) \in [0, 1]$，相对于贝叶斯最优分位数策略 $q_\tau(X)$ 所产生的超额运行风险满足如下严格精确的积分恒等式：
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) &= (r + 1) \, \mathbb{E}_X \Big[ \\
+&\quad \int_{q_\tau(X)}^{p(X)} \big( F_{Y|X}(u) - \tau \big) \, du \Big] \ge 0,
+\end{aligned}
+\label{eq:exact_integral}
+\end{equation}
+且恒大于等于零。进一步，在累积分布函数 $F_{Y|X}$ 在其支撑集上严格单调递增的常规正则性条件下，$q_\tau(X)$ 具有唯一确定的实数值，等号成立当且仅当 $p(X) = q_\tau(X)$ 几乎处处成立。
+\end{proposition}
+
+\begin{proof}
+对于固定的输入特征向量 $X$，在决策出力 $p$ 下的条件期望损失为：
+\begin{equation}
+\begin{aligned}
+&\mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] \\
+&\quad = r \int_0^p (p - y) dF(y) + \int_p^1 (y - p) dF(y),
+\end{aligned}
+\end{equation}
+其中简记 $F(y) = F_{Y|X}(y)$。对决策变量 $p$ 求一阶偏导数：
+\begin{equation}
+\begin{aligned}
+\frac{\partial}{\partial p} \mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] &= r F(p) - (1 - F(p)) \\
+&= (r + 1) F(p) - 1.
+\end{aligned}
+\end{equation}
+注意到 $\tau = 1 / (r+1)$，该梯度表达式可精准化简为：
+\begin{equation}
+\frac{\partial}{\partial p} \mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] = (r + 1) \Big( F(p) - \tau \Big).
+\end{equation}
+由微积分基本定理，将梯度从最优值 $q_\tau(X)$ 积分至任意决策点 $p(X)$，可得：
+\begin{equation}
+\begin{aligned}
+&\mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] - \mathbb{E}[ \mathcal{L}_{\text{disp}}(q_\tau, Y) \mid X ] \\
+&\quad = (r+1) \int_{q_\tau(X)}^{p(X)} \Big( F(u) - \tau \Big) du.
+\end{aligned}
+\end{equation}
+由于分布函数 $F(u)$ 单调非减，对于任意 $u > q_\tau(X)$ 均有 $F(u) \ge \tau$，被积函数非负；对于任意 $u < q_\tau(X)$ 均有 $F(u) \le \tau$，逆向积分亦必为正。对全特征空间 $\mathcal{X}$ 取外层数学期望，即证。
+\end{proof}
+
+\subsection{两阶段分解与决策校准解耦}
+当申报决策 $p(X)$ 处于最优值 $q_\tau(X)$ 的邻域内时，将累积分布 $F_{Y|X}(u)$ 在 $q_\tau(X)$ 处展开为一阶泰勒级数：
+\begin{equation}
+F_{Y|X}(u) - \tau \approx f_{Y|X}(q_\tau(X)) \cdot (u - q_\tau(X)),
+\end{equation}
+从而导出局部二次超额风险近似：
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) &\approx \frac{r+1}{2} \, \mathbb{E}_X \big[ f_{Y|X}(q_\tau(X)) \\
+&\qquad\quad \times ( p(X) - q_\tau(X) )^2 \big].
+\end{aligned}
+\label{eq:quadratic_approx}
+\end{equation}
+
+现在考虑应用工程中普遍采用的两阶段范式：模型先输出条件均值估计 $f_\theta(X) \approx \mu(X) = \mathbb{E}[Y \mid X]$，再通过标量分位数偏移 $\delta$ 构成调度决策：$p(X) = f_\theta(X) + \delta$。将决策偏差展开为两部分：
+\begin{equation}
+p(X) - q_\tau(X) = \big( f_\theta(X) - \mu(X) \big) + \big( \delta - \Delta_\tau(X) \big),
+\end{equation}
+其中 $\Delta_\tau(X) = q_\tau(X) - \mu(X)$ 为目标条件分位数与条件均值之间的固有差距。在同方差局部曲率假设 $w_\tau = \frac{r+1}{2} f_{Y|X}(q_\tau)$ 下，代入公式~\eqref{eq:quadratic_approx} 可将超额运行风险精确分解为三个正交项：
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) &\approx w_\tau \, \mathbb{E}_X \big[ (f_\theta(X) - \mu(X))^2 \big] \\
+&\quad + w_\tau \, \mathbb{E}_X \big[ (\delta - \Delta_\tau(X))^2 \big] \\
+&\quad + 2 w_\tau \, \mathbb{E}_X \big[ (f_\theta(X) - \mu(X)) \\
+&\qquad\quad \times (\delta - \Delta_\tau(X)) \big],
+\end{aligned}
+\label{eq:three_terms}
+\end{equation}
+其中三项分别定义为：\textbf{项 I（表征均方误差）}、\textbf{项 II（分位数失配误差）} 与 \textbf{项 III（交叉交互项）}。
+
+\subsection{基于决策论分解的机理推论}
+公式~\eqref{eq:three_terms} 的三项分解从数理上为实证评测中的核心现象提供了机制解释，提炼出三项演绎机理洞察：
+
+\begin{remark}[机理推论 1：未校准工况下的伪优势遮蔽]
+\label{rem:masking}
+在直接采用均值输出作为申报决策的未校准工况下（$\delta=0$），项 II（$\mathbb{E}[\Delta_\tau(X)^2]$）是仅取决于数据条件分布的不变常量，代表条件均值与目标分位数之间的固有离散度。此时，一个在条件均值拟合精度上劣化的物理正则化模型（具有更大的项 I），在实测中可能反常地取得更低的未校准运行风险：当其结构性预测偏置 $(f_\theta(X) - \mu(X))$ 与负向的分位数差距 $\Delta_\tau(X) = q_\tau(X) - \mu(X) < 0$（当 $r=2, \tau=1/3$ 时）符号一致时，交叉项（项 III，即 $2 w_\tau \mathbb{E}[(f_\theta(X) - \mu(X))(-\Delta_\tau(X))] < 0$）变为负值，偶然部分抵消了表征误差（项 I）。一旦实施后验分位数偏移校准，标量 $\delta$ 吸收了系统性偏移，中和了项 III，从而揭示出表观物理优势实质上是未校准评估机制下的统计副产物。
+\end{remark}
+
+\begin{remark}[机理推论 2：高信噪比/大数据量工况下的正则化畸变]
+\label{rem:exposure}
+最优分位数校准（$\delta^* = \arg\min_\delta \hat{\mathcal{R}}(f_\theta + \delta)$）能够消除项 II 中的非条件恒定分量。在数据充裕或信噪比较高的工况下，无约束模型本身已取得较低的条件均值估计方差（项 I 逼近下界）。在此种工况下，强行注入未经动态自适应的静态经验损失惩罚，实质上充当了一种引入结构性偏置的刚性正则化，抬高了项 I，却无法换取足够的方差缩减收益，最终导致整体运行调度性能下降。
+\end{remark}
+
+\begin{remark}[机理推论 3：样本受限工况下的归纳护栏与先验敏感性]
+\label{rem:inductive_guardrails}
+在有效样本量受限的工况下，经验参数估计面临显著的估计方差（项 I 显著上升）。在强物理权重约束下（$\lambda=1.0$），真实的物理先验充当了归纳护栏，约束模型输出落在合理的气动空间内，从而在小样本下发挥防御性作用。然而，一旦先验分布发生误设或置换破坏（如伪打乱先验对照组），护栏将持续向模型施加逆物理的错误梯度指引，从而直接诱发严重的性能劣化，揭示出强先验约束对先验正确性的极端脆弱性。
+\end{remark}
+
+\subsection{形式化边界反例}
+为确保理论推演的数学严密性，我们通过反例形式化证明两阶段决策校准的支配性是具有条件边界的而非绝对成立。
+
+在\textit{常数平移不变性}反例下，若物理约束仅使模型的预测整体发生恒定的代数偏移 $f_{\text{phys}}(X) = f_{\text{uncons}}(X) + c$，随后的最优标量校准能够精确吸收该偏移（$\delta_{\text{phys}}^* = \delta_{\text{uncons}}^* - c$），使得两者的实际调度出力决策完全重合，超额运行风险差值严格恒为零（$\Delta \mathcal{R}_{\text{disp}} \equiv 0$），尽管其点预测 MSE 出现增加。在存在输入依赖方差 $\sigma(X)$ 的\textit{空间异方差性}反例下，全局统一标量校准无法补偿局部方差的动态漂移，导致一个具有更高预测 MSE 的有偏估计器在经过标量分位数校准后，在数学上能够取得比无偏条件均值更低的运行调度风险。
+
+该理论框架将统计决策论基本恒等式操作为封闭形式的超额风险分解模型，在商业级真实风电场上完成深度量化解耦，并结合英国平衡与结算规约（BSC）真实电力市场出清数据完成实证检验。两个反例的完整数学证明详见\ref{sec:appendix_proofs}。
+
+\subsection{动态电价乘子效应与结算脱钩}
+在真实的电力平衡出清机制下，物理偏差电量是以时变系统买入电价 $\lambda_t^{\text{SBP}}$ 结算的。厚尾且高度偏斜的极端电价分布（均值 \pounds 44.27/MWh，峰值达 \pounds 1,509.80/MWh）在工程现场起到了剧烈的风险放大乘子作用。当偶发的气象突变导致的预测偏差恰好与极端高电价在时间上重叠时，物理惩罚带来的表征畸变被放大了高达 34.1 倍，解释了 Kelmarsh 产生每年每台机组高达 +\pounds 932.56 超额短缺清算支出的微观机制（表~\ref{tab:paired_bootstrap}）。正如退化零申报反例（表~\ref{tab:zero_bid_diagnostic}）所确立的，孤立的单边结算现金流无法脱离日前批发合同独立衡量模型价值，这在方法学上确立了将非负决策风险与历史结算现金流严格脱钩度量的必要性。

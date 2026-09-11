@@ -1,0 +1,127 @@
+\documentclass[3p,twocolumn,times]{elsarticle}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lineno,hyperref}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{url}
+
+\journal{Applied Energy}
+\bibliographystyle{elsarticle-num}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfencoding=auto,
+    psdextra
+}
+\pdfstringdefDisableCommands{\def\corref#1{}}
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{hypothesis}{Hypothesis}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Counterexample}
+
+\usepackage{dblfloatfix}
+
+% Float placement optimization
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.70}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.70}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{10}
+\setcounter{dbltopnumber}{5}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Auditing the Decision Value of Physics-Constrained Wind Power Forecasting}
+
+\author[1]{Junyu Li\corref{cor1}}
+\ead{ljylikezmn999@gmail.com}
+\author[1]{Juntao Du}
+
+\address[1]{School of Statistics and Applied Mathematics, Anhui University of Finance and Economics, Bengbu 233030, China}
+
+\cortext[cor1]{Corresponding author}
+
+\begin{highlights}
+\item Systematic scoping audit of 46 physics-constrained wind power forecasting studies.
+\item Literature audit reveals 95.7\% open-code deficit and zero documented negative trade-offs.
+\item Software audit of PCT identifies reverse-argument JS divergence altering gradient scales.
+\item Scrambled priors induce a +68.1\% decision loss surge under strong constraints on Penmanshiel.
+\item Fixed historical priors assist limited training windows but diminish under sample abundance.
+\item Degenerate zero-bid probe exposes the methodological hazards of unhedged cashflow evaluation.
+\end{highlights}
+
+\begin{abstract}
+Reductions in point forecasting error from physical constraints do not establish that empirical gains stem from valid physical information, nor do they guarantee operational decision value. We audit the attributional foundation of physics-constrained wind power forecasting through systematic literature scoping, software code inspection, and multi-site controlled experiments across three commercial UK wind farms. Among 46 scoped studies (2023--2026), zero report operational failure regimes or trade-offs, 44 lack accessible source code, and 23 evaluate constraints by excising multi-layer network modules, confounding physical inductive bias with parametric capacity. In controlled ablations holding the forecasting backbone and post-hoc quantile calibration constant, the impact of empirical power curve priors varies across data regimes: on Penmanshiel, strong constraints reduce normalized asymmetric decision loss by 1.22\%, whereas destroying the aerodynamic mapping via pseudo-scrambled controls inflates decision loss by 68.1\%, demonstrating prior specificity under data scarcity. Across well-sampled sites, fixed historical priors provide marginal loss reductions under constrained training windows, an advantage that diminishes and reverses as model training sample sizes expand. Software code inspection reveals an inverted parameter argument in an official divergence loss implementation that alters gradient scales, while market settlement diagnostics demonstrate that standalone unhedged balancing cashflows decouple from forecast quality under degenerate zero-bid bidding. These findings indicate that empirical claims of physical benefit require backbone-matched negative controls, transparent disclosure of prior historical data budgets, and consistent decision-theoretic evaluation.
+\end{abstract}
+
+\begin{keyword}
+Physics-Constrained Deep Learning \sep Wind Power Forecasting \sep Prediction-Decision Decoupling \sep Conditional Inductive Priors \sep Systematic Audit \sep Implementation Fidelity \sep Machine Learning Reproducibility
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sections/01_intro.tex}
+\input{sections/02_related.tex}
+\input{sections/03_framework.tex}
+\input{sections/04_protocol.tex}
+\input{sections/05_results.tex}
+\input{sections/06_code_audit.tex}
+\input{sections/07_theory.tex}
+\input{sections/08_discussion.tex}
+\input{sections/09_conclusion.tex}
+
+\input{sections/11_starmethods.tex}
+
+\appendix
+\input{sections/10_appendix.tex}
+
+\section*{Declaration of Interests}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Author Contributions (CRediT)}
+\textbf{Junyu Li}: Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Visualization, Project administration, Writing -- original draft, Writing -- review \& editing. \textbf{Juntao Du}: Validation, Data curation, Software (Inter-rater reliability arbitration), Investigation, Writing -- review \& editing.
+
+\section*{Declaration of Generative AI in the Writing Process}
+During the preparation of this manuscript, the authors utilized large language model assistants strictly for grammar checking, code syntax auditing, and bibliographic formatting. After using these tools, the authors reviewed and edited the content thoroughly and take full responsibility for the scientific integrity, analytical claims, and conclusions presented in this publication.
+
+\section*{Acknowledgments}
+We thank the open science teams at Zenodo, Cubico Sustainable Investments, RES, TRIG, and Elexon for maintaining transparent public repositories of operational renewable energy telemetry and market clearing records. Computations were supported by dedicated high-performance computing infrastructure.
+
+\setlength{\bibsep}{2.5pt plus 0.5pt minus 0.5pt}
+\small
+\bibliography{refs}
+
+\end{document}

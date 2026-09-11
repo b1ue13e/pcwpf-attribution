@@ -1,0 +1,107 @@
+\section{实证审计结果}
+\label{sec:results}
+
+涵盖 46 项范围界定文献与三座商业风电场前瞻受控消融基准的实证审计，系统裁决了物理约束风电预测的核心运行主张。
+
+\subsection{审计文献中运行失效边界的系统性缺失}
+对 46 项核心范围界定文献的审计表明，已发表论文无一记录运行负面权衡或约束失效工况（0.0\%，46/46，95\% Wilson 置信区间：[92.3\%, 100.0\%]，\texttt{negative\_effect == 'no'}）。这一零负面效应报道特征在我们针对 Scopus 与 IEEE Xplore 扩展检索字段（包含 knowledge-guided、hybrid 与 domain-informed 等宽泛词汇）的 14 篇补充敏感性检索中同样得到确认。在核心语料库中，仅 3 项研究（6.5\%，S01、S02、S10）评估了先验参数扰动，其余 43 项研究（93.5\%）均仅在理想标称工况下测试。标称工况下的单一报道掩盖了工程折中与有效性边界，以普适提升的叙事替代了严谨的工程边界界定。
+
+\subsection{严峻的公开代码赤字严重阻碍独立验证}
+在 46 项核心研究中，静态软件审计确立了高达 95.7\% 的公开代码赤字（44/46，95\% Wilson 置信区间：[85.5\%, 98.8\%]，$\mathcal{D}_4 = \texttt{not-found}$），44 篇论文既未提供公开代码仓库亦未提供可执行脚本。在仅有的两个公开代码库中，PINN-UQ (S10) 提供了经静态审查证实与其机电代数方程完全对齐的可执行代码（$\mathcal{D}_4 = \texttt{code-aligned}$，2.2\%）；而作为端到端物理约束 Transformer 唯一公开训练代码库的 PCT (S02)，在核心损失函数的执行方向上与发表论文存在代数级失配（$\mathcal{D}_4 = \texttt{divergent-code}$，2.2\%）。被审计文献中 97.8\% 的研究因此无法开展独立的计算复核。
+
+\subsection{约束生命周期分布与消融实验的结构混淆}
+消融语义审计（$\mathcal{D}_5$）揭示出核心语料库中半数文献存在结构性因果混淆：50.0\% 的研究（23/46，95\% Wilson 置信区间：[36.1\%, 63.9\%]）通过直接移除多层神经网络子模块（如空间图卷积层、交叉注意力块或模态分解单元）开展消融，而非隔离惩罚权重（$\lambda=0$ vs. $\lambda>0$）。剥离网络模块同步移除了成千上万个可训练参数，所测得的性能差异反映的是网络综合表征容量而非物理先验本身（表~\ref{tab:lifecycle_distribution}，图~\ref{fig:audit_distribution}）。需要特别强调的是，上述公开代码赤字（95.7\%）与粗粒度模块消融（50.0\%）统计比例严格限定于本研究系统审计的 46 项核心文献语料库及其 Wilson 置信区间，避免无边界外推至所有可能替代关键词文献。
+
+\input{tables/table1_lifecycle_distribution.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_field_audit_distribution.pdf}
+\caption{46 项审计文献的生命周期经验分布 ($N=46$)。(a) $\mathcal{D}_1$ 参数来源；(b) $\mathcal{D}_2$ 作用阶段；(c) $\mathcal{D}_3$ 推理遥测需求；(d) $\mathcal{D}_5$ 消融语义细分（严格物理隔离消融 vs 混淆的多参数模块级消融）。}
+\label{fig:audit_distribution}
+\end{figure*}
+
+\subsection{因果解耦：先验误设敏感性、数值正则化拟态与静态代理陈旧度}
+三座商业级风电场的 3D 前瞻受控消融实验隔离了先验误设、数值平滑与静态观测陈旧度的因果效应（表~\ref{tab:controlled_ablation}，图~\ref{fig:causal_ablation}）。
+
+\input{tables/table2_dynamic_settlement.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_causal_ablation.pdf}
+\caption{三座商业级风电场的前瞻性受控消融基准实验。(a) 强物理约束对先验误设的极端敏感性（Penmanshiel 风电场，$N_{\text{train}}=1,583$）：真实物理先验带来下行风险对冲（$-1.22\%$），而破坏气动映射的伪打乱先验导致调度成本激增 $+68.1\%$；(b) Kelmarsh 风电场上的低 $\lambda$ 数值正则化拟态，在 $\lambda \le 0.01$ 时真实先验与伪打乱先验决策成本高度接近，表明弱约束在实证上更符合非特异性数值平滑而非领域物理推理；(c) 训练代理时效错配诱发的成本单调膨胀：随着训练损失中历史风速代理滞后 $k$ 从 1h 增加至 6h，三座风场的调度成本均呈单调上升；(d) 对称均方误差 (RMSE) 与非对称调度决策风险 ($r=2$) 的明显解耦，表明对称点指标掩盖了尾部运行风险。}
+\label{fig:causal_ablation}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_within_site_learning_curve.pdf}
+\caption{Kelmarsh 与 Hill of Towie 场站内样本量学习曲线（$N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$，多随机种子均值与标准差）。场站内实验剥离了地形与样本量的混杂：在模型受限训练窗口下（$N_{\text{train}} \le 1,000$），固定历史经验先验在两场站均取得更低的平均调度成本（Kelmarsh 降低 $-2.00\%$，Hill of Towie 降低 $-3.62\%$）；随着模型训练窗口扩大至 $N_{\text{train}}=5,000$，该优势消退并发生轻微反转（Kelmarsh 升高 $+0.33\%$，Hill of Towie 升高 $+1.73\%$）。而在强正则化（$\lambda=1.0$）下，误设的打乱先验在所有样本规模下均造成严重损害（调度成本激增 $+43\%$ 至 $+98\%$）。}
+\label{fig:within_site_learning_curve}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_prior_corruption_gradient.pdf}
+\caption{连续先验退化与工程漂移敏感性响应曲面。(a) 真实先验与打乱先验的连续插值 $\alpha \in [0.0, 1.0]$，测定 Penmanshiel 上临界容错阈值约为 $\alpha^* \approx 0.07$；(b) 机组气动老化额定容量折损：折损超过 10\% 即导致先验劣于无约束基准；(c) 风速计传感器标定漂移：Penmanshiel 在正向风速偏差达 $+15\%$ 内仍能维持微弱优势，而负向低估则系统性加剧短缺惩罚。}
+\label{fig:corruption_gradient}
+\end{figure*}
+
+表~\ref{tab:controlled_ablation} 与图~\ref{fig:causal_ablation} 揭示了四项实证运行边界条件：
+
+\paragraph{防御性归纳偏置与先验误设脆弱性 (图~\ref{fig:causal_ablation}a, 图~\ref{fig:within_site_learning_curve}, 图~\ref{fig:corruption_gradient})}
+在样本受限的 Penmanshiel 风电场（$N_{\text{train}} = 1,583$），无约束 DLinear 表现出过拟合（$0.09881 \pm 0.00027$）。施加校准的真实经验功率曲线先验（$\lambda=1.0$）时，归一化调度成本降至 $0.09760 \pm 0.00044$（$-1.22\%$）。相反，尺度匹配的伪打乱阴性对照组（Pseudo-Scrambled prior）导致调度成本激增至 $0.16611 \pm 0.00335$（$+68.1\%$）。场站内消融至关重要，因为跨场站对比不可避免地将样本规模与地形地貌混淆。
+
+为了将样本规模与地形解耦，我们在 Kelmarsh 与 Hill of Towie 开展了场站内样本量学习曲线实验（$N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$，多随机种子，图~\ref{fig:within_site_learning_curve}）。在受限训练样本窗口下（$N_{\text{train}} = 500$，约对应 21 天近期运行历史），真实物理先验在两座风场均一致降低了调度成本。在 Kelmarsh，调度成本从 $0.09648 \pm 0.00314$（无约束）降至 $0.09455 \pm 0.00285$（$-2.00\%$），打乱先验则激增至 $0.13798 \pm 0.02338$（$+43.0\%$）。在 Hill of Towie，真实先验使成本从 $0.10444 \pm 0.00312$ 降至 $0.10066 \pm 0.00307$（$-3.62\%$），而打乱先验升至 $0.17209 \pm 0.01703$（$+64.8\%$）。必须指出的是，该经验先验是在分割点前的完整历史训练期（Kelmarsh 为 7 个月，Hill of Towie 为 10 个月）上一次性拟合得到，因而为模型注入了显著超出受限训练窗口的季节性信息预算。随着模型训练窗口扩大至 $N_{\text{train}} = 5{,}000$，无约束 DLinear 充分拟合了数据分布（两场站分别达到 $0.08812$ 与 $0.08936$），缩小了与真实先验的差距并发生轻微反超（真实先验分别为 $0.08841$，高出 $+0.33\%$；以及 $0.09091$，高出 $+1.73\%$）。与此形成鲜明对照的是，伪打乱先验在所有样本规模下均造成严重损害（成本激增 $+43\%$ 至 $+98\%$）。该结果表明，神经网络对先验误设表现出极高的脆弱性，而真实物理先验的实证收益在我们测试的配置下主要集中于数据受限工况。
+
+进一步针对连续退化因子 $\alpha \in [0.0, 1.0]$ 的测试（图~\ref{fig:corruption_gradient}a）表明，性能劣化并非仅在完全置换时发生：在 Penmanshiel 上调度成本随误设程度单调恶化，并在 $\alpha \approx 0.07$ 附近突破无约束基准（$\alpha=0.2$ 时成本达 $0.10469 \pm 0.00338$，恶化 $+5.9\%$）。工程漂移实验表明：机组气动老化导致额定容量折损超过 10\%（图~\ref{fig:corruption_gradient}b）时，标称物理先验由正向增益翻转为经济惩罚；对于风速计标定漂移，Penmanshiel 在正向风速偏差达 $+15\%$ 内仍能维持微弱优势（$0.09833$ 对比 $0.09881$，图~\ref{fig:corruption_gradient}c），而负向低估则系统性加剧短缺惩罚。
+
+\paragraph{低惩罚权重下的非特异性数值正则化拟态 (图~\ref{fig:causal_ablation}b)}
+在弱惩罚尺度（$\lambda = 0.01$）下，真实物理先验与伪打乱对照组在 Kelmarsh 上取得高度接近的调度成本（$0.08810 \pm 0.00009$ 对比 $0.08801 \pm 0.00008$），其种子方差范围重叠。当随机置换的功率曲线重现了与领域气动定律相近的结果时，该惩罚项在经验上更符合非特异性数值平滑正则化的特征，而非编码了领域物理法则。文献在 $\lambda \in [10^{-4}, 10^{-2}]$ 下报道的物理收益需要通过阴性对照消融与更高强度惩罚（$\lambda \ge 0.1$）的敏感性测试加以审慎验证。
+
+\paragraph{训练损失物理代理时效错配敏感性 (图~\ref{fig:causal_ablation}c)}
+对历史风速代理滞后 $k \in \{6, 12, 18, 36\}$（对应训练损失查询中 1 至 6 小时的滞后）的参数化扫描表明，三座风场的调度成本均呈现严格单调上升（Hill of Towie：归一化成本从 $k=6$ 时的 $0.09022$ 升至 $k=36$ 时的 $0.09257$，在 $k \approx 12$ 时突破无约束基准的 $0.08924$）。我们强调，该实验评估的是离线训练损失函数中因采用历史风速索引功率曲线先验、导致预测时域与气象代理之间产生时间错配时的目标敏感性。它并不代表推理阶段的遥测延迟（因为预测骨干网络在测试推理期仅读取历史功率序列）。然而，它表明若离线训练损失在缺乏前向数值天气预报的情况下使用滞后气象观测构造正则项，代理的时效错配将迅速削弱先验的归纳指引能力。
+
+\paragraph{信息对称特征基准}
+向无约束模型直接提供同期风速特征（\textit{双通道 DLinear}）可小幅改善点预测 RMSE（在 Kelmarsh 从 $0.1717$ 降至 $0.1697$），但尾部调度风险却有所上升（$0.08910$ 对比 $0.08812$），未对冲的风速波动增大了申报决策方差。
+
+\subsubsection{核心推断对照与指标框架}
+为了避免多重比较与选择性报告，我们的评估流程指定了在归一化静态调度成本下的三项\textbf{核心推断对照}：
+(1)~\textit{样本受限下的真实物理先验 vs.\ 无约束基准}（Penmanshiel，$N_{\text{train}}=1{,}583$），证实下行风险保护（$\Delta = -1.22\%$，$0.09760 \pm 0.00044$ 对比 $0.09881 \pm 0.00027$）；
+(2)~\textit{强约束下的打乱先验 vs.\ 无约束基准}（$\lambda=1.0$），证实严重的先验误设脆弱性（$\Delta = +68.1\%$，$0.16611 \pm 0.00335$ 对比 $0.09881 \pm 0.00027$）；
+(3)~\textit{弱约束下的真实先验 vs.\ 打乱先验}（$\lambda=0.01$），证实与非特异性数值平滑一致的不可区分行为（$0.08810 \pm 0.00009$ 对比 $0.08801 \pm 0.00008$）。
+探索性动态电价对比（表~\ref{tab:paired_bootstrap}）进一步通过 7 天圆形块成对自举评估了 Hill of Towie 与 Kelmarsh 在分布约束下的动态成本分化。在方法学上，我们的评估协议严格区分了两种不同变异来源：表~\ref{tab:paired_bootstrap} 中的自举区间反映受气象自相关影响的\textbf{交付期时间抽样不确定性}，而表~\ref{tab:controlled_ablation} 中跨随机种子的离散度（$\text{均值} \pm \text{标准差}$）则反映\textbf{模型初始化与优化过程的随机性}。
+
+\input{tables/table3_paired_bootstrap.tex}
+
+\subsection{决策风险与日前单边结算的退化零申报反常}
+依赖孤立未对冲的平衡现金流评估模型会产生严重评估幻象：在英国 BSC 30 分钟物理净平衡结算下，退化零申报反例（$\hat{y} \equiv 0$）无需输出预测即可年均录得 22 万至 24 万英镑账面现金流（表~\ref{tab:zero_bid_diagnostic}，图~\ref{fig:market_decoupling}）。
+
+\input{tables/table4_zero_bid_diagnostic.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_market_decoupling.pdf}
+\caption{英国 BSC 净平衡结算下的市场结算脱钩与指标反转诊断。(a) 归谬法反例：完全不输出预测的退化零申报反例 ($\hat{y} \equiv 0$) 承担 \pounds 0.00 短缺惩罚，却因吸收单边入网电量在三座风场年均录得每台机组超过 22 万英镑账面现金流，表明单边现金流不能作为独立评估指标；(b) Hill of Towie 上的指标反转：分布约束使名义平衡现金流激增 $+42.5\%$，而真实的非对称决策风险却恶化 $+6.5\%$，点误差 RMSE 恶化 $+3.5\%$。}
+\label{fig:market_decoupling}
+\end{figure*}
+
+分析揭示出两个评价陷阱：
+
+\paragraph{日前单边结算的退化零申报反常与两部制市场解析 (图~\ref{fig:market_decoupling}a)}
+在所有时段均申报功率为零的模型（$\hat{y} \equiv 0$），测试期内产生的短缺清算惩罚为精确的 \pounds 0.00，却因未申报电量被系统以买入价（SBP）单边结算，在三座风电场年均录得 +\pounds 22.3 万至 +\pounds 24.3 万账面现金流。根据现代两部制电力现货市场微观经济学原理 \cite{pinson2007trading}，发电机组总运营收益由日前批发合同收益与实时物理偏差清算共同决定：
+\begin{equation}
+R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q),
+\label{eq:two_settlement_cn}
+\end{equation}
+其中 $q$ 为日前申报电量，$P_{\text{DA}}$ 为日前出清价格，$y$ 为实际计量发电量，$P_{\text{imb}}$ 为实时不平衡清算价格（在英国 P305 改革后的单一平衡价格体系下 $P_{\text{SBP}} \approx P_{\text{SSP}} = P_{\text{imb}}$）。若实证评估脱离日前合同收益 $P_{\text{DA}} \cdot q$，孤立计算实时平衡现金流 $R_{\text{imb}} = P_{\text{imb}} \cdot (y - q)$，令 $q \equiv 0$ 会将全部实际发电量转化为系统溢出并以 $P_{\text{imb}}$ 结算，产生数十万英镑的虚假账面盈利，同时完全掩盖了日前市场全部收益归零的巨大商业损失。零申报反例作为严格检验评价指标完备性的数学归谬法诊断探针（\textit{reductio ad absurdum}），严密证明了孤立单边平衡现金流与真实预测能力的本质脱钩，无法充当检验预测模型预测能力的有效代理指标；完整的商业价值评价必须结合日前合同收益（$P_{\text{DA}} \cdot q$）与实时不平衡结算开展联合建模。
+
+\paragraph{Hill of Towie 上的指标反转 (图~\ref{fig:market_decoupling}b)}
+在 Hill of Towie 风电场，施加经验分布约束在账面上呈现出财务增益——使年均平衡现金流从 \pounds 8,543 增至 \pounds 12,174/(台$\cdot$年)（表~\ref{tab:zero_bid_diagnostic}）。然而，该模型的实际归一化决策风险（$\text{Cost}_{\text{static}}$）与 RMSE 却同时恶化了 \textbf{$+6.5\%$} 与 $+3.5\%$。这一名义财务增益完全是由于模型产生的负向低估偏差恰好撞上了系统正向电价尖峰，属于纯粹的统计伪饰。这一反差揭示出单边现金流与真实预测能力在本质上发生脱钩，确立了实证评估必须将非负的决策风险（Pinball 损失）与历史货币结算完全解耦度量。
+
+\subsection{跨骨干网络敏感性与基准模型竞争力}
+跨 60 次 PatchTST \cite{nie2023patchtst} 训练运行的评估确立了骨干架构容量改变现金流方向的同时保持短缺抑制特性（表~\ref{tab:patchtst_and_rules}）。
+
+\input{tables/table5_patchtst_and_rules.tex}
+
+如表~\ref{tab:patchtst_and_rules} 所示，PatchTST 同样验证了分布先验在减少动态短缺上的有效性（在三座风场每年每台风机分别减少短缺清算支出 \pounds 232.44、\pounds 127.49 与 \pounds 790.51）。然而，净平衡现金流在不同骨干架构间出现了剧烈分化：施加分布约束反而导致 PatchTST 在 Hill of Towie 上的净现金流缩减 $-\text{\pounds} 568.68$/(台$\cdot$年)，直接逆转了 DLinear 上的正向效应。在样本受限的 Penmanshiel 风电场，经典统计基准（Ridge 岭回归为 $0.09744$，Persistence 持续法为 $0.09586$）的调度成本优于全部物理约束深度网络，表明外部物理正则化无法普遍弥补深度网络在极端小样本下的参数过拟合；无约束线性基准的高竞争力进一步警示，深度物理约束的引入必须经过严格的运行风险降低检验，而不能预先假定其优于简单模型。

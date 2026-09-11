@@ -1,0 +1,9 @@
+.venv
+.venv_broken_20260525_223330
+10_模型检查点与权重
+.wheelhouse
+*.zip
+*.pt
+*.bin
+*.pkl
+__pycache__

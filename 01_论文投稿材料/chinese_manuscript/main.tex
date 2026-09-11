@@ -1,0 +1,128 @@
+\documentclass[3p,twocolumn]{elsarticle}
+
+\usepackage{ctex}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lineno,hyperref}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{url}
+
+\journal{Applied Energy}
+\bibliographystyle{elsarticle-num}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfencoding=auto,
+    psdextra
+}
+\pdfstringdefDisableCommands{\def\corref#1{}}
+
+% 中文定理与命题环境定义
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}{命题}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}
+\newtheorem{hypothesis}{假设}
+\theoremstyle{remark}
+\newtheorem{remark}{注记}
+\newtheorem{example}{反例}
+
+\usepackage{dblfloatfix}
+
+% 浮动体排版优化
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.70}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.70}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{10}
+\setcounter{dbltopnumber}{5}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{风电预测中物理约束决策价值的实证审计}
+
+\author[1]{李俊宇\corref{cor1}}
+\ead{ljylikezmn999@gmail.com}
+
+\author[1]{杜俊涛}
+
+\address[1]{智能电力系统与计算能源交叉研究组，中国}
+
+\cortext[cor1]{通信作者}
+
+\begin{highlights}
+\item 结合文献审计、代码核查与风场受控实验，检验风电物理约束预测的收益归因依据。
+\item 46项被审计研究中44项缺失公开代码，50\%采用模块级消融混淆了先验贡献。
+\item 代码核查识别出公开实现的散度参数方向与论文定义不符，改变了梯度尺度。
+\item 强约束下打乱物理先验导致决策损失激增68.1\%，揭示出显著的先验误设脆弱性。
+\item 退化零申报探针揭示了孤立未对冲平衡现金流无法单独衡量预测模型优劣。
+\end{highlights}
+
+\begin{abstract}
+物理约束模型的预测误差下降，并不足以说明收益来自先验中的有效信息，也不能直接证明其决策价值。本文结合文献审计、代码核查与三座英国风场的受控实验，检验风电预测中约束收益的归因依据。在纳入的 46 项研究中，审计账本未记录运行负效应报告，44 项未找到公开代码，23 项通过移除网络模块进行消融，难以单独识别先验贡献。在同骨干、相同决策校准的比较中，历史功率曲线先验的效果随实验条件变化：Penmanshiel 上，强约束使归一化非对称决策损失平均下降 1.22\%，打乱风速—功率映射则使其上升 68.1\%。在另外两站，固定历史先验在较短模型训练窗口下带来较低的平均损失，窗口扩大后该优势消退。代码核查发现一项公开实现的散度参数方向与文中定义不符；零申报对照进一步表明，孤立的不平衡现金流无法单独衡量预测能力。这些结果支持对先验来源、实现语义和决策指标分别验证，并将约束收益限定在实际测试的先验与数据条件内。
+\end{abstract}
+
+\begin{keyword}
+物理约束深度学习 \sep 风电功率预测 \sep 预测-决策脱钩 \sep 条件归纳偏置 \sep 系统性实证审计 \sep 软件实现保真度 \sep 机器学习可复现性
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sections/01_intro.tex}
+\input{sections/02_related.tex}
+\input{sections/03_framework.tex}
+\input{sections/04_protocol.tex}
+\input{sections/05_results.tex}
+\input{sections/06_code_audit.tex}
+\input{sections/07_theory.tex}
+\input{sections/08_discussion.tex}
+\input{sections/09_conclusion.tex}
+
+\input{sections/11_starmethods.tex}
+
+\appendix
+\input{sections/10_appendix.tex}
+
+\section*{利益冲突声明 (Declaration of Interests)}
+作者声明不存在与本文研究相关的竞争性经济利益或人身关系。
+
+\section*{作者贡献声明 (Author Contributions, CRediT)}
+\textbf{李俊宇 (Junyu Li)}：概念构思、方法学设计、软件开发、形式化推导、调查研究、数据整理、可视化、项目管理、论文初稿撰写、论文审阅与编辑。\textbf{杜俊涛 (Juntao Du)}：实证验证、数据核查、软件（评分员间信度仲裁系统）、调查研究、论文审阅与编辑。
+
+\section*{人工智能工具使用声明 (Declaration of Generative AI)}
+在准备本手稿的过程中，作者仅将大语言模型辅助工具严格用于语法检查、代数语法校验与参考文献格式规整。使用上述工具后，作者对全部内容进行了全面审查与编辑，并对本出版物中所提出的科学诚信、分析结论和推导主张承担全部责任。
+
+\section*{致谢 (Acknowledgments)}
+我们诚挚感谢 Zenodo、Cubico Sustainable Investments、RES、TRIG 与 Elexon 开放科学团队为维护商业级风电遥测与电力市场出清历史公开数据集所作出的贡献。计算实验依托专用高性能计算基础设施完成。
+
+\setlength{\bibsep}{2.5pt plus 0.5pt minus 0.5pt}
+\small
+\bibliography{refs}
+
+\end{document}

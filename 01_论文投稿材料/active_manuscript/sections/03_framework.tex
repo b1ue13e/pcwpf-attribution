@@ -1,0 +1,62 @@
+\section{Conceptual Framework: The Five-Dimensional Constraint Lifecycle (Schema v4)}
+\label{sec:framework}
+
+In renewable energy forecasting, designating a neural network as ``physics-constrained'' conflates disparate mathematical, structural, and empirical operations under an umbrella descriptor \cite{lipton2019}. To establish an operational foundation for empirical auditing, we introduce the \textbf{Constraint Lifecycle Taxonomy (Schema v4)}.
+
+\subsection{Unit of Analysis and Lifecycle Representation}
+In our scoping framework, the primary unit of analysis is the individual \textbf{forecasting study} ($N=46$ unique scoping studies), characterized by its primary operational constraint mechanism. For forecasting methodologies that integrate multiple physical priors (e.g., combining an empirical power curve regularizer with a spatial wake graph architecture), each study is classified according to its dominant physical constraint governing the forecasting computational graph, while multi-component interactions and secondary constraints are preserved in the open audit ledger. Formally, we characterize the primary constraint architecture $C$ of each audited study as a 5-tuple operating across orthogonal lifecycle stages:
+\begin{equation}
+C = \big\langle \mathcal{D}_1, \mathcal{D}_2, \mathcal{D}_3, \mathcal{D}_4, \mathcal{D}_5 \big\rangle,
+\label{eq:constraint_tuple}
+\end{equation}
+where $\mathcal{D}_1$ represents parameter provenance, $\mathcal{D}_2$ denotes application stage, $\mathcal{D}_3$ specifies test-time inference telemetry requirements, $\mathcal{D}_4$ captures implementation software fidelity, and $\mathcal{D}_5$ evaluates harm reporting and ablation validity. The overarching lifecycle trajectory from physical specification to operational deployment is illustrated schematically in Figure~\ref{fig:lifecycle}.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_constraint_lifecycle.pdf}
+\caption{The Five-Dimensional Constraint Lifecycle Framework (Schema v4). Tracking domain physical constraints from their mathematical origin ($\mathcal{D}_1$) through computational graph formulation ($\mathcal{D}_2$), operational telemetry dependency ($\mathcal{D}_3$), software implementation parity ($\mathcal{D}_4$), and empirical safety/ablation reporting ($\mathcal{D}_5$).}
+\label{fig:lifecycle}
+\end{figure*}
+
+\subsection{Operational Definitions of the Five Lifecycle Dimensions}
+Schema v4 characterizes each audited constraint architecture through five orthogonal lifecycle dimensions:
+
+\paragraph{Dimension 1: Parameter Provenance ($\mathcal{D}_1$)}
+Parameter provenance identifies the epistemic origin and empirical calibration of the numerical values governing a constraint:
+\begin{itemize}[leftmargin=1.5em,itemsep=1pt,topsep=2pt]
+\item \textit{Intrinsic constraints}: parameters derive analytically from governing physical invariants, manufacturer nameplate limits, or classical equations without empirical fitting (e.g., the Betz limit $C_p \le 16/27$ or kinematic wake equations).
+\item \textit{Historical-static priors}: parameters or reference distributions are estimated offline from historical SCADA archives and held fixed during inference (e.g., empirical power curves fitted via kernel density estimation).
+\item \textit{Learned-online constraints}: parameters adapt dynamically during test-time inference via an auxiliary neural subnetwork.
+\end{itemize}
+When a study omits calibration details, it is designated as \textit{unreported}. Distinguishing provenance is critical: static empirical priors implicitly assume aerodynamic stationarity, risking silent miscalibration under turbine aging or curtailment.
+
+\paragraph{Dimension 2: Application Stage ($\mathcal{D}_2$)}
+This dimension identifies the computational point where domain physics enters the learning pipeline:
+(1)~\textit{training-loss regularization}, where physics acts as a differentiable penalty appended to the loss objective ($\mathcal{L} = \mathcal{L}_{\text{task}} + \lambda \mathcal{L}_{\text{phys}}$);
+(2)~\textit{inference-architecture constraints}, which modify the computational graph to project outputs onto feasible manifolds;
+(3)~\textit{data-generation priors}, used upstream to synthesize or augment training sequences; and
+(4)~\textit{post-hoc correction filters}, applied as external mathematical projections after neural inference.
+
+\paragraph{Dimension 3: Inference Telemetry Requirements ($\mathcal{D}_3$)}
+Inference telemetry identifies external data streams required to evaluate constraints during real-time deployment:
+(1)~\textit{none}, relying solely on target turbine historical power series;
+(2)~\textit{forecast-input}, strictly mandating future meteorological inputs (e.g., forward numerical weather prediction wind vectors); and
+(3)~\textit{contemporaneous-state}, requiring synchronized, zero-latency measurements from adjacent turbines or met masts.
+Classification as $\mathcal{D}_3 = \texttt{none}$ indicates that the base forecasting model requires no external runtime telemetry streams (such as real-time meteorological feeds or forward NWP data). When test-time physical constraint evaluation relies on external meteorological proxies (such as querying an empirical power curve or joint distribution prior with wind speed), operators lacking forward NWP or zero-latency SCADA feeds must either omit the constraint or substitute lagged historical observations. Observation staleness is therefore an operational hazard specific to proxy-dependent constraint architectures under telemetry delays, rather than an automatic attribute of $\mathcal{D}_3 = \texttt{none}$ models.
+
+\paragraph{Dimension 4: Implementation Fidelity ($\mathcal{D}_4$)}
+Implementation fidelity evaluates whether public software faithfully executes the published mathematical formulations. Codebases are classified as:
+(1)~\textit{verified-aligned}, where public source code matches published equations;
+(2)~\textit{code-mismatch}, where code exhibits an algebraic or directional deviation from the text; and
+(3)~\textit{not-found}, where no public repository or script accompanies the paper.
+Mathematical typesetting often conceals divergence in numerical execution, making independent software auditing essential.
+
+\paragraph{Dimension 5: Harm Reporting and Ablation Semantics ($\mathcal{D}_5$)}
+This dimension examines whether evaluations causally isolate physical constraints and report operational failure boundaries. Evaluation protocols are categorized into:
+(1)~\textit{strict-isolation}, where treatment and baseline share identical parameter capacity, differing only in the activation of the physical prior ($\lambda=0$ vs.\ $\lambda>0$);
+(2)~\textit{module-ablation}, where the ablation excises an entire multi-parameter neural block, confounding structural capacity with domain knowledge;
+(3)~\textit{both}, reporting both isolated toggles and architectural excisions; and
+(4)~\textit{harm-reported}, explicitly documenting operating regimes where constraints degrade performance.
+
+\subsection{Methodological Principles for Schema Disambiguation}
+To ensure reproducible coding across independent raters, Schema v4 enforces four disambiguation rules. Parameter provenance ($\mathcal{D}_1$) separates offline calibration from runtime telemetry ($\mathcal{D}_3$), ensuring that historical estimation methods are not conflated with active SCADA stream dependencies. Application stage ($\mathcal{D}_2$) is determined by the backpropagation path: loss regularizers update network weights through objective penalties during training, whereas inference-architecture modifications constrain the forward computational graph directly under arbitrary parameter states. For composite methodologies that incorporate secondary constraints alongside structural modifications (e.g., both graph topology and auxiliary loss penalties), the primary classification is determined by the structural constraint directly modifying the forward computational graph, with secondary mechanisms logged in the qualitative audit ledger. Causal ablation validity ($\mathcal{D}_5$) requires parameter-matched controls; excising multi-layer neural submodules evaluates overall architectural capacity rather than the specific inductive contribution of the physical prior.

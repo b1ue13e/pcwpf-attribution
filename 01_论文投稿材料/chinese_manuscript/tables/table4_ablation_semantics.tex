@@ -1,0 +1,19 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.92}
+\setlength{\tabcolsep}{3.5pt}
+\caption{46 项审计文献中消融实验的语义分类与因果可解释性评估。}
+\label{tab:ablation_semantics}
+\begin{tabularx}{\textwidth}{p{4.2cm}rrX}
+\toprule
+\textbf{消融实验语义类型} & \textbf{文献数量 ($N=46$)} & \textbf{占比 (\%)} & \textbf{因果有效性与实证可解释性评估} \\
+\midrule
+\texttt{约束开闭消融 (on-off)} & 17 & 37.0\% & \textbf{严格物理隔离}：在完全相同的网络架构下严格对比 $\lambda=0$ vs. $\lambda > 0$，因果隔离了物理正则化项。 \\
+\texttt{兼具两者 (both)} & 6 & 13.0\% & \textbf{严格物理隔离}：兼具参数隔离测试（$\lambda=0$）与模块结构消融，满足无混淆实验对照准则。 \\
+\texttt{粗粒度模块消融} & 23 & 50.0\% & \textbf{混淆参数容量}：直接砍掉整个神经网络子模块（如空间 GNN 分支）；评估的是模块总体容量而非物理先验。 \\
+\midrule
+\textbf{严格隔离消融文献总数} & \textbf{23} & \textbf{50.0\%} & 现有文献中仅有约半数的研究真正因果隔离了物理约束本身的作用。 \\
+\bottomrule
+\end{tabularx}
+\end{table*}

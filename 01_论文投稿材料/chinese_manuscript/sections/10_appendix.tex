@@ -1,0 +1,140 @@
+\section{附录：决策校准边界与形式化反例证明}
+\label{sec:appendix_proofs}
+
+本附录给出正文中两项理论反例的形式化数学证明，严谨界定两阶段决策校准何时能完全吸收表征偏差，以及何时空间异方差性会导致具有更高均方误差的预测模型在决策层取得更低运行风险。
+
+\subsection{反例 1：常数平移不变性与超额风险零差值}
+\label{sec:proof_ex1}
+
+\begin{example}[常数平移不变性]
+\label{ex:constant_shift}
+设基准无约束预测模型输出为 $f_{\text{uncons}}(X)$，其最优标量分位数校准位移为：
+\begin{equation}
+\delta_{\text{uncons}}^* = \arg\min_\delta \mathcal{R}\big( f_{\text{uncons}}(X) + \delta \big).
+\end{equation}
+假设施加物理约束后，模型在所有特征空间上的预测仅仅发生了一个恒定的代数平移偏差：
+\begin{equation}
+f_{\text{phys}}(X) = f_{\text{uncons}}(X) + c, \quad \forall X \in \mathcal{X},
+\end{equation}
+其中 $c \neq 0$ 为非零常数。
+\end{example}
+
+\begin{proposition}
+在反例~\ref{ex:constant_shift} 的设定下，尽管物理约束模型的预测均方误差发生变化（当预测原本无偏时 MSE 必单调增大），但在经过最优标量分位数校准后，两者的实际调度出力决策完全重合，超额运行风险差值严格恒为零：
+\begin{equation}
+p_{\text{phys}}^*(X) \equiv p_{\text{uncons}}^*(X), \quad \Delta \mathcal{R}_{\text{disp}} \equiv 0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+根据最优标量分位数校准的数学定义：
+\begin{equation}
+\begin{aligned}
+\delta_{\text{phys}}^* &= \arg\min_\delta \mathcal{R}\big( f_{\text{phys}}(X) + \delta \big) \\
+&= \arg\min_\delta \mathcal{R}\big( f_{\text{uncons}}(X) + c + \delta \big).
+\end{aligned}
+\end{equation}
+定义辅助变量 $\delta' = \delta + c$，由于极小化是针对整个实数域进行的，目标函数在 $\delta' = \delta_{\text{uncons}}^*$ 处取得全局唯一最小值。因此有：
+\begin{equation}
+\delta_{\text{phys}}^* + c = \delta_{\text{uncons}}^* \implies \delta_{\text{phys}}^* = \delta_{\text{uncons}}^* - c.
+\end{equation}
+从而，物理约束模型经过校准后的最终申报决策为：
+\begin{equation}
+\begin{aligned}
+p_{\text{phys}}^*(X) &= f_{\text{phys}}(X) + \delta_{\text{phys}}^* \\
+&= \big( f_{\text{uncons}}(X) + c \big) + \big( \delta_{\text{uncons}}^* - c \big) \\
+&= f_{\text{uncons}}(X) + \delta_{\text{uncons}}^* \\
+&= p_{\text{uncons}}^*(X).
+\end{aligned}
+\end{equation}
+由于申报决策函数处处恒等，其诱发的非对称期望运行风险完全相同：
+\begin{equation}
+\Delta \mathcal{R}_{\text{disp}} = \mathcal{R}(p_{\text{phys}}^*) - \mathcal{R}(p_{\text{uncons}}^*) = 0.
+\end{equation}
+证毕。
+\end{proof}
+
+\subsection{反例 2：空间异方差性与高 MSE 模型的低决策风险逆转}
+\label{sec:proof_ex2}
+
+\begin{example}[空间异方差性反例]
+\label{ex:heteroscedasticity}
+设空间输入特征为二元离散变量 $X \in \{0, 1\}$，先验出现概率对称：$P(X=0) = P(X=1) = 0.5$。设在这两个特征空间下，实际输出功率的条件概率分布呈现显著的异方差宽度：
+\begin{align}
+Y \mid (X=0) &\sim U[0.20, 0.60] \nonumber \\
+&\quad (\mu_0 = 0.40, \, s_0 = 0.40), \\
+Y \mid (X=1) &\sim U[0.30, 0.90] \nonumber \\
+&\quad (\mu_1 = 0.60, \, s_1 = 0.60).
+\end{align}
+设电网非对称考核比率为 $r = 2$，对应最优出清分位数为 $\tau = 1/(r+1) = 1/3$。考量两个候选预测模型：模型 A 为理想的无偏条件均值估计器，预测值为 $f_A(0) = 0.40$ 与 $f_A(1) = 0.60$；模型 B 为具有结构性偏差的有偏估计器，其预测值为 $f_B(0) = 0.40$ 与 $f_B(1) = 0.55$。
+\end{example}
+
+\paragraph{点预测均方误差 (MSE) 计算}
+两模型关于实际功率的均方误差分别为：
+\begin{align}
+\text{MSE}(f_A) &= 0.5 \left(\frac{0.40^2}{12}\right) + 0.5 \left(\frac{0.60^2}{12}\right) \nonumber \\
+&= \frac{13}{600} \approx 0.021667, \\
+\text{MSE}(f_B) &= \text{MSE}(f_A) + 0.5 (0.55 - 0.60)^2 \nonumber \\
+&= 0.021667 + 0.001250 \approx 0.022917.
+\end{align}
+显然，模型 B 的点预测均方误差严格高于模型 A，误差增幅达 $\Delta \text{MSE} = +5.8\%$。
+
+\paragraph{两阶段全局标量分位数校准}
+在此异方差设定下，各分区的真实条件分位数为：
+\begin{align}
+q_{1/3}(0) &= 0.20 + \frac{1}{3}(0.40) = \frac{1.00}{3} \approx 0.333333, \\
+q_{1/3}(1) &= 0.30 + \frac{1}{3}(0.60) = 0.500000.
+\end{align}
+分位数与均值的真实固有差距分别为：
+\begin{align}
+\Delta_{1/3}(0) &= q_{1/3}(0) - \mu_0 = \frac{1}{3} - 0.40 \nonumber \\
+&= -\frac{1}{15} \approx -0.0667, \\
+\Delta_{1/3}(1) &= q_{1/3}(1) - \mu_1 \nonumber \\
+&= 0.50 - 0.60 = -0.10.
+\end{align}
+根据局部二次展开公式~\eqref{eq:quadratic_approx}，在均匀分布下概率密度函数为常数：$f_0(u) = 1/0.40 = 2.50$，$f_1(u) = 1/0.60 = 1.6667$。二次展开权重分别为：
+\begin{align}
+w_0 &= \frac{r+1}{2} f_0 = \frac{3}{2}(2.50) = 3.75, \\
+w_1 &= \frac{r+1}{2} f_1 = \frac{3}{2}\left(\frac{5}{3}\right) = 2.50.
+\end{align}
+对于模型 A（无偏均值），其超额运行风险作为标量校准偏移 $\delta$ 的函数为：
+\begin{align}
+J_A(\delta) &= 0.5 \Big[ 3.75 \big(\delta - (-1/15)\big)^2 \nonumber \\
+&\qquad + 2.50 \big(\delta - (-0.10)\big)^2 \Big].
+\end{align}
+对 $\delta$ 求导置零解得最优全局校准偏移量：
+\begin{align}
+\delta_A^* &= \frac{3.75(-1/15) + 2.50(-0.10)}{3.75 + 2.50} \nonumber \\
+&= \frac{-0.25 - 0.25}{6.25} = -0.080.
+\end{align}
+代入计算模型 A 在最优标量校准下的超额运行风险：
+\begin{align}
+J_A(\delta_A^*) &= 0.5 \Big[ 3.75 \left(-0.08 + \frac{1}{15}\right)^2 \nonumber \\
+&\qquad + 2.50 (-0.08 + 0.10)^2 \Big] \nonumber \\
+&= 0.5 \left[ 3.75 \left(-\frac{1}{75}\right)^2 + 2.50 (0.02)^2 \right] \nonumber \\
+&= 0.5 [ 3.75(0.0001778) + 2.50(0.0004) ] \nonumber \\
+&= 0.5 [ 0.0006667 + 0.0010 ] \approx 0.000833.
+\end{align}
+
+现在考量具有更高 MSE 的模型 B。模型 B 在 $X=0$ 处预测无偏，但在 $X=1$ 处预测低估了 $0.05$（$f_B(1) - \mu_1 = -0.05$）。因此模型 B 的等效分位数差距变更为：
+\begin{align}
+\tilde{\Delta}_B(0) &= \Delta_{1/3}(0) = -\frac{1}{15} \approx -0.0667, \\
+\tilde{\Delta}_B(1) &= \Delta_{1/3}(1) - (f_B(1) - \mu_1) \nonumber \\
+&= -0.10 - (-0.05) = -0.05.
+\end{align}
+针对模型 B 解出其最优全局标量校准偏移量：
+\begin{align}
+\delta_B^* &= \frac{3.75(-1/15) + 2.50(-0.05)}{6.25} \nonumber \\
+&= \frac{-0.25 - 0.125}{6.25} = -0.060.
+\end{align}
+代入计算模型 B 经过最优标量校准后的超额运行风险：
+\begin{align}
+J_B(\delta_B^*) &= 0.5 \Big[ 3.75 \left(-0.06 + \frac{1}{15}\right)^2 \nonumber \\
+&\qquad + 2.50 (-0.06 + 0.05)^2 \Big] \nonumber \\
+&= 0.5 \left[ 3.75 \left(\frac{1}{150}\right)^2 + 2.50 (-0.01)^2 \right] \nonumber \\
+&= 0.5 [ 3.75(0.0000444) + 2.50(0.0001) ] \nonumber \\
+&= 0.5 [ 0.0001667 + 0.00025 ] \approx 0.000208.
+\end{align}
+
+\paragraph{理论推论}
+反例 2 形式化证明：\textbf{在条件异方差条件下，一个具有更高预测均方误差的有偏预测器，在经过标量分位数校准后，在数学上可以取得比真实条件均值严格更低的调度运行损失}。这解释了物理约束在两阶段解耦校准下的表现为何高度取决于局部误差方差与环境地形分布。

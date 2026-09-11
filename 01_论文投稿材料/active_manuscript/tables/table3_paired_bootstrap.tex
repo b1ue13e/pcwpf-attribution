@@ -1,0 +1,30 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.90}
+\setlength{\tabcolsep}{2.5pt}
+\caption{7-Day Circular Block Paired Bootstrap Contrasts vs. Unconstrained DLinear under Calibrated Policy (2,000 Replications).}
+\label{tab:paired_bootstrap}
+\begin{threeparttable}
+\begin{tabularx}{\textwidth}{p{1.8cm}p{2.6cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\toprule
+\textbf{Site} & \textbf{Method Contrast} & \textbf{Dynamic Cost Diff $\Delta \text{Cost}_{dyn}$} & \textbf{Shortfall Cashout Diff} & \textbf{Balancing Cashflow Diff} \\
+ & & \textbf{(95\% CI)} & \textbf{\pounds/(turb$\cdot$yr) (95\% CI)} & \textbf{\pounds/(turb$\cdot$yr) (95\% CI)} \\
+\midrule
+\multirow{4}{=}{\textbf{Hill of Towie}} & Bounds vs DLinear & $+0.000000$ ($[$+0.000000$, $+0.000000$]$) & \pounds $+0.15$ ($[$-0.17$, $+0.51$]$) & \pounds $-0.32$ ($[$-1.37$, $+0.62$]$) \\
+ & Power Curve vs DLinear & $-0.000008$ ($[$-0.000021$, $+0.000007$]$) & \pounds $+22.99$ ($[$+10.93$, $+38.43$]$) & \pounds $-89.40$ ($[$-133.51$, $-54.70$]$) \\
+ & Distribution Prior vs DLinear & \textbf{$+0.000766$ ($[$+0.000277$, $+0.001201$]$)} & \textbf{\pounds $-578.57$ ($[$-834.86$, $-367.51$]$)} & \textbf{\pounds $+1481.27$ ($[$+802.29$, $+2203.32$]$)} \\
+ & Ridge vs DLinear & $-0.000733$ ($[$-0.001315$, $-0.000125$]$) & \pounds $+192.50$ ($[$-26.66$, $+445.74$]$) & \pounds $-1151.96$ ($[$-1567.98$, $-795.28$]$) \\
+\midrule
+\multirow{4}{=}{\textbf{Kelmarsh}} & Bounds vs DLinear & $+0.000001$ ($[$+0.000000$, $+0.000002$]$) & \pounds $+1.72$ ($[$-0.01$, $+4.63$]$) & \pounds $-4.62$ ($[$-12.67$, $+0.05$]$) \\
+ & Power Curve vs DLinear & $-0.000039$ ($[$-0.000054$, $-0.000023$]$) & \pounds $-16.61$ ($[$-33.12$, $+0.87$]$) & \pounds $+19.51$ ($[$-27.76$, $+62.86$]$) \\
+ & Distribution Prior vs DLinear & \textbf{$+0.000932$ ($[$+0.000423$, $+0.001385$]$)} & \textbf{\pounds $+932.56$ ($[$+648.20$, $+1236.74$]$)} & \textbf{\pounds $-3264.86$ ($[$-4365.40$, $-2223.50$]$)} \\
+ & Ridge vs DLinear & $+0.001338$ ($[$+0.000917$, $+0.001794$]$) & \pounds $+750.61$ ($[$+330.70$, $+1151.06$]$) & \pounds $-690.94$ ($[$-1669.76$, $+409.51$]$) \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textbf{Interpretation}: Negative shortfall cashout difference indicates cost reduction (economic savings) relative to unconstrained DLinear. Positive balancing cashflow difference indicates higher net cashflow component credited from the balancing mechanism.
+\end{tablenotes}
+\end{threeparttable}
+\end{table*}

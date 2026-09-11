@@ -1,0 +1,44 @@
+\section{相关工作与学术定位}
+\label{sec:related_work}
+
+为清晰确立本实证审计工作在能源信息学与应用机器学习交叉领域的学术坐标，我们系统梳理三个相交的研究脉络：(i) 物理约束预测中的先验知识注入范式；(ii) 风电预测的基准评测、鲁棒性与决策价值度量；以及 (iii) 经验人工智能的可复现性危机、报告清单与软件审计。
+
+\subsection{物理约束预测的三大方法学战场}
+将物理控制方程与机理融入神经网络估计器，在现有文献中常被描绘为第一性原理与数据驱动的无缝融合 \cite{karniadakis2021physics,raissi2019physics}。然而在计算能源与风电预测中，这一融入过程引发了三大根本性的方法学战场：
+
+\paragraph{战场一：运动学硬截断与湍流流形几何的冲突} 依据切入、额定与切出风速或 Betz 理论极限（$P \le \frac{16}{27} \cdot \frac{1}{2} \rho A v^3$）施加硬边界或有界激活函数，能够确保输出的物理可容许性 \cite{tgdpf2025}。然而，硬截断在饱和阈值处割裂了高阶梯度流形。当大气湍流驱动机组运行进入非平稳过渡工况时，饱和区梯度消失导致反向传播停滞，截断了神经网络的连续流形表征，阻碍模型适应瞬态气动变化。
+
+\paragraph{战场二：时空图神经网络与低阶经验一维尾流代数矩阵的错配} 将简化的经验运动学尾流公式（如 Jensen 模型或 Bastankhah--Port\'{e}-Agel 高斯模型 \cite{sheng2025annreview,s34_prx2023}）固化为图神经网络（GNN）的邻接矩阵，本质是将低阶工程代用物混同于动态 Navier-Stokes 连续介质流体力学。将一维标量代数矩阵强加于高容量时空图网络，限制了网络解析时变湍流涡流扩散的能力；同时，现有研究普遍将图网络固有的关系表征增益误归因于所注入的经验尾流代数先验。
+
+\paragraph{战场三：统计分布散度正则化与损失曲面优化刚性的对抗} 利用 Wasserstein 距离或 Jensen--Shannon (JS) 散度将预测拉齐至历史 SCADA 经验联合概率流形 \cite{pct2026,tgdpf2025}，直接遭遇多目标优化的损失刚性与梯度病态 \cite{krishnapriyan2021}。静态经验分布先验将历史平均统计特性强制绑定在非平稳气象时间序列上。在实际运行中，一旦出现遥测延迟或天气系统突变，刚性散度惩罚会惩罚物理合规的瞬态响应，诱发严重的运行时代理漂移，加剧下游电网调度成本。
+
+\subsection{风电预测的基准评测、鲁棒性与决策价值}
+短期风电功率预测的评测长期固守于标准化的点预测误差指标，包括平均绝对误差（MAE）、均方根误差（RMSE）与决定系数（$R^2$） \cite{madsen2005,optis2022}。Madsen 等人开创的里程碑式框架 \cite{madsen2005} 规范了风电预测的评估协议，强调必须跨越不同的气象运行工况、预测时间尺度与额定装机容量进行标准化度量。Optis 等人推出的开源评测框架 \textit{WE-Validate} \cite{optis2022}，倡导采用更能抵御复杂地形与气象极端波动的鲁棒分布指标。
+
+电力系统工程已确立：历史测试集上的点预测误差指标与下游经济调度价值存在本质分离 \cite{weron2014,zhang2014wind}。Pinson 等人在奠基性研究中证明 \cite{pinson2007trading}，电力市场中的最优出清竞价由匹配不对称市场惩罚比率的条件分位数决定，确立了点预测精度与决策价值的内在分离。在真实电网的实时平衡与经济调度中，系统对功率突降引发的备用短缺（Shortfall）所施加的经济惩罚远高于对称均方误差 \cite{dao2018cointegration,yan2025economicvalue}。此外，主流电力平衡结算机制（如英国 Elexon BSC 结算准则）采用离散时段（如 30 分钟）的物理净偏差结算，同一时段内的正负误差相互代数抵消。当代物理约束文献普遍孤立报告未经对冲的单边偏差现金流，误将系统偶然的预测偏差当作真实的经济价值。
+
+\subsection{机器学习的可复现性危机、报告清单与软件审计}
+过去数年间，经验机器学习领域面临着日益严峻的可复现性危机 \cite{pineau2021,gundersen2018,kapoor2023}。Kapoor 与 Narayanan \cite{kapoor2023} 针对 17 个科学领域的 300 余篇论文展开数据泄漏系统审计，证实机器学习声称的科学发现普遍在严格独立检验中难以复现。类似地，Gundersen 与 Kjensmo \cite{gundersen2018} 审计了 AAAI 与 IJCAI 的 400 篇顶会论文，发现提供公开代码或完整实验细节的研究不足 20\%。
+
+为应对上述危机，NeurIPS Reproducibility Checklist \cite{pineau2021}、D'Amour 等人关于流水线欠拟合规范性（underspecification）的揭示 \cite{damour2022}，以及 Lipton 与 Steinhardt 对机器学习修辞学弊端（数学伪饰、混淆猜测与证明、未隔离增益源头）的批判 \cite{lipton2019}，共同推动了学术界在研究透明度上的规范化演进。然而在物理约束能源预测这一细分交叉领域，方法学审计长期处于空白状态。如表~\ref{tab:lit_comparison}所示，现有综述绝大多数仅停留在定性分类描述，缺乏系统审计约束生命周期、软件代码保真度与因果消融有效性的实证框架。本工作通过构建涵盖约束生命周期、软件保真度与因果消融有效性的全流程审计框架，系统推进该领域的规范化。
+
+\begin{table*}[!t]
+\centering
+\small
+\caption{本范围界定实证审计与风电功率预测及科学机器学习现有文献综述的对比定位。}
+\label{tab:lit_comparison}
+\begin{tabularx}{\textwidth}{p{4.2cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\toprule
+\textbf{综述 / 审计文献} & \textbf{参数来源解耦} & \textbf{作用阶段划分} & \textbf{遥测需求校验} & \textbf{代码保真度审计} & \textbf{因果消融严格性} \\
+\textbf{代表性参考文献} & \textbf{($\mathcal{D}_1$)} & \textbf{($\mathcal{D}_2$)} & \textbf{($\mathcal{D}_3$)} & \textbf{($\mathcal{D}_4$)} & \textbf{($\mathcal{D}_5$)} \\
+\midrule
+Yan et al. (2016) \cite{yan2016review} & 部分解耦 & 否 & 部分提及 & 否 & 否 \\
+Maldonado-Correa et al. (2020) \cite{maldonadocorrea2020slr} & 否 & 否 & 否 & 否 & 否 \\
+Karniadakis et al. (2021) \cite{karniadakis2021physics} & 概念性论述 & 概念性论述 & 否 & 否 & 否 \\
+Optis et al. (WE-Validate, 2022) \cite{optis2022} & 否 & 否 & 部分提及 & 开源评测基准 & 否 \\
+Sheng et al. (2025) \cite{sheng2025annreview} & 否 & 部分解耦 & 否 & 否 & 否 \\
+\midrule
+\textbf{本范围界定实证审计} & \textbf{是 (Schema v4)} & \textbf{是 (Schema v4)} & \textbf{是 (Schema v4)} & \textbf{是 (静态计算图审计)} & \textbf{是 (严格受控隔离消融)} \\
+\bottomrule
+\end{tabularx}
+\end{table*}

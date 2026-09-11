@@ -1,0 +1,29 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.88}
+\setlength{\tabcolsep}{3.5pt}
+\caption{面向可信物理约束新能源预测的 REFORMS-PCWPF 报告规范清单（五大模块化合规门禁）。}
+\label{tab:reforms_checklist}
+\begin{threeparttable}
+\begin{tabularx}{\textwidth}{p{1.2cm}p{2.6cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}Xp{3.2cm}}
+\toprule
+\textbf{模块编号} & \textbf{治理核心维度} & \textbf{强制性审计实施协议} & \textbf{常见方法学缺陷 / 反模式} & \textbf{必须提交的验证工件} \\
+\midrule
+\textbf{M1} & \textbf{先验隔离消融} & 训练完全相同的网络骨干，仅在相同的随机种子下对比 $\lambda=0$ 与 $\lambda>0$。 & 混淆模块消融（直接砍掉整个 GNN 或注意力子块）与物理领域知识。 & 参数量对齐且具备多随机种子方差的 $\lambda=0$ vs. $\lambda>0$ 对比表。 \\
+\midrule
+\textbf{M2} & \textbf{领域特异性对照} & 评估保持损失公式、梯度尺度与 $\lambda$ 完全相同、但打乱物理映射的伪先验。 & 将低惩罚尺度（$\lambda \le 0.01$）下的非特异性数值正则化误判为物理推理。 & 伪打乱对照性能曲线与实证特异性比率（$p$ 值假设检验显著性）。 \\
+\midrule
+\textbf{M3} & \textbf{代理陈旧度压力测试} & 若约束依赖外部物理输入（如风速），扫描静态代理陈旧度 $\tau \in \{1\text{h}, 2\text{h}, 3\text{h}, 6\text{h}\}$ 评估在缺失前瞻数值天气预报时的静态代理陈旧度影响。 & 默认在测试推理期能够无延迟、无噪声地获取理想实时输入。 & 展现有效性受损临界时域的代理陈旧度成本膨胀曲线。 \\
+\midrule
+\textbf{M4} & \textbf{指标解耦与净结算} & 综合汇报对称点误差 (RMSE)、非负非对称决策风险 (Pinball)，测试退化零申报反例。 & 孤立报告未对冲的单边偏差现金流，误将系统偶然的价格尖峰低估当做技能。 & 包含日前中长期 PPA 合同基准的解耦两阶段市场出清评估。 \\
+\midrule
+\textbf{M5} & \textbf{计算图保真度} & 审查软件中的损失函数实现是否在参数传入方向和归一化上与发表数学公式一致。 & 非对称散度（如 PyTorch \texttt{F.kl\_div}）参数顺序颠倒导致反向优化。 & 静态代码审查报告以及验证损失张量梯度计算方向的单元测试脚本。 \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textbf{注记}：基于对 46 篇范围界定文献的系统审计推导确立，严格对齐跨学科 REFORMS 规范 \cite{kapoor2024reforms} 与 DOME 指南 \cite{walsh2021dome}。我们建议将模块 M1--M5 作为未来物理约束新能源预测研究的推荐报告规范清单。
+\end{tablenotes}
+\end{threeparttable}
+\end{table*}

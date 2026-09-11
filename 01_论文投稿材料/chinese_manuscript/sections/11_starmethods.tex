@@ -1,0 +1,54 @@
+\section{公开数据、开源代码库与实验规范}
+\label{sec:data_code_spec}
+
+\subsection{数据资源与计算环境清单}
+\begin{table*}[!ht]
+\centering
+\footnotesize
+\caption{本实证审计研究所使用的关键数据资源、公开软件代码与分析工具清单。}
+\label{tab:key_resources}
+\begin{tabularx}{\textwidth}{p{3.5cm}p{4.2cm}p{3.5cm}X}
+\toprule
+\textbf{资源类别} & \textbf{来源渠道 / 机构} & \textbf{识别标识符 (Identifier)} & \textbf{说明 / 关键属性} \\
+\midrule
+\multicolumn{4}{l}{\textbf{实测运行遥测数据 (Deposited Data)}} \\
+Kelmarsh 风电场 SCADA & Cubico / Zenodo 开放数据 & DOI: 10.5281/zenodo.5841834 & 6台机组，10分钟SCADA，2017全年标称与气象遥测 \\
+Penmanshiel 风电场 SCADA & Cubico / Zenodo 开放数据 & DOI: 10.5281/zenodo.5946808 & 14台机组，10分钟SCADA，低样本匮乏对比集 ($N=1,583$) \\
+Hill of Towie 风电场 SCADA & TRIG / RES / Zenodo 开放数据 & DOI: 10.5281/zenodo.20204946 & 21台机组，48.3 MW复杂山地全年独立时空外推基准 \\
+Elexon BSC 结算电价 & 英国国家电网 Elexon 门户 & UK OGL v3.0 许可 & 2017全年30分钟系统买入电价 (SBP) 与卖出电价 (SSP) \\
+\midrule
+\multicolumn{4}{l}{\textbf{被审计公开文献代码库 (Audited Codebases)}} \\
+PCT (Physics-Constrained TST) & 官方 GitHub 代码仓库 & Commit: \texttt{65941ec} & 论文: \textit{Sci. Rep.} 2026; 审计核心损失 \texttt{tst/loss.py} \\
+PINN-UQ (Power Tie PINN) & 官方 GitHub 代码仓库 & 验证对齐公开版本 & 论文: \textit{Eng. App. AI} 2025; 审计机电代数约束 \\
+\midrule
+\multicolumn{4}{l}{\textbf{软件与分析工具算法 (Software and Algorithms)}} \\
+Python 编程语言 & Python Software Foundation & 版本: 3.10 / 3.11 & 核心算法逻辑与数据流水线 \\
+PyTorch 深度学习库 & Meta AI / Linux Foundation & 版本: 2.1.2 (CUDA 12.1) & 神经网络训练、计算图自动微分与消融实验 \\
+PatchTST 基准模型 & Nie et al. 开源实现 & GitHub: \texttt{PatchTST} & 多块通道独立 Transformer 架构 \\
+DLinear 基础预测模型 & Zeng et al. 开源实现 & GitHub: \texttt{LTSF-Linear} & 单层线性趋势与季节项分解架构 \\
+Scipy / Statsmodels & SciPy 核心开源社区 & 版本: 1.11 / 0.14 & 统计自举检验与核密度估计实现 \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{数据与代码可用性}
+来自 Kelmarsh（6台森吉安 MM92 风机，12.3~MW）与 Penmanshiel（14台森吉安 MM82 风机，28.7~MW）风电场的原始商业 SCADA 遥测数据已在 Zenodo 上基于 CC-BY 4.0 许可由 Cubico Sustainable Investments 完全开源（DOI：\href{https://doi.org/10.5281/zenodo.5841834}{10.5281/zenodo.5841834} 与 \href{https://doi.org/10.5281/zenodo.5946808}{10.5281/zenodo.5946808}）。来自 Hill of Towie 风电场（21台西门子 SWT-2.3-82 机组，48.3~MW）的实测 SCADA 遥测数据由 RES 代表 TRIG 在 Zenodo 上以 CC-BY 4.0 许可完全开源（DOI：\href{https://doi.org/10.5281/zenodo.20204946}{10.5281/zenodo.20204946}）。英国 Elexon 系统买入电价（SBP）和卖出电价（SSP）历史结算数据依据英国开放政府许可证 v3.0 可免费公开访问。完整的可复现 Python 验证分析脚本套件——包括抽象语法树静态计算图解析器、2,000次圆形块成对自举检验模块、Elexon BSC 净结算核算模块以及制图复现脚本——均已归档于开源代码仓库（\href{https://github.com/anonymous-audit/pcwpf-audit}{\texttt{anonymous-audit/pcwpf-audit}}）。包含原文逐字引用、公式编号与多评分员共识分值的全量 46 篇文献范围界定提取数据库作为开放补充材料完整提供。
+
+关于本研究的数据集提取细节、计算图解析器脚本或评分员间原始提取台账的进一步技术信息，请直接联系通信作者：李俊宇（\href{mailto:ljylikezmn999@gmail.com}{\texttt{ljylikezmn999@gmail.com}}）。
+
+\subsection{风电场实测遥测与数据清洗规程}
+本计算实证研究使用了位于英国境内的三座商业级公用事业陆上风电场的实测运行遥测数据。\textbf{Kelmarsh 风电场}（英格兰北安普敦郡）代表平原开阔内陆地貌，由 6 台森吉安 MM92 风机组成（单机额定 2.05~MW，轮毂高度 78~m，叶轮直径 92~m，场站装机 12.3~MW），模型训练集包含 $N_{\text{train}} = 5,098$ 个无故障 10 分钟观测区间。\textbf{Hill of Towie 风电场}（苏格兰德拉姆缪尔）代表复杂的山地地形，具有显著的微地形尾流交互效应，由 21 台西门子 SWT-2.3-82 机组组成（单机额定 2.3~MW，轮毂高度 60~m，叶轮直径 82~m，场站装机 48.3~MW），作为全年独立时空外推基准测试集，涵盖 2017 年全年的 7,599 个滚动预报起点（45,594 个半小时结算时段）。\textbf{Penmanshiel 风电场}（苏格兰边境地区）代表起伏的丘陵地形，由 14 台森吉安 MM82 机组组成（场站总容量 28.7~MW），配置了受控的小样本训练集（$N_{\text{train}} = 1,583$ 个时段），用于测试模型在样本受限训练工况下的过拟合与物理先验的防御性行为（需注意站点间客观并存地形与机型差异）。标准数据清洗协议剔除了机组弃风限电时段、测风仪结冰时段以及通信中断故障期（如在风速高于切入风速时功率 $P \le 0$，或有功功率连续超过 6 个时段冻结不变的记录）。
+
+\subsection{方法学实施与统计检验细节}
+
+\paragraph*{系统范围界定综述协议 (PRISMA-ScR)}
+文献检索遵循在全文提取前预先明确制订的系统协议，通过 OpenAlex 数据库 API 执行四个针对题名的布尔查询字符串（$Q_1$ 至 $Q_4$），并辅助通过 Google Scholar、arXiv 以及预印本服务器对 2023 年 1 月至 2026 年 3 月（滚动监测至 7 月）发表的文献进行靶向扩展检索，原始识别文献总量达 89 项。两阶段筛选（题名摘要初筛后行全文纳排判定）锁定了本研究的核心范围界定队列，共计 46 项当代代表性研究（38 篇同行评审期刊论文与 8 篇预印本，2023--2026），并对其进行了详尽的五维（$\mathcal{D}_1$--$\mathcal{D}_5$）特征提取与评分员间信度编码。将检索字段扩展至 Scopus 与 IEEE Xplore 题名、摘要与作者关键词（涵盖 \texttt{"knowledge-guided"}、\texttt{"hybrid"} 与 \texttt{"domain-informed"} 等更广泛检索词）的补充敏感性检索额外识别出 14 项候选文献，全文复核证实其中无一报告运行失效边界或负面权衡，专门用于压力测试 0.0\% 负面权衡报告率的稳健性。代码可用性与消融严谨性统计指标（95.7\% 开源代码缺失率与 50.0\% 混杂模块消融率）严格限定于被审计的 46 篇核心文献队列并附带 Wilson 置信区间。评分员间信度基准测试在三名独立评分员（Coder A、B、C）对 20 篇代表性样本的双盲独立提取中完成，各维度呈现出 Fleiss' $\kappa = 0.646\text{--}1.000$ 的高度一致性。
+
+\paragraph*{静态代码与计算图审计}
+软件代码通过抽象语法树（AST）静态解析结合针对发表论文数学公式的逐行代数符号比对来完成。对于物理约束 Transformer（PCT，\textit{Sci. Rep.} 2026），其在文件 \texttt{tst/loss.py} 中的损失定义被符号化反编译为底层 PyTorch 计算原语，严格证实 \texttt{F.kl\_div(p.log(), q)} 计算的是 $\sum q_i \log(q_i / p_i) = \text{KL}(q \parallel p)$，方向与发表公式 $\text{KL}(p \parallel q)$ 颠倒。经验密度核张量外积 $K_p^\top K_w$ 的代数形式展开严格证明了其等价于二维成对乘积核密度估计器。
+
+\paragraph*{10-GPU 前瞻性受控消融实验测试矩阵}
+前瞻性受控消融实验在配备 10 张专用 NVIDIA RTX 4090 GPU 的双节点集群上并行调度运行：Node 1（4 张 GPU）负责 Kelmarsh 风电场跨 4 个独立初始化随机种子 (42, 43, 44, 45) 的评估；Node 2（6 张 GPU）负责 Hill of Towie 与 Penmanshiel 两座风电场各跨 3 个随机种子 (42, 43, 44) 的评估。所有模型均基于 PyTorch 与 CUDA 环境实现。神经网络采用 Adam 优化器训练，学习率为 $10^{-3}$，批大小 (batch size) 为 128，严格遵循基准协议。正则化权重 $\lambda$ 在集合 $\{0.01, 0.1, 1.0\}$ 内评估。针对伪打乱阴性对照，经验风速-功率映射关系通过置换打乱，在保持完全相同损失公式、参数量与梯度尺度的同时消除真实空气动力学信息。必须强调的是，主要预测模型 (DLinear) 在测试推理期仅读取历史功率序列 ($x[:, :, 0]$)，无需任何运行时气象遥测。历史风速代理滞后扫描（$k \in \{6, 12, 18, 36\}$ 步，1 至 6 小时）评估的是在缺乏前向数值天气预报时，离线训练损失函数利用滞后历史风速索引功率曲线先验所引发的时效错配敏感性。
+
+\subsection*{量化与统计分析 (Quantification and Statistical Analysis)}
+日前调度非对称决策评价设定在非对称惩罚比率 $r=2$ 下，对应临界最优出清分位数为 $\tau = 1/(r+1) = 1/3$。归一化静态调度成本定义为 $\text{Cost}_{\text{static}} = 3 \times \mathcal{L}_{1/3}(y, \hat{y})$，后验分位数偏移校准量 $\delta^*$ 严格在验证集上标定。表~\ref{tab:paired_bootstrap} 中探索性动态电价模型对比的统计显著性评估采用 7 天块长度 ($L=1{,}008$) 的圆形块成对自举检验（Circular Block Bootstrap，2,000 次重抽样，两尾 95\% 置信区间），用于刻画气象自相关下的交付期时间抽样不确定性；而表~\ref{tab:controlled_ablation} 中的前瞻受控消融指标离散度则报告独立初始化随机种子间的样本均值与标准差。

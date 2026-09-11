@@ -1,0 +1,38 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.82}
+\setlength{\tabcolsep}{4.5pt}
+\caption{Market Settlement Diagnostic Audit: Exposing the Failure Modes of Standalone Imbalance Cashflow via the Degenerate Zero-Bid ($\hat{y} \equiv 0$) Counter-Baseline (Evaluated on Full 2017 UK Elexon SBP Timeline Across Three Wind Farms).}
+\label{tab:zero_bid_diagnostic}
+\begin{threeparttable}
+\begin{tabularx}{\textwidth}{p{2.5cm}p{3.5cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}Xp{4.2cm}}
+\toprule
+\textbf{Operational} & \textbf{Forecasting / Bidding} & \textbf{Shortfall Penalty} & \textbf{Imbalance Net Cashflow} & \textbf{Decision Cost} & \textbf{Audit Takeaway} \\
+\textbf{Wind Farm} & \textbf{Strategy} & \textbf{(\pounds/(turb$\cdot$yr))} & \textbf{Component (\pounds/(turb$\cdot$yr))} & \textbf{$\text{Cost}_{static}$ ($r=2$)} & \textbf{\& Diagnostic Assessment} \\
+\midrule
+\multirow{4}{=}{\textbf{Kelmarsh}\\(6 Turbines)} 
+& \textbf{Zero-Bid ($\hat{y} \equiv 0$)} & \textbf{\pounds 0.00} & \textbf{+\pounds 223,882.15} & 0.17181 & \textbf{Degenerate Artifact}: zero shortfall and massive apparent cashflow without generating forecasts \\
+& Persistence Baseline & \pounds 7,120.45 & +\pounds 5,890.12 & 0.09132 & Naive operational benchmark \\
+& Unconstrained DLinear & \pounds 5,831.79 & +\pounds 6,439.32 & \textbf{0.08812} & Lowest decision loss; cashflow orders of magnitude below Zero-Bid \\
+& Calibrated Distribution Prior & \pounds 8,412.28 & +\pounds 3,485.65 & 0.09841 & Shortfall penalty surges; balancing revenue drops \\
+\midrule
+\multirow{4}{=}{\textbf{Hill of Towie}\\(21 Turbines)} 
+& \textbf{Zero-Bid ($\hat{y} \equiv 0$)} & \textbf{\pounds 0.00} & \textbf{+\pounds 239,299.30} & 0.17354 & \textbf{Degenerate Artifact}: cashflow reaches \pounds 5.02M farm-wide purely from uncontracted spill \\
+& Persistence Baseline & \pounds 7,450.12 & +\pounds 9,120.34 & 0.08992 & Simple operational benchmark \\
+& Unconstrained DLinear & \pounds 6,006.09 & +\pounds 8,543.14 & \textbf{0.08924} & Minimizes genuine non-negative decision risk \\
+& Calibrated Distribution Prior & \pounds 5,702.68 & +\pounds 12,174.95 & 0.09503 & Cashflow component rises by \pounds 3.6k but true decision loss worsens $+6.5\%$ \\
+\midrule
+\multirow{4}{=}{\textbf{Penmanshiel}\\(14 Turbines)} 
+& \textbf{Zero-Bid ($\hat{y} \equiv 0$)} & \textbf{\pounds 0.00} & \textbf{+\pounds 243,449.80} & 0.20584 & \textbf{Degenerate Artifact}: demonstrates complete decoupling between cashflow and forecast quality \\
+& Persistence Baseline & \pounds 7,080.20 & +\pounds 6,150.30 & \textbf{0.09586} & Strong linear benchmark in complex terrain \\
+& Unconstrained DLinear & \pounds 6,713.83 & +\pounds 6,404.64 & 0.09881 & Data-scarce baseline \\
+& Calibrated Power Curve ($\lambda=1.0$) & \pounds 6,808.40 & +\pounds 6,234.24 & 0.09760 & Genuine physical prior successfully reduces decision risk \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textbf{Notes}: (1) Imbalance Cashflow is computed strictly under Elexon BSC rules as $\sum (Actual - Bid) \times Price$. For Zero-Bid ($\hat{y}=0$), $Actual - Bid = Actual > 0$, making shortfall identically zero and cashing out all uncontracted energy at system price. (2) This table proves that standalone imbalance cashflow cannot measure forecasting commercial value without modeling wholesale day-ahead forward contract sales ($P_{DA} \times Bid$). (3) Decision Cost ($r=2, q=1/3$) correctly penalizes Zero-Bid for severe under-commitment.
+\end{tablenotes}
+\end{threeparttable}
+\end{table*}

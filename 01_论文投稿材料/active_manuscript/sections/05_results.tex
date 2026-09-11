@@ -1,0 +1,107 @@
+\section{Empirical Audit Results}
+\label{sec:results}
+
+Empirical evaluation across the 46-study scoping corpus and three multi-farm prospective ablation benches adjudicates the operational claims of physics-constrained wind forecasting.
+
+\subsection{Systematic Absence of Operational Failure Boundaries across Audited Studies}
+Across the core 46-study scoping cohort, 0/46 studies reported operational harm or negative trade-offs (0.0\%; 95\% Wilson CI: [0.0\%, 7.7\%]). A targeted 14-study sensitivity query expanding search terms to title/abstract/keywords across Scopus and IEEE Xplore likewise identified zero negative trade-off reports. Only three studies in the core cohort (6.5\%; S01, S02, S10) evaluate sensitivity to prior parameter perturbations; the remaining 43 studies (93.5\%) test physical constraints exclusively under nominal design conditions. Restricting evaluations to nominal conditions obscures operational boundaries and replaces empirical engineering trade-offs with uniform enhancement claims.
+
+\subsection{Severe Code Unavailability Impedes Independent Verification}
+Software availability inspection across the 46-study cohort establishes an open-code deficit of 95.7\% (44/46, 95\% Wilson CI: [85.5\%, 98.8\%], $\mathcal{D}_4 = \texttt{not-found}$), with 44 studies providing neither repository links nor execution scripts. Among the two repositories with public code, PINN-UQ (S10) faithfully executes its published electromechanical equations ($\mathcal{D}_4 = \texttt{code-aligned}$, 2.2\%), whereas PCT (S02) exhibits a directional implementation divergence from its published mathematical specification ($\mathcal{D}_4 = \texttt{divergent-code}$, 2.2\%). Independent computational verification is therefore precluded for 95.7\% of the cohort, while public codebases exhibit mixed implementation fidelity.
+
+\subsection{Taxonomic Lifecycle Distribution and Structural Confounding in Reported Ablations}
+Ablation semantic audit ($\mathcal{D}_5$) reveals that half of the audited studies (50.0\%, 23/46, 95\% Wilson CI: [36.1\%, 63.9\%]) conflate neural capacity with domain physical priors by excising entire submodules---such as graph convolutions, cross-attention blocks, or decomposition layers---rather than toggling the constraint penalty ($\lambda=0$ vs.\ $\lambda>0$). Because excising architectural blocks removes thousands of trainable parameters simultaneously, reported performance gains reflect representational capacity rather than aerodynamic guidance (Table~\ref{tab:lifecycle_distribution}, Figure~\ref{fig:audit_distribution}). These code-deficit (95.7\%) and confounded-ablation (50.0\%) estimates describe the audited 46-study cohort under Wilson confidence bounds without asserting universal extrapolation to unbounded keyword taxonomies.
+
+\input{tables/table1_lifecycle_distribution.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_field_audit_distribution.pdf}
+\caption{Empirical Lifecycle Distributions across 46 Audited Studies ($N=46$). (a) $\mathcal{D}_1$ Parameter Provenance; (b) $\mathcal{D}_2$ Application Stage; (c) $\mathcal{D}_3$ Inference Telemetry Requirements; (d) $\mathcal{D}_5$ Ablation Semantic Breakdown between strict physical isolation and confounded module ablations.}
+\label{fig:audit_distribution}
+\end{figure*}
+
+\subsection{Causal Disentanglement: Prior Misspecification, Numerical Regularization, and Observation Staleness}
+Prospective 3D controlled ablations across three operational wind farms isolate prior sensitivity, numerical smoothing, and observation staleness under matched model capacities (Table~\ref{tab:controlled_ablation}, Figure~\ref{fig:causal_ablation}).
+
+\input{tables/table2_dynamic_settlement.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_causal_ablation.pdf}
+\caption{Prospective 3D Controlled Ablation Benchmark across Three Operational Wind Farms. (a) High sensitivity to prior misspecification under strong constraints on Penmanshiel ($N_{\text{train}}=1,583$): authentic physical guidance provides downside risk protection ($-1.22\%$), whereas disrupting the physical mapping (Pseudo-Scrambled prior) triggers a $+68.1\%$ surge in operational dispatch cost. (b) Low-$\lambda$ numerical regularization mimicry on Kelmarsh ($N=5,098$), where genuine and scrambled priors yield near-identical decision costs at $\lambda \le 0.01$, indicating non-specific numerical regularization rather than physical domain reasoning. (c) Monotonic cost inflation under training proxy staleness: dispatch cost escalation across all three farms as historical wind proxy lag $k$ in the training loss increases from 1h to 6h. (d) Decoupling of symmetric point error (RMSE) from asymmetric decision risk ($r=2$), demonstrating that point metrics mask tail operational hazards.}
+\label{fig:causal_ablation}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_within_site_learning_curve.pdf}
+\caption{Within-Site Learning Curves across Sample Sizes $N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$ on Kelmarsh and Hill of Towie (Multi-seed means and standard deviations). Decoupling sample volume from topography confirms that fixed historical physical priors provide lower dispatch costs across both sites under restricted model training windows ($N_{\text{train}} \le 1,000$, $-2.00\%$ on Kelmarsh and $-3.62\%$ on Hill of Towie), whereas expanding model training windows to $N_{\text{train}} = 5,000$ closes this gap and slightly reverses the ranking (+0.33\% on Kelmarsh, +1.73\% on Hill of Towie). In contrast, misspecified scrambled priors under strong regularization ($\lambda=1.0$) induce severe dispatch cost penalties ($+43\%$ to $+98\%$) across all sample regimes.}
+\label{fig:within_site_learning_curve}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_prior_corruption_gradient.pdf}
+\caption{Continuous Prior Corruption and Engineering Drift Severity Response Curves. (a) Continuous interpolation between authentic and scrambled priors $\alpha \in [0.0, 1.0]$, identifying an empirical threshold around $\alpha \approx 0.07$ on Penmanshiel before physical regularizers worsen unconstrained dispatch costs. (b) Turbine aerodynamic aging: capacity derating exceeding 10\% flips nominal physical priors into economic penalties. (c) Anemometer sensor calibration drift: Penmanshiel retains an advantage under positive wind speed drift up to $+15\%$, whereas negative sensor under-reporting systematically inflates shortfall.}
+\label{fig:corruption_gradient}
+\end{figure*}
+
+Table~\ref{tab:controlled_ablation} and Figure~\ref{fig:causal_ablation} reveal four empirical boundary conditions:
+
+\paragraph{Defensive Inductive Bias and Sensitivity to Prior Misspecification (Figures~\ref{fig:causal_ablation}a, \ref{fig:within_site_learning_curve}, and \ref{fig:corruption_gradient})}
+On Penmanshiel ($N_{\text{train}} = 1,583$), unconstrained DLinear exhibits over-fitting ($0.09881 \pm 0.00027$). Embedding the authentic empirical power curve at $\lambda=1.0$ reduces normalized dispatch cost to $0.09760 \pm 0.00044$ ($-1.22\%$). In contrast, the scale-matched Pseudo-Scrambled negative control inflates dispatch cost to $0.16611 \pm 0.00335$ ($+68.1\%$). Within-site ablation is essential because cross-site comparisons inevitably conflate sample size with turbine model and terrain.
+
+To decouple sample volume from topography, we measured within-site learning curves across $N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$ on Kelmarsh and Hill of Towie across random seeds (Figure~\ref{fig:within_site_learning_curve}). Under restricted training sample windows ($N_{\text{train}} = 500$, representing $\approx 21$ days of recent operational history), authentic physical priors consistently lower dispatch costs across both wind farms. On Kelmarsh, dispatch cost falls from $0.09648 \pm 0.00314$ (unconstrained) to $0.09455 \pm 0.00285$ ($-2.00\%$), while scrambled priors surge to $0.13798 \pm 0.02338$ ($+43.0\%$). On Hill of Towie, authentic priors reduce cost from $0.10444 \pm 0.00312$ to $0.10066 \pm 0.00307$ ($-3.62\%$), whereas scrambled priors escalate to $0.17209 \pm 0.01703$ ($+64.8\%$). Importantly, the empirical prior is fitted once on the entire pre-cutoff training period (7 months for Kelmarsh, 10 months for Hill of Towie), providing a seasonal information budget that substantially exceeds the restricted model training windows. As model training volume expands to $N_{\text{train}} = 5{,}000$, unconstrained DLinear achieves $0.08812$ on Kelmarsh and $0.08936$ on Hill of Towie, closing the gap and slightly outperforming the fixed genuine prior ($0.08841$, $+0.33\%$ on Kelmarsh; $0.09091$, $+1.73\%$ on Hill of Towie). In contrast, scrambled priors remain severely detrimental ($+43\%$ to $+98\%$) across all sample sizes. These findings demonstrate that neural forecasters are acutely sensitive to prior misspecification, while authentic physical prior benefits concentrate under data-scarce regimes in our tested configurations.
+
+Evaluating continuous corruption levels $\alpha \in [0.0, 1.0]$ demonstrates that prior failure is not an artifact of total binary permutation (Figure~\ref{fig:corruption_gradient}a). On Penmanshiel, dispatch cost degrades monotonically with corruption, crossing the unconstrained baseline around $\alpha \approx 0.07$ (at $\alpha=0.2$, dispatch cost reaches $0.10469 \pm 0.00338$, a $+5.9\%$ degradation). Evaluating engineering drift reveals asymmetrical operational tolerances: aerodynamic aging exceeding $10\%$ rated capacity derating (Figure~\ref{fig:corruption_gradient}b) flips nominal physical priors into economic penalties. For anemometer calibration, Penmanshiel maintains a modest advantage over unconstrained models even under positive sensor biases up to $+15\%$ ($0.09833$ vs.\ $0.09881$, Figure~\ref{fig:corruption_gradient}c), whereas negative wind speed under-reporting systematically inflates shortfall.
+
+\paragraph{Low-$\lambda$ Numerical Regularization Mimicry (Figure~\ref{fig:causal_ablation}b)}
+At $\lambda = 0.01$, genuine physical priors and pseudo-scrambled controls yield closely matched dispatch costs on Kelmarsh ($0.08810 \pm 0.00009$ vs.\ $0.08801 \pm 0.00008$). Because random power curve permutations produce outcomes comparable to domain aerodynamics at this weak penalty scale, marginal literature improvements reported under weak penalties cannot be attributed to physical reasoning and remain consistent with non-specific numerical smoothing.
+
+\paragraph{Sensitivity to Training-Loss Physical Proxy Staleness (Figure~\ref{fig:causal_ablation}c)}
+Parametric scanning of historical wind speed proxy lag $k \in \{6, 12, 18, 36\}$ (evaluating 1\,h to 6\,h operational delay in the training-loss proxy query) produces strictly monotonic cost inflation across all three farms (Hill of Towie: from $0.09022$ at $k=6$ to $0.09257$ at $k=36$, exceeding unconstrained $0.08924$). We emphasize that this experiment evaluates the sensitivity of the training objective to temporal misalignment between the forecast horizon and the historical wind speed proxy used to index the power curve. It does not represent an inference-time telemetry delay, as the forecaster takes only past power measurements during test-time inference. However, it demonstrates that if an offline training loss regularizes predictions against lagged weather observations without forward meteorological forecasts, proxy staleness rapidly degrades the resulting inductive guidance.
+
+\paragraph{Information-Symmetric Feature Baseline}
+Providing the unconstrained model with contemporaneous wind speed (\textit{Dual-Channel DLinear}) reduces point forecast RMSE (from $0.1717$ to $0.1697$ on Kelmarsh) but raises tail dispatch risk ($0.08910$ vs.\ $0.08812$), because unhedged wind speed fluctuations inflate bidding variance.
+
+\subsubsection{Primary Inferential Contrasts and Metric Framework}
+To control for multiplicity and avoid selective reporting across multiple operational dimensions, our evaluation pipeline specifies three \textbf{primary inferential contrasts} evaluated under normalized static dispatch cost:
+(1)~\textit{Genuine Physical Prior vs.\ Unconstrained Baseline under sample restriction} ($N_{\text{train}}=1{,}583$ on Penmanshiel), confirming downside risk protection ($\Delta = -1.22\%$, $0.09760 \pm 0.00044$ vs.\ $0.09881 \pm 0.00027$);
+(2)~\textit{Scrambled Prior vs.\ Unconstrained Baseline under strong regularization} ($\lambda=1.0$), demonstrating catastrophic misspecification vulnerability ($\Delta = +68.1\%$, $0.16611 \pm 0.00335$ vs.\ $0.09881 \pm 0.00027$); and
+(3)~\textit{Genuine vs.\ Scrambled Prior under weak regularization} ($\lambda=0.01$), confirming indistinguishable behavior consistent with non-specific numerical smoothing ($0.08810 \pm 0.00009$ vs.\ $0.08801 \pm 0.00008$).
+Exploratory dynamic price comparisons (Table~\ref{tab:paired_bootstrap}) evaluate dynamic cost divergences under distribution constraints on Hill of Towie and Kelmarsh under paired circular block bootstrapping. Methodologically, our evaluation protocol explicitly separates two distinct sources of variation: the paired bootstrap intervals in Table~\ref{tab:paired_bootstrap} estimate \textbf{temporal sampling uncertainty} across delivery periods under meteorological autocorrelation, whereas the reported metric margins ($\text{mean} \pm \text{std}$) across random seeds in Table~\ref{tab:controlled_ablation} characterize \textbf{model initialization and optimization variability}.
+
+\input{tables/table3_paired_bootstrap.tex}
+
+\subsection{Decoupled Decision Risk and Single-Settlement Imbalance Diagnostic (The Zero-Bid Anomaly)}
+Evaluating forecasters on isolated unhedged balancing market cashflows introduces a structural evaluation artifact: under 2017 UK BSC 30-minute netting, a degenerate Zero-Bid baseline ($\hat{y} \equiv 0$) extracts \pounds 223k to \pounds 243k per turbine-year in apparent cashflow without generating forecasts (Table~\ref{tab:zero_bid_diagnostic}, Figure~\ref{fig:market_decoupling}). This operational analysis serves as a \textit{decision-risk and imbalance-settlement diagnostic} rather than a full commercial market valuation, exposing metric pathologies in downstream evaluation claims.
+
+\input{tables/table4_zero_bid_diagnostic.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_market_decoupling.pdf}
+\caption{Market Settlement Decoupling and Metric Inversion Diagnostic under UK BSC Netting. (a) Reductio ad absurdum: the degenerate zero-bid settlement anomaly ($\hat{y} \equiv 0$) incurs zero shortfall penalty and extracts over \pounds 220k/turb$\cdot$yr in apparent cashflow without generating forecasts, exposing single-settlement cashflow as an unhedged evaluation trap. (b) Empirical metric inversion on Hill of Towie, where distribution constraints increase nominal balancing cashflow by $+42.5\%$ while concurrently degrading genuine decision risk by $+6.5\%$ and RMSE by $+3.5\%$.}
+\label{fig:market_decoupling}
+\end{figure*}
+
+Table~\ref{tab:zero_bid_diagnostic} and Figure~\ref{fig:market_decoupling} uncover two fundamental evaluation pitfalls:
+
+\paragraph{Degenerate Zero-Bid Settlement Anomaly and Two-Settlement Market Formulation (Figure~\ref{fig:market_decoupling}a)}
+A degenerate forecaster bidding zero in every settlement period incurs \textbf{\pounds 0.00 shortfall penalty} and collects an apparent balancing cashflow of \textbf{+\pounds 223k to +\pounds 243k per turbine-year} across all three wind farms. In standard two-settlement wholesale electricity markets \cite{pinson2007trading}, total commercial revenue couples forward commitments with real-time imbalance settlement:
+\begin{equation}
+R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q),
+\label{eq:two_settlement}
+\end{equation}
+where $q$ denotes the declared day-ahead forward commitment, $P_{\text{DA}}$ is the day-ahead clearing price, $y$ is actual physical generation volume, and $P_{\text{imb}}$ is the real-time imbalance settlement price (under the single-price settlement regime post-P305 in the UK BSC, $P_{\text{SBP}} \approx P_{\text{SSP}} = P_{\text{imb}}$). When downstream evaluations isolate balancing cashflows $R_{\text{imb}} = P_{\text{imb}} \cdot (y - q)$ from forward market revenue $P_{\text{DA}} \cdot q$, setting $q \equiv 0$ converts total generation $y$ into uncontracted spill credited at $P_{\text{imb}}$, producing an apparent six-figure revenue while forfeiting forward market receipts. The Zero-Bid baseline acts as an empirical \textit{reductio ad absurdum}: standalone unhedged balancing cashflow is structurally degenerate when disconnected from forward commitments, confirming that unhedged single-settlement accounting cannot serve as an index of forecast quality.
+
+\paragraph{Empirical Metric Inversion on Hill of Towie (Figure~\ref{fig:market_decoupling}b)}
+On Hill of Towie, distribution regularization increases nominal balancing cashflow by $+42.5\%$ (\pounds 8,543 to \pounds 12,174/(turb$\cdot$yr), Table~\ref{tab:zero_bid_diagnostic}) while concurrently degrading normalized decision risk ($\text{Cost}_{\text{static}}$) by \textbf{$+6.5\%$} and RMSE by $+3.5\%$. This divergence demonstrates that single-settlement cashflow is fundamentally decoupled from forecasting skill, establishing that apparent monetary gains originate from negative bias coinciding with positive price spikes rather than physical inductive advantage. Operational evaluation requires decoupling non-negative asymmetric decision risk (Pinball loss) from historical monetary settlement diagnostics.
+
+\subsection{Cross-Backbone Architectural Sensitivity Probe (PatchTST)}
+To assess whether empirical boundary behaviors extend beyond linear representations without asserting universal inductive invariance, we evaluated a state-of-the-art multi-patch channel-independent Transformer (\textbf{PatchTST} \cite{nie2023patchtst}, patch length 6, stride 4, 2-layer encoder with RevIN) across 60 independently trained models (3 farms $\times$ 4 constraint conditions $\times$ 5 seeds; Table~\ref{tab:patchtst_and_rules}). This setup functions strictly as an \textit{architectural sensitivity probe} under fixed nominal regularization ($\lambda=0.01$) matched to the primary development budget, intentionally bounded to qualitative directional verification rather than an exhaustive cross-backbone $\lambda$ grid search.
+
+\input{tables/table5_patchtst_and_rules.tex}
+
+As detailed in Table~\ref{tab:patchtst_and_rules}, PatchTST confirms that distribution priors reduce dynamic shortfall across all three wind farms (saving \pounds 232.44, \pounds 127.49, and \pounds 790.51/(turb$\cdot$yr) on Hill of Towie, Kelmarsh, and Penmanshiel, respectively), indicating that the defensive shortfall reduction observed under DLinear persists in non-linear patch-based representations. However, net balancing cashflow diverges sharply between architectures: distribution regularization decreases net cashflow on Hill of Towie by $-\text{\pounds} 568.68$/(turb$\cdot$yr) under PatchTST, inverting the positive cashflow effect observed under DLinear. On Penmanshiel, simple empirical baselines (Ridge regression at $0.09744$ and Persistence at $0.09586$) outperform all constrained deep networks, demonstrating that external physical penalties cannot uniformly compensate for deep parameter overfitting in low-sample regimes; the high competitiveness of unconstrained linear baselines underscores that deep physics constraints must be rigorously justified by operational risk reduction rather than assumed to outperform simpler models.

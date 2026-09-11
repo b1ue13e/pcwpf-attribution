@@ -1,0 +1,38 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.85}
+\setlength{\tabcolsep}{2.8pt}
+\caption{跨骨干网络架构敏感性探索：现代深度注意力网络 (PatchTST, ICLR 2023) 在 BSC 30分钟物理净平衡结算下的实测表现 (5个随机种子均值 $\pm$ 标准差)。}
+\label{tab:patchtst_and_rules}
+\begin{threeparttable}
+\begin{tabularx}{\textwidth}{p{2.0cm}p{3.0cm}l>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\toprule
+\textbf{风电场} & \textbf{PatchTST 模型} & \textbf{决策策略} & \textbf{RMSE} & \textbf{归一化动态} & \textbf{短缺清算罚款} & \textbf{平衡机制净现金流} \\
+\textbf{站点} & \textbf{消融变体} & & \textbf{(标幺值)} & \textbf{成本 $\text{Cost}_{\text{dyn}}$} & \textbf{(\pounds/(台$\cdot$年))} & \textbf{(\pounds/(台$\cdot$年))} \\
+\midrule
+\multirow{6}{=}{\textbf{Hill of Towie}\\(48.3 MW, 山地)} & \multirow{2}{=}{无约束 PatchTST} & 未校准 & 0.1176 & 0.10518 & \pounds 21,753.77 & \pounds 12,292.64 \\
+ &  & \textbf{决策校准} & 0.1202 & 0.10220 & \pounds 18,168.11 & \pounds 20,822.29 \\
+ & 经验功率曲线 ($\lambda=0.01$) & 决策校准 & 0.1201 & 0.10212 & \pounds 18,163.56 & \pounds 20,765.01 \\
+ & \multirow{2}{=}{经验分布先验 ($\lambda=0.01$)} & 未校准 & 0.1162 & 0.10507 & \pounds 22,362.12 & \pounds 9,762.57 \\
+ &  & \textbf{决策校准} & 0.1192 & 0.10129 & \textbf{\pounds 17,935.67} & \textbf{\pounds 20,253.61} \\
+\cmidrule(lr){1-7}
+\multirow{6}{=}{\textbf{Kelmarsh}\\(12.3 MW, 平原)} & \multirow{2}{=}{无约束 PatchTST} & 未校准 & 0.1092 & 0.10889 & \pounds 22,630.77 & \pounds 4,523.36 \\
+ &  & \textbf{决策校准} & 0.1118 & 0.10222 & \textbf{\pounds 16,808.90} & \textbf{\pounds 17,411.89} \\
+ & 经验功率曲线 ($\lambda=0.01$) & 决策校准 & 0.1117 & 0.10212 & \pounds 16,774.31 & \pounds 17,431.54 \\
+ & \multirow{2}{=}{经验分布先验 ($\lambda=0.01$)} & 未校准 & 0.1075 & 0.10870 & \pounds 23,336.46 & \pounds 1,528.06 \\
+ &  & \textbf{决策校准} & 0.1097 & 0.10075 & \pounds 16,681.41 & \pounds 16,046.77 \\
+\cmidrule(lr){1-7}
+\multirow{6}{=}{\textbf{Penmanshiel}\\(28.7 MW, 丘陵)} & \multirow{2}{=}{无约束 PatchTST} & 未校准 & 0.1268 & 0.12107 & \pounds 26,956.48 & \pounds 3,001.45 \\
+ &  & \textbf{决策校准} & 0.1304 & 0.11270 & \pounds 19,129.15 & \pounds 20,453.24 \\
+ & 经验功率曲线 ($\lambda=0.01$) & 决策校准 & 0.1303 & 0.11264 & \pounds 19,118.38 & \pounds 20,444.41 \\
+ & \multirow{2}{=}{经验分布先验 ($\lambda=0.01$)} & 未校准 & 0.1265 & 0.11729 & \pounds 24,606.87 & \pounds 6,473.07 \\
+ &  & \textbf{决策校准} & 0.1300 & 0.11134 & \textbf{\pounds 18,338.64} & \textbf{\pounds 21,117.53} \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textbf{注记}：PatchTST（ICLR 2023，块长度6，步长4，带通道独立 RevIN）评测在相同的 BSC 30分钟净结算规则下评估架构敏感性。实验验证了站点分化特性：在平原 Kelmarsh，无约束模型获得更高的净现金流（比分布先验高出 +\pounds 1,365.12/(台$\cdot$年)）；在山地 Penmanshiel 与 Hill of Towie，分布正则化提供了归纳保护，分别节省了 \pounds 790.51 与 \pounds 232.44 的单边短缺支出。
+\end{tablenotes}
+\end{threeparttable}
+\end{table*}

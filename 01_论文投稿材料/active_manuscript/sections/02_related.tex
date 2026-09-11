@@ -1,0 +1,46 @@
+\section{Related Work and Positioning}
+\label{sec:related_work}
+
+To position this scoping empirical audit within computational energy systems and empirical machine learning methodology, we examine three intersecting areas: (i) physics-constrained formulations in renewable energy forecasting, (ii) benchmarking and operational decision value in wind power prediction, and (iii) reproducibility, reporting checklists, and software auditing in empirical AI.
+
+\subsection{Three Methodological Dilemmas in Physics-Constrained Energy Forecasting}
+The integration of physical principles into neural estimators is widely presented as a synthesis of domain governing equations and data-driven learning \cite{karniadakis2021physics,raissi2019physics}. In computational renewable energy systems, this formulation encounters three structural dilemmas:
+
+\paragraph{Dilemma 1: Kinematic Hard Clipping versus Turbulent Manifolds} Enforcing aerodynamic operational limits (cut-in, rated, and cut-out wind speeds, or the theoretical Betz envelope $P \le \frac{16}{27} \cdot \frac{1}{2} \rho A v^3$) via hard bounds or bounded activations guarantees output admissibility \cite{tgdpf2025}. However, hard clipping alters high-order gradient geometry across saturation boundaries. When atmospheric boundary-layer turbulence transitions turbine operation into non-stationary regimes, zero-gradient saturation zones stall backpropagation, truncating the neural manifold and preventing adaptation to transient aerodynamic excursions.
+
+\paragraph{Dilemma 2: Spatio-Temporal Wake Graph Networks versus Low-Order Empirical Algebraic Matrices} Embedding spatial wake deficits---such as 1D kinematic Jensen or Bastankhah--Port\'{e}-Agel Gaussian formulations \cite{sheng2025annreview,s34_prx2023}---into Graph Neural Network (GNN) adjacency matrices substitutes empirical steady-state engineering approximations for dynamic Navier--Stokes continuum physics. Imposing 1D scalar algebraic matrices onto high-capacity spatiotemporal graph representations restricts the network from resolving time-varying turbulent eddy propagation. Published evaluations frequently attribute downstream relational gains to the embedded engineering surrogate rather than testing whether the expressive capacity of the GNN backbone alone accounts for the improvement.
+
+\paragraph{Dilemma 3: Distribution Divergence Regularization versus Loss Landscape Stiffness} Penalizing deviations from historical joint wind speed--power densities via statistical divergence penalties (Wasserstein distance or Jensen--Shannon divergence \cite{pct2026,tgdpf2025}) introduces severe loss landscape stiffness \cite{krishnapriyan2021}. Static distribution alignment projects historical average manifolds onto non-stationary meteorological time series. When runtime telemetry exhibits observation latency or atmospheric regimes shift, multi-objective penalty gradients penalize physically valid operational transients, inducing runtime proxy drift and inflating downstream dispatch imbalance costs.
+
+\subsection{Benchmarking, Robustness, and Decision Value in Wind Forecasting}
+Evaluation of short-term wind power forecasting has long relied on standard statistical error metrics, including Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and the coefficient of determination ($R^2$) \cite{madsen2005,optis2022}. Madsen et al. \cite{madsen2005} established standardized protocols for short-term wind power evaluation, highlighting the necessity of assessing models across distinct operational regimes, forecast horizons, and normalized capacity metrics. More recently, Optis et al. introduced the open-source \textit{WE-Validate} framework \cite{optis2022}, advocating for resistant and distributionally robust metrics that reflect meteorological variability and complex terrain dynamics.
+
+Power systems engineering demonstrates that benchmark accuracy on historical test splits diverges from operational value under asymmetric grid penalties \cite{weron2014,zhang2014wind}. Pinson et al. \cite{pinson2007trading} proved that optimal electricity market bidding is governed by conditional quantiles matching asymmetric imbalance penalties, establishing the operational separation between point accuracy and financial risk. Grid operations penalize reserve shortfalls and unhedged ramp errors far more severely than symmetric variance \cite{dao2018cointegration,yan2025economicvalue}. Real-world balancing mechanisms, such as the UK Elexon Balancing and Settlement Code (BSC), evaluate net physical imbalances over discrete 30-minute settlement periods, where positive and negative deviations net out algebraically before incurring cashout charges. Yet published studies routinely evaluate models on unhedged single-settlement cashflows, mistaking accidental prediction bias for forecasting skill. Evaluating neural forecasters strictly on uncalibrated point metrics or unhedged cashflows obscures their true operational reliability.
+
+\subsection{Reproducibility, Reporting Checklists, and Software Auditing in Machine Learning}
+Empirical machine learning has faced increasing scrutiny over data leakage, underspecification, and unverified software implementations \cite{damour2022,gundersen2018,kapoor2023,lipton2019}. Kapoor and Narayanan \cite{kapoor2023} documented reproducibility failures stemming from subtle leakage vectors across seventeen scientific disciplines, showing that data-driven claims frequently collapse when subjected to rigorous independent re-examination. Gundersen and Kjensmo \cite{gundersen2018} conducted an empirical audit of 400 papers presented at AI venues (AAAI and IJCAI), finding that fewer than 20\% provided accessible code or reproducible experimental protocols.
+
+To address these vulnerabilities, leading scientific venues have introduced procedural interventions. Pineau et al. \cite{pineau2021} developed the NeurIPS Machine Learning Reproducibility Checklist, demonstrating that formal reporting mandates correlate with improved disclosure of code, data, hyperparameter tuning, and error bounds. Beyond documentation, D'Amour et al. \cite{damour2022} demonstrated that models exhibiting equivalent in-distribution benchmark accuracy often diverge sharply under operational stress due to underspecified training objectives. Concurrently, Lipton and Steinhardt \cite{lipton2019} identified pervasive weaknesses in empirical scholarship: conflating empirical correlation with theoretical causation, failing to isolate independent sources of empirical gain, and deploying mathematical formalism decoratively without operational consequences.
+
+While general machine learning venues have increasingly adopted these auditing norms, physics-constrained energy forecasting has developed largely without standardized reporting controls. As summarized in Table~\ref{tab:lit_comparison}, existing reviews focus primarily on architectural taxonomy and qualitative typologies, rarely probing constraint provenance, software parity, or the causal validity of ablation studies. This work operationalizes these empirical standards through systematic auditing across constraint lifecycle provenance, software parity, and controlled ablations.
+
+\begin{table*}[!t]
+\centering
+\small
+\caption{Positioning this Scoping Empirical Audit Relative to Existing Literature Reviews in Wind Power Forecasting and Scientific ML.}
+\label{tab:lit_comparison}
+\begin{tabularx}{\textwidth}{p{4.0cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\toprule
+\textbf{Survey / Meta-Review} & \textbf{Decouples} & \textbf{Audits Stage} & \textbf{Checks Inference} & \textbf{Verifies Code} & \textbf{Scrutinizes} \\
+\textbf{Literature Reference} & \textbf{Provenance ($\mathcal{D}_1$)} & \textbf{Separation ($\mathcal{D}_2$)} & \textbf{Telemetry ($\mathcal{D}_3$)} & \textbf{Parity ($\mathcal{D}_4$)} & \textbf{Ablation ($\mathcal{D}_5$)} \\
+\midrule
+Yan et al. (2016) \cite{yan2016review} & Partial & No & Partial & No & No \\
+Maldonado-Correa et al. (2020) \cite{maldonadocorrea2020slr} & No & No & No & No & No \\
+Karniadakis et al. (2021) \cite{karniadakis2021physics} & Conceptual & Conceptual & No & No & No \\
+Optis et al. (WE-Validate, 2022) \cite{optis2022} & No & No & Partial & Open Benchmark & No \\
+Sheng et al. (2025) \cite{sheng2025annreview} & No & Partial & No & No & No \\
+\midrule
+\textbf{This Scoping Empirical Audit} & \textbf{Yes (Schema v4)} & \textbf{Yes (Schema v4)} & \textbf{Yes (Schema v4)} & \textbf{Yes (Static Audit)} & \textbf{Yes (Strict Isolation)} \\
+\bottomrule
+\end{tabularx}
+\end{table*}

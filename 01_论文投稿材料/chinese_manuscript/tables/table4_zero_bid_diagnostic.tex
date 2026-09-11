@@ -1,0 +1,38 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.82}
+\setlength{\tabcolsep}{4.5pt}
+\caption{电力市场结算诊断性审计：基于退化零申报反例 ($\hat{y} \equiv 0$) 评估孤立单边平衡现金流指标的有效性（基于 2017 年英国 Elexon SBP 全年出清时间线）。}
+\label{tab:zero_bid_diagnostic}
+\begin{threeparttable}
+\begin{tabularx}{\textwidth}{p{2.5cm}p{3.5cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}Xp{4.2cm}}
+\toprule
+\textbf{运行风电场} & \textbf{功率预测 / 出清申报} & \textbf{短缺清算罚款} & \textbf{单边平衡净现金流} & \textbf{实际决策成本} & \textbf{实证审计诊断结论} \\
+\textbf{站点概况} & \textbf{策略类型} & \textbf{(\pounds/(台$\cdot$年))} & \textbf{(\pounds/(台$\cdot$年))} & \textbf{$\text{Cost}_{static}$ ($r=2$)} & \textbf{\& 方法学定性评价} \\
+\midrule
+\multirow{4}{=}{\textbf{Kelmarsh}\\(6台机组)} 
+& \textbf{退化零申报 ($\hat{y} \equiv 0$)} & \textbf{\pounds 0.00} & \textbf{+\pounds 223,882.15} & 0.17181 & \textbf{指标退化反例}：不进行预测即可凭空结算巨额账面现金流且罚款为零 \\
+& 持续性预测基准 & \pounds 7,120.45 & +\pounds 5,890.12 & 0.09132 & 基础工程对照 \\
+& 无约束 DLinear & \pounds 5,831.79 & +\pounds 6,439.32 & \textbf{0.08812} & 真实的决策损失最低；现金流数量级远低于退化策略 \\
+& 校准经验分布先验 & \pounds 8,412.28 & +\pounds 3,485.65 & 0.09841 & 短缺罚款飙升；平衡收益显著萎缩 \\
+\midrule
+\multirow{4}{=}{\textbf{Hill of Towie}\\(21台机组)} 
+& \textbf{退化零申报 ($\hat{y} \equiv 0$)} & \textbf{\pounds 0.00} & \textbf{+\pounds 239,299.30} & 0.17354 & \textbf{指标退化反例}：仅凭全场入网电量即可结算出 502 万英镑账面现金流 \\
+& 持续性预测基准 & \pounds 7,450.12 & +\pounds 9,120.34 & 0.08992 & 简单运行对照 \\
+& 无约束 DLinear & \pounds 6,006.09 & +\pounds 8,543.14 & \textbf{0.08924} & 最小化真实的非负日前调度运行风险 \\
+& 校准经验分布先验 & \pounds 5,702.68 & +\pounds 12,174.95 & 0.09503 & 现金流虚假激增 \pounds 3.6k，但实际决策损失恶化 $+6.5\%$ \\
+\midrule
+\multirow{4}{=}{\textbf{Penmanshiel}\\(14台机组)} 
+& \textbf{退化零申报 ($\hat{y} \equiv 0$)} & \textbf{\pounds 0.00} & \textbf{+\pounds 243,449.80} & 0.20584 & \textbf{指标退化反例}：证实单边现金流与预测精度本质脱钩 \\
+& 持续性预测基准 & \pounds 7,080.20 & +\pounds 6,150.30 & \textbf{0.09586} & 复杂地形下的强劲线性基准 \\
+& 无约束 DLinear & \pounds 6,713.83 & +\pounds 6,404.64 & 0.09881 & 小样本基准模型 \\
+& 校准经验曲线 ($\lambda=1.0$) & \pounds 6,808.40 & +\pounds 6,234.24 & 0.09760 & 真实物理先验成功降低实际调度决策风险 \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textbf{注记}：(1) 偏差现金流严格依据英国 BSC 出清规则计算 $\sum (\text{实际} - \text{申报}) \times \text{价格}$。对于退化零申报策略 ($\hat{y}=0$)，$\text{实际} - \text{申报} = \text{实际} > 0$，故短缺恒为零，所有未申报上网电量均按 SBP 计入收入。(2) 脱离日前现货与双边合同（$P_{\text{DA}} \times \text{申报}$）而孤立评估单边结算现金流，不能作为衡量预测商业价值的独立指标。(3) 非对称决策成本 ($r=2, q=1/3$) 准确惩罚了零申报策略的高额低估风险。
+\end{tablenotes}
+\end{threeparttable}
+\end{table*}

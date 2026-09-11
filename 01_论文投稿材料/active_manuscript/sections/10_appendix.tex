@@ -1,0 +1,146 @@
+\section{Mathematical Analysis of Decoupled Calibration Boundaries and Counterexamples}
+\label{sec:appendix_proofs}
+
+This appendix provides formal mathematical proofs for the two boundary counterexamples presented in Section~\ref{sec:theory}, delineating the theoretical limits of decoupled decision calibration.
+
+\subsection{Counterexample 1: Constant Shift Invariance and Zero Excess Risk}
+\label{subsec:counterexample1}
+
+\begin{example}[Constant Shift Invariance]
+\label{ex:constant_shift}
+Let the target variable follow a uniform distribution $Y \sim U[0.25, 0.75]$, and consider an asymmetric cost ratio $r = 2$ ($\tau = 1/3$). Suppose an unconstrained model outputs the exact conditional expectation $f_0 = \mathbb{E}[Y] = 0.50$, while a physics-constrained model incurs a constant positive shrinkage shift $c = +0.05$, outputting $f_\lambda = 0.55$.
+\end{example}
+
+\paragraph{Prediction Representation Error (MSE)}
+The mean squared prediction errors are:
+\begin{align}
+\text{MSE}(f_0) &= \text{Var}(Y) = \frac{0.50^2}{12} \approx 0.020833, \\
+\text{MSE}(f_\lambda) &= \text{MSE}(f_0) + c^2 \approx 0.023333.
+\end{align}
+The physical constraint strictly inflates prediction MSE by $\Delta \text{MSE} = +0.0025$ ($+12.0\%$).
+
+\paragraph{Uncalibrated Operational Dispatch Loss}
+Under uncalibrated dispatch ($p = f$), the expected asymmetric loss is:
+\begin{equation}
+\begin{aligned}
+\mathcal{R}_{\text{uncal}}(p) &= 2 \int_{0.25}^p (p - y) \cdot 2 \, dy + \int_p^{0.75} (y - p) \cdot 2 \, dy \\
+&= 2(p - 0.25)^2 + (0.75 - p)^2.
+\end{aligned}
+\end{equation}
+Evaluating at each prediction:
+\begin{align}
+\mathcal{R}_{\text{uncal}}(f_0 = 0.50) &= 2(0.25)^2 + (0.25)^2 = 0.187500, \\
+\mathcal{R}_{\text{uncal}}(f_\lambda = 0.55) &= 2(0.30)^2 + (0.20)^2 = 0.220000.
+\end{align}
+
+\paragraph{Post-Hoc Decoupled Quantile Calibration}
+The theoretical Bayes-optimal quantile at $\tau = 1/3$ is:
+\begin{equation}
+q_{1/3} = 0.25 + \tfrac{1}{3}(0.75 - 0.25) \approx 0.416667.
+\end{equation}
+Under decoupled quantile calibration, each model searches for its optimal scalar displacement:
+\begin{align}
+\delta_0^* &= q_{1/3} - f_0 \approx 0.416667 - 0.500000 = -0.083333, \\
+\delta_\lambda^* &= q_{1/3} - f_\lambda \approx 0.416667 - 0.550000 = -0.133333.
+\end{align}
+Notice that the resulting dispatch commitments are identical:
+\begin{equation}
+p_0^* = f_0 + \delta_0^* = 0.416667, \quad p_\lambda^* = f_\lambda + \delta_\lambda^* = 0.416667.
+\end{equation}
+Consequently, the post-calibration operational risks are identical:
+\begin{equation}
+\mathcal{R}_{\text{cal}}(p_0^*) = \mathcal{R}_{\text{cal}}(p_\lambda^*) = 0.166667 \implies \Delta \mathcal{R}_{\text{disp}} \equiv 0.
+\end{equation}
+
+\paragraph{Theoretical Takeaway}
+Counterexample 1 proves that \textbf{an increase in prediction MSE is compatible with invariant post-calibration operational risk}. When constraint-induced representation error consists of a uniform shift, scalar calibration absorbs the distortion entirely, establishing that strict positive excess risk lower bounds cannot hold unconditionally.
+
+\subsection{Counterexample 2: Spatial Heteroscedasticity and Risk Reversal}
+\label{subsec:counterexample2}
+
+\begin{example}[Spatial Heteroscedasticity]
+\label{ex:heteroscedasticity}
+Let $X \in \{0, 1\}$ be a binary indicator with $P(X=0) = P(X=1) = 0.5$. Let the conditional target distributions exhibit heteroscedastic spread:
+\begin{align}
+Y \mid (X=0) &\sim U[0.20, 0.60] \quad (\mu_0 = 0.40, s_0 = 0.40), \\
+Y \mid (X=1) &\sim U[0.30, 0.90] \quad (\mu_1 = 0.60, s_1 = 0.60).
+\end{align}
+Let the asymmetric cost ratio be $r = 2$ ($\tau = 1/3$). Consider two candidate forecasters: Model A (the unbiased conditional mean) with predictions $f_A(0) = 0.40$ and $f_A(1) = 0.60$; and Model B (a biased estimator with higher MSE) with predictions $f_B(0) = 0.40$ and $f_B(1) = 0.55$.
+\end{example}
+
+\paragraph{Prediction MSE Comparison}
+The mean squared prediction errors are:
+\begin{align}
+\text{MSE}(f_A) &= 0.5 \left(\frac{0.40^2}{12}\right) + 0.5 \left(\frac{0.60^2}{12}\right) \nonumber \\
+&= \frac{13}{600} \approx 0.021667, \\
+\text{MSE}(f_B) &= \text{MSE}(f_A) + 0.5 (0.55 - 0.60)^2 \nonumber \\
+&= 0.021667 + 0.001250 \approx 0.022917.
+\end{align}
+Model B has strictly higher prediction MSE by $\Delta \text{MSE} = +0.001250$ ($+5.8\%$).
+
+\paragraph{Post-Hoc Global Scalar Calibration}
+The local Bayes-optimal quantiles at $\tau = 1/3$ are:
+\begin{align}
+q_{1/3}(0) &= 0.20 + \tfrac{0.40}{3} = \tfrac{1}{3} \approx 0.333333, \\
+q_{1/3}(1) &= 0.30 + \tfrac{0.60}{3} = 0.500000.
+\end{align}
+The Bayes-optimal operational dispatch loss is $\mathcal{R}(q_\tau) = 0.5(\frac{0.40}{3}) + 0.5(\frac{0.60}{3}) = \frac{1}{6} \approx 0.166667$. The local conditional densities are $f_0(y) = 2.5$ and $f_1(y) = 1.6667$.
+
+Because local quantile-to-mean shifts differ ($\Delta_0 = q_{1/3}(0) - \mu_0 = -\frac{1}{15} \approx -0.066667$ versus $\Delta_1 = q_{1/3}(1) - \mu_1 = -0.100000$), a single global scalar offset $\delta^*$ cannot simultaneously achieve both local quantiles. The expected operational risk under global shift $\delta$ is:
+\begin{equation}
+\mathcal{R}(f + \delta) = 0.5 \, \mathcal{R}_0(f(0) + \delta) + 0.5 \, \mathcal{R}_1(f(1) + \delta).
+\end{equation}
+
+For \textbf{Model A} ($f_A = \mu$), the first-order optimality condition for $\delta_A^*$ is:
+\begin{equation}
+(r+1) \left[ 0.5 \cdot 2.5 (\delta_A^* - \Delta_0) + 0.5 \cdot 1.6667 (\delta_A^* - \Delta_1) \right] = 0,
+\end{equation}
+yielding the density-weighted optimal global offset:
+\begin{align}
+\delta_A^* &= \frac{2.5 (-\frac{1}{15}) + 1.6667 (-0.10)}{2.5 + 1.6667} \nonumber \\
+&= \frac{-0.333333}{4.166667} = -0.080000.
+\end{align}
+The resulting excess operational risk for Model A is:
+\begin{align}
+&\mathcal{R}(f_A + \delta_A^*) - \mathcal{R}(q_\tau) \nonumber \\
+&\quad = \frac{3}{2} \Big[ 1.25 (-0.080 + \tfrac{1}{15})^2 \nonumber \\
+&\qquad\quad + 0.8333 (-0.080 + 0.100)^2 \Big] \nonumber \\
+&\quad = \frac{15}{8} \left(-\frac{1}{75}\right)^2 + \frac{5}{4} \left(\frac{1}{50}\right)^2 \nonumber \\
+&\quad = \frac{1}{3000} + \frac{1}{2000} = \frac{1}{1200} \approx 0.000833,
+\end{align}
+giving an absolute operational dispatch risk of:
+\begin{equation}
+\mathcal{R}_{\text{cal}}(f_A + \delta_A^*) = \frac{1}{6} + \frac{1}{1200} = \frac{201}{1200} = 0.167500.
+\end{equation}
+
+For \textbf{Model B} ($f_B(0) = 0.40, f_B(1) = 0.55$), the downward bias occurs on the higher-variance regime ($X=1$). The required local offsets become:
+\begin{align}
+\Delta_{0, B} &= q_{1/3}(0) - 0.40 = -\tfrac{1}{15} \approx -0.066667, \\
+\Delta_{1, B} &= q_{1/3}(1) - 0.55 = 0.50 - 0.55 = -0.050000.
+\end{align}
+Notice that the discrepancy between regime offsets is halved: $|\Delta_{1, B} - \Delta_{0, B}| = \frac{1}{60} \approx 0.016667$, compared to $\frac{1}{30} \approx 0.033333$ for Model A. The optimal global offset for Model B is:
+\begin{align}
+\delta_B^* &= \frac{2.5 (-\frac{1}{15}) + 1.6667 (-0.050)}{2.5 + 1.6667} \nonumber \\
+&= \frac{-0.166667 - 0.083333}{4.166667} = -0.060000.
+\end{align}
+The resulting excess operational risk for Model B is:
+\begin{align}
+&\mathcal{R}(f_B + \delta_B^*) - \mathcal{R}(q_\tau) \nonumber \\
+&\quad = \frac{3}{2} \Big[ 1.25 (-0.060 + \tfrac{1}{15})^2 \nonumber \\
+&\qquad\quad + 0.8333 (-0.060 + 0.050)^2 \Big] \nonumber \\
+&\quad = \frac{15}{8} \left(\frac{1}{150}\right)^2 + \frac{5}{4} \left(-\frac{1}{100}\right)^2 \nonumber \\
+&\quad = \frac{1}{12000} + \frac{1}{8000} = \frac{1}{4800} \approx 0.000208,
+\end{align}
+yielding an absolute operational dispatch risk of:
+\begin{equation}
+\mathcal{R}_{\text{cal}}(f_B + \delta_B^*) = \frac{1}{6} + \frac{1}{4800} = \frac{801}{4800} = 0.166875.
+\end{equation}
+
+Comparing the two post-calibration dispatch losses:
+\begin{equation}
+\mathcal{R}_{\text{cal}}(f_B + \delta_B^*) = 0.166875 < 0.167500 = \mathcal{R}_{\text{cal}}(f_A + \delta_A^*).
+\end{equation}
+Model B achieves a 75\% reduction in excess risk ($0.000208$ vs. $0.000833$) and strictly lower operational dispatch loss than the unbiased conditional mean, despite exhibiting $+5.8\%$ higher prediction MSE.
+
+\paragraph{Theoretical Takeaway}
+Counterexample 2 rigorously proves that \textbf{under conditional heteroscedasticity, a biased predictor with higher MSE can achieve strictly lower post-calibration dispatch loss than the true conditional mean}. This formalizes why the performance of physical constraints under decoupled calibration depends intricately on local error variance and environmental terrain.

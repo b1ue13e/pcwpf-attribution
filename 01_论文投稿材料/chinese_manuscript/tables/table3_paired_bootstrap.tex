@@ -1,0 +1,30 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.90}
+\setlength{\tabcolsep}{2.5pt}
+\caption{基于校准策略对比无约束 DLinear 的 7 天圆形块成对自举检验对比 (2,000 次重抽样)。}
+\label{tab:paired_bootstrap}
+\begin{threeparttable}
+\begin{tabularx}{\textwidth}{p{2.2cm}p{3.0cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\toprule
+\textbf{风电场站点} & \textbf{对比方法分支} & \textbf{动态成本差异 $\Delta \text{Cost}_{dyn}$} & \textbf{短缺清算支出差异} & \textbf{平衡机制净现金流差异} \\
+ & & \textbf{(95\% 置信区间)} & \textbf{\pounds/(台$\cdot$年) (95\% CI)} & \textbf{\pounds/(台$\cdot$年) (95\% CI)} \\
+\midrule
+\multirow{4}{=}{\textbf{Hill of Towie}} & 边界约束 vs DLinear & $+0.000000$ ($[$+0.000000$, $+0.000000$]$) & \pounds $+0.15$ ($[$-0.17$, $+0.51$]$) & \pounds $-0.32$ ($[$-1.37$, $+0.62$]$) \\
+ & 经验功率曲线 vs DLinear & $-0.000008$ ($[$-0.000021$, $+0.000007$]$) & \pounds $+22.99$ ($[$+10.93$, $+38.43$]$) & \pounds $-89.40$ ($[$-133.51$, $-54.70$]$) \\
+ & 分布先验 vs DLinear & \textbf{$+0.000766$ ($[$+0.000277$, $+0.001201$]$)} & \textbf{\pounds $-578.57$ ($[$-834.86$, $-367.51$]$)} & \textbf{\pounds $+1481.27$ ($[$+802.29$, $+2203.32$]$)} \\
+ & 岭回归 vs DLinear & $-0.000733$ ($[$-0.001315$, $-0.000125$]$) & \pounds $+192.50$ ($[$-26.66$, $+445.74$]$) & \pounds $-1151.96$ ($[$-1567.98$, $-795.28$]$) \\
+\midrule
+\multirow{4}{=}{\textbf{Kelmarsh}} & 边界约束 vs DLinear & $+0.000001$ ($[$+0.000000$, $+0.000002$]$) & \pounds $+1.72$ ($[$-0.01$, $+4.63$]$) & \pounds $-4.62$ ($[$-12.67$, $+0.05$]$) \\
+ & 经验功率曲线 vs DLinear & $-0.000039$ ($[$-0.000054$, $-0.000023$]$) & \pounds $-16.61$ ($[$-33.12$, $+0.87$]$) & \pounds $+19.51$ ($[$-27.76$, $+62.86$]$) \\
+ & 分布先验 vs DLinear & \textbf{$+0.000932$ ($[$+0.000423$, $+0.001385$]$)} & \textbf{\pounds $+932.56$ ($[$+648.20$, $+1236.74$]$)} & \textbf{\pounds $-3264.86$ ($[$-4365.40$, $-2223.50$]$)} \\
+ & 岭回归 vs DLinear & $+0.001338$ ($[$+0.000917$, $+0.001794$]$) & \pounds $+750.61$ ($[$+330.70$, $+1151.06$]$) & \pounds $-690.94$ ($[$-1669.76$, $+409.51$]$) \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textbf{注记}：短缺清算支出差异为负代表相比无约束 DLinear 实现了经济节约。平衡现金流差异为正代表从平衡机制中结算得到的账面名义现金流更高。
+\end{tablenotes}
+\end{threeparttable}
+\end{table*}
