@@ -20,3 +20,10 @@
   - T_NP5: Harmonized Table 4 zero-bid diagnostic values to canonical 5-seed metrics and added Note (4) declaring five-seed provenance concordant with Table 2; verified Table 5 PatchTST alignment.
   - T_NP6: Extended .agents/scripts/verify_gate.py with check_canonical_numerical_consistency asserting cross-artifact numerical concordance.
   - T_NP7: Recompiled active_manuscript/main.pdf (33 pages, 881,483 bytes) and synced to submission_package; all gate checks verified.
+
+- 2026-09-21: GitHub integration authorized by user (account b1ue13e, email 3211049186@qq.com, PAT provided in chat). Decisions:
+  1. Private repo `b1ue13e/pcwpf-attribution`; local `revision` branch pushes to remote default branch `main`.
+  2. Gitignore policy: exclude raw SCADA zips (public on Zenodo/BMRS), heavy run caches under 06_实验结果与日志, TIFF/PNG production masters under 03_图表与绘图素材, cloud delivery packs (07_云端压缩包与交付包, 07_审稿Rebuttal备用包), third-party journal PDFs (01_论文投稿材料/对标顶刊论文), personal/third-party/legacy dirs (09_, 90_, 99_), and scratch/tool state (tmp*, .zcode, .reasonix, .workbuddy, .experiment-to-paper). Kept: canonical CSVs (04_数据集/constraint_rebuild_v2/*.csv, elexon_system_prices_2016_2024.csv), analysis-level evidence, vector figure sources, all scripts.
+  3. CI = verification gate (state + canonical numerical consistency) followed by tectonic compile of main.tex with PDF artifact upload.
+  4. Ledger-honesty rule: in-flight GitHub tasks are excluded from pushed state until VERIFIED with evidence, so every CI gate run is genuinely green (no fake-verified tasks).
+  5. Security: PAT pasted in plaintext chat is treated as compromised; it is never written to repo files or git config; user advised to revoke/rotate after the session. Local gh keyring already held b1ue13e credentials, so pushes did not require embedding the token in git URLs.

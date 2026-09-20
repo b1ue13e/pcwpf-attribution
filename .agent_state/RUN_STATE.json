@@ -1,5 +1,5 @@
 {
-  "task": "Numerical Propagation Closure: figure regeneration, stale baseline elimination, gate extension",
+  "task": "GitHub Integration: private repo, CI verification pipeline, issues, release snapshot",
   "status": "complete",
-  "current_step": "completed_numerical_propagation_closure"
+  "current_step": "completed_github_integration"
 }

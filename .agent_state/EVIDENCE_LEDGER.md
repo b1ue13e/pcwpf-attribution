@@ -106,3 +106,75 @@
   - Output PDF: `01_论文投稿材料/active_manuscript/main.pdf` (33 pages, 881,483 bytes).
   - `.agents/scripts/verify_gate.py` executed and exited with code 0 (VERIFICATION_GATE: PASS).
 
+
+## Task-ID: T_GH1
+- Status: VERIFIED
+- Claim: PAT authenticated; private repo b1ue13e/pcwpf-attribution created.
+- Direct Evidence:
+  - `gh api user --jq ...` returned `{"login":"b1ue13e","name":"Junyu Li","plan":"free"}`.
+  - `gh repo view b1ue13e/pcwpf-attribution --json ...` returned `{"name":"pcwpf-attribution","visibility":"PRIVATE","default":"main"}`.
+  - URL: https://github.com/b1ue13e/pcwpf-attribution
+
+## Task-ID: T_GH2
+- Status: VERIFIED
+- Claim: Local git identity set to GitHub account.
+- Direct Evidence:
+  - `git config --local user.name` -> `b1ue13e`; `git config --local user.email` -> `3211049186@qq.com` (command output captured).
+
+## Task-ID: T_GH3
+- Status: VERIFIED
+- Claim: .gitignore rewritten (UTF-8) with heavy/personal exclusions; addable set within GitHub limits.
+- Direct Evidence:
+  - `.gitignore` written via Python explicit UTF-8 (2228 bytes); earlier Write-tool attempt produced mojibake and was replaced (detected via byte inspection).
+  - `git check-ignore -v` matched all 8 probe paths (10_模型检查点与权重/, 06_实验结果与日志/results/, constraint_round2/*, 04_数据集/*, 09_项目申请_简历_个人材料/, 99_待确认归档/, 07_审稿Rebuttal备用包/, tmp_*/).
+  - `git ls-files --others --exclude-standard`: 3704 files, 193.2 MB total, max file 14.2 MB (`04_数据集/constraint_rebuild_v2/hill_of_towie.csv`) — below the 50 MB GitHub warning threshold.
+
+## Task-ID: T_GH4
+- Status: VERIFIED
+- Claim: Full project snapshot committed and pushed to origin/main.
+- Direct Evidence:
+  - Commit `f80855f` "chore(repo): snapshot revision working tree with gitignore hygiene".
+  - `git push -u origin revision:main` output: `* [new branch] revision -> main` (https://github.com/b1ue13e/pcwpf-attribution.git).
+  - `gh repo view` pushedAt 2026-09-20T21:36:12Z.
+
+## Task-ID: T_GH5
+- Status: VERIFIED
+- Claim: CI workflow and README added.
+- Direct Evidence:
+  - `.github/workflows/verify.yml` (1121 bytes) with verification-gate job (python verify_gate.py) and build-manuscript-pdf job (tectonic compile + upload-artifact).
+  - `README.md` (3183 bytes) with structure table, verification/build instructions, data DOIs, CI badge.
+  - Committed in `ci(repo): add GitHub Actions verify pipeline and project README`.
+
+## Task-ID: T_GH6
+- Status: VERIFIED
+- Claim: CI green on main.
+- Direct Evidence:
+  - First run 35539217497 failed: tectonic installer unpacks binary to cwd (`tectonic: command not found`, exit 127) — gate job had already passed.
+  - Fix commit moved binary to /usr/local/bin; run 35539277539 `{"conclusion":"success"}` with jobs verification-gate=success and build-manuscript-pdf=success.
+  - Artifact `main-pdf` present: 609,874 bytes, not expired.
+
+## Task-ID: T_GH7
+- Status: VERIFIED
+- Claim: Four tracking issues seeded from the adversarial/first-principles review.
+- Direct Evidence:
+  - https://github.com/b1ue13e/pcwpf-attribution/issues/1 .. /4 (titles: smooth-but-wrong 安慰剂对照; r 敏感性扫描; 经验包络判据化; 审稿后公开方案).
+
+## Task-ID: T_GH8
+- Status: VERIFIED
+- Claim: Release snapshot with main.pdf created.
+- Direct Evidence:
+  - `gh release view v2026.09-r1` -> name "修订快照 v2026.09-r1（minor revision）", assets ["main.pdf"].
+  - URL: https://github.com/b1ue13e/pcwpf-attribution/releases/tag/v2026.09-r1
+
+## Task-ID: T_GH9
+- Status: VERIFIED
+- Claim: Local verification gate passes after restructure.
+- Direct Evidence:
+  - Command `python .agents/scripts/verify_gate.py` printed `VERIFICATION_GATE: PASS`, exit code 0.
+
+## Task-ID: T_GH10
+- Status: VERIFIED
+- Claim: State ledgers closed and security advisory issued.
+- Direct Evidence:
+  - This EVIDENCE_LEDGER section plus DECISION_LOG 2026-09-21 entries and RUN_STATE.json update.
+  - Final response carries token-rotation advisory (PAT `ghp_...` was pasted in plaintext chat; never written to any repo file).

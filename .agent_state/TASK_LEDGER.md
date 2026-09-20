@@ -5,3 +5,13 @@
 - [x] T_NP5 VERIFIED Harmonize Table 5 Penmanshiel values with canonical baseline or document explicit provenance
 - [x] T_NP6 VERIFIED Extend verify_gate.py with automated cross-artifact canonical numerical consistency check
 - [x] T_NP7 VERIFIED Recompile main.pdf, pass extended verify_gate.py, update ledgers, and return line-by-line audit
+- [x] T_GH1 VERIFIED Authenticate PAT via gh api user and create PRIVATE repo b1ue13e/pcwpf-attribution (verified by gh repo view)
+- [x] T_GH2 VERIFIED Set local git identity to b1ue13e / 3211049186@qq.com (verified by git config --local)
+- [x] T_GH3 VERIFIED Rewrite .gitignore excluding raw data, heavy caches, TIFF masters, cloud packs, tmp, tool state; keep canonical CSVs + audit evidence; max staged file 14.2 MB < 50 MB limit
+- [x] T_GH4 VERIFIED Commit full project snapshot (f80855f) and push revision -> origin/main (verified by git push output and gh repo view)
+- [x] T_GH5 VERIFIED Add .github/workflows/verify.yml (verify_gate.py job + tectonic PDF build job) and README.md with badge/structure
+- [x] T_GH6 VERIFIED CI green on main: run 35539277539 both jobs success, main-pdf artifact 609,874 bytes
+- [x] T_GH7 VERIFIED Seed GitHub Issues #1-#4 (smooth-but-wrong control, r-sensitivity scan, envelope criterion, public-release plan)
+- [x] T_GH8 VERIFIED Create release v2026.09-r1 with main.pdf asset
+- [x] T_GH9 VERIFIED Local verify_gate.py exits 0 (VERIFICATION_GATE: PASS) after repo restructure
+- [x] T_GH10 VERIFIED Update DECISION_LOG/EVIDENCE_LEDGER/RUN_STATE and return summary with token-rotation advisory
