@@ -29,7 +29,9 @@ jobs:
       - name: Install tectonic
         run: |
           curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
-          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+          chmod +x tectonic
+          sudo mv tectonic /usr/local/bin/tectonic
+          tectonic --version
       - name: Compile manuscript (tectonic)
         working-directory: 01_论文投稿材料/active_manuscript
         run: tectonic -X compile --keep-logs main.tex
