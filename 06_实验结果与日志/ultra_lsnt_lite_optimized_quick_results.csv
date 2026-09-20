@@ -1,0 +1,2 @@
+model,device,timestamp,total_parameters,avg_inference_time_ms,std_inference_time_ms,min_inference_time_ms,max_inference_time_ms,estimated_energy_per_inference_mj,hidden_dim,num_blocks,num_experts,top_k
+Ultra-LSNT-Lite-Optimized-Quick,cuda,2026-01-26 21:35:42,349368,1.7301223240792751,0.021159546763322466,1.703169196844101,1.779995858669281,259.51834861189127,96,1,2,1

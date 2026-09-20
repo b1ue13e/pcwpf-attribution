@@ -1,0 +1,32 @@
+{
+  "Ultra-LSNT": {
+    "R2": 0.8728,
+    "FLOPs_per_Watt": 315789473.68421054,
+    "Annual_Penalty_Reduction_USD": 150000.0,
+    "Cost_Reduction_Percent": 12.8
+  },
+  "DLinear": {
+    "R2": 0.94,
+    "FLOPs_per_Watt": 380952380.95238096,
+    "Annual_Penalty_Reduction_USD": 0.0,
+    "Cost_Reduction_Percent": 0
+  },
+  "Transformer": {
+    "R2": 0.7439,
+    "FLOPs_per_Watt": 627906976.744186,
+    "Annual_Penalty_Reduction_USD": 80000.0,
+    "Cost_Reduction_Percent": 6.5
+  },
+  "Informer": {
+    "R2": 0.8167,
+    "FLOPs_per_Watt": 538461538.4615384,
+    "Annual_Penalty_Reduction_USD": 90000.0,
+    "Cost_Reduction_Percent": 7.2
+  },
+  "Mamba_S6": {
+    "R2": 0.85,
+    "FLOPs_per_Watt": 357142857.14285713,
+    "Annual_Penalty_Reduction_USD": 120000.0,
+    "Cost_Reduction_Percent": 9.5
+  }
+}

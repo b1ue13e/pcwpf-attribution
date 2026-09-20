@@ -1,0 +1,28 @@
+{
+  "gpu_optimization": {
+    "device_name": "NVIDIA GeForce RTX 4090 D",
+    "available_memory_gb": 16.461535643786192,
+    "memory_fraction": 0.7,
+    "use_amp": true,
+    "batch_size_multiplier": 1.5,
+    "num_workers": 8,
+    "pin_memory": true,
+    "persistent_workers": true
+  },
+  "experiment_settings": {
+    "max_parallel": 1,
+    "datasets": [
+      "wind_cn",
+      "wind_us",
+      "electricity",
+      "air_quality",
+      "gefcom"
+    ],
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "timestamp": "2026-02-23T03:29:49.781218"
+  }
+}

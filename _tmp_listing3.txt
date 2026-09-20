@@ -1,0 +1,12 @@
+﻿2026-09-14 01:36  MANUSCRIPT_AUDIT_DRAFT.md
+2026-09-13 22:55  corpus48_integrated_audit_table.csv
+2026-09-12 22:13  canonical_ledger_reconciliation.md
+2026-09-12 22:10  clean_coder_agreement_recomputed.md
+2026-09-12 22:10  clean_coder_agreement_recomputed.csv
+2026-09-08 23:46  主线状态索引_MASTER.md
+2026-09-08 23:45  REPORT_20篇文献双人盲审与Kappa信度审计报告.md
+2026-09-08 23:45  文献盲审_20篇代表性文献最终仲裁共识表_归正版.csv
+2026-09-08 23:45  calculate_cohen_kappa_standard.py
+2026-09-08 23:45  盲审填写表_CoderC_独立编码.csv
+2026-09-08 23:45  盲审填写表_CoderB_独立编码.csv
+2026-09-08 23:45  盲审填写表_CoderA_独立编码.csv

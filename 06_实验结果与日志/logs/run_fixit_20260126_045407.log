@@ -1,0 +1,34 @@
+[2026-01-26 04:54:07] 第一步：修复字体警告问题...
+[2026-01-26 04:54:07] 运行字体修复脚本...
+正在修复所有Python脚本中的字体警告...
+  ✅ 已修复: ./compare_robustness_real.py
+  ✅ 已修复: ./plot_arch.py
+  ✅ 已修复: ./plot_dlinear_victory.py
+  ✅ 已修复: ./plot_expert_heatmap.py
+  ✅ 已修复: ./plot_expert_heatmap_enhanced.py
+  ✅ 已修复: ./plot_multi_domain.py
+  ✅ 已修复: ./plot_paper_figs.py
+  ✅ 已修复: ./real_robustness.py
+  ✅ 已修复: ./run_ablation_study.py
+  ✅ 已修复: ./run_expert_physics.py
+  ✅ 已修复: ./run_gbdt_robustness.py
+  ✅ 已修复: ./run_real_noise_battle.py
+  ✅ 已修复: ./run_universal_significance.py
+  ✅ 已修复: ./test_efficiency.py
+  ✅ 已修复: ./run_gbdt_drift_temp.py
+  ✅ 已修复: ./run_gbdt_quantization_temp.py
+  ✅ 已修复: ./logs/fix_fonts.py
+字体修复完成，共修复 17 个文件
+已创建通用字体设置脚本: font_setup.py
+[0;32m[2026-01-26 04:54:07] ✅ 字体修复完成[0m
+[2026-01-26 04:54:07] 第二步：修复消融实验的CUDA/CPU设备不匹配问题...
+[2026-01-26 04:54:07] 运行消融实验修复脚本...
+✅ 已修复 run_ablation_study.py 中的设备不匹配问题
+已创建设备修复补丁: ablation_device_fix.py
+[0;32m[2026-01-26 04:54:07] ✅ 消融实验修复完成[0m
+[2026-01-26 04:54:07] 第三步：修复GBDT对比实验的模型权重不匹配问题...
+[2026-01-26 04:54:07] 运行GBDT实验修复脚本...
+  File "/root/my/logs/fix_gbdt_weights.py", line 230
+    with open("gbdt_weight_adapter.py", "w") as f:
+IndentationError: unexpected indent
+[0;31m[2026-01-26 04:54:07] ❌ GBDT实验修复失败[0m

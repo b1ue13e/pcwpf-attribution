@@ -9,12 +9,12 @@
 C = \big\langle \mathcal{D}_1, \mathcal{D}_2, \mathcal{D}_3, \mathcal{D}_4, \mathcal{D}_5 \big\rangle,
 \label{eq:constraint_tuple}
 \end{equation}
-其中 $\mathcal{D}_1$ 代表参数来源（Parameter Provenance），$\mathcal{D}_2$ 代表作用阶段（Application Stage），$\mathcal{D}_3$ 代表推理遥测依赖（Inference Telemetry Requirements），$\mathcal{D}_4$ 代表软件实现保真度（Implementation Software Fidelity），而 $\mathcal{D}_5$ 代表危害报告与消融有效性（Harm Reporting and Ablation Semantics）。从物理形式化规范到实际工业部署的生命周期全貌如图~\ref{fig:lifecycle}所示。
+其中 $\mathcal{D}_1$ 代表参数来源（Parameter Provenance），$\mathcal{D}_2$ 代表作用阶段（Application Stage），$\mathcal{D}_3$ 代表推理遥测依赖（Inference Telemetry Requirements），$\mathcal{D}_4$ 代表软件实现保真度（Implementation Software Fidelity），而 $\mathcal{D}_5$ 代表评估有效性与危害报告（Evaluation Validity and Harm Reporting）。从物理形式化规范到实际工业部署的生命周期全貌如图~\ref{fig:lifecycle}所示。
 
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=\textwidth]{fig_constraint_lifecycle.pdf}
-\caption{五维物理约束生命周期框架 (Schema v4)。系统追踪领域物理约束从数学机理来源 ($\mathcal{D}_1$)、计算图融入方式 ($\mathcal{D}_2$)、工业在线遥测依赖 ($\mathcal{D}_3$)、软件代码执行保真度 ($\mathcal{D}_4$) 到实证失效与消融有效性报告 ($\mathcal{D}_5$) 的全流程演进路径。}
+\caption{五维物理约束生命周期框架 (Schema v4)。系统追踪领域物理约束从数学机理来源 ($\mathcal{D}_1$)、计算图融入方式 ($\mathcal{D}_2$)、工业在线遥测依赖 ($\mathcal{D}_3$)、软件代码执行保真度 ($\mathcal{D}_4$) 到评估有效性与危害报告 ($\mathcal{D}_5$) 的全流程演进路径。}
 \label{fig:lifecycle}
 \end{figure*}
 
@@ -51,12 +51,8 @@ Schema v4 通过五个正交维度对每个物理约束对象进行完备刻画�
 (3)~\textit{未找到代码 (not-found)}：未提供公开仓库或执行脚本。
 数学排版常掩盖数值执行差异，使得静态代码审计成为不可或缺的复核手段。
 
-\paragraph{维度 5：危害报告与消融语义 ($\mathcal{D}_5$)}
-该维度审查实证评估是否因果隔离了物理约束本身：
-(1)~\textit{严格隔离消融 (strict-isolation)}：基准与实验组参数容量完全对齐，仅改变物理先验权重（$\lambda=0$ vs.\ $\lambda>0$）；
-(2)~\textit{粗粒度模块消融 (module-ablation)}：直接切除多层神经网络子模块，混淆参数容量与领域先验；
-(3)~\textit{兼具两者 (both)}：同时报告参数隔离与模块切除；
-(4)~\textit{危害报告 (harm-reported)}：显式量化约束导致性能劣化的运行边界。
+\paragraph{维度 5：评估有效性与危害报告 ($\mathcal{D}_5$)}
+该维度审查实证评估是否严格隔离物理约束并披露运行失效边界，包含两个互补的子维度：(i)~\textit{消融语义（ablation semantics）}，划分为纯参数开闭消融（\textit{constraint-on-off}，对照基准与物理模型具有完全对齐的网络容量，仅改变物理先验激活权重 $\lambda=0$ vs.\ $\lambda>0$）、粗粒度组件消融（\textit{module-ablation}，直接切除多层神经网络子模块，混淆参数容量与物理偏置）或两者兼备（\textit{both}）；以及 (ii)~\textit{危害报告（harm reporting）}，划分为已报告（\textit{reported}，显式量化并披露物理约束导致性能劣化的工况区间或失效边界）与未报告（\textit{not-reported}）。
 
 \subsection{消歧准则与体系形式化一致性}
 为确保多位独立评分员在分类编码中达成高复现性，Schema v4 确立了三项基础消歧准则。参数来源（$\mathcal{D}_1$）严格独立于测试期遥测（$\mathcal{D}_3$）：离线标定参数所用的历史数据，与在线推理所需的实时数据流在工程上相互独立。作用阶段（$\mathcal{D}_2$）依据梯度反向传播路径进行严格判定：仅在反向传播中施加损失惩罚的归入训练期损失正则化，在网络随机初始化下仍能限制前向计算域的归入推理期架构约束。因果消融（$\mathcal{D}_5$）必须采用严格参数匹配的对照基准：直接移除多层神经网络子模块反映的是网络整体表征容量的变动，无法作为物理先验的独立因果依据。

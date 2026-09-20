@@ -1,0 +1,100 @@
+Starting BWO-SVR on gefcom seed=456
+
+======================================================================
+BWO-SVR Experiment: gefcom (seed=456)
+======================================================================
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+
+Starting BWO optimization (population=40, iterations=200)...
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Error in SVR objective function: could not convert string to float: '2004-01-01 00:00:00'
+Traceback (most recent call last):
+  File "<string>", line 10, in <module>
+  File "/root/bwo_svr_experiment_v2.py", line 436, in run_bwo_svr_single_experiment
+    result = bwo.optimize(verbose=verbose)
+  File "/root/bwo_algorithm.py", line 178, in optimize
+    self.spiders, self.fitness = self._cannibalize(combined_spiders, combined_fitness)
+  File "/root/bwo_algorithm.py", line 148, in _cannibalize
+    new_spiders = np.zeros((num_new, self.dim))
+ValueError: negative dimensions are not allowed

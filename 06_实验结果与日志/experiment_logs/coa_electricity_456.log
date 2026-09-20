@@ -1,0 +1,8 @@
+========================================
+COA-BiLSTM 实验: electricity seed=456
+开始时间: 2026-02-24 02:31:34
+========================================
+[02:31:34] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined

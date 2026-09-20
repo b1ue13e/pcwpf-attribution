@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="135.512121pt" height="88.922984pt" viewBox="0 0 135.512121 88.922984" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-12T22:27:34.452963</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 88.922984 
+L 135.512121 88.922984 
+L 135.512121 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 16.058984 72.864 
+L 124.922984 72.864 
+L 124.922984 7.2 
+L 16.058984 7.2 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 16.058984 66.738358 
+L 124.922984 66.738358 
+L 124.922984 7.2 
+L 16.058984 7.2 
+z
+" clip-path="url(#p92402aa137)" style="fill: #fee2e2; opacity: 0.6"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="text_1">
+     <!-- Drift $\alpha$ -->
+     <g style="fill: #475569" transform="translate(60.065984 80.232359)">
+      <text>
+       <tspan x="0" y="-0.171875" style="font-size: 7.5px; font-family: 'Arial'; fill: #475569">D</tspan>
+       <tspan x="5.41626" y="-0.171875" style="font-size: 7.5px; font-family: 'Arial'; fill: #475569">r</tspan>
+       <tspan x="7.913818" y="-0.171875" style="font-size: 7.5px; font-family: 'Arial'; fill: #475569">i</tspan>
+       <tspan x="9.580078" y="-0.171875" style="font-size: 7.5px; font-family: 'Arial'; fill: #475569">f</tspan>
+       <tspan x="11.663818" y="-0.171875" style="font-size: 7.5px; font-family: 'Arial'; fill: #475569">t</tspan>
+       <tspan x="13.747559" y="-0.171875" style="font-size: 7.5px; font-family: 'Arial'; fill: #475569"> </tspan>
+       <tspan x="15.831299" y="-0.171875" style="font-style: oblique; font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #475569">α</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="text_2">
+     <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #475569" x="12.568359" y="40.032" transform="rotate(-90 12.568359 40.032)">Risk</text>
+    </g>
+   </g>
+   <g id="line2d_1">
+    <path d="M 16.058984 66.738358 
+L 124.922984 66.738358 
+" clip-path="url(#p92402aa137)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #64748b; stroke-width: 1.4"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 20.48435 68.261472 
+L 29.335082 66.042516 
+L 38.185814 61.453596 
+L 47.036545 56.090122 
+L 55.887277 48.089043 
+L 64.738009 40.982942 
+L 73.58874 33.071573 
+L 82.439472 26.413912 
+L 91.290204 21.141294 
+L 100.140936 17.638648 
+L 108.991667 13.570026 
+" clip-path="url(#p92402aa137)" style="fill: none; stroke: #dc2626; stroke-width: 2.2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 26.55958 66.738358 
+" clip-path="url(#p92402aa137)" style="fill: none; stroke: #b91c1c; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="m0d8c7d5ce4" d="M 0 2.25 
+C 0.596707 2.25 1.169055 2.012926 1.59099 1.59099 
+C 2.012926 1.169055 2.25 0.596707 2.25 0 
+C 2.25 -0.596707 2.012926 -1.169055 1.59099 -1.59099 
+C 1.169055 -2.012926 0.596707 -2.25 0 -2.25 
+C -0.596707 -2.25 -1.169055 -2.012926 -1.59099 -1.59099 
+C -2.012926 -1.169055 -2.25 -0.596707 -2.25 0 
+C -2.25 0.596707 -2.012926 1.169055 -1.59099 1.59099 
+C -1.169055 2.012926 -0.596707 2.25 0 2.25 
+z
+" style="stroke: #b91c1c"/>
+    </defs>
+    <g clip-path="url(#p92402aa137)">
+     <use xlink:href="#m0d8c7d5ce4" x="26.55958" y="66.738358" style="fill: #b91c1c; stroke: #b91c1c"/>
+    </g>
+   </g>
+   <g id="patch_4">
+    <path d="M 16.058984 72.864 
+L 16.058984 7.2 
+" style="fill: none; stroke: #64748b; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 16.058984 72.864 
+L 124.922984 72.864 
+" style="fill: none; stroke: #64748b; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #dc2626" x="111.646887" y="15.514166" transform="rotate(-0 111.646887 15.514166)">Cost</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #b91c1c" x="54.117131" y="53.245756" transform="rotate(-0 54.117131 53.245756)">Failure Regime</text>
+   </g>
+   <g id="text_5">
+    <!-- $\alpha^*$ -->
+    <g style="fill: #b91c1c" transform="translate(29.214799 71.235893)">
+     <text>
+      <tspan x="0" y="-0.78125" style="font-style: oblique; font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #b91c1c">α</tspan>
+      <tspan x="6.341466" y="-3.84375" style="font-size: 5.25px; font-family: 'DejaVu Sans'; fill: #b91c1c">*</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p92402aa137">
+   <rect x="16.058984" y="7.2" width="108.864" height="65.664"/>
+  </clipPath>
+ </defs>
+</svg>

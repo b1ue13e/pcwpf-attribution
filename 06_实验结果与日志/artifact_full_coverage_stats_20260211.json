@@ -1,0 +1,39 @@
+{
+  "total_artifacts": 600,
+  "by_category": {
+    "ablation": 17,
+    "baselines": 45,
+    "dispatch": 4,
+    "efficiency": 17,
+    "interpretability_expert": 29,
+    "main_benchmark": 2,
+    "multi_domain": 31,
+    "other": 412,
+    "probabilistic": 9,
+    "robustness_drift_quant": 2,
+    "robustness_gaussian": 11,
+    "significance_dm": 25,
+    "stratified": 7
+  },
+  "by_ext": {
+    ".log": 190,
+    ".txt": 37,
+    ".csv": 240,
+    ".md": 48,
+    ".json": 60,
+    ".pkl": 1,
+    ".npy": 9,
+    ".npz": 15
+  },
+  "key_exists": {
+    "main_consolidated_json": true,
+    "main_ultra_json": true,
+    "wind_us_ultra_json": true,
+    "robust_gaussian_csv": true,
+    "dispatch_json": true,
+    "dispatch_code": true,
+    "eff_opt_csv": true,
+    "dm_results_dir": true,
+    "ablation_csv": true
+  }
+}

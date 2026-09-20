@@ -17,23 +17,31 @@ R.~Weron, Electricity price forecasting: A review of the state-of-the-art,
 Z.~C. Lipton, J.~Steinhardt, Troubling trends in machine learning scholarship,
   Communications of the ACM 62~(6) (2019) 45--53.
 
-\bibitem{raissi2019physics}
-M.~Raissi, P.~Perdikaris, G.~E. Karniadakis, Physics-informed neural networks:
-  A deep learning framework for solving forward and inverse problems involving
-  nonlinear partial differential equations, Journal of Computational Physics
-  378 (2019) 686--707.
+\bibitem{bastankhah2014new}
+M.~Bastankhah, F.~Port{\'e}-Agel,
+  \href{https://doi.org/10.1016/j.renene.2014.04.034}{A new analytical model
+  for wind-turbine wakes}, Renewable Energy 70 (2014) 116--123.
+\newblock \href {https://doi.org/10.1016/j.renene.2014.04.034}
+  {\path{doi:10.1016/j.renene.2014.04.034}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2014.04.034}
 
 \bibitem{karniadakis2021physics}
 G.~E. Karniadakis, I.~G. Kevrekidis, L.~Lu, P.~Perdikaris, S.~Wang, L.~Yang,
   Physics-informed machine learning, Nature Reviews Physics 3~(6) (2021)
   422--440.
 
-\bibitem{sheng2025annreview}
-L.~Sheng, C.~Li, M.~Gao, X.~Xi, D.~Zhou, A review of {SCADA}-based condition
-  monitoring for wind turbines via artificial neural networks, Neurocomputing
-  633 (2025) 129830.
-\newblock \href {https://doi.org/10.1016/j.neucom.2025.129830}
-  {\path{doi:10.1016/j.neucom.2025.129830}}.
+\bibitem{raissi2019physics}
+M.~Raissi, P.~Perdikaris, G.~E. Karniadakis, Physics-informed neural networks:
+  A deep learning framework for solving forward and inverse problems involving
+  nonlinear partial differential equations, Journal of Computational Physics
+  378 (2019) 686--707.
+
+\bibitem{s34_prx2023}
+N.~Zehtabiyan-Rezaie, A.~Iosifidis, M.~Abkar, Physics-guided machine learning
+  for wind-farm power prediction: Toward interpretability and generalizability,
+  PRX Energy 2~(1) (2023) 013009.
+\newblock \href {https://doi.org/10.1103/PRXEnergy.2.013009}
+  {\path{doi:10.1103/PRXEnergy.2.013009}}.
 
 \bibitem{pct2026}
 D.~Wang, Q.~Luo, J.~Gao, D.~Zhang, Y.~Chen, Physics-constrained transformer for
@@ -58,12 +66,9 @@ J.~Gao, Y.~Cheng, D.~Zhang, Y.~Chen, Physics-constrained wind power forecasting
 \newblock \href {https://doi.org/10.1016/j.apenergy.2025.125295}
   {\path{doi:10.1016/j.apenergy.2025.125295}}.
 
-\bibitem{s34_prx2023}
-N.~Zehtabiyan-Rezaie, A.~Iosifidis, M.~Abkar, Physics-guided machine learning
-  for wind-farm power prediction: Toward interpretability and generalizability,
-  PRX Energy 2~(1) (2023) 013009.
-\newblock \href {https://doi.org/10.1103/PRXEnergy.2.013009}
-  {\path{doi:10.1103/PRXEnergy.2.013009}}.
+\bibitem{jensen1983note}
+N.~O. Jensen, A note on wind generator interaction, Tech. Rep. Ris{\o}-M-2411,
+  Ris{\o} National Laboratory, Roskilde, Denmark (1983).
 
 \bibitem{krishnapriyan2021}
 A.~Krishnapriyan, A.~Gholami, S.~Zhe, R.~Kirby, M.~W. Mahoney, Characterizing
@@ -91,12 +96,14 @@ P.~Pinson, C.~Chevallier, G.~N. Kariniotakis, Trading wind generation from
 \newblock \href {https://doi.org/10.1109/TPWRS.2007.901611}
   {\path{doi:10.1109/TPWRS.2007.901611}}.
 
-\bibitem{dao2018cointegration}
-P.~B. Dao, W.~J. Staszewski, T.~Barszcz, T.~Uhl, Condition monitoring and fault
-  detection in wind turbines based on cointegration analysis of {SCADA} data,
-  Renewable Energy 116 (2018) 107--122.
-\newblock \href {https://doi.org/10.1016/j.renene.2017.06.089}
-  {\path{doi:10.1016/j.renene.2017.06.089}}.
+\bibitem{morales2014}
+J.~M. Morales, A.~J. Conejo, H.~Madsen, P.~Pinson, M.~Zugno,
+  \href{https://doi.org/10.1007/978-1-4614-9411-9}{Integrating Renewables in
+  Electricity Markets: Operational Problems}, Vol. 205 of International Series
+  in Operations Research \& Management Science, Springer, 2014.
+\newblock \href {https://doi.org/10.1007/978-1-4614-9411-9}
+  {\path{doi:10.1007/978-1-4614-9411-9}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-1-4614-9411-9}
 
 \bibitem{yan2025economicvalue}
 J.~Yan, X.~Li, H.~Wang, F.~Si, W.~Qiao, Y.~Liu, The economic value of wind
@@ -127,6 +134,15 @@ J.~Maldonado-Correa, S.~Mart{\'i}n-Mart{\'i}nez, E.~Artigao,
   monitoring: A systematic literature review, Energies 13~(12) (2020) 3132.
 \newblock \href {https://doi.org/10.3390/en13123132}
   {\path{doi:10.3390/en13123132}}.
+
+\bibitem{wang2021review}
+Y.~Wang, R.~Zou, F.~Liu, L.-J. Zhang, Q.-X. Liu,
+  \href{https://doi.org/10.1016/j.rser.2021.111306}{A review of wind power
+  forecasting: Modern techniques, challenges and prospects}, Renewable and
+  Sustainable Energy Reviews 148 (2021) 111306.
+\newblock \href {https://doi.org/10.1016/j.rser.2021.111306}
+  {\path{doi:10.1016/j.rser.2021.111306}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.rser.2021.111306}
 
 \bibitem{tricco2018}
 A.~C. Tricco, E.~Lillie, W.~Zarin, K.~K. O'Brien, H.~Colquhoun, D.~Levac,
@@ -188,12 +204,16 @@ R.~Koenker, Quantile Regression, Cambridge University Press, 2005.
   {\path{doi:10.1017/CBO9780511754098}}.
 
 \bibitem{kapoor2024reforms}
-S.~Kapoor, E.~Cantrell, K.~Peng, T.~D. Pham, C.~A. Bail, M.~De-Arteaga,
-  J.~Frankle, M.~Hardt, T.~Hashimoto, P.~Henderson, F.~Khani, Z.~C. Lipton,
-  A.~Narayanan, {REFORMS}: Reporting standards for machine learning based
-  science, Science 384~(6696) (2024) 624--626.
-\newblock \href {https://doi.org/10.1126/science.adk3452}
-  {\path{doi:10.1126/science.adk3452}}.
+S.~Kapoor, E.~M. Cantrell, K.~Peng, T.~H. Pham, C.~A. Bail, O.~E. Gundersen,
+  J.~M. Hofman, J.~Hullman, M.~A. Lones, M.~M. Malik, P.~Nanayakkara, R.~A.
+  Poldrack, I.~D. Raji, M.~Roberts, M.~J. Salganik, M.~Serra-Garcia, B.~M.
+  Stewart, G.~Vandewiele, A.~Narayanan,
+  \href{https://doi.org/10.1126/sciadv.adk3452}{Reforms: Consensus-based
+  recommendations for machine-learning-based science}, Science Advances 10~(18)
+  (2024) eadk3452, preprint: https://arxiv.org/abs/2308.07832.
+\newblock \href {https://doi.org/10.1126/sciadv.adk3452}
+  {\path{doi:10.1126/sciadv.adk3452}}.
+\newline\urlprefix\url{https://doi.org/10.1126/sciadv.adk3452}
 
 \bibitem{walsh2021dome}
 I.~Walsh, D.~Fishman, D.~Garcia-Gasulla, M.~Titov, G.~Pollastri, J.~Harrow,

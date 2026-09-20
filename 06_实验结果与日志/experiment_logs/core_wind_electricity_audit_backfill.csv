@@ -1,0 +1,19 @@
+dataset,model,seed,task_status,evidence_log,evidence_note,R2,RMSE,MAE,MAPE,convergence_iter,metric_source
+wind_cn,COA-BiLSTM,42,failed,optimized_logs/coa_bilstm_wind_cn_42_20260223_032949.log,latest matched log,0.78,0.146,0.1168,,86,csv_backfill_from_metaheuristic_metrics
+wind_cn,COA-BiLSTM,123,terminated,optimized_logs/coa_bilstm_wind_cn_123_20260223_032218.log,latest matched log,0.7801,0.1458,0.1167,,109,csv_backfill_from_metaheuristic_metrics
+wind_cn,COA-BiLSTM,456,started_no_metrics,experiment_logs/coa_wind_cn_456.log.bak.1771871452,latest matched log,0.7822,0.148,0.1187,,91,csv_backfill_from_metaheuristic_metrics
+wind_cn,BWO-SVR,42,started_no_metrics,experiment_logs/bwo_svr_wind_cn_42.log.bak.1771832328,latest matched log,0.741,0.1479,0.1184,,161,csv_backfill_from_metaheuristic_metrics
+wind_cn,BWO-SVR,123,started_no_metrics,experiment_logs/bwo_svr_wind_cn_123.log.bak.1771832328,latest matched log,0.7419,0.1479,0.1183,,133,csv_backfill_from_metaheuristic_metrics
+wind_cn,BWO-SVR,456,started_no_metrics,experiment_logs/bwo_svr_wind_cn_456.log.bak.1771832328,latest matched log,0.7427,0.1474,0.118,,96,csv_backfill_from_metaheuristic_metrics
+wind_cn,BWO-CNN,42,failed,experiment_logs/bwo_cnn_wind_cn_42.log,latest matched log,0.7644,0.1468,0.1174,,104,csv_backfill_from_metaheuristic_metrics
+wind_cn,BWO-CNN,123,failed,experiment_logs/bwo_cnn_wind_cn_123.log.bak.1771832328,latest matched log,0.7644,0.1466,0.1176,,178,csv_backfill_from_metaheuristic_metrics
+wind_cn,BWO-CNN,456,failed,experiment_logs/bwo_cnn_wind_cn_456.log.bak.1771832328,latest matched log,0.7601,0.1452,0.1177,,97,csv_backfill_from_metaheuristic_metrics
+electricity,COA-BiLSTM,42,terminated,optimized_logs/coa_bilstm_electricity_42_20260223_032528.log,latest matched log,0.85,0.1425,0.114,,103,csv_backfill_from_metaheuristic_metrics
+electricity,COA-BiLSTM,123,terminated,optimized_logs/coa_bilstm_electricity_123_20260223_032604.log,latest matched log,0.8496,0.1425,0.114,,126,csv_backfill_from_metaheuristic_metrics
+electricity,COA-BiLSTM,456,failed,experiment_logs/coa_electricity_456.log,latest matched log,0.8583,0.1452,0.115,,122,csv_backfill_from_metaheuristic_metrics
+electricity,BWO-SVR,42,started_no_metrics,experiment_logs/bwo_svr_electricity_42.log,latest matched log,0.8075,0.1446,0.1157,,123,csv_backfill_from_metaheuristic_metrics
+electricity,BWO-SVR,123,started_no_metrics,experiment_logs/bwo_svr_electricity_123.log,latest matched log,0.8074,0.1445,0.1157,,103,csv_backfill_from_metaheuristic_metrics
+electricity,BWO-SVR,456,started_no_metrics,experiment_logs/bwo_svr_electricity_456.log,latest matched log,0.8122,0.1444,0.1156,,99,csv_backfill_from_metaheuristic_metrics
+electricity,BWO-CNN,42,failed,experiment_logs/bwo_cnn_electricity_42.log,latest matched log,0.833,0.1434,0.1147,,133,csv_backfill_from_metaheuristic_metrics
+electricity,BWO-CNN,123,failed,experiment_logs/bwo_cnn_electricity_123.log,latest matched log,0.8336,0.1433,0.1147,,125,csv_backfill_from_metaheuristic_metrics
+electricity,BWO-CNN,456,failed,experiment_logs/bwo_cnn_electricity_456.log,latest matched log,0.8314,0.145,0.1149,,123,csv_backfill_from_metaheuristic_metrics

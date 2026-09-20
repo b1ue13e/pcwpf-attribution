@@ -1,0 +1,24 @@
+BWO-SVR Experimental Suite v2
+======================================================================
+This script runs BWO-optimized SVR on four datasets
+with unified 80/20 splits and 3 random seeds.
+
+Datasets: wind_cn, electricity, air_quality, gefcom
+Seeds: 42, 123, 456
+High-intensity search: population=40, iterations=200
+SVR kernel: RBF
+Sequence length: 24
+
+All required files found.
+
+======================================================================
+Starting all BWO-SVR experiments...
+======================================================================
+
+======================================================================
+BWO-SVR Experiment: wind_cn (seed=42)
+======================================================================
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)

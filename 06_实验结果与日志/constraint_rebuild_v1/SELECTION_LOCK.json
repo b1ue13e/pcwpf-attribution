@@ -1,0 +1,6 @@
+{
+  "protocol_sha256": "fe53ff1d45c1d8c5ae7e786ee12cef8da980f93c3bfe44e8c868fa295de05242",
+  "selection_sha256": "6e505559ae6aefba32a3ca7aa193ddd557d184cec89e3594681163e9424c6bc6",
+  "rule": "CLEAN validation only; external lambda modal across development sites and seeds",
+  "n_selected": 240
+}

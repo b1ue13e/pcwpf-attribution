@@ -1,0 +1,6 @@
+Starting Traditional GPU models on gefcom seed=456
+  LSTM on gefcom (seed=456)
+LSTM: R2=0.7689
+  CNN-LSTM on gefcom (seed=456)
+CNN-LSTM: R2=0.7685
+Completed

@@ -1,0 +1,8 @@
+========================================
+COA-BiLSTM 实验: air_quality seed=123
+开始时间: 2026-02-24 02:32:03
+========================================
+[02:32:03] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined

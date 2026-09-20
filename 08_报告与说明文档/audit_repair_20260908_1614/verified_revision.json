@@ -1,0 +1,231 @@
+{
+  "scope": "2026-09-08 16:14 source revision, with evaluation/table/PDF outputs rerun in review",
+  "ledger": {
+    "rows": 48,
+    "included": 46,
+    "unique_study_ids": 48,
+    "sha256_equals_old_corpus48": true,
+    "counts": {
+      "D1_provenance": {
+        "intrinsic": 40,
+        "historical-static": 5,
+        "learned-online": 1
+      },
+      "D2_stage": {
+        "training-loss": 22,
+        "inference-architecture": 22,
+        "data-generation": 1,
+        "post-hoc-correction": 1
+      },
+      "D3_inference_req": {
+        "none": 40,
+        "forecast-input": 4,
+        "contemporaneous-state": 2
+      },
+      "D4_fidelity": {
+        "not-found": 44,
+        "code-mismatch": 1,
+        "code-aligned": 1
+      },
+      "ablation_type": {
+        "module-ablation": 22,
+        "constraint-on-off": 16,
+        "both": 8
+      },
+      "d5_negative_effect_reported": {
+        "no": 46
+      }
+    },
+    "conflicts_against_saved_arbitration": [
+      {
+        "study_id": "S18",
+        "field": "D2_stage",
+        "table_ledger": "training-loss",
+        "arbitration": "inference-architecture"
+      },
+      {
+        "study_id": "S19",
+        "field": "ablation_type",
+        "table_ledger": "module-ablation",
+        "arbitration": "constraint-on-off"
+      },
+      {
+        "study_id": "S26",
+        "field": "D1_provenance",
+        "table_ledger": "unreported",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S26",
+        "field": "D2_stage",
+        "table_ledger": "unreported",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S26",
+        "field": "D3_inference_req",
+        "table_ledger": "unreported",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S26",
+        "field": "D4_fidelity",
+        "table_ledger": "not-found",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S26",
+        "field": "ablation_type",
+        "table_ledger": "unclear",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S27",
+        "field": "D3_inference_req",
+        "table_ledger": "none",
+        "arbitration": "forecast-input"
+      },
+      {
+        "study_id": "S27",
+        "field": "ablation_type",
+        "table_ledger": "both",
+        "arbitration": "module-ablation"
+      },
+      {
+        "study_id": "S34",
+        "field": "ablation_type",
+        "table_ledger": "both",
+        "arbitration": "module-ablation"
+      },
+      {
+        "study_id": "S39",
+        "field": "D3_inference_req",
+        "table_ledger": "none",
+        "arbitration": "forecast-input"
+      },
+      {
+        "study_id": "S42",
+        "field": "D1_provenance",
+        "table_ledger": "unreported",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S42",
+        "field": "D2_stage",
+        "table_ledger": "unreported",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S42",
+        "field": "D3_inference_req",
+        "table_ledger": "unreported",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S42",
+        "field": "D4_fidelity",
+        "table_ledger": "not-found",
+        "arbitration": "n/a"
+      },
+      {
+        "study_id": "S42",
+        "field": "ablation_type",
+        "table_ledger": "unclear",
+        "arbitration": "n/a"
+      }
+    ]
+  },
+  "retrieval": {
+    "raw_rows": 146,
+    "screening_rows": 143,
+    "screening_status": {
+      "pending": 143
+    },
+    "sum_query_hits": 146,
+    "current_summary_json": {
+      "raw_query_hits": 89,
+      "unique_records": 72,
+      "screened_out_title_abstract": 19,
+      "merged_preprints": 5,
+      "fulltext_assessed": 48,
+      "fulltext_excluded": 2,
+      "final_included": 46,
+      "status": "completed PRISMA-ScR extraction and ledger build"
+    }
+  },
+  "patchtst_distribution_minus_unconstrained_calibrated": [
+    {
+      "site": "hill_of_towie",
+      "cost_dyn_mean": -0.0009132071291825944,
+      "shortfall_turb_yr_mean": -232.44445016736427,
+      "net_cashflow_turb_yr_mean": -568.67753202729
+    },
+    {
+      "site": "kelmarsh",
+      "cost_dyn_mean": -0.0014679695018777056,
+      "shortfall_turb_yr_mean": -127.49341567220108,
+      "net_cashflow_turb_yr_mean": -1365.1209113566474
+    },
+    {
+      "site": "penmanshiel",
+      "cost_dyn_mean": -0.0013547101969581948,
+      "shortfall_turb_yr_mean": -790.5070115699054,
+      "net_cashflow_turb_yr_mean": 664.2871134722336
+    }
+  ],
+  "kelmarsh_dlinear_calibrated_contrast": {
+    "delta_cashout_per_turb_yr_gbp": 932.562572385388,
+    "ci95_cashout_low": 648.2028830127713,
+    "ci95_cashout_high": 1236.7364433946009
+  },
+  "appendix_exact_risk_checks": {
+    "A_mean": {
+      "delta": -0.08,
+      "risk": 0.1675,
+      "excess_over_bayes": 0.0008333333333333334,
+      "risk_fraction": "67/400"
+    },
+    "B_low_spread_shift": {
+      "delta": -0.05,
+      "risk": 0.171875,
+      "excess_over_bayes": 0.005208333333333333,
+      "risk_fraction": "11/64"
+    },
+    "B_high_spread_shift": {
+      "delta": -0.06,
+      "risk": 0.166875,
+      "excess_over_bayes": 0.00020833333333333335,
+      "risk_fraction": "267/1600"
+    }
+  },
+  "bibtex_duplicate_keys": {
+    "nie2023patchtst": 2
+  },
+  "compile_log": {
+    "overfull_hbox": 0,
+    "overfull_vbox": 25,
+    "undefined_mentions": 0,
+    "missing_characters": 2
+  },
+  "source_hashes": {
+    "01_论文投稿材料\\active_manuscript\\sections\\01_intro.tex": "6250b7b41b36225b912bbcdfa361bd6d2cdb093f7f33649c37db3e0aa5b32006",
+    "01_论文投稿材料\\active_manuscript\\sections\\02_related.tex": "5f1ace6844500aaccf717823a46716a3c489c7a06869ca5853c057f9089d6eec",
+    "01_论文投稿材料\\active_manuscript\\sections\\03_framework.tex": "ec702a32b448c1dba0ebede8134e1f3cf8004f93d2ccd3d0936578faaca4867a",
+    "01_论文投稿材料\\active_manuscript\\sections\\04_protocol.tex": "f661ac12ef9249e466ce3ede83f5cd8bd7bef359048ecf3874d7c7168d1d9a9e",
+    "01_论文投稿材料\\active_manuscript\\sections\\05_results.tex": "6e7c0c709ee2951b9ba5c3d4d941f6c721cac13bf9883fd705b682d5a79f7d8d",
+    "01_论文投稿材料\\active_manuscript\\sections\\06_code_audit.tex": "11ea31026df8156e40cc8ca575014e8215705f1ba066fa91fa5e6d4426f01a9c",
+    "01_论文投稿材料\\active_manuscript\\sections\\07_theory.tex": "fbd45ec007d55efd3e3be50deb68dc5c630bc4eedfa089c79e32c8cc55310622",
+    "01_论文投稿材料\\active_manuscript\\sections\\08_discussion.tex": "5d17b5cb91c3699191181b932fe103d6d348a3046e81a1ca0b6fc04fc035e388",
+    "01_论文投稿材料\\active_manuscript\\sections\\09_conclusion.tex": "876d058296dfe51d55091de3ef3bef4e3a388db89d494495a663df70d38b17b0",
+    "01_论文投稿材料\\active_manuscript\\sections\\10_appendix.tex": "49cd50bf1f90fefed06168a2d01cf5a3ff0bd225937e31f6a23dfe073585df65",
+    "01_论文投稿材料\\active_manuscript\\main.tex": "cafc7a4ec40c183fb0e42913b5d33826a6347eff1cbe78a7806821305be5438f",
+    "01_论文投稿材料\\active_manuscript\\refs.bib": "c8d5af30bf3b8755b0027bdb9afeff25305930d125b3673b3d3779cc7f65303f",
+    "05_实验代码与脚本\\constraint_round2\\evaluate_patchtst_settlement.py": "4f67478a86260806930efd136944ea65c838ab6e3341bb82f740187fe4c88b1d",
+    "05_实验代码与脚本\\constraint_round2\\export_latex_tables.py": "ea0782a28b9c43b55bb582ecd92475f983d31879bf2d7d7ae31a902ace6bfbd8",
+    "06_实验结果与日志\\constraint_round2\\analysis\\patchtst_settlement_table.csv": "2450993b9d01be6acfe8005ed9b6ca2471d90981fa6a5cef575099d49bd375ed",
+    "06_实验结果与日志\\constraint_round2\\analysis\\dynamic_price_settlement_table2.csv": "5e69c57201c18793bde128f7992ccc25972db9dc486553c870d53c22ffd38b2a",
+    "06_实验结果与日志\\constraint_round2\\analysis\\dynamic_price_paired_intervals.csv": "4f212f9de5f7acc8c0c27e781ec12a164eaf48a2edd160a4ba9d7e500c6888c9",
+    "06_实验结果与日志\\constraint_round2\\analysis\\corpus46_scoping_ledger.csv": "1f4ab7be3f7dceba4d3f729e5d2ef56aaaadec09d0d8ec8527318c82b0de0284",
+    "08_报告与说明文档\\corpus_rebuild_20260907\\flow_status.json": "0196d2b8d03c2fb76913acb26b9e97e72cc4f8c9438aa877966e012f8a63256b"
+  }
+}

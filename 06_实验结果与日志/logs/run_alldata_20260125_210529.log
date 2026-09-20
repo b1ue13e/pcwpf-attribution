@@ -1,0 +1,63 @@
+硬件检测...
+  GPU型号: NVIDIA GeForce RTX 4090 D
+  GPU显存: 24564MB
+  检测到RTX 4090D级别GPU，启用GPU优化模式
+  使用Python命令: python3
+根据实验总结报告，以下实验的数据不真实或未完成，需要重新运行：
+1. 消融研究（初始虚构，需要真实卷积核尺寸影响数据）
+2. 效率测试（未测量，需要真实训练/推理时间数据）
+3. 统计显著性检验（未运行，需要DM检验结果）
+4. GBDT对比（初始失败，需要真实对比数据）
+5. SOTA模型对比（部分完成，需要完整Autoformer结果）
+6. 多领域泛化完整数据（部分数据待测量）
+7. 概率预测测试（numpy.erf问题修复后）
+
+第一部分：重新运行虚构的消融研究
+[2026-01-25 21:05:31] 开始运行: run_ablation_study.py (消融研究（卷积核大小影响）)
+  使用GPU优化参数运行
+[2026-01-25 21:21:12] ✅ 成功: run_ablation_study.py
+[2026-01-25 21:21:12] 开始运行: run_universal_ablation.py (通用消融研究（跨领域）)
+[2026-01-25 21:46:50] ✅ 成功: run_universal_ablation.py
+
+第二部分：重新运行未测量的效率测试
+[2026-01-25 21:46:50] 开始运行: test_efficiency.py (效率测试（训练/推理时间测量）)
+  使用GPU优化参数运行
+[2026-01-25 21:47:06] ✅ 成功: test_efficiency.py
+[2026-01-25 21:47:06] 开始运行: test_mape.py (MAPE测试（误差分析）)
+[2026-01-25 21:47:08] ✅ 成功: test_mape.py
+
+第三部分：重新运行统计显著性检验
+[2026-01-25 21:47:08] 开始运行: run_dm_test.py (Diebold-Mariano统计检验)
+[2026-01-25 21:47:12] ✅ 成功: run_dm_test.py
+[2026-01-25 21:47:12] 开始运行: run_significance.py (统计显著性测试)
+[2026-01-25 21:48:59] ✅ 成功: run_significance.py
+[2026-01-25 21:48:59] 开始运行: run_universal_significance.py (通用显著性测试（多领域）)
+[2026-01-26 00:12:05] ✅ 成功: run_universal_significance.py
+
+第四部分：重新运行GBDT对比实验
+[2026-01-26 00:12:05] 开始运行: run_gbdt_robustness.py (GBDT鲁棒性对比)
+[2026-01-26 00:20:45] ✅ 成功: run_gbdt_robustness.py
+[2026-01-26 00:20:45] 开始运行: run_gbdt.py (GBDT基础对比)
+[2026-01-26 00:35:04] ✅ 成功: run_gbdt.py
+
+第五部分：重新运行SOTA模型对比
+[2026-01-26 00:35:04] 开始运行: run_sota.py (SOTA模型完整对比（Autoformer补全）)
+  使用GPU优化参数运行
+[2026-01-26 00:35:07] ✅ 成功: run_sota.py
+[2026-01-26 00:35:07] 开始运行: run_real_noise_battle.py (真实噪声对战实验)
+[2026-01-26 00:44:14] ✅ 成功: run_real_noise_battle.py
+
+第六部分：重新运行多领域泛化完整数据
+[2026-01-26 00:44:14] 开始运行: run_real_experiments.py (多领域真实实验（完整指标）)
+[2026-01-26 01:16:11] ✅ 成功: run_real_experiments.py
+[2026-01-26 01:16:11] 开始运行: run_universal_robustness.py (通用鲁棒性测试（多领域）)
+[2026-01-26 01:16:35] ✅ 成功: run_universal_robustness.py
+
+第七部分：重新运行概率预测测试
+[2026-01-26 01:16:35] 开始运行: test_probabilistic.py (概率预测测试（修复版本）)
+[2026-01-26 01:16:39] ✅ 成功: test_probabilistic.py
+
+第八部分：运行额外的验证脚本
+[2026-01-26 01:16:39] 开始运行: validate_r2_correction.py (R2分数验证)
+[2026-01-26 01:16:44] ✅ 成功: validate_r2_correction.py
+[2026-01-26 01:16:44] 开始运行: classical_baselines.py (经典基线模型（内存优化）)

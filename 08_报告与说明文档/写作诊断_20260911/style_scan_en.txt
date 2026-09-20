@@ -1,0 +1,28 @@
+== Paper AI Detox Scan ==
+Input: E:\论文1\08_报告与说明文档\写作诊断_20260911\manuscript_scan_input_en.tex
+Characters: 119242
+Paragraphs: 188
+
+Risk counts:
+- Hedging overload: 0
+- Defensive transition cliches: 0
+- Not A but B template: 0
+- Mechanical ordering/report tone: 1
+- Empty contribution/significance claim: 0
+- Causal-language watch: 18
+- Pseudo problem/question marker: 0
+- Numbered/list structure markers: 1
+
+Paragraph rhythm:
+- Mean length: 85.5; min/max: 2/493
+- OK: paragraph rhythm has visible variation, CV=0.90.
+
+Flagged excerpts:
+- [Mechanical ordering/report tone] ...alation from 1\,h to 6\,h. Finally, a degenerate zero-bid pro...
+- [Causal-language watch] ...hat suppress anomalies and reduce operational risk. In grid...
+- [Causal-language watch] ...cal proxy staleness $\tau$ increases from 1h to 6h. (d) Decoupl...
+- [Causal-language watch] ...wer curve at $\lambda=1.0$ reduces dispatch cost to $0.09760...
+
+Suggested revision targets:
+- Use ordering only when it reflects the argument's real sequence.
+- Check whether the research design licenses causal wording.

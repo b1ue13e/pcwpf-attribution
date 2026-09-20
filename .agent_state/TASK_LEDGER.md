@@ -1,0 +1,7 @@
+- [x] T_NP1 VERIFIED Global search and classification of legacy numerical values across manuscript and figures
+- [x] T_NP2 VERIFIED Regenerate Figure 2 directly from canonical 5-seed master CSV with matching annotations
+- [x] T_NP3 VERIFIED Audit Figure 4 and Section 6.2 boundary drift narrative for canonical baseline consistency
+- [x] T_NP4 VERIFIED Update Discussion 8.1 legacy percentages and fix Abstract subject-verb agreement (gains ... remain)
+- [x] T_NP5 VERIFIED Harmonize Table 5 Penmanshiel values with canonical baseline or document explicit provenance
+- [x] T_NP6 VERIFIED Extend verify_gate.py with automated cross-artifact canonical numerical consistency check
+- [x] T_NP7 VERIFIED Recompile main.pdf, pass extended verify_gate.py, update ledgers, and return line-by-line audit

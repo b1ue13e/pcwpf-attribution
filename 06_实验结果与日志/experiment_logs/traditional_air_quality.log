@@ -1,0 +1,59 @@
+2026-02-23 04:58:06.522340: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round    LSTM: R2=0.3752
+  CNN-LSTM on air_quality (seed=42)
+    CNN-LSTM: R2=0.3564
+
+  Seed: 123
+  ARIMA on air_quality (seed=123)
+    ARIMA: R2=-0.4447
+  SVR on air_quality (seed=123)
+    SVR: R2=0.5772
+  LSTM on air_quality (seed=123)
+    LSTM: R2=0.3650
+  CNN-LSTM on air_quality (seed=123)
+    CNN-LSTM: R2=0.3515
+
+  Seed: 456
+  ARIMA on air_quality (seed=456)
+    ARIMA: R2=-0.4447
+  SVR on air_quality (seed=456)
+    SVR: R2=0.5772
+  LSTM on air_quality (seed=456)
+    LSTM: R2=0.3658
+  CNN-LSTM on air_quality (seed=456)
+    CNN-LSTM: R2=0.3570
+
+air_quality completed!
+e slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Starting air_quality...
+
+Seed: 42
+  ARIMA on air_quality (seed=42)
+  ARIMA: R2=-0.4447
+  SVR on air_quality (seed=42)
+  SVR: R2=0.5772
+  LSTM on air_quality (seed=42)
+  LSTM: R2=0.3778
+  CNN-LSTM on air_quality (seed=42)
+  CNN-LSTM: R2=0.3595
+
+Seed: 123
+  ARIMA on air_quality (seed=123)
+  ARIMA: R2=-0.4447
+  SVR on air_quality (seed=123)
+  SVR: R2=0.5772
+  LSTM on air_quality (seed=123)
+  LSTM: R2=0.3641
+  CNN-LSTM on air_quality (seed=123)
+  CNN-LSTM: R2=0.3533
+
+Seed: 456
+  ARIMA on air_quality (seed=456)
+  ARIMA: R2=-0.4447
+  SVR on air_quality (seed=456)
+  SVR: R2=0.5772
+  LSTM on air_quality (seed=456)
+  LSTM: R2=0.3711
+  CNN-LSTM on air_quality (seed=456)
+  CNN-LSTM: R2=0.3548
+
+air_quality completed!

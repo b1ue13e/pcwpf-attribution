@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  12 SEP 2026 01:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.31)  15 SEP 2026 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,17 +1048,17 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 7
 (E:\MiKTeX\tex/latex/txfonts\ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 8
-6.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 7
+9.
  (E:\MiKTeX\tex/latex/txfonts\ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 8
-6.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 7
+9.
 (E:\MiKTeX\tex/latex/txfonts\utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
 
  (E:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1066,7 +1066,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (E:\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
 
 
 (E:\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1075,12 +1075,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (E:\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 8
-6.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 7
+9.
 
 (E:\MiKTeX\tex/latex/txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
+Underfull \hbox (badness 1377) in paragraph at lines 81--82
+[]\T1/txr/m/n/10 (+20) Weak penal-ties ex-hib-it non-specific nu-mer-i-cal
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1110,78 +1115,99 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.7 
+l.5 
      [1
 
 
 ]
-Underfull \hbox (badness 3250) in paragraph at lines 8--9
-[]\T1/txr/m/n/10 (+20) To ex-am-ine the at-tri-bu-tion-al ba-sis of physics-
+Underfull \hbox (badness 1067) in paragraph at lines 22--23
+\T1/txr/bx/n/10 (+20) s\T1/txr/m/n/10 (+20) : Across within-site learn-ing curv
+es ($\OML/txmi/m/it/10 N[] \OMS/txsy/m/n/10 2
  []
 
-) (sections/02_related.tex [2]
-Underfull \hbox (badness 1297) in paragraph at lines 11--12
-\T1/txr/m/n/10 (+20) el-s com-mon-ly em-bed steady-state kine-mat-ic wake
+[2]
+Underfull \hbox (badness 3029) in paragraph at lines 25--26
+[]\T1/txr/bx/n/10 (+20) Prediction--Decision De-cou-pling\T1/txr/m/n/10 (+20) :
+ In an info-
  []
 
-[3]) (sections/03_framework.tex
-<figures/fig_constraint_lifecycle.pdf, id=306, 787.74298pt x 426.39299pt>
+
+Underfull \hbox (badness 3000) in paragraph at lines 35--36
+[]\T1/txr/bx/n/10 (+20) Decision-Aligned E-val-u-a-tion and Gov-er-nance
+ []
+
+) (sections/02_related.tex [3] [4]) (sections/03_theory.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+[]\T1/txr/bx/n/10 (+20) Mathematical For-mu-la-tion and Decision-
+ []
+
+[5] [6] [7]) (sections/04_methodology.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[]\T1/txr/m/n/10 (+20) Designating a neu-ral fore-cast-er as ``physics-
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 7--8
+\T1/txr/m/n/10 (+20) constrained'' of-ten group-s fun-da-men-tal-ly dis-parate
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 7--8
+\T1/txr/m/n/10 (+20) foun-da-tion for sys-tem-at-ic au-dit-ing and con-trolled
+ []
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 7--8
+\T1/txr/m/n/10 (+20) bench-mark-ing, we de-fine a struc-tured \T1/txr/bx/n/10 (
++20) Con-strain-t
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file ./figures/fig_constraint_lifecycle.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/fig_constraint_lifecycle.pdf, id=369, 1090.0725pt x 817.55438pt>
 File: figures/fig_constraint_lifecycle.pdf Graphic file (type pdf)
 <use figures/fig_constraint_lifecycle.pdf>
 Package pdftex.def Info: figures/fig_constraint_lifecycle.pdf  used on input li
-ne 16.
-(pdftex.def)             Requested size: 468.0pt x 253.32635pt.
- [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ne 18.
+(pdftex.def)             Requested size: 468.0pt x 350.99265pt.
 
+Underfull \hbox (badness 1584) in paragraph at lines 27--28
+\T1/txr/m/n/10 (+20) do-main physic-s en-ter-s the com-pu-ta-tion-al pipeline:
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[8]
+Underfull \hbox (badness 2698) in paragraph at lines 42--43
+\T1/txr/m/n/10 (+20) topographical wake in-ter-ac-tion-s, com-pris-ing 21
+ []
 
- [5 <./figures/fig_constraint_lifecycle.pdf>]) (sections/04_protocol.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-\T1/txr/m/n/10 (+20) ti-tle queries---$\OML/txmi/m/it/10 Q[]$ \T1/txr/m/n/10 (+
-20) (\T1/cmtt/m/n/10 "physics-constrained" AND
+[9 <./figures/fig_constraint_lifecycle.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+[]\T1/txr/m/it/10 (+20) Strictly Budget-Matched In-for-ma-tion Ab-la-tion
+ []
+
+[10]
+Underfull \hbox (badness 1635) in paragraph at lines 70--71
+[]\T1/txr/m/n/10 (+20) Statistical sig-nif-i-cance was e-val-u-at-ed vi-a 2,000
+-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-\T1/cmtt/m/n/10 "wind"\T1/txr/m/n/10 (+20) ), $\OML/txmi/m/it/10 Q[]$ \T1/txr/m
-/n/10 (+20) (\T1/cmtt/m/n/10 "physics-informed" AND "wind
+Underfull \hbox (badness 1874) in paragraph at lines 87--88
+[]\T1/txr/m/it/10 (+20) Direct Bias--Variance Com-po-nen-t Es-ti-ma-tion\T1/txr
+/m/n/10 (+20) :
+ []
+
+) (sections/05_centerpiece.tex (tables/table2_dynamic_settlement.tex
+Overfull \vbox (6.46pt too high) detected at line 39
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-\OML/txmi/m/it/10 Q[]$ \T1/txr/m/n/10 (+20) (\T1/cmtt/m/n/10 "physics-embedded"
- AND "wind power"\T1/txr/m/n/10 (+20) )---
+Overfull \vbox (6.46pt too high) detected at line 39
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 7--8
-\T1/txr/m/n/10 (+20) we i-den-ti-fied 72 can-di-date record-s. Sec-ond, we
- []
-
-<figures/prisma_flow_diagram.pdf, id=466, 607.068pt x 751.60799pt>
-File: figures/prisma_flow_diagram.pdf Graphic file (type pdf)
-<use figures/prisma_flow_diagram.pdf>
-Package pdftex.def Info: figures/prisma_flow_diagram.pdf  used on input line 13
-.
-(pdftex.def)             Requested size: 222.0pt x 274.85646pt.
-[6]
-Underfull \vbox (badness 3861) has occurred while \output is active []
-
-
-Underfull \vbox (badness 3861) has occurred while \output is active []
-
- [7 <./figures/prisma_flow_diagram.pdf>] [8]) (sections/05_results.tex
-(tables/table1_lifecycle_distribution.tex)
-<figures/fig_field_audit_distribution.pdf, id=627, 831.105pt x 542.025pt>
-File: figures/fig_field_audit_distribution.pdf Graphic file (type pdf)
-<use figures/fig_field_audit_distribution.pdf>
-Package pdftex.def Info: figures/fig_field_audit_distribution.pdf  used on inpu
-t line 17.
-(pdftex.def)             Requested size: 468.0pt x 305.21913pt.
-
-(tables/table2_dynamic_settlement.tex
 Underfull \hbox (badness 3219) in paragraph at lines 39--39
 []|\T1/txr/m/n/8 (+20) Info-Symmetric (Pow-er +
  []
@@ -1199,6 +1225,10 @@ Underfull \hbox (badness 3219) in paragraph at lines 39--39
 
 Underfull \hbox (badness 10000) in paragraph at lines 39--39
 []|\T1/txr/m/n/8 (+20) Pseudo-Scrambled Pri-or
+ []
+
+
+Overfull \vbox (6.46pt too high) detected at line 39
  []
 
 
@@ -1212,45 +1242,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--39
  []
 
 )
-<figures/fig_causal_ablation.pdf, id=630, 835.47508pt x 571.13252pt>
+<figures/fig_causal_ablation.pdf, id=481, 847.63336pt x 558.6384pt>
 File: figures/fig_causal_ablation.pdf Graphic file (type pdf)
 <use figures/fig_causal_ablation.pdf>
-Package pdftex.def Info: figures/fig_causal_ablation.pdf  used on input line 29
+Package pdftex.def Info: figures/fig_causal_ablation.pdf  used on input line 13
 .
-(pdftex.def)             Requested size: 468.0pt x 319.91917pt.
-<figures/fig_within_site_learning_curve.pdf, id=631, 678.74428pt x 282.29088pt>
+(pdftex.def)             Requested size: 468.0pt x 308.43692pt.
+ [11]
 
-File: figures/fig_within_site_learning_curve.pdf Graphic file (type pdf)
-<use figures/fig_within_site_learning_curve.pdf>
-Package pdftex.def Info: figures/fig_within_site_learning_curve.pdf  used on in
-put line 36.
-(pdftex.def)             Requested size: 468.0pt x 194.64737pt.
-<figures/fig_prior_corruption_gradient.pdf, id=632, 932.98721pt x 268.7045pt>
-File: figures/fig_prior_corruption_gradient.pdf Graphic file (type pdf)
-<use figures/fig_prior_corruption_gradient.pdf>
-Package pdftex.def Info: figures/fig_prior_corruption_gradient.pdf  used on inp
-ut line 43.
-(pdftex.def)             Requested size: 468.0pt x 134.78651pt.
-
-Underfull \hbox (badness 1043) in paragraph at lines 51--52
-\T1/txr/m/it/10 (+20) spec-i-fi-ca-tion (Fig-ures [][]4[][]a, [][]5[][], and []
-[]6[][]).[] \T1/txr/m/n/10 (+20) On Pen-man-
- []
+LaTeX Warning: Text page 12 contains only floats.
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 51--52
-\T1/txr/m/n/10 (+20) shiel un-der low-sample train-ing ($\OML/txmi/m/it/10 N[] 
-\OT1/txr/m/n/10 (+20) = 1\OML/txmi/m/it/10 ; \OT1/txr/m/n/10 (+20) 583$\T1/txr/
-m/n/10 (+20) ),
- []
-
-[9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (18.19044pt too high) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (18.19044pt too high) has occurred while \output is active []
 
 
+
+LaTeX Warning: Text page 12 contains only floats.
+
+
+Overfull \vbox (18.19044pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (18.19044pt too high) has occurred while \output is active []
+
+
+[12] [13 <./figures/fig_causal_ablation.pdf>]
 (tables/table_information_budget.tex
 Underfull \hbox (badness 1286) in paragraph at lines 28--28
 []|\T1/txr/m/n/8 (+20) C. Full-Historical Gen-uine Pri-or
@@ -1263,127 +1282,130 @@ Underfull \hbox (badness 1286) in paragraph at lines 28--28
 
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <7> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 31.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+)) (sections/06_boundaries.tex
+<figures/fig_within_site_learning_curve.pdf, id=554, 678.74428pt x 282.29088pt>
 
+File: figures/fig_within_site_learning_curve.pdf Graphic file (type pdf)
+<use figures/fig_within_site_learning_curve.pdf>
+Package pdftex.def Info: figures/fig_within_site_learning_curve.pdf  used on in
+put line 11.
+(pdftex.def)             Requested size: 468.0pt x 194.64737pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-[11 <./figures/fig_field_audit_distribution.pdf>]
-
-LaTeX Warning: Text page 12 contains only floats.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Warning: Text page 12 contains only floats.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-(tables/table3_paired_bootstrap.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13 <./figures/fig_causal_ablation.pdf>] (tables/table4_zero_bid_diagnostic.te
-x
-Underfull \hbox (badness 2359) in paragraph at lines 33--33
-[]|\T1/txr/m/n/8 (+20) Calibrated Pow-er Curve
+Underfull \hbox (badness 4569) in paragraph at lines 25--26
+ []\T1/txr/m/it/10 (+20) Conceptual In-ter-pre-ta-tion.[] \T1/txr/m/n/10 (+20) 
+The ob-served learn-ing
  []
 
-)
-<figures/fig_market_decoupling.pdf, id=872, 758.835pt x 274.626pt>
-File: figures/fig_market_decoupling.pdf Graphic file (type pdf)
-<use figures/fig_market_decoupling.pdf>
-Package pdftex.def Info: figures/fig_market_decoupling.pdf  used on input line 
-84.
-(pdftex.def)             Requested size: 468.0pt x 169.37378pt.
- [14 <./figures/fig_within_site_learning_curve.pdf> <./figures/fig_prior_corrup
-tion_gradient.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+[14]
+<figures/fig_prior_corruption_gradient.pdf, id=563, 932.98721pt x 268.7045pt>
+File: figures/fig_prior_corruption_gradient.pdf Graphic file (type pdf)
+<use figures/fig_prior_corruption_gradient.pdf>
+Package pdftex.def Info: figures/fig_prior_corruption_gradient.pdf  used on inp
+ut line 35.
+(pdftex.def)             Requested size: 468.0pt x 134.78651pt.
  [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16 <./figures/fig_market_decoupling.pdf>]
+ [16 <./figures/fig_within_site_learning_curve.pdf> <./figures/fig_prior_corrup
+tion_gradient.pdf>] (tables/table5_patchtst_and_rules.tex))
+(sections/07_alignment_forensics.tex [17]
+Underfull \hbox (badness 1158) in paragraph at lines 11--12
+\T1/txr/m/n/10 (+20) patch cost from $\OT1/txr/m/n/10 (+20) 0\OML/txmi/m/it/10 
+:\OT1/txr/m/n/10 (+20) 08913 \OMS/txsy/m/n/10 ^^F \OT1/txr/m/n/10 (+20) 0\OML/t
+xmi/m/it/10 :\OT1/txr/m/n/10 (+20) 00005$ \T1/txr/m/n/10 (+20) to $\OT1/txr/m/n
+/10 (+20) 0\OML/txmi/m/it/10 :\OT1/txr/m/n/10 (+20) 09028 \OMS/txsy/m/n/10 ^^F
+ []
 
-LaTeX Warning: Text page 17 contains only floats.
+(tables/table4_zero_bid_diagnostic.tex
+Underfull \hbox (badness 2359) in paragraph at lines 33--33
+[]|\T1/txr/m/n/8 (+20) Calibrated Pow-er Curve
+ []
+
+)
+<figures/fig_market_decoupling.pdf, id=811, 758.835pt x 274.626pt>
+File: figures/fig_market_decoupling.pdf Graphic file (type pdf)
+<use figures/fig_market_decoupling.pdf>
+Package pdftex.def Info: figures/fig_market_decoupling.pdf  used on input line 
+28.
+(pdftex.def)             Requested size: 468.0pt x 169.37378pt.
+ [18]
+
+LaTeX Warning: Text page 19 contains only floats.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (13.54434pt too high) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (13.54434pt too high) has occurred while \output is active []
 
 
 
-LaTeX Warning: Text page 17 contains only floats.
+LaTeX Warning: Text page 19 contains only floats.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (13.54434pt too high) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (13.54434pt too high) has occurred while \output is active []
 
- [17]
-(tables/table5_patchtst_and_rules.tex)) (sections/06_code_audit.tex
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-\T1/txr/m/n/10 (+20) In the Py-Torch C++ AT-en k-er-nel back-
+
+[19] (tables/table3_paired_bootstrap.tex)
+Underfull \hbox (badness 1824) in paragraph at lines 57--57
+[]\T1/txr/m/it/10 (+20) Supporting Soft-ware Foren-sic-s: The Physics-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-\T1/txr/m/n/10 (+20) end (\T1/cmtt/m/n/10 native/Loss.cpp\T1/txr/m/n/10 (+20) ,
- im-ple-ment-ing
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+\T1/txr/m/n/10 (+20) This oc-curs be-cause Py-Torch's
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 29--30
-\T1/cmtt/m/n/10 kl_div_backward_cpu\T1/txr/m/n/10 (+20) ), the func-tion-al spe
-c-i-fi-ca-
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+\T1/cmtt/m/n/10 torch.nn.functional.kl_div(input, target)
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-\T1/txr/m/n/10 (+20) tion for \T1/cmtt/m/n/10 torch.nn.functional.kl_div(input,
-
- []
-
-[18] [19]
-<figures/fig_pct_loss_empirical_contrast.pdf, id=1178, 679.62384pt x 269.11604p
-t>
+[20 <./figures/fig_market_decoupling.pdf>]
+<figures/fig_pct_loss_empirical_contrast.pdf, id=867, 679.62384pt x 269.11604pt
+>
 File: figures/fig_pct_loss_empirical_contrast.pdf Graphic file (type pdf)
 <use figures/fig_pct_loss_empirical_contrast.pdf>
 Package pdftex.def Info: figures/fig_pct_loss_empirical_contrast.pdf  used on i
-nput line 80.
+nput line 85.
 (pdftex.def)             Requested size: 468.0pt x 185.32478pt.
-) (sections/07_theory.tex [20] [21 <./figures/fig_pct_loss_empirical_contrast.p
-df>]
-Underfull \hbox (badness 3849) in paragraph at lines 109--110
-[][]\T1/txr/m/it/10 (+20) Remark \T1/txr/m/n/10 (+20) 3 (Mech-a-nis-tic D-e-duc
--tion 3: In-duc-tive
+) (sections/08_discussion.tex
+Underfull \vbox (badness 5022) has occurred while \output is active []
+
+
+Underfull \vbox (badness 5022) has occurred while \output is active []
+
+ [21]
+Underfull \hbox (badness 3302) in paragraph at lines 9--10
+[]\T1/txr/bx/n/10 (+20) Tested Sample-Restricted Regimes ($\OML/txmi/m/it/10 N[
+] \OMS/txsy/m/n/10 2
  []
 
-[22]) (sections/08_discussion.tex [23] [24] (tables/table_reforms_checklist.tex
+[22 <./figures/fig_pct_loss_empirical_contrast.pdf>]
+Underfull \hbox (badness 4072) in paragraph at lines 25--26
+[]\T1/txr/bx/n/10 (+20) Prediction--Decision De-cou-pling\T1/txr/m/n/10 (+20) :
+ The Info-
+ []
 
+
+Underfull \hbox (badness 1817) in paragraph at lines 25--26
+\T1/txr/m/n/10 (+20) Symmetric bench-mark con-firm-s that re-duc-ing
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 41--42
+\OML/txmi/m/it/10 p\OT1/txr/m/n/10 (+20) (\OML/txmi/m/it/10 w\OT1/txr/m/n/10 (+
+20) )\OML/txmi/m/it/10 p\OT1/txr/m/n/10 (+20) (\OML/txmi/m/it/10 P\OT1/txr/m/n/
+10 (+20) )$\T1/txr/m/n/10 (+20) ). For-mal al-ge-bra-ic ex-pan-sion (E-qua-
+ []
+
+[23] (tables/table_reforms_checklist.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--23
 []|\T1/txr/bx/n/8 (+20) Governance Di-men-
  []
@@ -1418,76 +1440,379 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--23
 []|\T1/txr/bx/n/8 (+20) Computational
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-[]\T1/txr/bx/n/10 (+20) Gate M1 (Parameter-Isolated Ab-la-tion-s):
+)) (sections/09_conclusion.tex [24]) (sections/10_appendix.tex
+Underfull \hbox (badness 3919) in paragraph at lines 1--1
+[]\T1/txr/bx/n/10 (+20) Mathematical Proof-s of Bound-ary
  []
 
 
-Underfull \hbox (badness 2221) in paragraph at lines 69--70
-\T1/txr/m/n/10 (+20) Parameter-matched com-par-ison-s ($\OML/txmi/m/it/10 ^^U \
-OT1/txr/m/n/10 (+20) = 0$ \T1/txr/m/n/10 (+20) vs.
- []
-
-) (sections/09_conclusion.tex [25]
-Underfull \vbox (badness 3138) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 3138) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
-(sections/11_starmethods.tex
-Underfull \hbox (badness 6445) in paragraph at lines 41--41
-[]|\T1/txr/m/n/8 (+20) Python Pro-gram-ming Lan-guage
- []
-
-
-Underfull \hbox (badness 1824) in paragraph at lines 41--41
-[]|\T1/txr/m/n/8 (+20) PyTorch Deep Learn-ing Li-brary
- []
-
+ [25]
 [26]
+Underfull \hbox (badness 3525) in paragraph at lines 145--146
+[]\T1/txr/m/n/10 (+20) We con-duct-ed our em-pir-i-cal s-cop-ing au-dit in
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27]
+Underfull \hbox (badness 2042) in paragraph at lines 145--146
+\T1/txr/m/n/10 (+20) re-trieval was ex-e-cut-ed across t-wo com-ple-men-tary
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\T1/cmtt/m/n/10 "physics-embedded" AND "wind power"\T1/txr/m/n/10 (+20) ) i-den
+-ti-
+ []
+
+<figures/prisma_flow_diagram.pdf, id=1070, 250.38426pt x 330.05199pt>
+File: figures/prisma_flow_diagram.pdf Graphic file (type pdf)
+<use figures/prisma_flow_diagram.pdf>
+Package pdftex.def Info: figures/prisma_flow_diagram.pdf  used on input line 14
+9.
+(pdftex.def)             Requested size: 222.0pt x 292.64241pt.
+[27 <./figures/prisma_flow_diagram.pdf>]
+(tables/table1_lifecycle_distribution.tex)
+(tables/table4_ablation_semantics.tex)
+<figures/fig_field_audit_distribution.pdf, id=1099, 831.105pt x 542.025pt>
+File: figures/fig_field_audit_distribution.pdf Graphic file (type pdf)
+<use figures/fig_field_audit_distribution.pdf>
+Package pdftex.def Info: figures/fig_field_audit_distribution.pdf  used on inpu
+t line 161.
+(pdftex.def)             Requested size: 468.0pt x 305.21913pt.
+) [28] (main.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28])
-(sections/10_appendix.tex
-Underfull \hbox (badness 2726) in paragraph at lines 1--1
-\T1/txr/bx/n/10 (+20) Cal-i-bra-tion Bound-aries and Coun-
+
+Underfull \hbox (badness 2903) in paragraph at lines 15--21
+\T1/txr/m/n/9 (+20) Jour-nal of Fore-cast-ing 30 (4) (2014) 1030--1081.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-[]\T1/txr/m/it/10 (+20) Counterexample 2: S-pa-tial Het-
+Underfull \hbox (badness 10000) in paragraph at lines 15--21
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1016 /
+ j . ijforecast .
  []
 
-[29] [30]) (main.bbl [31]
-Underfull \hbox (badness 1024) in paragraph at lines 76--79
-\T1/txr/m/n/9 (+20) Ma-honey, Char-ac-ter-iz-ing pos-si-ble fail-ure modes in
+[29]
+Underfull \hbox (badness 6775) in paragraph at lines 40--47
+\T1/txr/m/n/9 (+20) ing wind gen-er-a-tion from short-term prob-a-bilis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--153
+Underfull \hbox (badness 5050) in paragraph at lines 40--47
+\T1/txr/m/n/9 (+20) tic fore-cast-s of wind pow-er[][], IEEE Trans-ac-tion-
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 40--47
+\T1/txr/m/n/9 (+20) s on Pow-er Sys-tem-s 22 (3) (2007) 1148--1156.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--47
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1109 /
+ TPWRS . 2007 .
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 49--55
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1016 /
+ j . renene . 2014 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--63
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1038 /
+
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 65--73
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1016 /
+ j . jcp . 2018 . 10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--82
+[]\T1/txr/m/n/9 (+20) N. Zehtabiyan-Rezaie, A. Iosi-fidis, M. Abkar,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--82
+[][]\T1/txr/m/n/9 (+20) Physics-guided ma-chine learn-ing for wind-farm
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 75--82
+\T1/txr/m/n/9 (+20) pow-er pre-dic-tion: To-ward in-ter-pretabil-i-ty and gen-
+ []
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 75--82
+\T1/txr/m/n/9 (+20) er-al-iz-abil-i-ty[][], PRX En-er-gy 2 (1) (2023) 013009.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--82
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1103 /
+ PRXEnergy . 2 .
+ []
+
+[30 <./figures/fig_field_audit_distribution.pdf>]
+Underfull \hbox (badness 2035) in paragraph at lines 84--91
+[]\T1/txr/m/n/9 (+20) D. Wang, Q. Lu-o, J. Gao, D. Zhang, Y. Chen,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--91
+[][]\T1/txr/m/n/9 (+20) Physics-constrained trans-former for wind pow-er
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 84--91
+\T1/txr/m/n/9 (+20) fore-cast-ing[][], Sci-en-tif-ic Re-port-s 16 (1) (2026) 42
+37.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--91
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1038 /
+
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 93--100
+[]\T1/txr/m/n/9 (+20) J. Gao, Y. Cheng, D. Zhang, Y. Chen, [][]Physics-
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 93--100
+\T1/txr/m/n/9 (+20) constrained wind pow-er fore-cast-ing aligned with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--100
+\T1/txr/m/n/9 (+20) prob-a-bil-i-ty dis-tri-bu-tion-s for noise-resilient deep
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--100
+\T1/txr/m/n/9 (+20) learn-ing[][], Ap-plied En-er-gy 383 (2025) 125295.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--100
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1016 /
+ j . apenergy .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / proceedings .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
+\T1/cmtt/m/n/9 neurips . cc / paper / 2021 / hash /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
+\T1/cmtt/m/n/9 df438e5207241bc0e175970104b15d85-[]Abstract .
+ []
+
+
+Underfull \hbox (badness 4291) in paragraph at lines 114--121
+\T1/txr/m/n/9 (+20) T. S. Nielsen, [][]S-tan-dard-iz-ing the per-for-mance e-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--121
+\T1/txr/m/n/9 (+20) val-u-a-tion of short-term wind pow-er pre-dic-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--121
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1260 /
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--130
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1007 /
+
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 132--139
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1016 /
+ j . energy . 2025 .
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 141--153
+[]\T1/txr/m/n/9 (+20) A. D'Amour, K. Heller, D. Moldovan, B. Ad-lam,
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 141--153
+\T1/txr/m/n/9 (+20) D. S-cul-ley, [][]Un-der-spec-i-fi-ca-tion presents chal-le
+nges
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--153
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / www . jmlr . org / pape
+rs / v23 /
+ []
+
+
+Underfull \hbox (badness 2608) in paragraph at lines 155--162
+[]\T1/txr/m/n/9 (+20) O. E. Gun-der-sen, S. K-jens-mo, [][]S-tate of the art:
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 155--162
+\T1/txr/m/n/9 (+20) Re-pro-ducibil-i-ty in ar-ti-fi-cial in-tel-li-gence[][], i
+n: Pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--162
+\T1/txr/m/n/9 (+20) ceed-ings of the AAAI Con-fer-ence on Ar-ti-fi-
+ []
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 155--162
+\T1/txr/m/n/9 (+20) cial In-tel-li-gence, Vol. 32, 2018, p-p. 1644--1651.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--162
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1609 /
+ aaai . v32i1 .
+ []
+
+
+Underfull \hbox (badness 3826) in paragraph at lines 164--171
+[]\T1/txr/m/n/9 (+20) S. Kapoor, A. Narayanan, [][]Leak-age and the re-
+ []
+
+
+Underfull \hbox (badness 4403) in paragraph at lines 164--171
+\T1/txr/m/n/9 (+20) pro-ducibil-i-ty cri-sis in machine-learning-based sci-
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 164--171
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1016 /
+ j . patter . 2023 .
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 191--197
+[][]\T1/txr/m/n/9 (+20) Wind pow-er fore-cast-ing: A sys-tem-at-ic lit-er-a-tur
+e
+ []
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 191--197
+\T1/txr/m/n/9 (+20) re-view[][], Wind En-gi-neer-ing 45 (2) (2021) 413--426.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--197
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1177 /
+
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 199--206
+\T1/txr/m/n/9 (+20) niques, chal-lenges and prospect-s[][], Re-new-able and
+ []
+
+
+Underfull \hbox (badness 4713) in paragraph at lines 199--206
+\T1/txr/m/n/9 (+20) Sus-tain-able En-er-gy Re-views 148 (2021) 111306.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--206
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1016 /
+ j . rser . 2021 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--214
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1017 /
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
+[]\T1/txr/m/n/9 (+20) A. Cler-c, E. Lingkan, [][]Hill of towie wind
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
+\T1/txr/m/n/9 (+20) far-m open dataset[][], Zen-o-do (2026).  [][]$\T1/cmtt/m/n
+/9 doi :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
 \T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 5281 /
  zenodo .
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 171--177
-\T1/txr/m/n/9 (+20) with trans-form-er-s[][], in: The Eleventh In-ter-na-tion-a
-l
+Underfull \hbox (badness 1127) in paragraph at lines 237--245
+[]\T1/txr/m/n/9 (+20) A. Zeng, M. Chen, L. Zhang, Q. X-u, [][]Are trans-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--177
+Underfull \hbox (badness 10000) in paragraph at lines 237--245
+\T1/txr/m/n/9 (+20) form-er-s ef-fec-tive for time se-ries fore-cast-ing?[][],
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 237--245
+\T1/txr/m/n/9 (+20) in: Pro-ceed-ings of the AAAI Con-fer-ence on
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 237--245
+\T1/txr/m/n/9 (+20) Ar-ti-fi-cial In-tel-li-gence, Vol. 37, 2023, p-p. 11121--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--245
+\T1/txr/m/n/9 (+20) 11128, preprint: http-s://arxiv.org/abs/2205.13504.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--245
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1609 /
+ aaai . v37i9 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--253
 \T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / openreview . net / foru
 m ? id =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--275
+\T1/txr/m/n/9 (+20) URL [][]$\T1/cmtt/m/n/9 https : / / doi . org / 10 . 1038 /
+
  []
 
 ) [32] (main.aux)
@@ -1496,16 +1821,16 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AC7235D701655E26826F24A1D77450C4;5538.
+(rerunfilecheck)             Checksum: 64CDF546A31ACAEACB91AAEA55F7BE94;5367.
  ) 
 Here is how much of TeX's memory you used:
- 23859 strings out of 469789
- 423811 string characters out of 5472196
- 865601 words of memory out of 5000000
- 50714 multiletter control sequences out of 15000+600000
- 754458 words of font info for 979 fonts, out of 8000000 for 9000
+ 23861 strings out of 469789
+ 423762 string characters out of 5472196
+ 851556 words of memory out of 5000000
+ 50704 multiletter control sequences out of 15000+600000
+ 753973 words of font info for 976 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,17n,79p,3079b,2835s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,19n,79p,2580b,2885s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <E:\MiKTeX-data\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <E:\MiKTeX-d
 ata\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <E:\MiKTeX-data\fonts/pk/lj
 four/jknappen/ec/dpi600\ectt0800.pk><E:/MiKTeX/fonts/type1/public/amsfonts/symb
@@ -1516,9 +1841,9 @@ fonts/rtxr.pfb><E:/MiKTeX/fonts/type1/public/txfonts/txex.pfb><E:/MiKTeX/fonts/
 type1/public/txfonts/txsy.pfb><E:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/M
 iKTeX/fonts/type1/urw/times/utmr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on main.pdf (33 pages, 1473615 bytes).
+Output written on main.pdf (33 pages, 881483 bytes).
 PDF statistics:
- 1796 PDF objects out of 2073 (max. 8388607)
- 257 named destinations out of 1000 (max. 500000)
- 136113 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 1561 PDF objects out of 1728 (max. 8388607)
+ 275 named destinations out of 1000 (max. 500000)
+ 136089 words of extra memory for PDF output out of 154059 (max. 10000000)
 

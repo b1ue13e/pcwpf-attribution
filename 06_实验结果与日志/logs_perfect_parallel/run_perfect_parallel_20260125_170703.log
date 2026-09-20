@@ -1,0 +1,75 @@
+Ultra-LSNT 完整完善实验 - 并行增强版 (run_perfect_parallel.sh)
+开始时间: Sun Jan 25 17:07:03 CST 2026
+=================================================================
+硬件检测...
+  CPU核心数: 256
+  系统内存: 755GB
+  GPU型号: NVIDIA GeForce RTX 4090 D
+  GPU数量: 1
+  GPU显存: 24564MB
+  并行配置: 8 个工作进程
+创建并行增强实验脚本...
+  ✅ 创建 run_comprehensive_ablation_parallel.py
+  ✅ 创建 run_efficiency_benchmark_enhanced.py
+  ✅ 创建 run_hyperparameter_search_parallel.py
+
+第一步：运行基础实验验证数据完整性
+1.1 运行基础消融研究...
+[2026-01-25 17:07:03] 开始运行: run_ablation_study.py
+[2026-01-25 17:21:40] ✅ 成功: run_ablation_study.py
+
+第二步：运行并行完整消融研究
+2.1 运行并行完整消融研究 (多进程并行测试)...
+[2026-01-25 17:21:40] 开始并行运行: run_comprehensive_ablation_parallel.py (工作进程: 8)
+[2026-01-25 17:21:45] ✅ 成功: run_comprehensive_ablation_parallel.py
+
+第三步：运行增强版效率基准测试
+3.1 运行增强版效率基准测试 (10个epoch训练，多GPU支持)...
+[2026-01-25 17:21:45] 开始运行: run_efficiency_benchmark_enhanced.py
+[2026-01-25 17:26:21] ✅ 成功: run_efficiency_benchmark_enhanced.py
+
+第四步：运行并行超参数优化
+4.1 运行并行超参数搜索 (30次并行随机搜索 + 网格搜索)...
+[2026-01-25 17:26:21] 开始并行运行: run_hyperparameter_search_parallel.py (工作进程: 8)
+[2026-01-25 17:26:27] ✅ 成功: run_hyperparameter_search_parallel.py
+
+第五步：运行扩展实验
+5.1 运行通用消融研究 (多数据集)...
+[2026-01-25 17:26:27] 开始运行: run_universal_ablation.py
+[2026-01-25 17:50:28] ✅ 成功: run_universal_ablation.py
+5.2 运行通用鲁棒性测试...
+[2026-01-25 17:50:28] 开始运行: run_universal_robustness.py
+[2026-01-25 17:50:58] ✅ 成功: run_universal_robustness.py
+
+第六步：生成并行实验汇总报告
+6.1 生成并行实验汇总报告...
+
+=================================================================
+并行增强实验完成!
+完成时间: Sun Jan 25 17:50:58 CST 2026
+主日志文件: logs_perfect_parallel/run_perfect_parallel_20260125_170703.log
+=================================================================
+
+关键输出文件:
+-rw-r--r-- 1 root root  7325058 Jan 24 17:03 Load_history.csv
+-rw-r--r-- 1 root root     9827 Jan 24 17:02 README_RESULTS.txt
+-rw-r--r-- 1 root root 30371007 Jan 24 17:03 air_quality.csv
+-rw-r--r-- 1 root root 21007435 Jan 24 17:03 air_quality_ready.csv
+-rw-r--r-- 1 root root        1 Jan 25 17:21 comprehensive_ablation_results_parallel.csv
+-rw-r--r-- 1 root root     1774 Jan 24 17:02 dispatch_schedule.csv
+-rw-r--r-- 1 root root      328 Jan 25 17:26 efficiency_benchmark_results_enhanced.csv
+-rw-r--r-- 1 root root      311 Jan 25 17:26 efficiency_summary_enhanced.txt
+-rw-r--r-- 1 root root  1027294 Jan 24 17:02 gefcom_ready.csv
+-rw-r--r-- 1 root root     5936 Jan 25 17:26 hyperparameter_random_search_results_parallel.csv
+-rw-r--r-- 1 root root       97 Jan 24 17:02 plot_data_multi_domain.csv
+-rw-r--r-- 1 root root      295 Jan 24 17:02 power_validation_report.txt
+-rw-r--r-- 1 root root       91 Jan 25 15:15 probabilistic_comparison.csv
+-rw-r--r-- 1 root root 13901569 Jan 24 17:03 processed_wind.csv
+-rw-r--r-- 1 root root      238 Jan 24 17:02 table_multi_domain.csv
+-rw-r--r-- 1 root root      212 Jan 25 17:50 universal_ablation_results.csv
+-rw-r--r-- 1 root root  5238247 Jan 24 17:02 wind_final.csv
+-rw-r--r-- 1 root root  7927751 Jan 24 17:03 wind_main.csv
+-rw-r--r-- 1 root root 10506524 Jan 24 17:03 wind_us.csv
+-rw-r--r-- 1 root root  5353592 Jan 24 17:02 新疆_风电一场_2019.csv
+
+并行实验总结报告:

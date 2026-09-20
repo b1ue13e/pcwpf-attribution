@@ -1,0 +1,5 @@
+FG-MoE enforces controller-side admissibility for corrupted-SCADA wind forecasting.
+On Wind (CN), FG-MoE removes 506 clean over-rated events (105.98 MWh) without clip-only skill collapse.
+Matched iTransformer reruns preserve the same raw/clip-only/full-guardrail ordering in the tested Wind (CN) setting.
+Jump Gate keeps the software loop inside the 15-minute controller cadence.
+Under one fixed operational interface on Wind (CN), guarded streams reduce slack burden, positive-error exposure, and real-time cost.

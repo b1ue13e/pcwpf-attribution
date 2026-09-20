@@ -1,0 +1,66 @@
+nohup: ignoring input
+[stage0] launch cfg_baseline seed=42 on GPU 0
+[stage0] launch cfg_baseline seed=123 on GPU 1
+[stage0] launch cfg_baseline seed=2025 on GPU 2
+[stage0] launch cfg_lower_corr seed=42 on GPU 3
+[stage0] launch cfg_lower_corr seed=123 on GPU 4
+[stage0] launch cfg_lower_corr seed=2025 on GPU 5
+[stage0] launch cfg_lower_tail seed=42 on GPU 6
+[stage0] launch cfg_lower_tail seed=123 on GPU 7
+[stage0] launch cfg_lower_tail seed=2025 on GPU 8
+[stage0] launch cfg_lower_ramp seed=42 on GPU 9
+[stage0] completed cfg_baseline_seed42
+[stage0] completed cfg_baseline_seed123
+[stage0] completed cfg_baseline_seed2025
+[stage0] completed cfg_lower_corr_seed42
+[stage0] completed cfg_lower_corr_seed123
+[stage0] completed cfg_lower_corr_seed2025
+[stage0] completed cfg_lower_tail_seed42
+[stage0] completed cfg_lower_tail_seed123
+[stage0] completed cfg_lower_tail_seed2025
+[stage0] completed cfg_lower_ramp_seed42
+[stage0] launch cfg_lower_ramp seed=123 on GPU 0
+[stage0] launch cfg_lower_ramp seed=2025 on GPU 1
+[stage0] launch cfg_mid seed=42 on GPU 2
+[stage0] launch cfg_mid seed=123 on GPU 3
+[stage0] launch cfg_mid seed=2025 on GPU 4
+[stage0] launch cfg_conservative seed=42 on GPU 5
+[stage0] launch cfg_conservative seed=123 on GPU 6
+[stage0] launch cfg_conservative seed=2025 on GPU 7
+[stage0] completed cfg_lower_ramp_seed123
+[stage0] completed cfg_lower_ramp_seed2025
+[stage0] completed cfg_mid_seed42
+[stage0] completed cfg_mid_seed123
+[stage0] completed cfg_mid_seed2025
+[stage0] completed cfg_conservative_seed42
+[stage0] completed cfg_conservative_seed123
+[stage0] completed cfg_conservative_seed2025
+[stage0] building scoreboards
+          config  seed  clean_r2  severe_r2  clean_over_rated_pct  severe_over_rated_pct  archive_global_r2    pred_mean      gt_mean  pred_mean_ratio  pass_all_gates                                                                                                                         compare_csv                                                                                                                        archive_npz
+    cfg_baseline    42  0.872330   0.851865               0.00023               0.022316           0.872330 44012.142197 40835.400382         1.077794            True             results/ae_recovery_stage0/cfg_baseline/windcn_ultra/seed_42/pi_moe_full_vs_ultra_clean_sigma06_cfg_baseline_seed42.csv             results/ae_recovery_stage0/cfg_baseline/windcn_ultra/seed_42/prediction_archive_full_guardrail_cfg_baseline_seed42.npz
+    cfg_baseline   123  0.877788   0.857308               0.00000               0.006672           0.877788 43681.575537 40835.400382         1.069699            True           results/ae_recovery_stage0/cfg_baseline/windcn_ultra/seed_123/pi_moe_full_vs_ultra_clean_sigma06_cfg_baseline_seed123.csv           results/ae_recovery_stage0/cfg_baseline/windcn_ultra/seed_123/prediction_archive_full_guardrail_cfg_baseline_seed123.npz
+    cfg_baseline  2025  0.873357   0.852573               0.00000               0.009203           0.873357 43804.190991 40835.400382         1.072701            True         results/ae_recovery_stage0/cfg_baseline/windcn_ultra/seed_2025/pi_moe_full_vs_ultra_clean_sigma06_cfg_baseline_seed2025.csv         results/ae_recovery_stage0/cfg_baseline/windcn_ultra/seed_2025/prediction_archive_full_guardrail_cfg_baseline_seed2025.npz
+cfg_conservative    42  0.872330   0.850665               0.00023               0.022086           0.872330 44012.142197 40835.400382         1.077794            True     results/ae_recovery_stage0/cfg_conservative/windcn_ultra/seed_42/pi_moe_full_vs_ultra_clean_sigma06_cfg_conservative_seed42.csv     results/ae_recovery_stage0/cfg_conservative/windcn_ultra/seed_42/prediction_archive_full_guardrail_cfg_conservative_seed42.npz
+cfg_conservative   123  0.877788   0.857153               0.00000               0.004371           0.877788 43681.575537 40835.400382         1.069699            True   results/ae_recovery_stage0/cfg_conservative/windcn_ultra/seed_123/pi_moe_full_vs_ultra_clean_sigma06_cfg_conservative_seed123.csv   results/ae_recovery_stage0/cfg_conservative/windcn_ultra/seed_123/prediction_archive_full_guardrail_cfg_conservative_seed123.npz
+cfg_conservative  2025  0.873357   0.852840               0.00000               0.010353           0.873357 43804.190991 40835.400382         1.072701            True results/ae_recovery_stage0/cfg_conservative/windcn_ultra/seed_2025/pi_moe_full_vs_ultra_clean_sigma06_cfg_conservative_seed2025.csv results/ae_recovery_stage0/cfg_conservative/windcn_ultra/seed_2025/prediction_archive_full_guardrail_cfg_conservative_seed2025.npz
+  cfg_lower_corr    42  0.872330   0.852097               0.00023               0.013114           0.872330 44012.142197 40835.400382         1.077794            True         results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_42/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_corr_seed42.csv         results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_42/prediction_archive_full_guardrail_cfg_lower_corr_seed42.npz
+  cfg_lower_corr   123  0.877788   0.855647               0.00000               0.012193           0.877788 43681.575537 40835.400382         1.069699            True       results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_123/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_corr_seed123.csv       results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_123/prediction_archive_full_guardrail_cfg_lower_corr_seed123.npz
+  cfg_lower_corr  2025  0.873357   0.852840               0.00000               0.010353           0.873357 43804.190991 40835.400382         1.072701            True     results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_2025/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_corr_seed2025.csv     results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_2025/prediction_archive_full_guardrail_cfg_lower_corr_seed2025.npz
+  cfg_lower_ramp    42  0.872330   0.851114               0.00023               0.008052           0.872330 44012.142197 40835.400382         1.077794            True         results/ae_recovery_stage0/cfg_lower_ramp/windcn_ultra/seed_42/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_ramp_seed42.csv         results/ae_recovery_stage0/cfg_lower_ramp/windcn_ultra/seed_42/prediction_archive_full_guardrail_cfg_lower_ramp_seed42.npz
+  cfg_lower_ramp   123  0.877788   0.857308               0.00000               0.006672           0.877788 43681.575537 40835.400382         1.069699            True       results/ae_recovery_stage0/cfg_lower_ramp/windcn_ultra/seed_123/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_ramp_seed123.csv       results/ae_recovery_stage0/cfg_lower_ramp/windcn_ultra/seed_123/prediction_archive_full_guardrail_cfg_lower_ramp_seed123.npz
+  cfg_lower_ramp  2025  0.873357   0.852840               0.00000               0.010353           0.873357 43804.190991 40835.400382         1.072701            True     results/ae_recovery_stage0/cfg_lower_ramp/windcn_ultra/seed_2025/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_ramp_seed2025.csv     results/ae_recovery_stage0/cfg_lower_ramp/windcn_ultra/seed_2025/prediction_archive_full_guardrail_cfg_lower_ramp_seed2025.npz
+  cfg_lower_tail    42  0.872330   0.851114               0.00023               0.008052           0.872330 44012.142197 40835.400382         1.077794            True         results/ae_recovery_stage0/cfg_lower_tail/windcn_ultra/seed_42/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_tail_seed42.csv         results/ae_recovery_stage0/cfg_lower_tail/windcn_ultra/seed_42/prediction_archive_full_guardrail_cfg_lower_tail_seed42.npz
+  cfg_lower_tail   123  0.877788   0.856778               0.00000               0.015414           0.877788 43681.575537 40835.400382         1.069699            True       results/ae_recovery_stage0/cfg_lower_tail/windcn_ultra/seed_123/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_tail_seed123.csv       results/ae_recovery_stage0/cfg_lower_tail/windcn_ultra/seed_123/prediction_archive_full_guardrail_cfg_lower_tail_seed123.npz
+  cfg_lower_tail  2025  0.873357   0.851971               0.00000               0.004601           0.873357 43804.190991 40835.400382         1.072701            True     results/ae_recovery_stage0/cfg_lower_tail/windcn_ultra/seed_2025/pi_moe_full_vs_ultra_clean_sigma06_cfg_lower_tail_seed2025.csv     results/ae_recovery_stage0/cfg_lower_tail/windcn_ultra/seed_2025/prediction_archive_full_guardrail_cfg_lower_tail_seed2025.npz
+         cfg_mid    42  0.872330   0.851865               0.00023               0.022316           0.872330 44012.142197 40835.400382         1.077794            True                       results/ae_recovery_stage0/cfg_mid/windcn_ultra/seed_42/pi_moe_full_vs_ultra_clean_sigma06_cfg_mid_seed42.csv                       results/ae_recovery_stage0/cfg_mid/windcn_ultra/seed_42/prediction_archive_full_guardrail_cfg_mid_seed42.npz
+         cfg_mid   123  0.877788   0.857308               0.00000               0.006672           0.877788 43681.575537 40835.400382         1.069699            True                     results/ae_recovery_stage0/cfg_mid/windcn_ultra/seed_123/pi_moe_full_vs_ultra_clean_sigma06_cfg_mid_seed123.csv                     results/ae_recovery_stage0/cfg_mid/windcn_ultra/seed_123/prediction_archive_full_guardrail_cfg_mid_seed123.npz
+         cfg_mid  2025  0.873357   0.852632               0.00000               0.005522           0.873357 43804.190991 40835.400382         1.072701            True                   results/ae_recovery_stage0/cfg_mid/windcn_ultra/seed_2025/pi_moe_full_vs_ultra_clean_sigma06_cfg_mid_seed2025.csv                   results/ae_recovery_stage0/cfg_mid/windcn_ultra/seed_2025/prediction_archive_full_guardrail_cfg_mid_seed2025.npz
+
+          config  seeds  passed_seeds  clean_r2_min  severe_r2_min  clean_over_rated_pct_max  severe_over_rated_pct_max  archive_global_r2_min  archive_global_r2_mean  pred_mean_ratio_min  pred_mean_ratio_max  all_seeds_pass
+  cfg_lower_corr      3             3       0.87233       0.852097                   0.00023                   0.013114                0.87233                0.874492             1.069699             1.077794            True
+    cfg_baseline      3             3       0.87233       0.851865                   0.00023                   0.022316                0.87233                0.874492             1.069699             1.077794            True
+         cfg_mid      3             3       0.87233       0.851865                   0.00023                   0.022316                0.87233                0.874492             1.069699             1.077794            True
+  cfg_lower_ramp      3             3       0.87233       0.851114                   0.00023                   0.010353                0.87233                0.874492             1.069699             1.077794            True
+  cfg_lower_tail      3             3       0.87233       0.851114                   0.00023                   0.015414                0.87233                0.874492             1.069699             1.077794            True
+cfg_conservative      3             3       0.87233       0.850665                   0.00023                   0.022086                0.87233                0.874492             1.069699             1.077794            True
+[stage0] done

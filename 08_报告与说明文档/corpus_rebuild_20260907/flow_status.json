@@ -1,0 +1,20 @@
+{
+  "corpus_version": "v4_authoritative_46_included",
+  "search_pipeline": {
+    "protocol": "PRISMA-ScR",
+    "identification_hits": 89,
+    "unique_records_after_source_dedup": 72,
+    "screened_out_title_abstract": 19,
+    "candidate_reports_sought": 53,
+    "merged_paired_preprints": 5,
+    "fulltext_assessed": 48,
+    "fulltext_excluded": 2,
+    "final_included_studies": 46
+  },
+  "supplementary_20260907_crawl": {
+    "description": "Automated OpenAlex API broad keyword crawl snapshot (unscreened raw pool)",
+    "records_retrieved": 146,
+    "screening_status": "pending_independent_pilot"
+  },
+  "status": "authoritative_ledger_closed_v4"
+}

@@ -1,0 +1,1752 @@
+
+============================================================
+工作线程: 2
+命令: /root/miniconda3/bin/python coa_bilstm_experiment.py --dataset wind_cn --seed 999 --output coa_bilstm_wind_cn_999.json --batch-size 384 --workers 8 --pin-memory --benchmark --amp
+开始时间: 2026-02-23T03:23:10.767734
+============================================================
+COA-BiLSTM Experimental Suite
+=============================
+This script runs COA-optimized BiLSTM on four datasets
+with unified 80/20 splits and 3 random seeds.
+
+Datasets: wind, electricity, air_quality, gefcom
+Seeds: 42, 123, 456
+Intensive search: Yes
+
+All required files found. Starting experiments...
+
+============================================================
+COA-BiLSTM Experiment: wind (seed=42)
+============================================================
+Device: cuda
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+
+Starting COA optimization (50 iterations)...
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 0: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 10: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 20: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 30: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 40: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+
+Optimization completed in 0.01 seconds
+Best fitness (validation loss): inf
+Best parameters:
+  hidden_dim: 142.51507745017676
+  num_layers: 2.9442833953751024
+  dropout: 0.1
+  lr: 0.01
+  weight_decay: 0.001
+  batch_size: 128.0
+
+Final evaluation on test set...
+Error running experiment for wind (seed=42): Dataset wind not found in split manifest
+
+============================================================
+COA-BiLSTM Experiment: wind (seed=123)
+============================================================
+Device: cuda
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+
+Starting COA optimization (50 iterations)...
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 0: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 10: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 20: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 30: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 40: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+
+Optimization completed in 0.01 seconds
+Best fitness (validation loss): inf
+Best parameters:
+  hidden_dim: 100.74871558584468
+  num_layers: 4.0
+  dropout: 0.1
+  lr: 0.0001
+  weight_decay: 4.973086338499115e-05
+  batch_size: 92.76818227205389
+
+Final evaluation on test set...
+Error running experiment for wind (seed=123): Dataset wind not found in split manifest
+
+============================================================
+COA-BiLSTM Experiment: wind (seed=456)
+============================================================
+Device: cuda
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+
+Starting COA optimization (50 iterations)...
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 0: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 10: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 20: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 30: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Iter 40: Best = inf, Avg = inf
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+Error in objective function: Unknown dataset: wind
+
+Optimization completed in 0.01 seconds
+Best fitness (validation loss): inf
+Best parameters:
+  hidden_dim: 256.0
+  num_layers: 4.0
+  dropout: 0.3203183948536066
+  lr: 0.0038628022221415203
+  weight_decay: 0.0006475210329883631
+  batch_size: 73.29268682355391
+
+Final evaluation on test set...
+Error running experiment for wind (seed=456): Dataset wind not found in split manifest
+
+============================================================
+COA-BiLSTM Experiment: electricity (seed=42)
+============================================================
+Device: cuda
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+
+Starting COA optimization (50 iterations)...
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Iter 0: Best = inf, Avg = inf
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+Error in objective function: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+Dataset: electricity
+  Total samples: 33000
+  Training samples: 26400 (80.0%)
+  Testing samples: 6600 (20.0%)
+
+退出码: -9
+结束时间: 2026-02-23T03:24:18.131971
+总耗时: 67.4秒

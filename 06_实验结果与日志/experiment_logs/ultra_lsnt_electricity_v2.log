@@ -1,0 +1,32 @@
+============================================================
+🚀 Ultra-LSNT-Lite on Electricity Dataset (v2)
+============================================================
+Device: cuda
+加载数据: /root/论文1/Load_history.csv
+  原始形状: (33000, 28)
+  列: ['zone_id', 'year', 'month', 'day', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18', 'h19', 'h20', 'h21', 'h22', 'h23', 'h24']
+  处理后形状: (31720, 24)
+  X形状: (31719, 24), y形状: (31719, 1)
+
+📋 模型配置: {'input_dim': 24, 'hidden_dim': 64, 'seq_len': 24, 'pred_len': 1, 'num_blocks': 1, 'num_experts': 2, 'top_k': 1, 'scales': [1]}
+📊 参数量: 122,305
+
+🏋️ 训练模型 (3 epochs)...
+Traceback (most recent call last):
+  File "/root/run_ultra_lsnt_electricity_v2.py", line 183, in <module>
+    results = evaluate_on_electricity()
+  File "/root/run_ultra_lsnt_electricity_v2.py", line 134, in evaluate_on_electricity
+    outputs = model(x)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/论文1/ultra_lsnt_lite.py", line 215, in forward
+    x = self.encoder(x)  # (batch, hidden_dim)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/论文1/ultra_lsnt_lite.py", line 54, in forward
+    batch_size, seq_len, _ = x.shape
+ValueError: not enough values to unpack (expected 3, got 2)

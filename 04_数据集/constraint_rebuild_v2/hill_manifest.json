@@ -1,0 +1,31 @@
+{
+  "source": "https://zenodo.org/records/20204946",
+  "license": "CC-BY-4.0",
+  "rated_kw": 48300.0,
+  "turbines": 21,
+  "time_semantics": "UTC end of measurement period, no artificial shift",
+  "power_source": "tblSCTurGrid/wtc_ActPower_mean kW",
+  "wind_source": "tblSCTurbine/wtc_AcWindSp_mean m/s",
+  "negative_target_policy": "retain signed source and use max(signed,0) generation target",
+  "identical_month_boundary_duplicates": 23,
+  "rows": 105264,
+  "valid_target": 98289,
+  "missing_fraction": 0.06626196990424077,
+  "training_sensor_disagreement": {
+    "n": 45669,
+    "median_abs_mps": 0.33259346371605236,
+    "p95_abs_mps": 0.879086626143682,
+    "caveat": "pairwise sensor disagreement, not ground-truth measurement error"
+  },
+  "raw_files": [
+    {
+      "file": "2016.zip",
+      "sha256": "800bb3d399e6b79278758bbd95e234e364b062a9ff7643a7f9c045b0db9e9738"
+    },
+    {
+      "file": "2017.zip",
+      "sha256": "a49c11def85623b7f0537988debfa499cca15fc6ec971256051597d91224ab1f"
+    }
+  ],
+  "prepared_sha256": "9fd8c759049f1302579bd15693be1df6d5aee6f9c7657d6d94abe3360c8eb424"
+}

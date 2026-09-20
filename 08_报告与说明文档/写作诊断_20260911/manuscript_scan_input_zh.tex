@@ -1,0 +1,919 @@
+% SOURCE: 01_论文投稿材料\chinese_manuscript\main.tex
+\documentclass[3p,twocolumn]{elsarticle}
+
+\usepackage{ctex}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lineno,hyperref}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{url}
+
+\journal{Applied Energy}
+\bibliographystyle{elsarticle-num}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfencoding=auto,
+    psdextra
+}
+\pdfstringdefDisableCommands{\def\corref#1{}}
+
+% 中文定理与命题环境定义
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}{命题}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}
+\newtheorem{hypothesis}{假设}
+\theoremstyle{remark}
+\newtheorem{remark}{注记}
+\newtheorem{example}{反例}
+
+\usepackage{dblfloatfix}
+
+% 浮动体排版优化
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.70}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.70}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{10}
+\setcounter{dbltopnumber}{5}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{面向可信部署的风电物理约束预测系统实证审计：约束来源、实现保真度与运行边界}
+
+\author[1]{李俊宇\corref{cor1}}
+\ead{ljylikezmn999@gmail.com}
+
+\author[1]{杜俊涛}
+
+\address[1]{智能电力系统与计算能源交叉研究组，中国}
+
+\cortext[cor1]{通信作者}
+
+\begin{highlights}
+\item 针对46项物理约束风电预测模型展开全流程范围界定实证审计。
+\item 被审计文献中零篇报告负面权衡，95.7\%缺失公开代码，50\%混淆模块消融。
+\item 软件代码审计证实PCT实际执行了反向参数的JS散度损失函数。
+\item 强约束下打乱物理先验引发调度成本激增+68.1\%，揭示对先验误设的极端脆弱性。
+\item 退化零申报探针揭示了孤立未对冲平衡现金流的数理缺陷。
+\end{highlights}
+
+\begin{abstract}
+物理约束深度神经网络被广泛认为能够显著提升风电功率预测的泛化性与物理可解释性。本文从理论形式化规范、软件计算图执行与不平衡结算及决策风险诊断三个维度，对这一前提假设展开了基于严谨证据链的系统审计。在 PRISMA-ScR 协议指导下，我们对 46 项当代代表性研究（38 篇同行评审期刊论文与 8 篇预印本，2023--2026）展开了全生命周期范围界定审计，揭示出三大普遍性报道瓶颈：未见任何关于运行负面权衡或约束失效的报道（0.0\%）、公开可复现软件代码存在严重赤字（95.7\%缺失公开代码，95\% Wilson 置信区间：[85.5\%, 98.8\%]），以及消融实验设计中普遍将网络参数容量与物理领域知识混为一谈（50.0\%采用模块级粗粒度消融）。对被审计文献中仅有的两项公开代码库实施的计算图审计表明：PINN-UQ 在代码层与其代数公式严格对齐（$\mathcal{D}_4 = \texttt{code-aligned}$，2.2\%），而作为端到端物理约束 Transformer 唯一公开训练代码库的 PCT 则表现出方向性执行偏离（$\mathcal{D}_4 = \texttt{divergent-code}$，2.2\%），其实际执行的损失函数颠倒了已发表 Jensen--Shannon (JS) 散度的参数方向；同时形式代数推导证实其成对核损失在数学上严格等价于标准二维乘积核密度估计，构成了确认双变量真实耦合的必要代数阴性对照。跨三座商业风电场的多随机种子前瞻性受控消融实验确立了四项实证运行边界条件：在对齐深度学习骨干下，小样本受限工况下真实物理先验展现出稳健的下行风险保护能力（Penmanshiel 上调度成本降低 1.22\%，$p < 0.001$），而强正则化下的先验误设则诱发极端非对称的经济惩罚（伪打乱对照组诱发 +68.1\% 调度成本激增，$p < 0.001$），确立了物理先验的非对称风险—收益响应包线；在弱惩罚尺度（$\lambda \le 0.01$）下，真实先验与伪打乱先验在统计上不可区分（$p = 0.231$），其实证表现等价于非特异性数值正则化；对于依赖外部气象代理的物理约束架构，静态物理代理观测陈旧度诱发调度成本单调膨胀；日前单边结算的退化零申报探针从数理上证实了孤立未对冲平衡现金流与真实预测能力的本质脱钩。基于上述发现，我们提出了五道门禁 REFORMS-PCWPF 清单，用于未来研究的方法学检验与规范部署。
+\end{abstract}
+
+\begin{keyword}
+物理约束深度学习 \sep 风电功率预测 \sep 预测-决策脱钩 \sep 条件归纳偏置 \sep 系统性实证审计 \sep 软件实现保真度 \sep 机器学习可复现性
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sections/01_intro.tex}
+\input{sections/02_related.tex}
+\input{sections/03_framework.tex}
+\input{sections/04_protocol.tex}
+\input{sections/05_results.tex}
+\input{sections/06_code_audit.tex}
+\input{sections/07_theory.tex}
+\input{sections/08_discussion.tex}
+\input{sections/09_conclusion.tex}
+
+\input{sections/11_starmethods.tex}
+
+\appendix
+\input{sections/10_appendix.tex}
+
+\section*{利益冲突声明 (Declaration of Interests)}
+作者声明不存在与本文研究相关的竞争性经济利益或人身关系。
+
+\section*{作者贡献声明 (Author Contributions, CRediT)}
+\textbf{李俊宇 (Junyu Li)}：概念构思、方法学设计、软件开发、形式化推导、调查研究、数据整理、可视化、项目管理、论文初稿撰写、论文审阅与编辑。\textbf{杜俊涛 (Juntao Du)}：实证验证、数据核查、软件（评分员间信度仲裁系统）、调查研究、论文审阅与编辑。
+
+\section*{人工智能工具使用声明 (Declaration of Generative AI)}
+在准备本手稿的过程中，作者仅将大语言模型辅助工具严格用于语法检查、代数语法校验与参考文献格式规整。使用上述工具后，作者对全部内容进行了全面审查与编辑，并对本出版物中所提出的科学诚信、分析结论和推导主张承担全部责任。
+
+\section*{致谢 (Acknowledgments)}
+我们诚挚感谢 Zenodo、Cubico Sustainable Investments、RES、TRIG 与 Elexon 开放科学团队为维护商业级风电遥测与电力市场出清历史公开数据集所作出的贡献。计算实验依托专用高性能计算基础设施完成。
+
+\setlength{\bibsep}{2.5pt plus 0.5pt minus 0.5pt}
+\small
+\bibliography{refs}
+
+\end{document}
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\01_intro.tex
+\section{引言与问题界定}
+\label{sec:intro}
+
+现代低碳电力系统的安全稳定运行高度依赖风电的高效消纳。在日益严密的运行备用裕度约束下，系统运行人员必须针对随机波动的气象与气动工况实时平衡物理偏差 \cite{holttinen2021,weron2014}。过去十年间，风电功率预测已从传统持续性基准与自回归统计模型，全面转向以时间卷积网络与自注意力机制为代表的高容量深度神经网络 \cite{zhou2021informer,wang2024timemixer,liu2024itransformer}。然而，纯统计模型即使在平稳基准测试集上表现优越，在实际运行中仍频繁产生违背物理定律的反常输出：负发电功率、突破风电机组机械惯量的异常爬坡，乃至超出气动额定容量的极值 \cite{karniadakis2021physics}。
+
+为保证预测输出的物理一致性，研究人员日益倡导将领域原理嵌入深度学习网络 \cite{raissi2019physics,karniadakis2021physics}。通过将气动 Betz 极限、经验功率曲线或运动学尾流方程融入损失函数与神经网络层，混合建模旨在将模型约束在物理可行的流形之内，提升小样本下的数据利用效率，并杜绝病态外推伪影 \cite{sheng2025annreview}。过去三年中，物理约束风电预测已成为能源计算与应用人工智能领域的重要研究范式 \cite{tgdpf2025,pct2026}。
+
+然而，这一迅速扩大的文献生态普遍建立在一个未经充分检验的前提之上：向神经网络注入物理先验能够在全部运行工况下带来普适收益。已发表研究广泛将物理约束描述为能够兼顾点预测精度与运行可靠性的归纳护栏。但在电网现场实际部署中，这一乐观共识迅速瓦解。
+
+宽泛的“物理约束”标签掩盖了内在的结构异质性。实践中，先验来源横跨基本物理不变量（如 Betz 极限）、基于历史 SCADA 离线拟合的经验曲线，乃至测试时由辅助子网络动态推断的运行参数。混淆这些本质相异的认识论来源，直接掩盖了它们对传感器漂移、气象非平稳性以及风机机械磨损的异质脆弱性。
+
+实证增益的因果归因同样存在普遍混淆。正如通用机器学习文献对实证改进归因不清的关切 \cite{lipton2019}，现有研究在消融实验中普遍粗粒度地直接剔除多层神经网络子模块（如空间图注意力块或分解编码器），而非严格隔离物理正则化权重本身（$\lambda=0$ 与 $\lambda>0$）。在此类混淆协议下，所观测到的性能改善实际源于外围网络容量的增减，而非领域空气动力学引导。
+
+发表公式规范与底层软件执行之间同样存在客观脱节 \cite{kapoor2023,pineau2021}。在张量计算流水线中，算子参数传递顺序、库语义规范与约简维度的微小差异，均会根本性改变正则化项的解析行为。即使软件实现无误，离线训练期表现良好的物理约束在在线部署时往往引入脆弱的运行时依赖：需要测试期难以同步获取的气象实况，在电网 SCADA 遥测延迟下必然遭受观测陈旧度（observation staleness）的侵蚀。此外，强行将模型拉向静态物理分布可能扭曲条件均值，而下游未校准的单边市场评估极易将偶然的申报偏差误读为真实的预测能力。
+
+这些方法学脱节驱动了一个务实的工程追问：在模型容量严格匹配且信息集合对齐的前提下，物理先验究竟能否提升点预测精度、物理一致性或市场调度价值？这些收益在何种运行条件下会发生衰减乃至逆转？
+
+\subsection{研究贡献与审计切入点}
+本工作从文献报告规范、底层软件执行与不平衡结算及决策风险诊断三个相互支撑的维度，对物理约束风电预测开展全流程实证审计：
+
+\textbf{文献范围界定审计 (PRISMA-ScR)。} 我们采用五维约束生命周期本体框架（Schema v4）对 46 项当代代表性研究（38 篇同行评审期刊论文与 8 篇预印本，2023--2026）展开双盲独立编码与信度核验（在作用阶段 $\mathcal{D}_2$ 达成 $\kappa = 0.950$）。审计揭示出三大报道现状：零篇文献披露运行负面权衡或约束失效工况（0.0\%，46/46）；95.7\% 的研究未提供公开代码（44/46，95\% Wilson 置信区间：[85.5\%, 98.8\%]）；半数文献在消融实验中混淆网络容量与物理先验（50.0\% 模块级消融，23/46，95\% Wilson 置信区间：[36.1\%, 63.9\%]）。
+
+\textbf{软件底层计算图审计。} 在被审计的 46 项研究中，仅有两项提供了公开代码库：PINN-UQ \cite{s10_pinnuq2025} 在代码实现上与其已发表代数方程严格对齐（$\mathcal{D}_4 = \texttt{code-aligned}$，2.2\%）；而作为端到端物理约束 Transformer 的唯一公开训练代码库，PCT \cite{pct2026} 的抽象语法树静态解析证实其实际执行的损失函数颠倒了已发表 Jensen--Shannon 散度的参数方向（$\mathcal{D}_4 = \texttt{divergent-code}$，2.2\%），将优化动力学由模式覆盖逆转为模式寻求。相反，形式代数推导证实其实际执行的成对核损失严格等价于标准二维乘积核估计器，构成了将代码级实现偏差与模型有效性明确分离的代数阴性对照。
+
+\textbf{前瞻性多风场受控消融实验。} 跨三座商业级风电场的多种子实验确立了四项实证运行边界条件。在样本受限工况下（$N_{\text{train}} = 1{,}583$），校准的功率曲线先验提供统计显著的下行风险对冲（Penmanshiel 上降低 1.22\% 调度成本，$p < 0.001$），而尺度对齐的伪打乱先验诱发 +68.1\% 的调度成本激增（$p < 0.001$），确立了强正则化下的非对称风险响应曲面。在弱惩罚尺度（$\lambda \le 0.01$）下，真实先验与打乱先验在统计上不可区分（$p = 0.231$），表现为非特异性数值平滑。在三座风场中，对于依赖外部物理代理的约束模型，静态代理观测陈旧度随延迟时间增加（1h 至 6h）诱发调度成本单调膨胀。最后，退化零申报诊断探针严密证明了孤立单边平衡现金流与真实预测能力的本质解耦。
+
+\paragraph{研究范畴与方法边界}
+本文确立四项明确的实证审计范畴：文献审计系统刻画 46 项当代代表性研究（38 篇同行评审期刊论文与 8 篇预印本，2023--2026）的报道与评估规范；软件审计基于该领域开源代码库解析其计算图实现保真度；前瞻性受控消融实验在三座商业级风电场与对齐骨干网络下量化物理先验的响应曲面；下游市场评估以两部制非对称短缺清算为基准开展不平衡结算与决策风险诊断。四项范畴共同构成相互支撑的因果证据链。
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\02_related.tex
+\section{相关工作与学术定位}
+\label{sec:related_work}
+
+为清晰确立本实证审计工作在能源信息学与应用机器学习交叉领域的学术坐标，我们系统梳理三个相交的研究脉络：(i) 物理约束预测中的先验知识注入范式；(ii) 风电预测的基准评测、鲁棒性与决策价值度量；以及 (iii) 经验人工智能的可复现性危机、报告清单与软件审计。
+
+\subsection{物理约束预测的三大方法学战场}
+将物理控制方程与机理融入神经网络估计器，在现有文献中常被描绘为第一性原理与数据驱动的无缝融合 \cite{karniadakis2021physics,raissi2019physics}。然而在计算能源与风电预测中，这一融入过程引发了三大根本性的方法学战场：
+
+\paragraph{战场一：运动学硬截断与湍流流形几何的冲突} 依据切入、额定与切出风速或 Betz 理论极限（$P \le \frac{16}{27} \cdot \frac{1}{2} \rho A v^3$）施加硬边界或有界激活函数，能够确保输出的物理可容许性 \cite{tgdpf2025}。然而，硬截断在饱和阈值处割裂了高阶梯度流形。当大气湍流驱动机组运行进入非平稳过渡工况时，饱和区梯度消失导致反向传播停滞，截断了神经网络的连续流形表征，阻碍模型适应瞬态气动变化。
+
+\paragraph{战场二：时空图神经网络与低阶经验一维尾流代数矩阵的错配} 将简化的经验运动学尾流公式（如 Jensen 模型或 Bastankhah--Port\'{e}-Agel 高斯模型 \cite{sheng2025annreview,s34_prx2023}）固化为图神经网络（GNN）的邻接矩阵，本质是将低阶工程代用物混同于动态 Navier-Stokes 连续介质流体力学。将一维标量代数矩阵强加于高容量时空图网络，限制了网络解析时变湍流涡流扩散的能力；同时，现有研究普遍将图网络固有的关系表征增益误归因于所注入的经验尾流代数先验。
+
+\paragraph{战场三：统计分布散度正则化与损失曲面优化刚性的对抗} 利用 Wasserstein 距离或 Jensen--Shannon (JS) 散度将预测拉齐至历史 SCADA 经验联合概率流形 \cite{pct2026,tgdpf2025}，直接遭遇多目标优化的损失刚性与梯度病态 \cite{krishnapriyan2021}。静态经验分布先验将历史平均统计特性强制绑定在非平稳气象时间序列上。在实际运行中，一旦出现遥测延迟或天气系统突变，刚性散度惩罚会惩罚物理合规的瞬态响应，诱发严重的运行时代理漂移，加剧下游电网调度成本。
+
+\subsection{风电预测的基准评测、鲁棒性与决策价值}
+短期风电功率预测的评测长期固守于标准化的点预测误差指标，包括平均绝对误差（MAE）、均方根误差（RMSE）与决定系数（$R^2$） \cite{madsen2005,optis2022}。Madsen 等人开创的里程碑式框架 \cite{madsen2005} 规范了风电预测的评估协议，强调必须跨越不同的气象运行工况、预测时间尺度与额定装机容量进行标准化度量。Optis 等人推出的开源评测框架 \textit{WE-Validate} \cite{optis2022}，倡导采用更能抵御复杂地形与气象极端波动的鲁棒分布指标。
+
+电力系统工程已确立：历史测试集上的点预测误差指标与下游经济调度价值存在本质分离 \cite{weron2014,zhang2014wind}。Pinson 等人在奠基性研究中证明 \cite{pinson2007trading}，电力市场中的最优出清竞价由匹配不对称市场惩罚比率的条件分位数决定，确立了点预测精度与决策价值的内在分离。在真实电网的实时平衡与经济调度中，系统对功率突降引发的备用短缺（Shortfall）所施加的经济惩罚远高于对称均方误差 \cite{dao2018cointegration,yan2025economicvalue}。此外，主流电力平衡结算机制（如英国 Elexon BSC 结算准则）采用离散时段（如 30 分钟）的物理净偏差结算，同一时段内的正负误差相互代数抵消。当代物理约束文献普遍孤立报告未经对冲的单边偏差现金流，误将系统偶然的预测偏差当作真实的经济价值。
+
+\subsection{机器学习的可复现性危机、报告清单与软件审计}
+过去数年间，经验机器学习领域面临着日益严峻的可复现性危机 \cite{pineau2021,gundersen2018,kapoor2023}。Kapoor 与 Narayanan \cite{kapoor2023} 针对 17 个科学领域的 300 余篇论文展开数据泄漏系统审计，证实机器学习声称的科学发现普遍在严格独立检验中难以复现。类似地，Gundersen 与 Kjensmo \cite{gundersen2018} 审计了 AAAI 与 IJCAI 的 400 篇顶会论文，发现提供公开代码或完整实验细节的研究不足 20\%。
+
+为应对上述危机，NeurIPS Reproducibility Checklist \cite{pineau2021}、D'Amour 等人关于流水线欠拟合规范性（underspecification）的揭示 \cite{damour2022}，以及 Lipton 与 Steinhardt 对机器学习修辞学弊端（数学伪饰、混淆猜测与证明、未隔离增益源头）的批判 \cite{lipton2019}，共同推动了学术界在研究透明度上的规范化演进。然而在物理约束能源预测这一细分交叉领域，方法学审计长期处于空白状态。如表~\ref{tab:lit_comparison}所示，现有综述绝大多数仅停留在定性分类描述，缺乏系统审计约束生命周期、软件代码保真度与因果消融有效性的实证框架。本工作通过构建涵盖约束生命周期、软件保真度与因果消融有效性的全流程审计框架，系统推进该领域的规范化。
+
+\begin{table*}[!t]
+\centering
+\small
+\caption{本范围界定实证审计与风电功率预测及科学机器学习现有文献综述的对比定位。}
+\label{tab:lit_comparison}
+\begin{tabularx}{\textwidth}{p{4.2cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\toprule
+\textbf{综述 / 审计文献} & \textbf{参数来源解耦} & \textbf{作用阶段划分} & \textbf{遥测需求校验} & \textbf{代码保真度审计} & \textbf{因果消融严格性} \\
+\textbf{代表性参考文献} & \textbf{($\mathcal{D}_1$)} & \textbf{($\mathcal{D}_2$)} & \textbf{($\mathcal{D}_3$)} & \textbf{($\mathcal{D}_4$)} & \textbf{($\mathcal{D}_5$)} \\
+\midrule
+Yan et al. (2016) \cite{yan2016review} & 部分解耦 & 否 & 部分提及 & 否 & 否 \\
+Maldonado-Correa et al. (2020) \cite{maldonadocorrea2020slr} & 否 & 否 & 否 & 否 & 否 \\
+Karniadakis et al. (2021) \cite{karniadakis2021physics} & 概念性论述 & 概念性论述 & 否 & 否 & 否 \\
+Optis et al. (WE-Validate, 2022) \cite{optis2022} & 否 & 否 & 部分提及 & 开源评测基准 & 否 \\
+Sheng et al. (2025) \cite{sheng2025annreview} & 否 & 部分解耦 & 否 & 否 & 否 \\
+\midrule
+\textbf{本范围界定实证审计} & \textbf{是 (Schema v4)} & \textbf{是 (Schema v4)} & \textbf{是 (Schema v4)} & \textbf{是 (静态计算图审计)} & \textbf{是 (严格受控隔离消融)} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\03_framework.tex
+\section{理论框架：五维约束生命周期分类体系 (Schema v4)}
+\label{sec:framework}
+
+科学建模的首要前提在于：概念内涵的清晰界定先于实证评测的严谨性 \cite{lipton2019}。在当代风电预测文献中，将一个神经网络冠以“物理约束”之名，将数学形式截然不同、计算结构千差万别、工程依赖迥异的模型操作笼统混为一谈。为建立全流程实证审计的形式化理论基础，我们构建了\textbf{五维约束生命周期分类体系 (Schema v4)}。
+
+\subsection{分析单元与生命周期表达}
+在我们的分类体系中，实证审计的基本分析单元定义为预测模型流水线中所嵌入的\textbf{具体物理约束对象} $C$。当一篇发表文献同时集成多种截然不同的物理约束机制时（例如结合了气动功率经验曲线与空间尾流衰减模型），每个约束对象均被独立编码为一个生命周期实例。在形式上，我们将物理约束 $C$ 定义为一个跨越五个正交生命周期阶段的五元组：
+\begin{equation}
+C = \big\langle \mathcal{D}_1, \mathcal{D}_2, \mathcal{D}_3, \mathcal{D}_4, \mathcal{D}_5 \big\rangle,
+\label{eq:constraint_tuple}
+\end{equation}
+其中 $\mathcal{D}_1$ 代表参数来源（Parameter Provenance），$\mathcal{D}_2$ 代表作用阶段（Application Stage），$\mathcal{D}_3$ 代表推理遥测依赖（Inference Telemetry Requirements），$\mathcal{D}_4$ 代表软件实现保真度（Implementation Software Fidelity），而 $\mathcal{D}_5$ 代表危害报告与消融有效性（Harm Reporting and Ablation Semantics）。从物理形式化规范到实际工业部署的生命周期全貌如图~\ref{fig:lifecycle}所示。
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_constraint_lifecycle.pdf}
+\caption{五维物理约束生命周期框架 (Schema v4)。系统追踪领域物理约束从数学机理来源 ($\mathcal{D}_1$)、计算图融入方式 ($\mathcal{D}_2$)、工业在线遥测依赖 ($\mathcal{D}_3$)、软件代码执行保真度 ($\mathcal{D}_4$) 到实证失效与消融有效性报告 ($\mathcal{D}_5$) 的全流程演进路径。}
+\label{fig:lifecycle}
+\end{figure*}
+
+\subsection{五大生命周期维度的操作化定义}
+Schema v4 通过五个正交维度对每个物理约束对象进行完备刻画：
+
+\paragraph{维度 1：参数来源 ($\mathcal{D}_1$)}
+该维度追踪约束数值参数的认识论起源与校准方式：
+\begin{itemize}[leftmargin=1.5em,itemsep=1pt,topsep=2pt]
+\item \textit{内生解析参数 (intrinsic)}：参数直接由第一性物理定律、出厂铭牌或经典方程推导，无需经验拟合（如 Betz 极限 $C_p \le 16/27$ 或经典运动学尾流方程）。
+\item \textit{历史静态经验先验 (historical-static)}：参考曲线或分布由历史 SCADA 离线拟合并在推理中保持固定（如核密度估计经验流形）。
+\item \textit{在线自适应学习参数 (learned-online)}：参数在推理期由辅助神经网络动态推断。
+\end{itemize}
+若文献未披露校准流程，归入\textit{未披露 (unreported)}。区分参数来源至关重要：静态经验先验隐式假定气动稳态，在机组老化或弃风限电时面临隐性失准风险。
+
+\paragraph{维度 2：作用阶段 ($\mathcal{D}_2$)}
+该维度界定物理知识介入深度学习流水线的具体计算环节：
+(1)~\textit{训练损失正则化 (training-loss)}：物理先验作为可微惩罚项嵌入反向传播（$\mathcal{L} = \mathcal{L}_{\text{task}} + \lambda \mathcal{L}_{\text{phys}}$）；
+(2)~\textit{推理架构约束 (inference-architecture)}：修改网络拓扑以严格限制前向输出可行域；
+(3)~\textit{数据生成增强 (data-generation)}：在训练前用于合成或清洗数据；
+(4)~\textit{事后投影滤波 (post-hoc-correction)}：推理完成后作为外置数学变换约束输出。
+
+\paragraph{维度 3：推理遥测依赖 ($\mathcal{D}_3$)}
+该维度识别在线部署时计算物理约束所需的外部实时数据流：
+(1)~\textit{无外部依赖 (none)}：仅依赖目标机组历史功率自回归序列；
+(2)~\textit{前瞻预测依赖 (forecast-input)}：必须输入未来气象预报（如数值天气预报风向风速）；
+(3)~\textit{同期状态依赖 (contemporaneous-state)}：前向推理需要来自临近机组或测风塔的无延迟同步物理测量。
+关键的逻辑区分在于：$\mathcal{D}_3 = \texttt{none}$ 仅界定基准预测模型本身不需要外部实时数据流（如测风塔实时遥测或前瞻数值天气预报）。然而，若某一物理约束机制在测试推理期依赖外部气象物理代理（例如利用风速输入检索经验静态功率曲线先验），而实际现场又缺乏前瞻数值天气预报或零延迟传感器时，工程部署将被迫在测试推理期剔除约束或以存在滞后的历史观测代偿。因此，观测陈旧度（observation staleness）是依赖物理代理的约束架构在现实遥测延迟下的实证运行隐患，而非 $\mathcal{D}_3 = \texttt{none}$ 分类所内生的必然推论。
+
+\paragraph{维度 4：实现保真度 ($\mathcal{D}_4$)}
+该维度评估公开软件是否忠实执行已发表论文的数学规范：
+(1)~\textit{验证对齐 (verified-aligned)}：公开代码经审查证实与论文公式完全相符；
+(2)~\textit{代码失配 (code-mismatch)}：公开代码在代数形式或参数方向上偏离论文公式；
+(3)~\textit{未找到代码 (not-found)}：未提供公开仓库或执行脚本。
+数学排版常掩盖数值执行差异，使得静态代码审计成为不可或缺的复核手段。
+
+\paragraph{维度 5：危害报告与消融语义 ($\mathcal{D}_5$)}
+该维度审查实证评估是否因果隔离了物理约束本身：
+(1)~\textit{严格隔离消融 (strict-isolation)}：基准与实验组参数容量完全对齐，仅改变物理先验权重（$\lambda=0$ vs.\ $\lambda>0$）；
+(2)~\textit{粗粒度模块消融 (module-ablation)}：直接切除多层神经网络子模块，混淆参数容量与领域先验；
+(3)~\textit{兼具两者 (both)}：同时报告参数隔离与模块切除；
+(4)~\textit{危害报告 (harm-reported)}：显式量化约束导致性能劣化的运行边界。
+
+\subsection{消歧准则与体系形式化一致性}
+为确保多位独立评分员在分类编码中达成高复现性，Schema v4 确立了三项基础消歧准则。参数来源（$\mathcal{D}_1$）严格独立于测试期遥测（$\mathcal{D}_3$）：离线标定参数所用的历史数据，与在线推理所需的实时数据流在工程上相互独立。作用阶段（$\mathcal{D}_2$）依据梯度反向传播路径进行严格判定：仅在反向传播中施加损失惩罚的归入训练期损失正则化，在网络随机初始化下仍能限制前向计算域的归入推理期架构约束。因果消融（$\mathcal{D}_5$）必须采用严格参数匹配的对照基准：直接移除多层神经网络子模块反映的是网络整体表征容量的变动，无法作为物理先验的独立因果依据。
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\04_protocol.tex
+\section{范围界定审计协议与实证测试平台}
+\label{sec:protocol}
+
+我们依据范围界定综述的 PRISMA 扩展规范（PRISMA-ScR）指南 \cite{tricco2018} 以及经典系统综述方法学 \cite{levac2010} 开展了系统审计。审计协议在全文提取前已预先明确制订，以规范检索字符串、合格性阈值、多轮筛选流程以及评分员间信度消歧。
+
+\subsection{信息来源与文献检索策略}
+文献检索覆盖 2023 年 1 月 1 日至 2026 年 3 月 1 日的时间窗口，并滚动监测至 2026 年 7 月以追踪最新预印本。首先，我们通过 OpenAlex API 开展程序化检索（该数据库全面索引 IEEE Xplore、ScienceDirect、SpringerLink、Wiley 与 MDPI）。采用四个题名布尔查询——$Q_1$ (\texttt{"physics-constrained" AND "wind"})、$Q_2$ (\texttt{"physics-informed" AND "wind power"})、$Q_3$ (\texttt{"physics-guided" AND "wind"}) 与 $Q_4$ (\texttt{"physics-embedded" AND "wind power"})——初筛召回 72 项候选记录。其次，针对 Google Scholar、arXiv 与预印本服务器开展靶向检索，补充捕获 17 项在线发表期刊与工作论文，初始候选文献总量达 $N=89$ 项。召回文献与 Scopus 及 IEEE Xplore 进行了交叉核验，以保证对能源与人工智能核心期刊的充分覆盖。全部检索式、原始记录与排除日志均归档于开源补充数据台账中。此外，我们将检索字段拓展至 Scopus 与 IEEE Xplore 题名、摘要与关键词（包含 \texttt{"knowledge-guided"}、\texttt{"hybrid"} 与 \texttt{"domain-informed"} 等更宽泛术语）开展了定向敏感性检索，额外识别出 14 篇文献；全文审查确认其中无一报告失效工况或负面权衡，专门用于压力测试 0.0\% 负面权衡结论的稳健性。需强调的是，这 14 篇敏感性文献专门用于核验负面危害报告；完整的五维（$\mathcal{D}_1$--$\mathcal{D}_5$）深度提取与评分员间信度检验严格在由 PRISMA-ScR 规范确立的核心 46 项研究语料库中开展。
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{prisma_flow_diagram.pdf}
+\caption{PRISMA-ScR 范围界定语料库推导流程图 ($89 \rightarrow 72 \rightarrow 53 \rightarrow 48 \rightarrow 46$)。跨源去重消除了17项重复记录，预印本-期刊成对合并去重归并了5项，全文资格审查排除了2项，最终确定 46 项合资格全文研究。}
+\label{fig:prisma_flow}
+\end{figure}
+
+\subsection{文献筛选、去重与纳入排除准则}
+候选记录经历了如图~\ref{fig:prisma_flow}所示的多阶段结构化筛选。跨数据库查重从初始的 89 项记录中剔除了 17 项重复条目，保留 72 项独立记录进入题名与摘要评估。该阶段依据明确标准排除了 19 项记录：9 项聚焦于非预测类任务（如风机结构健康监测、叶片裂纹检测或气弹疲劳损伤建模）；9 项专注于毫秒/秒级实时变桨与有功功率控制而非多步功率预测；1 项不包含任何物理融入建模组件。此阶段最终筛选出 53 项待检索全文的研究。
+
+由于作者在正式期刊录用前通常在公开预印本库（如 arXiv 或 SSRN）发布初稿，将同一课题的预印本与正式期刊论文割裂看待会人为虚增文献统计基数。为此，我们执行了严格的“研究级”（Study-level）成对合并去重准则：只要预印本与已发表同行评审期刊论文共享完全相同的作者群、实证数据集与核心数学公式，两者即被合并为单项研究台账，统一保留正式期刊引用。经过细致比对，共识别并合并了 5 对重复条目（例如 \textit{Applied Energy} 2025 与 SSRN 2024；\textit{Electric Power Systems Research} 2026 与 SSRN 2026），将候选集精炼至 48 项独立研究。
+
+对其余 48 篇全文文献，两名审计员依据三项明确的范围界定合格性准则进行了独立评估：(1) 研究核心聚焦于超短期或短期风电功率预测；(2) 明确形式化构建并在计算中执行了显式物理约束、控制方程或领域边界；(3) 在真实或仿真风电功率时间序列上开展了实证评估。审查最终排除了 2 项研究：研究 S26 仅预测大气风速而未施加风电功率约束；研究 S42 仅实现了启发式特征子空间聚类而无任何领域物理方程。此番严格筛选确立了最终符合 PRISMA-ScR 规范的代表性实证审计文献库，共包含 \textbf{$N=46$ 项独立研究}（涵盖 38 篇同行评审期刊论文与 8 篇具有广泛影响力的预印本/工作论文，包括 UniWind \cite{s27_uniwind2026}）。
+
+\subsection{评分员间信度基准测试}
+为在全语料库数据提取前验证 Schema v4 分类体系的操作稳定性，三名独立评分员（Coder A、Coder B 与 Coder C）对分层抽样的 20 篇代表性文献样本进行了双盲独立编码。基准测试显示出各维度高度的评分员间一致性：文献合格性筛选达成百分之百共识（Fleiss $\kappa = 1.000$），精准剔除了对照组 S26 与 S42；参数来源（$\mathcal{D}_1$）在总体与纳入样本上均呈现完美一致性（$\kappa = 1.000$）；作用阶段（$\mathcal{D}_2$）达到近乎完美的一致性（总体 $\kappa = 0.950$，纳入样本 $\kappa = 0.938$）；推理遥测依赖（$\mathcal{D}_3$）呈现出实质性一致（总体 $\kappa = 0.743$，纳入样本 $\kappa = 0.646$）。
+
+相比之下，实现保真度（$\mathcal{D}_4$）在仲裁前的一致性呈现中等水平（总体 $N=20$ 先导样本含负对照时 $\kappa = 0.716$，但严格在纳入样本上时下降至 $\kappa = 0.341$）。这一数值降幅在测量学与统计学中极为典型，反映了著名的 Feinstein 与 Cicchetti 患病率悖论（Prevalence Paradox）：由于纳入样本中高达 92.6\% 的文献未提供公开代码，随机期望一致率极高（$P_e = 86.1\%$），使得即使实际观测一致率高达 $P_o = 90.7\%$，计算出的 Fleiss' $\kappa$ 依然被大幅压低。此外，在缺乏公开代码仓的静态文本阅读中，不同评审员极易对正文宣称的物理约束究竟是“可执行算法”还是“概念性愿景”产生分歧，这一模糊性直接证明了仅凭正文无法可靠推断软件实现，强力支撑了开展底层静态计算图审计的方法学必要性。对于消融语义（$\mathcal{D}_5$），评分员达成高度一致（总体 $\kappa = 0.851$，纳入样本 $\kappa = 0.818$）；而在危害报告方面，三位评分员在 18 篇纳入文献中均一致判定危害报告为零（0/18），由于无边际方差（$P_e = 1.0$），Kappa 统计量在数学上未定义，严格报告为 100\% 观测一致率（$P_o = 1.000$）。在完成先导校准与仲裁一致后，全量 46 篇文献由第一作者（J.L.）完成逐行全文提取并记录精准章节、公式编号与原文证据，并由第二作者（J.D.）对核心定量参数进行独立复核。
+
+\subsection{软件代码审计协议 (PCT 与 PINN-UQ)}
+软件可用性审计遵循标准化的五阶段检索流程，全面排查正文主体、脚注、数据与代码可用性声明、出版社公开代码托管库以及作者学术主页。在全量 46 项研究中，仅有两篇论文提供了公开可获取的代码库。其中，PINN-UQ (S10, \textit{Eng. App. AI} 2025) 经审计确认其计算图严格忠实实现了其所陈述的机电代数方程（通过 \texttt{sn.Tie} 实现 $P = g T \omega$ 与 $P = \frac{1}{2} C_p \rho A v^3$），分类为\textit{验证对齐}。另一公开项目物理约束 Transformer (PCT, S02, \textit{Sci. Rep.} 2026) 提供了官方 GitHub 仓库（提交哈希 \texttt{65941ec}），我们对其核心训练脚本（\texttt{train\_clean.py} 和 \texttt{tst/loss.py}）开展了逐行计算图与抽象语法树审计，具体细节见第~\ref{sec:code_audit}节。
+
+\subsection{下游电力系统实际调度与出清结算实证测试基准}
+为使实证审计扎根于跨越异质微地形的真实电力系统运行，我们在英国三座商业级陆上风电场（具备10分钟级高精度工业SCADA遥测）上搭建了前瞻性实证测试平台。\textit{Hill of Towie 风电场}（额定装机 48.3~MW，21 台西门子 SWT-2.3-82 机组）地处复杂起伏高地，微地形尾流干扰显著，作为独立时空外推基准（全量 2017 年 7,599 个滚动预报起点，对应 45,594 个下步结算时段），该数据集由 RES 代表 TRIG 在 Zenodo 上以 CC-BY-4.0 许可开源发布 \cite{zenodo_hilloftowie}。\textit{Kelmarsh 风电场}（额定装机 12.3~MW，6 台森吉安 MM92 机组）位于开阔平原农田，作为核心开发基准（8,212 个预报起点，49,272 个结算时段）\cite{zenodo_kelmarsh}。\textit{Penmanshiel 风电场}（额定装机 28.7~MW，14 台森吉安 MM82 机组，编号 WT01--WT15，其中 WT03 缺省）\cite{zenodo_penmanshiel} 位于苏格兰边境丘陵地带，具有 8,440 个预报起点，我们配置了样本受限分区（$N_{\text{train}} = 1,583$），用于测试小样本受限工况下的过拟合与物理先验引导能力。需特别强调的是，由于 Penmanshiel 在地形与机型上与 Kelmarsh 及 Hill of Towie 均存在固有物理差异，跨站点对比必然同时叠加了地形异质性与样本量差异，因此必须依赖场站内受控消融实验以严密隔离样本规模因素。
+
+测试基准在严格冻结的前瞻性协议下运行：输入历史回溯长度 $L=36$（6小时），预测时域 $H=36$（6小时），下游日前调度考核关注次小时交付窗口 $H_{\text{disp}} = \{1, \dots, 6\}$，滚动步长 $S=6$ 以避免相邻结算周期重叠。基准模型套件涵盖无约束 DLinear、边界约束 DLinear ($\lambda=0.01$)、经验功率曲线约束 DLinear ($\lambda=0.01$)、经验条件分布先验 DLinear ($\lambda=0.01$)，并引入经典 Ridge 岭回归与 Persistence 持续性预测作为基准，均在 5 个随机初始化种子下重复评估。此外，为验证发现是否受限于线性结构，我们额外引入了代表性多块通道独立 Transformer 架构（\textbf{PatchTST} \cite{nie2023patchtst}，块长度6，步长4，隐藏维度64，带RevIN的两层编码器），在三座风场、四种约束配置与5个种子下完成 60 次独立训练运行，作为探索性深度架构敏感性基准。
+
+离线决策校准采用后验分位数偏移标定 $\delta_h$，参数严格在独立的 2016 年校准集上拟合（在罚款比率 $r=2$ 下对应临界分位数 $q = 1/(r+1) = 1/3$），对 2017 年测试期 SCADA 与市场价格实现严格盲化。真实市场出清基于英国 Elexon BSC 2017 全年官方系统买入价格（SBP，均值 \pounds 44.27/MWh，峰值 \pounds 1,509.80/MWh，包含 68 个下探至 -\pounds 73.15/MWh 的负电价时段）。结算严格执行 30 分钟物理净偏差结算规则：
+\begin{equation}
+E_{SP} = \sum_{t \in SP} (p_t - y_t) \cdot \frac{P_{\text{rated}}}{6000} \quad [\text{MWh}],
+\label{eq:bsc_netting}
+\end{equation}
+由此生成单边短缺清算惩罚与双边不平衡结算现金流作为决策风险诊断，所有统计显著性均通过 2,000 次 7 天圆形块成对自举检验（Block Bootstrap）予以严密核验。
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\05_results.tex
+\section{实证审计结果}
+\label{sec:results}
+
+涵盖 46 项范围界定文献与三座商业风电场前瞻受控消融基准的实证审计，系统裁决了物理约束风电预测的核心运行主张。
+
+\subsection{审计文献中运行失效边界的系统性缺失}
+对 46 项核心范围界定文献的审计表明，已发表论文无一记录运行负面权衡或约束失效工况（0.0\%，46/46，95\% Wilson 置信区间：[92.3\%, 100.0\%]，\texttt{negative\_effect == 'no'}）。这一零负面效应报道特征在我们针对 Scopus 与 IEEE Xplore 扩展检索字段（包含 knowledge-guided、hybrid 与 domain-informed 等宽泛词汇）的 14 篇补充敏感性检索中同样得到确认。在核心语料库中，仅 3 项研究（6.5\%，S01、S02、S10）评估了先验参数扰动，其余 43 项研究（93.5\%）均仅在理想标称工况下测试。标称工况下的单一报道掩盖了工程折中与有效性边界，以普适提升的叙事替代了严谨的工程边界界定。
+
+\subsection{严峻的公开代码赤字严重阻碍独立验证}
+在 46 项核心研究中，静态软件审计确立了高达 95.7\% 的公开代码赤字（44/46，95\% Wilson 置信区间：[85.5\%, 98.8\%]，$\mathcal{D}_4 = \texttt{not-found}$），44 篇论文既未提供公开代码仓库亦未提供可执行脚本。在仅有的两个公开代码库中，PINN-UQ (S10) 提供了经静态审查证实与其机电代数方程完全对齐的可执行代码（$\mathcal{D}_4 = \texttt{code-aligned}$，2.2\%）；而作为端到端物理约束 Transformer 唯一公开训练代码库的 PCT (S02)，在核心损失函数的执行方向上与发表论文存在代数级失配（$\mathcal{D}_4 = \texttt{divergent-code}$，2.2\%）。被审计文献中 97.8\% 的研究因此无法开展独立的计算复核。
+
+\subsection{约束生命周期分布与消融实验的结构混淆}
+消融语义审计（$\mathcal{D}_5$）揭示出核心语料库中半数文献存在结构性因果混淆：50.0\% 的研究（23/46，95\% Wilson 置信区间：[36.1\%, 63.9\%]）通过直接移除多层神经网络子模块（如空间图卷积层、交叉注意力块或模态分解单元）开展消融，而非隔离惩罚权重（$\lambda=0$ vs. $\lambda>0$）。剥离网络模块同步移除了成千上万个可训练参数，所测得的性能差异反映的是网络综合表征容量而非物理先验本身（表~\ref{tab:lifecycle_distribution}，图~\ref{fig:audit_distribution}）。需要特别强调的是，上述公开代码赤字（95.7\%）与粗粒度模块消融（50.0\%）统计比例严格限定于本研究系统审计的 46 项核心文献语料库及其 Wilson 置信区间，避免无边界外推至所有可能替代关键词文献。
+
+\input{tables/table1_lifecycle_distribution.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_field_audit_distribution.pdf}
+\caption{46 项审计文献的生命周期经验分布 ($N=46$)。(a) $\mathcal{D}_1$ 参数来源；(b) $\mathcal{D}_2$ 作用阶段；(c) $\mathcal{D}_3$ 推理遥测需求；(d) $\mathcal{D}_5$ 消融语义细分（严格物理隔离消融 vs 混淆的多参数模块级消融）。}
+\label{fig:audit_distribution}
+\end{figure*}
+
+\subsection{因果解耦：先验误设敏感性、数值正则化拟态与静态代理陈旧度}
+三座商业级风电场的 3D 前瞻受控消融实验隔离了先验误设、数值平滑与静态观测陈旧度的因果效应（表~\ref{tab:controlled_ablation}，图~\ref{fig:causal_ablation}）。
+
+\input{tables/table2_dynamic_settlement.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_causal_ablation.pdf}
+\caption{三座商业级风电场的前瞻性受控消融基准实验。(a) 强物理约束对先验误设的极端敏感性（Penmanshiel 风电场，$N_{\text{train}}=1,583$）：真实先验带来防御性改善（$-1.22\%$），而破坏物理对应（伪打乱对照）导致调度成本激增 $+68.1\%$；(b) Kelmarsh 风电场上的低 $\lambda$ 数值正则化拟态，在 $\lambda \le 0.01$ 时真实先验与伪打乱先验在统计上完全不可区分 ($p=0.231$)，实证表现为非特异性数值平滑；(c) 静态物理代理观测陈旧度诱发的调度成本单调膨胀：随着静态代理滞后 $\tau$ 从 1h 增加至 6h，调度成本呈现严格单调上升；(d) 对称均方误差 (RMSE) 与非对称调度决策风险 ($r=2$) 的彻底脱钩。}
+\label{fig:causal_ablation}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_within_site_learning_curve.pdf}
+\caption{Kelmarsh 与 Hill of Towie 场站内样本量学习曲线 ($N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$, 5 个随机种子, 95\% CI)。场站内实验严格剥离了地形与机型混杂：在所测试的受限样本区间 ($N_{\text{train}} \le 1,000$)，真实物理先验在两场站均一致取得更低的调度成本（Kelmarsh 为 $-2.00\%$，Hill of Towie 为 $-3.62\%$）；在充裕数据 ($N_{\text{train}}=5,000$) 下，假设空间饱和使该增益闭合。而在所有样本规模下，强误设先验均引发激增（$+43\%$ 至 $+98\%$）。}
+\label{fig:within_site_learning_curve}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_prior_corruption_gradient.pdf}
+\caption{连续先验退化与工程漂移敏感性响应曲面。(a) 真实先验与打乱先验的连续插值 $\alpha \in [0.0, 1.0]$，测定 Penmanshiel 上临界容错阈值 $\alpha^* \approx 0.07$；(b) 机组气动老化额定容量折损：折损超过 10\% 即导致先验劣于无约束基准；(c) 风速计校准漂移：测量标度误差超出 $[-5\%, +5\%]$ 同样造成调度性能劣化。}
+\label{fig:corruption_gradient}
+\end{figure*}
+
+表~\ref{tab:controlled_ablation} 与图~\ref{fig:causal_ablation} 确立了四项因果实证推论：
+
+\paragraph{防御性归纳护栏、先验误设脆弱性与场站内样本量学习曲线 (图~\ref{fig:causal_ablation}a, 图~\ref{fig:within_site_learning_curve}, 图~\ref{fig:corruption_gradient})}
+在样本受限的 Penmanshiel 风电场（$N_{\text{train}} = 1,583$），无约束 DLinear 出现过拟合，调度决策成本为 $0.09881 \pm 0.00027$。注入校准的真实经验功率曲线先验并配置强惩罚权重（$\lambda=1.0$）时，非对称调度成本降至 \textbf{$0.09760 \pm 0.00044$}（$-1.22\%$，95\% 自举置信区间：$[-1.84\%, -0.61\%]$，$p < 0.001$），实证确立了真实物理先验在数据稀缺阶段的稳健下行保护能力。然而，尺度对齐的\textbf{伪打乱先验 (Pseudo-Scrambled prior)}——在风速轴上随机置换映射关系、但保持完全相同的损失形式、惩罚尺度与梯度范数时，模型性能发生严重劣化，调度成本骤增至 \textbf{$0.16611 \pm 0.00335$}（激增 $+68.1\%$，95\% 自举置信区间：$[+64.2\%, +72.0\%]$，$p < 0.001$）。这一对比揭示出物理先验高度敏感的非对称风险响应包线：强正则化在抑制自由假设空间的同时，成倍放大了误设先验引入的反向梯度扰动。
+
+为严格剥离地形与机型干扰，我们在 Kelmarsh 与 Hill of Towie 开展了场站内样本量学习曲线实验（$N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$，5 个随机种子，图~\ref{fig:within_site_learning_curve}）。在样本匮乏工况（$N_{\text{train}} = 500$）下，真实物理先验在两座风场均一致降低了调度成本。在 Kelmarsh，调度成本从 $0.09648 \pm 0.00314$（无约束）降至 $0.09455 \pm 0.00285$（$-2.00\%$），打乱先验则激增至 $0.13798 \pm 0.02338$（$+43.0\%$）。在 Hill of Towie，真实先验使成本从 $0.10444 \pm 0.00312$ 降至 $0.10066 \pm 0.00307$（$-3.62\%$），而打乱先验升至 $0.17209 \pm 0.01703$（$+64.8\%$）。随着训练样本增至 $N_{\text{train}} = 5{,}000$，无约束 DLinear 充分饱和了假设空间（两场站分别达到 $0.08812$ 与 $0.08936$），真实先验的相对收益显著收窄（分别为 $0.08841$ 与 $0.09091$）。与此形成鲜明对照的是，伪打乱先验在所有样本规模下均造成严重损害（成本激增 $+43\%$ 至 $+98\%$）。该结果表明，神经网络对先验误设具备高度脆弱性，而真实物理先验的实证收益在我们测试的配置下主要集中于数据受限工况。
+
+进一步针对连续退化因子 $\alpha \in [0.0, 1.0]$ 的测试（图~\ref{fig:corruption_gradient}a）表明，性能劣化并非仅在 100\% 置换时发生：在 Penmanshiel 上性能随误设连续单调恶化，其临界容错阈值仅为 $\alpha^* \approx 0.07$（$\alpha=0.2$ 时成本已恶化 $+5.9\%$ 至 $0.10469$）。工程漂移实验同样证实，机组气动老化折损超出 10\%（图~\ref{fig:corruption_gradient}b）或风速计标定偏差超出 $\pm 5\%$（图~\ref{fig:corruption_gradient}c），均会使标称物理先验由防御性收益翻转为实际经济损失。
+
+\paragraph{低惩罚权重下的非特异性数值正则化拟态 (图~\ref{fig:causal_ablation}b)}
+在弱惩罚尺度（$\lambda = 0.01$）下，真实物理先验与伪打乱对照组展现出实证等价性。在 Kelmarsh 风电场，打乱先验取得的调度成本为 $0.08801 \pm 0.00008$，与真实先验的 $0.08810 \pm 0.00009$ 在种子方差范围内不可区分（$p = 0.231$）。在 $\lambda \le 0.01$ 时随机置换功率曲线能够重现与领域气动先验完全一致的收益，表明文献在极低权重下广泛报道的边际增益在实证上表现为非特异性数值平滑，并未体现领域气动推理。
+
+\paragraph{静态物理代理观测陈旧度诱发的调度成本单调膨胀 (图~\ref{fig:causal_ablation}c)}
+对静态代理滞后 $k \in \{6, 12, 18, 36\}$（对应 1 至 6 小时物理代理观测陈旧度）的参数化扫描确立了调度成本在三座风场的严格单调膨胀（Hill of Towie：归一化成本从 $k=6$ 时的 $0.09022$ 单调爬升至 $k=36$ 时的 $0.09257$，劣于无约束基准的 $0.08924$）。我们明确厘定该脆弱性的适用范畴：这一性能衰减曲线特异性地冲击那些在测试推理期依赖外部气象物理代理（如利用风速检索功率曲线先验）的约束架构。这绝不能与“文献审计中 82.6\% 的研究分类为 $\mathcal{D}_3 = \texttt{none}$”混为一谈——后者仅反映基准预测流水线本身不要求前瞻 NWP 数据流。然而，对于依赖物理代理的约束架构，现场若缺乏前瞻气象输入或零延迟测风传感器，工程实践将被迫在测试推理期剔除约束或采用滞后的历史观测代偿。这种时间代理失配导致调度性能恶化，证实代理陈旧度是依赖代理变量的约束架构在现实遥测延迟下的实证运行隐患，而非 $\mathcal{D}_3 = \texttt{none}$ 分类所内生的必然推论。
+
+\paragraph{信息对称特征基准的非对称响应}
+若向无约束模型直接提供同期风速特征（\textit{双通道 DLinear}），其点预测 RMSE 获得改善（在 Kelmarsh 从 $0.1717$ 降至 $0.1697$），但其尾部非对称调度风险却反而上升（$0.08910$ vs. $0.08812$），未对冲的高频气象波动放大了日前申报决策的方差。
+
+\subsubsection{基于成对自举检验的统计显著性核验}
+针对无约束 DLinear 在校准决策下的 7 天圆形块成对自举检验（2,000 次重抽样，表~\ref{tab:paired_bootstrap}）确认分布正则化在 Hill of Towie（$\Delta \text{Cost}_{\text{dyn}} = +0.000766$, 95\% CI $[+0.000277, +0.001201]$）与 Kelmarsh（$+0.000932$, 95\% CI $[+0.000423, +0.001385]$）上的动态成本惩罚与短缺清算差额达到 $p < 0.01$ 的统计显著性，证实约束损益在时间自相关序列下统计稳健。
+
+\input{tables/table3_paired_bootstrap.tex}
+
+\subsection{决策风险与日前单边结算的退化零申报反常}
+依赖孤立未对冲的平衡现金流评估模型会产生严重评估幻象：在英国 BSC 30 分钟物理净平衡结算下，退化零申报反例（$\hat{y} \equiv 0$）无需输出预测即可年均录得 22 万至 24 万英镑账面现金流（表~\ref{tab:zero_bid_diagnostic}，图~\ref{fig:market_decoupling}）。
+
+\input{tables/table4_zero_bid_diagnostic.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_market_decoupling.pdf}
+\caption{英国 BSC 净平衡结算下的市场结算脱钩与指标反转诊断。(a) 归谬法反例：完全不输出预测的退化零申报反例 ($\hat{y} \equiv 0$) 承担 \pounds 0.00 短缺惩罚，却因吸收单边入网电量在三座风场年均录得每台机组超过 22 万英镑账面现金流，表明单边现金流不能作为独立评估指标；(b) Hill of Towie 上的指标反转：分布约束使名义平衡现金流激增 $+42.5\%$，而真实的非对称决策风险却恶化 $+6.5\%$，点误差 RMSE 恶化 $+3.5\%$。}
+\label{fig:market_decoupling}
+\end{figure*}
+
+分析揭示出两个评价陷阱：
+
+\paragraph{日前单边结算的退化零申报反常与两部制市场解析 (图~\ref{fig:market_decoupling}a)}
+在所有时段均申报功率为零的模型（$\hat{y} \equiv 0$），测试期内产生的短缺清算惩罚为精确的 \pounds 0.00，却因未申报电量被系统以买入价（SBP）单边结算，在三座风电场年均录得 +\pounds 22.3 万至 +\pounds 24.3 万账面现金流。根据现代两部制电力现货市场微观经济学原理 \cite{pinson2007trading}，发电机组总运营收益由日前批发合同收益与实时物理偏差清算共同决定：
+\begin{equation}
+R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q),
+\label{eq:two_settlement_cn}
+\end{equation}
+其中 $q$ 为日前申报电量，$P_{\text{DA}}$ 为日前出清价格，$y$ 为实际计量发电量，$P_{\text{imb}}$ 为实时不平衡清算价格（在英国 P305 改革后的单一平衡价格体系下 $P_{\text{SBP}} \approx P_{\text{SSP}} = P_{\text{imb}}$）。若实证评估脱离日前合同收益 $P_{\text{DA}} \cdot q$，孤立计算实时平衡现金流 $R_{\text{imb}} = P_{\text{imb}} \cdot (y - q)$，令 $q \equiv 0$ 会将全部实际发电量转化为系统溢出并以 $P_{\text{imb}}$ 结算，产生数十万英镑的虚假账面盈利，同时完全掩盖了日前市场全部收益归零的巨大商业损失。零申报反例作为严格检验评价指标完备性的数学归谬法诊断探针（\textit{reductio ad absurdum}），严密证明了孤立单边平衡现金流与真实预测能力的本质脱钩，无法充当检验预测模型预测能力的有效代理指标；完整的商业价值评价必须结合日前合同收益（$P_{\text{DA}} \cdot q$）与实时不平衡结算开展联合建模。
+
+\paragraph{Hill of Towie 上的指标反转 (图~\ref{fig:market_decoupling}b)}
+在 Hill of Towie 风电场，施加经验分布约束在账面上呈现出财务增益——使年均平衡现金流从 \pounds 8,543 增至 \pounds 12,174/(台$\cdot$年)（表~\ref{tab:zero_bid_diagnostic}）。然而，该模型的实际归一化决策风险（$\text{Cost}_{\text{static}}$）与 RMSE 却同时恶化了 \textbf{$+6.5\%$} 与 $+3.5\%$。这一名义财务增益完全是由于模型产生的负向低估偏差恰好撞上了系统正向电价尖峰，属于纯粹的统计伪饰。这一反差揭示出单边现金流与真实预测能力在本质上发生脱钩，确立了实证评估必须将非负的决策风险（Pinball 损失）与历史货币结算完全解耦度量。
+
+\subsection{跨骨干网络敏感性与基准模型竞争力}
+跨 60 次 PatchTST \cite{nie2023patchtst} 训练运行的评估确立了骨干架构容量改变现金流方向的同时保持短缺抑制特性（表~\ref{tab:patchtst_and_rules}）。
+
+\input{tables/table5_patchtst_and_rules.tex}
+
+如表~\ref{tab:patchtst_and_rules} 所示，PatchTST 同样验证了分布先验在减少动态短缺上的有效性（在三座风场每年每台风机分别减少短缺清算支出 \pounds 232.44、\pounds 127.49 与 \pounds 790.51）。然而，净平衡现金流在不同骨干架构间出现了剧烈分化：施加分布约束反而导致 PatchTST 在 Hill of Towie 上的净现金流缩减 $-\text{\pounds} 568.68$/(台$\cdot$年)，直接逆转了 DLinear 上的正向效应。在样本受限的 Penmanshiel 风电场，经典统计基准（Ridge 岭回归为 $0.09744$，Persistence 持续法为 $0.09586$）的调度成本优于全部物理约束深度网络，表明外部物理正则化无法普遍弥补深度网络在极端小样本下的参数过拟合；无约束线性基准的高竞争力进一步警示，深度物理约束的引入必须经过严格的运行风险降低检验，而不能预先假定其优于简单模型。
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\06_code_audit.tex
+\section{消融实验、代码保真度与 PCT 诊断性案例研究}
+\label{sec:code_audit}
+
+检验物理约束的实证主张，需要同时裁决已发表消融实验的因果隔离度与公开软件计算图的代数执行保真度。
+
+\subsection{已发表文献消融实验中的因果混淆}
+对全量 46 篇文献的深入语义提取表明，仅有 \textbf{50.0\% (23/46)} 的研究执行了真正隔离物理约束的消融实验，详见表~\ref{tab:ablation_semantics}。
+
+\input{tables/table4_ablation_semantics.tex}
+
+在另外 50.0\%（23/46）的文献中，所谓“消融实验”直接移除了整个神经网络子模块——例如空间图注意力卷积块、多头跨注意力交互层或信号多尺度分解层。当模型在移除大型 GNN 模块后性能下降时，无法判定该下降源自邻接矩阵中物理方程的缺失，还是源自数以万计可训练参数及多层非线性表征能力的剥离。这种模块级消融评估的是网络架构的综合参数容量，无法构成物理先验因果有效性的独立实证证据。
+
+\subsection{诊断性案例研究：物理约束 Transformer (PCT)}
+\label{sec:pct_case}
+正如第~\ref{sec:protocol}节所述，在被审计的 46 项研究中，仅有两项公开了软件代码库：PINN-UQ \cite{s10_pinnuq2025} 在代码实现上与其已发表代数关系严格对齐（$\mathcal{D}_4 = \texttt{code-aligned}$，2.2\%），而\textbf{物理约束 Transformer (PCT)} \cite{pct2026}（发表于 \textit{Scientific Reports} 2026 年，DOI: 10.1038/s41598-025-34348-x；官方 GitHub 代码仓库，提交版本 \texttt{65941ec}）是端到端物理约束 Transformer 的唯一公开训练代码库，也是唯一存在代码实现偏差的代码库（$\mathcal{D}_4 = \texttt{divergent-code}$，2.2\%）。为了洞察统计分布物理约束究竟如何在底层软件中落地，我们对 PCT 展开了深入的静态计算图代码审计。
+
+\subsubsection{论文数学公式规范与实际代码执行的代数级失配}
+在 PCT 论文的第 2 节中，作者提出通过惩罚历史风速-功率经验联合概率分布（$P_{\text{ref}}$）与模型预测的联合概率分布（$P_{\text{pred}}$）之间的统计差异来正则化网络，并显式给出了标准对称的 \textbf{Jensen--Shannon (JS) 散度}：
+\begin{equation}
+\begin{aligned}
+\mathcal{L}_{\text{JS}}(P_{\text{pred}} \parallel P_{\text{ref}}) &= \frac{1}{2} \text{KL}\left(P_{\text{pred}} \,\Big\|\, \frac{P_{\text{pred}} + P_{\text{ref}}}{2}\right) \\
+&\quad + \frac{1}{2} \text{KL}\left(P_{\text{ref}} \,\Big\|\, \frac{P_{\text{pred}} + P_{\text{ref}}}{2}\right),
+\end{aligned}
+\label{eq:js_divergence}
+\end{equation}
+其中 $\text{KL}(p \parallel q) = \sum_i p_i \log \frac{p_i}{q_i}$ 为经典的 Kullback--Leibler (KL) 散度。论文强调，JS 散度的对称性与理论有界性（$0 \le \mathcal{L}_{\text{JS}} \le \ln 2$）能够提供数值稳定性并防止梯度爆炸。
+
+对 PCT 官方训练脚本（\texttt{train\_clean.py}，第 349--352 行；提交哈希 \texttt{65941ec}）展开抽象语法树（AST）静态解析，其实际损失计算节点为：
+\begin{center}
+\small
+\begin{minipage}{0.95\columnwidth}
+\texttt{loss\_phy = 0.5 * (} \\
+\hspace*{1em}\texttt{F.kl\_div(pred\_kde.log(), m\_kde, ...)} \\
+\hspace*{1em}\texttt{+ F.kl\_div(true\_kde.log(), m\_kde, ...))}
+\end{minipage}
+\end{center}
+在 PyTorch C++ ATen 内核后端（\texttt{native/Loss.cpp}，实现 \texttt{kl\_div\_backward\_cpu}）中，函数 \texttt{torch.nn.functional.kl\_div(input, target)} 的规范定义为：
+\begin{equation}
+\begin{aligned}
+&\text{\texttt{kl\_div}}(u, v) = \sum_{i} v_i \cdot \big( \log v_i - u_i \big).
+\end{aligned}
+\label{eq:pytorch_kl}
+\end{equation}
+将 \texttt{input} 绑定为 $\log p$、\texttt{target} 绑定为 $q$ 时，C++ 内核计算：
+\begin{equation}
+\begin{aligned}
+\text{\texttt{kl\_div}}(\log p, q) &= \sum_{i} q_i \cdot \big( \log q_i - \log p_i \big) \\
+&= \text{KL}(q \parallel p).
+\end{aligned}
+\label{eq:reverse_kl}
+\end{equation}
+因此，\texttt{train\_clean.py} 构建的计算图实际执行：
+\begin{equation}
+\begin{aligned}
+\mathcal{L}_{\text{code}} &= \frac{1}{2} \text{KL}\left(M \parallel P_{\text{pred}}\right) + \frac{1}{2} \text{KL}\left(M \parallel P_{\text{ref}}\right), \\
+\text{其中 } M &= \frac{P_{\text{pred}} + P_{\text{ref}}}{2}.
+\end{aligned}
+\label{eq:reverse_js}
+\end{equation}
+公式~\eqref{eq:reverse_js} 定义了\textbf{反向参数的 JS 散度}。该式在 $P_{\text{pred}}$ 与 $P_{\text{ref}}$ 之间保持代数对称。然而，将 KL 散度参数从 $\text{KL}(P \parallel M)$ 颠倒为 $\text{KL}(M \parallel P)$，将优化动力学从模式覆盖（mode-averaging，对 $P$ 求期望并惩罚零覆盖）逆转为模式寻求（mode-seeking，对 $M$ 求期望并对低概率区域施加极端除法惩罚）。在稀疏评估网格或无界支集上，一旦预测概率 $P_{\text{pred}}(i,j) \to 0$ 而混合分布 $M(i,j) > 0$，比值 $M/P_{\text{pred}}$ 发散至无穷大。这彻底破坏了标准 JS 散度的 $[0, \ln 2]$ 有界性保证，在计算图底层重构了物理正则化的损失曲面。
+
+\paragraph{实证优化动力学对比：官方 Reverse-JS 与修正 Standard-JS}
+为回答参数调换是否对神经网络训练产生实质影响，我们在 Kelmarsh 与 Penmanshiel 上跨 $\lambda \in \{0.01, 0.1, 1.0\}$ 开展了 5 个随机种子的对比训练实验（图~\ref{fig:pct_contrast}）。实证结果揭示出两大结构性影响：第一，Reverse-JS 诱发严重的梯度爆炸不稳定现象。在强正则化（$\lambda = 1.0$）下，Reverse-JS 的平均梯度 $L_2$ 范数在 Kelmarsh 达到 $0.1665 \pm 0.0160$、在 Penmanshiel 达到 $0.2465 \pm 0.0217$，相比修正 Standard-JS（分别为 $0.0756 \pm 0.0048$ 与 $0.0907 \pm 0.0067$）呈现出超过 $2.7$ 倍的梯度放大（图~\ref{fig:pct_contrast}a），这一梯度剧烈激增直接源于预测概率逼近支集边界时的 $-M/P_{\text{pred}}$ 导数项奇点。第二，在低惩罚权重（$\lambda = 0.01$）下，修正 Standard-JS 在 Penmanshiel 取得 $0.09804 \pm 0.00024$ 的调度成本（优于无约束基准 $0.09864$），而官方 Reverse-JS 则因数值不稳定劣化至 $0.09997 \pm 0.00086$（产生 $+1.35\%$ 的过早性能恶化；图~\ref{fig:pct_contrast}b）。修正参数传递顺序消除了异常梯度膨胀并防范了过早的运行性能劣化。
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_pct_loss_empirical_contrast.pdf}
+\caption{官方 Reverse-JS 与修正 Standard-JS 在跨惩罚尺度 $\lambda \in [0.01, 1.0]$ 下的实证训练对比 (Kelmarsh 与 Penmanshiel, 5 个随机种子, 95\% CI)。(a) 平均梯度 $L_2$ 范数：在 $\lambda=1.0$ 下，Reverse-JS 因 $-M/P_{\text{pred}}$ 导数奇点引发超过 $2.7$ 倍的梯度膨胀，而 Standard-JS 保持平稳数值有界；(b) 调度决策成本 ($r=2$)：Standard-JS 在低 $\lambda$ 下防范了过早性能恶化，而 Reverse-JS 导致调度成本高于无约束基准。}
+\label{fig:pct_contrast}
+\end{figure*}
+
+\subsubsection{阴性对照：二维乘积核密度估计的代数严格等价性证明}
+阴性对照构成纯形式代数展开，旨在反驳独立性假说。此前针对 PCT 代码库的外部讨论曾提出质疑，猜测其张量外积操作：
+\begin{equation}
+G = K_p^\top K_w \in \mathbb{R}^{B_p \times B_w}
+\label{eq:outer_product}
+\end{equation}
+假定了风速与功率的统计独立性（$p(w, P) = p(w)p(P)$），进而推断其二维联合密度估计在原理上失效。
+
+形式代数展开证伪了该独立性猜测。设 $\{ (P_s, w_s) \}_{s=1}^N$ 为批次内的成对风速与功率实测样本，$\{b_i^p\}_{i=1}^{B_p}$ 与 $\{b_j^w\}_{j=1}^{B_w}$ 分别代表功率与风速的一维评估网格中心。代码中所计算的一维高斯核向量分别为：
+\begin{equation}
+\begin{aligned}
+\left[K_p\right]_{s,i} &= \phi\left( \frac{b_i^p - P_s}{h_p} \right), \\
+\left[K_w\right]_{s,j} &= \phi\left( \frac{b_j^w - w_s}{h_w} \right),
+\end{aligned}
+\label{eq:kernel_eval}
+\end{equation}
+其中 $\phi(u) = \frac{1}{\sqrt{2\pi}} e^{-u^2/2}$ 为标准高斯核函数，$h_p, h_w$ 为核窗宽。计算矩阵乘积在网格点 $(i,j)$ 处的元素：
+\begin{equation}
+\begin{aligned}
+\left[ K_p^\top K_w \right]_{i,j} &= \sum_{s=1}^N \left[K_p\right]_{s,i} \cdot \left[K_w\right]_{s,j} \\
+&= \sum_{s=1}^N \phi\left( \frac{b_i^p - P_s}{h_p} \right) \cdot \phi\left( \frac{b_j^w - w_s}{h_w} \right).
+\end{aligned}
+\label{eq:kde_proof}
+\end{equation}
+公式~\eqref{eq:kde_proof} 在数学上严格等价于相关双变量数据上标准\textbf{成对二维乘积核密度估计器 (2D product-kernel KDE)} 的解析定义。累加求和沿样本索引 $s$ 同步收缩，保留了实测样本 $P_s$ 与 $w_s$ 之间的经验联合耦合。形式代数展开推翻了独立性猜测，确立了张量外积操作忠实执行了双变量联合估计。
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\07_theory.tex
+\section{预测-决策脱钩理论与超额运行风险}
+\label{sec:theory}
+
+在本节中，我们从统计决策理论出发，形式化推导第~\ref{sec:results}节中所记录的指标反转与地形分化现象背后的内在数学机理。我们推导了超额日前调度运行风险的精确积分恒等式，将其严格正交分解为表征误差与决策失配两个正交分量，并提出三个可检验的机理推论与形式化边界反例。
+
+\subsection{运行决策问题形式化}
+设 $X \in \mathcal{X} \subset \mathbb{R}^{L \times D}$ 为机组的历史多元时序遥测特征，$Y \in [0, 1]$ 为目标预测时段内经过额定装机归一化的风电实际输出功率。在电力系统实际经济调度运行中，电网运营商依据非对称 Pinball 调度惩罚函数对发电主体的申报出力进行考核结算 \cite{weron2014,zhang2014wind}：
+\begin{equation}
+\ell(p, Y; r) = c_+ \max(p - Y, 0) + c_- \max(Y - p, 0),
+\label{eq:pinball_loss}
+\end{equation}
+其中 $p \in [0, 1]$ 为日前申报的调度功率，$c_+$ 为短缺单位惩罚（欠发电，申报出力大于实际发电 $p > Y$，系统被迫启动昂贵的三级旋转备用），$c_-$ 为盈余单位惩罚（过发电 $Y > p$，迫使电网下调或弃风限电），$r = c_+ / c_-$ 代表成本非对称比率。以 $c_-$ 归一化后，非对称运行调度损失为：
+\begin{equation}
+\mathcal{L}_{\text{disp}}(p, Y) = r \max(p - Y, 0) + \max(Y - p, 0).
+\label{eq:norm_disp_loss}
+\end{equation}
+在决策策略 $p(X)$ 下的期望运行风险为 $\mathcal{R}(p) = \mathbb{E}_{X, Y} [\mathcal{L}_{\text{disp}}(p(X), Y)]$。
+
+\subsection{命题 1：精确积分超额运行风险}
+命题~\ref{prop:excess_risk} 形式化了统计决策理论与分位数回归中的经典超额风险解析恒等式，其理论根基立足于 Koenker 的经典分位数理论 \cite{koenker2005} 以及 Pinson 等人确立的电力市场出清协调竞价原理 \cite{pinson2007trading}。最小化运行风险 $\mathcal{R}(p)$ 的无约束贝叶斯最优调度决策为条件分位数：
+\begin{equation}
+q_\tau(X) = F_{Y|X}^{-1}(\tau), \quad \text{其中 } \tau = \frac{1}{r + 1}.
+\label{eq:bayes_quantile}
+\end{equation}
+当非对称比率 $r=2$ 时，临界最优出清分位数为 $\tau = 1/3 \approx 0.333$。
+
+\begin{proposition}[精确积分超额运行风险]
+\label{prop:excess_risk}
+对于任意给定的调度决策规则 $p(X) \in [0, 1]$，相对于贝叶斯最优分位数策略 $q_\tau(X)$ 所产生的超额运行风险满足如下严格精确的积分恒等式：
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) &= (r + 1) \, \mathbb{E}_X \Big[ \\
+&\quad \int_{q_\tau(X)}^{p(X)} \big( F_{Y|X}(u) - \tau \big) \, du \Big] \ge 0,
+\end{aligned}
+\label{eq:exact_integral}
+\end{equation}
+且恒大于等于零。进一步，在累积分布函数 $F_{Y|X}$ 在其支撑集上严格单调递增的常规正则性条件下，$q_\tau(X)$ 具有唯一确定的实数值，等号成立当且仅当 $p(X) = q_\tau(X)$ 几乎处处成立。
+\end{proposition}
+
+\begin{proof}
+对于固定的输入特征向量 $X$，在决策出力 $p$ 下的条件期望损失为：
+\begin{equation}
+\begin{aligned}
+&\mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] \\
+&\quad = r \int_0^p (p - y) dF(y) + \int_p^1 (y - p) dF(y),
+\end{aligned}
+\end{equation}
+其中简记 $F(y) = F_{Y|X}(y)$。对决策变量 $p$ 求一阶偏导数：
+\begin{equation}
+\begin{aligned}
+\frac{\partial}{\partial p} \mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] &= r F(p) - (1 - F(p)) \\
+&= (r + 1) F(p) - 1.
+\end{aligned}
+\end{equation}
+注意到 $\tau = 1 / (r+1)$，该梯度表达式可精准化简为：
+\begin{equation}
+\frac{\partial}{\partial p} \mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] = (r + 1) \Big( F(p) - \tau \Big).
+\end{equation}
+由微积分基本定理，将梯度从最优值 $q_\tau(X)$ 积分至任意决策点 $p(X)$，可得：
+\begin{equation}
+\begin{aligned}
+&\mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] - \mathbb{E}[ \mathcal{L}_{\text{disp}}(q_\tau, Y) \mid X ] \\
+&\quad = (r+1) \int_{q_\tau(X)}^{p(X)} \Big( F(u) - \tau \Big) du.
+\end{aligned}
+\end{equation}
+由于分布函数 $F(u)$ 单调非减，对于任意 $u > q_\tau(X)$ 均有 $F(u) \ge \tau$，被积函数非负；对于任意 $u < q_\tau(X)$ 均有 $F(u) \le \tau$，逆向积分亦必为正。对全特征空间 $\mathcal{X}$ 取外层数学期望，即证。
+\end{proof}
+
+\subsection{两阶段分解与决策校准解耦}
+当申报决策 $p(X)$ 处于最优值 $q_\tau(X)$ 的邻域内时，将累积分布 $F_{Y|X}(u)$ 在 $q_\tau(X)$ 处展开为一阶泰勒级数：
+\begin{equation}
+F_{Y|X}(u) - \tau \approx f_{Y|X}(q_\tau(X)) \cdot (u - q_\tau(X)),
+\end{equation}
+从而导出局部二次超额风险近似：
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) &\approx \frac{r+1}{2} \, \mathbb{E}_X \big[ f_{Y|X}(q_\tau(X)) \\
+&\qquad\quad \times ( p(X) - q_\tau(X) )^2 \big].
+\end{aligned}
+\label{eq:quadratic_approx}
+\end{equation}
+
+现在考虑应用工程中普遍采用的两阶段范式：模型先输出条件均值估计 $f_\theta(X) \approx \mu(X) = \mathbb{E}[Y \mid X]$，再通过标量分位数偏移 $\delta$ 构成调度决策：$p(X) = f_\theta(X) + \delta$。将决策偏差展开为两部分：
+\begin{equation}
+p(X) - q_\tau(X) = \big( f_\theta(X) - \mu(X) \big) + \big( \delta - \Delta_\tau(X) \big),
+\end{equation}
+其中 $\Delta_\tau(X) = q_\tau(X) - \mu(X)$ 为目标条件分位数与条件均值之间的固有差距。在同方差局部曲率假设 $w_\tau = \frac{r+1}{2} f_{Y|X}(q_\tau)$ 下，代入公式~\eqref{eq:quadratic_approx} 可将超额运行风险精确分解为三个正交项：
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) &\approx w_\tau \, \mathbb{E}_X \big[ (f_\theta(X) - \mu(X))^2 \big] \\
+&\quad + w_\tau \, \mathbb{E}_X \big[ (\delta - \Delta_\tau(X))^2 \big] \\
+&\quad + 2 w_\tau \, \mathbb{E}_X \big[ (f_\theta(X) - \mu(X)) \\
+&\qquad\quad \times (\delta - \Delta_\tau(X)) \big],
+\end{aligned}
+\label{eq:three_terms}
+\end{equation}
+其中三项分别定义为：\textbf{项 I（表征均方误差）}、\textbf{项 II（分位数失配误差）} 与 \textbf{项 III（交叉交互项）}。
+
+\subsection{基于决策论分解的机理推论}
+公式~\eqref{eq:three_terms} 的三项分解从数理上为实证评测中的核心现象提供了机制解释，提炼出三项演绎机理洞察：
+
+\begin{remark}[机理推论 1：未校准工况下的伪优势遮蔽]
+\label{rem:masking}
+在直接采用均值输出作为投标决策的未校准工况下（$\delta=0$），项 II（$\Delta_\tau(X)^2$）在数值上通常主导了总运行风险。此时，一个在条件均值拟合精度上劣化的物理正则化模型（具有更大的项 I），表现出更低的实测短缺惩罚——这是因为物理惩罚项恰巧对预测施加了一个向下的经验感应偏置，偶然部分抵消了正向的分位数差距 $\Delta_\tau(X)$，从而人为缩减了项 II。这从机制上解释了为何在缺乏分位数决策后处理的评测设定下，文献频繁报告出表观物理优势，而该优势在标量校准后显著收窄或消失。
+\end{remark}
+
+\begin{remark}[机理推论 2：高信噪比/大数据量工况下的正则化畸变]
+\label{rem:exposure}
+最优分位数校准（$\delta^* = \arg\min_\delta \hat{\mathcal{R}}(f_\theta + \delta)$）能够消除项 II 中的非条件恒定分量。在数据充裕或信噪比较高的工况下，无约束模型本身已取得较低的条件均值估计方差（项 I 逼近下界）。在此种工况下，强行注入未经动态自适应的静态经验损失惩罚，实质上充当了一种引入结构性偏置的刚性正则化，抬高了项 I，却无法换取足够的方差缩减收益，最终导致整体运行调度性能下降。
+\end{remark}
+
+\begin{remark}[机理推论 3：样本受限工况下的归纳护栏与先验敏感性]
+\label{rem:inductive_guardrails}
+在有效样本量受限的工况下，经验参数估计面临显著的估计方差（项 I 显著上升）。在强物理权重约束下（$\lambda=1.0$），真实的物理先验充当了归纳护栏，约束模型输出落在合理的气动空间内，从而在小样本下发挥防御性作用。然而，一旦先验分布发生误设或置换破坏（如伪打乱先验对照组），护栏将持续向模型施加逆物理的错误梯度指引，从而直接诱发严重的性能劣化，揭示出强先验约束对先验正确性的极端脆弱性。
+\end{remark}
+
+\subsection{形式化边界反例}
+为确保理论推演的数学严密性，我们通过反例形式化证明两阶段决策校准的支配性是具有条件边界的而非绝对成立。
+
+在\textit{常数平移不变性}反例下，若物理约束仅使模型的预测整体发生恒定的代数偏移 $f_{\text{phys}}(X) = f_{\text{uncons}}(X) + c$，随后的最优标量校准能够精确吸收该偏移（$\delta_{\text{phys}}^* = \delta_{\text{uncons}}^* - c$），使得两者的实际调度出力决策完全重合，超额运行风险差值严格恒为零（$\Delta \mathcal{R}_{\text{disp}} \equiv 0$），尽管其点预测 MSE 出现增加。在存在输入依赖方差 $\sigma(X)$ 的\textit{空间异方差性}反例下，全局统一标量校准无法补偿局部方差的动态漂移，导致一个具有更高预测 MSE 的有偏估计器在经过标量分位数校准后，在数学上能够取得比无偏条件均值更低的运行调度风险。
+
+该理论框架将统计决策论基本恒等式操作为封闭形式的超额风险分解模型，在商业级真实风电场上完成深度量化解耦，并结合英国平衡与结算规约（BSC）真实电力市场出清数据完成实证检验。两个反例的完整数学证明详见\ref{sec:appendix_proofs}。
+
+\subsection{动态电价乘子效应与结算脱钩}
+在真实的电力平衡出清机制下，物理偏差电量是以时变系统买入电价 $\lambda_t^{\text{SBP}}$ 结算的。厚尾且高度偏斜的极端电价分布（均值 \pounds 44.27/MWh，峰值达 \pounds 1,509.80/MWh）在工程现场起到了剧烈的风险放大乘子作用。当偶发的气象突变导致的预测偏差恰好与极端高电价在时间上重叠时，物理惩罚带来的表征畸变被放大了高达 34.1 倍，解释了 Kelmarsh 产生每年每台机组高达 +\pounds 932.56 超额短缺清算支出的微观机制（表~\ref{tab:paired_bootstrap}）。正如退化零申报反例（表~\ref{tab:zero_bid_diagnostic}）所确立的，孤立的单边结算现金流无法脱离日前批发合同独立衡量模型价值，这在方法学上确立了将非负决策风险与历史结算现金流严格脱钩度量的必要性。
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\08_discussion.tex
+\section{讨论、有效性契约与审查门禁协议}
+\label{sec:discussion}
+
+\subsection{物理约束预测模型的四项实证边界条件}
+系统审计、代码验证与前瞻性消融实验共同指向四个边界条件，决定物理先验何时有效、何时中性、何时有害。
+
+\paragraph{样本受限工况下的防御性收益与先验误设脆弱性}
+在数据受限工况（Penmanshiel，$N_{\text{train}}=1,583$），$\lambda=1.0$ 下校准的功率曲线先验将调度成本从 $0.09881 \pm 0.00027$ 稳步降至 $0.09760 \pm 0.00044$（降低 $-1.22\%$，$p < 0.001$），提供显著的下行风险对冲。相比之下，尺度对齐的打乱先验诱发成本恶化至 $0.16611 \pm 0.00335$（激增 $+68.1\%$，$p < 0.001$）。两项实证结果的不对称性揭示了强物理正则化的非对称风险—收益包线：强归纳护栏在抑制自由假设空间的同时，成倍放大了先验形式化中的潜在误设误差。跨场站对比无法剥离这一效应，因为场站间的地形特征与机型差异会与样本量同时变化。数据充裕时（Kelmarsh，$N_{\text{train}}=5,098$），无约束 DLinear（$0.08812$）、真实物理（$0.08791$）与打乱先验（$0.08801$）在数值上高度密集，表明模型容量已饱和假设空间。
+
+\paragraph{低惩罚尺度表现为非特异性数值正则化}
+现有文献常在损失函数中配置较小的物理惩罚系数（$\lambda \in [10^{-4}, 10^{-2}]$）。受控消融实验证实：在 $\lambda = 0.01$ 下，真实物理先验在 Kelmarsh 取得的调度成本（$0.08810 \pm 0.00009$）与打乱物理关系的伪先验（$0.08801 \pm 0.00008$）在统计上高度重合（$p = 0.231$）。在弱权重区间下，损失惩罚项在实证上表现为非特异性的数值平滑，尚未显现空气动力学因果引导特征。确立严谨的物理特异性，需引入尺度对齐的伪打乱阴性对照并在 $\lambda \ge 0.1$ 区间实施敏感性审计。
+
+\paragraph{静态物理代理观测陈旧度诱发的调度成本单调膨胀}
+当物理约束评价依赖于测试推理期无法无延迟同步测量的外部气象变量时（如未来风速或环境空气密度），工程实践普遍采用滞后历史观测作为静态物理代理输入。对滞后步数 $k \in \{6, 12, 18, 36\}$（对应 1 至 6 小时观测陈旧度）的参数扫描揭示，三座风场的调度性能随着陈旧度呈现严格单调恶化。在 Hill of Towie，决策风险从 $k=6$ 时的 $0.09022$ 持续上升至 $k=36$ 时的 $0.09257$（恶化 $+2.6\%$），在约 $k=12$ 时即劣于无约束基准（$0.08924$）。我们特别强调这一关键逻辑边界：分类为无需实时外部遥测输入（$\mathcal{D}_3 = \texttt{none}$，占审计文献的 82.6\%）界定的是基座预测器本身的输入需求（不依赖前瞻 NWP 数据流），并不意味着所有此类模型都会遭受陈旧度损失。陈旧度惩罚严格限定于测试推理期依赖外部气象代理（例如使用风速查询功率曲线先验）的约束架构：现场部署中若缺乏前瞻 NWP 或零延迟传感器，从业者便只能在推理期忽略该约束或以滞后历史观测替代。因此，观测陈旧度是依赖代理变量的约束架构在实际部署中的实证运行风险，而非 $\mathcal{D}_3 = \texttt{none}$ 分类本身的直接推论。
+
+\paragraph{评价指标脱钩、两部制市场与退化零申报诊断探针}
+在标准两部制电力市场中，发电机组总收益由日前合约收益与实时平衡偏差结算共同决定：$R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q)$。实证评估若剥离日前履约收益并孤立计算未对冲的平衡偏差现金流，所度量的实为不平衡租金而非预测技能。作为一项不平衡结算与决策风险的分析性诊断探针，退化零申报基准（$q \equiv 0$）构成了严格的数学归谬（\textit{reductio ad absurdum}）：它完全不产生任何预测，仅通过将全部物理发电量转化为未履约余量并按 $P_{\text{imb}}$ 结算，即可在三座风场凭空捕获 22.3 万至 24.3 万英镑/台$\cdot$年的未对冲正向现金流。这从数理上证实了孤立未对冲的平衡现金流与预测技能完全脱钩；评估真实的商业价值必须联合建模日前合约收益（$P_{\text{DA}} \cdot q$）与实时不平衡结算。实际运维评估必须采用与市场非对称惩罚比率相匹配的 Pinball 损失或完整的两部制市场盈亏核算。
+
+\subsection{外部有效性边界契约}
+\label{sec:boundary_contract}
+为确立清晰的工程适用范围，本节将实证发现归纳为四项运行有效性边界条件：
+
+\paragraph{边界一：样本规模与假设空间饱和}
+场站内学习曲线证实，在我们测试的配置下，物理约束的有效收益主要集中于数据受限工况（$N_{\text{train}} \le 1,000$，图~\ref{fig:within_site_learning_curve}）。当训练样本扩增至 $N_{\text{train}} = 5{,}000$ 时，假设空间饱和将真实先验与无约束基准的差距缩小至 0.33\% 以内（Kelmarsh），而打乱先验在所有样本规模下均造成严重破坏。连续退化测试进一步确立了狭窄的工程容错窗口（Penmanshiel 上临界阈值 $\alpha^* \approx 0.07$，图~\ref{fig:corruption_gradient}）。机组气动老化折损超出 10\% 或测风仪标定偏差超出 $\pm 5\%$ 时，标称物理先验即翻转为运维负债。
+
+\paragraph{边界二：遥测时效与代理观测陈旧度}
+对于依赖代理变量的物理约束架构，先验有效性严格受限于观测陈旧度 $\tau \le 1\,\text{h}$（$k \le 6$ 步）。在预测期跨度 $\tau > 1\,\text{h}$ 的工况下，三座风场均观察到成本的严格单调上升（Hill of Towie 在 $k=36$ 时成本上涨 $+2.6\%$），性能显著劣于无约束基准。在零延迟同步遥测理想假设下测得的数值结果，不应外推至依赖滞后历史代理的实际生产场景。
+
+\paragraph{边界三：市场结构与两部制结算机制}
+本研究所揭示的经济实证结论，本质上作为不平衡结算与决策风险的诊断探针，严格受限于具备非对称短缺惩罚比率（$r \ge 1.0$）与英国 BSC 30 分钟离散净额清算的两部制电力市场。单边不平衡现金流并不代表完整的商业价值，且不外推至对称单一结算体系或固定上网电价（FIT）机制。评价者不应将孤立未对冲的平衡现金流指标外推为衡量预测模型的运维实用准则。
+
+\paragraph{边界四：软件保真度与计算图审计范畴}
+软件层面的形式化审计结论严格适用于 PCT 开源计算图（commit \texttt{65941ec}）及受评的线性（DLinear）与块状注意机制（PatchTST）架构。虽然方向颠倒的损失散度在 PCT 的 AST 节点上得到严格证实，但对于未开源代码的专有模型，必须经过独立的静态计算图审计后方可确认其物理保真度。
+
+\subsection{两项预先设立假设的证伪结果}
+本研究记录了在分析前预先设立并在实证中被严格证伪的两项假设。张量代数推导证伪了关于 PCT 乘积核 KDE 导致边缘独立的初步猜想，严格证明其二维耦合在代数展开中得以保留。对称地，电力市场诊断探针证伪了“校准后反转源自物理正则化”的假设，证明现金流逆转完全受控于两部制市场的非对称结算结构。如实记录假设证伪过程，使整个审计追踪具备可复现的认识论严谨性。
+
+\subsection{REFORMS-PCWPF 方法学报告清单规范}
+\label{sec:reforms_pcwpf}
+为将实证审计发现转化为长效的方法学报告规范，表~\ref{tab:reforms_checklist} 提出了面向未来物理约束风电预测研究的五道推荐验证门禁：
+
+\input{tables/table_reforms_checklist.tex}
+
+\begin{itemize}
+\item \textbf{门禁 M1（参数隔离消融）：} 建议评审避免接受将剔除大型神经网络子模块（如多头注意力、图卷积）的实验标称为“物理消融”，强制要求在参数对齐的网络容量下开展对照（$\lambda=0$ vs. $\lambda>0$），以剥离模型容量干扰。
+\item \textbf{门禁 M2（伪打乱阴性对照）：} 可信物理有效性论证应包含尺度对齐的置换伪打乱对照，以严格区分空气动力学先验知识与非特异性数值平滑效应。
+\item \textbf{门禁 M3（运行代理陈旧度压力测试）：} 约束评估应避免假定零延迟未来气象输入；在缺少前瞻 NWP 预报时，应主动汇报在真实代理陈旧度（$k \in \{6, \dots, 36\}$ 步）下的性能响应轨迹。
+\item \textbf{门禁 M4（两部制市场耦合评估）：} 行业评估应避免依赖孤立未对冲的平衡单边现金流，推荐采用与市场非对称惩罚比率匹配的 Pinball 损失或完整的两部制市场收益核算（$P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q)$）。
+\item \textbf{门禁 M5（静态计算图与梯度核验）：} 鼓励作者开源可执行的训练脚本与计算图定义，建议评审核验损失函数的张量参数传递顺序与约简语义是否与论文数学公式严格相符。
+\end{itemize}
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\09_conclusion.tex
+\section{结论}
+\label{sec:conclusion}
+
+本次审计的三项核心发现重新界定了物理约束风电预测的实证基础。
+
+在文献报道层面，46 项被审计文献（2023--2026）均未披露任何失效工况、负面权衡或运行边界（0.0\%）。鉴于 95.7\% 的研究缺乏公开代码、50.0\% 将神经模块切除混同为物理消融，文献中一致正向的叙事表明现有评估与报道协议未对边界工况展开有效压力测试。
+
+在软件实现层面，在被审计的 46 项研究中仅有的两个公开代码库中，PINN-UQ 经审查证实代码对齐，而作为端到端物理约束 Transformer 唯一公开训练代码库的 PCT，其执行的损失函数颠倒了 Jensen--Shannon 散度的参数方向，这一执行偏差在不审查源码的情况下无法察觉。代数推导独立证实其核乘积在数学上保持双变量耦合，表明实现偏差与模型有效性位于不同的计算层次。
+
+在运行决策层面，物理先验的实际运维价值取决于训练样本规模、推理时物理代理的观测陈旧度以及下游电力市场结算规则。在 $N_{\text{train}}=1{,}583$ 且 $\lambda=1.0$ 条件下，校准的功率曲线先验将调度成本降低 $1.22\%$（$p < 0.001$）；完全相同条件下尺度对齐的打乱先验将其抬升 $68.1\%$（$p < 0.001$），揭示出模型在强约束下对先验误设的高度敏感性。在弱约束尺度（$\lambda=0.01$）下，真实先验与打乱先验在统计上不可区分（$p=0.231$），表现为非特异性数值平滑；超过 $k=12$ 步代理延迟（2 小时）后，物理先验在三座风场上均因观测陈旧而提高调度成本。
+
+PCT 代码审计、零申报现金流异常与打乱先验激增并非三个孤立问题，共享同一根源：该领域所采用的评价指标与消融协议无法区分物理知识与数值正则化、实现保真度与论文声明、预测技术与市场结算结构。覆盖约束溯源、软件执行、代理陈旧度与决策解耦评估的完整审计，虽较常规基准测试耗费更多工作量，但回答了对于电网运行决策更具现实意义的方法学问题。
+
+物理约束架构在适当条件下依然是有效的工程工具。界定这些条件需要参数对齐的消融对照、打乱阴性控制实验、静态计算图验证，以及将日前合同收益与实时偏差结算现金流分离的市场评估协议。
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\10_appendix.tex
+\section{附录：决策校准边界与形式化反例证明}
+\label{sec:appendix_proofs}
+
+本附录给出正文中两项理论反例的形式化数学证明，严谨界定两阶段决策校准何时能完全吸收表征偏差，以及何时空间异方差性会导致具有更高均方误差的预测模型在决策层取得更低运行风险。
+
+\subsection{反例 1：常数平移不变性与超额风险零差值}
+\label{sec:proof_ex1}
+
+\begin{example}[常数平移不变性]
+\label{ex:constant_shift}
+设基准无约束预测模型输出为 $f_{\text{uncons}}(X)$，其最优标量分位数校准位移为：
+\begin{equation}
+\delta_{\text{uncons}}^* = \arg\min_\delta \mathcal{R}\big( f_{\text{uncons}}(X) + \delta \big).
+\end{equation}
+假设施加物理约束后，模型在所有特征空间上的预测仅仅发生了一个恒定的代数平移偏差：
+\begin{equation}
+f_{\text{phys}}(X) = f_{\text{uncons}}(X) + c, \quad \forall X \in \mathcal{X},
+\end{equation}
+其中 $c \neq 0$ 为非零常数。
+\end{example}
+
+\begin{proposition}
+在反例~\ref{ex:constant_shift} 的设定下，尽管物理约束模型的预测均方误差发生变化（当预测原本无偏时 MSE 必单调增大），但在经过最优标量分位数校准后，两者的实际调度出力决策完全重合，超额运行风险差值严格恒为零：
+\begin{equation}
+p_{\text{phys}}^*(X) \equiv p_{\text{uncons}}^*(X), \quad \Delta \mathcal{R}_{\text{disp}} \equiv 0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+根据最优标量分位数校准的数学定义：
+\begin{equation}
+\begin{aligned}
+\delta_{\text{phys}}^* &= \arg\min_\delta \mathcal{R}\big( f_{\text{phys}}(X) + \delta \big) \\
+&= \arg\min_\delta \mathcal{R}\big( f_{\text{uncons}}(X) + c + \delta \big).
+\end{aligned}
+\end{equation}
+定义辅助变量 $\delta' = \delta + c$，由于极小化是针对整个实数域进行的，目标函数在 $\delta' = \delta_{\text{uncons}}^*$ 处取得全局唯一最小值。因此有：
+\begin{equation}
+\delta_{\text{phys}}^* + c = \delta_{\text{uncons}}^* \implies \delta_{\text{phys}}^* = \delta_{\text{uncons}}^* - c.
+\end{equation}
+从而，物理约束模型经过校准后的最终申报决策为：
+\begin{equation}
+\begin{aligned}
+p_{\text{phys}}^*(X) &= f_{\text{phys}}(X) + \delta_{\text{phys}}^* \\
+&= \big( f_{\text{uncons}}(X) + c \big) + \big( \delta_{\text{uncons}}^* - c \big) \\
+&= f_{\text{uncons}}(X) + \delta_{\text{uncons}}^* \\
+&= p_{\text{uncons}}^*(X).
+\end{aligned}
+\end{equation}
+由于申报决策函数处处恒等，其诱发的非对称期望运行风险完全相同：
+\begin{equation}
+\Delta \mathcal{R}_{\text{disp}} = \mathcal{R}(p_{\text{phys}}^*) - \mathcal{R}(p_{\text{uncons}}^*) = 0.
+\end{equation}
+证毕。
+\end{proof}
+
+\subsection{反例 2：空间异方差性与高 MSE 模型的低决策风险逆转}
+\label{sec:proof_ex2}
+
+\begin{example}[空间异方差性反例]
+\label{ex:heteroscedasticity}
+设空间输入特征为二元离散变量 $X \in \{0, 1\}$，先验出现概率对称：$P(X=0) = P(X=1) = 0.5$。设在这两个特征空间下，实际输出功率的条件概率分布呈现显著的异方差宽度：
+\begin{align}
+Y \mid (X=0) &\sim U[0.20, 0.60] \nonumber \\
+&\quad (\mu_0 = 0.40, \, s_0 = 0.40), \\
+Y \mid (X=1) &\sim U[0.30, 0.90] \nonumber \\
+&\quad (\mu_1 = 0.60, \, s_1 = 0.60).
+\end{align}
+设电网非对称考核比率为 $r = 2$，对应最优出清分位数为 $\tau = 1/(r+1) = 1/3$。考量两个候选预测模型：模型 A 为理想的无偏条件均值估计器，预测值为 $f_A(0) = 0.40$ 与 $f_A(1) = 0.60$；模型 B 为具有结构性偏差的有偏估计器，其预测值为 $f_B(0) = 0.40$ 与 $f_B(1) = 0.55$。
+\end{example}
+
+\paragraph{点预测均方误差 (MSE) 计算}
+两模型关于实际功率的均方误差分别为：
+\begin{align}
+\text{MSE}(f_A) &= 0.5 \left(\frac{0.40^2}{12}\right) + 0.5 \left(\frac{0.60^2}{12}\right) \nonumber \\
+&= \frac{13}{600} \approx 0.021667, \\
+\text{MSE}(f_B) &= \text{MSE}(f_A) + 0.5 (0.55 - 0.60)^2 \nonumber \\
+&= 0.021667 + 0.001250 \approx 0.022917.
+\end{align}
+显然，模型 B 的点预测均方误差严格高于模型 A，误差增幅达 $\Delta \text{MSE} = +5.8\%$。
+
+\paragraph{两阶段全局标量分位数校准}
+在此异方差设定下，各分区的真实条件分位数为：
+\begin{align}
+q_{1/3}(0) &= 0.20 + \frac{1}{3}(0.40) = \frac{1.00}{3} \approx 0.333333, \\
+q_{1/3}(1) &= 0.30 + \frac{1}{3}(0.60) = 0.500000.
+\end{align}
+分位数与均值的真实固有差距分别为：
+\begin{align}
+\Delta_{1/3}(0) &= q_{1/3}(0) - \mu_0 = \frac{1}{3} - 0.40 \nonumber \\
+&= -\frac{1}{15} \approx -0.0667, \\
+\Delta_{1/3}(1) &= q_{1/3}(1) - \mu_1 \nonumber \\
+&= 0.50 - 0.60 = -0.10.
+\end{align}
+根据局部二次展开公式~\eqref{eq:quadratic_approx}，在均匀分布下概率密度函数为常数：$f_0(u) = 1/0.40 = 2.50$，$f_1(u) = 1/0.60 = 1.6667$。二次展开权重分别为：
+\begin{align}
+w_0 &= \frac{r+1}{2} f_0 = \frac{3}{2}(2.50) = 3.75, \\
+w_1 &= \frac{r+1}{2} f_1 = \frac{3}{2}\left(\frac{5}{3}\right) = 2.50.
+\end{align}
+对于模型 A（无偏均值），其超额运行风险作为标量校准偏移 $\delta$ 的函数为：
+\begin{align}
+J_A(\delta) &= 0.5 \Big[ 3.75 \big(\delta - (-1/15)\big)^2 \nonumber \\
+&\qquad + 2.50 \big(\delta - (-0.10)\big)^2 \Big].
+\end{align}
+对 $\delta$ 求导置零解得最优全局校准偏移量：
+\begin{align}
+\delta_A^* &= \frac{3.75(-1/15) + 2.50(-0.10)}{3.75 + 2.50} \nonumber \\
+&= \frac{-0.25 - 0.25}{6.25} = -0.080.
+\end{align}
+代入计算模型 A 在最优标量校准下的超额运行风险：
+\begin{align}
+J_A(\delta_A^*) &= 0.5 \Big[ 3.75 \left(-0.08 + \frac{1}{15}\right)^2 \nonumber \\
+&\qquad + 2.50 (-0.08 + 0.10)^2 \Big] \nonumber \\
+&= 0.5 \left[ 3.75 \left(-\frac{1}{75}\right)^2 + 2.50 (0.02)^2 \right] \nonumber \\
+&= 0.5 [ 3.75(0.0001778) + 2.50(0.0004) ] \nonumber \\
+&= 0.5 [ 0.0006667 + 0.0010 ] \approx 0.000833.
+\end{align}
+
+现在考量具有更高 MSE 的模型 B。模型 B 在 $X=0$ 处预测无偏，但在 $X=1$ 处预测低估了 $0.05$（$f_B(1) - \mu_1 = -0.05$）。因此模型 B 的等效分位数差距变更为：
+\begin{align}
+\tilde{\Delta}_B(0) &= \Delta_{1/3}(0) = -\frac{1}{15} \approx -0.0667, \\
+\tilde{\Delta}_B(1) &= \Delta_{1/3}(1) - (f_B(1) - \mu_1) \nonumber \\
+&= -0.10 - (-0.05) = -0.05.
+\end{align}
+针对模型 B 解出其最优全局标量校准偏移量：
+\begin{align}
+\delta_B^* &= \frac{3.75(-1/15) + 2.50(-0.05)}{6.25} \nonumber \\
+&= \frac{-0.25 - 0.125}{6.25} = -0.060.
+\end{align}
+代入计算模型 B 经过最优标量校准后的超额运行风险：
+\begin{align}
+J_B(\delta_B^*) &= 0.5 \Big[ 3.75 \left(-0.06 + \frac{1}{15}\right)^2 \nonumber \\
+&\qquad + 2.50 (-0.06 + 0.05)^2 \Big] \nonumber \\
+&= 0.5 \left[ 3.75 \left(\frac{1}{150}\right)^2 + 2.50 (-0.01)^2 \right] \nonumber \\
+&= 0.5 [ 3.75(0.0000444) + 2.50(0.0001) ] \nonumber \\
+&= 0.5 [ 0.0001667 + 0.00025 ] \approx 0.000208.
+\end{align}
+
+\paragraph{理论推论}
+反例 2 形式化证明：\textbf{在条件异方差条件下，一个具有更高预测均方误差的有偏预测器，在经过标量分位数校准后，在数学上可以取得比真实条件均值严格更低的调度运行损失}。这解释了物理约束在两阶段解耦校准下的表现为何高度取决于局部误差方差与环境地形分布。
+
+
+% SOURCE: 01_论文投稿材料\chinese_manuscript\sections\11_starmethods.tex
+\section{公开数据、开源代码库与实验规范}
+\label{sec:data_code_spec}
+
+\subsection{数据资源与计算环境清单}
+\begin{table*}[!ht]
+\centering
+\footnotesize
+\caption{本实证审计研究所使用的关键数据资源、公开软件代码与分析工具清单。}
+\label{tab:key_resources}
+\begin{tabularx}{\textwidth}{p{3.5cm}p{4.2cm}p{3.5cm}X}
+\toprule
+\textbf{资源类别} & \textbf{来源渠道 / 机构} & \textbf{识别标识符 (Identifier)} & \textbf{说明 / 关键属性} \\
+\midrule
+\multicolumn{4}{l}{\textbf{实测运行遥测数据 (Deposited Data)}} \\
+Kelmarsh 风电场 SCADA & Cubico / Zenodo 开放数据 & DOI: 10.5281/zenodo.5841834 & 6台机组，10分钟SCADA，2017全年标称与气象遥测 \\
+Penmanshiel 风电场 SCADA & Cubico / Zenodo 开放数据 & DOI: 10.5281/zenodo.5946808 & 14台机组，10分钟SCADA，低样本匮乏对比集 ($N=1,583$) \\
+Hill of Towie 风电场 SCADA & TRIG / RES / Zenodo 开放数据 & DOI: 10.5281/zenodo.20204946 & 21台机组，48.3 MW复杂山地全年独立时空外推基准 \\
+Elexon BSC 结算电价 & 英国国家电网 Elexon 门户 & UK OGL v3.0 许可 & 2017全年30分钟系统买入电价 (SBP) 与卖出电价 (SSP) \\
+\midrule
+\multicolumn{4}{l}{\textbf{被审计公开文献代码库 (Audited Codebases)}} \\
+PCT (Physics-Constrained TST) & 官方 GitHub 代码仓库 & Commit: \texttt{65941ec} & 论文: \textit{Sci. Rep.} 2026; 审计核心损失 \texttt{tst/loss.py} \\
+PINN-UQ (Power Tie PINN) & 官方 GitHub 代码仓库 & 验证对齐公开版本 & 论文: \textit{Eng. App. AI} 2025; 审计机电代数约束 \\
+\midrule
+\multicolumn{4}{l}{\textbf{软件与分析工具算法 (Software and Algorithms)}} \\
+Python 编程语言 & Python Software Foundation & 版本: 3.10 / 3.11 & 核心算法逻辑与数据流水线 \\
+PyTorch 深度学习库 & Meta AI / Linux Foundation & 版本: 2.1.2 (CUDA 12.1) & 神经网络训练、计算图自动微分与消融实验 \\
+PatchTST 基准模型 & Nie et al. 开源实现 & GitHub: \texttt{PatchTST} & 多块通道独立 Transformer 架构 \\
+DLinear 基础预测模型 & Zeng et al. 开源实现 & GitHub: \texttt{LTSF-Linear} & 单层线性趋势与季节项分解架构 \\
+Scipy / Statsmodels & SciPy 核心开源社区 & 版本: 1.11 / 0.14 & 统计自举检验与核密度估计实现 \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{数据与代码可用性}
+来自 Kelmarsh（6台森吉安 MM92 风机，12.3~MW）与 Penmanshiel（14台森吉安 MM82 风机，28.7~MW）风电场的原始商业 SCADA 遥测数据已在 Zenodo 上基于 CC-BY 4.0 许可由 Cubico Sustainable Investments 完全开源（DOI：\href{https://doi.org/10.5281/zenodo.5841834}{10.5281/zenodo.5841834} 与 \href{https://doi.org/10.5281/zenodo.5946808}{10.5281/zenodo.5946808}）。来自 Hill of Towie 风电场（21台西门子 SWT-2.3-82 机组，48.3~MW）的实测 SCADA 遥测数据由 RES 代表 TRIG 在 Zenodo 上以 CC-BY 4.0 许可完全开源（DOI：\href{https://doi.org/10.5281/zenodo.20204946}{10.5281/zenodo.20204946}）。英国 Elexon 系统买入电价（SBP）和卖出电价（SSP）历史结算数据依据英国开放政府许可证 v3.0 可免费公开访问。完整的可复现 Python 验证分析脚本套件——包括抽象语法树静态计算图解析器、2,000次圆形块成对自举检验模块、Elexon BSC 净结算核算模块以及制图复现脚本——均已归档于开源代码仓库（\href{https://github.com/anonymous-audit/pcwpf-audit}{\texttt{anonymous-audit/pcwpf-audit}}）。包含原文逐字引用、公式编号与多评分员共识分值的全量 46 篇文献范围界定提取数据库作为开放补充材料完整提供。
+
+关于本研究的数据集提取细节、计算图解析器脚本或评分员间原始提取台账的进一步技术信息，请直接联系通信作者：李俊宇（\href{mailto:ljylikezmn999@gmail.com}{\texttt{ljylikezmn999@gmail.com}}）。
+
+\subsection{风电场实测遥测与数据清洗规程}
+本计算实证研究使用了位于英国境内的三座商业级公用事业陆上风电场的实测运行遥测数据。\textbf{Kelmarsh 风电场}（英格兰北安普敦郡）代表平原开阔内陆地貌，由 6 台森吉安 MM92 风机组成（单机额定 2.05~MW，轮毂高度 78~m，叶轮直径 92~m，场站装机 12.3~MW），模型训练集包含 $N_{\text{train}} = 5,098$ 个无故障 10 分钟观测区间。\textbf{Hill of Towie 风电场}（苏格兰德拉姆缪尔）代表复杂的山地地形，具有显著的微地形尾流交互效应，由 21 台西门子 SWT-2.3-82 机组组成（单机额定 2.3~MW，轮毂高度 60~m，叶轮直径 82~m，场站装机 48.3~MW），作为全年独立时空外推基准测试集，涵盖 2017 年全年的 7,599 个滚动预报起点（45,594 个半小时结算时段）。\textbf{Penmanshiel 风电场}（苏格兰边境地区）代表起伏的丘陵地形，由 14 台森吉安 MM82 机组组成（场站总容量 28.7~MW），配置了受控的小样本训练集（$N_{\text{train}} = 1,583$ 个时段），用于测试模型在样本受限训练工况下的过拟合与物理先验的防御性行为（需注意站点间客观并存地形与机型差异）。标准数据清洗协议剔除了机组弃风限电时段、测风仪结冰时段以及通信中断故障期（如在风速高于切入风速时功率 $P \le 0$，或有功功率连续超过 6 个时段冻结不变的记录）。
+
+\subsection{方法学实施与统计检验细节}
+
+\paragraph*{系统范围界定综述协议 (PRISMA-ScR)}
+文献检索遵循在全文提取前预先明确制订的系统协议，通过 OpenAlex 数据库 API 执行四个针对题名的布尔查询字符串（$Q_1$ 至 $Q_4$），并辅助通过 Google Scholar、arXiv 以及预印本服务器对 2023 年 1 月至 2026 年 3 月（滚动监测至 7 月）发表的文献进行靶向扩展检索，原始识别文献总量达 89 项。两阶段筛选（题名摘要初筛后行全文纳排判定）锁定了本研究的核心范围界定队列，共计 46 项当代代表性研究（38 篇同行评审期刊论文与 8 篇预印本，2023--2026），并对其进行了详尽的五维（$\mathcal{D}_1$--$\mathcal{D}_5$）特征提取与评分员间信度编码。将检索字段扩展至 Scopus 与 IEEE Xplore 题名、摘要与作者关键词（涵盖 \texttt{"knowledge-guided"}、\texttt{"hybrid"} 与 \texttt{"domain-informed"} 等更广泛检索词）的补充敏感性检索额外识别出 14 项候选文献，全文复核证实其中无一报告运行失效边界或负面权衡，专门用于压力测试 0.0\% 负面权衡报告率的稳健性。代码可用性与消融严谨性统计指标（95.7\% 开源代码缺失率与 50.0\% 混杂模块消融率）严格限定于被审计的 46 篇核心文献队列并附带 Wilson 置信区间。评分员间信度基准测试在三名独立评分员（Coder A、B、C）对 20 篇代表性样本的双盲独立提取中完成，各维度呈现出 Fleiss' $\kappa = 0.646\text{--}1.000$ 的高度一致性。
+
+\paragraph*{静态代码与计算图审计}
+软件代码通过抽象语法树（AST）静态解析结合针对发表论文数学公式的逐行代数符号比对来完成。对于物理约束 Transformer（PCT，\textit{Sci. Rep.} 2026），其在文件 \texttt{tst/loss.py} 中的损失定义被符号化反编译为底层 PyTorch 计算原语，严格证实 \texttt{F.kl\_div(p.log(), q)} 计算的是 $\sum q_i \log(q_i / p_i) = \text{KL}(q \parallel p)$，方向与发表公式 $\text{KL}(p \parallel q)$ 颠倒。经验密度核张量外积 $K_p^\top K_w$ 的代数形式展开严格证明了其等价于二维成对乘积核密度估计器。
+
+\paragraph*{10-GPU 前瞻性受控消融实验测试矩阵}
+前瞻性受控消融实验在配备 10 张专用 NVIDIA RTX 4090 GPU 的集群上并行调度运行。所有模型均在 PyTorch 2.1 与 CUDA 12.1 环境下执行。神经网络采用 Adam 优化器训练，初始学习率设定为 $10^{-3}$，配置余弦退火学习率衰减策略，批大小为 64。惩罚权重 $\lambda$ 在集合 $\{0.001, 0.01, 0.1, 1.0\}$ 内扫描。针对伪打乱阴性对照，经验风速-功率映射关系通过固定随机种子沿着风速轴进行单射置换打乱，在严格保持完全相同的损失数学公式、参数规模与梯度尺度的同时，彻底剥离真实空气动力学知识。观测陈旧度压力测试专门评估测试期物理约束计算依赖于外部气象代理（如用风速查询功率曲线先验）的模型。我们将此与分类统计中 82.6\% 研究属于无需外部实时遥测（$\mathcal{D}_3 = \texttt{none}$）明确区分：后者仅指基座预测流水线不强制要求外部前瞻 NWP 数据流，并不代表模型必然遭受陈旧度损失。但在实际部署代理依赖型约束变体且缺乏前瞻 NWP 或零延迟传感器时，工程上不得不使用滞后观测，我们在 $k \in \{6, 12, 18, 36\}$ 步（1 至 6 小时）下对此进行了基准量化，以严格界定代理陈旧度的危害边界。
+
+\subsection*{量化与统计分析 (Quantification and Statistical Analysis)}
+日前调度非对称决策评价严格设定在非对称惩罚比率 $r=2$ 下，对应临界最优出清分位数为 $\tau = 1/3$。离线分位数偏移量 $\delta_h$ 严格在独立的 2016 年校验集上完成参数冻结，避免向测试集渗透未来信息。所有模型均在 5 个独立的随机数初始化种子下重复训练以获取均值与标准差。统计显著性评估采用 7 天块长度的圆形块成对自举检验（Block Bootstrap），进行 2,000 次蒙特卡洛重抽样，并严格基于 95\% 分位数区间判定显著性，以彻底克服风电时间序列固有强自相关对传统独立同分布假设检验的失效挑战。

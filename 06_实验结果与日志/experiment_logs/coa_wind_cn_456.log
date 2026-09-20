@@ -1,0 +1,8 @@
+========================================
+COA-BiLSTM 实验: wind_cn seed=456
+开始时间: 2026-02-24 02:30:52
+========================================
+[02:30:52] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined

@@ -1,0 +1,10 @@
+{
+  "models": [
+    {"name": "DLinear", "path": "results/supplementary_evidence/dlinear_predictions_full.npz", "order": 0},
+    {"name": "TimeMixer", "path": "checkpoints_ts/TimeMixer_preds.npy", "order": 1},
+    {"name": "iTransformer raw", "path": "results/ae_recovery_stage1/cfg_lower_corr/exports/windcn_itransformer/seed_2025/prediction_archive_raw_itr_fg_seed2025.npz", "order": 2},
+    {"name": "Ultra-LSNT raw", "path": "results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_2025/prediction_archive_raw_cfg_lower_corr_seed2025.npz", "order": 3},
+    {"name": "Ultra-LSNT + clip-only", "path": "results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_2025/prediction_archive_clip_only_cfg_lower_corr_seed2025.npz", "order": 4},
+    {"name": "Ultra-LSNT + FG-MoE", "path": "results/ae_recovery_stage0/cfg_lower_corr/windcn_ultra/seed_2025/prediction_archive_full_guardrail_cfg_lower_corr_seed2025.npz", "order": 5}
+  ]
+}

@@ -1,0 +1,218 @@
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 39044 (\N{CJK UNIFIED IDEOGRAPH-9884}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 27979 (\N{CJK UNIFIED IDEOGRAPH-6D4B}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 31934 (\N{CJK UNIFIED IDEOGRAPH-7CBE}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 24230 (\N{CJK UNIFIED IDEOGRAPH-5EA6}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 19977 (\N{CJK UNIFIED IDEOGRAPH-4E09}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 32500 (\N{CJK UNIFIED IDEOGRAPH-7EF4}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 24615 (\N{CJK UNIFIED IDEOGRAPH-6027}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 33021 (\N{CJK UNIFIED IDEOGRAPH-80FD}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 20998 (\N{CJK UNIFIED IDEOGRAPH-5206}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 26512 (\N{CJK UNIFIED IDEOGRAPH-6790}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 35745 (\N{CJK UNIFIED IDEOGRAPH-8BA1}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 31639 (\N{CJK UNIFIED IDEOGRAPH-7B97}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 25104 (\N{CJK UNIFIED IDEOGRAPH-6210}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 26412 (\N{CJK UNIFIED IDEOGRAPH-672C}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 32463 (\N{CJK UNIFIED IDEOGRAPH-7ECF}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 27982 (\N{CJK UNIFIED IDEOGRAPH-6D4E}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 25910 (\N{CJK UNIFIED IDEOGRAPH-6536}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:135: UserWarning: Glyph 30410 (\N{CJK UNIFIED IDEOGRAPH-76CA}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 35745 (\N{CJK UNIFIED IDEOGRAPH-8BA1}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 31639 (\N{CJK UNIFIED IDEOGRAPH-7B97}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 25104 (\N{CJK UNIFIED IDEOGRAPH-6210}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 26412 (\N{CJK UNIFIED IDEOGRAPH-672C}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 39044 (\N{CJK UNIFIED IDEOGRAPH-9884}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 27979 (\N{CJK UNIFIED IDEOGRAPH-6D4B}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 31934 (\N{CJK UNIFIED IDEOGRAPH-7CBE}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 24230 (\N{CJK UNIFIED IDEOGRAPH-5EA6}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 24180 (\N{CJK UNIFIED IDEOGRAPH-5E74}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 32602 (\N{CJK UNIFIED IDEOGRAPH-7F5A}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 27454 (\N{CJK UNIFIED IDEOGRAPH-6B3E}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 20943 (\N{CJK UNIFIED IDEOGRAPH-51CF}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 23569 (\N{CJK UNIFIED IDEOGRAPH-5C11}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 39069 (\N{CJK UNIFIED IDEOGRAPH-989D}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 21315 (\N{CJK UNIFIED IDEOGRAPH-5343}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 32654 (\N{CJK UNIFIED IDEOGRAPH-7F8E}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 20803 (\N{CJK UNIFIED IDEOGRAPH-5143}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 19977 (\N{CJK UNIFIED IDEOGRAPH-4E09}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 32500 (\N{CJK UNIFIED IDEOGRAPH-7EF4}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 24615 (\N{CJK UNIFIED IDEOGRAPH-6027}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 33021 (\N{CJK UNIFIED IDEOGRAPH-80FD}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 20998 (\N{CJK UNIFIED IDEOGRAPH-5206}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 26512 (\N{CJK UNIFIED IDEOGRAPH-6790}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 32463 (\N{CJK UNIFIED IDEOGRAPH-7ECF}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 27982 (\N{CJK UNIFIED IDEOGRAPH-6D4E}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 25910 (\N{CJK UNIFIED IDEOGRAPH-6536}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:136: UserWarning: Glyph 30410 (\N{CJK UNIFIED IDEOGRAPH-76CA}) missing from font(s) DejaVu Sans.
+  plt.savefig('3d_performance_scatter.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 35745 (\N{CJK UNIFIED IDEOGRAPH-8BA1}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 31639 (\N{CJK UNIFIED IDEOGRAPH-7B97}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 25104 (\N{CJK UNIFIED IDEOGRAPH-6210}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 26412 (\N{CJK UNIFIED IDEOGRAPH-672C}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 39044 (\N{CJK UNIFIED IDEOGRAPH-9884}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 27979 (\N{CJK UNIFIED IDEOGRAPH-6D4B}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 31934 (\N{CJK UNIFIED IDEOGRAPH-7CBE}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 24230 (\N{CJK UNIFIED IDEOGRAPH-5EA6}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 25928 (\N{CJK UNIFIED IDEOGRAPH-6548}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 29575 (\N{CJK UNIFIED IDEOGRAPH-7387}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 24180 (\N{CJK UNIFIED IDEOGRAPH-5E74}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 32602 (\N{CJK UNIFIED IDEOGRAPH-7F5A}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 27454 (\N{CJK UNIFIED IDEOGRAPH-6B3E}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 20943 (\N{CJK UNIFIED IDEOGRAPH-51CF}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 23569 (\N{CJK UNIFIED IDEOGRAPH-5C11}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 39069 (\N{CJK UNIFIED IDEOGRAPH-989D}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 21315 (\N{CJK UNIFIED IDEOGRAPH-5343}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 32654 (\N{CJK UNIFIED IDEOGRAPH-7F8E}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 20803 (\N{CJK UNIFIED IDEOGRAPH-5143}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 32463 (\N{CJK UNIFIED IDEOGRAPH-7ECF}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 27982 (\N{CJK UNIFIED IDEOGRAPH-6D4E}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 25910 (\N{CJK UNIFIED IDEOGRAPH-6536}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 30410 (\N{CJK UNIFIED IDEOGRAPH-76CA}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 32508 (\N{CJK UNIFIED IDEOGRAPH-7EFC}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 21512 (\N{CJK UNIFIED IDEOGRAPH-5408}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 24615 (\N{CJK UNIFIED IDEOGRAPH-6027}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 33021 (\N{CJK UNIFIED IDEOGRAPH-80FD}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 24471 (\N{CJK UNIFIED IDEOGRAPH-5F97}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 20998 (\N{CJK UNIFIED IDEOGRAPH-5206}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 25490 (\N{CJK UNIFIED IDEOGRAPH-6392}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:192: UserWarning: Glyph 21517 (\N{CJK UNIFIED IDEOGRAPH-540D}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 39044 (\N{CJK UNIFIED IDEOGRAPH-9884}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 27979 (\N{CJK UNIFIED IDEOGRAPH-6D4B}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 31934 (\N{CJK UNIFIED IDEOGRAPH-7CBE}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 24230 (\N{CJK UNIFIED IDEOGRAPH-5EA6}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 35745 (\N{CJK UNIFIED IDEOGRAPH-8BA1}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 31639 (\N{CJK UNIFIED IDEOGRAPH-7B97}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 25928 (\N{CJK UNIFIED IDEOGRAPH-6548}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 29575 (\N{CJK UNIFIED IDEOGRAPH-7387}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 25104 (\N{CJK UNIFIED IDEOGRAPH-6210}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 26412 (\N{CJK UNIFIED IDEOGRAPH-672C}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 24180 (\N{CJK UNIFIED IDEOGRAPH-5E74}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 32602 (\N{CJK UNIFIED IDEOGRAPH-7F5A}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 27454 (\N{CJK UNIFIED IDEOGRAPH-6B3E}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 20943 (\N{CJK UNIFIED IDEOGRAPH-51CF}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 23569 (\N{CJK UNIFIED IDEOGRAPH-5C11}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 39069 (\N{CJK UNIFIED IDEOGRAPH-989D}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 21315 (\N{CJK UNIFIED IDEOGRAPH-5343}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 32654 (\N{CJK UNIFIED IDEOGRAPH-7F8E}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 20803 (\N{CJK UNIFIED IDEOGRAPH-5143}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 32463 (\N{CJK UNIFIED IDEOGRAPH-7ECF}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 27982 (\N{CJK UNIFIED IDEOGRAPH-6D4E}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 25910 (\N{CJK UNIFIED IDEOGRAPH-6536}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 30410 (\N{CJK UNIFIED IDEOGRAPH-76CA}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 32508 (\N{CJK UNIFIED IDEOGRAPH-7EFC}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 21512 (\N{CJK UNIFIED IDEOGRAPH-5408}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 24615 (\N{CJK UNIFIED IDEOGRAPH-6027}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 33021 (\N{CJK UNIFIED IDEOGRAPH-80FD}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 24471 (\N{CJK UNIFIED IDEOGRAPH-5F97}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 20998 (\N{CJK UNIFIED IDEOGRAPH-5206}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 25490 (\N{CJK UNIFIED IDEOGRAPH-6392}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+/root/my/plot_3d_scatter.py:193: UserWarning: Glyph 21517 (\N{CJK UNIFIED IDEOGRAPH-540D}) missing from font(s) DejaVu Sans.
+  plt.savefig('performance_analysis_grid.png', dpi=300, bbox_inches='tight')
+警告: 未找到 battle_economics_results.json，使用模拟数据
+✅ 三维散点图已保存为 3d_performance_scatter.png
+✅ 性能分析网格图已保存为 performance_analysis_grid.png
+✅ 性能指标已保存为 performance_metrics_3d.json

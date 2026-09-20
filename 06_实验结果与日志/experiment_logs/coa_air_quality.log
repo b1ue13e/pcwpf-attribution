@@ -1,0 +1,9 @@
+Starting COA-BiLSTM on air_quality...
+
+  Seed: 42
+
+============================================================
+COA-BiLSTM: air_quality (seed=42)
+Population=40, Iterations=200
+============================================================
+Device: cuda

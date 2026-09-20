@@ -1,0 +1,218 @@
+{
+  "S21": {
+    "title": "Physics-informed LLM-guided dynamic spatio-temporal graph deep network for short-term wind farm power forecasting",
+    "oa_status": "hybrid",
+    "locations": [
+      {
+        "source": "Energy Conversion and Management",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1016/j.enconman.2026.121974"
+      }
+    ]
+  },
+  "S22": {
+    "title": "Physics-informed neural network modelling of wind power production",
+    "oa_status": "green",
+    "locations": [
+      {
+        "source": "LUTPub (LUT University)",
+        "is_oa": true,
+        "pdf_url": "https://lutpub.lut.fi/bitstream/10024/171529/1/Bachelorthesis_Hu_Huaqin.pdf",
+        "landing": "https://lutpub.lut.fi/handle/10024/171529"
+      }
+    ]
+  },
+  "S23": {
+    "title": "A Physics-informed Operating Condition Attention Model for Wind Power Forecasting",
+    "oa_status": "green",
+    "locations": [
+      {
+        "source": "SSRN Electronic Journal",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.2139/ssrn.6509860"
+      }
+    ]
+  },
+  "S24": {
+    "title": "Physics-Informed Hybrid KNN-MLP for Enhanced Wind Power Forecasting",
+    "oa_status": "closed",
+    "locations": [
+      {
+        "source": null,
+        "is_oa": false,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1109/repe66317.2025.11341663"
+      }
+    ]
+  },
+  "S25": {
+    "title": "Physics-Informed dual-branch graph neural network for wind farm cluster power forecasting",
+    "oa_status": "green",
+    "locations": [
+      {
+        "source": "SSRN Electronic Journal",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.2139/ssrn.6553822"
+      }
+    ]
+  },
+  "S28": {
+    "title": "Platform-Yaw-Aware Physics-Informed,Meta-Learning for Floating Wind Farm Wake and Power Prediction",
+    "oa_status": "green",
+    "locations": [
+      {
+        "source": "SSRN Electronic Journal",
+        "is_oa": true,
+        "pdf_url": "https://papers.ssrn.com/sol3/Delivery.cfm/9db17f2f-ff0a-4a6f-806c-84b29a7a180a-MECA.pdf?abstractid=7239785&mirid=1",
+        "landing": "https://doi.org/10.2139/ssrn.7239785"
+      }
+    ]
+  },
+  "S30": {
+    "title": "DSTC-Net: A Physics-Informed Dynamic Spatio-Temporal Coupling Network for Ultra-Short-Term Wind Power Forecasting",
+    "oa_status": "green",
+    "locations": [
+      {
+        "source": "SSRN Electronic Journal",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.2139/ssrn.6462606"
+      }
+    ]
+  },
+  "S31": {
+    "title": "Short-Term Solar-Wind Power Forecasting via Physics-Informed MISO MFAC with Dual-Source Adaptive Forgetting",
+    "oa_status": "gold",
+    "locations": [
+      {
+        "source": null,
+        "is_oa": true,
+        "pdf_url": "https://www.authorea.com/doi/pdf/10.22541/au.177077715.51265060",
+        "landing": "https://doi.org/10.22541/au.177077715.51265060/v1"
+      }
+    ]
+  },
+  "S32": {
+    "title": "Adaptive Physics-Informed Neural Network for Energy-Efficient Consumer Systems via Reliable Wind Power Forecasting Under Cold-Wave Conditions",
+    "oa_status": "closed",
+    "locations": [
+      {
+        "source": "IEEE Transactions on Consumer Electronics",
+        "is_oa": false,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1109/tce.2026.3670006"
+      }
+    ]
+  },
+  "S35": {
+    "title": "Development of a physics-guided bidirectional long short-term memory for wind power forecasting",
+    "oa_status": "closed",
+    "locations": [
+      {
+        "source": "Engineering Applications of Artificial Intelligence",
+        "is_oa": false,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1016/j.engappai.2026.113798"
+      }
+    ]
+  },
+  "S36": {
+    "title": "Spatiotemporal physics-guided graph neural network for wind farm power prediction",
+    "oa_status": "hybrid",
+    "locations": [
+      {
+        "source": "Engineering Applications of Artificial Intelligence",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1016/j.engappai.2026.114301"
+      }
+    ]
+  },
+  "S37": {
+    "title": "Regional wind power forecasting guided by physics-based wind field modeling and image fusion",
+    "oa_status": "hybrid",
+    "locations": [
+      {
+        "source": "Electric Power Systems Research",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1016/j.epsr.2025.112527"
+      }
+    ]
+  },
+  "S41": {
+    "title": "Physics-Guided Spatio-Temporal Transformers to Predict Urban Wind Fields with Accuracy and Adaptive Optimization of Wind Power",
+    "oa_status": "closed",
+    "locations": [
+      {
+        "source": null,
+        "is_oa": false,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1109/icpc2t68221.2026.11646324"
+      }
+    ]
+  },
+  "S43": {
+    "title": "Physics-Guided Short-Term Offshore Wind Power Forecasting Considering Wake and Blockage Effects",
+    "oa_status": "closed",
+    "locations": [
+      {
+        "source": "IEEE Transactions on Industry Applications",
+        "is_oa": false,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1109/tia.2025.3625881"
+      }
+    ]
+  },
+  "S44": {
+    "title": "Short-term wind power forecasting for data-limited wind farms in complex terrain: A physics-guided approach with CFD-derived spatial priors",
+    "oa_status": "green",
+    "locations": [
+      {
+        "source": "SSRN Electronic Journal",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.2139/ssrn.6906363"
+      }
+    ]
+  },
+  "S45": {
+    "title": "Cross-Domain Few-Shot Wind Power Forecasting via Physics-Guided Retrieval-Enhanced Dual-Branch Representation Learning",
+    "oa_status": "green",
+    "locations": [
+      {
+        "source": "SSRN Electronic Journal",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.2139/ssrn.7346450"
+      }
+    ]
+  },
+  "S47": {
+    "title": "Advancing short-term wind power forecasting via Physics-Guided Graph Neural Networks for super-resolving Numerical Weather Prediction",
+    "oa_status": "green",
+    "locations": [
+      {
+        "source": "SSRN Electronic Journal",
+        "is_oa": true,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.2139/ssrn.6462602"
+      }
+    ]
+  },
+  "S48": {
+    "title": "Physics-guided tri-modal spatio-temporal graph neural networks for multi-step wind power forecasting: capturing wake-induced anisotropy at turbine-level",
+    "oa_status": "closed",
+    "locations": [
+      {
+        "source": "Electric Power Systems Research",
+        "is_oa": false,
+        "pdf_url": null,
+        "landing": "https://doi.org/10.1016/j.epsr.2026.113712"
+      }
+    ]
+  }
+}

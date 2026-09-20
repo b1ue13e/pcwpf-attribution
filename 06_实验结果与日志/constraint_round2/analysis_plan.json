@@ -1,0 +1,13 @@
+{
+  "primary_endpoint": "ratio=2 next-hour normalized imbalance loss after quantile calibration",
+  "primary_external_site": "hill_of_towie",
+  "predeclared_constraint_contrasts": [
+    "bounds factor1",
+    "curve factor1",
+    "distribution factor1"
+  ],
+  "uncertainty": "paired training-seed and 7-calendar-day moving blocks; 2000 replicates; Bonferroni-compatible intervals for three constraint contrasts",
+  "old_sites": "exploratory reuse; no confirmatory p-value claim",
+  "ridge_and_persistence": "strong comparator diagnostics, outside the three-constraint family",
+  "field_noise": "Hill training period primary/secondary anemometer differences are a scale proxy, not identified ground-truth errors"
+}

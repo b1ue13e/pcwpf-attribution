@@ -1,0 +1,45 @@
+Starting COA-BiLSTM on wind_cn...
+
+  Seed: 42
+
+============================================================
+COA-BiLSTM: wind_cn (seed=42)
+Population=40, Iterations=200
+============================================================
+Device: cuda
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)

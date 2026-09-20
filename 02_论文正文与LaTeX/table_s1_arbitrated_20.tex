@@ -1,0 +1,35 @@
+\begin{table*}[!t]
+\centering
+\scriptsize
+\caption{Final Arbitrated Double-Blind Coding Results for 20 Representative Sampled Wind Power Forecasting Studies (Schema v4).}
+\label{tab:arbitrated_20}
+\begin{tabularx}{\textwidth}{llp{4.2cm}cccccc}
+\toprule
+\textbf{ID} & \textbf{Year} & \textbf{Study / Target} & \textbf{Eligibility} & \textbf{D1: Prov.} & \textbf{D2: Stage} & \textbf{D3: Infer.} & \textbf{D4: Code} & \textbf{D5: Abl.} & \textbf{Harm} \\
+\midrule
+S01 & 2025 & Physics-constrained wind power forecasti\dots & Include & \texttt{historical-static} & \texttt{training-loss} & \texttt{none} & \texttt{not-found} & \texttt{constraint-on-off} & \texttt{no} \\
+S02 & 2026 & Physics-constrained transformer for wind\dots & Include & \texttt{historical-static} & \texttt{training-loss} & \texttt{none} & \texttt{code-mismatch} & \texttt{constraint-on-off} & \texttt{no} \\
+S03 & 2026 & Physics-constrained generative augmentat\dots & Include & \texttt{intrinsic} & \texttt{data-generation} & \texttt{none} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S04 & 2026 & A Physics-Constrained Dual-Stream Dynami\dots & Include & \texttt{intrinsic} & \texttt{training-loss} & \texttt{forecast-input} & \texttt{not-found} & \texttt{both} & \texttt{no} \\
+S07 & 2026 & NCF: A physics-constrained pre-trained m\dots & Include & \texttt{intrinsic} & \texttt{inference-architecture} & \texttt{forecast-input} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S09 & 2024 & Physics-informed reinforcement learning \dots & Include & \texttt{intrinsic} & \texttt{training-loss} & \texttt{none} & \texttt{not-found} & \texttt{constraint-on-off} & \texttt{no} \\
+S10 & 2025 & Prediction of wind turbines power with p\dots & Include & \texttt{intrinsic} & \texttt{training-loss} & \texttt{none} & \texttt{code-mismatch} & \texttt{constraint-on-off} & \texttt{no} \\
+S11 & 2026 & A novel non-dimensional multiple operati\dots & Include & \texttt{intrinsic} & \texttt{training-loss} & \texttt{none} & \texttt{not-found} & \texttt{constraint-on-off} & \texttt{no} \\
+S12 & 2025 & Physics-Informed Adaptive-Weight NBeatsx\dots & Include & \texttt{intrinsic} & \texttt{inference-architecture} & \texttt{none} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S15 & 2026 & PSTG-Net: A physics-informed spatiotempo\dots & Include & \texttt{intrinsic} & \texttt{inference-architecture} & \texttt{none} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S17 & 2025 & Physics informed data-driven approach fo\dots & Include & \texttt{intrinsic} & \texttt{inference-architecture} & \texttt{forecast-input} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S18 & 2026 & Physics-informed dynamic wake graphs for\dots & Include & \texttt{intrinsic} & \texttt{inference-architecture} & \texttt{none} & \texttt{not-found} & \texttt{both} & \texttt{no} \\
+S19 & 2026 & Physics-Informed Adaptive Conformal Pred\dots & Include & \texttt{intrinsic} & \texttt{post-hoc-correction} & \texttt{none} & \texttt{not-found} & \texttt{constraint-on-off} & \texttt{no} \\
+S20 & 2026 & A branch-adaptive framework for multi-ti\dots & Include & \texttt{intrinsic} & \texttt{inference-architecture} & \texttt{none} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S26 & 2026 & Cross-scale regime-aware physics-informe\dots & \textbf{Exclude} & \textit{N/A} & \textit{N/A} & \textit{N/A} & \textit{N/A} & \textit{N/A} & \textit{N/A} \\
+S27 & 2026 & UniWind: Toward Unified Day-Ahead Wind P\dots & Include & \texttt{historical-static} & \texttt{inference-architecture} & \texttt{forecast-input} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S34 & 2023 & Physics-Guided Machine Learning for Wind\dots & Include & \texttt{intrinsic} & \texttt{inference-architecture} & \texttt{none} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S38 & 2025 & Wind Power Prediction Method Based on Ph\dots & Include & \texttt{historical-static} & \texttt{training-loss} & \texttt{none} & \texttt{not-found} & \texttt{constraint-on-off} & \texttt{no} \\
+S39 & 2026 & Physics-Guided Deep Learning for Short-T\dots & Include & \texttt{intrinsic} & \texttt{inference-architecture} & \texttt{forecast-input} & \texttt{not-found} & \texttt{module-ablation} & \texttt{no} \\
+S42 & 2026 & A Physics-Guided Feature-Subspace ensemb\dots & \textbf{Exclude} & \textit{N/A} & \textit{N/A} & \textit{N/A} & \textit{N/A} & \textit{N/A} & \textit{N/A} \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]\footnotesize
+\item Note: Studies S26 and S42 are negative control samples rigorously excluded during Stage D0 full-text eligibility screening. Inter-rater agreement on eligibility achieved 100\% ($\kappa = 1.000$). Across the 18 eligible studies, inter-rater reliability achieved: D1 $\kappa = 1.000$, D2 $\kappa = 0.907$, D3 $\kappa = 0.684$, D4 $\kappa = 0.640$ (Gwet's $\mathrm{AC}_1 = 0.934$), D5 Ablation $\kappa = 0.733$, and Harm Reporting $P_o = 100.0\%$ ($\mathrm{AC}_1 = 1.000$). Full verbatim quotes, coder notes, and conflict resolution rationale are publicly cataloged in \texttt{arbitrated\_coding\_20.csv}.
+\end{tablenotes}
+\end{table*}

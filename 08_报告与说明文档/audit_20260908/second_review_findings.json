@@ -1,0 +1,27 @@
+{
+  "first_test_target_times": [
+    "00:00",
+    "00:10",
+    "00:20",
+    "00:30",
+    "00:40",
+    "00:50"
+  ],
+  "actual_SP_starts": [
+    "previous_day_23:30",
+    "00:00",
+    "00:00",
+    "00:00",
+    "00:30",
+    "00:30"
+  ],
+  "cross_boundary_triplets": {
+    "hill_of_towie": 7599,
+    "kelmarsh": 8212,
+    "penmanshiel": 8440
+  },
+  "penmanshiel_source_rated_kw": 28700,
+  "penmanshiel_source_turbines": 14,
+  "penmanshiel_source_model": "Senvion MM82",
+  "reviewed_snapshot": "2026-09-08 10:47 revision"
+}

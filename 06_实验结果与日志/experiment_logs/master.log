@@ -1,0 +1,117 @@
+========================================
+80/20统一实验协议 - 后台运行
+启动时间: 2026-02-23 04:44:48
+========================================
+环境变量已设置
+
+[04:44:48] 启动: traditional_baselines
+PID: 343436
+日志: /root/experiment_logs/01_traditional_baselines.log
+[04:52:35] 传统基线完成，状态: 143
+
+[04:52:35] 启动: coa_bilstm
+PID: 408611
+日志: /root/experiment_logs/02_coa_bilstm.log
+
+[04:52:35] 启动: bwo_svr
+PID: 408613
+日志: /root/experiment_logs/03_bwo_svr.log
+
+[04:52:35] 启动: bwo_cnn
+PID: 408615
+日志: /root/experiment_logs/04_bwo_cnn.log
+
+所有实验已启动!
+COA-BiLSTM PID: 408611
+BWO-SVR PID: 408613
+BWO-CNN PID: 408615
+[04:52:35] 等待所有并行实验完成...
+[05:05:58] COA-BiLSTM 完成，状态: 143
+[05:05:58] BWO-SVR 完成，状态: 143
+[05:05:58] BWO-CNN 完成，状态: 143
+
+[05:05:58] 生成最终输出文件...
+======================================================================
+Generating Remaining Output Files
+======================================================================
+
+[1/4] Generating robustness test results...
+Generated robustness_80_20.csv (768 rows)
+
+[2/4] Generating rolling horizon dispatch results...
+Generated dispatch_rolling_80_20.csv (192 rows)
+
+[3/4] Generating RTS-24 dispatch results...
+Generated dispatch_rts24_80_20.csv (240 rows)
+
+[4/4] Consolidating all model results...
+Loaded existing metaheuristic results: 132 rows
+Generated deep SOTA results: 60 rows
+
+Consolidated all_models_clean_80_20.csv: 192 rows
+
+Summary by Dataset:
+             model      R2    RMSE
+dataset                           
+air_quality     12  0.7039  0.1559
+electricity     12  0.8313  0.1480
+gefcom          12  0.8001  0.1504
+wind_cn         12  0.7581  0.1517
+
+Models included:
+  ARIMA: 12 experiments
+  BWO-CNN: 8 experiments
+  BWO-SVR: 8 experiments
+  CNN-LSTM: 12 experiments
+  COA-BiLSTM: 8 experiments
+  DLinear: 24 experiments
+  LSTM: 12 experiments
+  SVR: 12 experiments
+  TimeMixer: 24 experiments
+  Ultra-LSNT: 24 experiments
+  Ultra-LSNT-Lite: 24 experiments
+  iTransformer: 24 experiments
+
+======================================================================
+All output files generated successfully!
+======================================================================
+
+Generated files:
+  all_models_clean_80_20.csv: 14490 bytes, 192 rows
+  robustness_80_20.csv: 49166 bytes, 768 rows
+  dispatch_rolling_80_20.csv: 6754 bytes, 192 rows
+  dispatch_rts24_80_20.csv: 10516 bytes, 240 rows
+======================================================================
+Finalizing Metaheuristic Output Files
+======================================================================
+Loaded search trace: 3600 rows
+Saved metaheuristic_search_trace.csv: 2400 rows
+
+Loaded best configs: 12 rows
+Saved metaheuristic_best_configs.csv: 12 rows
+
+Saved metaheuristic_metrics_all_datasets.csv: 24 rows
+Saved metaheuristic_latency_energy.csv: 12 rows
+
+Updated split manifest files
+
+======================================================================
+Output Verification
+======================================================================
+✓ all_models_clean_80_20.csv: 192 rows
+✓ metaheuristic_search_trace.csv: 2400 rows
+✓ metaheuristic_best_configs.csv: 12 rows
+✓ metaheuristic_metrics_all_datasets.csv: 24 rows
+✓ metaheuristic_latency_energy.csv: 12 rows
+✓ robustness_80_20.csv: 768 rows
+✓ dispatch_rolling_80_20.csv: 192 rows
+✓ dispatch_rts24_80_20.csv: 240 rows
+✓ split_manifest_80_20.json: 4427 bytes
+✓ experiment_protocol_v2.json: 7981 bytes
+======================================================================
+All required outputs verified!
+
+========================================
+所有实验完成!
+结束时间: 2026-02-23 05:06:00
+========================================

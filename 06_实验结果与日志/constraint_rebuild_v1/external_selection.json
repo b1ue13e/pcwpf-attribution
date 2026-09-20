@@ -1,0 +1,170 @@
+[
+  {
+    "backbone": "gru",
+    "family": "bounds",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "gru",
+    "family": "bounds",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "gru",
+    "family": "bounds",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "gru",
+    "family": "curve",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 1.0
+  },
+  {
+    "backbone": "gru",
+    "family": "curve",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 1.0
+  },
+  {
+    "backbone": "gru",
+    "family": "curve",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 1.0
+  },
+  {
+    "backbone": "gru",
+    "family": "distribution",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "gru",
+    "family": "distribution",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.1
+  },
+  {
+    "backbone": "gru",
+    "family": "distribution",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "gru",
+    "family": "none",
+    "factor": 1.0,
+    "control": "augmentation",
+    "lambda": 0.0
+  },
+  {
+    "backbone": "gru",
+    "family": "none",
+    "factor": 1.0,
+    "control": "l2",
+    "lambda": 0.0
+  },
+  {
+    "backbone": "gru",
+    "family": "none",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.0
+  },
+  {
+    "backbone": "linear",
+    "family": "bounds",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "linear",
+    "family": "bounds",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "linear",
+    "family": "bounds",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "linear",
+    "family": "curve",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 1.0
+  },
+  {
+    "backbone": "linear",
+    "family": "curve",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 1.0
+  },
+  {
+    "backbone": "linear",
+    "family": "curve",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 0.1
+  },
+  {
+    "backbone": "linear",
+    "family": "distribution",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "linear",
+    "family": "distribution",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "linear",
+    "family": "distribution",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "linear",
+    "family": "none",
+    "factor": 1.0,
+    "control": "augmentation",
+    "lambda": 0.0
+  },
+  {
+    "backbone": "linear",
+    "family": "none",
+    "factor": 1.0,
+    "control": "l2",
+    "lambda": 0.0
+  },
+  {
+    "backbone": "linear",
+    "family": "none",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.0
+  }
+]

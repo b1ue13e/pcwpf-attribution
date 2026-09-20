@@ -1,0 +1,50 @@
+2026-02-23 04:58:06.611521: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-02-23 04:58:06.711622: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optim    LSTM: R2=0.7041
+  CNN-LSTM on electricity (seed=123)
+    CNN-LSTM: R2=0.6948
+
+  Seed: 456
+  ARIMA on electricity (seed=456)
+    ARIMA: R2=-0.0128
+  SVR on electricity (seed=456)
+    SVR: R2=0.9078
+  LSTM on electricity (seed=456)
+    LSTM: R2=0.6934
+  CNN-LSTM on electricity (seed=456)
+    CNN-LSTM: R2=0.6718
+
+electricity completed!
+e slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Starting electricity...
+
+Seed: 42
+  ARIMA on electricity (seed=42)
+  ARIMA: R2=-0.0128
+  SVR on electricity (seed=42)
+  SVR: R2=0.9078
+  LSTM on electricity (seed=42)
+  LSTM: R2=0.6953
+  CNN-LSTM on electricity (seed=42)
+  CNN-LSTM: R2=0.6958
+
+Seed: 123
+  ARIMA on electricity (seed=123)
+  ARIMA: R2=-0.0128
+  SVR on electricity (seed=123)
+  SVR: R2=0.9078
+  LSTM on electricity (seed=123)
+  LSTM: R2=0.6798
+  CNN-LSTM on electricity (seed=123)
+  CNN-LSTM: R2=0.6883
+
+Seed: 456
+  ARIMA on electricity (seed=456)
+  ARIMA: R2=-0.0128
+  SVR on electricity (seed=456)
+  SVR: R2=0.9078
+  LSTM on electricity (seed=456)
+  LSTM: R2=0.6747
+  CNN-LSTM on electricity (seed=456)
+  CNN-LSTM: R2=0.6977
+
+electricity completed!

@@ -1,0 +1,10 @@
+seed,scenario,baseline,dm_stat_ultra_minus_baseline,mean_loss_diff
+42,clean,DLinear,243.82365137650575,42239844.0
+42,clean,iTransformer,114.65629363278045,18406962.0
+42,clean,TimeMixer,62.45292574498016,10249209.0
+42,gaussian_60pct,DLinear,-170.22938206429345,-139969232.0
+42,gaussian_60pct,iTransformer,73.52423453282276,13509185.0
+42,gaussian_60pct,TimeMixer,-39.32178620012455,-10576055.0
+42,spike_60pct,DLinear,-46.7210977235714,-376484928.0
+42,spike_60pct,iTransformer,170.0219392681682,51565704.0
+42,spike_60pct,TimeMixer,-40.44715257572325,-39492212.0

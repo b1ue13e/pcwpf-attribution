@@ -1,0 +1,351 @@
+{
+  "en": {
+    "files": 12,
+    "characters": 122176,
+    "scanner_exit_code": 0
+  },
+  "zh": {
+    "files": 12,
+    "characters": 58105,
+    "scanner_exit_code": 0
+  },
+  "ablation_seeds": [
+    42,
+    43,
+    44,
+    45
+  ],
+  "ablation_selected": {
+    "hill_of_towie/vanilla_unconstrained": {
+      "n": 3,
+      "mean": 0.08923970616522893,
+      "std": 5.2915674805432965e-05
+    },
+    "hill_of_towie/genuine_curve_l0.01": {
+      "n": 3,
+      "mean": 0.08922239730531346,
+      "std": 4.450925762238313e-05
+    },
+    "hill_of_towie/genuine_curve_l1.0": {
+      "n": 3,
+      "mean": 0.08953059059646411,
+      "std": 0.00029195550621551384
+    },
+    "hill_of_towie/pseudo_scrambled_curve_l0.01": {
+      "n": 3,
+      "mean": 0.08918980772702706,
+      "std": 5.929892515219795e-05
+    },
+    "hill_of_towie/pseudo_scrambled_curve_l1.0": {
+      "n": 3,
+      "mean": 0.18876046739215827,
+      "std": 0.00867485753872168
+    },
+    "hill_of_towie/lag_scan_curve_k6": {
+      "n": 3,
+      "mean": 0.0902210142898686,
+      "std": 7.767596539123046e-05
+    },
+    "hill_of_towie/lag_scan_curve_k12": {
+      "n": 3,
+      "mean": 0.09095907578590197,
+      "std": 7.058975640840402e-05
+    },
+    "hill_of_towie/lag_scan_curve_k18": {
+      "n": 3,
+      "mean": 0.09131933490894836,
+      "std": 6.538207914494685e-05
+    },
+    "hill_of_towie/lag_scan_curve_k36": {
+      "n": 3,
+      "mean": 0.09256807758745673,
+      "std": 6.568774582715845e-05
+    },
+    "kelmarsh/vanilla_unconstrained": {
+      "n": 4,
+      "mean": 0.08812258635522832,
+      "std": 8.60343500696357e-05
+    },
+    "kelmarsh/genuine_curve_l0.01": {
+      "n": 4,
+      "mean": 0.08810013424003395,
+      "std": 8.555916547479328e-05
+    },
+    "kelmarsh/genuine_curve_l1.0": {
+      "n": 4,
+      "mean": 0.0882809661033019,
+      "std": 7.077936767807312e-05
+    },
+    "kelmarsh/pseudo_scrambled_curve_l0.01": {
+      "n": 4,
+      "mean": 0.0880099708901502,
+      "std": 8.20556072314722e-05
+    },
+    "kelmarsh/pseudo_scrambled_curve_l1.0": {
+      "n": 4,
+      "mean": 0.13575009453070988,
+      "std": 0.007147336864214227
+    },
+    "kelmarsh/lag_scan_curve_k6": {
+      "n": 4,
+      "mean": 0.0887548133550691,
+      "std": 0.00011252191343599987
+    },
+    "kelmarsh/lag_scan_curve_k12": {
+      "n": 4,
+      "mean": 0.08929572206812207,
+      "std": 0.00010817979727068348
+    },
+    "kelmarsh/lag_scan_curve_k18": {
+      "n": 4,
+      "mean": 0.0898560801799957,
+      "std": 7.441723835108984e-05
+    },
+    "kelmarsh/lag_scan_curve_k36": {
+      "n": 4,
+      "mean": 0.09042875467617957,
+      "std": 5.5788411421107715e-05
+    },
+    "penmanshiel/vanilla_unconstrained": {
+      "n": 3,
+      "mean": 0.09880581049885584,
+      "std": 0.0002694416499413964
+    },
+    "penmanshiel/genuine_curve_l0.01": {
+      "n": 3,
+      "mean": 0.0987536883553709,
+      "std": 0.00026479230309445564
+    },
+    "penmanshiel/genuine_curve_l1.0": {
+      "n": 3,
+      "mean": 0.09760435441764104,
+      "std": 0.00043674347137881935
+    },
+    "penmanshiel/pseudo_scrambled_curve_l0.01": {
+      "n": 3,
+      "mean": 0.09914999013715393,
+      "std": 0.0002219103446928638
+    },
+    "penmanshiel/pseudo_scrambled_curve_l1.0": {
+      "n": 3,
+      "mean": 0.16610886985006265,
+      "std": 0.0033518044586909844
+    },
+    "penmanshiel/lag_scan_curve_k6": {
+      "n": 3,
+      "mean": 0.1003564556905964,
+      "std": 0.00025740246341904814
+    },
+    "penmanshiel/lag_scan_curve_k12": {
+      "n": 3,
+      "mean": 0.1012584089853878,
+      "std": 0.0003347797186068749
+    },
+    "penmanshiel/lag_scan_curve_k18": {
+      "n": 3,
+      "mean": 0.10227753068891687,
+      "std": 0.00031397310187786904
+    },
+    "penmanshiel/lag_scan_curve_k36": {
+      "n": 3,
+      "mean": 0.10472515589667637,
+      "std": 0.00035950894902597497
+    }
+  },
+  "penmanshiel_effects_pct": {
+    "genuine_curve_l1.0": -1.2159771527087582,
+    "pseudo_scrambled_curve_l1.0": 68.11649943601867
+  },
+  "corpus": {
+    "rows": 48,
+    "columns": [
+      "study_id",
+      "doi",
+      "title",
+      "year",
+      "inclusion_check",
+      "exclusion_reason",
+      "D1_provenance",
+      "D2_stage",
+      "D3_inference_req",
+      "D4_fidelity",
+      "d5_ablation_broad",
+      "d5_ablation_strict",
+      "ablation_type",
+      "ablation_note",
+      "d5_negative_effect_reported",
+      "d5_harm_metric_reported",
+      "d5_prior_substitution_tested",
+      "d1d3_evidence",
+      "coder_notes"
+    ],
+    "categorical_counts": {
+      "year": {
+        "2025.0": 10,
+        "2026.0": 36,
+        "2024.0": 1,
+        "2023.0": 1
+      },
+      "inclusion_check": {
+        "include": 46,
+        "exclude": 2
+      },
+      "exclusion_reason": {
+        "": 46,
+        "wind-speed-only / no-explicit-power-constraint": 1,
+        "no-explicit-physics-constraint": 1
+      },
+      "D1_provenance": {
+        "historical-static": 5,
+        "intrinsic": 40,
+        "unreported": 2,
+        "learned-online": 1
+      },
+      "D2_stage": {
+        "training-loss": 21,
+        "data-generation": 1,
+        "inference-architecture": 23,
+        "post-hoc-correction": 1,
+        "unreported": 2
+      },
+      "D3_inference_req": {
+        "none": 38,
+        "forecast-input": 6,
+        "unreported": 2,
+        "contemporaneous-state": 2
+      },
+      "D4_fidelity": {
+        "not-found": 46,
+        "code-mismatch": 1,
+        "code-aligned": 1
+      },
+      "d5_ablation_broad": {
+        "yes": 46,
+        "unknown": 2
+      },
+      "d5_ablation_strict": {
+        "yes": 24,
+        "no": 24
+      },
+      "ablation_type": {
+        "constraint-on-off": 17,
+        "module-ablation": 23,
+        "both": 6,
+        "unclear": 2
+      },
+      "d5_negative_effect_reported": {
+        "no": 48
+      },
+      "d5_harm_metric_reported": {
+        "no": 48
+      },
+      "d5_prior_substitution_tested": {
+        "no": 45,
+        "yes": 3
+      }
+    },
+    "included_counts": {
+      "D4_fidelity": {
+        "not-found": 44,
+        "code-mismatch": 1,
+        "code-aligned": 1
+      },
+      "ablation_type": {
+        "constraint-on-off": 17,
+        "module-ablation": 23,
+        "both": 6
+      },
+      "d5_negative_effect_reported": {
+        "no": 46
+      }
+    }
+  },
+  "tables": {
+    "table1_lifecycle_distribution.tex": {
+      "caption": "Empirical Distribution of Constraint Lifecycle Dimensions Across 46 Audited Studies (2023--2026).}"
+    },
+    "table2_dynamic_settlement.tex": {
+      "caption": "3D Controlled Ablation Benchmark: Causal Disentanglement of Physical Knowledge Specificity, Numerical Regularization Mimicry, and Lagged Proxy Temporal Decay Across Three Operational Wind Farms (Multi-Seed Evaluated on 10$\\times$ RTX 4090 GPUs, Quantile Calibrated $r=2, q=1/3$).}"
+    },
+    "table3_paired_bootstrap.tex": {
+      "caption": "7-Day Circular Block Paired Bootstrap Contrasts vs. Unconstrained DLinear under Calibrated Policy (2,000 Replications).}"
+    },
+    "table4_ablation_semantics.tex": {
+      "caption": "Semantic Classification and Causal Interpretability of Reported Ablation Studies Across the Audited Scoping Corpus ($N=46$).}"
+    },
+    "table4_zero_bid_diagnostic.tex": {
+      "caption": "Market Settlement Diagnostic Audit: Exposing the Failure Modes of Standalone Imbalance Cashflow via the Degenerate Zero-Bid ($\\hat{y} \\equiv 0$) Counter-Baseline (Evaluated on Full 2017 UK Elexon SBP Timeline Across Three Wind Farms).}"
+    },
+    "table5_patchtst_and_rules.tex": {
+      "caption": "Exploratory Cross-Backbone Architectural Sensitivity Analysis: Modern Deep Transformer (PatchTST, ICLR 2023) under BSC 30-Minute Physical Netting Settlement (5-Seed Mean $\\pm$ Std).}"
+    },
+    "table_reforms_checklist.tex": {
+      "caption": "Operationalized REFORMS-PCWPF Reporting Checklist for Trustworthy Physics-Constrained Renewable Energy Forecasting (Five Modular Compliance Gates).}"
+    }
+  },
+  "learning_effects_pct": [
+    {
+      "site": "kelmarsh",
+      "n": "500",
+      "genuine": -1.9963083617925315,
+      "scrambled": 43.02369931272252
+    },
+    {
+      "site": "kelmarsh",
+      "n": "5000",
+      "genuine": 0.32931736754773233,
+      "scrambled": 55.96620720996839
+    },
+    {
+      "site": "hill_of_towie",
+      "n": "500",
+      "genuine": -3.618916143724915,
+      "scrambled": 64.77350110386763
+    },
+    {
+      "site": "hill_of_towie",
+      "n": "5000",
+      "genuine": 1.7334407137802543,
+      "scrambled": 98.32897850659049
+    }
+  ],
+  "inventory_by_top_directory": {
+    ".experiment-to-paper": 7,
+    ".reasonix": 154,
+    ".workbuddy": 2,
+    "00_整理记录": 5,
+    "01_论文投稿材料": 116,
+    "02_论文正文与LaTeX": 36,
+    "03_图表与绘图素材": 247,
+    "04_数据集": 713,
+    "05_实验代码与脚本": 468,
+    "06_实验结果与日志": 4577,
+    "07_云端压缩包与交付包": 1217,
+    "08_报告与说明文档": 315,
+    "09_项目申请_简历_个人材料": 14,
+    "10_模型检查点与权重": 51,
+    "2.zip": 1,
+    "3.zip": 1,
+    "99_待确认归档": 434,
+    "AGENTS.md": 1,
+    "check_remote_papers.py": 1,
+    "corpus48_编码_杜俊涛.csv": 1,
+    "corpus48_编码说明_杜俊涛.md": 1,
+    "djt.zip": 1,
+    "download_all_benchmarks.py": 1,
+    "fetch_openalex_real_metadata.py": 1,
+    "make_consensus.py": 1,
+    "master_backup_530.md": 1,
+    "master_backup_634.md": 1,
+    "reasonix.toml": 1,
+    "research skill.md": 1,
+    "tmp": 348,
+    "tripartite_arbitration_analysis.py": 1,
+    "独立验证包_给第二研究者.zip": 1,
+    "盲审填写表_CoderB_已填写.csv": 1,
+    "盲审填写表_CoderC_已填写.csv": 1,
+    "第二批D1D3全文级_给杜老师.zip": 1,
+    "语料扩展48项_给杜老师.zip": 1
+  },
+  "inventory_files": 8724
+}

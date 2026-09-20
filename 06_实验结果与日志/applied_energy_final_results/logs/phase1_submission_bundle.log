@@ -1,0 +1,500 @@
+[cmd] /root/miniconda3/bin/python run_submission_oneclick_4090.py --seed 42 --seeds 42,123,2025 --device cuda --continue-on-error
+
+/root/miniconda3/lib/python3.10/site-packages/statsmodels/base/model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+ARIMA/SVR auditable suite completed.
+run_id: 20260226T191317Z_arima_svr_auditable_suite_4090
+SSA-ELM auditable suite completed.
+run_id: 20260226T191518Z_ssa_elm_auditable_suite_4090
+outputs:
+/root/论文1/results/supplementary_evidence/ssa_elm_clean_windcn.csv
+/root/论文1/results/supplementary_evidence/ssa_elm_robustness_windcn.csv
+/root/论文1/results/supplementary_evidence/ssa_elm_latency_windcn.csv
+/root/论文1/results/supplementary_evidence/ssa_elm_search_trace.csv
+/root/论文1/results/supplementary_evidence/ssa_elm_meta.json
+[info] device=cuda
+[info] running decomposition ...
+[info] PSO search for VMD-PSO-LSTM ...
+[info] WOA search for CEEMDAN-WOA-GRU ...
+[info] final training VMD-PSO-LSTM ...
+[info] final training CEEMDAN-WOA-GRU ...
+[done] outputs:
+- results/supplementary_evidence/minimal_vmd_ceemdan_clean_windcn.csv
+- results/supplementary_evidence/minimal_vmd_ceemdan_robustness_windcn.csv
+- results/supplementary_evidence/minimal_vmd_ceemdan_latency_windcn.csv
+- results/supplementary_evidence/minimal_vmd_ceemdan_search_trace.csv
+- results/supplementary_evidence/minimal_vmd_ceemdan_meta.json
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+[info] device=cuda
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+
+[done] generated files:
+- results/supplementary_evidence/pi_moe_curve_params_windcn.csv
+- results/supplementary_evidence/pi_moe_physics_variable_availability_windcn.csv
+- results/supplementary_evidence/pi_moe_vs_ultra_clean_sigma06_windcn.csv
+- results/supplementary_evidence/structured_scada_fault_robustness_windcn.csv
+- results/supplementary_evidence/pi_moe_evidence_meta.json
+
+[preview] PI-MoE vs Ultra (clean + 60% noise)
+      scenario  sigma_cfg  sigma_eff                    model       R2         RMSE         MAE
+         clean        0.0        0.0               Ultra-LSNT 0.872749  9081.395508 7168.691895
+         clean        0.0        0.0 PI-MoE (projection-only) 0.870362  9166.177734 7227.444336
+gaussian_60pct        0.4        0.6               Ultra-LSNT 0.850519  9842.719727 7839.007812
+gaussian_60pct        0.4        0.6 PI-MoE (projection-only) 0.842406 10106.319336 7976.542969
+
+[preview] Structured SCADA robustness
+fault_type  severity        model       R2         RMSE          MAE  R2_clean  R2_abs_drop_vs_clean  R2_rel_drop_pct_vs_clean
+     clean       0.0   Ultra-LSNT 0.872749  9081.395508  7168.691895  0.872749              0.000000                  0.000000
+     clean       0.0 iTransformer 0.901151  8004.047852  6333.293945  0.901151              0.000000                  0.000000
+     clean       0.0    TimeMixer 0.881593  8760.142578  6952.991699  0.881593              0.000000                  0.000000
+     clean       0.0      DLinear 0.937924  6342.862305  4203.534668  0.937924              0.000000                  0.000000
+  flatline       0.2   Ultra-LSNT 0.872136  9103.263672  7181.299316  0.872749              0.000614                  0.070303
+  flatline       0.2 iTransformer 0.900520  8029.515625  6351.898926  0.901151              0.000630                  0.069916
+  flatline       0.2    TimeMixer 0.880412  8803.723633  6982.319336  0.881593              0.001181                  0.133969
+  flatline       0.2      DLinear 0.936907  6394.610352  4230.789062  0.937924              0.001017                  0.108434
+  flatline       0.6   Ultra-LSNT 0.866467  9302.851562  7345.278809  0.872749              0.006282                  0.719777
+  flatline       0.6 iTransformer 0.894248  8278.770508  6541.436523  0.901151              0.006902                  0.765916
+  flatline       0.6    TimeMixer 0.870275  9169.263672  7253.437012  0.881593              0.011318                  1.283821
+  flatline       0.6      DLinear 0.919931  7203.669922  4638.990723  0.937924              0.017992                  1.918322
+     spike       0.2   Ultra-LSNT 0.850866  9831.306641  7737.616211  0.872749              0.021884                  2.507430
+     spike       0.2 iTransformer 0.889714  8454.408203  6594.583008  0.901151              0.011437                  1.269132
+     spike       0.2    TimeMixer 0.755120 12597.936523  8853.132812  0.881593              0.126473                 14.345993
+     spike       0.2      DLinear 0.776638 12031.692383  5335.331055  0.937924              0.161285                 17.195990
+     spike       0.6   Ultra-LSNT 0.782936 11860.859375  9324.780273  0.872749              0.089813                 10.290817
+     spike       0.6 iTransformer 0.860915  9494.279297  7228.604492  0.901151              0.040235                  4.464858
+     spike       0.6    TimeMixer 0.342814 20637.951172 13905.213867  0.881593              0.538779                 61.114213
+     spike       0.6      DLinear 0.205846 22686.882812  7864.783691  0.937924              0.732077                 78.052974
+   dropout       0.2   Ultra-LSNT 0.872072  9105.537109  7190.151855  0.872749              0.000677                  0.077623
+   dropout       0.2 iTransformer 0.900392  8034.692383  6363.070312  0.901151              0.000758                  0.084154
+   dropout       0.2    TimeMixer 0.879870  8823.661133  7002.684082  0.881593              0.001723                  0.195479
+   dropout       0.2      DLinear 0.935799  6450.479004  4275.575684  0.937924              0.002124                  0.226491
+   dropout       0.6   Ultra-LSNT 0.866718  9294.134766  7334.389648  0.872749              0.006032                  0.691119
+   dropout       0.6 iTransformer 0.894744  8259.358398  6536.966309  0.901151              0.006407                  0.710948
+   dropout       0.6    TimeMixer 0.871884  9112.221680  7211.901367  0.881593              0.009709                  1.101309
+   dropout       0.6      DLinear 0.924538  6993.383789  4557.938477  0.937924              0.013386                  1.427192
+== Device: cuda ==
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+data shape=(121528, 8), test_batches=71
+
+[1/4] generating Ultra full predictions...
+Ultra test R2=-inf, RMSE=inf, skip=0.0000
+[1/4] generating DLinear full predictions...
+DLinear test R2=0.9379, RMSE=6342.86
+[1/4] running rolling multi-day dispatch with Ultra/DLinear/TimeMixer/iTransformer...
+
+Rolling summary:
+       model  days  total_cost_cny_mean  total_cost_cny_std  total_reserve_kw_mean  avg_reserve_kw_mean  total_curtailment_kwh_mean  solver_optimized_ratio
+     DLinear   120         6.948736e+05        10188.248688           7.743681e+05         32265.335789                2.461227e+06                     0.0
+   TimeMixer   120         7.049204e+05         3937.333816           8.246022e+05         34358.426369                2.628674e+06                     0.0
+iTransformer   120         7.085955e+05         9065.680616           8.429777e+05         35124.072367                2.689926e+06                     0.0
+  Ultra-LSNT   120                  inf                 NaN                    inf                  inf                         inf                     0.0
+
+[2/4] CPU batch=1 latency for Ultra family...
+                model  threads  warmup_runs  measure_runs  latency_mean_ms  latency_std_ms  latency_p50_ms  latency_p95_ms  latency_min_ms  latency_max_ms  peak_rss_mb                                                              note
+ Ultra-LSNT-Lite(opt)        1           50           250         1.466989        0.014727        1.463869        1.498419        1.440084        1.527423  1080.121094 arch-only (optimized config hidden=96,blocks=1,experts=2,top_k=1)
+Ultra-LSNT-Lite(orig)        1           50           250         3.260625        0.026705        3.257753        3.310865        3.203839        3.369007  1080.121094                    arch-only (no dedicated lite checkpoint found)
+     Ultra-LSNT(full)        1           50           250         6.972948        0.089175        6.941079        7.142783        6.838726        7.268842  1080.121094                    checkpoint: checkpoints_ts/main/best_model.pth
+
+[3/4] tau sweep + pareto...
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+posx and posy should be finite values
+ tau   R2  RMSE  MAE  skip_rate  compute_ratio  cpu_batch1_latency_mean_ms  cpu_batch1_latency_std_ms
+ 0.3 -inf   inf  inf    0.33381            0.5                    7.026501                   0.043095
+ 0.5 -inf   inf  inf    0.00000            0.5                    6.978214                   0.047781
+ 0.7 -inf   inf  inf    0.00000            0.5                    6.972072                   0.039840
+ 0.9 -inf   inf  inf    0.00000            0.5                    6.970992                   0.063202
+
+[4/4] lambda=0.01 vs 0.05 robustness compare (quick controlled fine-tune)...
+[lambda] fine-tune + robustness: lambda=0.01
+[lambda] fine-tune + robustness: lambda=0.05
+ lambda  nominal_sigma  effective_sigma       R2        RMSE         MAE  expert_usage_var_mean  expert_usage_max_mean
+   0.01            0.2              0.3 0.872500 9090.281250 7036.395020               0.040476               0.531147
+   0.01            0.4              0.6 0.856090 9657.580078 7548.994629               0.040913               0.533491
+   0.05            0.2              0.3 0.872603 9086.627930 7025.389648               0.039062               0.522323
+   0.05            0.4              0.6 0.855801 9667.253906 7552.048340               0.039295               0.523558
+
+All required outputs generated under results/supplementary_evidence/
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+============================================================
+🚀 Ultra-LSNT-Lite优化版本性能评估
+============================================================
+设备: cuda
+GPU: NVIDIA GeForce RTX 4090 D
+
+📊 加载数据...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+数据形状: (121528, 8), 输入维度: 8
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+
+📋 模型配置:
+  input_dim: 8
+  hidden_dim: 96
+  seq_len: 96
+  pred_len: 24
+  num_blocks: 1
+  num_experts: 2
+  top_k: 1
+  scales: [1, 2]
+
+📊 模型统计:
+  总参数量: 349,368
+  可训练参数量: 349,368
+  模型大小: 1.33 MB
+
+🏋️ 训练模型...
+  Epoch 1/3: 训练时间: 4.53 秒, 平均损失: 0.1151
+  Epoch 2/3: 训练时间: 4.21 秒, 平均损失: 0.0513
+  Epoch 3/3: 训练时间: 4.21 秒, 平均损失: 0.0435
+
+🧪 在测试集上评估...
+预测形状: (18111, 24), 真实值形状: (18111, 24)
+
+📈 测试集性能指标:
+  R² 分数: 0.884536
+  RMSE: 8650.592773
+  MAE: 6770.896973
+  MAPE: 26.5060%
+  MSE: 74832752.000000
+
+📊 性能对比:
+  优化版Ultra-LSNT-Lite: R² = 0.884536, RMSE = 8650.592773
+
+✅ 性能评估结果已保存: ultra_lsnt_lite_optimized_performance.csv
+
+============================================================
+🎉 Ultra-LSNT-Lite优化版本性能评估完成!
+============================================================
+📊 核心指标:
+  • R² 分数: 0.884536
+  • RMSE: 8650.592773
+  • 模型大小: 1.33 MB
+  • 参数量: 349,368
+============================================================
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+Using device: cuda
+Config: RunConfig(model2='itransformer', seq_len=96, pred_len=24, epochs=10, batch_size=128, lr=0.001, patience=5, d_model=128, nhead=4, num_layers=2, dropout=0.1, patch_len=16, stride=8, seed=42)
+
+=== Wind (CN) | target=power ===
+加载数据: /root/论文1/wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+R2: DLinear=0.9415, itransformer=0.9083
+
+=== Wind (US) | target=power (MW) ===
+加载数据: /root/论文1/wind_us.csv
+   原始形状: (105120, 11)
+   列数: 11
+   缺失值已全部处理
+   最终形状: (105120, 11)
+   特征: ['Year', 'Month', 'Day', 'Hour', 'Minute', 'wind speed at 100m (m/s)', 'hour_sin', 'hour_cos', 'day_sin', 'day_cos', 'power (MW)']
+   数据范围: [-1.0000, 2012.0000]
+   训练样本: 73465
+   验证样本: 15649
+   测试样本: 15649
+R2: DLinear=0.8779, itransformer=0.8563
+
+=== Air Quality | target=AQI ===
+加载数据: /root/论文1/air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+R2: DLinear=0.3433, itransformer=0.4590
+
+=== GEFCom Load | target=load ===
+加载数据: /root/论文1/gefcom_ready.csv
+   原始形状: (38070, 2)
+   列数: 2
+   删除了时间戳列: ['date']
+   缺失值已全部处理
+   警告: 数据仅含目标列，已添加虚拟特征列 '_dummy_feature'
+   最终形状: (38070, 2)
+   特征: ['_dummy_feature', 'load']
+   数据范围: [1.0000, 45547.0000]
+   训练样本: 26530
+   验证样本: 5591
+   测试样本: 5592
+R2: DLinear=0.7370, itransformer=0.7467
+
+Saved: /root/论文1/results/multi_domain_baselines_r2_itransformer_20260227_032621.csv
+Saved: /root/论文1/results/multi_domain_baselines_r2_itransformer_latest.csv
+Saved: /root/论文1/results/multi_domain_baselines_r2_itransformer_20260227_032621.json
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+Using device: cuda
+Config: RunConfig(model2='timemixer', seq_len=96, pred_len=24, epochs=10, batch_size=128, lr=0.001, patience=5, d_model=128, nhead=4, num_layers=2, dropout=0.1, patch_len=16, stride=8, seed=42)
+
+=== Wind (CN) | target=power ===
+加载数据: /root/论文1/wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+R2: DLinear=0.9415, timemixer=0.8894
+
+=== Wind (US) | target=power (MW) ===
+加载数据: /root/论文1/wind_us.csv
+   原始形状: (105120, 11)
+   列数: 11
+   缺失值已全部处理
+   最终形状: (105120, 11)
+   特征: ['Year', 'Month', 'Day', 'Hour', 'Minute', 'wind speed at 100m (m/s)', 'hour_sin', 'hour_cos', 'day_sin', 'day_cos', 'power (MW)']
+   数据范围: [-1.0000, 2012.0000]
+   训练样本: 73465
+   验证样本: 15649
+   测试样本: 15649
+R2: DLinear=0.8796, timemixer=0.8023
+
+=== Air Quality | target=AQI ===
+加载数据: /root/论文1/air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+R2: DLinear=0.3400, timemixer=0.3869
+
+=== GEFCom Load | target=load ===
+加载数据: /root/论文1/gefcom_ready.csv
+   原始形状: (38070, 2)
+   列数: 2
+   删除了时间戳列: ['date']
+   缺失值已全部处理
+   警告: 数据仅含目标列，已添加虚拟特征列 '_dummy_feature'
+   最终形状: (38070, 2)
+   特征: ['_dummy_feature', 'load']
+   数据范围: [1.0000, 45547.0000]
+   训练样本: 26530
+   验证样本: 5591
+   测试样本: 5592
+R2: DLinear=0.7363, timemixer=0.7201
+
+Saved: /root/论文1/results/multi_domain_baselines_r2_timemixer_20260227_033431.csv
+Saved: /root/论文1/results/multi_domain_baselines_r2_timemixer_latest.csv
+Saved: /root/论文1/results/multi_domain_baselines_r2_timemixer_20260227_033431.json
+
+[transfer-matrix]
+       model  R2_wind_us  R2_air_quality  R2_gefcom_load                                      source
+  Ultra-LSNT    0.787800        0.486100        0.755400 multi_domain_baselines + table_multi_domain
+     DLinear    0.877916        0.343297        0.737032 multi_domain_baselines + table_multi_domain
+iTransformer    0.856287        0.458986        0.746693 multi_domain_baselines + table_multi_domain
+   TimeMixer    0.802297        0.386851        0.720106 multi_domain_baselines + table_multi_domain
+Built main4 matrix evidence.
+run_id: 20260226T193432Z_main4_matrix_build_4090_full_backfill
+/root/论文1/results/supplementary_evidence/main4_matrix1_protocol.csv
+/root/论文1/results/supplementary_evidence/main4_matrix2_perf_robust_transfer.csv
+/root/论文1/results/supplementary_evidence/main4_matrix3_hardware_safety_joint.csv
+/root/论文1/results/supplementary_evidence/main4_matrix4_dispatch_value.csv
+
+[done] logs: /root/论文1/logs/full_backfill_4090_20260227_031251
+[done] summary: /root/论文1/logs/full_backfill_4090_20260227_031251/run_summary.json
+/root/miniconda3/lib/python3.10/site-packages/statsmodels/base/model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+加载数据: /root/论文1/wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+加载数据: /root/论文1/wind_us.csv
+   原始形状: (105120, 11)
+   列数: 11
+   缺失值已全部处理
+   最终形状: (105120, 11)
+   特征: ['Year', 'Month', 'Day', 'Hour', 'Minute', 'wind speed at 100m (m/s)', 'hour_sin', 'hour_cos', 'day_sin', 'day_cos', 'power (MW)']
+   数据范围: [-1.0000, 2012.0000]
+加载数据: /root/论文1/air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+加载数据: /root/论文1/gefcom_ready.csv
+   原始形状: (38070, 2)
+   列数: 2
+   删除了时间戳列: ['date']
+   缺失值已全部处理
+   警告: 数据仅含目标列，已添加虚拟特征列 '_dummy_feature'
+   最终形状: (38070, 2)
+   特征: ['_dummy_feature', 'load']
+   数据范围: [1.0000, 45547.0000]
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+启动全领域显著性检验流水线 (High Performance Mode)...
+
+[Wind (CN)] 启动全模型 DM Test 矩阵生成 (优化版)...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   Training Ultra-LSNT... Done.
+   Training Transformer... Done.
+   Training DLinear... Done.
+   Training LSTM... Done.
+   Calculating Matrix...
+      vs Transformer : p=0.0000 -> 显著落败 (LOSS)
+      vs DLinear     : p=0.0000 -> 显著落败 (LOSS)
+      vs LSTM        : p=0.0000 -> 显著落败 (LOSS)
+Saved: fig_dm_matrix_Wind_CN.png
+
+[Wind (US)] 启动全模型 DM Test 矩阵生成 (优化版)...
+加载数据: wind_us.csv
+   原始形状: (105120, 11)
+   列数: 11
+   缺失值已全部处理
+   最终形状: (105120, 11)
+   特征: ['Year', 'Month', 'Day', 'Hour', 'Minute', 'wind speed at 100m (m/s)', 'hour_sin', 'hour_cos', 'day_sin', 'day_cos', 'power (MW)']
+   数据范围: [-1.0000, 2012.0000]
+   Training Ultra-LSNT... Done.
+   Training Transformer... Done.
+   Training DLinear... Done.
+   Training LSTM... Done.
+   Calculating Matrix...
+      vs Transformer : p=0.0000 -> 显著胜出 (WIN)
+      vs DLinear     : p=0.0000 -> 显著落败 (LOSS)
+      vs LSTM        : p=0.0000 -> 显著胜出 (WIN)
+Saved: fig_dm_matrix_Wind_US.png
+
+[GEFCom Load] 启动全模型 DM Test 矩阵生成 (优化版)...
+加载数据: gefcom_ready.csv
+   原始形状: (38070, 2)
+   列数: 2
+   删除了时间戳列: ['date']
+   缺失值已全部处理
+   警告: 数据仅含目标列，已添加虚拟特征列 '_dummy_feature'
+   最终形状: (38070, 2)
+   特征: ['_dummy_feature', 'load']
+   数据范围: [1.0000, 45547.0000]
+   Training Ultra-LSNT... Done.
+   Training Transformer... Done.
+   Training DLinear... Done.
+   Training LSTM... Done.
+   Calculating Matrix...
+      vs Transformer : p=0.0000 -> 显著落败 (LOSS)
+      vs DLinear     : p=0.0000 -> 显著落败 (LOSS)
+      vs LSTM        : p=0.0000 -> 显著胜出 (WIN)
+Saved: fig_dm_matrix_GEFCom_Load.png
+
+[Air Quality] 启动全模型 DM Test 矩阵生成 (优化版)...
+加载数据: air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   Training Ultra-LSNT... Done.
+   Training Transformer... Done.
+   Training DLinear... Done.
+   Training LSTM... Done.
+   Calculating Matrix...
+      vs Transformer : p=0.0000 -> 显著落败 (LOSS)
+      vs DLinear     : p=0.0000 -> 显著落败 (LOSS)
+      vs LSTM        : p=0.0000 -> 显著落败 (LOSS)
+Saved: fig_dm_matrix_Air_Quality.png
+
+完成！
+加载数据: /root/论文1/wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+Built main4 matrix evidence.
+run_id: 20260226T215438Z_main4_matrix_build_submission_oneclick
+/root/论文1/results/supplementary_evidence/main4_matrix1_protocol.csv
+/root/论文1/results/supplementary_evidence/main4_matrix2_perf_robust_transfer.csv
+/root/论文1/results/supplementary_evidence/main4_matrix3_hardware_safety_joint.csv
+/root/论文1/results/supplementary_evidence/main4_matrix4_dispatch_value.csv
+
+[done] logs: /root/论文1/logs/submission_oneclick_4090_20260227_031251
+[done] summary: /root/论文1/logs/submission_oneclick_4090_20260227_031251/run_summary.json

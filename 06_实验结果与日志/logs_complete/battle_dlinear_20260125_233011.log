@@ -1,0 +1,32 @@
+⚔️ [真实对决] DLinear vs Ultra-LSNT...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+✅ 加载保存的模型配置: hidden_dim=128
+   使用 heteroscedastic_moe=False
+📋 模型配置: hidden_dim=128, num_blocks=3, heteroscedastic_moe=False
+🤖 正在现场训练 DLinear (请稍候)...
+   Epoch 1: Loss 0.0657
+   Epoch 2: Loss 0.0505
+   Epoch 3: Loss 0.0497
+   Epoch 4: Loss 0.0478
+   Epoch 5: Loss 0.0476
+   Epoch 6: Loss 0.0472
+   Epoch 7: Loss 0.0473
+   Epoch 8: Loss 0.0475
+   Epoch 9: Loss 0.0473
+   Epoch 10: Loss 0.0463
+
+🌪️ 注入毁灭性噪音: impulse...
+   Level 0.0: Ours 0.8728 | DLinear 0.9397
+   Level 0.05: Ours 0.5227 | DLinear -2.0132
+   Level 0.1: Ours 0.4543 | DLinear -2.9082
+   Level 0.15: Ours 0.3934 | DLinear -3.8043
+✅ DLinear 对比图已生成

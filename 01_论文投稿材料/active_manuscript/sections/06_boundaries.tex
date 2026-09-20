@@ -1,0 +1,63 @@
+\section{Mapping the Operating Envelope within the Evaluated Settings: Where Does the Advantage Break?}
+\label{sec:boundaries}
+
+This section maps the empirical operating envelope of physical priors within the evaluated settings, evaluating boundary conditions across training sample volume, prior corruption, engineering drift, temporal proxy misalignment, and neural backbone architectures.
+
+\subsection{Within-Site Learning Curves across Sample Budgets}
+To decouple sample volume from geographic topography and examine whether physical prior advantages persist under data expansion, we evaluated within-site learning curves across a discrete grid of training sample budgets $N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$ on Kelmarsh and Hill of Towie across five random seeds (Figure~\ref{fig:within_site_learning_curve}).
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_within_site_learning_curve.pdf}
+\caption{Within-Site Learning Curves across Discrete Sample Sizes $N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$ on Kelmarsh and Hill of Towie (Multi-seed means and standard deviations). Holding site topography and turbine hardware constant, authentic empirical priors yield lower dispatch costs in the tested sample-restricted regimes ($N_{\text{train}} \in \{500, 1{,}000\}$, $-2.00\%$ on Kelmarsh and $-3.62\%$ on Hill of Towie at $N=500$). As training volume expands, this advantage attenuates; at the largest evaluated training budget ($N_{\text{train}} = 5{,}000$), unconstrained data-driven models close the gap and slightly reverse the ranking (+0.33\% on Kelmarsh, +1.73\% on Hill of Towie). In contrast, form-matched scrambled priors under strong regularization ($\lambda=1.0$) induce severe dispatch cost penalties ($+43\%$ to $+98\%$) across all evaluated sample regimes.}
+\label{fig:within_site_learning_curve}
+\end{figure*}
+
+In the tested sample-restricted regimes ($N_{\text{train}} = 500$ and $N_{\text{train}} = 1{,}000$), embedding the authentic empirical power curve prior ($\lambda=1.0$) provides clear downside risk protection:
+\begin{itemize}[leftmargin=*]
+\item At $N_{\text{train}} = 500$, normalized dispatch cost decreases from $0.09648 \pm 0.00314$ to $0.09455 \pm 0.00285$ ($-2.00\%$) on Kelmarsh, and from $0.10444 \pm 0.00312$ to $0.10066 \pm 0.00307$ ($-3.62\%$) on Hill of Towie.
+\item At $N_{\text{train}} = 1{,}000$, the genuine prior maintains an advantage on both sites ($0.09241$ vs.\ $0.09365$, $-1.32\%$ on Kelmarsh; $0.09681$ vs.\ $0.09902$, $-2.23\%$ on Hill of Towie).
+\end{itemize}
+
+However, as training volume increases across the intermediate budgets ($N_{\text{train}} = 1{,}500$ and $3{,}000$), the margin of advantage steadily attenuates. At the largest evaluated training budget ($N_{\text{train}} = 5{,}000$), unconstrained DLinear achieves a dispatch cost of $0.08812 \pm 0.00022$ on Kelmarsh and $0.08936 \pm 0.00023$ on Hill of Towie, closing the gap and slightly outperforming the fixed genuine prior ($0.08841 \pm 0.00039$, $+0.33\%$ on Kelmarsh; $0.09091 \pm 0.00131$, $+1.73\%$ on Hill of Towie). Throughout all evaluated sample sizes, form-matched scrambled negative controls inflict severe performance degradations ($+43\%$ to $+98\%$), confirming that unaligned priors remain destructive regardless of sample availability.
+
+\paragraph{Conceptual Interpretation}
+The observed learning curves are consistent with a conceptual hypothesis in which the regularizing value of variance reduction diminishes as sample availability increases, while structural approximation bias becomes increasingly consequential. Under this interpretive perspective, in sample-restricted windows, unconstrained models are hypothesized to be vulnerable to elevated estimation variance that an empirical power curve helps suppress by constraining the hypothesis space. Conversely, purely data-driven representations can fit the observed input--output relationship more flexibly as training coverage expands; under these well-sampled conditions, a rigid, static prior can act as a structural approximation bias that constrains the model from fitting nuanced aerodynamic interactions. We emphasize that this bias--variance trade-off is a conceptual interpretation consistent with---not formally identified or proven by---the empirical learning curves, as scalar bias and variance components were not directly decomposed or measured from empirical data.
+
+\paragraph{Joint Operating Envelope}
+Taken together, the learning-curve experiments (at $\lambda=1.0$) and separate penalty-sensitivity evaluations suggest that both data availability and regularization strength govern the operating envelope. In the absence of a dense factorial grid across multiple $N \times \text{multiple } \lambda$ values, we characterize this dependency as a joint empirical tendency rather than a statistically proven interaction.
+
+\subsection{Continuous Prior Corruption and Engineering Drift}
+To test whether prior vulnerability is restricted to total permutation, we evaluated continuous prior perturbation and engineering drift models on Penmanshiel (Figure~\ref{fig:corruption_gradient}).
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_prior_corruption_gradient.pdf}
+\caption{Continuous Prior Corruption and Engineering Drift Severity Response Curves. (a) Continuous interpolation between authentic and scrambled priors $\alpha \in [0.0, 1.0]$: on Penmanshiel, the tested corruption trajectory crosses the unconstrained baseline around an empirical crossover region of $\alpha \approx 0.07$. (b) Turbine aerodynamic aging: capacity derating exceeding 10\% flips nominal physical priors into economic penalties under the evaluated configuration. (c) Anemometer sensor calibration drift: Penmanshiel retains an advantage under positive wind speed drift up to $+15\%$, whereas negative sensor under-reporting systematically inflates shortfall.}
+\label{fig:corruption_gradient}
+\end{figure*}
+
+\paragraph{Continuous Corruption Interpolation (\texorpdfstring{$\alpha \in [0.0, 1.0]$}{alpha in [0.0, 1.0]})}
+We constructed a continuous perturbation trajectory parameterized by $\alpha \in [0.0, 1.0]$, linearly blending the authentic power curve with its scrambled permutation. As shown in Figure~\ref{fig:corruption_gradient}a, dispatch cost degrades monotonically with perturbation severity. On Penmanshiel, the tested corruption trajectory crosses the unconstrained baseline around an empirical crossover region of $\alpha \approx 0.07$: costs rise from $0.09712 \pm 0.00031$ at $\alpha = 0.0$ to $0.09958 \pm 0.00042$ at $\alpha = 0.1$. At $\alpha = 0.2$, normalized dispatch cost reaches $0.10469 \pm 0.00338$ (a $+5.9\%$ degradation relative to unconstrained models). We emphasize that these values are empirical crossover locations along the evaluated perturbation grid, not population-level physical thresholds, indicating that even modest distortion (under 10\% permutation blend) is sufficient to erode inductive benefits in this configuration.
+
+\paragraph{Turbine Aerodynamic Aging and Derating}
+In operational wind fleets, blade erosion, leading-edge roughness, and mechanical aging cause progressive aerodynamic derating. In the evaluated Penmanshiel configuration, simulating turbine capacity derating reveals that derating exceeding 10\% flips nominal physical priors into net economic penalties (Figure~\ref{fig:corruption_gradient}b), as the network regularizes against an un-derated historical envelope that exceeds the turbine's degraded capability. This 10\% threshold reflects the evaluated operating margin where representation bias overtakes variance reduction.
+
+\paragraph{Anemometer Calibration Drift}
+Simulating anemometer measurement drift ($\pm 15\%$) reveals asymmetric operational tolerances (Figure~\ref{fig:corruption_gradient}c). On Penmanshiel, the model retains a modest advantage over unconstrained baselines under positive wind speed drift up to $+15\%$ ($0.09833$ vs.\ $0.09852$). In contrast, negative wind speed under-reporting systematically depresses predicted power, triggering substantial shortfall penalties during high-wind ramp events.
+
+\subsection{Sensitivity to Training-Loss Proxy Staleness}
+Many physical constraint formulations rely on meteorological proxies (such as supervisory anemometer readings) to query empirical power curves during loss evaluation. To assess sensitivity to proxy latency in the absence of forward numerical weather predictions, we performed a parametric lag scan across $k \in \{6, 12, 18, 36\}$ steps (representing 1\,h to 6\,h delay in the training proxy; Figure~\ref{fig:ablation_3d}c).
+
+In the Hill of Towie lag scan, decision risk exceeds the unconstrained reference ($0.08913$) by the first evaluated lag $k=6$ (1\,h delay, normalized dispatch cost $0.09011 \pm 0.00008$) and deteriorates monotonically through $k=36$ ($0.09246 \pm 0.00006$). On Kelmarsh, dispatch cost rises from $0.08867$ ($k=6$) to $0.09034$ ($k=36$). On Penmanshiel, dispatch cost escalates from $0.09996$ ($k=6$) to $0.10425$ ($k=36$). Because $k=6$ is the minimum non-zero lag evaluated in this discrete grid, this observation establishes that latency begins degrading operational value within the first hour of proxy delay, while more granular sub-hour transitions remain unobserved.
+
+This experiment isolates the sensitivity of offline training objectives to temporal misalignment between the forecast horizon and the historical weather proxy used to index the power curve. It demonstrates that when contemporaneous or forward meteorological forecasts are unavailable, regularizing predictions against stale weather proxies monotonically degrades downstream dispatch performance.
+
+\subsection{Cross-Backbone Architectural Sensitivity Probe (PatchTST)}
+To examine whether boundary behaviors are specific to linear decomposition architectures, we evaluated PatchTST \cite{nie2023patchtst} across 60 independently trained models (3 farms $\times$ 4 constraint conditions $\times$ 5 random seeds; Table~\ref{tab:patchtst_and_rules}) under nominal regularization ($\lambda=0.01$).
+
+\input{tables/table5_patchtst_and_rules.tex}
+
+As detailed in Table~\ref{tab:patchtst_and_rules}, PatchTST confirms that distribution priors consistently reduce dynamic shortfall expenditure across all three wind farms (saving \pounds 232.44, \pounds 127.49, and \pounds 790.51/(turb$\cdot$yr) on Hill of Towie, Kelmarsh, and Penmanshiel, respectively), indicating that defensive shortfall reduction is preserved in non-linear patch representations. However, net balancing cashflow exhibits a sharp architectural divergence: on Hill of Towie, distribution regularization decreases net cashflow by \pounds 568.68/(turb$\cdot$yr) under PatchTST, inverting the positive cashflow increment observed under DLinear.
+
+Furthermore, on Penmanshiel in the sample-restricted regime, simple empirical baselines (Ridge regression at $0.09744$ and Persistence at $0.09586$) outperform all constrained deep networks (PatchTST at $0.11134$). This confirms that external physical loss penalties cannot uniformly compensate for deep parameter overfitting when training data is severely restricted.

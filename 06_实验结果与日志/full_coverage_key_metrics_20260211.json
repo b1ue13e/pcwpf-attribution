@@ -1,0 +1,2442 @@
+{
+  "main_benchmark": {
+    "metadata": {
+      "generated_at": "2026-01-26T19:25:36.854116",
+      "total_models": 12,
+      "dataset": "wind_final.csv",
+      "dataset_size": 121528,
+      "input_seq_len": 96,
+      "output_seq_len": 24,
+      "batch_size": 256,
+      "hardware": "RTX 4090D 24GB, 18 vCPU AMD EPYC, 60GB RAM"
+    },
+    "models": [
+      {
+        "name": "DLinear",
+        "type": "existing",
+        "year": "2021-2022",
+        "r2": 0.9399903789162636,
+        "rmse": 6236.38623046875,
+        "mae": 4085.08984375,
+        "mape": 12.256494909524918,
+        "mse": 38892512.0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": 97222,
+        "test_size": 24306
+      },
+      {
+        "name": "iTransformer",
+        "type": "new",
+        "year": "2024 (NeurIPS)",
+        "r2": 0.901150532066822,
+        "rmse": 8004.048828125,
+        "mae": 6333.2939453125,
+        "mape": 24.883386492729187,
+        "mse": 64064800.0,
+        "training_time": 95.39042711257935,
+        "params": 678808,
+        "train_size": "N/A",
+        "test_size": "N/A"
+      },
+      {
+        "name": "TimeMixer",
+        "type": "new",
+        "year": "2024 (ICLR)",
+        "r2": 0.8885634914040565,
+        "rmse": 8498.3837890625,
+        "mae": 6661.35888671875,
+        "mape": 25.858595967292786,
+        "mse": 72222520.0,
+        "training_time": 75.23250460624695,
+        "params": 621936,
+        "train_size": "N/A",
+        "test_size": "N/A"
+      },
+      {
+        "name": "Ultra-LSNT",
+        "type": "existing",
+        "year": "2021-2022",
+        "r2": 0.8727728724479675,
+        "rmse": 9080.5546875,
+        "mae": 7171.41650390625,
+        "mape": 27.743408203125,
+        "mse": 82456480.0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": 97222,
+        "test_size": 24306
+      },
+      {
+        "name": "PatchTST",
+        "type": "new",
+        "year": "2023 (ICLR)",
+        "r2": 0.8666042983531952,
+        "rmse": 9298.083984375,
+        "mae": 7342.15869140625,
+        "mape": 29.37401831150055,
+        "mse": 86454368.0,
+        "training_time": 93.3056092262268,
+        "params": 781592,
+        "train_size": "N/A",
+        "test_size": "N/A"
+      },
+      {
+        "name": "Informer",
+        "type": "early",
+        "year": "2021 (AAAI)",
+        "r2": 0.836511880159378,
+        "rmse": 10293.5615234375,
+        "mae": 8203.5146484375,
+        "mape": 0,
+        "mse": 0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": "N/A",
+        "test_size": "N/A"
+      },
+      {
+        "name": "Informer",
+        "type": "existing",
+        "year": "2021-2022",
+        "r2": 0.8166589140892029,
+        "rmse": 10900.6513671875,
+        "mae": 8765.9189453125,
+        "mape": 32.584171295166016,
+        "mse": 118824200.0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": 97222,
+        "test_size": 24306
+      },
+      {
+        "name": "Transformer",
+        "type": "existing",
+        "year": "2021-2022",
+        "r2": 0.743889570236206,
+        "rmse": 2916.826416015625,
+        "mae": 2074.530517578125,
+        "mape": 10.530510544776917,
+        "mse": 8507876.0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": 97222,
+        "test_size": 24306
+      },
+      {
+        "name": "Autoformer",
+        "type": "existing",
+        "year": "2021-2022",
+        "r2": 0.7219411730766296,
+        "rmse": 13424.2763671875,
+        "mae": 10646.7724609375,
+        "mape": 37.93943786621094,
+        "mse": 180211184.0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": 97222,
+        "test_size": 24306
+      },
+      {
+        "name": "Autoformer",
+        "type": "early",
+        "year": "2021 (NeurIPS)",
+        "r2": 0.7219411730766296,
+        "rmse": 13424.2763671875,
+        "mae": 10646.7724609375,
+        "mape": 0,
+        "mse": 0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": "N/A",
+        "test_size": "N/A"
+      },
+      {
+        "name": "LSTM",
+        "type": "existing",
+        "year": "2021-2022",
+        "r2": 0.6971422135829926,
+        "rmse": 3171.876953125,
+        "mae": 2273.742431640625,
+        "mape": 11.936495453119278,
+        "mse": 10060803.0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": 97222,
+        "test_size": 24306
+      },
+      {
+        "name": "MLP",
+        "type": "existing",
+        "year": "2021-2022",
+        "r2": 0.6649525463581085,
+        "rmse": 3336.184814453125,
+        "mae": 2307.627685546875,
+        "mape": 11.722974479198456,
+        "mse": 11130129.0,
+        "training_time": "N/A",
+        "params": "N/A",
+        "train_size": 97222,
+        "test_size": 24306
+      }
+    ]
+  },
+  "ultra_main": {
+    "test_metrics": {
+      "MSE": 82456480.0,
+      "RMSE": 9080.5546875,
+      "MAE": 7171.41650390625,
+      "MAPE": 27.743408203125,
+      "R2": 0.8727728724479675
+    },
+    "efficiency": {
+      "avg_compute_ratio": 0.5,
+      "avg_skip_rate": 0.0,
+      "avg_slow_ratio": 0.3333333333333333
+    },
+    "model_config": {
+      "input_dim": 8,
+      "hidden_dim": 128,
+      "output_dim": 1,
+      "num_blocks": 3,
+      "num_experts": 4,
+      "top_k": 2,
+      "dropout": 0.1,
+      "router_z_loss_coef": 0.01,
+      "router_aux_loss_coef": 0.01,
+      "router_jitter_noise": 0.1,
+      "skip_threshold": 0.5,
+      "dual_mode_expansion": 4
+    }
+  },
+  "multi_domain_ultra": {
+    "wind_us": {
+      "test_metrics": {
+        "MSE": 0.20756039023399353,
+        "RMSE": 0.4555879533290863,
+        "MAE": 0.2891320288181305,
+        "MAPE": 629.9896850585938,
+        "R2": 0.7877943515777588
+      },
+      "efficiency": {
+        "avg_compute_ratio": 0.5,
+        "avg_skip_rate": 0.11369410569105692,
+        "avg_slow_ratio": 0.19912347560975613
+      },
+      "model_config": {
+        "input_dim": 8,
+        "hidden_dim": 128,
+        "output_dim": 1,
+        "num_blocks": 3,
+        "num_experts": 4,
+        "top_k": 2,
+        "dropout": 0.1,
+        "router_z_loss_coef": 0.01,
+        "router_aux_loss_coef": 0.01,
+        "router_jitter_noise": 0.1,
+        "skip_threshold": 0.5,
+        "dual_mode_expansion": 4
+      }
+    },
+    "air_quality": {
+      "test_metrics": {
+        "MSE": 1037.7708740234375,
+        "RMSE": 32.21445083618164,
+        "MAE": 19.86625099182129,
+        "MAPE": 21931.46875,
+        "R2": 0.4860529899597168
+      },
+      "efficiency": {
+        "avg_compute_ratio": 0.5,
+        "avg_skip_rate": 5.66944847605225e-05,
+        "avg_slow_ratio": 0.0
+      },
+      "model_config": {
+        "input_dim": 7,
+        "hidden_dim": 128,
+        "output_dim": 1,
+        "num_blocks": 3,
+        "num_experts": 4,
+        "top_k": 2,
+        "dropout": 0.1,
+        "router_z_loss_coef": 0.01,
+        "router_aux_loss_coef": 0.01,
+        "router_jitter_noise": 0.1,
+        "skip_threshold": 0.5,
+        "dual_mode_expansion": 4
+      }
+    },
+    "gefcom": {
+      "test_metrics": {
+        "MSE": 8048448.0,
+        "RMSE": 2836.978759765625,
+        "MAE": 2049.483154296875,
+        "MAPE": 10.627054214477539,
+        "R2": 0.7554360032081604
+      },
+      "efficiency": {
+        "avg_compute_ratio": 0.5,
+        "avg_skip_rate": 5.9185606060606055e-05,
+        "avg_slow_ratio": 0.0
+      },
+      "model_config": {
+        "input_dim": 1,
+        "hidden_dim": 128,
+        "output_dim": 1,
+        "num_blocks": 3,
+        "num_experts": 4,
+        "top_k": 2,
+        "dropout": 0.1,
+        "router_z_loss_coef": 0.01,
+        "router_aux_loss_coef": 0.01,
+        "router_jitter_noise": 0.1,
+        "skip_threshold": 0.5,
+        "dual_mode_expansion": 4
+      }
+    }
+  },
+  "multi_domain_baselines": [
+    {
+      "dataset": "Wind (CN)",
+      "target": "power",
+      "DLinear_R2": 0.941463716328144,
+      "timemixer_R2": 0.889375850558281,
+      "DLinear_RMSE": 6159.353515625,
+      "DLinear_MAE": 3882.177001953125,
+      "$timemixer_MAE": 6692.1044921875,
+      "timemixer_RMSE": 8467.349609375,
+      "timemixer_MAE": 6692.1044921875,
+      "DLinear_train_sec": 25.61886191368103,
+      "timemixer_train_sec": 37.94366216659546
+    },
+    {
+      "dataset": "Wind (US)",
+      "target": "power (MW)",
+      "DLinear_R2": 0.8795670494437218,
+      "timemixer_R2": 0.8022965043783188,
+      "DLinear_RMSE": 2.036629438400269,
+      "DLinear_MAE": 1.283543825149536,
+      "$timemixer_MAE": 1.7996076345443726,
+      "timemixer_RMSE": 2.6094353199005127,
+      "timemixer_MAE": 1.7996076345443726,
+      "DLinear_train_sec": 21.994070529937744,
+      "timemixer_train_sec": 31.35746192932129
+    },
+    {
+      "dataset": "Air Quality",
+      "target": "AQI",
+      "DLinear_R2": 0.3399900794029236,
+      "timemixer_R2": 0.3868508338928222,
+      "DLinear_RMSE": 36.50621795654297,
+      "DLinear_MAE": 22.32257080078125,
+      "$timemixer_MAE": 21.4227237701416,
+      "timemixer_RMSE": 35.18638610839844,
+      "timemixer_MAE": 21.4227237701416,
+      "DLinear_train_sec": 118.57813739776611,
+      "timemixer_train_sec": 266.61245346069336
+    },
+    {
+      "dataset": "GEFCom Load",
+      "target": "load",
+      "DLinear_R2": 0.7362743616104126,
+      "timemixer_R2": 0.7270760834217072,
+      "DLinear_RMSE": 2946.02197265625,
+      "DLinear_MAE": 2117.964599609375,
+      "$timemixer_MAE": 2199.141357421875,
+      "timemixer_RMSE": 2996.95751953125,
+      "timemixer_MAE": 2199.141357421875,
+      "DLinear_train_sec": 6.2496984004974365,
+      "timemixer_train_sec": 15.623458862304688
+    }
+  ],
+  "robust_gaussian_windcn": [
+    {
+      "sigma": 0.0,
+      "model": "DLinear",
+      "R2": 0.93792375177145
+    },
+    {
+      "sigma": 0.1,
+      "model": "DLinear",
+      "R2": 0.7813685983419418
+    },
+    {
+      "sigma": 0.2,
+      "model": "DLinear",
+      "R2": 0.2951500415802002
+    },
+    {
+      "sigma": 0.3,
+      "model": "DLinear",
+      "R2": -0.4659266471862793
+    },
+    {
+      "sigma": 0.4,
+      "model": "DLinear",
+      "R2": -1.579047679901123
+    },
+    {
+      "sigma": 0.0,
+      "model": "LightGBM",
+      "R2": 0.9069388508796692
+    },
+    {
+      "sigma": 0.1,
+      "model": "LightGBM",
+      "R2": 0.8859535083174706
+    },
+    {
+      "sigma": 0.2,
+      "model": "LightGBM",
+      "R2": 0.8221634328365326
+    },
+    {
+      "sigma": 0.3,
+      "model": "LightGBM",
+      "R2": 0.730472058057785
+    },
+    {
+      "sigma": 0.4,
+      "model": "LightGBM",
+      "R2": 0.6155615746974945
+    },
+    {
+      "sigma": 0.0,
+      "model": "Ultra-LSNT",
+      "R2": 0.8727746903896332
+    },
+    {
+      "sigma": 0.05,
+      "model": "Ultra-LSNT",
+      "R2": 0.8718838840723038
+    },
+    {
+      "sigma": 0.1,
+      "model": "Ultra-LSNT",
+      "R2": 0.8686795979738235
+    },
+    {
+      "sigma": 0.15,
+      "model": "Ultra-LSNT",
+      "R2": 0.8628987222909927
+    },
+    {
+      "sigma": 0.2,
+      "model": "Ultra-LSNT",
+      "R2": 0.8552320450544357
+    },
+    {
+      "sigma": 0.3,
+      "model": "Ultra-LSNT",
+      "R2": 0.7865631878376007
+    },
+    {
+      "sigma": 0.4,
+      "model": "Ultra-LSNT",
+      "R2": 0.7262898087501526
+    }
+  ],
+  "dlinear_noise_robustness": {
+    "model": "DLinear",
+    "noise_levels": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "r2_scores": [
+      0.93792375177145,
+      0.7817023694515228,
+      0.3115544319152832,
+      -0.49559831619262695,
+      -1.6383140087127686
+    ],
+    "clean_r2": 0.93792375177145,
+    "noise_20_r2": 0.3115544319152832,
+    "timestamp": "2026-02-09 18:20:58",
+    "device": "cuda",
+    "data_info": {
+      "dataset": "wind_final.csv",
+      "seq_len": 96,
+      "pred_len": 24,
+      "input_dim": 8,
+      "noise_type": "gaussian"
+    }
+  },
+  "gbdt_results_complete": {
+    "noise_levels": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "ultra_lsnt_scores": [
+      0.8721338659524918,
+      0.8623660802841187,
+      0.8318323791027069,
+      0.7865631878376007,
+      0.7262898087501526
+    ],
+    "lightgbm_scores": [
+      0.9069388508796692,
+      0.8859535083174706,
+      0.8221634328365326,
+      0.730472058057785,
+      0.6155615746974945
+    ],
+    "data_info": {
+      "dataset": "wind_final.csv",
+      "input_dim": 8,
+      "samples": 121528
+    }
+  },
+  "dispatch": {
+    "Ultra-LSNT": {
+      "model": "Ultra-LSNT",
+      "total_cost": 583200.0,
+      "cost_breakdown": {
+        "fuel_cost": 540000.0,
+        "reserve_cost": 43200.0,
+        "purchase_cost": 0.0,
+        "storage_cost": 0.0,
+        "startup_cost": 0.0,
+        "shutdown_cost": 0.0,
+        "total_cost": 583200.0
+      },
+      "total_reserve": 216000.0,
+      "avg_reserve": 9000.0,
+      "total_curtailment": 600000.0,
+      "hourly_curtailment": [
+        25000.0,
+        27588.190451025206,
+        30000.0,
+        32071.067811865476,
+        33660.25403784439,
+        34659.25826289068,
+        35000.0,
+        34659.25826289068,
+        33660.25403784439,
+        32071.067811865476,
+        30000.0,
+        27588.19045102521,
+        25000.0,
+        22411.809548974794,
+        20000.000000000004,
+        17928.932188134528,
+        16339.745962155615,
+        15340.741737109318,
+        15000.0,
+        15340.741737109318,
+        16339.745962155612,
+        17928.932188134524,
+        19999.999999999996,
+        22411.809548974783
+      ],
+      "thermal_output_range": [
+        45000.0,
+        45000.0
+      ],
+      "wind_mean_range": [
+        20000.0,
+        40000.0
+      ],
+      "solution": {
+        "thermal": [
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0
+        ],
+        "reserve": [
+          9000.0,
+          9776.457135307563,
+          10500.0,
+          11121.320343559644,
+          11598.076211353316,
+          11897.777478867205,
+          12000.0,
+          11897.777478867205,
+          11598.076211353316,
+          11121.320343559644,
+          10500.0,
+          9776.457135307563,
+          9000.0,
+          8223.54286469244,
+          7500.000000000002,
+          6878.679656440358,
+          6401.923788646685,
+          6102.222521132796,
+          6000.0,
+          6102.222521132796,
+          6401.9237886466835,
+          6878.679656440358,
+          7500.0,
+          8223.542864692436
+        ],
+        "charge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "discharge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "DLinear": {
+      "model": "DLinear",
+      "total_cost": 668667.719140625,
+      "cost_breakdown": {
+        "fuel_cost": 540000.0,
+        "reserve_cost": 128667.719140625,
+        "purchase_cost": 0.0,
+        "storage_cost": 0.0,
+        "startup_cost": 0.0,
+        "shutdown_cost": 0.0,
+        "total_cost": 668667.719140625
+      },
+      "total_reserve": 643338.595703125,
+      "avg_reserve": 26805.774820963543,
+      "total_curtailment": 2024461.9765625,
+      "hourly_curtailment": [
+        81077.984375,
+        81735.78125,
+        87430.7421875,
+        87582.6953125,
+        82156.4375,
+        84107.015625,
+        89198.359375,
+        87485.125,
+        82445.703125,
+        81679.90625,
+        86411.8828125,
+        86092.515625,
+        81761.3984375,
+        81462.6171875,
+        86782.265625,
+        86170.34375,
+        81150.109375,
+        81240.25,
+        86263.3828125,
+        85792.234375,
+        81201.09375,
+        81602.3046875,
+        87147.34375,
+        86484.484375
+      ],
+      "thermal_output_range": [
+        45000.0,
+        45000.0
+      ],
+      "wind_mean_range": [
+        86077.984375,
+        94198.359375
+      ],
+      "solution": {
+        "thermal": [
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0
+        ],
+        "reserve": [
+          25823.396484375,
+          26020.734375,
+          27729.22265625,
+          27774.80859375,
+          26146.9296875,
+          26732.10546875,
+          28259.5078125,
+          27745.5390625,
+          26233.7109375,
+          26003.97265625,
+          27423.56640625,
+          27327.755859375,
+          26028.41796875,
+          25938.78515625,
+          27534.6796875,
+          27351.1015625,
+          25845.03125,
+          25872.076171875,
+          27379.015625,
+          27237.671875,
+          25860.328125,
+          25980.69140625,
+          27644.203125,
+          27445.34375
+        ],
+        "charge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "discharge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Autoformer": {
+      "model": "Autoformer",
+      "total_cost": 626400.0,
+      "cost_breakdown": {
+        "fuel_cost": 540000.0,
+        "reserve_cost": 86400.0,
+        "purchase_cost": 0.0,
+        "storage_cost": 0.0,
+        "startup_cost": 0.0,
+        "shutdown_cost": 0.0,
+        "total_cost": 626400.0
+      },
+      "total_reserve": 432000.0,
+      "avg_reserve": 18000.0,
+      "total_curtailment": 840000.0,
+      "hourly_curtailment": [
+        49142.13562373095,
+        52320.50807568878,
+        54318.516525781364,
+        55000.0,
+        54318.516525781364,
+        52320.50807568877,
+        49142.13562373095,
+        45000.00000000001,
+        40176.38090205042,
+        35000.0,
+        29823.619097949588,
+        25000.000000000007,
+        20857.864376269048,
+        17679.491924311224,
+        15681.483474218632,
+        15000.0,
+        15681.483474218632,
+        17679.491924311227,
+        20857.864376269048,
+        24999.999999999993,
+        29823.619097949588,
+        34999.99999999999,
+        40176.380902050405,
+        44999.999999999985
+      ],
+      "thermal_output_range": [
+        45000.0,
+        45000.0
+      ],
+      "wind_mean_range": [
+        20000.0,
+        60000.0
+      ],
+      "solution": {
+        "thermal": [
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0
+        ],
+        "reserve": [
+          24363.961030678925,
+          25794.22863405995,
+          26693.332436601617,
+          27000.0,
+          26693.332436601617,
+          25794.228634059946,
+          24363.961030678925,
+          22500.000000000004,
+          20329.371405922688,
+          18000.0,
+          15670.628594077316,
+          13500.000000000004,
+          11636.03896932107,
+          10205.77136594005,
+          9306.667563398383,
+          9000.0,
+          9306.667563398383,
+          10205.771365940052,
+          11636.03896932107,
+          13499.999999999996,
+          15670.628594077316,
+          17999.999999999996,
+          20329.371405922684,
+          22499.999999999993
+        ],
+        "charge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "discharge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Informer": {
+      "model": "Informer",
+      "total_cost": 621000.0,
+      "cost_breakdown": {
+        "fuel_cost": 540000.0,
+        "reserve_cost": 81000.0,
+        "purchase_cost": 0.0,
+        "storage_cost": 0.0,
+        "startup_cost": 0.0,
+        "shutdown_cost": 0.0,
+        "total_cost": 621000.0
+      },
+      "total_reserve": 405000.0,
+      "avg_reserve": 16875.0,
+      "total_curtailment": 960000.0,
+      "hourly_curtailment": [
+        52990.38105676658,
+        54488.88739433602,
+        55000.0,
+        54488.88739433602,
+        52990.38105676658,
+        50606.601717798214,
+        47500.00000000001,
+        43882.28567653782,
+        40000.0,
+        36117.7143234622,
+        32500.0,
+        29393.398282201786,
+        27009.618943233425,
+        25511.112605663977,
+        25000.0,
+        25511.112605663973,
+        27009.618943233414,
+        29393.398282201786,
+        32499.999999999993,
+        36117.714323462176,
+        39999.99999999999,
+        43882.2856765378,
+        47499.999999999985,
+        50606.6017177982
+      ],
+      "thermal_output_range": [
+        45000.0,
+        45000.0
+      ],
+      "wind_mean_range": [
+        30000.0,
+        60000.0
+      ],
+      "solution": {
+        "thermal": [
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0,
+          45000.0
+        ],
+        "reserve": [
+          21746.392896287467,
+          22308.33277287601,
+          22500.0,
+          22308.33277287601,
+          21746.392896287467,
+          20852.47564417433,
+          19687.500000000004,
+          18330.857128701682,
+          16875.0,
+          15419.142871298325,
+          14062.5,
+          12897.52435582567,
+          12003.607103712535,
+          11441.667227123991,
+          11250.0,
+          11441.66722712399,
+          12003.60710371253,
+          12897.52435582567,
+          14062.499999999996,
+          15419.142871298316,
+          16874.999999999996,
+          18330.857128701675,
+          19687.499999999993,
+          20852.475644174323
+        ],
+        "charge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "discharge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "efficiency": {
+    "efficiency_benchmark_results_enhanced.csv": [
+      {
+        "device": "cuda",
+        "avg_inference_time_ms": 15.29369191069838,
+        "std_inference_time_ms": 3.612972387190239,
+        "avg_epoch_time_sec": 27.424979562498628,
+        "total_training_time_sec": 274.2497956249863,
+        "epochs": 10,
+        "model_parameters": 34491317,
+        "trainable_parameters": 34491317,
+        "cpu_memory_usage_mb": 0.0,
+        "gpu_memory_usage_mb": 0.0,
+        "batch_size": 128,
+        "sequence_length": 96
+      }
+    ],
+    "ultra_lsnt_lite_optimized_results.csv": [
+      {
+        "model": "Ultra-LSNT-Lite-Optimized",
+        "device": "cuda",
+        "timestamp": "2026-01-26 21:40:15",
+        "total_parameters": 349368,
+        "trainable_parameters": 349368,
+        "model_size_mb": 1.332275390625,
+        "single_inference_time_ms": 5.21,
+        "avg_inference_time_ms": 6.53,
+        "std_inference_time_ms": 8.42,
+        "min_inference_time_ms": 4.15,
+        "max_inference_time_ms": 42.36,
+        "inference_batch_count": 20,
+        "memory_usage_mb": 0.035,
+        "gpu_memory_usage_mb": 1.12,
+        "avg_epoch_time_sec": 4.87,
+        "total_training_time_sec": 14.61,
+        "batch_size": 256,
+        "sequence_length": 96,
+        "prediction_length": 24,
+        "input_dimension": 8,
+        "hidden_dim": 96,
+        "num_blocks": 1,
+        "num_experts": 2,
+        "top_k": 1,
+        "optimization_techniques": "torch.compile+AMP+reduced_architecture",
+        "estimated_energy_per_inference_mj": 9.795
+      }
+    ],
+    "ultra_lsnt_lite_optimized_efficiency_results.csv": [
+      {
+        "model": "Ultra-LSNT-Lite-Optimized",
+        "device": "cuda",
+        "timestamp": "2026-02-10 01:45:40",
+        "total_parameters": 617368,
+        "trainable_parameters": 617368,
+        "model_size_mb": 2.355072021484375,
+        "single_inference_time_ms": 15.522858127951622,
+        "avg_inference_time_ms": 2140.2067206799984,
+        "std_inference_time_ms": 9055.82346217028,
+        "min_inference_time_ms": 4.252122715115547,
+        "max_inference_time_ms": 41607.31464251876,
+        "inference_batch_count": 20,
+        "memory_usage_mb": 0.23828125,
+        "gpu_memory_usage_mb": 1.52783203125,
+        "estimated_power_watts": 150.0,
+        "estimated_energy_per_inference_mj": 321031.00810199976,
+        "estimated_energy_per_million_mj": 321031008101.99976,
+        "optimization_techniques": "torch.compile+AMP+reduced_architecture",
+        "hidden_dim": 128,
+        "num_blocks": 1,
+        "num_experts": 2,
+        "top_k": 1,
+        "scales": "[1, 2]",
+        "batch_size": 256,
+        "sequence_length": 96,
+        "prediction_length": 24,
+        "input_dimension": 8
+      }
+    ],
+    "timemixer_efficiency_results.csv": [
+      {
+        "model": "TimeMixer",
+        "device": "cuda",
+        "timestamp": "2026-02-09 18:21:17",
+        "total_parameters": 621936,
+        "trainable_parameters": 621936,
+        "model_size_mb": 2.37249755859375,
+        "single_inference_time_ms": 3.3450182527303696,
+        "avg_inference_time_ms": 4.909282643347979,
+        "std_inference_time_ms": 5.267108450467106,
+        "min_inference_time_ms": 3.6213193088769913,
+        "max_inference_time_ms": 27.86597795784473,
+        "inference_batch_count": 20,
+        "memory_usage_mb": 0.05078125,
+        "gpu_memory_usage_mb": 1.54736328125,
+        "avg_epoch_time_sec": 3.0548209473490715,
+        "total_training_time_sec": 9.164462842047216,
+        "batch_size": 256,
+        "sequence_length": 96,
+        "prediction_length": 24,
+        "input_dimension": 8
+      }
+    ],
+    "dlinear_latency_results.csv": [
+      {
+        "model": "DLinear",
+        "device": "cpu",
+        "timestamp": "2026-01-28 08:25:19",
+        "total_parameters": 4656,
+        "trainable_parameters": 4656,
+        "model_size_mb": 0.01776123046875,
+        "single_inference_time_ms": 0.2654196321964264,
+        "single_inference_std_ms": 0.0843380371815598,
+        "avg_inference_time_ms": 0.4595883190631866,
+        "std_inference_time_ms": 0.1557298663116621,
+        "min_inference_time_ms": 0.289110466837883,
+        "max_inference_time_ms": 0.8756425231695175,
+        "inference_batch_count": 10,
+        "memory_usage_mb": 0.05078125,
+        "gpu_memory_usage_mb": 0.0,
+        "raspberry_pi_energy_mj": 0.7962588965892792,
+        "raspberry_pi_power_watts": 3.0,
+        "raspberry_pi_inference_frequency_hz": 3767.6188144965113,
+        "batch_size": 4,
+        "sequence_length": 96,
+        "prediction_length": 24,
+        "input_dimension": 8
+      }
+    ],
+    "lightgbm_latency_results.csv": [
+      {
+        "model": "LightGBM",
+        "device": "cpu",
+        "timestamp": "2026-01-28 08:27:30",
+        "model_size_mb": 27.17566680908203,
+        "single_inference_time_ms": 50.39703272283077,
+        "single_inference_std_ms": 21.134684403987546,
+        "avg_inference_time_ms": 50.59029050171375,
+        "std_inference_time_ms": 2.319849578485663,
+        "min_inference_time_ms": 49.07709546387196,
+        "max_inference_time_ms": 56.53140880167484,
+        "inference_batch_count": 10,
+        "memory_usage_mb": 0.04296875,
+        "raspberry_pi_energy_mj": 151.19109816849232,
+        "raspberry_pi_power_watts": 3.0,
+        "raspberry_pi_inference_frequency_hz": 19.842438055821923,
+        "batch_size": 4,
+        "sequence_length": 96,
+        "prediction_length": 24,
+        "input_dimension": 8,
+        "flattened_features": 768
+      }
+    ],
+    "ultra_lsnt_lite_efficiency_results.csv": [
+      {
+        "model": "Ultra-LSNT-Lite",
+        "device": "cuda",
+        "timestamp": "2026-02-09 18:21:44",
+        "total_parameters": 1342744,
+        "trainable_parameters": 1342744,
+        "model_size_mb": 5.122161865234375,
+        "single_inference_time_ms": 8.449569344520569,
+        "avg_inference_time_ms": 6.814201921224594,
+        "std_inference_time_ms": 6.672070736990264,
+        "min_inference_time_ms": 4.619214683771133,
+        "max_inference_time_ms": 35.827042534947395,
+        "inference_batch_count": 20,
+        "memory_usage_mb": 0.046875,
+        "gpu_memory_usage_mb": 1.54736328125,
+        "avg_epoch_time_sec": 7.335422902057568,
+        "total_training_time_sec": 22.006268706172705,
+        "batch_size": 256,
+        "sequence_length": 96,
+        "prediction_length": 24,
+        "input_dimension": 8,
+        "hidden_dim": 128,
+        "num_blocks": 2,
+        "num_experts": 4,
+        "top_k": 2
+      }
+    ]
+  },
+  "dm_latest": [
+    {
+      "baseline": "DLinear",
+      "samples": 434664.0,
+      "dm_stat": 59.30052273241513,
+      "p_value": 1.0,
+      "true_mismatch_mae": 0.0
+    },
+    {
+      "baseline": "PatchTST",
+      "samples": 434664.0,
+      "dm_stat": -5.617171768785064,
+      "p_value": 9.705421759359551e-09,
+      "true_mismatch_mae": 0.0
+    },
+    {
+      "baseline": "TimeMixer",
+      "samples": 434664.0,
+      "dm_stat": 15.969635980923924,
+      "p_value": 1.0,
+      "true_mismatch_mae": 0.0
+    },
+    {
+      "baseline": "iTransformer",
+      "samples": 434664.0,
+      "dm_stat": 29.222109637654825,
+      "p_value": 1.0,
+      "true_mismatch_mae": 0.0
+    }
+  ],
+  "ablation_universal": [
+    {
+      "Dataset": "Wind (CN)",
+      "Kernel": 3,
+      "R2": 0.8366992175579071
+    },
+    {
+      "Dataset": "Wind (CN)",
+      "Kernel": 7,
+      "R2": 0.8360142707824707
+    },
+    {
+      "Dataset": "Wind (CN)",
+      "Kernel": 15,
+      "R2": 0.8235786855220795
+    },
+    {
+      "Dataset": "Air Quality",
+      "Kernel": 3,
+      "R2": 0.4803797006607055
+    },
+    {
+      "Dataset": "Air Quality",
+      "Kernel": 7,
+      "R2": 0.307852566242218
+    },
+    {
+      "Dataset": "Air Quality",
+      "Kernel": 15,
+      "R2": 0.3402208089828491
+    }
+  ],
+  "wind_expert_activation": [
+    {
+      "Expert_1": 0.2644242742843926,
+      "Expert_2": 0.2221642841957509,
+      "Expert_3": 0.2685566697642207,
+      "Expert_4": 0.2448547725006938,
+      "Hour": 0,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.266869471296668,
+      "Expert_2": 0.2208580960705876,
+      "Expert_3": 0.2666868963837623,
+      "Expert_4": 0.2455855385586619,
+      "Hour": 1,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2681973755173385,
+      "Expert_2": 0.2199630971625447,
+      "Expert_3": 0.2647570376843214,
+      "Expert_4": 0.2470824888721108,
+      "Hour": 2,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2688674635253846,
+      "Expert_2": 0.2200608275085687,
+      "Expert_3": 0.2628032936155796,
+      "Expert_4": 0.248268413580954,
+      "Hour": 3,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2686535905115306,
+      "Expert_2": 0.2198257136717438,
+      "Expert_3": 0.2620015306398272,
+      "Expert_4": 0.2495191655680537,
+      "Hour": 4,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.268902884721756,
+      "Expert_2": 0.2199622538685798,
+      "Expert_3": 0.2622756685689091,
+      "Expert_4": 0.2488591900095343,
+      "Hour": 5,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2688571645319462,
+      "Expert_2": 0.220356208011508,
+      "Expert_3": 0.2626668990403413,
+      "Expert_4": 0.248119728974998,
+      "Hour": 6,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2674350936152041,
+      "Expert_2": 0.2214194736629724,
+      "Expert_3": 0.2643072988092899,
+      "Expert_4": 0.2468381347879767,
+      "Hour": 7,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2657379379309714,
+      "Expert_2": 0.2225783941149711,
+      "Expert_3": 0.2641281915828585,
+      "Expert_4": 0.2475554746389389,
+      "Hour": 8,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2641227942891418,
+      "Expert_2": 0.2228081483766436,
+      "Expert_3": 0.2647606134042143,
+      "Expert_4": 0.2483084440976381,
+      "Hour": 9,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2628984133712947,
+      "Expert_2": 0.2211529894731939,
+      "Expert_3": 0.267551896572113,
+      "Expert_4": 0.2483966964483261,
+      "Hour": 10,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2624194804392755,
+      "Expert_2": 0.2190897688269615,
+      "Expert_3": 0.2708948370441794,
+      "Expert_4": 0.2475959105044603,
+      "Hour": 11,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.260962410736829,
+      "Expert_2": 0.2189264995791018,
+      "Expert_3": 0.2748174832947552,
+      "Expert_4": 0.2452936070039868,
+      "Hour": 12,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2612726262211799,
+      "Expert_2": 0.2179854119382798,
+      "Expert_3": 0.2772906732372939,
+      "Expert_4": 0.243451288305223,
+      "Hour": 13,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2612298341840505,
+      "Expert_2": 0.2183188539557159,
+      "Expert_3": 0.2776845848746598,
+      "Expert_4": 0.2427667238563299,
+      "Hour": 14,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.261599428076297,
+      "Expert_2": 0.2215659686177969,
+      "Expert_3": 0.2745583795942366,
+      "Expert_4": 0.2422762236371636,
+      "Hour": 15,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2619554889202118,
+      "Expert_2": 0.2259179957583546,
+      "Expert_3": 0.27016372282058,
+      "Expert_4": 0.2419627908617258,
+      "Hour": 16,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2617927347496152,
+      "Expert_2": 0.2306356797926128,
+      "Expert_3": 0.2659486459940672,
+      "Expert_4": 0.2416229419596493,
+      "Hour": 17,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2605517895892262,
+      "Expert_2": 0.2333085330948233,
+      "Expert_3": 0.2639877956174314,
+      "Expert_4": 0.2421518817730248,
+      "Hour": 18,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2599944797158241,
+      "Expert_2": 0.2340991623327136,
+      "Expert_3": 0.2653352755121886,
+      "Expert_4": 0.2405710821226239,
+      "Hour": 19,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2592725682631135,
+      "Expert_2": 0.2337037337757647,
+      "Expert_3": 0.2679572524130344,
+      "Expert_4": 0.2390664473548531,
+      "Hour": 20,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2604200505837798,
+      "Expert_2": 0.2311593057587742,
+      "Expert_3": 0.2698304037563502,
+      "Expert_4": 0.2385902427881956,
+      "Hour": 21,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2613704922422766,
+      "Expert_2": 0.2269115613773465,
+      "Expert_3": 0.2712664778903126,
+      "Expert_4": 0.2404514718428254,
+      "Hour": 22,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.2639781371690333,
+      "Expert_2": 0.2244629279896617,
+      "Expert_3": 0.2697525540739298,
+      "Expert_4": 0.2418063811585307,
+      "Hour": 23,
+      "Count": 400
+    }
+  ],
+  "air_quality_expert_activation": [
+    {
+      "Expert_1": 0.1647335565648973,
+      "Expert_2": 0.2008000357821583,
+      "Expert_3": 0.3297836460545659,
+      "Expert_4": 0.3046827625110745,
+      "Hour": 0,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1666689261235296,
+      "Expert_2": 0.2006273487582802,
+      "Expert_3": 0.330156420096755,
+      "Expert_4": 0.3025473047792911,
+      "Hour": 1,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1669559897109866,
+      "Expert_2": 0.1989740703999996,
+      "Expert_3": 0.3339353238418698,
+      "Expert_4": 0.3001346149295568,
+      "Hour": 2,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1651396575383842,
+      "Expert_2": 0.1977487894892692,
+      "Expert_3": 0.3332180551066994,
+      "Expert_4": 0.3038934989646077,
+      "Hour": 3,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1663846681825816,
+      "Expert_2": 0.1961243162304163,
+      "Expert_3": 0.3333524817228317,
+      "Expert_4": 0.3041385355591774,
+      "Hour": 4,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1659689654037356,
+      "Expert_2": 0.1984898494184017,
+      "Expert_3": 0.3350269235298037,
+      "Expert_4": 0.3005142628028989,
+      "Hour": 5,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1632465123198926,
+      "Expert_2": 0.1987460745498538,
+      "Expert_3": 0.3348172047734261,
+      "Expert_4": 0.3031902080401778,
+      "Hour": 6,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1629601432196795,
+      "Expert_2": 0.1978603962436318,
+      "Expert_3": 0.3335208087041974,
+      "Expert_4": 0.3056586524099111,
+      "Hour": 7,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1669515372812748,
+      "Expert_2": 0.2009579467773437,
+      "Expert_3": 0.3331608207523823,
+      "Expert_4": 0.2989296942576766,
+      "Hour": 8,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1641429567337036,
+      "Expert_2": 0.1979888970032334,
+      "Expert_3": 0.3374107804894447,
+      "Expert_4": 0.3004573660716414,
+      "Hour": 9,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1650048124045133,
+      "Expert_2": 0.1986157344095409,
+      "Expert_3": 0.3387879685685038,
+      "Expert_4": 0.2975914859399199,
+      "Hour": 10,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1639291079901158,
+      "Expert_2": 0.1976987591385841,
+      "Expert_3": 0.3374706291407346,
+      "Expert_4": 0.3009015043452382,
+      "Hour": 11,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.162992326952517,
+      "Expert_2": 0.1951435222104191,
+      "Expert_3": 0.3354814187064767,
+      "Expert_4": 0.3063827331364155,
+      "Hour": 12,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1647316197492182,
+      "Expert_2": 0.1953669560700655,
+      "Expert_3": 0.3353095738589763,
+      "Expert_4": 0.3045918518304825,
+      "Hour": 13,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1672303937748074,
+      "Expert_2": 0.1997464340738952,
+      "Expert_3": 0.3341251847893,
+      "Expert_4": 0.2988979871198535,
+      "Hour": 14,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1662216513603925,
+      "Expert_2": 0.2005487065389752,
+      "Expert_3": 0.3322940635308623,
+      "Expert_4": 0.3009355778619647,
+      "Hour": 15,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1662788798101246,
+      "Expert_2": 0.1985838643088937,
+      "Expert_3": 0.336404528543353,
+      "Expert_4": 0.2987327280640602,
+      "Hour": 16,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1632642702944576,
+      "Expert_2": 0.1972902552038431,
+      "Expert_3": 0.3378165056183934,
+      "Expert_4": 0.3016289683431387,
+      "Hour": 17,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1640957912430167,
+      "Expert_2": 0.1973348348215222,
+      "Expert_3": 0.3361197387427092,
+      "Expert_4": 0.3024496354535222,
+      "Hour": 18,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1662208395823836,
+      "Expert_2": 0.1996429714933038,
+      "Expert_3": 0.3320401027053594,
+      "Expert_4": 0.3020960868895054,
+      "Hour": 19,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1673217984475195,
+      "Expert_2": 0.1996603862568736,
+      "Expert_3": 0.3298278832063079,
+      "Expert_4": 0.303189932629466,
+      "Hour": 20,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1675814861804246,
+      "Expert_2": 0.1993974573165178,
+      "Expert_3": 0.3279209281876683,
+      "Expert_4": 0.3051001284644007,
+      "Hour": 21,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1680075751058757,
+      "Expert_2": 0.2026342003233731,
+      "Expert_3": 0.3249821004644036,
+      "Expert_4": 0.3043761287257075,
+      "Hour": 22,
+      "Count": 400
+    },
+    {
+      "Expert_1": 0.1664301476068794,
+      "Expert_2": 0.2027083921991288,
+      "Expert_3": 0.327158193141222,
+      "Expert_4": 0.3037032661214471,
+      "Hour": 23,
+      "Count": 400
+    }
+  ],
+  "wind_expert_activation_events": [
+    {
+      "Event": "Event_1_increase",
+      "Expert_1": 0.1698207110166549,
+      "Expert_2": 0.2319117188453674,
+      "Expert_3": 0.2360305935144424,
+      "Expert_4": 0.3622369766235351
+    },
+    {
+      "Event": "Event_2_increase",
+      "Expert_1": 0.1698207110166549,
+      "Expert_2": 0.2319117188453674,
+      "Expert_3": 0.2360305935144424,
+      "Expert_4": 0.3622369766235351
+    },
+    {
+      "Event": "Event_3_increase",
+      "Expert_1": 0.1698207110166549,
+      "Expert_2": 0.2319117188453674,
+      "Expert_3": 0.2360305935144424,
+      "Expert_4": 0.3622369766235351
+    }
+  ],
+  "probabilistic_comparison": [
+    {
+      "mode": "point",
+      "total_cost": NaN,
+      "reserve_cost": NaN,
+      "avg_outage": NaN,
+      "critical_hours": NaN
+    },
+    {
+      "mode": "gaussian",
+      "total_cost": NaN,
+      "reserve_cost": NaN,
+      "avg_outage": NaN,
+      "critical_hours": NaN
+    },
+    {
+      "mode": "quantile",
+      "total_cost": NaN,
+      "reserve_cost": NaN,
+      "avg_outage": NaN,
+      "critical_hours": NaN
+    }
+  ],
+  "stratified_condition_model_rmse": [
+    {
+      "condition": "autumn",
+      "样本数": 6000,
+      "LSTM": 3581.941,
+      "MLP": 3716.546,
+      "Transformer": 3552.312
+    },
+    {
+      "condition": "daytime",
+      "样本数": 12000,
+      "LSTM": 3385.459,
+      "MLP": 3608.455,
+      "Transformer": 3618.13
+    },
+    {
+      "condition": "dir_east",
+      "样本数": 5942,
+      "LSTM": 3273.536,
+      "MLP": 3407.161,
+      "Transformer": 3348.75
+    },
+    {
+      "condition": "dir_north",
+      "样本数": 2352,
+      "LSTM": 3540.316,
+      "MLP": 4059.748,
+      "Transformer": 3347.5
+    },
+    {
+      "condition": "dir_south",
+      "样本数": 7812,
+      "LSTM": 3277.892,
+      "MLP": 3368.437,
+      "Transformer": 3328.121
+    },
+    {
+      "condition": "dir_west",
+      "样本数": 7894,
+      "LSTM": 3083.223,
+      "MLP": 3166.279,
+      "Transformer": 3266.062
+    },
+    {
+      "condition": "night",
+      "样本数": 12000,
+      "LSTM": 3090.272,
+      "MLP": 3152.646,
+      "Transformer": 2980.984
+    },
+    {
+      "condition": "power_high",
+      "样本数": 2126,
+      "LSTM": 2733.305,
+      "MLP": 2433.013,
+      "Transformer": 2198.907
+    },
+    {
+      "condition": "power_low",
+      "样本数": 840,
+      "LSTM": 1885.705,
+      "MLP": 2359.983,
+      "Transformer": 1602.318
+    },
+    {
+      "condition": "power_medium",
+      "样本数": 21034,
+      "LSTM": 3330.137,
+      "MLP": 3504.016,
+      "Transformer": 3456.417
+    },
+    {
+      "condition": "ramp_any",
+      "样本数": 19,
+      "LSTM": 4086.724,
+      "MLP": 3156.732,
+      "Transformer": 2714.414
+    },
+    {
+      "condition": "ramp_down",
+      "样本数": 10,
+      "LSTM": 4543.266,
+      "MLP": 3205.666,
+      "Transformer": 2915.587
+    },
+    {
+      "condition": "spring",
+      "样本数": 6000,
+      "LSTM": 2988.577,
+      "MLP": 3139.112,
+      "Transformer": 3198.822
+    },
+    {
+      "condition": "summer",
+      "样本数": 6000,
+      "LSTM": 3349.5,
+      "MLP": 3510.394,
+      "Transformer": 3404.132
+    },
+    {
+      "condition": "wind_cut_in",
+      "样本数": 7832,
+      "LSTM": 3394.267,
+      "MLP": 3329.237,
+      "Transformer": 3268.265
+    },
+    {
+      "condition": "wind_high",
+      "样本数": 150,
+      "LSTM": 2571.618,
+      "MLP": 2018.051,
+      "Transformer": 2242.058
+    },
+    {
+      "condition": "wind_low",
+      "样本数": 15972,
+      "LSTM": 3320.104,
+      "MLP": 3610.713,
+      "Transformer": 3568.567
+    },
+    {
+      "condition": "wind_medium",
+      "样本数": 7878,
+      "LSTM": 3087.136,
+      "MLP": 2909.301,
+      "Transformer": 2749.909
+    },
+    {
+      "condition": "wind_rated",
+      "样本数": 150,
+      "LSTM": 2571.618,
+      "MLP": 2018.051,
+      "Transformer": 2242.058
+    },
+    {
+      "condition": "winter",
+      "样本数": 6000,
+      "LSTM": 3006.856,
+      "MLP": 3151.293,
+      "Transformer": 3084.603
+    }
+  ],
+  "stratified_analysis_latest": [
+    {
+      "condition": "wind_low",
+      "model": "LSTM",
+      "samples": 15972,
+      "MSE": 11023092.0,
+      "RMSE": 3320.104215231805,
+      "MAE": 2453.1806640625,
+      "R2": 0.4793238043785095,
+      "MAPE": 12.47803419828415
+    },
+    {
+      "condition": "wind_medium",
+      "model": "LSTM",
+      "samples": 7878,
+      "MSE": 9530408.0,
+      "RMSE": 3087.135889461298,
+      "MAE": 2353.0927734375,
+      "R2": 0.5433737635612488,
+      "MAPE": 12.50547617673874
+    },
+    {
+      "condition": "wind_high",
+      "model": "LSTM",
+      "samples": 150,
+      "MSE": 6613217.5,
+      "RMSE": 2571.617681538218,
+      "MAE": 2263.648681640625,
+      "R2": 0.442535400390625,
+      "MAPE": 13.861516118049622
+    },
+    {
+      "condition": "wind_cut_in",
+      "model": "LSTM",
+      "samples": 7832,
+      "MSE": 11521046.0,
+      "RMSE": 3394.266636550523,
+      "MAE": 2546.5849609375,
+      "R2": 0.4488052129745483,
+      "MAPE": 13.21600377559662
+    },
+    {
+      "condition": "wind_rated",
+      "model": "LSTM",
+      "samples": 150,
+      "MSE": 6613217.5,
+      "RMSE": 2571.617681538218,
+      "MAE": 2263.648681640625,
+      "R2": 0.442535400390625,
+      "MAPE": 13.861516118049622
+    },
+    {
+      "condition": "dir_north",
+      "model": "LSTM",
+      "samples": 2352,
+      "MSE": 12533835.0,
+      "RMSE": 3540.3156638921337,
+      "MAE": 2519.771240234375,
+      "R2": 0.4788870215415954,
+      "MAPE": 11.811310797929764
+    },
+    {
+      "condition": "dir_east",
+      "model": "LSTM",
+      "samples": 5942,
+      "MSE": 10716038.0,
+      "RMSE": 3273.5360086609708,
+      "MAE": 2376.674072265625,
+      "R2": 0.5191208124160767,
+      "MAPE": 13.185440003871918
+    },
+    {
+      "condition": "dir_south",
+      "model": "LSTM",
+      "samples": 7812,
+      "MSE": 10744578.0,
+      "RMSE": 3277.8923106166867,
+      "MAE": 2450.856201171875,
+      "R2": 0.4939730167388916,
+      "MAPE": 12.458667159080504
+    },
+    {
+      "condition": "dir_west",
+      "model": "LSTM",
+      "samples": 7894,
+      "MSE": 9506265.0,
+      "RMSE": 3083.2231511844875,
+      "MAE": 2389.7421875,
+      "R2": 0.4946118593215942,
+      "MAPE": 12.217041850090029
+    },
+    {
+      "condition": "ramp_down",
+      "model": "LSTM",
+      "samples": 10,
+      "MSE": 20641264.0,
+      "RMSE": 4543.26578575368,
+      "MAE": 3063.295654296875,
+      "R2": -1.822427988052368,
+      "MAPE": 13.476593792438509
+    },
+    {
+      "condition": "ramp_any",
+      "model": "LSTM",
+      "samples": 19,
+      "MSE": 16701309.0,
+      "RMSE": 4086.723504226828,
+      "MAE": 2585.156005859375,
+      "R2": -0.1456328630447387,
+      "MAPE": 11.32546067237854
+    },
+    {
+      "condition": "daytime",
+      "model": "LSTM",
+      "samples": 12000,
+      "MSE": 11461334.0,
+      "RMSE": 3385.459200758444,
+      "MAE": 2617.37744140625,
+      "R2": 0.4606375098228454,
+      "MAPE": 13.54590654373169
+    },
+    {
+      "condition": "night",
+      "model": "LSTM",
+      "samples": 12000,
+      "MSE": 9549782.0,
+      "RMSE": 3090.272156299506,
+      "MAE": 2220.9072265625,
+      "R2": 0.5487713813781738,
+      "MAPE": 11.44547089934349
+    },
+    {
+      "condition": "winter",
+      "model": "LSTM",
+      "samples": 6000,
+      "MSE": 9041185.0,
+      "RMSE": 3006.8563317857406,
+      "MAE": 2135.567626953125,
+      "R2": 0.5740017890930176,
+      "MAPE": 10.995378345251083
+    },
+    {
+      "condition": "spring",
+      "model": "LSTM",
+      "samples": 6000,
+      "MSE": 8931594.0,
+      "RMSE": 2988.5772534769785,
+      "MAE": 2198.1240234375,
+      "R2": 0.580767810344696,
+      "MAPE": 11.265232414007189
+    },
+    {
+      "condition": "summer",
+      "model": "LSTM",
+      "samples": 6000,
+      "MSE": 11219153.0,
+      "RMSE": 3349.500410509006,
+      "MAE": 2568.3876953125,
+      "R2": 0.4711821675300598,
+      "MAPE": 13.325713574886322
+    },
+    {
+      "condition": "autumn",
+      "model": "LSTM",
+      "samples": 6000,
+      "MSE": 12830298.0,
+      "RMSE": 3581.940535519818,
+      "MAE": 2774.4892578125,
+      "R2": 0.3914352655410766,
+      "MAPE": 14.396429061889648
+    },
+    {
+      "condition": "power_low",
+      "model": "LSTM",
+      "samples": 840,
+      "MSE": 3555884.75,
+      "RMSE": 1885.705372002742,
+      "MAE": 1460.6474609375,
+      "R2": 0.4086995124816894,
+      "MAPE": 9.899532049894333
+    },
+    {
+      "condition": "power_medium",
+      "model": "LSTM",
+      "samples": 21034,
+      "MSE": 11089815.0,
+      "RMSE": 3330.1373845533763,
+      "MAE": 2484.632568359375,
+      "R2": 0.4782629609107971,
+      "MAPE": 12.721188366413116
+    },
+    {
+      "condition": "power_high",
+      "model": "LSTM",
+      "samples": 2126,
+      "MSE": 7470956.5,
+      "RMSE": 2733.305050666683,
+      "MAE": 2149.90771484375,
+      "R2": 0.5363041162490845,
+      "MAPE": 11.290407925844193
+    },
+    {
+      "condition": "wind_low",
+      "model": "MLP",
+      "samples": 15972,
+      "MSE": 13037251.0,
+      "RMSE": 3610.7133644198334,
+      "MAE": 2708.420654296875,
+      "R2": 0.3841848969459533,
+      "MAPE": 13.63406777381897
+    },
+    {
+      "condition": "wind_medium",
+      "model": "MLP",
+      "samples": 7878,
+      "MSE": 8464035.0,
+      "RMSE": 2909.3014625507617,
+      "MAE": 2229.71875,
+      "R2": 0.5944664478302002,
+      "MAPE": 11.583539843559263
+    },
+    {
+      "condition": "wind_high",
+      "model": "MLP",
+      "samples": 150,
+      "MSE": 4072529.0,
+      "RMSE": 2018.0507922250124,
+      "MAE": 1639.67724609375,
+      "R2": 0.6567040681838989,
+      "MAPE": 10.157881677150726
+    },
+    {
+      "condition": "wind_cut_in",
+      "model": "MLP",
+      "samples": 7832,
+      "MSE": 11083816.0,
+      "RMSE": 3329.2365491205337,
+      "MAE": 2535.838623046875,
+      "R2": 0.4697234034538269,
+      "MAPE": 12.896603345870972
+    },
+    {
+      "condition": "wind_rated",
+      "model": "MLP",
+      "samples": 150,
+      "MSE": 4072529.0,
+      "RMSE": 2018.0507922250124,
+      "MAE": 1639.67724609375,
+      "R2": 0.6567040681838989,
+      "MAPE": 10.157881677150726
+    },
+    {
+      "condition": "dir_north",
+      "model": "MLP",
+      "samples": 2352,
+      "MSE": 16481557.0,
+      "RMSE": 4059.748391218353,
+      "MAE": 3071.12158203125,
+      "R2": 0.3147546052932739,
+      "MAPE": 14.909185469150543
+    },
+    {
+      "condition": "dir_east",
+      "model": "MLP",
+      "samples": 5942,
+      "MSE": 11608746.0,
+      "RMSE": 3407.160988271614,
+      "MAE": 2550.96533203125,
+      "R2": 0.4790607690811157,
+      "MAPE": 13.806529343128204
+    },
+    {
+      "condition": "dir_south",
+      "model": "MLP",
+      "samples": 7812,
+      "MSE": 11346370.0,
+      "RMSE": 3368.4373231514937,
+      "MAE": 2515.64208984375,
+      "R2": 0.4656310081481933,
+      "MAPE": 12.481863051652908
+    },
+    {
+      "condition": "dir_west",
+      "model": "MLP",
+      "samples": 7894,
+      "MSE": 10025323.0,
+      "RMSE": 3166.2790464518444,
+      "MAE": 2411.611083984375,
+      "R2": 0.4670168161392212,
+      "MAPE": 12.152144312858582
+    },
+    {
+      "condition": "ramp_down",
+      "model": "MLP",
+      "samples": 10,
+      "MSE": 10276297.0,
+      "RMSE": 3205.666389379905,
+      "MAE": 2598.93896484375,
+      "R2": -0.4051517248153686,
+      "MAPE": 12.093178927898409
+    },
+    {
+      "condition": "ramp_any",
+      "model": "MLP",
+      "samples": 19,
+      "MSE": 9964960.0,
+      "RMSE": 3156.732487874131,
+      "MAE": 2545.186279296875,
+      "R2": 0.3164496421813965,
+      "MAPE": 11.936035752296448
+    },
+    {
+      "condition": "daytime",
+      "model": "MLP",
+      "samples": 12000,
+      "MSE": 13020948.0,
+      "RMSE": 3608.455071079589,
+      "MAE": 2820.78759765625,
+      "R2": 0.3872432112693786,
+      "MAPE": 14.388592541217804
+    },
+    {
+      "condition": "night",
+      "model": "MLP",
+      "samples": 12000,
+      "MSE": 9939179.0,
+      "RMSE": 3152.6463487045294,
+      "MAE": 2268.426513671875,
+      "R2": 0.5303722620010376,
+      "MAPE": 11.48991882801056
+    },
+    {
+      "condition": "winter",
+      "model": "MLP",
+      "samples": 6000,
+      "MSE": 9930650.0,
+      "RMSE": 3151.293385262629,
+      "MAE": 2274.938232421875,
+      "R2": 0.5320924520492554,
+      "MAPE": 11.559655517339706
+    },
+    {
+      "condition": "spring",
+      "model": "MLP",
+      "samples": 6000,
+      "MSE": 9854026.0,
+      "RMSE": 3139.1122949012192,
+      "MAE": 2320.5966796875,
+      "R2": 0.5374705791473389,
+      "MAPE": 11.753074079751968
+    },
+    {
+      "condition": "summer",
+      "model": "MLP",
+      "samples": 6000,
+      "MSE": 12322865.0,
+      "RMSE": 3510.393852547033,
+      "MAE": 2687.68603515625,
+      "R2": 0.419158399105072,
+      "MAPE": 13.689260184764862
+    },
+    {
+      "condition": "autumn",
+      "model": "MLP",
+      "samples": 6000,
+      "MSE": 13812711.0,
+      "RMSE": 3716.545573513125,
+      "MAE": 2895.206787109375,
+      "R2": 0.3448376059532165,
+      "MAPE": 14.755035936832428
+    },
+    {
+      "condition": "power_low",
+      "model": "MLP",
+      "samples": 840,
+      "MSE": 5569521.0,
+      "RMSE": 2359.983262652513,
+      "MAE": 1732.2994384765625,
+      "R2": 0.0738562941551208,
+      "MAPE": 11.792204529047012
+    },
+    {
+      "condition": "power_medium",
+      "model": "MLP",
+      "samples": 21034,
+      "MSE": 12278129.0,
+      "RMSE": 3504.016124392124,
+      "MAE": 2639.5166015625,
+      "R2": 0.422356903553009,
+      "MAPE": 13.27151656150818
+    },
+    {
+      "condition": "power_high",
+      "model": "MLP",
+      "samples": 2126,
+      "MSE": 5919553.5,
+      "RMSE": 2433.013255204336,
+      "MAE": 1926.5496826171875,
+      "R2": 0.6325942277908325,
+      "MAPE": 10.105172544717789
+    },
+    {
+      "condition": "wind_low",
+      "model": "Transformer",
+      "samples": 15972,
+      "MSE": 12734671.0,
+      "RMSE": 3568.567079375138,
+      "MAE": 2651.003662109375,
+      "R2": 0.3984772562980652,
+      "MAPE": 13.61541897058487
+    },
+    {
+      "condition": "wind_medium",
+      "model": "Transformer",
+      "samples": 7878,
+      "MSE": 7561998.0,
+      "RMSE": 2749.908725758002,
+      "MAE": 2083.978271484375,
+      "R2": 0.6376852989196777,
+      "MAPE": 11.189217120409012
+    },
+    {
+      "condition": "wind_high",
+      "model": "Transformer",
+      "samples": 150,
+      "MSE": 5026822.5,
+      "RMSE": 2242.0576486789987,
+      "MAE": 1810.514404296875,
+      "R2": 0.5762614011764526,
+      "MAPE": 11.439525336027144
+    },
+    {
+      "condition": "wind_cut_in",
+      "model": "Transformer",
+      "samples": 7832,
+      "MSE": 10681553.0,
+      "RMSE": 3268.2645241779314,
+      "MAE": 2453.951904296875,
+      "R2": 0.4889686107635498,
+      "MAPE": 12.703977525234222
+    },
+    {
+      "condition": "wind_rated",
+      "model": "Transformer",
+      "samples": 150,
+      "MSE": 5026822.5,
+      "RMSE": 2242.0576486789987,
+      "MAE": 1810.514404296875,
+      "R2": 0.5762614011764526,
+      "MAPE": 11.439525336027144
+    },
+    {
+      "condition": "dir_north",
+      "model": "Transformer",
+      "samples": 2352,
+      "MSE": 11205755.0,
+      "RMSE": 3347.499813293497,
+      "MAE": 2505.15380859375,
+      "R2": 0.5341039896011353,
+      "MAPE": 12.23381832242012
+    },
+    {
+      "condition": "dir_east",
+      "model": "Transformer",
+      "samples": 5942,
+      "MSE": 11214128.0,
+      "RMSE": 3348.7502146323186,
+      "MAE": 2468.14599609375,
+      "R2": 0.4967691302299499,
+      "MAPE": 13.657523691654204
+    },
+    {
+      "condition": "dir_south",
+      "model": "Transformer",
+      "samples": 7812,
+      "MSE": 11076387.0,
+      "RMSE": 3328.120640842216,
+      "MAE": 2511.550537109375,
+      "R2": 0.4783461093902588,
+      "MAPE": 12.819284200668337
+    },
+    {
+      "condition": "dir_west",
+      "model": "Transformer",
+      "samples": 7894,
+      "MSE": 10667163.0,
+      "RMSE": 3266.062308040065,
+      "MAE": 2388.258544921875,
+      "R2": 0.432894229888916,
+      "MAPE": 12.320605665445328
+    },
+    {
+      "condition": "ramp_down",
+      "model": "Transformer",
+      "samples": 10,
+      "MSE": 8500645.0,
+      "RMSE": 2915.586561911685,
+      "MAE": 2331.47998046875,
+      "R2": -0.1623539924621582,
+      "MAPE": 10.532013326883316
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+🤖 运行 Mamba (S6) 对比实验...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+  Epoch 2/10: Loss = 0.0399
+  Epoch 4/10: Loss = 0.0315
+  Epoch 6/10: Loss = 0.0248
+  Epoch 8/10: Loss = 0.0202
+  Epoch 10/10: Loss = 0.0166
+📊 Mamba (S6) 性能:
+  R²: 0.9208
+  RMSE: 7165.8765
+  MAE: 4875.1675
+✅ Mamba对比实验完成，结果保存到 mamba_results.json

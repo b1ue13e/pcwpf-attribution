@@ -1,0 +1,6 @@
+Starting Traditional GPU models on air_quality seed=42
+  LSTM on air_quality (seed=42)
+LSTM: R2=0.3753
+  CNN-LSTM on air_quality (seed=42)
+CNN-LSTM: R2=0.3551
+Completed

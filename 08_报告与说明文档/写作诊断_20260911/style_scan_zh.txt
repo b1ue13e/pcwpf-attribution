@@ -1,0 +1,35 @@
+== Paper AI Detox Scan ==
+Input: E:\论文1\08_报告与说明文档\写作诊断_20260911\manuscript_scan_input_zh.tex
+Characters: 55295
+Paragraphs: 178
+
+Risk counts:
+- Hedging overload: 3
+- Defensive transition cliches: 0
+- Not A but B template: 0
+- Mechanical ordering/report tone: 3
+- Empty contribution/significance claim: 0
+- Causal-language watch: 39
+- Pseudo problem/question marker: 0
+- Numbered/list structure markers: 3
+
+Paragraph rhythm:
+- Mean length: 235.8; min/max: 2/1330
+- OK: paragraph rhythm has visible variation, CV=0.96.
+
+Flagged excerpts:
+- [Hedging overload] ...软件实现无误，离线训练期表现良好的物理约束在在线部署时往往引入脆弱的运行时依赖：需要测试期难以同步获取的气象实况...
+- [Hedging overload] ...leness）的侵蚀。此外，强行将模型拉向静态物理分布可能扭曲条件均值，而下游未校准的单边市场评估极易将偶然的申...
+- [Hedging overload] ...料库及其 Wilson 置信区间，避免无边界外推至所有可能替代关键词文献。 \input{tables/tab...
+- [Mechanical ordering/report tone] ...随延迟时间增加（1h 至 6h）诱发调度成本单调膨胀。最后，退化零申报诊断探针严密证明了孤立单边平衡现金流与真实...
+- [Mechanical ordering/report tone] ...，并滚动监测至 2026 年 7 月以追踪最新预印本。首先，我们通过 OpenAlex API 开展程序化检索（...
+- [Mechanical ordering/report tone] ...nd power"})——初筛召回 72 项候选记录。其次，针对 Google Scholar、arXiv 与预...
+- [Causal-language watch] ...的JS散度损失函数。 \item 强约束下打乱物理先验引发调度成本激增+68.1\%，揭示对先验误设的极端脆弱性...
+- [Causal-language watch] ...stract} 物理约束深度神经网络被广泛认为能够显著提升风电功率预测的泛化性与物理可解释性。本文从理论形式化规...
+- [Causal-language watch] ...经网络层，混合建模旨在将模型约束在物理可行的流形之内，提升小样本下的数据利用效率，并杜绝病态外推伪影 sheng...
+
+Suggested revision targets:
+- Remove hedges that are not needed for the evidence scope.
+- Use ordering only when it reflects the argument's real sequence.
+- Check whether the research design licenses causal wording.
+- Check whether the numbered structure creates real logic or only format.

@@ -1,0 +1,84 @@
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+========================================
+修复版 COA-BiLSTM 实验
+开始时间: 2026-02-24 02:33:45
+========================================
+
+
+[1/12] 运行: COA-BiLSTM wind_cn seed=42
+开始: 02:33:45
+─────────────────────────────────────────
+[02:33:45] 检查僵尸进程...
+  备份旧日志: /root/experiment_logs/coa_wind_cn_42.log.bak.1771871625
+[02:33:45] 启动实验进程...
+[02:33:48] Starting COA-BiLSTM on wind_cn seed=42
+GPU: NVIDIA GeForce RTX 4090 D
+
+
+============================================================
+COA-BiLSTM: wind_cn (seed=42)
+Population=40, Iterations=200
+============================================================
+Device: cuda
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Terminated
+运行时间: 59分钟19秒
+❌ 任务失败 (退出码: 143): wind_cn seed=42
+  查看日志: /root/experiment_logs/coa_wind_cn_42.log
+结束: 03:33:04
+
+更新结果到CSV...
+总计: 18 条记录
+─────────────────────────────────────────
+
+[2/12] 运行: COA-BiLSTM wind_cn seed=123
+开始: 03:33:15
+─────────────────────────────────────────
+[03:33:15] 检查僵尸进程...
+  警告: 进程 6276 已运行   86605 秒，可能已卡住
+  备份旧日志: /root/experiment_logs/coa_wind_cn_123.log.bak.1771875195
+[03:33:15] 启动实验进程...
+[03:33:16] Starting COA-BiLSTM on wind_cn seed=123
+GPU: NVIDIA GeForce RTX 4090 D
+
+
+============================================================
+COA-BiLSTM: wind_cn (seed=123)
+Population=40, Iterations=200
+============================================================
+Device: cuda
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)

@@ -1,0 +1,7 @@
+[2026-02-09T18:20:59.495271] Task: dm_extended
+Loading Ultra-LSNT predictions...
+Ultra-LSNT samples: 434664
+DLinear: n=434664, DM=59.300523, p=1.000000e+00, true_mismatch_mae=0.000000e+00
+PatchTST: n=434664, DM=-5.617172, p=9.705422e-09, true_mismatch_mae=0.000000e+00
+TimeMixer: n=434664, DM=15.969636, p=1.000000e+00, true_mismatch_mae=0.000000e+00
+iTransformer: n=434664, DM=29.222110, p=1.000000e+00, true_mismatch_mae=0.000000e+00

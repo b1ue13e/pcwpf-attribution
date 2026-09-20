@@ -1,0 +1,56 @@
+[0;34m硬件检测...[0m
+  CPU核心数: 256
+  系统内存: 755GB
+  GPU型号: NVIDIA GeForce RTX 4090 D
+  GPU显存: 24564MB
+  [0;32m检测到高性能GPU，启用GPU优化模式[0m
+[0;34m检查必要文件...[0m
+  [0;32m✅ wind_final.csv 存在[0m
+  [0;32m✅ ultra_lsnt_timeseries.py 存在[0m
+  [0;32m✅ ultra_lsnt_linear_branch.py 存在[0m
+  [0;32m✅ analyze_expert_switching.py 存在[0m
+  [0;32m✅ run_expert_physics.py 存在[0m
+  [0;32m✅ plot_expert_heatmap_enhanced.py 存在[0m
+[0;34m检查数据质量...[0m
+数据形状: (121528, 8)
+数据列名: ['windspeed', 'power', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)']
+找到风速列: windspeed
+风速范围: [0.00, 12.60]
+风速均值: 4.58
+缺失值总数: 0
+[1;33m第一步：训练带线性分支的Ultra-LSNT模型[0m
+  [0;32m检测到已有预训练权重，跳过训练[0m
+  [1;33m如果要重新训练，请删除 checkpoints_ts/ 目录[0m
+[1;33m等待训练任务完成...[0m
+[1;33m第二步：分析专家切换过程[0m
+[0;34m[2026-01-25 19:51:52] 开始运行: analyze_expert_switching.py [0m
+  [0;31m[2026-01-25 19:51:57] ❌ 失败: analyze_expert_switching.py (退出码: 1)[0m
+[1;33m第三步：运行专家物理可解释性分析[0m
+[0;34m[2026-01-25 19:51:57] 开始运行: run_expert_physics.py [0m
+  [0;31m[2026-01-25 19:52:01] ❌ 失败: run_expert_physics.py (退出码: 1)[0m
+[1;33m第四步：生成专家热力图[0m
+[0;34m[2026-01-25 19:52:01] 开始运行: plot_expert_heatmap_enhanced.py [0m
+  [0;31m[2026-01-25 19:52:06] ❌ 失败: plot_expert_heatmap_enhanced.py (退出码: 1)[0m
+[1;33m第五步：生成分析汇总报告[0m
+-rw-r--r-- 1 root root     1265 Jan 25 19:52 expert_analysis_summary.txt
+-rw-r--r-- 1 root root      295 Jan 24 17:02 power_validation_report.txt
+✗ 专家分工分析报告: 未找到
+✗ 风电专家激活数据: 未找到
+✗ 空气质量专家激活数据: 未找到
+
+2. 模型权重状态
+----------------------------------------
+✗ checkpoints_ts/linear_branch/best_model.pth: 不存在
+✓ checkpoints_ts/main/best_model.pth: 22.3 MB
+
+3. 关键分析结果
+----------------------------------------
+  未找到专家切换分析报告
+
+4. 建议和下一步工作
+----------------------------------------
+  • 检查专家切换可视化图，分析风速突变时的专家响应
+  • 比较线性分支和非线性分支的贡献比例
+  • 验证专家分工是否符合物理直觉（如风速、湍流）
+  • 考虑调整线性分支权重以优化模型性能
+  • 可以尝试不同的突变检测阈值以获得更多分析案例

@@ -1,0 +1,2 @@
+DRY RUN
+C:\Users\32110\AppData\Local\Programs\Python\Python310\python.exe run_joint_parameter_analysis_4090.py --seed 42 --device auto --n_grid 2,4,8 --topk_grid 1,2 --tau_grid 0.3,0.5,0.7,0.9 --lambda2_grid 0.0,0.01,0.1,1.0

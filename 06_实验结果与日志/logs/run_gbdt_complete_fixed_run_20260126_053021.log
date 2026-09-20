@@ -1,0 +1,8 @@
+开始时间: Mon Jan 26 05:45:13 CST 2026
+脚本: run_gbdt_complete_fixed.py
+实验: GBDT对比实验（彻底修复）
+========================================
+  File "/root/my/run_gbdt_complete_fixed.py", line 142
+    print(f"
+          ^
+SyntaxError: unterminated string literal (detected at line 142)

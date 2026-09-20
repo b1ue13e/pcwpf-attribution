@@ -3,27 +3,27 @@
 \footnotesize
 \renewcommand{\arraystretch}{0.88}
 \setlength{\tabcolsep}{3.5pt}
-\caption{Operationalized REFORMS-PCWPF Reporting Checklist for Trustworthy Physics-Constrained Renewable Energy Forecasting (Five Modular Compliance Gates).}
-\label{tab:reforms_checklist}
+\caption{Methodological Verification Checklist for Physics-Constrained Wind Power Forecasting (Criteria C1--C5).}
+\label{tab:verification_checklist}
 \begin{threeparttable}
-\begin{tabularx}{\textwidth}{p{1.2cm}p{2.6cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}Xp{3.2cm}}
+\begin{tabularx}{\textwidth}{p{1.4cm}p{2.6cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}Xp{3.2cm}}
 \toprule
-\textbf{Module} & \textbf{Governance Dimension} & \textbf{Mandatory Audit Protocol} & \textbf{Common Pitfall / Anti-Pattern} & \textbf{Required Verification Artifact} \\
+\textbf{Criterion} & \textbf{Governance Dimension} & \textbf{Mandatory Audit Protocol} & \textbf{Common Pitfall / Anti-Pattern} & \textbf{Required Verification Artifact} \\
 \midrule
-\textbf{M1} & \textbf{Isolated Prior Ablation} & Train identical network backbones with constraint penalty $\lambda=0$ vs. $\lambda>0$ under identical seed schedules. & Confounding module excision (removing entire GNNs or attention blocks) with physical knowledge. & Table of $\lambda=0$ vs. $\lambda>0$ with identical parameter counts and multi-seed variances. \\
+\textbf{C1} & \textbf{Isolated Prior Ablation} & Train identical network backbones with constraint penalty $\lambda=0$ vs. $\lambda>0$ under identical seed schedules. & Confounding module excision (removing entire GNNs or attention blocks) with physical knowledge. & Table of $\lambda=0$ vs. $\lambda>0$ with identical parameter counts and multi-seed variances. \\
 \midrule
-\textbf{M2} & \textbf{Domain Specificity Control} & Evaluate pseudo-scrambled priors that preserve loss formulation, architecture, and regularization weight $\lambda$ while permuting physical relations. & Mistaking non-specific numerical regularization under low penalty scales ($\lambda \le 0.01$) for domain reasoning. & Scrambled control performance curve and empirical specificity ratio ($p$-value contrast). \\
+\textbf{C2} & \textbf{Domain Specificity Control} & Evaluate pseudo-scrambled priors that preserve loss formulation, architecture, and regularization weight $\lambda$ while permuting physical relations. & Mistaking non-specific numerical regularization under weak penalty settings (e.g., $\lambda = 0.01$ under the present loss scaling) for domain reasoning. & Scrambled control performance curve and empirical specificity ratio ($p$-value contrast). \\
 \midrule
-\textbf{M3} & \textbf{Proxy Staleness Stress-Test} & If constraints depend on physical inputs (e.g., wind speed), scan observation staleness $\tau \in \{1\text{h}, 2\text{h}, 3\text{h}, 6\text{h}\}$ to evaluate proxy staleness when forward NWP forecasts are absent. & Assuming idealized contemporaneous, zero-latency SCADA inputs at test-time inference. & Observation staleness degradation curve demonstrating operational harm horizon. \\
+\textbf{C3} & \textbf{Proxy Staleness Stress-Test} & If constraints depend on physical inputs (e.g., wind speed), scan historical proxy lag $k \in \{6, 12, 18, 36\}$ steps to evaluate proxy staleness when forward NWP forecasts are absent. & Assuming temporally aligned physical proxies when constructing the offline constraint target. & Observation staleness degradation curve demonstrating operational harm horizon. \\
 \midrule
-\textbf{M4} & \textbf{Metric Decoupling \& Accounting} & Report symmetric error (RMSE), non-negative asymmetric decision risk (Pinball), and test degenerate zero-bid anomaly baselines. & Reporting unhedged standalone imbalance cashflow in isolation, mistaking accidental price-spike alignment for skill. & Decoupled market evaluation coupling forward commitments and balancing cashflow. \\
+\textbf{C4} & \textbf{Metric Decoupling \& Accounting} & Report symmetric error (RMSE), non-negative asymmetric decision risk (Pinball), and test degenerate zero-bid anomaly baselines. & Reporting unhedged standalone imbalance cashflow in isolation, mistaking accidental price-spike alignment for skill. & Decoupled market evaluation coupling forward commitments and balancing cashflow. \\
 \midrule
-\textbf{M5} & \textbf{Computational Graph Parity} & Verify that software loss implementations match published mathematical equations in argument direction and normalization. & Argument order flip in asymmetric divergences (e.g., PyTorch \texttt{F.kl\_div}) causing reverse optimization. & Static code audit report and unit test verifying loss tensor gradient directions. \\
+\textbf{C5} & \textbf{Computational Graph Parity} & Verify that software loss implementations match published mathematical equations in argument direction and normalization. & Argument order flip in asymmetric divergences (e.g., PyTorch \texttt{F.kl\_div}) causing reverse optimization. & Static code audit report and unit test verifying loss tensor gradient directions. \\
 \bottomrule
 \end{tabularx}
 \begin{tablenotes}[flushleft]
 \footnotesize
-\item \textbf{Notes}: Derived from our empirical audit of 46 scoping studies and aligned with cross-disciplinary REFORMS reporting standards \cite{kapoor2024reforms} and DOME recommendations \cite{walsh2021dome}. We propose M1--M5 as a reporting checklist for future physics-constrained renewable forecasting studies.
+\item \textbf{Notes}: Derived from our empirical audit of 46 scoping studies and adapted from general machine-learning reporting principles \cite{kapoor2024reforms,walsh2021dome}. We propose C1--C5 as an operational reporting checklist for future physics-constrained renewable energy forecasting studies.
 \end{tablenotes}
 \end{threeparttable}
 \end{table*}

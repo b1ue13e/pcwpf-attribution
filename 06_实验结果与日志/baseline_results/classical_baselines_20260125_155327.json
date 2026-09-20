@@ -1,0 +1,37 @@
+{
+  "MSE":{
+    "Persistence":40458737.0473000035,
+    "Seasonal_Naive":417544764.7764000297,
+    "ARIMA":null,
+    "PowerCurve":2750820731.0356998444,
+    "RandomForest":262850036.888500005
+  },
+  "RMSE":{
+    "Persistence":6360.7183,
+    "Seasonal_Naive":20433.9121,
+    "ARIMA":null,
+    "PowerCurve":52448.2672,
+    "RandomForest":16212.6505
+  },
+  "MAE":{
+    "Persistence":6243.3932,
+    "Seasonal_Naive":20307.004,
+    "ARIMA":null,
+    "PowerCurve":46800.7495,
+    "RandomForest":11033.6646
+  },
+  "R2":{
+    "Persistence":-26.3596,
+    "Seasonal_Naive":-281.3579,
+    "ARIMA":null,
+    "PowerCurve":-3.906,
+    "RandomForest":0.5325
+  },
+  "MAPE":{
+    "Persistence":11.7233,
+    "Seasonal_Naive":38.3763,
+    "ARIMA":null,
+    "PowerCurve":99.9965,
+    "RandomForest":24.9865
+  }
+}

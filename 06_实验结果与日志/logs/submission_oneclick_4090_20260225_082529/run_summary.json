@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-02-25T00:26:07.132951Z",
+  "script": "run_submission_oneclick_4090.py",
+  "args": {
+    "python": "C:\\Users\\32110\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "seed": 42,
+    "seeds": "42",
+    "device": "auto",
+    "continue_on_error": false,
+    "dry_run": false,
+    "skip_full_backfill": true,
+    "skip_cross_domain": true,
+    "skip_seed_significance": false,
+    "skip_lite_robustness": false,
+    "skip_rebuild": true,
+    "seq_len": 96,
+    "pred_len": 24,
+    "ssa_pop_size": 8,
+    "ssa_iters": 8,
+    "skip_mamba_crossdomain": false,
+    "mamba_epochs": 4,
+    "mamba_batch_size": 256,
+    "lite_epochs": 1,
+    "lite_batch_size": 256,
+    "lite_lr": 0.001
+  },
+  "steps": [
+    {
+      "name": "phase3_seed_stability_significance",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 14.991089820861816,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082529\\phase3_seed_stability_significance.log",
+      "note": ""
+    },
+    {
+      "name": "phase4_lite_robustness_completion",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 22.179860830307007,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082529\\phase4_lite_robustness_completion.log",
+      "note": ""
+    }
+  ],
+  "artifacts": {
+    "seed_metrics_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\seed_stability_metrics.csv",
+    "seed_summary_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\seed_stability_summary_mean_std.csv",
+    "seed_significance_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\seed_stability_significance_wilcoxon.csv",
+    "seed_dm_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\seed_stability_dm_stats.csv",
+    "lite_robustness_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\lite_robustness_windcn.csv",
+    "lite_robustness_meta_json": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\lite_robustness_meta.json"
+  }
+}

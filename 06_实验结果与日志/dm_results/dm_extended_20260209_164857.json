@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-02-09T16:48:57.557962",
+  "dataset": "wind_final.csv",
+  "method": "DM test with Newey-West HAC (from run_dm_test.dm_test_newey_west)",
+  "comparisons": [
+    {
+      "baseline": "DLinear",
+      "samples": 434664.0,
+      "dm_stat": 58.70463565599527,
+      "p_value": 1.0,
+      "true_mismatch_mae": 0.0
+    },
+    {
+      "baseline": "PatchTST",
+      "samples": 434664.0,
+      "dm_stat": -6.310530410427861,
+      "p_value": 1.3904038146377908e-10,
+      "true_mismatch_mae": 0.0
+    },
+    {
+      "baseline": "TimeMixer",
+      "samples": 434664.0,
+      "dm_stat": 15.265820650603482,
+      "p_value": 1.0,
+      "true_mismatch_mae": 0.0
+    },
+    {
+      "baseline": "iTransformer",
+      "samples": 434664.0,
+      "dm_stat": 28.442766874923294,
+      "p_value": 1.0,
+      "true_mismatch_mae": 0.0
+    }
+  ]
+}

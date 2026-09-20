@@ -1,0 +1,41 @@
+启动增强版效率基准测试...
+测试设备: cuda
+可用GPU数量: 1
+  GPU 0: NVIDIA GeForce RTX 4090 D
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+
+=== 推理时间测试 ===
+平均推理时间: 16.77 ms (±12.50 ms)
+
+=== 训练时间测试 (10个epoch) ===
+  Epoch 1/10: 训练时间: 27.47 秒, 平均损失: 0.0677
+  Epoch 2/10: 训练时间: 26.92 秒, 平均损失: 0.0245
+  Epoch 3/10: 训练时间: 27.61 秒, 平均损失: 0.0172
+  Epoch 4/10: 训练时间: 27.72 秒, 平均损失: 0.0128
+  Epoch 5/10: 训练时间: 27.05 秒, 平均损失: 0.0111
+  Epoch 6/10: 训练时间: 26.73 秒, 平均损失: 0.0111
+  Epoch 7/10: 训练时间: 26.73 秒, 平均损失: 0.0076
+  Epoch 8/10: 训练时间: 26.55 秒, 平均损失: 0.0086
+  Epoch 9/10: 训练时间: 26.58 秒, 平均损失: 0.0098
+  Epoch 10/10: 训练时间: 26.41 秒, 平均损失: 0.0066
+平均每个epoch训练时间: 26.98 秒
+总训练时间 (10个epoch): 269.77 秒
+
+=== 内存占用测试 ===
+模型总参数量: 34,491,317
+可训练参数量: 34,491,317
+训练前内存: 1136.9 MB, GPU内存: 535.0 MB
+训练后内存: 1136.9 MB, GPU内存: 535.0 MB
+
+增强版效率基准测试结果已保存: efficiency_benchmark_results_enhanced.csv
+  device  avg_inference_time_ms  std_inference_time_ms  avg_epoch_time_sec  total_training_time_sec  epochs  model_parameters  trainable_parameters  cpu_memory_usage_mb  gpu_memory_usage_mb  batch_size  sequence_length
+0   cuda              16.768647              12.502811           26.976671               269.766715      10          34491317              34491317             0.003906                  0.0         128               96

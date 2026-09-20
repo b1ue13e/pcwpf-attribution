@@ -1,0 +1,33 @@
+{
+  "version": "constraint-rebuild-v1",
+  "status": "prospectively frozen for new runs; not retrospectively preregistered",
+  "frequency_minutes": 10,
+  "lookback": 36,
+  "horizon": 36,
+  "origin_stride": 6,
+  "seed_list": [42, 123, 456, 789, 1024],
+  "epochs": 30,
+  "patience": 5,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "lambdas": [0.01, 0.1, 1.0],
+  "misspecification_factors": [0.9, 1.0, 1.1],
+  "development_sites": ["kelmarsh", "penmanshiel"],
+  "external_site": "smarteole",
+  "external_site_caveat": "Historically inspected. Withheld from NEW protocol/hyperparameter selection, not a pristine confirmatory site. Campaign only, not all seasons.",
+  "inputs": ["measured_power_pu", "measured_wind_speed_div15"],
+  "task": "1-36 lead steps (10 minutes to 6 hours) from historical measured SCADA only; no NWP claim",
+  "target": "max(measured signed generation kW,0)/nameplate kW, retaining signed raw readings and above-nameplate values",
+  "splits": {
+    "kelmarsh": {"train_end": "2016-12-01", "validation_end": "2017-01-01", "test_end": "2018-01-01"},
+    "penmanshiel": {"train_end": "2016-12-01", "validation_end": "2017-01-01", "test_end": "2018-01-01"},
+    "smarteole": {"train_end": "2020-04-01", "validation_end": "2020-04-15", "test_end": "2020-05-26"}
+  },
+  "missingness": "regular grid retained; targets never imputed; input ffill <=30min only; remaining missing input windows excluded; eligibility fixed across scenarios",
+  "selection": "minimum CLEAN validation MSE per candidate; lambda selected only on validation for development sites; external lambda transferred as modal development choice with smallest-lambda tie break",
+  "scenarios": ["clean", "power_gaussian_005", "wind_gaussian_05ms", "power_drift_005", "power_missing_10pct_ffill", "power_gaussian_005_denoised"],
+  "scenario_caveat": "Synthetic sensitivity levels, not claimed field-calibrated. Noise injected once on raw time axis before constructing overlapping windows.",
+  "operation": "illustrative normalized asymmetric forecast shortfall/surplus loss, ratios 1,2,5; not actual currency or realized market revenue",
+  "statistics": "paired daily-block bootstrap across forecast origins; seeds are optimization replicates, not independent sites; report all four test quarters for UK sites",
+  "no_go": ["unknown target semantics", "irregular windows", "incomplete farm target sums", "test-based hyperparameter selection", "unverified real-world monetary claim", "uncompleted human coding described as independent validation"]
+}

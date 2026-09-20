@@ -24,7 +24,8 @@
 \end{tabularx}
 \begin{tablenotes}[flushleft]
 \footnotesize
-\item \textbf{注记}：短缺清算支出差异为负代表相比无约束 DLinear 实现了经济节约。平衡现金流差异为正代表从平衡机制中结算得到的账面名义现金流更高。
+\item \textbf{注记}：短缺清算支出差异为负代表相比无约束 DLinear 实现了经济节约。平衡现金流差异为正代表从平衡机制中结算得到的账面名义现金流更高。置信区间基于 2,000 次 7 天圆形块成对自举检验计算，用于刻画时间序列自相关抽样不确定性。
+\item \textbf{场站范围说明}：Kelmarsh 与 Hill of Towie 具备 2017 全年连续日历遥测，支持无缝 7 天圆形块自举抽样。Penmanshiel 专设为小样本数据稀缺压力测试分区（$N_{\text{train}}=1{,}583$，见表~\ref{tab:controlled_ablation}），因其可用测试序列缺乏全日历连续性，故主要用于场站内受控消融评估，未纳入日历级 7 天块自举结算。
 \end{tablenotes}
 \end{threeparttable}
 \end{table*}

@@ -1,0 +1,18 @@
+{
+  "script": "aggregate_ae_operation_results.py",
+  "generated_at_utc": "2026-03-28T16:08:46.783367+00:00",
+  "dispatch_root": "results/ae_recovery_stage1/cfg_lower_corr/dispatch",
+  "focus_mapping": "risk_conditional",
+  "focus_subset": "high_risk_shared",
+  "row_count": 18,
+  "outputs": {
+    "raw_csv": "results/ae_recovery_stage1/cfg_lower_corr/summary/operation_seed_stability_raw.csv",
+    "mean_std_csv": "results/ae_recovery_stage1/cfg_lower_corr/summary/operation_seed_stability_mean_std.csv",
+    "meta_json": "results/ae_recovery_stage1/cfg_lower_corr/summary/operation_seed_stability.meta.json"
+  },
+  "source_files": [
+    "results/ae_recovery_stage1/cfg_lower_corr/dispatch/seed_123/risk_conditional/dispatch_operation_seed123_risk_conditional_aggregate.csv",
+    "results/ae_recovery_stage1/cfg_lower_corr/dispatch/seed_2025/risk_conditional/dispatch_operation_seed2025_risk_conditional_aggregate.csv",
+    "results/ae_recovery_stage1/cfg_lower_corr/dispatch/seed_42/risk_conditional/dispatch_operation_seed42_risk_conditional_aggregate.csv"
+  ]
+}

@@ -1,0 +1,81 @@
+========================================
+优先级实验运行
+P0: wind_cn 全量 | P1: electricity 核心
+========================================
+启动: 2026-02-23 15:38:48
+
+【P0】wind_cn 全量实验
+────────────────────────────────────────────
+阶段1: COA-BiLSTM (3并行)
+  [START] COA wind_cn seed=42: PID=296683
+./run_priority_experiments.sh: command substitution: line 35: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 35: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting COA $dataset seed=$seed")'
+  [START] COA wind_cn seed=123: PID=296687
+./run_priority_experiments.sh: command substitution: line 35: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 35: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting COA $dataset seed=$seed")'
+  [START] COA wind_cn seed=456: PID=296691
+等待wind_cn COA完成...
+./run_priority_experiments.sh: command substitution: line 35: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 35: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting COA $dataset seed=$seed")'
+✅ wind_cn COA 完成
+
+阶段2: BWO-SVR (3并行)
+  [START] BWO-SVR wind_cn seed=42: PID=296695
+./run_priority_experiments.sh: command substitution: line 66: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 66: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting BWO-SVR $dataset seed=$seed")'
+  [START] BWO-SVR wind_cn seed=123: PID=296699
+./run_priority_experiments.sh: command substitution: line 66: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 66: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting BWO-SVR $dataset seed=$seed")'
+  [START] BWO-SVR wind_cn seed=456: PID=296703
+等待wind_cn BWO-SVR完成...
+./run_priority_experiments.sh: command substitution: line 66: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 66: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting BWO-SVR $dataset seed=$seed")'
+✅ wind_cn BWO-SVR 完成
+
+阶段3: BWO-CNN (3并行)
+  [START] BWO-CNN wind_cn seed=42: PID=296707
+./run_priority_experiments.sh: command substitution: line 95: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 95: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting BWO-CNN $dataset seed=$seed")'
+  [START] BWO-CNN wind_cn seed=123: PID=296711
+./run_priority_experiments.sh: command substitution: line 95: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 95: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting BWO-CNN $dataset seed=$seed")'
+  [START] BWO-CNN wind_cn seed=456: PID=296715
+等待wind_cn BWO-CNN完成...
+./run_priority_experiments.sh: command substitution: line 95: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 95: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting BWO-CNN $dataset seed=$seed")'
+✅ wind_cn BWO-CNN 完成
+
+✅✅✅ P0 wind_cn 全量完成! ✅✅✅
+
+【P1】electricity 核心实验
+────────────────────────────────────────────
+阶段4: COA-BiLSTM (3并行)
+  [START] COA electricity seed=42: PID=296716
+./run_priority_experiments.sh: command substitution: line 35: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 35: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting COA $dataset seed=$seed")'
+  [START] COA electricity seed=123: PID=296717
+./run_priority_experiments.sh: command substitution: line 35: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 35: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting COA $dataset seed=$seed")'
+  [START] COA electricity seed=456: PID=296721
+等待electricity COA完成...
+./run_priority_experiments.sh: command substitution: line 35: syntax error near unexpected token `'datetime''
+./run_priority_experiments.sh: command substitution: line 35: `__import__('datetime').datetime.now().strftime('%H:%M:%S'))] Starting COA $dataset seed=$seed")'
+✅ electricity COA 完成
+
+✅✅✅ P1 electricity 核心完成! ✅✅✅
+
+【生成最终结果】
+────────────────────────────────────────────
+✅ 已保存 12 条记录到 all_models_clean_80_20.csv
+
+按数据集统计:
+dataset      model   
+electricity  CNN-LSTM    3
+             LSTM        3
+wind_cn      CNN-LSTM    3
+             LSTM        3
+
+========================================
+优先级实验全部完成!
+结束: 2026-02-23 15:38:49
+========================================

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="172.8pt" height="93.6pt" viewBox="0 0 172.8 93.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-13T00:53:08.985540</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 93.6 
+L 172.8 93.6 
+L 172.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 19.872 73.728 
+L 152.928 73.728 
+Q 159.264 73.728 159.264 70.56 
+L 159.264 23.04 
+Q 159.264 19.872 152.928 19.872 
+L 19.872 19.872 
+Q 13.536 19.872 13.536 23.04 
+L 13.536 70.56 
+Q 13.536 73.728 19.872 73.728 
+z
+" clip-path="url(#pa87fa1f8a4)" style="fill: #fef2f2; stroke: #dc2626; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #991b1b" x="86.4" y="40.86675" transform="rotate(-0 86.4 40.86675)">404 Repo Not Found</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 6.2px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #dc2626" x="86.4" y="59.598813" transform="rotate(-0 86.4 59.598813)">closed-source (95.7%)</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa87fa1f8a4">
+   <rect x="7.2" y="7.2" width="158.4" height="79.2"/>
+  </clipPath>
+ </defs>
+</svg>

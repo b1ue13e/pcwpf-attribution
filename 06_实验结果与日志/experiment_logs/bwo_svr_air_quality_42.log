@@ -1,0 +1,9 @@
+Starting BWO-SVR on air_quality seed=42
+
+======================================================================
+BWO-SVR Experiment: air_quality (seed=42)
+======================================================================
+Dataset: air_quality
+  Total samples: 588644
+  Training samples: 470915 (80.0%)
+  Testing samples: 117729 (20.0%)

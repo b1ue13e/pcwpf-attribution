@@ -1,0 +1,461 @@
+[
+  {
+    "pid": "A01",
+    "bench_author": "Gao et al. (2025)",
+    "bench_venue": "Applied Energy",
+    "bench_doi": "10.1016/j.apenergy.2025.125295",
+    "bench_title": "Physics-constrained wind power forecasting aligned with probability distributions for noise-resilient deep learning",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.apenergy.2025.125295",
+      "title": "Physics-constrained wind power forecasting aligned with probability distributions for noise-resilient deep learning",
+      "container": "Applied Energy",
+      "year": 2025,
+      "volume": "383",
+      "issue": null,
+      "pages": "125295",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "A02",
+    "bench_author": "Wang et al. (2026)",
+    "bench_venue": "Scientific Reports",
+    "bench_doi": "10.1038/s41598-025-34348-x",
+    "bench_title": "Physics-constrained transformer for wind power forecasting",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1038/s41598-025-34348-x",
+      "title": "Physics-constrained transformer for wind power forecasting",
+      "container": "Scientific Reports",
+      "year": 2026,
+      "volume": "16",
+      "issue": "1",
+      "pages": "4237",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "A03",
+    "bench_author": "Xu et al. (2025)",
+    "bench_venue": "Eng. App. Artif. Intell.",
+    "bench_doi": "10.1016/j.engappai.2025.113331",
+    "bench_title": "PINN 与证据不确定性量化",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.engappai.2025.113331",
+      "title": "Prediction of wind turbines power with physics-informed neural networks and evidential uncertainty quantification",
+      "container": "Engineering Applications of Artificial Intelligence",
+      "year": 2026,
+      "volume": "164",
+      "issue": null,
+      "pages": "113331",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "A04",
+    "bench_author": "Gijon et al. (2025)",
+    "bench_venue": "Applied Energy",
+    "bench_doi": "",
+    "bench_title": "Prediction of wind turbines power with physics-informed neural networks",
+    "verified": {
+      "found_via": "openalex_title",
+      "doi": "https://doi.org/10.1016/j.engappai.2025.113331",
+      "title": "Prediction of wind turbines power with physics-informed neural networks and evidential uncertainty quantification",
+      "container": "Engineering Applications of Artificial Intelligence",
+      "year": 2025,
+      "type": "article"
+    }
+  },
+  {
+    "pid": "A05",
+    "bench_author": "Xu et al. (2024/2026)",
+    "bench_venue": "Applied Energy Preprint",
+    "bench_doi": "10.48550/arxiv.2607.01670",
+    "bench_title": "UniWind: Toward Unified Day-Ahead Wind Power Forecasting via Physics-Informed State Routing",
+    "verified": {
+      "found_via": "openalex_title",
+      "doi": "https://doi.org/10.48550/arxiv.2607.01670",
+      "title": "UniWind: Toward Unified Day-Ahead Wind Power Forecasting via Physics-Informed State Routing",
+      "container": "arXiv (Cornell University)",
+      "year": 2026,
+      "type": "preprint"
+    }
+  },
+  {
+    "pid": "A06",
+    "bench_author": "Zehtabiyan-Rezaie (2023)",
+    "bench_venue": "PRX Energy",
+    "bench_doi": "10.1103/prxenergy.2.013009",
+    "bench_title": "Physics-Guided Machine Learning for Wind-Farm Power Prediction",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1103/prxenergy.2.013009",
+      "title": "Physics-Guided Machine Learning for Wind-Farm Power Prediction: Toward Interpretability and Generalizability",
+      "container": "PRX Energy",
+      "year": 2023,
+      "volume": "2",
+      "issue": "1",
+      "pages": "013009",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "A07",
+    "bench_author": "Guo et al. (2026)",
+    "bench_venue": "Renewable Energy",
+    "bench_doi": "10.1016/j.renene.2026.125710",
+    "bench_title": "NCF: A physics-constrained pre-trained method for short-term wind power forecasting",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.renene.2026.125710",
+      "title": "NCF: A physics-constrained pre-trained method for short-term wind power forecasting",
+      "container": "Renewable Energy",
+      "year": 2026,
+      "volume": "267",
+      "issue": null,
+      "pages": "125710",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "A08",
+    "bench_author": "Nie et al. (2026)",
+    "bench_venue": "Energy",
+    "bench_doi": "10.1016/j.energy.2026.141322",
+    "bench_title": "Physics-constrained generative augmentation and hierarchical decomposition driven wind power forecasting under extreme weather",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.energy.2026.141322",
+      "title": "Physics-constrained generative augmentation and hierarchical decomposition driven wind power forecasting framework under extreme weather conditions",
+      "container": "Energy",
+      "year": 2026,
+      "volume": "357",
+      "issue": null,
+      "pages": "141322",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "A09",
+    "bench_author": "Zhang et al. (2026)",
+    "bench_venue": "Energy",
+    "bench_doi": "10.1016/j.energy.2026.141301",
+    "bench_title": "A novel non-dimensional multiple operating conditions physics-informed neural networks for wind turbine wake and power prediction",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.energy.2026.141301",
+      "title": "A novel non-dimensional multiple operating conditions physics-informed neural networks for wind turbine wake and power prediction in complex terrains",
+      "container": "Energy",
+      "year": 2026,
+      "volume": "358",
+      "issue": null,
+      "pages": "141301",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "A10",
+    "bench_author": "Li et al. (2025)",
+    "bench_venue": "IEEE TII",
+    "bench_doi": "10.1109/tii.2025.3623559",
+    "bench_title": "Physics-Informed Adaptive-Weight NBeatsx for Short-Term Wind Power Forecasting",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1109/tii.2025.3623559",
+      "title": "Physics-Informed Adaptive-Weight NBeatsx for Short-Term Wind Power Forecasting",
+      "container": "IEEE Transactions on Industrial Informatics",
+      "year": 2026,
+      "volume": "22",
+      "issue": "2",
+      "pages": "1129-1140",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "A11",
+    "bench_author": "Piao et al. (2024)",
+    "bench_venue": "IEEE TSTE",
+    "bench_doi": "",
+    "bench_title": "NWP 傅里叶几何风电功率预测",
+    "verified": null
+  },
+  {
+    "pid": "A12",
+    "bench_author": "Liu et al. (2024)",
+    "bench_venue": "Applied Energy",
+    "bench_doi": "10.1016/j.apenergy.2024.124068",
+    "bench_title": "Physics-informed reinforcement learning for probabilistic wind power forecasting under extreme meteorological events",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.apenergy.2024.124068",
+      "title": "Physics-informed reinforcement learning for probabilistic wind power forecasting under extreme events",
+      "container": "Applied Energy",
+      "year": 2024,
+      "volume": "376",
+      "issue": null,
+      "pages": "124068",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "B01",
+    "bench_author": "Kapoor & Narayanan (2023)",
+    "bench_venue": "Patterns (Cell)",
+    "bench_doi": "10.1016/j.patter.2023.100804",
+    "bench_title": "Leakage and the reproducibility crisis in machine-learning-based science",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.patter.2023.100804",
+      "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+      "container": "Patterns",
+      "year": 2023,
+      "volume": "4",
+      "issue": "9",
+      "pages": "100804",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "B02",
+    "bench_author": "Kapoor et al. (2024)",
+    "bench_venue": "Science",
+    "bench_doi": "10.1126/sciadv.adk3452",
+    "bench_title": "REFORMS: Consensus-based recommendations for machine-learning-based science",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1126/sciadv.adk3452",
+      "title": "REFORMS: Consensus-based Recommendations for Machine-learning-based Science",
+      "container": "Science Advances",
+      "year": 2024,
+      "volume": "10",
+      "issue": "18",
+      "pages": "eadk3452",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "B03",
+    "bench_author": "Lipton & Steinhardt (2019)",
+    "bench_venue": "CACM",
+    "bench_doi": "10.1145/3368084",
+    "bench_title": "Troubling Trends in Machine Learning Scholarship",
+    "verified": {
+      "found_via": "openalex_title",
+      "doi": "https://doi.org/10.1145/3317287.3328534",
+      "title": "Troubling Trends in Machine Learning Scholarship",
+      "container": "Queue",
+      "year": 2019,
+      "type": "article"
+    }
+  },
+  {
+    "pid": "B04",
+    "bench_author": "Pineau et al. (2021)",
+    "bench_venue": "JMLR",
+    "bench_doi": "10.48550/arxiv.2003.12206",
+    "bench_title": "Improving Reproducibility in Machine Learning Research",
+    "verified": {
+      "found_via": "openalex_title",
+      "doi": "https://doi.org/10.48550/arxiv.2003.12206",
+      "title": "Improving Reproducibility in Machine Learning Research (A Report from the NeurIPS 2019 Reproducibility Program)",
+      "container": "arXiv (Cornell University)",
+      "year": 2020,
+      "type": "preprint"
+    }
+  },
+  {
+    "pid": "B05",
+    "bench_author": "Varoquaux et al. (2022)",
+    "bench_venue": "CACM",
+    "bench_doi": "",
+    "bench_title": "Machine learning for science: pitfalls and recommendations",
+    "verified": null
+  },
+  {
+    "pid": "B06",
+    "bench_author": "Henderson et al. (2018)",
+    "bench_venue": "AAAI",
+    "bench_doi": "",
+    "bench_title": "Deep Reinforcement Learning that Matters",
+    "verified": {
+      "found_via": "openalex_title",
+      "doi": "https://doi.org/10.1609/aaai.v32i1.11694",
+      "title": "Deep Reinforcement Learning That Matters",
+      "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "year": 2018,
+      "type": "conference-paper"
+    }
+  },
+  {
+    "pid": "B07",
+    "bench_author": "D'Amour et al. (2022)",
+    "bench_venue": "JMLR",
+    "bench_doi": "",
+    "bench_title": "Underspecification Presents Challenges for Credibility in Modern Machine Learning",
+    "verified": {
+      "found_via": "openalex_title",
+      "doi": "https://doi.org/10.48550/arxiv.2011.03395",
+      "title": "Underspecification Presents Challenges for Credibility in Modern Machine Learning",
+      "container": "arXiv (Cornell University)",
+      "year": 2020,
+      "type": "preprint"
+    }
+  },
+  {
+    "pid": "B08",
+    "bench_author": "Pinson et al. (2007)",
+    "bench_venue": "IEEE TPS",
+    "bench_doi": "10.1109/tpwrs.2007.901117",
+    "bench_title": "Trading wind generation from short-term probabilistic forecasts",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1109/tpwrs.2007.901117",
+      "title": "Trading Wind Generation From Short-Term Probabilistic Forecasts of Wind Power",
+      "container": "IEEE Transactions on Power Systems",
+      "year": 2007,
+      "volume": "22",
+      "issue": "3",
+      "pages": "1148-1156",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "B09",
+    "bench_author": "Weron (2014)",
+    "bench_venue": "Int. J. Forecasting",
+    "bench_doi": "10.1016/j.ijforecast.2014.08.008",
+    "bench_title": "Electricity price forecasting: A review of the state-of-the-art with a look into the future",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.ijforecast.2014.08.008",
+      "title": "Electricity price forecasting: A review of the state-of-the-art with a look into the future",
+      "container": "International Journal of Forecasting",
+      "year": 2014,
+      "volume": "30",
+      "issue": "4",
+      "pages": "1030-1081",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "B10",
+    "bench_author": "Optis et al. (2022)",
+    "bench_venue": "Wind Energy Sci.",
+    "bench_doi": "",
+    "bench_title": "Evaluating wind speed and power forecasts using WE-Validate",
+    "verified": null
+  },
+  {
+    "pid": "C1",
+    "bench_author": "Yan et al. (2016)",
+    "bench_venue": "Applied Energy",
+    "bench_doi": "10.1016/j.rser.2015.07.197",
+    "bench_title": "Reviews on uncertainty analysis of wind power forecasting",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.rser.2015.07.197",
+      "title": "Reviews on uncertainty analysis of wind power forecasting",
+      "container": "Renewable and Sustainable Energy Reviews",
+      "year": 2015,
+      "volume": "52",
+      "issue": null,
+      "pages": "1322-1330",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "C2",
+    "bench_author": "Yan et al. (2025)",
+    "bench_venue": "Applied Energy",
+    "bench_doi": "10.1016/j.energy.2025.139151",
+    "bench_title": "The economic value of wind power forecasting: a data-driven method and its application in various scenarios",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.energy.2025.139151",
+      "title": "The economic value of wind power forecasting: a data-driven method and its application in various scenarios",
+      "container": "Energy",
+      "year": 2025,
+      "volume": "340",
+      "issue": null,
+      "pages": "139151",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "C3",
+    "bench_author": "Bessa et al. (2012)",
+    "bench_venue": "IEEE TPS",
+    "bench_doi": "",
+    "bench_title": "Time-adaptive conditional quantile estimation for wind power forecasting",
+    "verified": null
+  },
+  {
+    "pid": "C4",
+    "bench_author": "Zhang et al. (2014)",
+    "bench_venue": "IEEE TSTE",
+    "bench_doi": "10.1016/j.rser.2014.01.033",
+    "bench_title": "Review on probabilistic forecasting of wind power generation",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1016/j.rser.2014.01.033",
+      "title": "Review on probabilistic forecasting of wind power generation",
+      "container": "Renewable and Sustainable Energy Reviews",
+      "year": 2014,
+      "volume": "32",
+      "issue": null,
+      "pages": "255-270",
+      "type": "journal-article"
+    }
+  },
+  {
+    "pid": "C5",
+    "bench_author": "Ding et al. (2023)",
+    "bench_venue": "Applied Energy",
+    "bench_doi": "",
+    "bench_title": "Spatio-temporal wind power forecasting",
+    "verified": {
+      "found_via": "openalex_title",
+      "doi": "https://doi.org/10.1109/tsg.2013.2282300",
+      "title": "Short-Term Spatio-Temporal Wind Power Forecast in Robust Look-ahead Power System Dispatch",
+      "container": "IEEE Transactions on Smart Grid",
+      "year": 2013,
+      "type": "article"
+    }
+  },
+  {
+    "pid": "C6",
+    "bench_author": "Wang et al. (2024)",
+    "bench_venue": "Applied Energy",
+    "bench_doi": "",
+    "bench_title": "Robust day-ahead and real-time dispatch",
+    "verified": null
+  },
+  {
+    "pid": "C7",
+    "bench_author": "Chen et al. (2024)",
+    "bench_venue": "Renewable Energy",
+    "bench_doi": "",
+    "bench_title": "Ablation study standards in renewable energy",
+    "verified": null
+  },
+  {
+    "pid": "C8",
+    "bench_author": "Morales et al. (2014)",
+    "bench_venue": "Applied Energy 专著",
+    "bench_doi": "10.1007/978-1-4614-9411-9",
+    "bench_title": "Integrating Renewables in Electricity Markets: Operational Problems",
+    "verified": {
+      "found_via": "crossref_doi",
+      "doi": "10.1007/978-1-4614-9411-9",
+      "title": "Integrating Renewables in Electricity Markets",
+      "container": "International Series in Operations Research &amp; Management Science",
+      "year": 2014,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "type": "book"
+    }
+  }
+]

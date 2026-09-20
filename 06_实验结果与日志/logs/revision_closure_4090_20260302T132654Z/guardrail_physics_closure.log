@@ -1,0 +1,2 @@
+DRY RUN
+C:\Users\32110\AppData\Local\Programs\Python\Python310\python.exe run_guardrail_physics_closure_4090.py --device cuda --faults gaussian,drift,quantization,missingness --severity 0.6 --ramp-q 0.9

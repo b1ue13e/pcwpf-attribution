@@ -1,0 +1,149 @@
+[0;32m========================================[0m
+[0;32m  方案C：核心数据集快速运行[0m
+[0;32m  数据集: wind_cn + electricity[0m
+[0;32m  预计时间: 8-10小时[0m
+[0;32m========================================[0m
+启动时间: 2026-02-23 15:34:13
+
+[0;34m【阶段1】Traditional 基线 (LSTM + CNN-LSTM)[0m
+────────────────────────────────────────────
+  trad_wind_cn_42: 已完成，跳过
+  trad_wind_cn_123: 已完成，跳过
+  trad_wind_cn_456: 已完成，跳过
+  trad_electricity_42: 已完成，跳过
+  trad_electricity_123: 已完成，跳过
+  trad_electricity_456: PID=284013
+
+等待Traditional完成...
+[0;32mTraditional 完成![0m
+
+[0;34m【阶段2】COA-BiLSTM (3个并行)[0m
+────────────────────────────────────────────
+  coa_wind_cn_42: PID=295956
+  coa_wind_cn_123: PID=295958
+  coa_wind_cn_456: PID=295960
+等待批次 1 完成...
+继续...
+  coa_electricity_42: PID=296326
+  coa_electricity_123: PID=296330
+  coa_electricity_456: PID=296334
+等待批次 2 完成...
+./run_plan_c.sh: line 188: 296326 Killed                  python3 <<EOF > "$logfile" 2>&1
+import sys
+sys.path.append('/root')
+import warnings
+warnings.filterwarnings('ignore')
+from coa_bilstm_experiment_v2 import run_coa_bilstm_experiment
+
+try:
+    result = run_coa_bilstm_experiment('$dataset', $seed)
+    print(f"Completed: R2={result['metrics']['R2']:.4f}")
+except Exception as e:
+    print(f"Error: {e}")
+    import traceback
+    traceback.print_exc()
+EOF
+
+./run_plan_c.sh: line 188: 296330 Killed                  python3 <<EOF > "$logfile" 2>&1
+import sys
+sys.path.append('/root')
+import warnings
+warnings.filterwarnings('ignore')
+from coa_bilstm_experiment_v2 import run_coa_bilstm_experiment
+
+try:
+    result = run_coa_bilstm_experiment('$dataset', $seed)
+    print(f"Completed: R2={result['metrics']['R2']:.4f}")
+except Exception as e:
+    print(f"Error: {e}")
+    import traceback
+    traceback.print_exc()
+EOF
+
+./run_plan_c.sh: line 188: 296334 Killed                  python3 <<EOF > "$logfile" 2>&1
+import sys
+sys.path.append('/root')
+import warnings
+warnings.filterwarnings('ignore')
+from coa_bilstm_experiment_v2 import run_coa_bilstm_experiment
+
+try:
+    result = run_coa_bilstm_experiment('$dataset', $seed)
+    print(f"Completed: R2={result['metrics']['R2']:.4f}")
+except Exception as e:
+    print(f"Error: {e}")
+    import traceback
+    traceback.print_exc()
+EOF
+
+继续...
+[0;32mCOA-BiLSTM 完成![0m
+
+[0;34m【阶段3】BWO-SVR (4个并行)[0m
+────────────────────────────────────────────
+  bwo_svr_wind_cn_42: PID=296418
+  bwo_svr_wind_cn_123: PID=296420
+  bwo_svr_wind_cn_456: PID=296422
+  bwo_svr_electricity_42: PID=296424
+等待批次完成...
+  bwo_svr_electricity_123: PID=296765
+  bwo_svr_electricity_456: PID=296767
+./run_plan_c.sh: line 212: 296765 Killed                  python3 <<EOF > "$logfile" 2>&1
+import sys
+sys.path.append('/root')
+import warnings
+warnings.filterwarnings('ignore')
+from bwo_svr_experiment_v2 import run_bwo_svr_single_experiment
+
+try:
+    result = run_bwo_svr_single_experiment('$dataset', $seed)
+    print(f"Completed: R2={result['R2']:.4f}")
+except Exception as e:
+    print(f"Error: {e}")
+    import traceback
+    traceback.print_exc()
+EOF
+
+./run_plan_c.sh: line 212: 296767 Killed                  python3 <<EOF > "$logfile" 2>&1
+import sys
+sys.path.append('/root')
+import warnings
+warnings.filterwarnings('ignore')
+from bwo_svr_experiment_v2 import run_bwo_svr_single_experiment
+
+try:
+    result = run_bwo_svr_single_experiment('$dataset', $seed)
+    print(f"Completed: R2={result['R2']:.4f}")
+except Exception as e:
+    print(f"Error: {e}")
+    import traceback
+    traceback.print_exc()
+EOF
+
+[0;32mBWO-SVR 完成![0m
+
+[0;34m【阶段4】BWO-CNN (4个并行)[0m
+────────────────────────────────────────────
+  bwo_cnn_wind_cn_42: PID=296940
+  bwo_cnn_wind_cn_123: PID=296942
+  bwo_cnn_wind_cn_456: PID=296944
+  bwo_cnn_electricity_42: PID=296946
+等待批次完成...
+  bwo_cnn_electricity_123: PID=297193
+  bwo_cnn_electricity_456: PID=297195
+[0;32mBWO-CNN 完成![0m
+
+[0;34m【整合结果】[0m
+✅ 已整合 12 条记录
+
+按数据集统计:
+dataset      model   
+electricity  CNN-LSTM    3
+             LSTM        3
+wind_cn      CNN-LSTM    3
+             LSTM        3
+
+[0;32m========================================[0m
+[0;32m方案C执行完成![0m
+[0;32m========================================[0m
+结束时间: 2026-02-23 15:39:40

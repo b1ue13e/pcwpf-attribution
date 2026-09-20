@@ -1,0 +1,185 @@
+{
+  "status": "PASS",
+  "bootstrap_replications": 2000,
+  "block_length_days": 7,
+  "total_contrasts_evaluated": 38,
+  "discrepancies": [],
+  "key_table3_contrasts": [
+    {
+      "site": "hill_of_towie",
+      "method": "bounds_f1.0_plain",
+      "delta_cost_dyn": 1.3937737074044148e-07,
+      "ci95_cost_dyn": [
+        1.922543690744777e-08,
+        2.860298467805236e-07
+      ],
+      "delta_cashout_gbp": 0.1533369081616358,
+      "ci95_cashout_gbp": [
+        -0.1671756797400938,
+        0.5097416577610298
+      ],
+      "delta_net_cashflow_gbp": -0.3187373204446901,
+      "ci95_net_cashflow_gbp": [
+        -1.3702900848569886,
+        0.6212247040764258
+      ],
+      "scored_days": 345,
+      "calendar_days": 365,
+      "seeds": 5
+    },
+    {
+      "site": "hill_of_towie",
+      "method": "curve_f1.0_plain",
+      "delta_cost_dyn": -8.419501120738962e-06,
+      "ci95_cost_dyn": [
+        -2.1452406485135845e-05,
+        7.229981631699269e-06
+      ],
+      "delta_cashout_gbp": 22.994845286421985,
+      "ci95_cashout_gbp": [
+        10.92738635019078,
+        38.42757741033788
+      ],
+      "delta_net_cashflow_gbp": -89.39621572171735,
+      "ci95_net_cashflow_gbp": [
+        -133.51328525451103,
+        -54.69750999927341
+      ],
+      "scored_days": 345,
+      "calendar_days": 365,
+      "seeds": 5
+    },
+    {
+      "site": "hill_of_towie",
+      "method": "distribution_f1.0_plain",
+      "delta_cost_dyn": 0.0007663272423384,
+      "ci95_cost_dyn": [
+        0.0002772740800943,
+        0.0012005483244048
+      ],
+      "delta_cashout_gbp": -578.5653444884872,
+      "ci95_cashout_gbp": [
+        -834.859951306199,
+        -367.5079881291008
+      ],
+      "delta_net_cashflow_gbp": 1481.2739077058209,
+      "ci95_net_cashflow_gbp": [
+        802.2917386902388,
+        2203.3185330235174
+      ],
+      "scored_days": 345,
+      "calendar_days": 365,
+      "seeds": 5
+    },
+    {
+      "site": "hill_of_towie",
+      "method": "ridge",
+      "delta_cost_dyn": -0.0007334283862366,
+      "ci95_cost_dyn": [
+        -0.0013146828917888,
+        -0.0001252623881971
+      ],
+      "delta_cashout_gbp": 192.5003263947056,
+      "ci95_cashout_gbp": [
+        -26.65768513444113,
+        445.7423157231174
+      ],
+      "delta_net_cashflow_gbp": -1151.9632586452444,
+      "ci95_net_cashflow_gbp": [
+        -1567.978266589547,
+        -795.2830837091581
+      ],
+      "scored_days": 345,
+      "calendar_days": 365,
+      "seeds": 5
+    },
+    {
+      "site": "kelmarsh",
+      "method": "bounds_f1.0_plain",
+      "delta_cost_dyn": 6.372490962958603e-07,
+      "ci95_cost_dyn": [
+        1.6416987620787863e-08,
+        1.7058875288130467e-06
+      ],
+      "delta_cashout_gbp": 1.7152768275725685,
+      "ci95_cashout_gbp": [
+        -0.0142852385080868,
+        4.634648700599791
+      ],
+      "delta_net_cashflow_gbp": -4.623982167473334,
+      "ci95_net_cashflow_gbp": [
+        -12.668331111886369,
+        0.0485705255036946
+      ],
+      "scored_days": 360,
+      "calendar_days": 365,
+      "seeds": 5
+    },
+    {
+      "site": "kelmarsh",
+      "method": "curve_f1.0_plain",
+      "delta_cost_dyn": -3.929537935623704e-05,
+      "ci95_cost_dyn": [
+        -5.395153419442115e-05,
+        -2.3398302488387184e-05
+      ],
+      "delta_cashout_gbp": -16.606348045102987,
+      "ci95_cashout_gbp": [
+        -33.120345538653304,
+        0.8722373956673289
+      ],
+      "delta_net_cashflow_gbp": 19.505119676483,
+      "ci95_net_cashflow_gbp": [
+        -27.760028109774957,
+        62.8622832016165
+      ],
+      "scored_days": 360,
+      "calendar_days": 365,
+      "seeds": 5
+    },
+    {
+      "site": "kelmarsh",
+      "method": "distribution_f1.0_plain",
+      "delta_cost_dyn": 0.0009317843559213,
+      "ci95_cost_dyn": [
+        0.0004226187653898,
+        0.0013852898842383
+      ],
+      "delta_cashout_gbp": 932.562572385388,
+      "ci95_cashout_gbp": [
+        648.2028830127713,
+        1236.7364433946009
+      ],
+      "delta_net_cashflow_gbp": -3264.857919444401,
+      "ci95_net_cashflow_gbp": [
+        -4365.39939046848,
+        -2223.499170999846
+      ],
+      "scored_days": 360,
+      "calendar_days": 365,
+      "seeds": 5
+    },
+    {
+      "site": "kelmarsh",
+      "method": "ridge",
+      "delta_cost_dyn": 0.0013381834936163,
+      "ci95_cost_dyn": [
+        0.0009172017764444,
+        0.0017940347385319
+      ],
+      "delta_cashout_gbp": 750.6127611926223,
+      "ci95_cashout_gbp": [
+        330.69870938700143,
+        1151.0578128026116
+      ],
+      "delta_net_cashflow_gbp": -690.9401532582852,
+      "ci95_net_cashflow_gbp": [
+        -1669.7645249643692,
+        409.5076944684848
+      ],
+      "scored_days": 360,
+      "calendar_days": 365,
+      "seeds": 5
+    }
+  ]
+}

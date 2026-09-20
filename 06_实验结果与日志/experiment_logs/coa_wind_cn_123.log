@@ -1,0 +1,34 @@
+========================================
+COA-BiLSTM 实验: wind_cn seed=123
+开始时间: 2026-02-24 03:33:15
+========================================
+[03:33:15] 启动实验进程...
+[03:33:16] Starting COA-BiLSTM on wind_cn seed=123
+GPU: NVIDIA GeForce RTX 4090 D
+
+
+============================================================
+COA-BiLSTM: wind_cn (seed=123)
+Population=40, Iterations=200
+============================================================
+Device: cuda
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)

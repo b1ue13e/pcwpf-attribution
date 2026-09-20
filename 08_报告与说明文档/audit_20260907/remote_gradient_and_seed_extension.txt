@@ -1,0 +1,9 @@
+kelmarsh seed=3 epochs=40 | uncon=0.06936 rkl_gradmatch=0.28829 js_gradmatch=0.09482 rkl_raw1to1=0.51730
+kelmarsh seed=2 epochs=40 | uncon=0.08001 rkl_gradmatch=0.26754 js_gradmatch=0.10156 rkl_raw1to1=0.40754
+kelmarsh seed=1 epochs=40 | uncon=0.07888 rkl_gradmatch=0.14621 js_gradmatch=0.11935 rkl_raw1to1=0.42233
+kelmarsh seed=4 epochs=40 | uncon=0.07799 rkl_gradmatch=0.24586 js_gradmatch=0.11161 rkl_raw1to1=0.46466
+kelmarsh seed=0 epochs=40 | uncon=0.08353 rkl_gradmatch=0.21338 js_gradmatch=0.14848 rkl_raw1to1=0.53875
+kelmarsh seed=6 epochs=40 | paper_spec=0.18907 unconst=0.06698 no_phi=0.15450 fixed_cp=87.46922
+kelmarsh seed=5 epochs=40 | paper_spec=0.18865 unconst=0.07412 no_phi=0.11852 fixed_cp=87.07714
+kelmarsh seed=8 epochs=40 | paper_spec=0.14124 unconst=0.07166 no_phi=0.18305 fixed_cp=89.33549
+kelmarsh seed=7 epochs=40 | paper_spec=0.18523 unconst=0.06687 no_phi=0.14466 fixed_cp=88.26717

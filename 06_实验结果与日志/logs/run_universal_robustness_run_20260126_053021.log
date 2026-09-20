@@ -1,0 +1,132 @@
+开始时间: Mon Jan 26 05:45:23 CST 2026
+脚本: run_universal_robustness.py
+实验: 全领域鲁棒性测试
+========================================
+启动全领域鲁棒性压力测试 (Universal Robustness Test)...
+
+正在测试数据集: Wind (CN) (wind_final.csv)...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   加载模型配置: checkpoints_ts/main/model_config.json
+   使用配置: hidden_dim=128, num_blocks=3, num_experts=4, top_k=2
+   加载权重: checkpoints_ts/main/best_model.pth
+   警告: 严格加载失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias". 
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+   尝试使用 strict=False 加载...
+   错误: 宽松加载也失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+   使用随机初始化进行测试
+      噪音 0%: R2=0.8728
+      噪音 5%: R2=0.8717
+      噪音 10%: R2=0.8683
+      噪音 15%: R2=0.8623
+      噪音 20%: R2=0.8556
+
+正在测试数据集: Wind (US) (wind_us.csv)...
+加载数据: wind_us.csv
+   原始形状: (105120, 11)
+   列数: 11
+   缺失值已全部处理
+   最终形状: (105120, 11)
+   特征: ['Year', 'Month', 'Day', 'Hour', 'Minute', 'wind speed at 100m (m/s)', 'hour_sin', 'hour_cos', 'day_sin', 'day_cos', 'power (MW)']
+   数据范围: [-1.0000, 2012.0000]
+   训练样本: 73465
+   验证样本: 15649
+   测试样本: 15649
+   加载模型配置: checkpoints_ts/exp_wind_us/model_config.json
+   使用配置: hidden_dim=128, num_blocks=3, num_experts=4, top_k=2
+   加载权重: checkpoints_ts/exp_wind_us/best_model.pth
+   警告: 严格加载失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias". 
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+   尝试使用 strict=False 加载...
+   错误: 宽松加载也失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+   使用随机初始化进行测试
+      噪音 0%: R2=0.7743
+      噪音 5%: R2=0.7712
+      噪音 10%: R2=0.7621
+      噪音 15%: R2=0.7491
+      噪音 20%: R2=0.7313
+
+正在测试数据集: GEFCom Load (gefcom_ready.csv)...
+加载数据: gefcom_ready.csv
+   原始形状: (38070, 2)
+   列数: 2
+   删除了时间戳列: ['date']
+   缺失值已全部处理
+   最终形状: (38070, 1)
+   特征: ['load']
+   数据范围: [7319.0000, 45547.0000]
+   训练样本: 26530
+   验证样本: 5591
+   测试样本: 5592
+   加载模型配置: checkpoints_ts/exp_gefcom/model_config.json
+   使用配置: hidden_dim=128, num_blocks=3, num_experts=4, top_k=2
+   加载权重: checkpoints_ts/exp_gefcom/best_model.pth
+   警告: 严格加载失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias". 
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+   尝试使用 strict=False 加载...
+   错误: 宽松加载也失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+   使用随机初始化进行测试
+      噪音 0%: R2=0.7548
+      噪音 5%: R2=0.7533
+      噪音 10%: R2=0.7467
+      噪音 15%: R2=0.7404
+      噪音 20%: R2=0.7263
+
+正在测试数据集: Air Quality (air_quality_ready.csv)...
+加载数据: air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+   加载模型配置: checkpoints_ts/exp_air_quality/model_config.json
+   使用配置: hidden_dim=128, num_blocks=3, num_experts=4, top_k=2
+   加载权重: checkpoints_ts/exp_air_quality/best_model.pth
+   警告: 严格加载失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias". 
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+   尝试使用 strict=False 加载...
+   错误: 宽松加载也失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+   使用随机初始化进行测试
+      噪音 0%: R2=0.4622
+      噪音 5%: R2=0.4610
+      噪音 10%: R2=0.4571
+      噪音 15%: R2=0.4501
+      噪音 20%: R2=0.4416
+
+全领域鲁棒性图表已生成: fig_universal_robustness.png

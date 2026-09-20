@@ -1,0 +1,9 @@
+model,R2_wind_us,R2_air_quality,R2_gefcom_load,source
+Ultra-LSNT,0.7878,0.4861,0.7554,multi_domain_baselines + table_multi_domain
+DLinear,0.8779157400131226,0.3432971835136413,0.7378214001655579,multi_domain_baselines + table_multi_domain
+iTransformer,0.8575311899185181,0.4672392010688782,0.7526589632034302,multi_domain_baselines + table_multi_domain
+TimeMixer,0.8390815854072571,0.3823473453521728,0.7281026840209961,multi_domain_baselines + table_multi_domain
+ARIMA (auditable),,,,cross_domain_additional_models_clean
+SVR (auditable),,,,cross_domain_additional_models_clean
+SSA-ELM,0.735416054725647,0.25362157821655273,0.7217949032783508,cross_domain_additional_models_clean
+Mamba (auditable),,,,cross_domain_additional_models_clean

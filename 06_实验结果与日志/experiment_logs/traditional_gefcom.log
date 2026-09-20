@@ -1,0 +1,50 @@
+2026-02-23 04:58:06.522341: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-02-23 04:58:06.623035: I tensorflow/core/platform/cpu_feature_guard    LSTM: R2=0.7628
+  CNN-LSTM on gefcom (seed=123)
+    CNN-LSTM: R2=0.7645
+
+  Seed: 456
+  ARIMA on gefcom (seed=456)
+    ARIMA: R2=-0.7103
+  SVR on gefcom (seed=456)
+    SVR: R2=0.9885
+  LSTM on gefcom (seed=456)
+    LSTM: R2=0.7648
+  CNN-LSTM on gefcom (seed=456)
+    CNN-LSTM: R2=0.7406
+
+gefcom completed!
+low/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Starting gefcom...
+
+Seed: 42
+  ARIMA on gefcom (seed=42)
+  ARIMA: R2=-0.7103
+  SVR on gefcom (seed=42)
+  SVR: R2=0.9885
+  LSTM on gefcom (seed=42)
+  LSTM: R2=0.7646
+  CNN-LSTM on gefcom (seed=42)
+  CNN-LSTM: R2=0.7655
+
+Seed: 123
+  ARIMA on gefcom (seed=123)
+  ARIMA: R2=-0.7103
+  SVR on gefcom (seed=123)
+  SVR: R2=0.9885
+  LSTM on gefcom (seed=123)
+  LSTM: R2=0.7606
+  CNN-LSTM on gefcom (seed=123)
+  CNN-LSTM: R2=0.7317
+
+Seed: 456
+  ARIMA on gefcom (seed=456)
+  ARIMA: R2=-0.7103
+  SVR on gefcom (seed=456)
+  SVR: R2=0.9885
+  LSTM on gefcom (seed=456)
+  LSTM: R2=0.7680
+  CNN-LSTM on gefcom (seed=456)
+  CNN-LSTM: R2=0.7616
+
+gefcom completed!

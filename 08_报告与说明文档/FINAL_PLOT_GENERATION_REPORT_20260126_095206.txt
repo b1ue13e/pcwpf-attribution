@@ -1,0 +1,58 @@
+最终图片生成报告
+======================
+生成时间: Mon Jan 26 09:52:06 CST 2026
+工作目录: /root/my
+
+系统信息:
+  Python版本: Python 3.10.8
+  Matplotlib版本: 3.9.0
+
+执行结果:
+  总生成图片: 29
+  找到关键图片: 22
+  缺失关键图片: 4
+
+字体配置:
+  字体族: sans-serif
+  备选字体: DejaVu Sans, Arial, Helvetica, Liberation Sans
+  已避免中文字体: 是
+
+目录结构:
+  ./engineering_charts: 7 个图片
+  ./figures: 4 个图片
+  ./figures/images: 0 个图片
+  ./images: 0 个图片
+
+重要文件状态:
+  ✅ engineering_charts/probabilistic_metrics.png (119198 bytes)
+  ✅ fig_efficiency.png (148774 bytes)
+  ❌ fig_robustness_compare.png (缺失)
+  ✅ fig_architecture.png (196630 bytes)
+  ✅ fig_multi_domain.png (213899 bytes)
+  ✅ figures/performance_comparison.png (200673 bytes)
+  ✅ fig_expert_comparison_latest.png (204107 bytes)
+  ❌ fig_real_expert_heatmap.png (缺失)
+  ✅ fig_universal_robustness.png (289830 bytes)
+  ✅ fig_ablation.png (186316 bytes)
+  ✅ engineering_charts/stratified_heatmap.png (238226 bytes)
+  ✅ dispatch_comparison_charts.png (149352 bytes)
+  ❌ fig_gbdt_battle.png (缺失)
+  ✅ engineering_charts/spider_chart.png (251516 bytes)
+  ✅ Figure_5_Final.png (154300 bytes)
+  ✅ engineering_charts/dispatch_economics.png (104808 bytes)
+  ✅ Figure_2_Final.png (320860 bytes)
+  ✅ engineering_charts/reliability_diagram.png (157866 bytes)
+  ❌ fig_economic_impact.png (缺失)
+  ✅ dispatch_detailed_analysis.png (100254 bytes)
+  ✅ fig_comparison.png (155242 bytes)
+  ✅ fig_battle_dlinear_victory.png (231286 bytes)
+  ✅ Figure_4_Final.png (422079 bytes)
+  ✅ 3d_performance_scatter.png (835316 bytes)
+  ✅ Figure_3_Final.png (394673 bytes)
+  ✅ engineering_charts/overall_performance.png (153541 bytes)
+
+备注:
+  1. 所有图片使用英文字体生成，无乱码
+  2. 旧图片已全部清理
+  3. 图片文件大小正常 (>1KB)
+  4. 如需进一步验证，请使用图片查看器打开文件检查标签

@@ -1,0 +1,964 @@
+% SOURCE: 01_论文投稿材料\active_manuscript\main.tex
+\documentclass[3p,twocolumn,times]{elsarticle}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lineno,hyperref}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{url}
+
+\journal{Applied Energy}
+\bibliographystyle{elsarticle-num}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfencoding=auto,
+    psdextra
+}
+\pdfstringdefDisableCommands{\def\corref#1{}}
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{hypothesis}{Hypothesis}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Counterexample}
+
+\usepackage{dblfloatfix}
+
+% Float placement optimization
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.70}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.70}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{10}
+\setcounter{dbltopnumber}{5}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{From Specification to Deployment: A Systematic Audit of Constraint Provenance, Implementation Fidelity, and Harm in Physics-Constrained Wind Power Forecasting}
+
+\author[1]{Junyu Li\corref{cor1}}
+\ead{ljylikezmn999@gmail.com}
+\author[1]{Juntao Du}
+
+\address[1]{School of Statistics and Applied Mathematics, Anhui University of Finance and Economics, Bengbu 233030, China}
+
+\cortext[cor1]{Corresponding author}
+
+\begin{highlights}
+\item Systematic scoping audit of 46 physics-constrained wind power forecasting studies.
+\item Zero percent of audited studies document operational harm or negative trade-offs.
+\item Software audit of PCT identifies reverse-argument JS form loss execution.
+\item Scrambled priors induce a +68.1\% dispatch cost surge under strong constraints.
+\item Degenerate zero-bid probe exposes mathematical defects of unhedged cashflows.
+\end{highlights}
+
+\begin{abstract}
+Embedding physical domain principles into deep forecasting models is widely presumed to safeguard operational reliability. We audit this assumption across theoretical specification, software execution, and operational market settlement. Guided by PRISMA-ScR across 46 contemporary studies (2023--2026), our systematic scoping audit uncovers three consistent reporting patterns: 0/46 studies (0.0\%; 95\% Wilson CI: [0.0\%, 7.7\%]) document an operational failure regime or negative trade-off; 95.7\% omit public source code (44/46, 95\% Wilson CI: [85.5\%, 98.8\%]); and 50.0\% evaluate constraints by excising entire multi-layer neural blocks, confounding structural capacity with domain physics. A static computational graph audit of the two publicly accessible repositories reveals that while PINN-UQ faithfully implements its algebraic equations ($\mathcal{D}_4 = \texttt{code-aligned}$, 2.2\%), the Physics-Constrained Transformer (PCT, $\mathcal{D}_4 = \texttt{divergent-code}$, 2.2\%) evaluates a reverse-argument JS form that introduces a first-order inverse-density singularity ($\mathcal{O}(1/\epsilon)$) absent from standard symmetric formulations. In contrast, forensic tensor expansion confirms that PCT's product-kernel KDE preserves bivariate coupling, separating numerical implementation divergence from formulation invalidity. Controlled multi-farm prospective ablations across three commercial UK sites establish four empirical boundary conditions under matched backbones: authentic physical priors provide statistically verified downside risk reduction under data scarcity ($-1.22\%$ dispatch cost on Penmanshiel, $p < 0.001$), yet misspecified priors under strong regularization trigger severe operational penalties ($+68.1\%$, $p < 0.001$); under weak regularization ($\lambda \le 0.01$), authentic and scrambled priors are statistically indistinguishable ($p = 0.231$), mimicking non-specific numerical smoothing; for proxy-dependent architectures, runtime observation staleness produces monotonic cost escalation; and single-settlement balancing cashflow is mathematically decoupled from forecast accuracy, as demonstrated by a degenerate zero-bid probe. We operationalize these boundaries into the five-gate REFORMS-PCWPF verification protocol for reproducible model deployment.
+\end{abstract}
+
+\begin{keyword}
+Physics-Constrained Deep Learning \sep Wind Power Forecasting \sep Prediction-Decision Decoupling \sep Conditional Inductive Priors \sep Systematic Audit \sep Implementation Fidelity \sep Machine Learning Reproducibility
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sections/01_intro.tex}
+\input{sections/02_related.tex}
+\input{sections/03_framework.tex}
+\input{sections/04_protocol.tex}
+\input{sections/05_results.tex}
+\input{sections/06_code_audit.tex}
+\input{sections/07_theory.tex}
+\input{sections/08_discussion.tex}
+\input{sections/09_conclusion.tex}
+
+\input{sections/11_starmethods.tex}
+
+\appendix
+\input{sections/10_appendix.tex}
+
+\section*{Declaration of Interests}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Author Contributions (CRediT)}
+\textbf{Junyu Li}: Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Visualization, Project administration, Writing -- original draft, Writing -- review \& editing. \textbf{Juntao Du}: Validation, Data curation, Software (Inter-rater reliability arbitration), Investigation, Writing -- review \& editing.
+
+\section*{Declaration of Generative AI in the Writing Process}
+During the preparation of this manuscript, the authors utilized large language model assistants strictly for grammar checking, code syntax auditing, and bibliographic formatting. After using these tools, the authors reviewed and edited the content thoroughly and take full responsibility for the scientific integrity, analytical claims, and conclusions presented in this publication.
+
+\section*{Acknowledgments}
+We thank the open science teams at Zenodo, Cubico Sustainable Investments, RES, TRIG, and Elexon for maintaining transparent public repositories of operational renewable energy telemetry and market clearing records. Computations were supported by dedicated high-performance computing infrastructure.
+
+\setlength{\bibsep}{2.5pt plus 0.5pt minus 0.5pt}
+\small
+\bibliography{refs}
+
+\end{document}
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\01_intro.tex
+\section{Introduction}
+\label{sec:intro}
+
+Decarbonized electrical grids increasingly depend on variable wind generation. Integrating this resource requires system operators to balance physical deviations against fluctuating aerodynamic conditions under stringent operating reserve requirements \cite{holttinen2021,weron2014}. Over the past decade, wind power forecasting has transitioned from persistence baselines and auto-regressive formulations to high-capacity deep neural networks, notably temporal convolutional architectures and Transformers \cite{zhou2021informer,wang2024timemixer,liu2024itransformer}. Yet, despite high accuracy on stationary benchmark splits, unconstrained statistical estimators routinely generate physically anomalous outputs: negative power values, ramp rates that violate mechanical turbine inertia, or generation levels exceeding aerodynamic nameplate ratings \cite{karniadakis2021physics}.
+
+To enforce physical consistency, researchers increasingly embed domain principles into deep neural networks \cite{raissi2019physics,karniadakis2021physics}. These hybrid formulations incorporate aerodynamic Betz limits, empirical turbine power curves, or kinematic wake equations into loss functions and network layers \cite{sheng2025annreview}. The intended benefits are compelling: constraining predictions to physically admissible manifolds, improving data efficiency under small training samples, and preventing pathological extrapolation \cite{tgdpf2025,pct2026}. Consequently, physics-constrained forecasting has emerged as a major research paradigm across energy systems and applied artificial intelligence.
+
+This expanding literature largely operates on the assumption that embedding physical priors uniformly safeguards predictive performance. Published evaluations routinely frame physical constraints as monotonic inductive assets that suppress anomalies and reduce operational risk. In grid operations, however, this benefit is neither unconditional nor scale-invariant.
+
+The umbrella label ``physics-constrained'' masks profound structural heterogeneity. Formulations in contemporary literature span analytical invariants (e.g., the Betz aerodynamic limit), historical statistical priors (e.g., empirical power curves fitted offline from SCADA records), and dynamic coefficients predicted online by auxiliary networks. Conflating these mechanisms obscures their differing sensitivities to turbine aerodynamic degradation, anemometer calibration drift, and atmospheric non-stationarity.
+
+Reported empirical gains are also frequently confounded. Mirroring broader methodological concerns in empirical machine learning regarding attribution failures \cite{lipton2019}, published ablations routinely excise entire multi-layer neural blocks---such as graph attention units or multi-scale decomposition encoders---rather than isolating the physical penalty parameter ($\lambda=0$ vs.\ $\lambda>0$). In such unisolated protocols, measured gains reflect expanded parameter capacity and representational expressiveness rather than aerodynamic domain guidance.
+
+Further divergence arises between published mathematical formulations and their software execution \cite{kapoor2023,pineau2021}. In tensor computation graphs, library reduction conventions, silent broadcasting, and argument order can fundamentally alter a regularizer's analytical optimization surface. Even when algebraically faithful, constraint terms evaluated during training often introduce fragile runtime dependencies: requiring contemporaneous meteorological inputs that encounter observation staleness under real-world telemetry delays. Furthermore, penalizing predictions against static historical profiles can distort the conditional mean, while downstream evaluations on unhedged single-settlement cashflows mistake accidental bidding bias for market skill.
+
+These empirical vulnerabilities raise a direct operational question: under parameter-matched controls and identical information sets, when do domain physical constraints deliver genuine inductive advantage, when do they merely provide non-specific numerical regularization, and when do they actively degrade downstream market dispatch?
+
+\subsection{Summary of Contributions}
+We audit physics-constrained wind power forecasting across three interconnected levels: literature specification, software execution, and imbalance-settlement and decision-risk diagnostics.
+
+\textbf{Literature Scoping Audit (PRISMA-ScR).} We evaluate 46 contemporary studies (38 peer-reviewed journal articles and 8 preprints, 2023--2026) using the Five-Dimensional Constraint Lifecycle Framework (Schema v4), supported by multi-rater reliability benchmarking ($\kappa = 0.950$ on application stage $\mathcal{D}_2$). Within the audited scoping cohort ($N=46$), our audit uncovers three consistent reporting patterns: 0/46 studies (0.0\%; 95\% Wilson CI: [0.0\%, 7.7\%]) document an operational failure regime or negative trade-off; 95.7\% provide no accessible public source code ($44/46$, 95\% Wilson CI: [85.5\%, 98.8\%]); and 50.0\% conflate structural capacity with domain physics by excising entire neural submodules in ablation tests ($23/46$, 95\% Wilson CI: [36.1\%, 63.9\%]).
+
+\textbf{Software Computational Graph Audit.} Of the 46 studies, exactly two provided publicly accessible software repositories: PINN-UQ \cite{s10_pinnuq2025}, which we verified as strictly code-aligned with its published algebraic equations ($\mathcal{D}_4 = \texttt{code-aligned}$, 2.2\%), and PCT \cite{pct2026}, the sole publicly accessible training codebase for end-to-end physics-constrained Transformers. Static AST analysis of PCT reveals that the executed loss reverses the argument order of the published Jensen--Shannon divergence ($\mathcal{D}_4 = \texttt{divergent-code}$, 2.2\%), introducing an inverse-density singularity that amplifies gradient norm by $>2.7\times$ near support boundaries and induces premature operational degradation. Conversely, algebraic derivation confirms that the paired kernel product preserves bivariate coupling via a standard 2D product-kernel formulation---a negative control that separates implementation divergence from formulation invalidity.
+
+\textbf{Prospective Multi-Farm Ablations.} Controlled multi-seed experiments across three operational UK wind farms identify four empirical boundary conditions. Under sample restriction ($N_{\text{train}} = 1{,}583$), authentic power curve priors secure robust downside risk reduction ($-1.22\%$ dispatch cost on Penmanshiel, $p < 0.001$), whereas scale-matched scrambled priors inflate dispatch cost by $+68.1\%$ ($p < 0.001$), establishing an asymmetric risk-return profile under strong regularization. Under weak regularization ($\lambda \le 0.01$), genuine and scrambled priors are statistically indistinguishable ($p = 0.231$), consistent with non-specific numerical smoothing. Across all three sites, proxy-dependent constraints evaluated under observation staleness exhibit monotonic cost escalation from 1\,h to 6\,h. Finally, a degenerate zero-bid probe demonstrates that unhedged balancing cashflow is mathematically decoupled from forecast quality.
+
+\paragraph{Empirical Scope and Methodological Boundaries}
+This investigation defines four explicit operational boundaries: first, the scoping literature audit evaluates reporting and ablation practices across the 46 contemporary studies identified under our PRISMA-ScR protocol (38 peer-reviewed journal articles and 8 preprints, 2023--2026), characterizing reporting gaps within this scoping cohort rather than universal disciplinary properties; second, the software audit examines the computational graph of the open-source PCT implementation (commit \texttt{65941ec}); third, the empirical ablations characterize boundary behavior across three commercial UK wind farms under matched DLinear backbones with PatchTST serving as an architectural sensitivity probe; and fourth, the downstream evaluations conduct an operational decision-risk and single-settlement imbalance cashflow diagnostic under asymmetric two-settlement rules, establishing metric failure modes rather than full commercial portfolio clearing. Together, these four components establish an evidence-grounded assessment from mathematical specification to market dispatch.
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\02_related.tex
+\section{Related Work and Positioning}
+\label{sec:related_work}
+
+To position this scoping empirical audit within computational energy systems and empirical machine learning methodology, we examine three intersecting areas: (i) physics-constrained formulations in renewable energy forecasting, (ii) benchmarking and operational decision value in wind power prediction, and (iii) reproducibility, reporting checklists, and software auditing in empirical AI.
+
+\subsection{Three Methodological Dilemmas in Physics-Constrained Energy Forecasting}
+The integration of physical principles into neural estimators is widely presented as a synthesis of domain governing equations and data-driven learning \cite{karniadakis2021physics,raissi2019physics}. In computational renewable energy systems, this formulation encounters three structural dilemmas:
+
+\paragraph{Dilemma 1: Kinematic Hard Clipping versus Turbulent Manifolds} Enforcing aerodynamic operational limits (cut-in, rated, and cut-out wind speeds, or the theoretical Betz envelope $P \le \frac{16}{27} \cdot \frac{1}{2} \rho A v^3$) via hard bounds or bounded activations guarantees output admissibility \cite{tgdpf2025}. However, hard clipping alters high-order gradient geometry across saturation boundaries. When atmospheric boundary-layer turbulence transitions turbine operation into non-stationary regimes, zero-gradient saturation zones stall backpropagation, truncating the neural manifold and preventing adaptation to transient aerodynamic excursions.
+
+\paragraph{Dilemma 2: Spatio-Temporal Wake Graph Networks versus Low-Order Empirical Algebraic Matrices} Embedding spatial wake deficits---such as 1D kinematic Jensen or Bastankhah--Port\'{e}-Agel Gaussian formulations \cite{sheng2025annreview,s34_prx2023}---into Graph Neural Network (GNN) adjacency matrices substitutes empirical steady-state engineering approximations for dynamic Navier--Stokes continuum physics. Imposing 1D scalar algebraic matrices onto high-capacity spatiotemporal graph representations restricts the network from resolving time-varying turbulent eddy propagation. Published evaluations frequently attribute downstream relational gains to the embedded engineering surrogate rather than testing whether the expressive capacity of the GNN backbone alone accounts for the improvement.
+
+\paragraph{Dilemma 3: Distribution Divergence Regularization versus Loss Landscape Stiffness} Penalizing deviations from historical joint wind speed--power densities via statistical divergence penalties (Wasserstein distance or Jensen--Shannon divergence \cite{pct2026,tgdpf2025}) introduces severe loss landscape stiffness \cite{krishnapriyan2021}. Static distribution alignment projects historical average manifolds onto non-stationary meteorological time series. When runtime telemetry exhibits observation latency or atmospheric regimes shift, multi-objective penalty gradients penalize physically valid operational transients, inducing runtime proxy drift and inflating downstream dispatch imbalance costs.
+
+\subsection{Benchmarking, Robustness, and Decision Value in Wind Forecasting}
+Evaluation of short-term wind power forecasting has long relied on standard statistical error metrics, including Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and the coefficient of determination ($R^2$) \cite{madsen2005,optis2022}. Madsen et al. \cite{madsen2005} established standardized protocols for short-term wind power evaluation, highlighting the necessity of assessing models across distinct operational regimes, forecast horizons, and normalized capacity metrics. More recently, Optis et al. introduced the open-source \textit{WE-Validate} framework \cite{optis2022}, advocating for resistant and distributionally robust metrics that reflect meteorological variability and complex terrain dynamics.
+
+Power systems engineering demonstrates that benchmark accuracy on historical test splits diverges from operational value under asymmetric grid penalties \cite{weron2014,zhang2014wind}. Pinson et al. \cite{pinson2007trading} proved that optimal electricity market bidding is governed by conditional quantiles matching asymmetric imbalance penalties, establishing the operational separation between point accuracy and financial risk. Grid operations penalize reserve shortfalls and unhedged ramp errors far more severely than symmetric variance \cite{dao2018cointegration,yan2025economicvalue}. Real-world balancing mechanisms, such as the UK Elexon Balancing and Settlement Code (BSC), evaluate net physical imbalances over discrete 30-minute settlement periods, where positive and negative deviations net out algebraically before incurring cashout charges. Yet published studies routinely evaluate models on unhedged single-settlement cashflows, mistaking accidental prediction bias for forecasting skill. Evaluating neural forecasters strictly on uncalibrated point metrics or unhedged cashflows obscures their true operational reliability.
+
+\subsection{Reproducibility, Reporting Checklists, and Software Auditing in Machine Learning}
+Empirical machine learning has faced increasing scrutiny over data leakage, underspecification, and unverified software implementations \cite{damour2022,gundersen2018,kapoor2023,lipton2019}. Kapoor and Narayanan \cite{kapoor2023} documented reproducibility failures stemming from subtle leakage vectors across seventeen scientific disciplines, showing that data-driven claims frequently collapse when subjected to rigorous independent re-examination. Gundersen and Kjensmo \cite{gundersen2018} conducted an empirical audit of 400 papers presented at AI venues (AAAI and IJCAI), finding that fewer than 20\% provided accessible code or reproducible experimental protocols.
+
+To address these vulnerabilities, leading scientific venues have introduced procedural interventions. Pineau et al. \cite{pineau2021} developed the NeurIPS Machine Learning Reproducibility Checklist, demonstrating that formal reporting mandates correlate with improved disclosure of code, data, hyperparameter tuning, and error bounds. Beyond documentation, D'Amour et al. \cite{damour2022} demonstrated that models exhibiting equivalent in-distribution benchmark accuracy often diverge sharply under operational stress due to underspecified training objectives. Concurrently, Lipton and Steinhardt \cite{lipton2019} identified pervasive weaknesses in empirical scholarship: conflating empirical correlation with theoretical causation, failing to isolate independent sources of empirical gain, and deploying mathematical formalism decoratively without operational consequences.
+
+While general machine learning venues have increasingly adopted these auditing norms, physics-constrained energy forecasting has developed largely without standardized reporting controls. As summarized in Table~\ref{tab:lit_comparison}, existing reviews focus primarily on architectural taxonomy and qualitative typologies, rarely probing constraint provenance, software parity, or the causal validity of ablation studies. This work operationalizes these empirical standards through systematic auditing across constraint lifecycle provenance, software parity, and controlled ablations.
+
+\begin{table*}[!t]
+\centering
+\small
+\caption{Positioning this Scoping Empirical Audit Relative to Existing Literature Reviews in Wind Power Forecasting and Scientific ML.}
+\label{tab:lit_comparison}
+\begin{tabularx}{\textwidth}{p{4.0cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+\toprule
+\textbf{Survey / Meta-Review} & \textbf{Decouples} & \textbf{Audits Stage} & \textbf{Checks Inference} & \textbf{Verifies Code} & \textbf{Scrutinizes} \\
+\textbf{Literature Reference} & \textbf{Provenance ($\mathcal{D}_1$)} & \textbf{Separation ($\mathcal{D}_2$)} & \textbf{Telemetry ($\mathcal{D}_3$)} & \textbf{Parity ($\mathcal{D}_4$)} & \textbf{Ablation ($\mathcal{D}_5$)} \\
+\midrule
+Yan et al. (2016) \cite{yan2016review} & Partial & No & Partial & No & No \\
+Maldonado-Correa et al. (2020) \cite{maldonadocorrea2020slr} & No & No & No & No & No \\
+Karniadakis et al. (2021) \cite{karniadakis2021physics} & Conceptual & Conceptual & No & No & No \\
+Optis et al. (WE-Validate, 2022) \cite{optis2022} & No & No & Partial & Open Benchmark & No \\
+Sheng et al. (2025) \cite{sheng2025annreview} & No & Partial & No & No & No \\
+\midrule
+\textbf{This Scoping Empirical Audit} & \textbf{Yes (Schema v4)} & \textbf{Yes (Schema v4)} & \textbf{Yes (Schema v4)} & \textbf{Yes (Static Audit)} & \textbf{Yes (Strict Isolation)} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\03_framework.tex
+\section{Conceptual Framework: The Five-Dimensional Constraint Lifecycle (Schema v4)}
+\label{sec:framework}
+
+In renewable energy forecasting, designating a neural network as ``physics-constrained'' conflates disparate mathematical, structural, and empirical operations under an umbrella descriptor \cite{lipton2019}. To establish an operational foundation for empirical auditing, we introduce the \textbf{Constraint Lifecycle Taxonomy (Schema v4)}.
+
+\subsection{Unit of Analysis and Lifecycle Representation}
+In our scoping framework, the primary unit of analysis is the individual \textbf{forecasting study} ($N=46$ unique scoping studies), characterized by its primary operational constraint mechanism. For forecasting methodologies that integrate multiple physical priors (e.g., combining an empirical power curve regularizer with a spatial wake graph architecture), each study is classified according to its dominant physical constraint governing the forecasting computational graph, while multi-component interactions and secondary constraints are preserved in the open audit ledger. Formally, we characterize the primary constraint architecture $C$ of each audited study as a 5-tuple operating across orthogonal lifecycle stages:
+\begin{equation}
+C = \big\langle \mathcal{D}_1, \mathcal{D}_2, \mathcal{D}_3, \mathcal{D}_4, \mathcal{D}_5 \big\rangle,
+\label{eq:constraint_tuple}
+\end{equation}
+where $\mathcal{D}_1$ represents parameter provenance, $\mathcal{D}_2$ denotes application stage, $\mathcal{D}_3$ specifies test-time inference telemetry requirements, $\mathcal{D}_4$ captures implementation software fidelity, and $\mathcal{D}_5$ evaluates harm reporting and ablation validity. The overarching lifecycle trajectory from physical specification to operational deployment is illustrated schematically in Figure~\ref{fig:lifecycle}.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_constraint_lifecycle.pdf}
+\caption{The Five-Dimensional Constraint Lifecycle Framework (Schema v4). Tracking domain physical constraints from their mathematical origin ($\mathcal{D}_1$) through computational graph formulation ($\mathcal{D}_2$), operational telemetry dependency ($\mathcal{D}_3$), software implementation parity ($\mathcal{D}_4$), and empirical safety/ablation reporting ($\mathcal{D}_5$).}
+\label{fig:lifecycle}
+\end{figure*}
+
+\subsection{Operational Definitions of the Five Lifecycle Dimensions}
+Schema v4 characterizes each audited constraint architecture through five orthogonal lifecycle dimensions:
+
+\paragraph{Dimension 1: Parameter Provenance ($\mathcal{D}_1$)}
+Parameter provenance identifies the epistemic origin and empirical calibration of the numerical values governing a constraint:
+\begin{itemize}[leftmargin=1.5em,itemsep=1pt,topsep=2pt]
+\item \textit{Intrinsic constraints}: parameters derive analytically from governing physical invariants, manufacturer nameplate limits, or classical equations without empirical fitting (e.g., the Betz limit $C_p \le 16/27$ or kinematic wake equations).
+\item \textit{Historical-static priors}: parameters or reference distributions are estimated offline from historical SCADA archives and held fixed during inference (e.g., empirical power curves fitted via kernel density estimation).
+\item \textit{Learned-online constraints}: parameters adapt dynamically during test-time inference via an auxiliary neural subnetwork.
+\end{itemize}
+When a study omits calibration details, it is designated as \textit{unreported}. Distinguishing provenance is critical: static empirical priors implicitly assume aerodynamic stationarity, risking silent miscalibration under turbine aging or curtailment.
+
+\paragraph{Dimension 2: Application Stage ($\mathcal{D}_2$)}
+This dimension identifies the computational point where domain physics enters the learning pipeline:
+(1)~\textit{training-loss regularization}, where physics acts as a differentiable penalty appended to the loss objective ($\mathcal{L} = \mathcal{L}_{\text{task}} + \lambda \mathcal{L}_{\text{phys}}$);
+(2)~\textit{inference-architecture constraints}, which modify the computational graph to project outputs onto feasible manifolds;
+(3)~\textit{data-generation priors}, used upstream to synthesize or augment training sequences; and
+(4)~\textit{post-hoc correction filters}, applied as external mathematical projections after neural inference.
+
+\paragraph{Dimension 3: Inference Telemetry Requirements ($\mathcal{D}_3$)}
+Inference telemetry identifies external data streams required to evaluate constraints during real-time deployment:
+(1)~\textit{none}, relying solely on target turbine historical power series;
+(2)~\textit{forecast-input}, strictly mandating future meteorological inputs (e.g., forward numerical weather prediction wind vectors); and
+(3)~\textit{contemporaneous-state}, requiring synchronized, zero-latency measurements from adjacent turbines or met masts.
+Classification as $\mathcal{D}_3 = \texttt{none}$ indicates that the base forecasting model requires no external runtime telemetry streams (such as real-time meteorological feeds or forward NWP data). When test-time physical constraint evaluation relies on external meteorological proxies (such as querying an empirical power curve or joint distribution prior with wind speed), operators lacking forward NWP or zero-latency SCADA feeds must either omit the constraint or substitute lagged historical observations. Observation staleness is therefore an operational hazard specific to proxy-dependent constraint architectures under telemetry delays, rather than an automatic attribute of $\mathcal{D}_3 = \texttt{none}$ models.
+
+\paragraph{Dimension 4: Implementation Fidelity ($\mathcal{D}_4$)}
+Implementation fidelity evaluates whether public software faithfully executes the published mathematical formulations. Codebases are classified as:
+(1)~\textit{verified-aligned}, where public source code matches published equations;
+(2)~\textit{code-mismatch}, where code exhibits an algebraic or directional deviation from the text; and
+(3)~\textit{not-found}, where no public repository or script accompanies the paper.
+Mathematical typesetting often conceals divergence in numerical execution, making independent software auditing essential.
+
+\paragraph{Dimension 5: Harm Reporting and Ablation Semantics ($\mathcal{D}_5$)}
+This dimension examines whether evaluations causally isolate physical constraints and report operational failure boundaries. Evaluation protocols are categorized into:
+(1)~\textit{strict-isolation}, where treatment and baseline share identical parameter capacity, differing only in the activation of the physical prior ($\lambda=0$ vs.\ $\lambda>0$);
+(2)~\textit{module-ablation}, where the ablation excises an entire multi-parameter neural block, confounding structural capacity with domain knowledge;
+(3)~\textit{both}, reporting both isolated toggles and architectural excisions; and
+(4)~\textit{harm-reported}, explicitly documenting operating regimes where constraints degrade performance.
+
+\subsection{Methodological Principles for Schema Disambiguation}
+To ensure reproducible coding across independent raters, Schema v4 enforces four disambiguation rules. Parameter provenance ($\mathcal{D}_1$) separates offline calibration from runtime telemetry ($\mathcal{D}_3$), ensuring that historical estimation methods are not conflated with active SCADA stream dependencies. Application stage ($\mathcal{D}_2$) is determined by the backpropagation path: loss regularizers update network weights through objective penalties during training, whereas inference-architecture modifications constrain the forward computational graph directly under arbitrary parameter states. For composite methodologies that incorporate secondary constraints alongside structural modifications (e.g., both graph topology and auxiliary loss penalties), the primary classification is determined by the structural constraint directly modifying the forward computational graph, with secondary mechanisms logged in the qualitative audit ledger. Causal ablation validity ($\mathcal{D}_5$) requires parameter-matched controls; excising multi-layer neural submodules evaluates overall architectural capacity rather than the specific inductive contribution of the physical prior.
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\04_protocol.tex
+\section{Scoping Audit Protocol and Empirical Test Bench}
+\label{sec:protocol}
+
+We conducted an empirical scoping audit in accordance with the PRISMA Extension for Scoping Reviews (PRISMA-ScR) guidelines \cite{tricco2018} and established scoping methodology \cite{levac2010}. The audit protocol was specified prior to full-text extraction to govern retrieval strings, eligibility thresholds, multi-pass screening, and inter-rater deduplication.
+
+\subsection{Information Sources and Retrieval Strategy}
+We retrieved candidate literature across two complementary discovery channels covering January 1, 2023, through March 1, 2026, with rolling monitoring through July 2026 for emergent preprints. First, we conducted programmatic searches via the OpenAlex API, which indexes records across IEEE Xplore, ScienceDirect, SpringerLink, Wiley, and MDPI. Using four targeted title queries---$Q_1$ (\texttt{"physics-constrained" AND "wind"}), $Q_2$ (\texttt{"physics-informed" AND "wind power"}), $Q_3$ (\texttt{"physics-guided" AND "wind"}), and $Q_4$ (\texttt{"physics-embedded" AND "wind power"})---we identified 72 candidate records. Second, we conducted targeted searches on Google Scholar, arXiv, and preprint servers to capture early-access journal articles and working papers, yielding 17 additional records ($N=89$ total). Candidate records were cross-checked against Scopus and IEEE Xplore to verify coverage of major power systems and AI venues. All search strings, raw records, and exclusion criteria are documented in our open supplementary ledger. Furthermore, a targeted sensitivity search expanding retrieval to title, abstract, and author keywords across Scopus and IEEE Xplore (encompassing broader descriptors such as \texttt{"knowledge-guided"}, \texttt{"hybrid"}, and \texttt{"domain-informed"}) identified 14 additional papers. Full-text review confirmed that none documented an operational failure boundary or negative trade-off, specifically verifying that the 0.0\% negative-harm prevalence finding is robust to broader search scope. We note that this targeted 14-study query served strictly to stress-test negative trade-off reporting; exhaustive five-dimensional extraction ($\mathcal{D}_1$--$\mathcal{D}_5$) and inter-rater reliability coding were conducted on the core PRISMA-ScR scoping cohort of 46 studies.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{prisma_flow_diagram.pdf}
+\caption{PRISMA-ScR Flow Diagram Illustrating the Scoping Corpus Derivation ($89 \rightarrow 72 \rightarrow 53 \rightarrow 48 \rightarrow 46$). Deduplication merged 5 preprint/journal pairs, while full-text eligibility screening excluded 2 studies, leaving 46 eligible full-text studies.}
+\label{fig:prisma_flow}
+\end{figure}
+
+\subsection{Screening, Deduplication, and Eligibility Criteria}
+Candidate records underwent structured multi-phase screening following the PRISMA-ScR workflow (Figure~\ref{fig:prisma_flow}). Cross-source deduplication first eliminated 17 duplicate records from the initial 89 items, leaving 72 unique entries for title and abstract evaluation. Screening at this stage excluded 19 records with documented rationale: nine addressed non-forecasting tasks such as turbine structural health monitoring, blade crack detection, or aeroelastic fatigue modeling; nine focused on real-time blade pitch or active power control rather than multi-step power forecasting; and one contained no physics-based modeling components. This filtering yielded 53 included candidate studies sought for full-text retrieval.
+
+Because authors frequently release preliminary working papers on preprint servers (such as arXiv or SSRN) prior to formal journal publication, treating preprints and published articles independently would artificially inflate corpus statistics. We enforced a strict study-level deduplication rule: whenever a preprint and a peer-reviewed journal paper shared identical authorship, empirical datasets, and mathematical formulations, they were merged into a single study-level record retaining the peer-reviewed journal citation. Five paired duplicate sets were identified and consolidated (e.g., \textit{Applied Energy} 2025 paired with SSRN 2024, and \textit{Electric Power Systems Research} 2026 paired with SSRN 2026), reducing the candidate cohort from 53 to 48 unique study-level entries.
+
+The remaining 48 full texts were independently evaluated against three explicit scoping eligibility criteria: (1) primary focus on short-term or ultra-short-term wind power forecasting; (2) mathematical formulation and computational execution of an explicit physical constraint, governing equation, or domain envelope; and (3) empirical validation on real-world or simulated wind power generation time series. Two studies failed to meet these criteria: study S26 was excluded because it forecasted atmospheric wind velocity exclusively without an explicit turbine power constraint, while study S42 was excluded because it implemented heuristic feature clustering without domain physical equations. This systematic filtering established our final representative scoping corpus of \textbf{$N=46$ unique scoping studies}, comprising 38 peer-reviewed journal articles and eight representative preprints (including UniWind \cite{s27_uniwind2026}).
+
+\subsection{Multi-Rater Reliability Benchmarking}
+To assess the empirical stability of the Schema v4 taxonomy before full ledger extraction, three independent raters (Coder A, Coder B, and Coder C) double-blindly coded a stratified representative subset of 20 candidate studies across all five dimensions. The pilot benchmarking achieved substantial to perfect inter-rater concordance across taxonomy facets. Study eligibility screening achieved unanimous consensus (Fleiss $\kappa = 1.000$), correctly isolating negative controls S26 and S42. Parameter provenance ($\mathcal{D}_1$) demonstrated perfect agreement ($\kappa = 1.000$ across both total and included corpora), while application stage ($\mathcal{D}_2$) yielded near-perfect agreement ($\kappa = 0.950$ overall, $\kappa = 0.938$ on included studies). Inference telemetry requirements ($\mathcal{D}_3$) achieved substantial agreement ($\kappa = 0.743$ overall, $\kappa = 0.646$ on included studies).
+
+In contrast, implementation fidelity ($\mathcal{D}_4$) exhibited moderate concordance prior to consensus arbitration ($\kappa = 0.716$ overall in the stratified $N=20$ pilot with negative controls, but $\kappa = 0.341$ when evaluated strictly on included studies). This reduction reflects the classical prevalence paradox described by Feinstein and Cicchetti: because 92.6\% of candidate studies omitted public code, expected chance agreement $P_e$ was high ($86.1\%$), which depresses Fleiss' $\kappa$ despite a raw observed agreement of $P_o = 90.7\%$. Evaluating static manuscripts without code repositories leaves coders to interpret ambiguous narrative descriptions regarding whether a constraint represents an active computational component or conceptual motivation. This divergence indicates that software implementation fidelity cannot be reliably inferred from published prose alone, motivating direct computational graph inspection. For ablation semantics ($\mathcal{D}_5$), raters achieved strong concordance ($\kappa = 0.851$ overall, $\kappa = 0.818$ on included studies). On harm reporting, all three raters unanimously coded zero instances of harm documentation across the 18 included studies ($0/18$); because marginal variance was zero ($P_e = 1.0$), Cohen's $\kappa$ is mathematically indeterminate ($0/0$) and is formally reported as 100\% observed agreement ($P_o = 1.000$). Following pilot calibration and consensus arbitration, full-text extraction across the complete 46-study corpus was conducted under Schema v4 at the study level (coding each study's primary operational constraint mechanism alongside verbatim textual citations and equation coordinates), with primary extraction executed by J.L. and cross-verification of key quantitative parameters conducted by J.D.
+
+\subsection{Software Audit Protocol (PCT \& PINN-UQ)}
+The code availability audit followed a standardized five-step software search protocol examining full-text bodies, footnotes, data availability statements, publisher repositories, and author profiles. Across the 46-study corpus, only two publicly accessible software repositories were identified. One repository, PINN-UQ (S10, \textit{Engineering Applications of Artificial Intelligence} 2025), was audited and verified to faithfully implement its specified algebraic power equations ($P = g T \omega$ and $P = \frac{1}{2} C_p \rho A v^3$ via \texttt{sn.Tie}); its computational graph strictly executes the published algebraic electromechanical relationships without unstated differential substitutions, earning classification as \textit{verified-aligned}. The remaining repository, the Physics-Constrained Transformer (PCT, S02, \textit{Scientific Reports} 2026), provided open PyTorch scripts (\texttt{train\_clean.py} and \texttt{tst/loss.py}) which we audited line-by-line for parity between published loss formulations and computational graph execution, as detailed in Section~\ref{sec:code_audit}.
+
+\subsection{Downstream Operational Dispatch and Settlement Test Bench}
+To ground the empirical audit in real-world power system operations across diverse meteorological and topographic terrains, we established an operational dispatch test bench across three commercial UK wind farms with 10-minute SCADA telemetry. The \textit{Hill of Towie Wind Farm} (48.3~MW rated capacity, 21 Siemens SWT-2.3-82 turbines) features complex upland terrain and serves as an independent spatiotemporal extrapolation benchmark (7,599 test origins, 45,594 delivery steps across full-year 2017), with data released by RES on behalf of TRIG openly available on Zenodo under CC-BY-4.0 \cite{zenodo_hilloftowie}. The \textit{Kelmarsh Wind Farm} (12.3~MW rated capacity, six Senvion MM92 turbines) is situated in flat agricultural terrain and serves as our primary development benchmark (8,212 test origins, 49,272 delivery steps across full-year 2017) \cite{zenodo_kelmarsh}. The \textit{Penmanshiel Wind Farm} (28.7~MW rated capacity, 14 Senvion MM82 turbines, WT01--WT15 with WT03 absent) is located in the Scottish Borders \cite{zenodo_penmanshiel}, providing an independent upland setting with 8,440 test origins configured with a deliberately restricted training partition ($N_{\text{train}} = 1,583$) to evaluate model behavior under sample-restricted regimes. We note that because Penmanshiel exhibits distinct turbine models and terrain compared to Kelmarsh and Hill of Towie, cross-site comparisons inherently capture both site-specific topography and sample size differences; within-site controlled ablations remain essential to decouple these factors.
+
+The empirical test bench operates under a prospective, frozen evaluation protocol. The forecasting pipeline adopts an input lookback of $L=36$ (6 hours) and a forecast horizon of $H=36$ (6 hours), with downstream economic dispatch evaluated over the next-hour delivery window $H_{\text{disp}} = \{1, \dots, 6\}$ and an origination stride of $S=6$ steps to prevent overlapping settlement intervals. The core model suite spans unconstrained DLinear, Bounds-Constrained DLinear ($\lambda=0.01$), Empirical Power Curve Constrained DLinear ($\lambda=0.01$), and Conditional Distribution Prior DLinear ($\lambda=0.01$), benchmarked alongside classical Ridge regression and Persistence baselines across five random initialization seeds. To verify whether empirical findings extend beyond linear representations, we additionally evaluate a state-of-the-art multi-patch channel-independent Transformer backbone (\textbf{PatchTST} \cite{nie2023patchtst}, patch length 6, stride 4, $d_{\text{model}}=64$, 2-layer encoder with RevIN) across all three wind farms, four constraint classes, and five random seeds (60 trained models) as an architectural sensitivity baseline under univariate power input and fixed regularization ($\lambda=0.01$).
+
+Downstream decision calibration is implemented via a post-hoc quantile offset $\delta_h$ frozen strictly from the independent 2016 calibration year ($q = 1/(r+1) = 1/3$ for penalty ratio $r=2$) with zero access to 2017 test telemetry or market prices. Real-world physical settlement is evaluated against official 2017 UK Elexon BSC System Buy Prices (mean \pounds 44.27/MWh, peak \pounds 1,509.80/MWh, with 68 negative price periods down to -\pounds 73.15/MWh). Cashflows account for 30-minute physical netting:
+\begin{equation}
+E_{SP} = \sum_{t \in SP} (p_t - y_t) \cdot \frac{P_{\text{rated}}}{6000} \quad [\text{MWh}],
+\label{eq:bsc_netting}
+\end{equation}
+generating single-sided shortfall cashouts and two-sided imbalance-settlement cashflows as a decision-risk diagnostic, validated via 2,000-replication 7-day circular block paired bootstrapping.
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\05_results.tex
+\section{Empirical Audit Results}
+\label{sec:results}
+
+Empirical evaluation across the 46-study scoping corpus and three multi-farm prospective ablation benches adjudicates the operational claims of physics-constrained wind forecasting.
+
+\subsection{Systematic Absence of Operational Failure Boundaries across Audited Studies}
+Across the core 46-study scoping cohort, 0/46 studies reported operational harm or negative trade-offs (0.0\%; 95\% Wilson CI: [0.0\%, 7.7\%]). A targeted 14-study sensitivity query expanding search terms to title/abstract/keywords across Scopus and IEEE Xplore likewise identified zero negative trade-off reports. Only three studies in the core cohort (6.5\%; S01, S02, S10) evaluate sensitivity to prior parameter perturbations; the remaining 43 studies (93.5\%) test physical constraints exclusively under nominal design conditions. Restricting evaluations to nominal conditions obscures operational boundaries and replaces empirical engineering trade-offs with uniform enhancement claims.
+
+\subsection{Severe Code Unavailability Impedes Independent Verification}
+Software availability inspection across the 46-study cohort establishes an open-code deficit of 95.7\% (44/46, 95\% Wilson CI: [85.5\%, 98.8\%], $\mathcal{D}_4 = \texttt{not-found}$), with 44 studies providing neither repository links nor execution scripts. Among the two repositories with public code, PINN-UQ (S10) faithfully executes its published electromechanical equations ($\mathcal{D}_4 = \texttt{code-aligned}$, 2.2\%), whereas PCT (S02) exhibits a directional implementation divergence from its published mathematical specification ($\mathcal{D}_4 = \texttt{divergent-code}$, 2.2\%). Independent computational verification is therefore precluded for 95.7\% of the cohort, while public codebases exhibit mixed implementation fidelity.
+
+\subsection{Taxonomic Lifecycle Distribution and Structural Confounding in Reported Ablations}
+Ablation semantic audit ($\mathcal{D}_5$) reveals that half of the audited studies (50.0\%, 23/46, 95\% Wilson CI: [36.1\%, 63.9\%]) conflate neural capacity with domain physical priors by excising entire submodules---such as graph convolutions, cross-attention blocks, or decomposition layers---rather than toggling the constraint penalty ($\lambda=0$ vs.\ $\lambda>0$). Because excising architectural blocks removes thousands of trainable parameters simultaneously, reported performance gains reflect representational capacity rather than aerodynamic guidance (Table~\ref{tab:lifecycle_distribution}, Figure~\ref{fig:audit_distribution}). These code-deficit (95.7\%) and confounded-ablation (50.0\%) estimates describe the audited 46-study cohort under Wilson confidence bounds without asserting universal extrapolation to unbounded keyword taxonomies.
+
+\input{tables/table1_lifecycle_distribution.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_field_audit_distribution.pdf}
+\caption{Empirical Lifecycle Distributions across 46 Audited Studies ($N=46$). (a) $\mathcal{D}_1$ Parameter Provenance; (b) $\mathcal{D}_2$ Application Stage; (c) $\mathcal{D}_3$ Inference Telemetry Requirements; (d) $\mathcal{D}_5$ Ablation Semantic Breakdown between strict physical isolation and confounded module ablations.}
+\label{fig:audit_distribution}
+\end{figure*}
+
+\subsection{Causal Disentanglement: Prior Misspecification, Numerical Regularization, and Observation Staleness}
+Prospective 3D controlled ablations across three operational wind farms isolate prior sensitivity, numerical smoothing, and observation staleness under matched model capacities (Table~\ref{tab:controlled_ablation}, Figure~\ref{fig:causal_ablation}).
+
+\input{tables/table2_dynamic_settlement.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_causal_ablation.pdf}
+\caption{Prospective 3D Controlled Ablation Benchmark across Three Operational Wind Farms. (a) High sensitivity to prior misspecification under strong constraints on Penmanshiel ($N_{\text{train}}=1,583$): authentic physical guidance provides statistically significant downside risk protection ($-1.22\%$, $p < 0.001$), whereas disrupting the physical mapping (Pseudo-Scrambled prior) triggers a $+68.1\%$ surge in operational dispatch cost ($p < 0.001$). (b) Low-$\lambda$ numerical regularization mimicry on Kelmarsh ($N=5,098$), where genuine and scrambled priors are statistically indistinguishable ($p=0.231$) at $\lambda \le 0.01$, behaving empirically like non-specific numerical regularization. (c) Monotonic cost inflation under physical proxy observation staleness: dispatch cost escalation across all three farms as physical proxy staleness $\tau$ increases from 1h to 6h. (d) Decoupling of symmetric point error (RMSE) from asymmetric decision risk ($r=2$), demonstrating that point metrics mask tail operational hazards.}
+\label{fig:causal_ablation}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_within_site_learning_curve.pdf}
+\caption{Within-Site Learning Curves across Sample Sizes $N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$ on Kelmarsh and Hill of Towie (5 Seeds, 95\% CIs). Decoupling sample volume from topography confirms that authentic physical priors provide consistently lower dispatch costs across both sites in the tested sample-restricted regime ($N_{\text{train}} \le 1,000$, $-2.00\%$ on Kelmarsh and $-3.62\%$ on Hill of Towie), whereas hypothesis space saturation closes the gap at $N_{\text{train}} = 5,000$. In contrast, misspecified scrambled priors under strong regularization ($\lambda=1.0$) induce severe dispatch cost penalties ($+43\%$ to $+98\%$) across all sample regimes.}
+\label{fig:within_site_learning_curve}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_prior_corruption_gradient.pdf}
+\caption{Continuous Prior Corruption and Engineering Drift Severity Response Curves. (a) Continuous interpolation between authentic and scrambled priors $\alpha \in [0.0, 1.0]$, identifying an empirical fault-tolerance threshold of $\alpha^* \approx 0.07$ on Penmanshiel before physical regularizers worsen unconstrained dispatch costs. (b) Turbine aging aerodynamic derating: capacity loss exceeding 10\% flips nominal physical priors into economic penalties. (c) Anemometer sensor calibration drift: wind speed scaling biases $\beta$ outside $[-5\%, +5\%]$ degrade dispatch performance.}
+\label{fig:corruption_gradient}
+\end{figure*}
+
+Table~\ref{tab:controlled_ablation} and Figure~\ref{fig:causal_ablation} reveal four empirical boundary conditions:
+
+\paragraph{Defensive Inductive Bias and Sensitivity to Prior Misspecification (Figures~\ref{fig:causal_ablation}a, \ref{fig:within_site_learning_curve}, and \ref{fig:corruption_gradient})}
+On Penmanshiel ($N_{\text{train}} = 1,583$), unconstrained DLinear exhibits over-fitting ($0.09881 \pm 0.00027$). Embedding the authentic empirical power curve at $\lambda=1.0$ reduces dispatch cost to $0.09760 \pm 0.00044$ ($-1.22\%$, 95\% bootstrap CI: $[-1.84\%, -0.61\%]$). The scale-matched Pseudo-Scrambled negative control raises it to $0.16611 \pm 0.00335$ ($+68.1\%$, 95\% bootstrap CI: $[+64.2\%, +72.0\%]$, $p < 0.001$). Within-site ablation is essential because cross-site comparisons inevitably conflate sample size with turbine model and terrain. 
+
+To decouple sample volume from topography, we measured within-site learning curves across $N_{\text{train}} \in \{500, 1000, 1500, 3000, 5000\}$ on Kelmarsh and Hill of Towie using five random seeds (Figure~\ref{fig:within_site_learning_curve}). Under severe data scarcity ($N_{\text{train}} = 500$), authentic physical priors consistently lower dispatch costs across both wind farms. On Kelmarsh, dispatch cost falls from $0.09648 \pm 0.00314$ (unconstrained) to $0.09455 \pm 0.00285$ ($-2.00\%$), while scrambled priors surge to $0.13798 \pm 0.02338$ ($+43.0\%$). On Hill of Towie, authentic priors reduce cost from $0.10444 \pm 0.00312$ to $0.10066 \pm 0.00307$ ($-3.62\%$), whereas scrambled priors escalate to $0.17209 \pm 0.01703$ ($+64.8\%$). As training volume expands to $N_{\text{train}} = 5{,}000$, unconstrained DLinear saturates the hypothesis space ($0.08812$ on Kelmarsh and $0.08936$ on Hill of Towie), closing the advantage over genuine physics ($0.08841$ and $0.09091$, respectively). In contrast, scrambled priors remain severely detrimental ($+43\%$ to $+98\%$) across all sample sizes. These findings demonstrate that neural forecasters are acutely sensitive to prior misspecification, while authentic physical prior benefits concentrate under data-scarce regimes in our tested configurations.
+
+Evaluating continuous corruption levels $\alpha \in [0.0, 1.0]$ demonstrates that prior failure is not an artifact of total binary permutation (Figure~\ref{fig:corruption_gradient}a). On Penmanshiel, dispatch cost degrades monotonically with corruption, crossing the unconstrained baseline at a narrow fault-tolerance threshold of $\alpha^* \approx 0.07$ (at $\alpha=0.2$, dispatch cost reaches $0.10469 \pm 0.00338$, a $+5.9\%$ degradation). Similarly, evaluating engineering drift reveals that aerodynamic aging exceeding $10\%$ rated capacity derating (Figure~\ref{fig:corruption_gradient}b) or anemometer sensor calibration bias outside $[-5\%, +5\%]$ (Figure~\ref{fig:corruption_gradient}c) turns the nominal physical constraint from a defensive asset into an economic liability.
+
+\paragraph{Low-$\lambda$ Numerical Regularization Mimicry (Figure~\ref{fig:causal_ablation}b)}
+At $\lambda = 0.01$, genuine physical priors and pseudo-scrambled controls are statistically indistinguishable on Kelmarsh ($p = 0.231$; authentic $0.08810 \pm 0.00009$ vs.\ scrambled $0.08801 \pm 0.00008$). Random power curve permutations produce outcomes identical to domain aerodynamics at this penalty scale, indicating that marginal literature improvements reported under weak penalties reflect non-specific numerical smoothing rather than physical reasoning.
+
+\paragraph{Monotonic Cost Inflation under Physical Proxy Observation Staleness (Figure~\ref{fig:causal_ablation}c)}
+Parametric scanning of wind speed proxy staleness $k \in \{6, 12, 18, 36\}$ (1\,h to 6\,h operational delay) produces strictly monotonic cost inflation across all three farms (Hill of Towie: from $0.09022$ at $k=6$ to $0.09257$ at $k=36$, exceeding unconstrained $0.08924$). This degradation curve selectively impacts constraint formulations whose test-time evaluation relies on external meteorological proxies (e.g., querying power curve priors with contemporaneous wind speed). While 82.6\% of audited studies classify as $\mathcal{D}_3 = \texttt{none}$ because their base neural architectures require no forward NWP feeds, proxy-dependent constraints evaluated in environments lacking synchronized SCADA or forward NWP data force operators to either discard the physical prior or substitute lagged historical observations. The resulting temporal proxy mismatch inflates dispatch costs, establishing proxy staleness as an operational risk specific to proxy-dependent constraint implementations.
+
+\paragraph{Information-Symmetric Feature Baseline}
+Providing the unconstrained model with contemporaneous wind speed (\textit{Dual-Channel DLinear}) reduces point forecast RMSE (from $0.1717$ to $0.1697$ on Kelmarsh) but raises tail dispatch risk ($0.08910$ vs.\ $0.08812$), because unhedged wind speed fluctuations inflate bidding variance.
+
+\subsubsection{Primary Inferential Contrasts and Statistical Significance via Block Bootstrap}
+To control for multiplicity and avoid selective reporting across multiple operational dimensions, our evaluation pipeline specifies three \textbf{primary inferential contrasts} evaluated via circular block paired bootstrapping (2,000 replications, 7-day block length preserving temporal autocorrelation):
+(1)~\textit{Genuine Physical Prior vs.\ Unconstrained Baseline under sample restriction} ($N_{\text{train}}=1{,}583$ on Penmanshiel), securing statistically significant downside risk protection ($\Delta = -1.22\%$, 95\% CI: $[-1.84\%, -0.61\%]$, $p < 0.001$);
+(2)~\textit{Scrambled Prior vs.\ Unconstrained Baseline under strong regularization} ($\lambda=1.0$), demonstrating catastrophic misspecification vulnerability ($\Delta = +68.1\%$, 95\% CI: $[+64.2\%, +72.0\%]$, $p < 0.001$); and
+(3)~\textit{Genuine vs.\ Scrambled Prior under weak regularization} ($\lambda=0.01$), confirming statistical equivalence to non-specific numerical smoothing ($p = 0.231$, 95\% CI: $[-0.00025, +0.00043]$).
+Subsequent parametric staleness delays and multi-site distribution regularization comparisons (Table~\ref{tab:paired_bootstrap}) represent prospective exploratory sensitivity scans, confirming that dynamic cost divergences under distribution constraints on Hill of Towie ($\Delta \text{Cost}_{\text{dyn}} = +0.000766$, 95\% CI: $[+0.000277, +0.001201]$, $p < 0.01$) and Kelmarsh ($+0.000932$, 95\% CI: $[+0.000423, +0.001385]$, $p < 0.01$) remain robust beyond temporal autocorrelation thresholds. Methodologically, our evaluation protocol explicitly separates two distinct sources of variation: the block bootstrap confidence intervals estimate \textbf{temporal sampling uncertainty} across the full-year delivery period under persistent meteorological autocorrelation, whereas the reported metric margins ($\text{mean} \pm \text{std}$) across five random seeds characterize \textbf{model initialization and optimization variability}.
+
+\input{tables/table3_paired_bootstrap.tex}
+
+\subsection{Decoupled Decision Risk and Single-Settlement Imbalance Diagnostic (The Zero-Bid Anomaly)}
+Evaluating forecasters on isolated unhedged balancing market cashflows introduces a structural evaluation artifact: under 2017 UK BSC 30-minute netting, a degenerate Zero-Bid baseline ($\hat{y} \equiv 0$) extracts \pounds 223k to \pounds 243k per turbine-year in apparent cashflow without generating forecasts (Table~\ref{tab:zero_bid_diagnostic}, Figure~\ref{fig:market_decoupling}). This operational analysis serves as a \textit{decision-risk and imbalance-settlement diagnostic} rather than a full commercial market valuation, exposing metric pathologies in downstream evaluation claims.
+
+\input{tables/table4_zero_bid_diagnostic.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_market_decoupling.pdf}
+\caption{Market Settlement Decoupling and Metric Inversion Diagnostic under UK BSC Netting. (a) Reductio ad absurdum: the degenerate zero-bid settlement anomaly ($\hat{y} \equiv 0$) incurs zero shortfall penalty and extracts over \pounds 220k/turb$\cdot$yr in apparent cashflow without generating forecasts, exposing single-settlement cashflow as an unhedged evaluation trap. (b) Empirical metric inversion on Hill of Towie, where distribution constraints increase nominal balancing cashflow by $+42.5\%$ while concurrently degrading genuine decision risk by $+6.5\%$ and RMSE by $+3.5\%$.}
+\label{fig:market_decoupling}
+\end{figure*}
+
+Table~\ref{tab:zero_bid_diagnostic} and Figure~\ref{fig:market_decoupling} uncover two fundamental evaluation pitfalls:
+
+\paragraph{Degenerate Zero-Bid Settlement Anomaly and Two-Settlement Market Formulation (Figure~\ref{fig:market_decoupling}a)}
+A degenerate forecaster bidding zero in every settlement period incurs \textbf{\pounds 0.00 shortfall penalty} and collects an apparent balancing cashflow of \textbf{+\pounds 223k to +\pounds 243k per turbine-year} across all three wind farms. In standard two-settlement wholesale electricity markets \cite{pinson2007trading}, total commercial revenue couples forward commitments with real-time imbalance settlement:
+\begin{equation}
+R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q),
+\label{eq:two_settlement}
+\end{equation}
+where $q$ denotes the declared day-ahead forward commitment, $P_{\text{DA}}$ is the day-ahead clearing price, $y$ is actual physical generation volume, and $P_{\text{imb}}$ is the real-time imbalance settlement price (under the single-price settlement regime post-P305 in the UK BSC, $P_{\text{SBP}} \approx P_{\text{SSP}} = P_{\text{imb}}$). When downstream evaluations isolate balancing cashflows $R_{\text{imb}} = P_{\text{imb}} \cdot (y - q)$ from forward market revenue $P_{\text{DA}} \cdot q$, setting $q \equiv 0$ converts total generation $y$ into uncontracted spill credited at $P_{\text{imb}}$, producing an apparent six-figure revenue while forfeiting forward market receipts. The Zero-Bid baseline acts as an empirical \textit{reductio ad absurdum}: standalone unhedged balancing cashflow is structurally degenerate when disconnected from forward commitments, confirming that unhedged single-settlement accounting cannot serve as an index of forecast quality.
+
+\paragraph{Empirical Metric Inversion on Hill of Towie (Figure~\ref{fig:market_decoupling}b)}
+On Hill of Towie, distribution regularization increases nominal balancing cashflow by $+42.5\%$ (\pounds 8,543 to \pounds 12,174/(turb$\cdot$yr), Table~\ref{tab:zero_bid_diagnostic}) while concurrently degrading normalized decision risk ($\text{Cost}_{\text{static}}$) by \textbf{$+6.5\%$} and RMSE by $+3.5\%$. This divergence demonstrates that single-settlement cashflow is fundamentally decoupled from forecasting skill, establishing that apparent monetary gains originate from negative bias coinciding with positive price spikes rather than physical inductive advantage. Operational evaluation requires decoupling non-negative asymmetric decision risk (Pinball loss) from historical monetary settlement diagnostics.
+
+\subsection{Cross-Backbone Architectural Sensitivity Probe (PatchTST)}
+To assess whether empirical boundary behaviors extend beyond linear representations without asserting universal inductive invariance, we evaluated a state-of-the-art multi-patch channel-independent Transformer (\textbf{PatchTST} \cite{nie2023patchtst}, patch length 6, stride 4, 2-layer encoder with RevIN) across 60 independently trained models (3 farms $\times$ 4 constraint conditions $\times$ 5 seeds; Table~\ref{tab:patchtst_and_rules}). This setup functions strictly as an \textit{architectural sensitivity probe} under fixed nominal regularization ($\lambda=0.01$) matched to the primary development budget, intentionally bounded to qualitative directional verification rather than an exhaustive cross-backbone $\lambda$ grid search.
+
+\input{tables/table5_patchtst_and_rules.tex}
+
+As detailed in Table~\ref{tab:patchtst_and_rules}, PatchTST confirms that distribution priors reduce dynamic shortfall across all three wind farms (saving \pounds 232.44, \pounds 127.49, and \pounds 790.51/(turb$\cdot$yr) on Hill of Towie, Kelmarsh, and Penmanshiel, respectively), indicating that the defensive shortfall reduction observed under DLinear persists in non-linear patch-based representations. However, net balancing cashflow diverges sharply between architectures: distribution regularization decreases net cashflow on Hill of Towie by $-\text{\pounds} 568.68$/(turb$\cdot$yr) under PatchTST, inverting the positive cashflow effect observed under DLinear. On Penmanshiel, simple empirical baselines (Ridge regression at $0.09744$ and Persistence at $0.09586$) outperform all constrained deep networks, demonstrating that external physical penalties cannot uniformly compensate for deep parameter overfitting in low-sample regimes; the high competitiveness of unconstrained linear baselines underscores that deep physics constraints must be rigorously justified by operational risk reduction rather than assumed to outperform simpler models.
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\06_code_audit.tex
+\section{Ablations, Implementation Fidelity, and Diagnostic Case Study}
+\label{sec:code_audit}
+
+Verifying physical constraint claims requires evaluating both the causal isolation of published ablation designs and the algebraic execution fidelity of released computational graphs.
+
+\subsection{Causal Confounding in Published Ablation Studies}
+Deep full-text extraction of all 46 studies revealed that only \textbf{50.0\% (23/46)} performed strict physical constraint isolation, as summarized in Table~\ref{tab:ablation_semantics}.
+
+\input{tables/table4_ablation_semantics.tex}
+
+In 23 of the 46 studies (50.0\%), the ablation experiment consisted of excising an entire neural submodule---such as a spatial Graph Attention block, a cross-attention fusion layer, or a multi-scale decomposition module. When a model exhibits degraded performance after an entire GNN submodule is removed, it is impossible to disentangle whether the degradation stems from the loss of domain physical equations or from the simultaneous removal of thousands of trainable neural parameters and non-linear feature representations. Such module-level ablation designs evaluate the collective capacity of the neural architecture rather than causally isolating the contribution of the physical domain prior.
+
+\subsection{Case Study: The Physics-Constrained Transformer (PCT)}
+\label{sec:pct_case}
+As established in our scoping audit (Section~\ref{sec:protocol}), exactly two of the 46 scoping studies released public software repositories: PINN-UQ \cite{s10_pinnuq2025}, which was verified as strictly code-aligned with its published electromechanical formulations ($\mathcal{D}_4 = \texttt{code-aligned}$, 2.2\%), and the \textbf{Physics-Constrained Transformer (PCT)} \cite{pct2026} (\textit{Scientific Reports} 2026, DOI: 10.1038/s41598-025-34348-x; official GitHub repository commit \texttt{65941ec}). PCT represents the sole publicly accessible training codebase for end-to-end physics-constrained Transformers and the sole audited repository exhibiting an implementation divergence between code and paper ($\mathcal{D}_4 = \texttt{divergent-code}$, 2.2\%). We conducted an in-depth static code audit of this codebase to investigate how statistical distribution constraints are realized in software.
+
+\subsubsection{Paper Mathematical Specification versus Code Execution}
+In Section 2 of the PCT paper, the authors propose regularizing a Transformer forecaster by penalizing the statistical divergence between the empirical joint probability distribution of historical wind speed and turbine power ($P_{\text{ref}}$) and the joint distribution predicted by the model ($P_{\text{pred}}$). The paper explicitly specifies the symmetric \textbf{Jensen--Shannon (JS) divergence}:
+\begin{equation}
+\begin{aligned}
+\mathcal{L}_{\text{JS}}(P_{\text{pred}} \parallel P_{\text{ref}}) &= \frac{1}{2} \text{KL}\left(P_{\text{pred}} \,\Big\|\, \frac{P_{\text{pred}} + P_{\text{ref}}}{2}\right) \\
+&\quad + \frac{1}{2} \text{KL}\left(P_{\text{ref}} \,\Big\|\, \frac{P_{\text{pred}} + P_{\text{ref}}}{2}\right),
+\end{aligned}
+\label{eq:js_divergence}
+\end{equation}
+where $\text{KL}(p \parallel q) = \sum_i p_i \log \frac{p_i}{q_i}$ denotes standard Kullback--Leibler divergence. The paper emphasizes that the symmetry and boundedness of JS divergence ($0 \le \mathcal{L}_{\text{JS}} \le \ln 2$) provide numerical stability and prevent gradient explosion.
+
+However, static AST parsing of the official training script (\texttt{train\_clean.py}, lines 349--352; commit \texttt{65941ec}) traces the loss node to:
+\begin{center}
+\small
+\begin{minipage}{0.95\columnwidth}
+\texttt{loss\_phy = 0.5 * (} \\
+\hspace*{1em}\texttt{F.kl\_div(pred\_kde.log(), m\_kde, ...)} \\
+\hspace*{1em}\texttt{+ F.kl\_div(true\_kde.log(), m\_kde, ...))}
+\end{minipage}
+\end{center}
+In the PyTorch C++ ATen kernel backend (\texttt{native/Loss.cpp}, implementing \texttt{kl\_div\_backward\_cpu}), the functional specification for \texttt{torch.nn.functional.kl\_div(input, target)} evaluates:
+\begin{equation}
+\text{\texttt{kl\_div}}(\text{input}, \text{target}) = \sum_{i} \text{target}_i \cdot \big( \log \text{target}_i - \text{input}_i \big).
+\label{eq:pytorch_kl}
+\end{equation}
+Passing \texttt{input} as $\log p$ and \texttt{target} as $q$ binds the tensor arguments such that the C++ kernel computes:
+\begin{equation}
+\text{\texttt{kl\_div}}(\log p, q) = \sum_{i} q_i \cdot \big( \log q_i - \log p_i \big) = \text{KL}(q \parallel p).
+\label{eq:reverse_kl}
+\end{equation}
+Consequently, the computational graph generated in \texttt{train\_clean.py} executes:
+\begin{equation}
+\begin{aligned}
+\mathcal{L}_{\text{code}} &= \frac{1}{2} \text{KL}\left(M \parallel P_{\text{pred}}\right) + \frac{1}{2} \text{KL}\left(M \parallel P_{\text{ref}}\right), \\
+\text{where } M &= \frac{P_{\text{pred}} + P_{\text{ref}}}{2}.
+\end{aligned}
+\label{eq:reverse_js}
+\end{equation}
+Equation~\eqref{eq:reverse_js} establishes an altered objective, which we refer to hereafter as the \textbf{reverse-argument JS form} (or reverse-argument implementation). The formulation remains symmetric between $P_{\text{pred}}$ and $P_{\text{ref}}$. However, transposing the KL arguments fundamentally alters the underlying gradient mechanics. Because the mixture distribution $M = \frac{1}{2}(P_{\text{pred}} + P_{\text{ref}})$ explicitly depends on $P_{\text{pred}}$ with $\frac{\partial M_i}{\partial P_{\text{pred}, i}} = \frac{1}{2}$, differentiating $\mathcal{L}_{\text{code}}$ directly with respect to the predicted probability mass $P_{\text{pred}, i}$ yields:
+\begin{equation}
+\begin{aligned}
+\frac{\partial \mathcal{L}_{\text{code}}}{\partial P_{\text{pred}, i}} &= \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{pred}, i}} \right] \\
+&\quad + \frac{1}{2} \frac{\partial}{\partial P_{\text{pred}, i}} \left[ M_i \log \frac{M_i}{P_{\text{ref}, i}} \right] \\
+&= \frac{1}{4} \left[ \log \left(\frac{M_i^2}{P_{\text{pred}, i} P_{\text{ref}, i}}\right) + 1 - \frac{P_{\text{ref}, i}}{P_{\text{pred}, i}} \right].
+\end{aligned}
+\label{eq:reverse_js_gradient}
+\end{equation}
+Equation~\eqref{eq:reverse_js_gradient} exposes an analytical \textbf{inverse-density singularity}: whenever the model assigns near-zero probability to a region where empirical training observations exist ($P_{\text{pred}, i} \to 0$ while $P_{\text{ref}, i} > 0$), the ratio $\frac{P_{\text{ref}, i}}{P_{\text{pred}, i}}$ diverges to infinity. Even under machine-precision clamping ($P_{\text{pred}, i} \ge \epsilon$), this term scales as $\mathcal{O}(1/\epsilon)$, generating violent negative gradient surges.
+
+In contrast, for the standard mathematically specified Jensen--Shannon divergence $\mathcal{L}_{\text{JS}}$ in Equation~\eqref{eq:js_divergence}, differentiating with respect to $P_{\text{pred}, i}$ gives:
+\begin{equation}
+\frac{\partial \mathcal{L}_{\text{JS}}}{\partial P_{\text{pred}, i}} = \frac{1}{2} \log \left(\frac{P_{\text{pred}, i}}{M_i}\right).
+\label{eq:standard_js_gradient}
+\end{equation}
+Because $M_i = \frac{1}{2}(P_{\text{pred}, i} + P_{\text{ref}, i}) \ge \frac{1}{2}P_{\text{pred}, i}$, the ratio $\frac{P_{\text{pred}, i}}{M_i} \in [0, 2]$. Consequently, the gradient of Standard-JS is strictly upper-bounded:
+\begin{equation}
+\frac{\partial \mathcal{L}_{\text{JS}}}{\partial P_{\text{pred}, i}} \le \frac{1}{2} \ln 2 \approx 0.3466.
+\end{equation}
+As predicted probabilities approach zero ($P_{\text{pred}, i} \to \epsilon$ with $P_{\text{ref}, i} > 0$), the gradient of Standard-JS exhibits only a mild, integrable \textbf{logarithmic divergence}:
+\begin{equation}
+\left| \frac{\partial \mathcal{L}_{\text{JS}}}{\partial P_{\text{pred}, i}} \right| \sim \mathcal{O}(|\log \epsilon|).
+\end{equation}
+By comparison, the reverse-argument JS form induces an unmitigated first-order \textbf{inverse-density singularity}:
+\begin{equation}
+\left| \frac{\partial \mathcal{L}_{\text{code}}}{\partial P_{\text{pred}, i}} \right| \sim \mathcal{O}(1/\epsilon).
+\end{equation}
+Because the logarithmic divergence of Standard-JS grows slowly ($\lim_{\epsilon \to 0^+} \epsilon \log \epsilon = 0$) and possesses a finite upper bound ($\frac{1}{2}\ln 2$), this logarithmic divergence is substantially milder than the $\mathcal{O}(1/\epsilon)$ inverse-density pole of the reverse-argument JS form and is consistent with the empirically lower gradient norms observed in Figure~\ref{fig:pct_contrast}. Conversely, the $\mathcal{O}(1/\epsilon)$ pole in the reverse-argument form generates unbounded gradient surges near empirical support boundaries. Transposing the divergence arguments thus replaces an integrable regularizer with an ill-conditioned optimization landscape.
+
+\paragraph{Empirical Optimization Contrast: Official Reverse-JS Form vs.\ Corrected Standard-JS}
+To determine whether this implementation divergence materially alters neural training and operational dispatch, we trained models across Kelmarsh and Penmanshiel under five random seeds across $\lambda \in \{0.01, 0.1, 1.0\}$, benchmarked against unconstrained baselines (Figure~\ref{fig:pct_contrast}). The empirical results reveal two structural consequences. First, the reverse-argument JS form induces severe gradient instability: at $\lambda = 1.0$, it produces an average gradient $L_2$ norm of $0.1665 \pm 0.0160$ on Kelmarsh and $0.2465 \pm 0.0217$ on Penmanshiel, representing a $>2.7\times$ amplification over Corrected Standard-JS ($0.0756 \pm 0.0048$ on Kelmarsh and $0.0907 \pm 0.0067$ on Penmanshiel; Figure~\ref{fig:pct_contrast}a). This spike is the exact empirical manifestation of the $-\frac{P_{\text{ref}, i}}{4 P_{\text{pred}, i}}$ derivative singularity ($\mathcal{O}(1/\epsilon)$ in Equation~\eqref{eq:reverse_js_gradient}) as predicted probabilities approach zero near empirical support boundaries. Second, at practical weak regularization ($\lambda = 0.01$ on Penmanshiel), Corrected Standard-JS achieves a dispatch cost of $0.09804 \pm 0.00024$ (outperforming the unconstrained baseline of $0.09864$), whereas the official reverse-argument implementation inflates dispatch cost to $0.09997 \pm 0.00086$ (a $+1.35\%$ premature degradation; Figure~\ref{fig:pct_contrast}b). Correcting the implementation divergence eliminates artificial gradient explosion and prevents premature operational degradation.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_pct_loss_empirical_contrast.pdf}
+\caption{Empirical Contrast between Official Reverse-JS and Corrected Standard-JS across Regularization Scales $\lambda \in [0.01, 1.0]$ on Kelmarsh and Penmanshiel (5 Seeds, 95\% CIs). (a) Mean gradient $L_2$ norm: the reverse-argument JS form induces a $>2.7\times$ gradient norm explosion at $\lambda = 1.0$ due to the $-\frac{P_{\text{ref}, i}}{4 P_{\text{pred}, i}}$ inverse-density singularity ($\mathcal{O}(1/\epsilon)$ in Equation~\eqref{eq:reverse_js_gradient}), whereas for Corrected Standard-JS the signed partial derivative possesses a finite upper bound ($\frac{1}{2}\ln 2$) while exhibiting only mild logarithmic divergence ($\mathcal{O}(|\log \epsilon|)$) as $P_{\text{pred}, i} \to 0$. (b) Operational dispatch cost ($r=2$): Corrected Standard-JS prevents premature performance degradation at low $\lambda$, while the reverse-argument JS form yields higher dispatch cost relative to the unconstrained baseline.}
+\label{fig:pct_contrast}
+\end{figure*}
+
+\subsubsection{Negative Control: Algebraic Equivalence of 2D Product-Kernel KDE}
+We establish an algebraic negative control to verify whether tensor outer-product operations preserve empirical feature coupling. A published conjecture regarding the tensor outer-product:
+\begin{equation}
+G = K_p^\top K_w \in \mathbb{R}^{B_p \times B_w}
+\label{eq:outer_product}
+\end{equation}
+is that it assumes statistical independence between wind speed and turbine power ($p(w, P) = p(w)p(P)$), which would compromise joint density estimation.
+
+Formal algebraic expansion refutes this concern. Let $\{ (P_s, w_s) \}_{s=1}^N$ denote paired empirical observations in a batch. Let $\{b_i^p\}_{i=1}^{B_p}$ and $\{b_j^w\}_{j=1}^{B_w}$ denote 1D evaluation bin centers for power and wind speed, respectively. The 1D Gaussian kernel vectors evaluated in the codebase are:
+\begin{equation}
+\left[K_p\right]_{s,i} = \phi\left( \frac{b_i^p - P_s}{h_p} \right), \quad \left[K_w\right]_{s,j} = \phi\left( \frac{b_j^w - w_s}{h_w} \right),
+\label{eq:kernel_eval}
+\end{equation}
+where $\phi(u) = \frac{1}{\sqrt{2\pi}} e^{-u^2/2}$ is the standard Gaussian kernel, and $h_p, h_w$ denote bandwidths. Expanding the matrix product element at grid coordinate $(i,j)$ yields:
+\begin{equation}
+\begin{aligned}
+\left[ K_p^\top K_w \right]_{i,j} &= \sum_{s=1}^N \left[K_p\right]_{s,i} \cdot \left[K_w\right]_{s,j} \\
+&= \sum_{s=1}^N \phi\left( \frac{b_i^p - P_s}{h_p} \right) \cdot \phi\left( \frac{b_j^w - w_s}{h_w} \right).
+\end{aligned}
+\label{eq:kde_proof}
+\end{equation}
+Equation~\eqref{eq:kde_proof} is the exact analytical definition of a standard \textbf{paired 2D product-kernel Kernel Density Estimator} on correlated bivariate data. Because the summation contracts over concurrent sample index $s$, empirical joint coupling between $P_s$ and $w_s$ is preserved. The algebraic expansion confirms that the outer product executes authentic bivariate density estimation.
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\07_theory.tex
+\section{Prediction-Decision Decoupling Theory and Excess Operational Risk}
+\label{sec:theory}
+
+In this section, we formalize the mathematical mechanism underpinning the empirical inversion and terrain divergence documented in Section~\ref{sec:results}. We derive the exact integral representation of excess operational dispatch risk, decompose it into representation and decision components, and deduce three testable mechanistic insights bounded by formal counterexamples.
+
+\subsection{Operational Problem Formulation}
+Let $X \in \mathcal{X} \subset \mathbb{R}^{L \times D}$ denote historical multivariate telemetry, and let $Y \in [0, 1]$ denote normalized turbine active power output over the target delivery horizon. In operational power system balancing, transmission system operators evaluate bids under asymmetric pinball dispatch penalties \cite{weron2014,zhang2014wind}:
+\begin{equation}
+\ell(p, Y; r) = c_+ \max(p - Y, 0) + c_- \max(Y - p, 0),
+\label{eq:pinball_loss}
+\end{equation}
+where $p \in [0, 1]$ is the declared dispatch commitment, $c_+$ is the shortfall unit penalty (under-generation where declared power exceeds physical delivery, $p > Y$, requiring expensive tertiary reserve activation), $c_-$ is the surplus unit penalty (over-generation, $Y > p$, inducing downward redispatch or curtailment), and $r = c_+ / c_-$ represents the cost asymmetry ratio. Normalizing by $c_-$, the asymmetric operational loss is:
+\begin{equation}
+\mathcal{L}_{\text{disp}}(p, Y) = r \max(p - Y, 0) + \max(Y - p, 0).
+\label{eq:norm_disp_loss}
+\end{equation}
+The expected operational risk under policy $p(X)$ is $\mathcal{R}(p) = \mathbb{E}_{X, Y} [\mathcal{L}_{\text{disp}}(p(X), Y)]$.
+
+\subsection{Proposition 1: Exact Integral Excess Operational Risk}
+Proposition~\ref{prop:excess_risk} formalizes a classical excess risk analytical identity in statistical decision theory and quantile regression, grounded in the foundational formulation of Koenker \cite{koenker2005} and electricity market bidding principles established by Pinson et al. \cite{pinson2007trading}. The unconstrained Bayes-optimal dispatch decision minimizing $\mathcal{R}(p)$ is the conditional quantile:
+\begin{equation}
+q_\tau(X) = F_{Y|X}^{-1}(\tau), \quad \text{where } \tau = \frac{1}{r + 1}.
+\label{eq:bayes_quantile}
+\end{equation}
+For $r=2$, the critical quantile is $\tau = 1/3 \approx 0.333$.
+
+\begin{proposition}[Exact Integral Excess Operational Risk]
+\label{prop:excess_risk}
+For any dispatch decision rule $p(X) \in [0, 1]$, the excess operational risk relative to the Bayes-optimal quantile $q_\tau(X)$ satisfies the exact integral identity:
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) &= (r + 1) \, \mathbb{E}_X \left[ \int_{q_\tau(X)}^{p(X)} \Big( F_{Y|X}(u) - \tau \Big) \, du \right] \\
+&\ge 0,
+\end{aligned}
+\label{eq:exact_integral}
+\end{equation}
+which is non-negative everywhere. Under standard regularity conditions where $F_{Y|X}$ is strictly increasing on its support such that $q_\tau(X)$ is uniquely defined, equality holds if and only if $p(X) = q_\tau(X)$ almost surely.
+\end{proposition}
+
+\begin{proof}
+For a fixed feature vector $X$, the expected conditional loss at commitment $p$ is:
+\begin{equation}
+\mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] = r \int_0^p (p - y) dF(y) + \int_p^1 (y - p) dF(y),
+\end{equation}
+where $F(y) = F_{Y|X}(y)$. Taking the partial derivative with respect to $p$:
+\begin{equation}
+\begin{aligned}
+\frac{\partial}{\partial p} \mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] &= r F(p) - (1 - F(p)) \\
+&= (r + 1) F(p) - 1.
+\end{aligned}
+\end{equation}
+Recalling that $\tau = 1 / (r+1)$, this gradient simplifies to:
+\begin{equation}
+\frac{\partial}{\partial p} \mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] = (r + 1) \Big( F(p) - \tau \Big).
+\end{equation}
+By the Fundamental Theorem of Calculus, integrating the gradient from $q_\tau(X)$ to $p(X)$ yields:
+\begin{equation}
+\begin{aligned}
+&\mathbb{E}[ \mathcal{L}_{\text{disp}}(p, Y) \mid X ] - \mathbb{E}[ \mathcal{L}_{\text{disp}}(q_\tau, Y) \mid X ] \\
+&\quad = (r+1) \int_{q_\tau(X)}^{p(X)} \Big( F(u) - \tau \Big) du.
+\end{aligned}
+\end{equation}
+Because $F(u)$ is monotonically non-decreasing, for any $u > q_\tau(X)$ we have $F(u) \ge \tau$, so the integrand is non-negative; for any $u < q_\tau(X)$ we have $F(u) \le \tau$, and integrating backwards from $q_\tau(X)$ to $p(X)$ also yields a positive integral. Taking the outer expectation over $\mathcal{X}$ completes the proof.
+\end{proof}
+
+\subsection{Two-Stage Decomposition and Decoupled Decision Calibration}
+When $p(X)$ is in the neighborhood of $q_\tau(X)$, expanding $F_{Y|X}(u)$ via a first-order Taylor series around $q_\tau(X)$ yields:
+\begin{equation}
+F_{Y|X}(u) - \tau \approx f_{Y|X}(q_\tau(X)) \cdot (u - q_\tau(X)),
+\end{equation}
+which produces the local quadratic excess risk approximation:
+\begin{equation}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) \approx \frac{r+1}{2} \, \mathbb{E}_X \big[ f_{Y|X}(q_\tau(X)) \cdot ( p(X) - q_\tau(X) )^2 \big].
+\label{eq:quadratic_approx}
+\end{equation}
+
+Now consider the standard two-stage paradigm where a forecaster predicts $f_\theta(X)$ aiming for conditional expectation $\mu(X) = \mathbb{E}[Y \mid X]$, and the dispatch commitment is formed via a scalar quantile offset $\delta$: $p(X) = f_\theta(X) + \delta$. Expressing the prediction error as:
+\begin{equation}
+p(X) - q_\tau(X) = \big( f_\theta(X) - \mu(X) \big) + \big( \delta - \Delta_\tau(X) \big),
+\end{equation}
+where $\Delta_\tau(X) = q_\tau(X) - \mu(X)$ denotes the conditional quantile-mean shift. Under homoscedastic curvature $w_\tau = \frac{r+1}{2} f_{Y|X}(q_\tau)$, substituting into Eq.~\eqref{eq:quadratic_approx} decomposes excess operational risk into three distinct terms:
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(p) - \mathcal{R}(q_\tau) &\approx w_\tau \, \mathbb{E}_X \big[ (f_\theta(X) - \mu(X))^2 \big] \\
+&\quad + w_\tau \, \mathbb{E}_X \big[ (\delta - \Delta_\tau(X))^2 \big] \\
+&\quad + 2 w_\tau \, \mathbb{E}_X \big[ (f_\theta(X) - \mu(X))(\delta - \Delta_\tau(X)) \big],
+\end{aligned}
+\label{eq:three_terms}
+\end{equation}
+where the three terms represent \textbf{Term I} (Representation MSE), \textbf{Term II} (Quantile Mismatch), and \textbf{Term III} (Interaction Component), respectively.
+
+\subsection{Mechanistic Deductions from Decision-Theoretic Decomposition}
+The three-term decomposition in Eq.~\eqref{eq:three_terms} provides a mathematical interpretation for our empirical findings, yielding three deductive mechanistic insights:
+
+\begin{remark}[Mechanistic Deduction 1: Pseudo-Advantage Masking in Uncalibrated Regimes]
+\label{rem:masking}
+In uncalibrated forecasting regimes ($\delta=0$), Term~II ($\Delta_\tau(X)^2$) typically dominates total operational risk. A physics-regularized model with inferior conditional mean accuracy (larger Term~I) can paradoxically exhibit lower empirical dispatch shortfall if its penalty term exerts a downward inductive bias that happens to partially offset the positive quantile-mean gap $\Delta_\tau(X)$, thereby shrinking Term~II. This explains why uncalibrated benchmarks frequently report false-positive physical gains that vanish upon quantile post-processing.
+\end{remark}
+
+\begin{remark}[Mechanistic Deduction 2: Regularization Distortion under Well-Sampled Regimes]
+\label{rem:exposure}
+Optimal quantile calibration ($\delta^* = \arg\min_\delta \hat{\mathcal{R}}(f_\theta + \delta)$) removes the unconditional component of Term~II. In well-sampled regimes where unconstrained models already achieve low conditional mean estimation variance ($\text{Term~I}$), injecting an uncalibrated physical loss penalty acts as a distortive structural bias that inflates Term~I without offering compensating variance reduction, generating the net operational degradation observed under flat open terrain.
+\end{remark}
+
+\begin{remark}[Mechanistic Deduction 3: Inductive Guardrails and Prior Sensitivity under Sample Restriction]
+\label{rem:inductive_guardrails}
+In operating regimes with restricted effective sample size, empirical parameter estimation is ill-posed, predisposing unconstrained models to heightened representational variance (inflating Term~I). Under sufficiently strong penalty weight ($\lambda=1.0$), genuine physical constraints provide inductive guardrails that suppress non-physical parameter excursions, securing robust downside risk reduction. Conversely, when this mapping is misspecified or permuted (as in our scrambled-prior negative control), the rigid penalty enforces counter-physical gradient updates, precipitating severe performance degradation and demonstrating acute vulnerability to prior misspecification under strong regularization.
+\end{remark}
+
+\subsection{Formal Boundary Counterexamples}
+To ensure theoretical precision, we establish two formal boundary counterexamples demonstrating that decoupled calibration dominance is conditional rather than absolute.
+
+Under \textit{Constant Shift Invariance}, if a physical constraint modifies a forecaster purely by a uniform additive shift $f_{\text{phys}}(X) = f_{\text{uncons}}(X) + c$, the subsequent optimal scalar calibration absorbs $c$ completely ($\delta_{\text{phys}}^* = \delta_{\text{uncons}}^* - c$), resulting in identical dispatch decisions and zero excess risk difference ($\Delta \mathcal{R}_{\text{disp}} \equiv 0$) despite an apparent increase in prediction MSE. Under \textit{Spatial Heteroscedasticity} with input-dependent variance $\sigma(X)$, a global scalar calibration fails to compensate for localized variance shifts, allowing an estimator that introduces structural bias and exhibits higher MSE to achieve strictly lower operational risk than the true conditional mean following scalar quantile offset. 
+
+This theoretical framework operationalizes these foundational decision-theoretic identities into a closed-form excess risk decomposition, systematically quantifying their real-world magnitudes across commercial wind farms and verifying their predictions against actual UK Balancing and Settlement Code (BSC) market clearing prices. Complete mathematical proofs for both counterexamples are provided in \ref{sec:appendix_proofs}.
+
+\subsection{Dynamic Price Multiplier Effect and Settlement Decoupling}
+Under real-world market settlement, physical shortfall is scaled by the time-varying System Buy Price $\lambda_t^{\text{SBP}}$. The heavy-tailed price distribution (mean \pounds 44.27/MWh, peak \pounds 1,509.80/MWh) acts as a high-magnitude risk multiplier. When extreme price spikes coincide with wind ramp errors, representation distortion from physical penalties is amplified by up to $34.1\times$, explaining why Kelmarsh incurred an excess shortfall penalty of $+\text{\pounds} 932.56$/(turb$\cdot$yr) in Table~\ref{tab:paired_bootstrap}. However, as demonstrated by the zero-bid settlement diagnostic (Table~\ref{tab:zero_bid_diagnostic}), standalone settlement cashflows cannot measure forecasting value in isolation from forward PPA contracts, necessitating our strict separation between non-negative decision risk and monetary cashflow diagnostics.
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\08_discussion.tex
+\section{Discussion, Boundary Contracts, and Compliance Protocol}
+\label{sec:discussion}
+
+\subsection{Four Empirical Boundary Conditions for Physics-Constrained Models}
+The scoping audit, algebraic code examination, and prospective ablations converge on four boundary conditions that determine when physical priors help, when they are neutral, and when they harm.
+
+\paragraph{Sample Restriction and Prior Misspecification Vulnerability}
+On Penmanshiel ($N_{\text{train}}=1,583$), the calibrated power curve prior at $\lambda=1.0$ reduces asymmetric dispatch cost from $0.09881 \pm 0.00027$ to $0.09760 \pm 0.00044$ ($-1.22\%$). A scale-matched scrambled pseudo-prior raises it to $0.16611 \pm 0.00335$ ($+68.1\%$). The divergence between these two outcomes---authentic priors securing statistically verified downside protection while corrupted priors inflict severe operational damage---demonstrates a fundamental risk-return asymmetry: under strong regularization, whatever information the prior encodes is amplified, including its misspecifications. Cross-site comparisons cannot isolate this effect because they confound site topography with sample volume. In the data-rich regime (Kelmarsh, $N_{\text{train}}=5,098$), unconstrained DLinear ($0.08812$), genuine physics ($0.08791$), and scrambled prior ($0.08801$) are numerically clustered, indicating hypothesis-space saturation.
+
+\paragraph{Low-Penalty Scale and Non-Specific Numerical Regularization}
+At $\lambda = 0.01$ on Kelmarsh, a genuine physical prior ($0.08810 \pm 0.00009$) and a structurally scrambled pseudo-prior ($0.08801 \pm 0.00008$) are statistically indistinguishable ($p = 0.231$). When random power curve permutations reproduce the same outcome as domain aerodynamics, the penalty term behaves empirically as a non-specific regularizer / numerical smoothing term rather than encoding domain physical laws. Published claims of domain physical benefit under $\lambda \in [10^{-4}, 10^{-2}]$ require negative-control ablations and sensitivity testing at $\lambda \ge 0.1$ to be credible.
+
+\paragraph{Monotonic Cost Inflation under Physical Proxy Observation Staleness}
+When physical constraint evaluations require test-time meteorological inputs unavailable in real time, operational implementations frequently substitute lagged historical observations. Our lag scan ($k \in \{6, 12, 18, 36\}$ steps, 1\,h to 6\,h) demonstrates strictly monotonic cost inflation across all three wind farms. On Hill of Towie, dispatch risk climbs from $0.09022$ at $k=6$ to $0.09257$ at $k=36$, exceeding the unconstrained baseline ($0.08924$) at $k \approx 12$. This degradation selectively impacts constraint architectures whose test-time physical evaluation relies on external meteorological proxies (e.g., querying empirical power curves with wind speed). While 82.6\% of audited studies classify as $\mathcal{D}_3 = \texttt{none}$ because their base models mandate no forward NWP, operators deploying proxy-dependent constraints without synchronized SCADA or forward NWP data face a practical trade-off: omitting the physical prior or substituting stale historical telemetry. Observation staleness is therefore an empirical failure mode of proxy-dependent constraint implementations under telemetry latency.
+
+\paragraph{Metric Decoupling and the Zero-Bid Diagnostic}
+Under standard two-settlement market design, total generator revenue is $R_{\text{total}} = P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q)$. Evaluations that drop the forward commitment term and report only balancing cashflow are measuring imbalance rent, not forecast skill. As an analytical imbalance-settlement and decision-risk diagnostic, the degenerate Zero-Bid baseline ($q \equiv 0$) provides a mathematical \textit{reductio ad absurdum}: it extracts £223k--£243k per turbine-year across all three farms without generating forecasts, simply by converting all physical generation into uncontracted spill rewarded at $P_{\text{imb}}$. This confirms that standalone unhedged balancing cashflows are decoupled from forecasting skill, and that assessing full commercial value requires joint modeling of forward contract revenue ($P_{\text{DA}} \cdot q$) and imbalance settlement. Operational evaluations must report asymmetric Pinball loss at the market penalty ratio or full two-settlement P\&L.
+
+\subsection{External Validity Boundaries}
+\label{sec:boundary_contract}
+Five operational boundaries define the validity envelope of our empirical findings:
+
+\paragraph{Boundary 1: Sample Volume and Hypothesis-Space Saturation}
+Within-site learning curves confirm that physical constraint benefits concentrate under data-scarce regimes in our tested configurations ($N_{\text{train}} \le 1,000$, Figure~\ref{fig:within_site_learning_curve}). As training data expands to $N_{\text{train}} = 5{,}000$, hypothesis-space saturation reduces the gap between genuine-prior and unconstrained models to within 0.33\% on Kelmarsh, while scrambled priors remain severely detrimental throughout. Continuous corruption tests further establish a narrow fault-tolerance window ($\alpha^* \approx 0.07$ on Penmanshiel, Figure~\ref{fig:corruption_gradient}). Beyond this threshold, engineering drift exceeding 10\% aerodynamic capacity loss or $\pm 5\%$ anemometer bias flips the nominal physical prior from an asset into an operational liability.
+
+\paragraph{Boundary 2: Telemetry Latency and Proxy Observation Staleness}
+For proxy-dependent physical constraints, benefit holds at $\tau \le 1\,\text{h}$ ($k \le 6$ steps). Beyond this, monotonic cost inflation is observed on all three farms ($+2.6\%$ on Hill of Towie at $k=36$). Evaluations under zero-latency contemporaneous telemetry should not be extrapolated to operational settings that rely on lagged historical proxies.
+
+\paragraph{Boundary 3: Market Clearing and Two-Settlement Structure}
+Economic findings serve as an imbalance-settlement and decision-risk diagnostic bounded by two-settlement markets with asymmetric shortage penalties ($r \ge 1.0$) and UK BSC 30-minute discrete netting. Standalone imbalance cashflows do not represent full commercial value and do not generalize to symmetric single-settlement systems or flat feed-in tariffs.
+
+\paragraph{Boundary 4: Computational Graph Audit and Implementation Parity}
+Software conclusions apply to PCT commit \texttt{65941ec} and the computational graphs audited here. Unreleased proprietary codebases require independent static graph audit before implementation fidelity claims can be admitted.
+
+\paragraph{Boundary 5: Literature Scoping Scope and Architectural Probe Envelopes}
+The systematic literature audit is strictly bounded to the 46 studies identified under our PRISMA-ScR protocol; the documented 95.7\% code deficit and 50.0\% confounded ablation prevalence characterize reporting practices within this scoping cohort rather than an exhaustive census of all hybrid machine learning. Similarly, our PatchTST evaluations function as an architectural sensitivity probe under fixed nominal regularization ($\lambda=0.01$); while demonstrating that qualitative downside risk reduction persists across non-linear deep representations, joint cross-backbone $\lambda$ grid searches remain an open direction for future benchmarking.
+
+\subsection{Two Conjectures Falsified During the Audit}
+Two initial hypotheses were refuted during the empirical audit. First, forensic tensor derivation showed that PCT's product-kernel KDE preserves bivariate coupling algebraically, refuting the conjecture of marginal independence. Second, market diagnostic probing showed that post-calibration cashflow inversions are governed by settlement price asymmetries rather than physical regularizers. Documenting these falsification outcomes provides a transparent account of our investigative trajectory and prevents post-hoc rationalization.
+
+\subsection{REFORMS-PCWPF Compliance Protocol}
+\label{sec:reforms_pcwpf}
+Table~\ref{tab:reforms_checklist} proposes five verification gates as a methodological reporting checklist for physics-constrained wind forecasting studies:
+
+\input{tables/table_reforms_checklist.tex}
+
+\begin{itemize}
+\item \textbf{Gate M1 (Parameter-Isolated Ablations):} Parameter-matched comparisons ($\lambda=0$ vs.\ $\lambda>0$) should be required to isolate physical prior contributions, avoiding submodule excisions (e.g., stripping GNN layers) that conflate representational capacity with domain knowledge.
+\item \textbf{Gate M2 (Pseudo-Scrambled Negative Controls):} A minimum credible evaluation of physical reasoning claims should include scale-matched permutation controls to separate aerodynamic guidance from non-specific numerical smoothing.
+\item \textbf{Gate M3 (Operational Proxy Staleness Stress-Tests):} Multi-step constraint evaluations should avoid assuming zero-latency future weather inputs, reporting performance across $k \in \{6, \dots, 36\}$ steps when forward NWP feeds are absent.
+\item \textbf{Gate M4 (Coupled Two-Settlement Evaluation):} Evaluations should avoid standalone unhedged balancing cashflows, reporting instead asymmetric Pinball loss at the market penalty ratio or coupled two-settlement P\&L ($P_{\text{DA}} \cdot q + P_{\text{imb}} \cdot (y - q)$).
+\item \textbf{Gate M5 (Static Computational Graph Audit):} Reviewers should expect executable training scripts or verified computational graphs, verifying that software loss execution matches published definitions in argument ordering and reduction semantics.
+\end{itemize}
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\09_conclusion.tex
+\section{Conclusion}
+\label{sec:conclusion}
+
+Three findings from this audit challenge the prevailing consensus on physics-constrained wind power forecasting.
+
+Within the audited scoping cohort (46 studies, 2023--2026), not a single publication documents an operational failure regime, negative trade-off, or boundary condition ($0.0\%$). With 95.7\% of the cohort lacking public code and 50.0\% conflating neural module removal with physical ablation, this uniform positive consensus reflects widespread reporting practices and evaluation protocols that fail to stress-test models outside nominal design envelopes.
+
+At the software implementation level, of the two publicly accessible software repositories identified across the 46 studies, PINN-UQ was verified as code-aligned, while PCT---the sole publicly accessible training codebase for end-to-end physics-constrained Transformers---executes its Jensen--Shannon divergence loss with reversed tensor arguments that induce an analytical inverse-density gradient singularity ($\mathcal{O}(1/\epsilon)$), an implementation divergence undetectable from published text alone. Algebraic derivation separately confirms that the paired kernel product remains mathematically sound, establishing that implementation fidelity and formulation validity reside in distinct computational layers.
+
+At the operational deployment level, the economic value of physical constraints depends strictly on sample volume, runtime proxy observation staleness, and market settlement rules. At $N_{\text{train}} = 1{,}583$ and $\lambda = 1.0$, an authentic power curve prior reduces dispatch cost by 1.22\% ($p < 0.001$); a scale-matched scrambled prior raises it by 68.1\% ($p < 0.001$), demonstrating acute sensitivity to prior misspecification under strong regularization. Weak constraints ($\lambda = 0.01$) are statistically indistinguishable from non-specific numerical smoothing ($p = 0.231$), and proxy observation staleness beyond 2\,h ($k > 12$) inflates dispatch costs across all three operational wind farms.
+
+The PCT implementation divergence, the Zero-Bid settlement anomaly, and the scrambled-prior degradation reflect a shared methodological vulnerability: standard evaluation protocols test physics-constrained models without distinguishing physical inductive bias from non-specific numerical smoothing, software execution fidelity from published equations, or forecasting skill from market settlement structures. Auditing constraint provenance, software execution, telemetry latency, and coupled two-settlement cashflows provides the empirical foundation necessary to determine when domain physical priors deliver genuine operational value in power systems.
+
+Physics-constrained architectures offer tangible inductive value under data scarcity, but their operational benefits require rigorous empirical boundaries. Establishing those boundaries demands parameter-isolated ablations, scrambled negative controls, static computational graph verification, and market evaluation protocols that separate forward commitment revenue from imbalance settlement cashflow.
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\10_appendix.tex
+\section{Mathematical Analysis of Decoupled Calibration Boundaries and Counterexamples}
+\label{sec:appendix_proofs}
+
+This appendix provides formal mathematical proofs for the two boundary counterexamples presented in Section~\ref{sec:theory}, delineating the theoretical limits of decoupled decision calibration.
+
+\subsection{Counterexample 1: Constant Shift Invariance and Zero Excess Risk}
+\label{subsec:counterexample1}
+
+\begin{example}[Constant Shift Invariance]
+\label{ex:constant_shift}
+Let the target variable follow a uniform distribution $Y \sim U[0.25, 0.75]$, and consider an asymmetric cost ratio $r = 2$ ($\tau = 1/3$). Suppose an unconstrained model outputs the exact conditional expectation $f_0 = \mathbb{E}[Y] = 0.50$, while a physics-constrained model incurs a constant positive shrinkage shift $c = +0.05$, outputting $f_\lambda = 0.55$.
+\end{example}
+
+\paragraph{Prediction Representation Error (MSE)}
+The mean squared prediction errors are:
+\begin{align}
+\text{MSE}(f_0) &= \text{Var}(Y) = \frac{0.50^2}{12} \approx 0.020833, \\
+\text{MSE}(f_\lambda) &= \text{MSE}(f_0) + c^2 \approx 0.023333.
+\end{align}
+The physical constraint strictly inflates prediction MSE by $\Delta \text{MSE} = +0.0025$ ($+12.0\%$).
+
+\paragraph{Uncalibrated Operational Dispatch Loss}
+Under uncalibrated dispatch ($p = f$), the expected asymmetric loss is:
+\begin{equation}
+\begin{aligned}
+\mathcal{R}_{\text{uncal}}(p) &= 2 \int_{0.25}^p (p - y) \cdot 2 \, dy + \int_p^{0.75} (y - p) \cdot 2 \, dy \\
+&= 2(p - 0.25)^2 + (0.75 - p)^2.
+\end{aligned}
+\end{equation}
+Evaluating at each prediction:
+\begin{align}
+\mathcal{R}_{\text{uncal}}(f_0 = 0.50) &= 2(0.25)^2 + (0.25)^2 = 0.187500, \\
+\mathcal{R}_{\text{uncal}}(f_\lambda = 0.55) &= 2(0.30)^2 + (0.20)^2 = 0.220000.
+\end{align}
+
+\paragraph{Post-Hoc Decoupled Quantile Calibration}
+The theoretical Bayes-optimal quantile at $\tau = 1/3$ is:
+\begin{equation}
+q_{1/3} = 0.25 + \tfrac{1}{3}(0.75 - 0.25) \approx 0.416667.
+\end{equation}
+Under decoupled quantile calibration, each model searches for its optimal scalar displacement:
+\begin{align}
+\delta_0^* &= q_{1/3} - f_0 \approx 0.416667 - 0.500000 = -0.083333, \\
+\delta_\lambda^* &= q_{1/3} - f_\lambda \approx 0.416667 - 0.550000 = -0.133333.
+\end{align}
+Notice that the resulting dispatch commitments are identical:
+\begin{equation}
+p_0^* = f_0 + \delta_0^* = 0.416667, \quad p_\lambda^* = f_\lambda + \delta_\lambda^* = 0.416667.
+\end{equation}
+Consequently, the post-calibration operational risks are identical:
+\begin{equation}
+\mathcal{R}_{\text{cal}}(p_0^*) = \mathcal{R}_{\text{cal}}(p_\lambda^*) = 0.166667 \implies \Delta \mathcal{R}_{\text{disp}} \equiv 0.
+\end{equation}
+
+\paragraph{Theoretical Takeaway}
+Counterexample 1 proves that \textbf{an increase in prediction MSE is compatible with invariant post-calibration operational risk}. When constraint-induced representation error consists of a uniform shift, scalar calibration absorbs the distortion entirely, establishing that strict positive excess risk lower bounds cannot hold unconditionally.
+
+\subsection{Counterexample 2: Spatial Heteroscedasticity and Risk Reversal}
+\label{subsec:counterexample2}
+
+\begin{example}[Spatial Heteroscedasticity]
+\label{ex:heteroscedasticity}
+Let $X \in \{0, 1\}$ be a binary indicator with $P(X=0) = P(X=1) = 0.5$. Let the conditional target distributions exhibit heteroscedastic spread:
+\begin{align}
+Y \mid (X=0) &\sim U[0.20, 0.60] \quad (\mu_0 = 0.40, s_0 = 0.40), \\
+Y \mid (X=1) &\sim U[0.30, 0.90] \quad (\mu_1 = 0.60, s_1 = 0.60).
+\end{align}
+Let the asymmetric cost ratio be $r = 2$ ($\tau = 1/3$). Consider two candidate forecasters: Model A (the unbiased conditional mean) with predictions $f_A(0) = 0.40$ and $f_A(1) = 0.60$; and Model B (a biased estimator with higher MSE) with predictions $f_B(0) = 0.40$ and $f_B(1) = 0.55$.
+\end{example}
+
+\paragraph{Prediction MSE Comparison}
+The mean squared prediction errors are:
+\begin{align}
+\text{MSE}(f_A) &= 0.5 \left(\frac{0.40^2}{12}\right) + 0.5 \left(\frac{0.60^2}{12}\right) \nonumber \\
+&= \frac{13}{600} \approx 0.021667, \\
+\text{MSE}(f_B) &= \text{MSE}(f_A) + 0.5 (0.55 - 0.60)^2 \nonumber \\
+&= 0.021667 + 0.001250 \approx 0.022917.
+\end{align}
+Model B has strictly higher prediction MSE by $\Delta \text{MSE} = +0.001250$ ($+5.8\%$).
+
+\paragraph{Post-Hoc Global Scalar Calibration}
+The local Bayes-optimal quantiles at $\tau = 1/3$ are:
+\begin{align}
+q_{1/3}(0) &= 0.20 + \tfrac{0.40}{3} = \tfrac{1}{3} \approx 0.333333, \\
+q_{1/3}(1) &= 0.30 + \tfrac{0.60}{3} = 0.500000.
+\end{align}
+The Bayes-optimal operational dispatch loss is $\mathcal{R}(q_\tau) = 0.5(\frac{0.40}{3}) + 0.5(\frac{0.60}{3}) = \frac{1}{6} \approx 0.166667$. The local conditional densities are $f_0(y) = 2.5$ and $f_1(y) = 1.6667$.
+
+Because local quantile-to-mean shifts differ ($\Delta_0 = q_{1/3}(0) - \mu_0 = -\frac{1}{15} \approx -0.066667$ versus $\Delta_1 = q_{1/3}(1) - \mu_1 = -0.100000$), a single global scalar offset $\delta^*$ cannot simultaneously achieve both local quantiles. The expected operational risk under global shift $\delta$ is:
+\begin{equation}
+\mathcal{R}(f + \delta) = 0.5 \, \mathcal{R}_0(f(0) + \delta) + 0.5 \, \mathcal{R}_1(f(1) + \delta).
+\end{equation}
+
+For \textbf{Model A} ($f_A = \mu$), the first-order optimality condition for $\delta_A^*$ is:
+\begin{equation}
+(r+1) \left[ 0.5 \cdot 2.5 (\delta_A^* - \Delta_0) + 0.5 \cdot 1.6667 (\delta_A^* - \Delta_1) \right] = 0,
+\end{equation}
+yielding the density-weighted optimal global offset:
+\begin{align}
+\delta_A^* &= \frac{2.5 (-\frac{1}{15}) + 1.6667 (-0.10)}{2.5 + 1.6667} \nonumber \\
+&= \frac{-0.333333}{4.166667} = -0.080000.
+\end{align}
+The resulting excess operational risk for Model A is:
+\begin{align}
+&\mathcal{R}(f_A + \delta_A^*) - \mathcal{R}(q_\tau) \nonumber \\
+&\quad = \frac{3}{2} \Big[ 1.25 (-0.080 + \tfrac{1}{15})^2 \nonumber \\
+&\qquad\quad + 0.8333 (-0.080 + 0.100)^2 \Big] \nonumber \\
+&\quad = \frac{15}{8} \left(-\frac{1}{75}\right)^2 + \frac{5}{4} \left(\frac{1}{50}\right)^2 \nonumber \\
+&\quad = \frac{1}{3000} + \frac{1}{2000} = \frac{1}{1200} \approx 0.000833,
+\end{align}
+giving an absolute operational dispatch risk of:
+\begin{equation}
+\mathcal{R}_{\text{cal}}(f_A + \delta_A^*) = \frac{1}{6} + \frac{1}{1200} = \frac{201}{1200} = 0.167500.
+\end{equation}
+
+For \textbf{Model B} ($f_B(0) = 0.40, f_B(1) = 0.55$), the downward bias occurs on the higher-variance regime ($X=1$). The required local offsets become:
+\begin{align}
+\Delta_{0, B} &= q_{1/3}(0) - 0.40 = -\tfrac{1}{15} \approx -0.066667, \\
+\Delta_{1, B} &= q_{1/3}(1) - 0.55 = 0.50 - 0.55 = -0.050000.
+\end{align}
+Notice that the discrepancy between regime offsets is halved: $|\Delta_{1, B} - \Delta_{0, B}| = \frac{1}{60} \approx 0.016667$, compared to $\frac{1}{30} \approx 0.033333$ for Model A. The optimal global offset for Model B is:
+\begin{align}
+\delta_B^* &= \frac{2.5 (-\frac{1}{15}) + 1.6667 (-0.050)}{2.5 + 1.6667} \nonumber \\
+&= \frac{-0.166667 - 0.083333}{4.166667} = -0.060000.
+\end{align}
+The resulting excess operational risk for Model B is:
+\begin{align}
+&\mathcal{R}(f_B + \delta_B^*) - \mathcal{R}(q_\tau) \nonumber \\
+&\quad = \frac{3}{2} \Big[ 1.25 (-0.060 + \tfrac{1}{15})^2 \nonumber \\
+&\qquad\quad + 0.8333 (-0.060 + 0.050)^2 \Big] \nonumber \\
+&\quad = \frac{15}{8} \left(\frac{1}{150}\right)^2 + \frac{5}{4} \left(-\frac{1}{100}\right)^2 \nonumber \\
+&\quad = \frac{1}{12000} + \frac{1}{8000} = \frac{1}{4800} \approx 0.000208,
+\end{align}
+yielding an absolute operational dispatch risk of:
+\begin{equation}
+\mathcal{R}_{\text{cal}}(f_B + \delta_B^*) = \frac{1}{6} + \frac{1}{4800} = \frac{801}{4800} = 0.166875.
+\end{equation}
+
+Comparing the two post-calibration dispatch losses:
+\begin{equation}
+\mathcal{R}_{\text{cal}}(f_B + \delta_B^*) = 0.166875 < 0.167500 = \mathcal{R}_{\text{cal}}(f_A + \delta_A^*).
+\end{equation}
+Model B achieves a 75\% reduction in excess risk ($0.000208$ vs. $0.000833$) and strictly lower operational dispatch loss than the unbiased conditional mean, despite exhibiting $+5.8\%$ higher prediction MSE.
+
+\paragraph{Theoretical Takeaway}
+Counterexample 2 rigorously proves that \textbf{under conditional heteroscedasticity, a biased predictor with higher MSE can achieve strictly lower post-calibration dispatch loss than the true conditional mean}. This formalizes why the performance of physical constraints under decoupled calibration depends intricately on local error variance and environmental terrain.
+
+
+% SOURCE: 01_论文投稿材料\active_manuscript\sections\11_starmethods.tex
+\section{Open Data, Software Codebases, and Experimental Specifications}
+\label{sec:data_code_spec}
+
+\subsection{Summary of Resources and Infrastructure}
+
+\begin{table*}[!h]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.88}
+\setlength{\tabcolsep}{4pt}
+\caption{Summary of Open Datasets, Audited Software Codebases, and Hardware Infrastructure.}
+\label{tab:key_resources}
+\begin{tabularx}{\textwidth}{p{4.0cm}p{5.5cm}>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Category} & \textbf{Resource / Data Source} & \textbf{Identifier / Access Link} \\
+\midrule
+\multicolumn{3}{l}{\textbf{Commercial Wind Farm Telemetry and Market Clearing Records}} \\
+\midrule
+Kelmarsh Wind Farm 10-min SCADA & Cubico Sustainable Investments / Zenodo & DOI: \href{https://doi.org/10.5281/zenodo.5841834}{10.5281/zenodo.5841834} \\
+Penmanshiel Wind Farm 10-min SCADA & Cubico Sustainable Investments / Zenodo & DOI: \href{https://doi.org/10.5281/zenodo.5946808}{10.5281/zenodo.5946808} \\
+Hill of Towie Wind Farm 10-min SCADA & TRIG / RES / Zenodo (Open Data) & DOI: \href{https://doi.org/10.5281/zenodo.20204946}{10.5281/zenodo.20204946}; Elexon BM Unit: \texttt{T\_HILW-1} \\
+UK Elexon BMRS Market Clearing Prices & Elexon Balancing and Settlement Code & Open Government Licence v3.0 \\
+Systematic Scoping Audit Corpus ($N=46$) & This Paper (Verbatim Extraction Ledger) & Data Repository: \texttt{corpus48\_consensus} \\
+\midrule
+\multicolumn{3}{l}{\textbf{Open-Source Software Implementations and Audit Scripts}} \\
+\midrule
+Python Programming Language (v3.10) & Python Software Foundation & RRID: \href{https://scicrunch.org/resolver/SCR_008394}{SCR\_008394} \\
+PyTorch Deep Learning Library (v2.0+) & PyTorch Foundation & RRID: \href{https://scicrunch.org/resolver/SCR_018536}{SCR\_018536} \\
+Statsmodels (Circular Block Bootstrap) & Statsmodels Developers & RRID: \href{https://scicrunch.org/resolver/SCR_016074}{SCR\_016074} \\
+Scikit-learn (Machine Learning in Python) & Pedregosa et al., 2011 & RRID: \href{https://scicrunch.org/resolver/SCR_002577}{SCR\_002577} \\
+DLinear Baseline Codebase & Zeng et al., AAAI 2023 & GitHub: \texttt{cure-lab/LTSF-Linear} \\
+PatchTST Benchmark Codebase & Nie et al., ICLR 2023 & GitHub: \texttt{yuqinie98/PatchTST} \\
+Audited PCT Codebase & Wang et al., \textit{Sci. Rep.} 2026 & GitHub: \texttt{wind-power-forecasting/PCT} \\
+Audited PINN-UQ Codebase & Xu et al., \textit{Eng. App. AI} 2025 & GitHub: \texttt{xuchen/PINN-UQ} \\
+Full Empirical Audit and Verification Suite & This Paper & GitHub: \href{https://github.com/anonymous-audit/pcwpf-audit}{anonymous-audit/pcwpf-audit} \\
+\midrule
+\multicolumn{3}{l}{\textbf{High-Performance Computing Hardware}} \\
+\midrule
+NVIDIA RTX 4090 Dedicated GPUs ($10\times$) & NVIDIA Corporation & Compute Capability 8.9 (24GB VRAM each) \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{Data and Code Availability}
+Raw operational SCADA telemetry from the Kelmarsh (6 turbines, 12.3~MW, Senvion MM92) and Penmanshiel (14 turbines, 28.7~MW, Senvion MM82) wind farms is openly available on Zenodo under CC-BY 4.0 licenses from Cubico Sustainable Investments (DOIs: \href{https://doi.org/10.5281/zenodo.5841834}{10.5281/zenodo.5841834} and \href{https://doi.org/10.5281/zenodo.5946808}{10.5281/zenodo.5946808}). Operational SCADA telemetry from the Hill of Towie wind farm (21 turbines, 48.3~MW, Siemens SWT-2.3-82) is openly available on Zenodo under CC-BY 4.0 license released by RES on behalf of The Renewables Infrastructure Group (TRIG) (DOI: \href{https://doi.org/10.5281/zenodo.20204946}{10.5281/zenodo.20204946}). Elexon System Buy Price (SBP) and System Sell Price (SSP) records are freely accessible through the Elexon BMRS portal under the UK Open Government Licence v3.0. The complete, reproducible Python verification suite---including computational graph static parsers, 2,000-replication circular block bootstrap scripts, Elexon BSC physical settlement calculators, and figure reproduction scripts---is openly archived at Zenodo and GitHub (\href{https://github.com/anonymous-audit/pcwpf-audit}{\texttt{anonymous-audit/pcwpf-audit}}). The full 46-study scoping extraction database with verbatim textual quotes, equation numbers, and multi-coder Fleiss' $\kappa$ consensus scores is provided as open supplementary data.
+
+Further technical information, trained model weights, or raw inter-rater reliability extraction matrices will be fulfilled by the corresponding author, Junyu Li (\href{mailto:ljylikezmn999@gmail.com}{\texttt{ljylikezmn999@gmail.com}}).
+
+\subsection{Wind Farm Telemetry and Data Sanitation Protocols}
+This computational study utilized field telemetry records from three commercial utility-scale wind farms located across the United Kingdom. The \textbf{Kelmarsh Wind Farm} (Northamptonshire, England) represents flat open inland topography and comprises six Senvion MM92 turbines (rated 2.05~MW each, hub height 78~m, rotor diameter 92~m, farm capacity 12.3~MW), with training observations spanning $N_{\text{train}} = 5,098$ clean 10-minute intervals. The \textbf{Hill of Towie Wind Farm} (Drummuir, Scotland) represents complex upland terrain featuring micro-topographical wake interactions, comprising 21 Siemens SWT-2.3-82 turbines (rated 2.3~MW each, hub height 60~m, rotor diameter 82~m, farm capacity 48.3~MW), evaluated as a full-year independent spatiotemporal extrapolation benchmark with 7,599 forecast origins (45,594 forward settlement half-hours in 2017). The \textbf{Penmanshiel Wind Farm} (Scottish Borders) represents undulating upland terrain comprising 14 Senvion MM82 turbines (rated 2.05~MW each, farm capacity 28.7~MW), configured with a restricted training partition ($N_{\text{train}} = 1,583$ intervals) specifically to evaluate over-fitting and prior inductive bias under sample-restricted regimes (acknowledging that site topography and turbine models co-vary with sample size across wind farms). Standard data sanitation protocols removed periods of turbine curtailment, anemometer icing, and communication maintenance dropouts ($P \le 0$ when $v > v_{\text{cut-in}}$ or active power frozen for $>6$ consecutive steps).
+
+\subsection{Method Details and Statistical Estimation}
+
+\paragraph*{Systematic Scoping Review Protocol (PRISMA-ScR)}
+Literature identification followed a structured protocol specified prior to full-text extraction, executing four Boolean title queries via the OpenAlex API ($Q_1$ through $Q_4$), complemented by manual keyword-directed discovery across Google Scholar, arXiv, and preprint servers for papers published between January 2023 and March 2026 (with rolling monitoring through July 2026), yielding 89 raw candidate records. Two-phase screening (title/abstract followed by full-text extraction) identified our core scoping cohort of 46 contemporary studies (38 peer-reviewed journal articles and 8 preprints, 2023--2026) subjected to exhaustive five-dimensional ($\mathcal{D}_1$--$\mathcal{D}_5$) extraction and inter-rater reliability coding. A targeted sensitivity search expanding retrieval to title, abstract, and author keywords across Scopus and IEEE Xplore (encompassing broader descriptors such as \texttt{"knowledge-guided"}, \texttt{"hybrid"}, and \texttt{"domain-informed"}) retrieved 14 additional candidate papers, with full-text inspection confirming zero instances of documented operational failure boundaries, specifically stress-testing the 0.0\% negative trade-off finding. Code availability and ablation metrics (95.7\% open-code deficit and 50.0\% confounded module ablations) are strictly bounded to the audited 46-study cohort with Wilson confidence intervals. Inter-rater reliability was benchmarked across a representative 20-study pilot by three independent raters (Coders A, B, and C) achieving Fleiss' $\kappa = 0.646\text{--}1.000$ across provenance, stage, and telemetry dimensions.
+
+\paragraph*{Static Code and Computational Graph Audit}
+Software codebases were audited via static AST parsing and line-by-line algebraic comparison against published manuscripts. For PCT (\textit{Sci. Rep.} 2026), the loss definition in \texttt{tst/loss.py} was decompiled into symbolic PyTorch operations, establishing that \texttt{F.kl\_div(p.log(), q)} computes $\sum q_i \log(q_i / p_i) = \text{KL}(q \parallel p)$ instead of the published $\text{KL}(p \parallel q)$. Algebraic tensor expansion of the empirical density kernel $K_p^\top K_w$ verified strict equivalence to a 2D product kernel density estimator.
+
+\paragraph*{10-GPU Prospective Controlled Ablation Testbed}
+Ablation experiments were executed in parallel across 10 dedicated NVIDIA RTX 4090 GPUs. All models were implemented in PyTorch 2.1 under CUDA 12.1. Neural backbones were trained using Adam with initial learning rate $10^{-3}$, cosine annealing schedule, and batch size 64. Regularization weight $\lambda$ was scanned across $\{0.001, 0.01, 0.1, 1.0\}$. For pseudo-scrambled controls, the empirical wind-to-power mapping was permuted along the wind axis using a fixed seed, preserving identical loss formulas, parameter counts, and gradient magnitudes. The observation staleness stress-test evaluates models whose test-time physical constraint evaluation relies on external meteorological proxies (such as wind speed to query power curve priors). This is distinguished from the taxonomy finding that 82.6\% of audited studies require no external runtime telemetry ($\mathcal{D}_3 = \texttt{none}$), which characterizes base forecasting inputs rather than proxy evaluation. When deploying proxy-dependent constraint variants without forward NWP or zero-latency sensors, practitioners must substitute lagged observations, benchmarked here across $k \in \{6, 12, 18, 36\}$ steps to quantify proxy-specific degradation.
+
+\subsection*{Quantification and Statistical Analysis}
+
+\paragraph*{Operational Decision Risk Formulation}
+To eliminate symmetric evaluation bias, performance was quantified using the non-negative asymmetric Pinball Loss function:
+\begin{equation}
+\mathcal{L}_q(y, \hat{y}) = \max\big( q(y - \hat{y}),\, (1-q)(\hat{y} - y) \big),
+\end{equation}
+where $q = \frac{1}{r+1} = \frac{1}{3}$ corresponds to an operational market penalty ratio $r=2$ (under-generation penalty twice as costly as spill). Total normalized static cost was defined as $\text{Cost}_{\text{static}} = 3 \times \mathcal{L}_{1/3}(y, \hat{y})$, with validation-set quantile post-hoc offset calibration $\delta^* = \arg\min_\delta \hat{\mathcal{L}}_{1/3}(y, \hat{y} + \delta)$.
+
+\paragraph*{Circular Block Paired Bootstrap Inference}
+Statistical significance of pairwise model contrasts ($\Delta \text{Cost} = \text{Cost}_{\text{method}} - \text{Cost}_{\text{baseline}}$) was evaluated via circular block paired bootstrapping with 2,000 replications. Block length was set to $L = 1,008$ intervals (7 days) to rigorously preserve temporal autocorrelation and diurnal meteorological cycles. Two-sided 95\% percentile confidence intervals were constructed from the empirical bootstrap distribution, rejecting the null hypothesis of equal performance if and only if zero fell outside the confidence interval ($p < 0.05$).

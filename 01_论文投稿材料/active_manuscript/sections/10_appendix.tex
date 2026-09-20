@@ -1,9 +1,9 @@
-\section{Mathematical Analysis of Decoupled Calibration Boundaries and Counterexamples}
+\section{Mathematical Proofs of Boundary Counterexamples}
 \label{sec:appendix_proofs}
 
-This appendix provides formal mathematical proofs for the two boundary counterexamples presented in Section~\ref{sec:theory}, delineating the theoretical limits of decoupled decision calibration.
+This appendix section provides formal mathematical proofs for the two boundary counterexamples presented in Section~\ref{sec:theory}, delineating the theoretical limits of decoupled decision calibration.
 
-\subsection{Counterexample 1: Constant Shift Invariance and Zero Excess Risk}
+\subsection{Proof of Counterexample 1: Constant Shift Invariance and Zero Excess Risk}
 \label{subsec:counterexample1}
 
 \begin{example}[Constant Shift Invariance]
@@ -55,7 +55,7 @@ Consequently, the post-calibration operational risks are identical:
 \paragraph{Theoretical Takeaway}
 Counterexample 1 proves that \textbf{an increase in prediction MSE is compatible with invariant post-calibration operational risk}. When constraint-induced representation error consists of a uniform shift, scalar calibration absorbs the distortion entirely, establishing that strict positive excess risk lower bounds cannot hold unconditionally.
 
-\subsection{Counterexample 2: Spatial Heteroscedasticity and Risk Reversal}
+\subsection{Proof of Counterexample 2: Spatial Heteroscedasticity and Risk Reversal}
 \label{subsec:counterexample2}
 
 \begin{example}[Spatial Heteroscedasticity]
@@ -96,51 +96,78 @@ For \textbf{Model A} ($f_A = \mu$), the first-order optimality condition for $\d
 (r+1) \left[ 0.5 \cdot 2.5 (\delta_A^* - \Delta_0) + 0.5 \cdot 1.6667 (\delta_A^* - \Delta_1) \right] = 0,
 \end{equation}
 yielding the density-weighted optimal global offset:
-\begin{align}
-\delta_A^* &= \frac{2.5 (-\frac{1}{15}) + 1.6667 (-0.10)}{2.5 + 1.6667} \nonumber \\
-&= \frac{-0.333333}{4.166667} = -0.080000.
-\end{align}
-The resulting excess operational risk for Model A is:
-\begin{align}
-&\mathcal{R}(f_A + \delta_A^*) - \mathcal{R}(q_\tau) \nonumber \\
-&\quad = \frac{3}{2} \Big[ 1.25 (-0.080 + \tfrac{1}{15})^2 \nonumber \\
-&\qquad\quad + 0.8333 (-0.080 + 0.100)^2 \Big] \nonumber \\
-&\quad = \frac{15}{8} \left(-\frac{1}{75}\right)^2 + \frac{5}{4} \left(\frac{1}{50}\right)^2 \nonumber \\
-&\quad = \frac{1}{3000} + \frac{1}{2000} = \frac{1}{1200} \approx 0.000833,
-\end{align}
-giving an absolute operational dispatch risk of:
 \begin{equation}
-\mathcal{R}_{\text{cal}}(f_A + \delta_A^*) = \frac{1}{6} + \frac{1}{1200} = \frac{201}{1200} = 0.167500.
+\delta_A^* = \frac{2.5 (-\frac{1}{15}) + 1.6667 (-0.10)}{2.5 + 1.6667} = -0.080000.
+\end{equation}
+The excess operational risk for Model A evaluates to:
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(f_A + \delta_A^*) - \mathcal{R}(q_\tau) &= \frac{3}{4} \cdot 2.5 (-0.0800 + 0.06667)^2 \\
+&\quad + \frac{3}{4} \cdot 1.6667 (-0.0800 + 0.1000)^2 \\
+&= 0.000833.
+\end{aligned}
 \end{equation}
 
-For \textbf{Model B} ($f_B(0) = 0.40, f_B(1) = 0.55$), the downward bias occurs on the higher-variance regime ($X=1$). The required local offsets become:
+For \textbf{Model B} ($f_B(0)=0.40, f_B(1)=0.55$), the quantile shifts relative to Model B predictions are:
 \begin{align}
-\Delta_{0, B} &= q_{1/3}(0) - 0.40 = -\tfrac{1}{15} \approx -0.066667, \\
-\Delta_{1, B} &= q_{1/3}(1) - 0.55 = 0.50 - 0.55 = -0.050000.
+\Delta_{B, 0} &= q_{1/3}(0) - f_B(0) = -0.066667, \\
+\Delta_{B, 1} &= q_{1/3}(1) - f_B(1) = -0.050000.
 \end{align}
-Notice that the discrepancy between regime offsets is halved: $|\Delta_{1, B} - \Delta_{0, B}| = \frac{1}{60} \approx 0.016667$, compared to $\frac{1}{30} \approx 0.033333$ for Model A. The optimal global offset for Model B is:
-\begin{align}
-\delta_B^* &= \frac{2.5 (-\frac{1}{15}) + 1.6667 (-0.050)}{2.5 + 1.6667} \nonumber \\
-&= \frac{-0.166667 - 0.083333}{4.166667} = -0.060000.
-\end{align}
-The resulting excess operational risk for Model B is:
-\begin{align}
-&\mathcal{R}(f_B + \delta_B^*) - \mathcal{R}(q_\tau) \nonumber \\
-&\quad = \frac{3}{2} \Big[ 1.25 (-0.060 + \tfrac{1}{15})^2 \nonumber \\
-&\qquad\quad + 0.8333 (-0.060 + 0.050)^2 \Big] \nonumber \\
-&\quad = \frac{15}{8} \left(\frac{1}{150}\right)^2 + \frac{5}{4} \left(-\frac{1}{100}\right)^2 \nonumber \\
-&\quad = \frac{1}{12000} + \frac{1}{8000} = \frac{1}{4800} \approx 0.000208,
-\end{align}
-yielding an absolute operational dispatch risk of:
+Because Model B's negative bias at $X=1$ brings its prediction closer to $q_{1/3}(1)$, the spread between local shifts shrinks from $0.0333$ to $0.0167$. The optimal global offset for Model B is:
 \begin{equation}
-\mathcal{R}_{\text{cal}}(f_B + \delta_B^*) = \frac{1}{6} + \frac{1}{4800} = \frac{801}{4800} = 0.166875.
+\begin{aligned}
+\delta_B^* &= \frac{2.5 (-0.066667) + 1.6667 (-0.050000)}{2.5 + 1.6667} \\
+&= -0.060000.
+\end{aligned}
 \end{equation}
-
-Comparing the two post-calibration dispatch losses:
+Evaluating the excess operational risk for Model B:
 \begin{equation}
-\mathcal{R}_{\text{cal}}(f_B + \delta_B^*) = 0.166875 < 0.167500 = \mathcal{R}_{\text{cal}}(f_A + \delta_A^*).
+\begin{aligned}
+\mathcal{R}(f_B + \delta_B^*) - \mathcal{R}(q_\tau) &= \frac{3}{4} \cdot 2.5 (-0.0600 + 0.06667)^2 \\
+&\quad + \frac{3}{4} \cdot 1.6667 (-0.0600 + 0.0500)^2 \\
+&= 0.000208.
+\end{aligned}
 \end{equation}
-Model B achieves a 75\% reduction in excess risk ($0.000208$ vs. $0.000833$) and strictly lower operational dispatch loss than the unbiased conditional mean, despite exhibiting $+5.8\%$ higher prediction MSE.
 
 \paragraph{Theoretical Takeaway}
-Counterexample 2 rigorously proves that \textbf{under conditional heteroscedasticity, a biased predictor with higher MSE can achieve strictly lower post-calibration dispatch loss than the true conditional mean}. This formalizes why the performance of physical constraints under decoupled calibration depends intricately on local error variance and environmental terrain.
+Comparing excess operational risks reveals:
+\begin{equation}
+\begin{aligned}
+\mathcal{R}(f_B + \delta_B^*) - \mathcal{R}(q_\tau) &= 0.000208 \\
+&< 0.000833 = \mathcal{R}(f_A + \delta_A^*) - \mathcal{R}(q_\tau).
+\end{aligned}
+\end{equation}
+Model B achieves a \textbf{75\% reduction in excess operational risk} despite having $+5.8\%$ higher prediction MSE. Counterexample 2 proves that under spatial heteroscedasticity, an estimator with higher MSE can achieve strictly lower post-calibration dispatch risk than the true conditional expectation.
+
+\section{Systematic Literature Scoping Protocol (PRISMA-ScR)}
+\label{sec:appendix_audit_protocol}
+
+We conducted our empirical scoping audit in accordance with the PRISMA Extension for Scoping Reviews (PRISMA-ScR) guidelines \cite{tricco2018}. Literature retrieval was executed across two complementary channels covering January 1, 2023, through March 1, 2026, with rolling monitoring through July 2026. First, programmatic queries via the OpenAlex API using four targeted title queries ($Q_1$: \texttt{"physics-constrained" AND "wind"}, $Q_2$: \texttt{"physics-informed" AND "wind power"}, $Q_3$: \texttt{"physics-guided" AND "wind"}, $Q_4$: \texttt{"physics-embedded" AND "wind power"}) identified 72 candidate records. Second, targeted searches on Google Scholar, arXiv, and preprint servers yielded 17 additional records ($N=89$ total).
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{prisma_flow_diagram.pdf}
+\caption{PRISMA-ScR Flow Diagram Illustrating Scoping Cohort Derivation ($89 \rightarrow 72 \rightarrow 53 \rightarrow 48 \rightarrow 46$). Cross-source deduplication eliminated 17 duplicates; title/abstract screening excluded 19 records; study-level deduplication consolidated 5 preprint/journal pairs; and full-text eligibility screening excluded 2 studies, leaving 46 eligible full-text studies.}
+\label{fig:prisma_flow}
+\end{figure}
+
+Screening followed structured multi-phase filtering (Figure~\ref{fig:prisma_flow}): cross-source deduplication eliminated 17 duplicate records, leaving 72 unique entries. Title and abstract screening excluded 19 records (non-forecasting structural health monitoring, active pitch control, or purely data-driven studies). Study-level deduplication consolidated five preprint/journal pairs sharing identical authorship, datasets, and equations, reducing candidate entries from 53 to 48. Full-text evaluation against explicit eligibility criteria excluded two studies (S26 forecasted wind speed exclusively without a power constraint; S42 implemented heuristic feature clustering without physical equations), establishing our final representative scoping corpus of \textbf{$N=46$ unique scoping studies} (31 journal records, 4 conference records, 10 records with SSRN/arXiv/working-paper identifiers, and 1 record without a DOI). A supplementary sensitivity query expanding retrieval across Scopus and IEEE Xplore identified 14 additional papers, with full-text inspection supporting the same reporting-gap pattern; these records are treated as a sensitivity check rather than pooled into the 46-study denominator.
+
+\input{tables/table1_lifecycle_distribution.tex}
+\input{tables/table4_ablation_semantics.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_field_audit_distribution.pdf}
+\caption{Empirical Lifecycle Distributions across 46 Audited Studies ($N=46$). (a) $\mathcal{D}_1$ Parameter Provenance; (b) $\mathcal{D}_2$ Application Stage; (c) $\mathcal{D}_3$ Inference Telemetry Requirements; (d) $\mathcal{D}_5$ Ablation Isolation Validity, showing the binary validity classification where Strict Physical Isolation ($n=23$, 50.0\%) aggregates 17 \texttt{constraint-on-off} and 6 \texttt{both} studies ($23 = 17 + 6$), contrasted against 23 Confounded Module Ablations (50.0\%).}
+\label{fig:audit_distribution}
+\end{figure*}
+
+\section{Multi-Rater Reliability Benchmarking}
+\label{sec:appendix_reliability}
+
+To assess the empirical stability of the taxonomy before full extraction, three raters (Coder A, Coder B, and Coder C) independently conducted a rigorous, fully blind pilot inter-rater reliability test on a stratified representative subset of 20 candidate studies across all five dimensions. Study eligibility screening achieved unanimous consensus (Fleiss $\kappa = 1.000$). Parameter provenance ($\mathcal{D}_1$) demonstrated perfect agreement ($\kappa = 1.000$), while application stage ($\mathcal{D}_2$) yielded near-perfect agreement ($\kappa = 0.950$ overall, $\kappa = 0.938$ on included studies). Inference telemetry requirements ($\mathcal{D}_3$) achieved substantial agreement ($\kappa = 0.743$ overall, $\kappa = 0.646$ on included studies).
+
+Implementation fidelity ($\mathcal{D}_4$) exhibited moderate concordance prior to consensus arbitration ($\kappa = 0.716$ overall in the stratified pilot, but $\kappa = 0.341$ when evaluated strictly on included studies). This reduction reflects the classical prevalence paradox described by Feinstein and Cicchetti: because 95.7\% of candidate studies omitted public code, expected chance agreement was high, which depresses Fleiss' $\kappa$ despite a raw observed agreement of 90.7\%. For ablation semantics ($\mathcal{D}_5$), raters achieved strong concordance ($\kappa = 0.851$ overall, $\kappa = 0.818$ on included studies). On harm reporting, all three raters unanimously coded zero instances of harm documentation across the included pilot studies ($0/18$); because marginal variance was zero, Cohen's $\kappa$ is mathematically indeterminate and is formally reported as 100\% observed agreement ($P_o = 1.000$).
+
+Following pilot protocol stabilization and consensus arbitration, full extraction across all 46 included studies was conducted with complete traceability: rather than relying on ungrounded categorical assignments, every coding decision across all five dimensions ($\mathcal{D}_1$--$\mathcal{D}_5$) is anchored in the open extraction database and supplementary material by an auditable verbatim quote evidence trail, citing exact section numbers, equation indices, table identifiers, and verbatim textual excerpts (Table~\ref{tab:lifecycle_distribution}, Table~\ref{tab:ablation_semantics}).

@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-02-24T23:15:10.056462Z",
+  "steps": [
+    {
+      "name": "core_mamba",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 55.05756759643555,
+      "log_file": "logs/full_backfill_4090_20260225_064718/core_mamba.log"
+    },
+    {
+      "name": "core_arima_svr",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 159.0693874359131,
+      "log_file": "logs/full_backfill_4090_20260225_064718/core_arima_svr.log"
+    },
+    {
+      "name": "core_ssa_elm",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 12.065126895904541,
+      "log_file": "logs/full_backfill_4090_20260225_064718/core_ssa_elm.log"
+    },
+    {
+      "name": "core_vmd_ceemdan",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 41.9603385925293,
+      "log_file": "logs/full_backfill_4090_20260225_064718/core_vmd_ceemdan.log"
+    },
+    {
+      "name": "core_pi_moe_bundle",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 27.140135288238525,
+      "log_file": "logs/full_backfill_4090_20260225_064718/core_pi_moe_bundle.log"
+    },
+    {
+      "name": "core_mustfix_bundle",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 176.09197998046875,
+      "log_file": "logs/full_backfill_4090_20260225_064718/core_mustfix_bundle.log"
+    },
+    {
+      "name": "core_lite_clean_eval",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 25.87348961830139,
+      "log_file": "logs/full_backfill_4090_20260225_064718/core_lite_clean_eval.log"
+    },
+    {
+      "name": "rebuild_main4_matrices",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.44891929626464844,
+      "log_file": "logs/full_backfill_4090_20260225_064718/rebuild_main4_matrices.log"
+    }
+  ],
+  "transfer_matrix_csv": "results/supplementary_evidence/multi_domain_transfer_matrix.csv"
+}

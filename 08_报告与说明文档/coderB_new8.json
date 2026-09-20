@@ -1,0 +1,98 @@
+[
+ {
+  "paper_id": "PISTNET2025",
+  "observability_level": "L3",
+  "oracle_leakage": "FALSE",
+  "deployment_source_stated": "not stated",
+  "enforcement_mode": "soft",
+  "harm_reported": "FALSE",
+  "substitution_test": "FALSE",
+  "code_available": "UNKNOWN",
+  "coder": "coder_B",
+  "notes": "B (indep): advection-equation physical model is a forecast input (L3); adaptive penalty loss; deployment source of advection field unstated"
+ },
+ {
+  "paper_id": "PIBPNN2025",
+  "observability_level": "L1",
+  "oracle_leakage": "FALSE",
+  "deployment_source_stated": "not stated",
+  "enforcement_mode": "soft",
+  "harm_reported": "FALSE",
+  "substitution_test": "FALSE",
+  "code_available": "UNKNOWN",
+  "coder": "coder_B",
+  "notes": "B (indep): Betz/Cp/mechanical are intrinsic physics known offline -> L1; conference, formula detail limited"
+ },
+ {
+  "paper_id": "PITFN2025",
+  "observability_level": "L3",
+  "oracle_leakage": "FALSE",
+  "deployment_source_stated": "not stated",
+  "enforcement_mode": "soft",
+  "harm_reported": "FALSE",
+  "substitution_test": "FALSE",
+  "code_available": "UNKNOWN",
+  "coder": "coder_B",
+  "notes": "B (indep): physics penalty depends on learned Cp_hat estimator (not intrinsic; learned from data) -> L3 forecast/data-dependent; formula (20) explicit. Strong anchor."
+ },
+ {
+  "paper_id": "TCNTFT2025",
+  "observability_level": "L3",
+  "oracle_leakage": "FALSE",
+  "deployment_source_stated": "not stated",
+  "enforcement_mode": "soft",
+  "harm_reported": "FALSE",
+  "substitution_test": "FALSE",
+  "code_available": "UNKNOWN",
+  "coder": "coder_B",
+  "notes": "B (indep): Bernoulli/ideal-gas physics on wind SPEED forecast (L3); deployment sources unstated"
+ },
+ {
+  "paper_id": "CPDIGITAL2025",
+  "observability_level": "L2",
+  "oracle_leakage": "FALSE",
+  "deployment_source_stated": "not stated",
+  "enforcement_mode": "soft",
+  "harm_reported": "FALSE",
+  "substitution_test": "FALSE",
+  "code_available": "UNKNOWN",
+  "coder": "coder_B",
+  "notes": "B (indep): Cp-λ-β from contemporaneous SCADA (L2); but this is curve estimation not forecasting -> edge case for PRISMA exclusion"
+ },
+ {
+  "paper_id": "XAIPC2023",
+  "observability_level": "N/A (no physics constraint stated)",
+  "oracle_leakage": "FALSE",
+  "deployment_source_stated": "N/A",
+  "enforcement_mode": "N/A",
+  "harm_reported": "FALSE",
+  "substitution_test": "FALSE",
+  "code_available": "UNKNOWN",
+  "coder": "coder_B",
+  "notes": "B (indep): XAI validation of curve model, no forecasting constraint -> EXCLUDE"
+ },
+ {
+  "paper_id": "RISKREG2025",
+  "observability_level": "N/A (no physics constraint stated)",
+  "oracle_leakage": "FALSE",
+  "deployment_source_stated": "N/A",
+  "enforcement_mode": "soft (chance constraint)",
+  "harm_reported": "FALSE",
+  "substitution_test": "FALSE",
+  "code_available": "UNKNOWN",
+  "coder": "coder_B",
+  "notes": "B (indep): chance-constrained interval curve fitting, not forecasting physics -> EXCLUDE"
+ },
+ {
+  "paper_id": "SETVAL2025",
+  "observability_level": "N/A (no physics constraint stated)",
+  "oracle_leakage": "FALSE",
+  "deployment_source_stated": "N/A",
+  "enforcement_mode": "soft (chance constraint)",
+  "harm_reported": "FALSE",
+  "substitution_test": "FALSE",
+  "code_available": "UNKNOWN",
+  "coder": "coder_B",
+  "notes": "B (indep): interval NN curve fitting -> EXCLUDE"
+ }
+]

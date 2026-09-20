@@ -1,0 +1,6 @@
+[dry-run] parsed rows:
+     category            model  ...  R2_air_quality  R2_gefcom_load
+0  TSFM Slots  Chronos-T5-Mini  ...             NaN             NaN
+1  TSFM Slots     Moirai-Small  ...             NaN             NaN
+
+[2 rows x 11 columns]

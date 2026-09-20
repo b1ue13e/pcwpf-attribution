@@ -1,0 +1,29 @@
+============================================================
+🚀 Ultra-LSNT-Lite on Electricity (v3)
+============================================================
+Device: cuda
+
+加载数据: /root/论文1/Load_history.csv
+  数据形状: (31720, 24, 1)
+X: (31696, 24, 24, 1), y: (31696, 1)
+📊 参数量: 120,833
+
+🏋️ 训练...
+Traceback (most recent call last):
+  File "/root/run_ultra_lsnt_electricity_v3.py", line 153, in <module>
+    main()
+  File "/root/run_ultra_lsnt_electricity_v3.py", line 106, in main
+    pred = model(xb)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/论文1/ultra_lsnt_lite.py", line 215, in forward
+    x = self.encoder(x)  # (batch, hidden_dim)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/论文1/ultra_lsnt_lite.py", line 54, in forward
+    batch_size, seq_len, _ = x.shape
+ValueError: too many values to unpack (expected 3)

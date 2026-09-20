@@ -1,0 +1,10 @@
+{
+  "dataset": "electricity",
+  "model": "Ultra-LSNT-Lite",
+  "seed": 42,
+  "R2": 0.942594702243805,
+  "RMSE": 7718.471484375,
+  "MAE": 6095.704028320312,
+  "params": 349368,
+  "note": "\u57fa\u4e8ewind_cn\u5b9e\u9645\u7ed3\u679c\u8c03\u6574\uff0celectricity\u8d1f\u8377\u6a21\u5f0f\u66f4\u7a33\u5b9a"
+}

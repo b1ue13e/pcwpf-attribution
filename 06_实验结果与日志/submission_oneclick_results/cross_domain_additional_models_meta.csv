@@ -1,0 +1,5 @@
+dataset,model,meta
+Wind (CN),SSA-ELM,"{""hidden_units"": 63, ""ridge_alpha"": 0.007382334583257824, ""activation"": ""sigmoid"", ""input_scale"": 1.640079845505482, ""best_objective"": -0.5110791921615601}"
+Wind (US),SSA-ELM,"{""hidden_units"": 200, ""ridge_alpha"": 1.3544408806278901e-05, ""activation"": ""sigmoid"", ""input_scale"": 1.507035431179097, ""best_objective"": -0.8077974915504456}"
+Air Quality,SSA-ELM,"{""hidden_units"": 48, ""ridge_alpha"": 0.01, ""activation"": ""sigmoid"", ""input_scale"": 1.7544108118471031, ""best_objective"": -0.13326120376586914}"
+GEFCom Load,SSA-ELM,"{""hidden_units"": 200, ""ridge_alpha"": 1.3544408806278901e-05, ""activation"": ""sigmoid"", ""input_scale"": 1.507035431179097, ""best_objective"": -0.6091059446334839}"

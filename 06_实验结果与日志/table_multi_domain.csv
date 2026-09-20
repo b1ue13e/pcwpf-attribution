@@ -1,0 +1,5 @@
+Dataset,R2 Score,RMSE,MAE,Skip Rate,Status
+Wind (CN),0.8728,9080.5547,7171.4165,0.0%,Success
+Wind (US),0.7878,0.4556,0.2891,11.4%,Success
+Air Quality,0.4861,32.2145,19.8663,0.0%,Success
+GEFCom Load,0.7554,2836.9788,2049.4832,0.0%,Success

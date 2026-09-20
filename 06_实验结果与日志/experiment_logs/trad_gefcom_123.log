@@ -1,0 +1,3 @@
+Starting Traditional GPU models on gefcom seed=123
+  LSTM on gefcom (seed=123)
+2026-02-23 05:13:58.398082: F external/local_xla/xla/tsl/platform/default/env.cc:80] Check failed: ret == 0 (11 vs. 0)Thread tf_data_private_threadpool creation via pthread_create() failed.

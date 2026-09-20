@@ -1,0 +1,424 @@
+{
+  "dlinear_calibrated": [
+    {
+      "site": "hill_of_towie",
+      "method": "bounds_f1.0_plain",
+      "cost_static_mean": 0.0887951610660457,
+      "cashout_per_turb_yr_gbp_mean": 14457.887782690625,
+      "net_cashflow_per_turb_yr_gbp_mean": 19615.7418450562
+    },
+    {
+      "site": "hill_of_towie",
+      "method": "curve_f1.0_plain",
+      "cost_static_mean": 0.0887862961205084,
+      "cashout_per_turb_yr_gbp_mean": 14480.729291068885,
+      "net_cashflow_per_turb_yr_gbp_mean": 19526.664366654928
+    },
+    {
+      "site": "hill_of_towie",
+      "method": "distribution_f1.0_plain",
+      "cost_static_mean": 0.0897013345995477,
+      "cashout_per_turb_yr_gbp_mean": 13879.169101293975,
+      "net_cashflow_per_turb_yr_gbp_mean": 21097.334490082467
+    },
+    {
+      "site": "hill_of_towie",
+      "method": "none_f1.0_plain",
+      "cost_static_mean": 0.0887950454146682,
+      "cashout_per_turb_yr_gbp_mean": 14457.734445782462,
+      "net_cashflow_per_turb_yr_gbp_mean": 19616.060582376645
+    },
+    {
+      "site": "hill_of_towie",
+      "method": "persistence",
+      "cost_static_mean": 0.0915717186875631,
+      "cashout_per_turb_yr_gbp_mean": 13950.543284892978,
+      "net_cashflow_per_turb_yr_gbp_mean": 22897.89784135223
+    },
+    {
+      "site": "hill_of_towie",
+      "method": "ridge",
+      "cost_static_mean": 0.087905638724388,
+      "cashout_per_turb_yr_gbp_mean": 14650.23477217717,
+      "net_cashflow_per_turb_yr_gbp_mean": 18464.0973237314
+    },
+    {
+      "site": "kelmarsh",
+      "method": "bounds_f1.0_plain",
+      "cost_static_mean": 0.0882107032292784,
+      "cashout_per_turb_yr_gbp_mean": 12979.557526827626,
+      "net_cashflow_per_turb_yr_gbp_mean": 17285.058874610193
+    },
+    {
+      "site": "kelmarsh",
+      "method": "curve_f1.0_plain",
+      "cost_static_mean": 0.0881781307089197,
+      "cashout_per_turb_yr_gbp_mean": 12961.23590195495,
+      "net_cashflow_per_turb_yr_gbp_mean": 17309.187976454148
+    },
+    {
+      "site": "kelmarsh",
+      "method": "distribution_f1.0_plain",
+      "cost_static_mean": 0.0893061294765746,
+      "cashout_per_turb_yr_gbp_mean": 13910.40482238544,
+      "net_cashflow_per_turb_yr_gbp_mean": 14024.824937333266
+    },
+    {
+      "site": "kelmarsh",
+      "method": "none_f1.0_plain",
+      "cost_static_mean": 0.0882103178024138,
+      "cashout_per_turb_yr_gbp_mean": 12977.842250000052,
+      "net_cashflow_per_turb_yr_gbp_mean": 17289.682856777665
+    },
+    {
+      "site": "kelmarsh",
+      "method": "persistence",
+      "cost_static_mean": 0.0918529135108105,
+      "cashout_per_turb_yr_gbp_mean": 15166.783349599116,
+      "net_cashflow_per_turb_yr_gbp_mean": 12410.386390877688
+    },
+    {
+      "site": "kelmarsh",
+      "method": "ridge",
+      "cost_static_mean": 0.0893395945213586,
+      "cashout_per_turb_yr_gbp_mean": 13728.455011192676,
+      "net_cashflow_per_turb_yr_gbp_mean": 16598.742703519383
+    }
+  ],
+  "patchtst_calibrated": [
+    {
+      "site": "hill_of_towie",
+      "backbone": "PatchTST",
+      "method": "none_l0.0_f1.0_plain",
+      "method_name": "Unconstrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1201792359352111,
+      "rmse_pu_std": 0.0008716117008589,
+      "cost_dyn_mean": 0.102198355284311,
+      "cost_dyn_std": 0.0007240230840188,
+      "shortfall_turb_yr_mean": 18168.11375430949,
+      "shortfall_turb_yr_std": 438.71609251237226,
+      "net_cashflow_turb_yr_mean": 20822.2878994903,
+      "net_cashflow_turb_yr_std": 1695.3466233065794,
+      "total_cashout_mean": 360624.614109513
+    },
+    {
+      "site": "hill_of_towie",
+      "backbone": "PatchTST",
+      "method": "bounds_l0.01_f1.0_plain",
+      "method_name": "Bounds Constrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1201793998479843,
+      "rmse_pu_std": 0.000871691154316,
+      "cost_dyn_mean": 0.1021979297734678,
+      "cost_dyn_std": 0.0007237343164355,
+      "shortfall_turb_yr_mean": 18167.78163992024,
+      "shortfall_turb_yr_std": 438.3094799222553,
+      "net_cashflow_turb_yr_mean": 20823.254677098896,
+      "net_cashflow_turb_yr_std": 1694.4945853219988,
+      "total_cashout_mean": 360618.021866362
+    },
+    {
+      "site": "hill_of_towie",
+      "backbone": "PatchTST",
+      "method": "curve_l0.01_f1.0_plain",
+      "method_name": "Power Curve Constrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1200902089476585,
+      "rmse_pu_std": 0.0008527432801201,
+      "cost_dyn_mean": 0.1021229135802395,
+      "cost_dyn_std": 0.0007589954766302,
+      "shortfall_turb_yr_mean": 18163.55891780309,
+      "shortfall_turb_yr_std": 426.9792727851388,
+      "net_cashflow_turb_yr_mean": 20765.010118448765,
+      "net_cashflow_turb_yr_std": 1626.3420394970842,
+      "total_cashout_mean": 360534.2037246119
+    },
+    {
+      "site": "hill_of_towie",
+      "backbone": "PatchTST",
+      "method": "distribution_l0.01_f1.0_plain",
+      "method_name": "Distribution Prior PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1191512197256088,
+      "rmse_pu_std": 0.0009113596752285,
+      "cost_dyn_mean": 0.1012851481551284,
+      "cost_dyn_std": 0.001225206868833,
+      "shortfall_turb_yr_mean": 17935.669304142124,
+      "shortfall_turb_yr_std": 391.1371385283519,
+      "net_cashflow_turb_yr_mean": 20253.61036746301,
+      "net_cashflow_turb_yr_std": 1128.618540782942,
+      "total_cashout_mean": 356010.7509822183
+    },
+    {
+      "site": "kelmarsh",
+      "backbone": "PatchTST",
+      "method": "none_l0.0_f1.0_plain",
+      "method_name": "Unconstrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1117950826883316,
+      "rmse_pu_std": 0.0019255693769082,
+      "cost_dyn_mean": 0.1022182532262464,
+      "cost_dyn_std": 0.0017189698397825,
+      "shortfall_turb_yr_mean": 16808.90005054493,
+      "shortfall_turb_yr_std": 777.0992956732478,
+      "net_cashflow_turb_yr_mean": 17411.893795105996,
+      "net_cashflow_turb_yr_std": 1728.4536075471517,
+      "total_cashout_mean": 99471.84687445768
+    },
+    {
+      "site": "kelmarsh",
+      "backbone": "PatchTST",
+      "method": "bounds_l0.01_f1.0_plain",
+      "method_name": "Bounds Constrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1117950826883316,
+      "rmse_pu_std": 0.0019255123334005,
+      "cost_dyn_mean": 0.1022180973737431,
+      "cost_dyn_std": 0.0017188203526084,
+      "shortfall_turb_yr_mean": 16808.75871773057,
+      "shortfall_turb_yr_std": 777.0919128296982,
+      "net_cashflow_turb_yr_mean": 17412.187119963863,
+      "net_cashflow_turb_yr_std": 1728.6121598749987,
+      "total_cashout_mean": 99471.0104939672
+    },
+    {
+      "site": "kelmarsh",
+      "backbone": "PatchTST",
+      "method": "curve_l0.01_f1.0_plain",
+      "method_name": "Power Curve Constrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1117279529571533,
+      "rmse_pu_std": 0.0019574356265366,
+      "cost_dyn_mean": 0.1021196531991524,
+      "cost_dyn_std": 0.0016846403932154,
+      "shortfall_turb_yr_mean": 16774.313340315417,
+      "shortfall_turb_yr_std": 743.7781304847837,
+      "net_cashflow_turb_yr_mean": 17431.540341273612,
+      "net_cashflow_turb_yr_std": 1730.5969134216496,
+      "total_cashout_mean": 99267.16935638712
+    },
+    {
+      "site": "kelmarsh",
+      "backbone": "PatchTST",
+      "method": "distribution_l0.01_f1.0_plain",
+      "method_name": "Distribution Prior PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1097380369901657,
+      "rmse_pu_std": 0.0014498183736577,
+      "cost_dyn_mean": 0.1007502837243687,
+      "cost_dyn_std": 0.0016388352991031,
+      "shortfall_turb_yr_mean": 16681.40663487273,
+      "shortfall_turb_yr_std": 784.3850077842493,
+      "net_cashflow_turb_yr_mean": 16046.772883749349,
+      "net_cashflow_turb_yr_std": 1422.154345799824,
+      "total_cashout_mean": 98717.36529130164
+    },
+    {
+      "site": "penmanshiel",
+      "backbone": "PatchTST",
+      "method": "none_l0.0_f1.0_plain",
+      "method_name": "Unconstrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1303946077823639,
+      "rmse_pu_std": 0.0013241887791082,
+      "cost_dyn_mean": 0.1126957820874875,
+      "cost_dyn_std": 0.0013284433272752,
+      "shortfall_turb_yr_mean": 19129.151009737147,
+      "shortfall_turb_yr_std": 856.3176981254334,
+      "net_cashflow_turb_yr_mean": 20453.238841206337,
+      "net_cashflow_turb_yr_std": 1783.9399515014222,
+      "total_cashout_mean": 267808.11413632
+    },
+    {
+      "site": "penmanshiel",
+      "backbone": "PatchTST",
+      "method": "bounds_l0.01_f1.0_plain",
+      "method_name": "Bounds Constrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.13039430975914,
+      "rmse_pu_std": 0.0013240484986454,
+      "cost_dyn_mean": 0.1126961856672431,
+      "cost_dyn_std": 0.0013285357913204,
+      "shortfall_turb_yr_mean": 19129.559457727788,
+      "shortfall_turb_yr_std": 856.2597644679105,
+      "net_cashflow_turb_yr_mean": 20452.491944525264,
+      "net_cashflow_turb_yr_std": 1783.626172425999,
+      "total_cashout_mean": 267813.83240818913
+    },
+    {
+      "site": "penmanshiel",
+      "backbone": "PatchTST",
+      "method": "curve_l0.01_f1.0_plain",
+      "method_name": "Power Curve Constrained PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1303220093250274,
+      "rmse_pu_std": 0.0013108788989484,
+      "cost_dyn_mean": 0.1126419075209815,
+      "cost_dyn_std": 0.0013286632553187,
+      "shortfall_turb_yr_mean": 19118.38499340557,
+      "shortfall_turb_yr_std": 852.1972119188777,
+      "net_cashflow_turb_yr_mean": 20444.40603117405,
+      "net_cashflow_turb_yr_std": 1764.457791731335,
+      "total_cashout_mean": 267657.38990767795
+    },
+    {
+      "site": "penmanshiel",
+      "backbone": "PatchTST",
+      "method": "distribution_l0.01_f1.0_plain",
+      "method_name": "Distribution Prior PatchTST",
+      "policy": "quantile_calibrated",
+      "rmse_pu_mean": 0.1300356388092041,
+      "rmse_pu_std": 0.0010118728969246,
+      "cost_dyn_mean": 0.1113410718905293,
+      "cost_dyn_std": 0.0010594215811149,
+      "shortfall_turb_yr_mean": 18338.64399816724,
+      "shortfall_turb_yr_std": 701.8246165383783,
+      "net_cashflow_turb_yr_mean": 21117.52595467857,
+      "net_cashflow_turb_yr_std": 1472.7643536361936,
+      "total_cashout_mean": 256741.0159743413
+    }
+  ],
+  "corpus_rows": 48,
+  "corpus_included_rows": 46,
+  "corpus_counts": {
+    "D4_fidelity": {
+      "not-found": 44,
+      "code-mismatch": 1,
+      "code-aligned": 1
+    },
+    "ablation_type": {
+      "module-ablation": 23,
+      "constraint-on-off": 17,
+      "both": 6
+    },
+    "d5_negative_effect_reported": {
+      "no": 46
+    },
+    "d5_harm_metric_reported": {
+      "no": 46
+    },
+    "d5_prior_substitution_tested": {
+      "no": 43,
+      "yes": 3
+    }
+  },
+  "ssrn_rows": [
+    {
+      "study_id": "S06",
+      "doi": "10.2139/ssrn.6837712",
+      "title": "Physics-Constrained and Generalization-Enhanced Industrial Large Model for Offshore Wind Power Forecasting"
+    },
+    {
+      "study_id": "S23",
+      "doi": "10.2139/ssrn.6509860",
+      "title": "A Physics-informed Operating Condition Attention Model for Wind Power Forecasting"
+    },
+    {
+      "study_id": "S25",
+      "doi": "10.2139/ssrn.6553822",
+      "title": "Physics-Informed dual-branch graph neural network for wind farm cluster power forecasting"
+    },
+    {
+      "study_id": "S28",
+      "doi": "10.2139/ssrn.7239785",
+      "title": "Platform-Yaw-Aware Physics-Informed Meta-Learning for Floating Wind Farm Wake and Power Prediction"
+    },
+    {
+      "study_id": "S30",
+      "doi": "10.2139/ssrn.6462606",
+      "title": "DSTC-Net: A Physics-Informed Dynamic Spatio-Temporal Coupling Network for Ultra-Short-Term Wind Power Forecasting"
+    },
+    {
+      "study_id": "S44",
+      "doi": "10.2139/ssrn.6906363",
+      "title": "Short-term wind power forecasting for data-limited wind farms in complex terrain: A physics-informed Bayesian learning approach"
+    },
+    {
+      "study_id": "S45",
+      "doi": "10.2139/ssrn.7346450",
+      "title": "Cross-Domain Few-Shot Wind Power Forecasting via Physics-Guided Retrieval-Enhanced Dual-Branch Framework"
+    },
+    {
+      "study_id": "S47",
+      "doi": "10.2139/ssrn.6462602",
+      "title": "Advancing short-term wind power forecasting via Physics-Guided Graph Neural Networks for spatiotemporal downscaling"
+    }
+  ],
+  "manifests": [
+    {
+      "site": "kelmarsh",
+      "windows": {
+        "train": 5098,
+        "val": 327,
+        "cal": 367,
+        "test": 8212
+      },
+      "data_hash_matches": true,
+      "code_hash_matches": true,
+      "protocol_hash_matches": true,
+      "dlinear_checkpoints": 150,
+      "patchtst_checkpoints": 20
+    },
+    {
+      "site": "hill_of_towie",
+      "windows": {
+        "train": 7035,
+        "val": 344,
+        "cal": 367,
+        "test": 7599
+      },
+      "data_hash_matches": true,
+      "code_hash_matches": true,
+      "protocol_hash_matches": true,
+      "dlinear_checkpoints": 60,
+      "patchtst_checkpoints": 20
+    },
+    {
+      "site": "penmanshiel",
+      "windows": {
+        "train": 1583,
+        "val": 367,
+        "cal": 250,
+        "test": 8440
+      },
+      "data_hash_matches": true,
+      "code_hash_matches": true,
+      "protocol_hash_matches": true,
+      "dlinear_checkpoints": 150,
+      "patchtst_checkpoints": 20
+    }
+  ],
+  "zero_bid_diagnostic": [
+    {
+      "site": "kelmarsh",
+      "origins": 8212,
+      "complete_settlement_periods": 16396,
+      "observed_days": 360,
+      "zero_bid_shortfall": 0,
+      "zero_bid_net_component_per_turb_year": 223882.14513480337
+    },
+    {
+      "site": "hill_of_towie",
+      "origins": 7599,
+      "complete_settlement_periods": 15152,
+      "observed_days": 345,
+      "zero_bid_shortfall": 0,
+      "zero_bid_net_component_per_turb_year": 239299.29505411536
+    },
+    {
+      "site": "penmanshiel",
+      "origins": 8440,
+      "complete_settlement_periods": 16861,
+      "observed_days": 365,
+      "zero_bid_shortfall": 0,
+      "zero_bid_net_component_per_turb_year": 243449.80396804333
+    }
+  ],
+  "js_diagnostic": {
+    "standard_JS": 0.637145646205098,
+    "reverse_JS": 1.614463080360851,
+    "reverse_JS_swapped": 1.614463080360851,
+    "ln2": 0.6931471805599453
+  }
+}

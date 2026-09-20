@@ -1,0 +1,6 @@
+query_id,query,pages,records,status
+Q1,physics-constrained wind,1,29,complete
+Q2,physics-informed wind power,1,45,complete
+Q3,physics-guided wind,1,71,complete
+Q4,physics-embedded wind power,1,0,complete
+Q5,wind power curve deep learning,1,1,complete

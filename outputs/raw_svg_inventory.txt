@@ -1,0 +1,662 @@
+  0: <defs > 
+  1: <rect fill='white' height='1086' rx='0' ry='0'> 
+  2: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='43' font-style='normal'> Constraint Lifecycle Taxonomy
+  3: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='25' font-style='normal'> Five orthogonal dimensions for auditing physics-constrained forecasting studies
+  4: <rect fill='url(#g1)' height='366' rx='10' ry='10'> 
+  5: <rect fill='none' height='358' rx='8' ry='8'> 
+  6: <rect fill='none' height='1' rx='0' ry='0'> 
+  7: <rect fill='url(#g1)' height='56' rx='7' ry='7'> 
+  8: <rect fill='white' height='47' rx='4' ry='4'> 
+  9: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='34' font-style='normal'> D1
+ 10: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='25' font-style='normal'> Parameter Provenance
+ 11: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='italic'> Where does the constraint originate?
+ 12: <rect fill='#ffffff' height='295' rx='5' ry='5'> 
+ 13: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Intrinsic
+ 14: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Governing laws / physical limits
+ 15: <line marker-end='url(#blue_arrow)' stroke='#1676e8' stroke-width='1.2' x1='35'> 
+ 16: <path d='M 123,267 C 143,263 159,269 174,264' fill='none' stroke='#1676e8' stroke-width='1.2'> 
+ 17: <line marker-end='url(#blue_arrow)' stroke='#1676e8' stroke-width='1.2' x1='35'> 
+ 18: <path d='M 123,281 C 143,277 159,283 174,278' fill='none' stroke='#1676e8' stroke-width='1.2'> 
+ 19: <line marker-end='url(#blue_arrow)' stroke='#1676e8' stroke-width='1.2' x1='35'> 
+ 20: <path d='M 123,295 C 143,291 159,297 174,292' fill='none' stroke='#1676e8' stroke-width='1.2'> 
+ 21: <line marker-end='url(#blue_arrow)' stroke='#1676e8' stroke-width='1.2' x1='35'> 
+ 22: <path d='M 123,309 C 143,305 159,311 174,306' fill='none' stroke='#1676e8' stroke-width='1.2'> 
+ 23: <line marker-end='url(#blue_arrow)' stroke='#1676e8' stroke-width='1.2' x1='35'> 
+ 24: <path d='M 123,323 C 143,319 159,325 174,320' fill='none' stroke='#1676e8' stroke-width='1.2'> 
+ 25: <line marker-end='url(#blue_arrow)' stroke='#1676e8' stroke-width='1.2' x1='35'> 
+ 26: <path d='M 123,337 C 143,333 159,339 174,334' fill='none' stroke='#1676e8' stroke-width='1.2'> 
+ 27: <ellipse cx='105' cy='301' fill='#d9e3ea' rx='15'> 
+ 28: <polygon fill='#2b3b4a' points='105,301 104.09808853993133,307.94165367316725 139.0,301.0' stroke='#111111' stroke-width='0.4'> 
+ 29: <polygon fill='#2b3b4a' points='105,301 99.43930730479791,296.7480949270326 88.0,330.4448637286709' stroke='#111111' stroke-width='0.4'> 
+ 30: <polygon fill='#2b3b4a' points='105,301 111.46260415527075,298.31025139980017 87.99999999999999,271.5551362713291' stroke='#111111' stroke-width='0.4'> 
+ 31: <circle cx='105' cy='301' fill='#2b3b4a' r='4'> 
+ 32: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='23' font-style='italic'> U
+ 33: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='24' font-style='italic'> Cₚ ≤ 16/27
+ 34: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='15' font-style='normal'> (Betz limit)
+ 35: <rect fill='#ffffff' height='295' rx='5' ry='5'> 
+ 36: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Historical-static
+ 37: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Offline SCADA- derived prior
+ 38: <line stroke='#111111' stroke-width='1.2' x1='234' x2='352'> 
+ 39: <line stroke='#111111' stroke-width='1.2' x1='234' x2='234'> 
+ 40: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Wind speed (m/s)
+ 41: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Power (p.u.)
+ 42: <line stroke='#111111' stroke-width='0.8' x1='234' x2='234'> 
+ 43: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0
+ 44: <line stroke='#111111' stroke-width='0.8' x1='263.5' x2='263.5'> 
+ 45: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 5
+ 46: <line stroke='#111111' stroke-width='0.8' x1='293.0' x2='293.0'> 
+ 47: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 10
+ 48: <line stroke='#111111' stroke-width='0.8' x1='322.5' x2='322.5'> 
+ 49: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 15
+ 50: <line stroke='#111111' stroke-width='0.8' x1='352' x2='352'> 
+ 51: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 20
+ 52: <line stroke='#111111' stroke-width='0.8' x1='231' x2='237'> 
+ 53: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0
+ 54: <line stroke='#111111' stroke-width='0.8' x1='231' x2='237'> 
+ 55: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.5
+ 56: <line stroke='#111111' stroke-width='0.8' x1='231' x2='237'> 
+ 57: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 1.0
+ 58: <circle cx='327.6141298838762' cy='294.9363888509918' fill='#aab0b4' opacity='0.62'> 
+ 59: <circle cx='234.05330235643837' cy='363.66884374009464' fill='#aab0b4' opacity='0.62'> 
+ 60: <circle cx='289.4900023336045' cy='311.88670658407545' fill='#aab0b4' opacity='0.62'> 
+ 61: <circle cx='266.1783741092926' cy='326.69193143770303' fill='#aab0b4' opacity='0.62'> 
+ 62: <circle cx='320.1193302493979' cy='304.9214302859296' fill='#aab0b4' opacity='0.62'> 
+ 63: <circle cx='256.7722153401623' cy='352.3204547054985' fill='#aab0b4' opacity='0.62'> 
+ 64: <circle cx='329.0046378821788' cy='275.34399603527385' fill='#aab0b4' opacity='0.62'> 
+ 65: <circle cx='333.62531432594744' cy='305.6961416551471' fill='#aab0b4' opacity='0.62'> 
+ 66: <circle cx='244.98988187858902' cy='357.74729973061045' fill='#aab0b4' opacity='0.62'> 
+ 67: <circle cx='245.06608415512088' cy='365.31010101140106' fill='#aab0b4' opacity='0.62'> 
+ 68: <circle cx='308.92042455059646' cy='269.6107152558468' fill='#aab0b4' opacity='0.62'> 
+ 69: <circle cx='257.70316974589747' cy='351.53468947870476' fill='#aab0b4' opacity='0.62'> 
+ 70: <circle cx='276.5247887181553' cy='308.9634691290444' fill='#aab0b4' opacity='0.62'> 
+ 71: <circle cx='310.05947366702435' cy='294.32615952157425' fill='#aab0b4' opacity='0.62'> 
+ 72: <circle cx='329.049580778446' cy='268.7008718674' fill='#aab0b4' opacity='0.62'> 
+ 73: <circle cx='305.00617436098497' cy='285.45432732780716' fill='#aab0b4' opacity='0.62'> 
+ 74: <circle cx='303.5204953559562' cy='277.2023301017131' fill='#aab0b4' opacity='0.62'> 
+ 75: <circle cx='247.785278378193' cy='362.8655390200425' fill='#aab0b4' opacity='0.62'> 
+ 76: <circle cx='270.8491179111778' cy='333.02390888036484' fill='#aab0b4' opacity='0.62'> 
+ 77: <circle cx='258.76646252283786' cy='347.02140773270975' fill='#aab0b4' opacity='0.62'> 
+ 78: <circle cx='316.39040176281765' cy='283.9467295263376' fill='#aab0b4' opacity='0.62'> 
+ 79: <circle cx='273.2836232916564' cy='325.6525481003785' fill='#aab0b4' opacity='0.62'> 
+ 80: <circle cx='307.1913003846777' cy='295.85396473989465' fill='#aab0b4' opacity='0.62'> 
+ 81: <circle cx='248.96649760074976' cy='353.07595505139733' fill='#aab0b4' opacity='0.62'> 
+ 82: <circle cx='240.35101237797122' cy='362.0827959494632' fill='#aab0b4' opacity='0.62'> 
+ 83: <circle cx='349.75487655451815' cy='300.39849144255845' fill='#aab0b4' opacity='0.62'> 
+ 84: <circle cx='349.55221207818937' cy='300.40987980765146' fill='#aab0b4' opacity='0.62'> 
+ 85: <circle cx='286.76891145483535' cy='321.4924587758938' fill='#aab0b4' opacity='0.62'> 
+ 86: <circle cx='327.9396626876559' cy='306.57955633622487' fill='#aab0b4' opacity='0.62'> 
+ 87: <circle cx='282.26952409003354' cy='305.93887398268447' fill='#aab0b4' opacity='0.62'> 
+ 88: <circle cx='322.0888750274569' cy='309.0426358642767' fill='#aab0b4' opacity='0.62'> 
+ 89: <circle cx='254.31111624976865' cy='351.6307264912764' fill='#aab0b4' opacity='0.62'> 
+ 90: <circle cx='248.5724468650984' cy='360.38487337460145' fill='#aab0b4' opacity='0.62'> 
+ 91: <circle cx='287.2809229707266' cy='295.52191092693715' fill='#aab0b4' opacity='0.62'> 
+ 92: <circle cx='264.06208142507245' cy='332.16078243304946' fill='#aab0b4' opacity='0.62'> 
+ 93: <circle cx='265.6166250936185' cy='344.8763618966443' fill='#aab0b4' opacity='0.62'> 
+ 94: <circle cx='290.46760037585057' cy='304.59997350499634' fill='#aab0b4' opacity='0.62'> 
+ 95: <circle cx='328.9594360823693' cy='273.90568088289564' fill='#aab0b4' opacity='0.62'> 
+ 96: <circle cx='311.7906920257037' cy='273.87077242588475' fill='#aab0b4' opacity='0.62'> 
+ 97: <circle cx='305.15770770136174' cy='293.1767791996656' fill='#aab0b4' opacity='0.62'> 
+ 98: <circle cx='280.99722573944723' cy='304.5871734200352' fill='#aab0b4' opacity='0.62'> 
+ 99: <circle cx='268.3131922488169' cy='351.45729426814' fill='#aab0b4' opacity='0.62'> 
+100: <circle cx='287.0241597282097' cy='284.36058385154263' fill='#aab0b4' opacity='0.62'> 
+101: <circle cx='247.23271575933202' cy='356.5291500671206' fill='#aab0b4' opacity='0.62'> 
+102: <circle cx='276.7173367287762' cy='315.9399055331728' fill='#aab0b4' opacity='0.62'> 
+103: <circle cx='256.7305336014764' cy='351.8497614217872' fill='#aab0b4' opacity='0.62'> 
+104: <circle cx='306.3850276004463' cy='282.3239229705408' fill='#aab0b4' opacity='0.62'> 
+105: <circle cx='292.0198950987062' cy='316.1281049022359' fill='#aab0b4' opacity='0.62'> 
+106: <circle cx='245.8182924819573' cy='354.4857591943413' fill='#aab0b4' opacity='0.62'> 
+107: <circle cx='305.57645922573226' cy='273.35871973385866' fill='#aab0b4' opacity='0.62'> 
+108: <circle cx='308.1048743191559' cy='271.7425131094777' fill='#aab0b4' opacity='0.62'> 
+109: <circle cx='288.6001692968845' cy='290.66668486091817' fill='#aab0b4' opacity='0.62'> 
+110: <circle cx='308.2452910366643' cy='269.29205919872663' fill='#aab0b4' opacity='0.62'> 
+111: <circle cx='243.85814214501465' cy='353.13484833751505' fill='#aab0b4' opacity='0.62'> 
+112: <circle cx='341.54500479468595' cy='268.0808834150117' fill='#aab0b4' opacity='0.62'> 
+113: <circle cx='315.86844601030197' cy='293.91757145953903' fill='#aab0b4' opacity='0.62'> 
+114: <circle cx='250.17449723596414' cy='350.7479184947309' fill='#aab0b4' opacity='0.62'> 
+115: <circle cx='325.86276630951863' cy='292.0436461552499' fill='#aab0b4' opacity='0.62'> 
+116: <circle cx='266.61603385461086' cy='322.4788916881842' fill='#aab0b4' opacity='0.62'> 
+117: <circle cx='349.4130768692962' cy='270.0144183997444' fill='#aab0b4' opacity='0.62'> 
+118: <circle cx='344.88122138378355' cy='273.7286491114367' fill='#aab0b4' opacity='0.62'> 
+119: <circle cx='348.01402622331534' cy='293.57862299190015' fill='#aab0b4' opacity='0.62'> 
+120: <circle cx='342.81523458534235' cy='255.6510222937103' fill='#aab0b4' opacity='0.62'> 
+121: <circle cx='309.3515718142486' cy='273.69244032666364' fill='#aab0b4' opacity='0.62'> 
+122: <circle cx='237.86010428672492' cy='363.91907255715626' fill='#aab0b4' opacity='0.62'> 
+123: <circle cx='351.178735057279' cy='278.1532601883202' fill='#aab0b4' opacity='0.62'> 
+124: <circle cx='346.07603967698765' cy='286.3666327596163' fill='#aab0b4' opacity='0.62'> 
+125: <circle cx='320.31934530844353' cy='279.0165397401847' fill='#aab0b4' opacity='0.62'> 
+126: <circle cx='298.56081303962867' cy='295.64740104139327' fill='#aab0b4' opacity='0.62'> 
+127: <circle cx='242.7285857301012' cy='360.85448982631743' fill='#aab0b4' opacity='0.62'> 
+128: <circle cx='237.59613433413318' cy='360.7718490696113' fill='#aab0b4' opacity='0.62'> 
+129: <circle cx='251.81820095974098' cy='350.7471217676068' fill='#aab0b4' opacity='0.62'> 
+130: <circle cx='279.82048842316783' cy='310.4624144278106' fill='#aab0b4' opacity='0.62'> 
+131: <circle cx='341.44848515727017' cy='261.2044769068229' fill='#aab0b4' opacity='0.62'> 
+132: <circle cx='253.25569971919316' cy='353.05375589299706' fill='#aab0b4' opacity='0.62'> 
+133: <circle cx='326.79734385758655' cy='263.51759566481763' fill='#aab0b4' opacity='0.62'> 
+134: <circle cx='256.2012544699617' cy='355.87241032396395' fill='#aab0b4' opacity='0.62'> 
+135: <circle cx='280.90632311772316' cy='303.77127891635894' fill='#aab0b4' opacity='0.62'> 
+136: <circle cx='299.0249434285162' cy='294.263058750427' fill='#aab0b4' opacity='0.62'> 
+137: <circle cx='329.02042512342115' cy='304.69854859691276' fill='#aab0b4' opacity='0.62'> 
+138: <circle cx='312.65400211399526' cy='275.46001825128224' fill='#aab0b4' opacity='0.62'> 
+139: <circle cx='279.39445239875056' cy='301.9006601347647' fill='#aab0b4' opacity='0.62'> 
+140: <circle cx='238.7048302570004' cy='356.9844310752831' fill='#aab0b4' opacity='0.62'> 
+141: <circle cx='245.81726060435344' cy='353.4860276716784' fill='#aab0b4' opacity='0.62'> 
+142: <circle cx='237.7973460038416' cy='362.1499575602483' fill='#aab0b4' opacity='0.62'> 
+143: <circle cx='300.70617634912264' cy='298.06041692525696' fill='#aab0b4' opacity='0.62'> 
+144: <circle cx='268.63278190001944' cy='334.97264869759033' fill='#aab0b4' opacity='0.62'> 
+145: <circle cx='253.89622157411176' cy='365.8027682345452' fill='#aab0b4' opacity='0.62'> 
+146: <circle cx='248.1668905694111' cy='355.8941810197232' fill='#aab0b4' opacity='0.62'> 
+147: <circle cx='342.536497425927' cy='283.1232229576274' fill='#aab0b4' opacity='0.62'> 
+148: <circle cx='313.76055068668086' cy='291.4153303091026' fill='#aab0b4' opacity='0.62'> 
+149: <circle cx='286.31794675714855' cy='309.8537627567458' fill='#aab0b4' opacity='0.62'> 
+150: <circle cx='335.3938499033824' cy='280.12671930945055' fill='#aab0b4' opacity='0.62'> 
+151: <circle cx='303.8809191848898' cy='296.4345081693066' fill='#aab0b4' opacity='0.62'> 
+152: <circle cx='327.28314593700344' cy='259.34407143876336' fill='#aab0b4' opacity='0.62'> 
+153: <circle cx='314.69884533476306' cy='285.3700763377005' fill='#aab0b4' opacity='0.62'> 
+154: <circle cx='245.05410885077427' cy='354.5842613209466' fill='#aab0b4' opacity='0.62'> 
+155: <circle cx='247.8200852028855' cy='356.8615736179373' fill='#aab0b4' opacity='0.62'> 
+156: <circle cx='237.30558160337156' cy='358.4349902445751' fill='#aab0b4' opacity='0.62'> 
+157: <circle cx='332.23083661944406' cy='288.2963010980721' fill='#aab0b4' opacity='0.62'> 
+158: <circle cx='250.44912241091498' cy='355.639803706144' fill='#aab0b4' opacity='0.62'> 
+159: <circle cx='331.7430900120457' cy='282.4278096844569' fill='#aab0b4' opacity='0.62'> 
+160: <circle cx='303.70670456225173' cy='279.42836819245224' fill='#aab0b4' opacity='0.62'> 
+161: <circle cx='255.45745635531745' cy='346.15004097207617' fill='#aab0b4' opacity='0.62'> 
+162: <circle cx='279.3006960293203' cy='325.8331305802487' fill='#aab0b4' opacity='0.62'> 
+163: <circle cx='290.69137464141335' cy='303.64275262504793' fill='#aab0b4' opacity='0.62'> 
+164: <circle cx='250.13923420972154' cy='353.9449160816598' fill='#aab0b4' opacity='0.62'> 
+165: <circle cx='329.3877210079006' cy='267.2776999618563' fill='#aab0b4' opacity='0.62'> 
+166: <circle cx='345.87294622922616' cy='291.24400008927853' fill='#aab0b4' opacity='0.62'> 
+167: <circle cx='303.9381920724311' cy='288.5641747320228' fill='#aab0b4' opacity='0.62'> 
+168: <circle cx='335.68729368305287' cy='292.87157037026145' fill='#aab0b4' opacity='0.62'> 
+169: <circle cx='289.51258135896836' cy='317.41740363092254' fill='#aab0b4' opacity='0.62'> 
+170: <circle cx='340.1232241379161' cy='253.1531424220722' fill='#aab0b4' opacity='0.62'> 
+171: <circle cx='334.88959696336343' cy='298.5521069638938' fill='#aab0b4' opacity='0.62'> 
+172: <circle cx='263.7150677568069' cy='350.8179730843456' fill='#aab0b4' opacity='0.62'> 
+173: <circle cx='276.8202981229865' cy='304.6183178291181' fill='#aab0b4' opacity='0.62'> 
+174: <circle cx='269.98095787200646' cy='340.28131646724836' fill='#aab0b4' opacity='0.62'> 
+175: <circle cx='343.3414611351954' cy='302.85560012688563' fill='#aab0b4' opacity='0.62'> 
+176: <circle cx='278.8875338032608' cy='298.9538856109076' fill='#aab0b4' opacity='0.62'> 
+177: <circle cx='295.33699512180897' cy='304.95433434084487' fill='#aab0b4' opacity='0.62'> 
+178: <circle cx='295.3929195548123' cy='304.14829384094986' fill='#aab0b4' opacity='0.62'> 
+179: <circle cx='351.3407030313144' cy='281.1441647406001' fill='#aab0b4' opacity='0.62'> 
+180: <circle cx='303.81843613072226' cy='301.19083094299793' fill='#aab0b4' opacity='0.62'> 
+181: <circle cx='241.87334898758823' cy='367' fill='#aab0b4' opacity='0.62'> 
+182: <circle cx='246.9102032594192' cy='359.2250152386532' fill='#aab0b4' opacity='0.62'> 
+183: <circle cx='293.60619240826077' cy='301.23139033317744' fill='#aab0b4' opacity='0.62'> 
+184: <circle cx='315.13332464042895' cy='251.7336374195762' fill='#aab0b4' opacity='0.62'> 
+185: <circle cx='312.4578161618592' cy='265.7293707905847' fill='#aab0b4' opacity='0.62'> 
+186: <circle cx='275.42269019726854' cy='323.0110767662082' fill='#aab0b4' opacity='0.62'> 
+187: <circle cx='254.66570684226375' cy='366.7632825913647' fill='#aab0b4' opacity='0.62'> 
+188: <circle cx='308.2080767960034' cy='287.37089654010936' fill='#aab0b4' opacity='0.62'> 
+189: <circle cx='247.0404152700404' cy='364.82122812914884' fill='#aab0b4' opacity='0.62'> 
+190: <circle cx='287.75598487704656' cy='316.4950518752618' fill='#aab0b4' opacity='0.62'> 
+191: <circle cx='348.58956585233403' cy='295.02980421266096' fill='#aab0b4' opacity='0.62'> 
+192: <circle cx='341.57749165637097' cy='251' fill='#aab0b4' opacity='0.62'> 
+193: <circle cx='237.5253483399754' cy='362.8971862614451' fill='#aab0b4' opacity='0.62'> 
+194: <circle cx='287.77788878631156' cy='303.66429157464046' fill='#aab0b4' opacity='0.62'> 
+195: <circle cx='279.320400790632' cy='298.4447934901653' fill='#aab0b4' opacity='0.62'> 
+196: <circle cx='246.02777668108453' cy='366.54204117061505' fill='#aab0b4' opacity='0.62'> 
+197: <circle cx='251.3822027124838' cy='346.84009051778304' fill='#aab0b4' opacity='0.62'> 
+198: <circle cx='289.3436803652341' cy='286.1150246943761' fill='#aab0b4' opacity='0.62'> 
+199: <circle cx='332.88956345469614' cy='280.47854329823303' fill='#aab0b4' opacity='0.62'> 
+200: <circle cx='286.6002215152552' cy='275.1576469253106' fill='#aab0b4' opacity='0.62'> 
+201: <circle cx='314.0528562445668' cy='286.170914415949' fill='#aab0b4' opacity='0.62'> 
+202: <circle cx='242.3045707824099' cy='363.68333489578686' fill='#aab0b4' opacity='0.62'> 
+203: <circle cx='350.7116163303368' cy='313.09019428132206' fill='#aab0b4' opacity='0.62'> 
+204: <circle cx='285.6739901978085' cy='312.939892817026' fill='#aab0b4' opacity='0.62'> 
+205: <circle cx='298.28640745036313' cy='293.986439336534' fill='#aab0b4' opacity='0.62'> 
+206: <circle cx='287.4482333330641' cy='302.1137609761752' fill='#aab0b4' opacity='0.62'> 
+207: <circle cx='322.13045140699194' cy='287.9816390834123' fill='#aab0b4' opacity='0.62'> 
+208: <circle cx='307.40061577107014' cy='275.78204004093675' fill='#aab0b4' opacity='0.62'> 
+209: <circle cx='297.34053340601935' cy='301.21981147708965' fill='#aab0b4' opacity='0.62'> 
+210: <circle cx='238.18137758859987' cy='361.77839351237486' fill='#aab0b4' opacity='0.62'> 
+211: <circle cx='252.17368639120113' cy='349.356495242917' fill='#aab0b4' opacity='0.62'> 
+212: <circle cx='319.83389098720966' cy='276.4903529271826' fill='#aab0b4' opacity='0.62'> 
+213: <circle cx='319.95189990286104' cy='290.6382199134575' fill='#aab0b4' opacity='0.62'> 
+214: <circle cx='244.6323218061596' cy='362.1178624559977' fill='#aab0b4' opacity='0.62'> 
+215: <circle cx='255.62668507058328' cy='347.7729162548073' fill='#aab0b4' opacity='0.62'> 
+216: <circle cx='260.0506706843519' cy='352.27244935004' fill='#aab0b4' opacity='0.62'> 
+217: <circle cx='311.4049634974317' cy='289.104014712991' fill='#aab0b4' opacity='0.62'> 
+218: <circle cx='284.73207606691545' cy='315.31682715340384' fill='#aab0b4' opacity='0.62'> 
+219: <circle cx='265.77143929770244' cy='344.52111470493367' fill='#aab0b4' opacity='0.62'> 
+220: <circle cx='348.7200069625302' cy='303.2983184585676' fill='#aab0b4' opacity='0.62'> 
+221: <circle cx='263.7761261872088' cy='351.83526176995395' fill='#aab0b4' opacity='0.62'> 
+222: <circle cx='348.48696691251837' cy='297.6815207891623' fill='#aab0b4' opacity='0.62'> 
+223: <circle cx='351.1928290298066' cy='274.66895258521976' fill='#aab0b4' opacity='0.62'> 
+224: <circle cx='339.74444427962345' cy='286.77907221265093' fill='#aab0b4' opacity='0.62'> 
+225: <circle cx='271.555076244879' cy='314.8630279452926' fill='#aab0b4' opacity='0.62'> 
+226: <circle cx='293.9110727070022' cy='285.3471925104002' fill='#aab0b4' opacity='0.62'> 
+227: <circle cx='296.9665059647658' cy='284.04116283310015' fill='#aab0b4' opacity='0.62'> 
+228: <circle cx='265.0543210021706' cy='338.9771991782011' fill='#aab0b4' opacity='0.62'> 
+229: <circle cx='279.8254377962105' cy='304.4452649175811' fill='#aab0b4' opacity='0.62'> 
+230: <circle cx='334.61892807687457' cy='283.53139091647415' fill='#aab0b4' opacity='0.62'> 
+231: <circle cx='292.47696985846545' cy='304.91463959708807' fill='#aab0b4' opacity='0.62'> 
+232: <circle cx='339.4681072577724' cy='277.27399557994204' fill='#aab0b4' opacity='0.62'> 
+233: <circle cx='294.8132802542476' cy='293.4428899907829' fill='#aab0b4' opacity='0.62'> 
+234: <circle cx='252.09692086218237' cy='362.60295465986485' fill='#aab0b4' opacity='0.62'> 
+235: <circle cx='340.3240496325934' cy='308.4698416156149' fill='#aab0b4' opacity='0.62'> 
+236: <circle cx='327.65750048601626' cy='271.855001531954' fill='#aab0b4' opacity='0.62'> 
+237: <circle cx='291.6765737614933' cy='289.1742962009922' fill='#aab0b4' opacity='0.62'> 
+238: <circle cx='266.5282526474815' cy='333.4693968604427' fill='#aab0b4' opacity='0.62'> 
+239: <circle cx='236.80411393638556' cy='361.67435917287975' fill='#aab0b4' opacity='0.62'> 
+240: <circle cx='272.6191515423519' cy='329.3449004202947' fill='#aab0b4' opacity='0.62'> 
+241: <circle cx='291.5607760493316' cy='310.98624486736657' fill='#aab0b4' opacity='0.62'> 
+242: <circle cx='306.52827179117895' cy='284.2175386701597' fill='#aab0b4' opacity='0.62'> 
+243: <circle cx='312.97206649935265' cy='279.1446321560799' fill='#aab0b4' opacity='0.62'> 
+244: <circle cx='260.29597198462284' cy='355.0704117699315' fill='#aab0b4' opacity='0.62'> 
+245: <circle cx='303.89476681420933' cy='295.0655716726469' fill='#aab0b4' opacity='0.62'> 
+246: <circle cx='256.7308065086706' cy='350.45971824312943' fill='#aab0b4' opacity='0.62'> 
+247: <circle cx='280.79335360209166' cy='320.94645856398955' fill='#aab0b4' opacity='0.62'> 
+248: <circle cx='248.09936951364372' cy='353.2510721364921' fill='#aab0b4' opacity='0.62'> 
+249: <circle cx='292.88053387496046' cy='301.57394698711937' fill='#aab0b4' opacity='0.62'> 
+250: <circle cx='341.33015286515456' cy='299.6090788330441' fill='#aab0b4' opacity='0.62'> 
+251: <circle cx='277.95159049979117' cy='304.44779718983034' fill='#aab0b4' opacity='0.62'> 
+252: <circle cx='282.5269162314224' cy='312.8159400665419' fill='#aab0b4' opacity='0.62'> 
+253: <circle cx='289.72099267236257' cy='285.278703400337' fill='#aab0b4' opacity='0.62'> 
+254: <circle cx='338.8966040013548' cy='304.75494554329526' fill='#aab0b4' opacity='0.62'> 
+255: <circle cx='289.302705887526' cy='306.62460622516744' fill='#aab0b4' opacity='0.62'> 
+256: <circle cx='287.53104474452437' cy='279.61602013058354' fill='#aab0b4' opacity='0.62'> 
+257: <circle cx='305.6551595303415' cy='285.34008035853117' fill='#aab0b4' opacity='0.62'> 
+258: <circle cx='309.2628538827511' cy='268.7599057335873' fill='#aab0b4' opacity='0.62'> 
+259: <circle cx='294.7850817904564' cy='321.02392112726534' fill='#aab0b4' opacity='0.62'> 
+260: <circle cx='276.7686961512949' cy='321.3518418879545' fill='#aab0b4' opacity='0.62'> 
+261: <circle cx='303.22554793023346' cy='287.7685375011512' fill='#aab0b4' opacity='0.62'> 
+262: <circle cx='274.9171555365945' cy='329.60956908090014' fill='#aab0b4' opacity='0.62'> 
+263: <circle cx='331.88579546593155' cy='295.5545848145015' fill='#aab0b4' opacity='0.62'> 
+264: <circle cx='348.4864820634092' cy='285.20907073372643' fill='#aab0b4' opacity='0.62'> 
+265: <circle cx='276.59583979727665' cy='302.1692628299748' fill='#aab0b4' opacity='0.62'> 
+266: <circle cx='307.0643868937976' cy='275.49830006258037' fill='#aab0b4' opacity='0.62'> 
+267: <circle cx='275.61637339336016' cy='304.1678852226934' fill='#aab0b4' opacity='0.62'> 
+268: <circle cx='328.77488255607307' cy='279.3940095105609' fill='#aab0b4' opacity='0.62'> 
+269: <circle cx='310.0635135630895' cy='284.90733342036356' fill='#aab0b4' opacity='0.62'> 
+270: <circle cx='291.05197738514653' cy='304.6065622767662' fill='#aab0b4' opacity='0.62'> 
+271: <circle cx='351.5842967255738' cy='280.16770146560964' fill='#aab0b4' opacity='0.62'> 
+272: <circle cx='239.8572974966412' cy='357.15610673864796' fill='#aab0b4' opacity='0.62'> 
+273: <circle cx='276.110633522747' cy='320.4023455523716' fill='#aab0b4' opacity='0.62'> 
+274: <circle cx='277.70597553156944' cy='321.11342739091765' fill='#aab0b4' opacity='0.62'> 
+275: <circle cx='256.466364202251' cy='354.4082347825681' fill='#aab0b4' opacity='0.62'> 
+276: <circle cx='300.2601674537532' cy='279.9362376073556' fill='#aab0b4' opacity='0.62'> 
+277: <circle cx='296.3646367337919' cy='262.4551587084455' fill='#aab0b4' opacity='0.62'> 
+278: <polyline fill='none' points='234.0,363.9878316923932 235.49367088607596,363.59769251797877 236.9873417721519,363.1593984490789 238.48101265822785,362.6676518079306 239.9746835443038,362.116745817421 241.46835443037975,361.50058088958116 242.9620253164557,360.8126971692149 244.45569620253164,360.04632719788856 245.9493670886076,359.1944728146379 247.44303797468353,358.25001044138594 248.9367088607595,357.2058286041398 250.43037974683546,356.05500079083544 251.9240506329114,354.79099541379344 253.41772151898735,353.4079226139759 254.91139240506328,351.90081484279244 256.40506329113924,350.26593459114264 257.8987341772152,348.50109843090274 259.39240506329116,346.60600197588093 260.88607594936707,344.5825259240278 262.37974683544303,342.4349996521727 263.873417721519,340.1703966636046 265.36708860759495,337.798436318961 266.8607594936709,335.33156935361797 268.3544303797468,332.7848310174029 269.8481012658228,330.17555508933816 271.34177215189874,327.52295375471977 272.8354430379747,324.8475810511858 274.3291139240506,322.17070956868156 275.82278481012656,319.5136595123454 277.3164556962025,316.89712457997797 278.8101265822785,314.3405394670745 280.30379746835445,311.8615291307074 281.7974683544304,309.4754710100099 283.2911392405063,307.19518967366844 284.7848101265823,305.03079063960337 286.27848101265823,302.98962814779134 287.7721518987342,301.0763918657948 289.2658227848101,299.2932907186323 290.75949367088606,297.6403085149323 292.253164556962,296.1155055324077 293.746835443038,294.7153421201917 295.24050632911394,293.43500390116606 296.73417721518985,292.26871253922974 298.2278481012658,291.2100106111727 299.72151898734177,290.2520133979742 301.2151898734177,289.3876240766373 302.7088607594937,288.60971170482446 304.2025316455696,287.9112535262282 305.69620253164555,287.2854445489098 307.1898734177215,286.72577817291307 308.6835443037975,286.2261019960767 310.17721518987344,285.7806529343329 311.6708860759494,285.3840755665559 313.1645569620253,285.03142724577555 314.65822784810126,284.71817307870333 316.1518987341772,284.440173414868 317.6455696202532,284.19366603952085 319.1392405063291,283.9752448519857 320.63291139240505,283.7818364445926 322.126582278481,283.6106756810717 323.62025316455697,283.48 325.11392405063293,283.48 326.60759493670884,283.48 328.1012658227848,283.48 329.59493670886076,283.48 331.0886075949367,283.48 332.5822784810127,283.48 334.0759493670886,283.48 335.56962025316454,283.48 337.0632911392405,283.48 338.55696202531647,283.48 340.0506329113924,283.48 341.54430379746833,283.48 343.0379746835443,283.48 344.53164556962025,283.48 346.0253164556962,283.48 347.5189873417722,283.48 349.0126582278481,283.48 350.50632911392404,283.48 352.0,283.48' stroke='#1676e8' stroke-width='3'> 
+279: <rect fill='#ffffff' height='295' rx='5' ry='5'> 
+280: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Learned-online
+281: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Adaptive learned parameters
+282: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='22' font-style='italic'> x₁:ₜ
+283: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.4' x1='437'> 
+284: <rect fill='#e5f2fa' height='48' rx='2' ry='2'> 
+285: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='20' font-style='normal'> gᵩ
+286: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.4' x1='515'> 
+287: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='23' font-style='italic'> θₜ
+288: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='22' font-style='italic'> θₜ₋₁
+289: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.2' x1='479'> 
+290: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='15' font-style='normal'> online update
+291: <rect fill='#ffffff' height='295' rx='5' ry='5'> 
+292: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Unreported
+293: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Provenance unspecified
+294: <rect fill='#f7fbff' height='98' rx='5' ry='5'> 
+295: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='normal'> provenance: — not specified
+296: <rect fill='url(#g2)' height='366' rx='10' ry='10'> 
+297: <rect fill='none' height='358' rx='8' ry='8'> 
+298: <rect fill='none' height='1' rx='0' ry='0'> 
+299: <rect fill='url(#g2)' height='56' rx='7' ry='7'> 
+300: <rect fill='white' height='47' rx='4' ry='4'> 
+301: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='34' font-style='normal'> D2
+302: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='25' font-style='normal'> Application Stage
+303: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='italic'> Where does physics enter the forecasting system?
+304: <rect fill='#ffffff' height='145.0' rx='5' ry='5'> 
+305: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Training loss
+306: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Physics term in objective function
+307: <rect fill='#e8f5ff' height='59' rx='3' stroke='none'> 
+308: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='34' font-style='italic'> ℒ = ℒₜₐₛₖ + λℒₚₕᵧₛ
+309: <rect fill='#ffffff' height='145.0' rx='5' ry='5'> 
+310: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Architecture
+311: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Physics-constrained layer / graph
+312: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='16' font-style='normal'> feature x
+313: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='1165.5'> 
+314: <rect fill='#d8efff' height='55' rx='2' ry='2'> 
+315: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='13' font-style='normal'> constrained module
+316: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='1306.5'> 
+317: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='16' font-style='normal'> prediction ŷ
+318: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> physics / physical prior
+319: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='1254.5'> 
+320: <rect fill='#ffffff' height='145.0' rx='5' ry='5'> 
+321: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Data generation
+322: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Physics-guided synthetic samples
+323: <rect fill='#d9edff' height='49' rx='2' ry='2'> 
+324: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='23' font-style='normal'> fₚₕᵧₛ(θ)
+325: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> physical
+326: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> simulator
+327: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='829'> 
+328: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='italic'> {(x⁽ⁱ⁾, y⁽ⁱ⁾)}ᴺᵢ₌₁
+329: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='977'> 
+330: <polyline fill='none' points='1009,360.0 1019,362.0 1031,362.0 1044,362.0 1059,356.0' stroke='#1676e8' stroke-width='1'> 
+331: <polyline fill='none' points='1009,375.0 1019,378.0 1031,372.0 1044,377.0 1059,372.0' stroke='#1676e8' stroke-width='1'> 
+332: <polyline fill='none' points='1009,390.0 1019,387.0 1031,389.0 1044,391.0 1059,387.0' stroke='#1676e8' stroke-width='1'> 
+333: <polyline fill='none' points='1009,405.0 1019,406.0 1031,408.0 1044,404.0 1059,403.0' stroke='#1676e8' stroke-width='1'> 
+334: <polyline fill='none' points='1009,420.0 1019,420.0 1031,419.0 1044,423.0 1059,416.0' stroke='#1676e8' stroke-width='1'> 
+335: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='italic'> X ∈ ℝᴺˣᵀˣᵈ
+336: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='22' font-style='normal'> ⋮
+337: <rect fill='#ffffff' height='145.0' rx='5' ry='5'> 
+338: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Post-hoc correction
+339: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Projection / clipping after inference
+340: <line stroke='#111111' stroke-width='1.2' x1='1127.5' x2='1283.5'> 
+341: <line stroke='#111111' stroke-width='1.2' x1='1127.5' x2='1127.5'> 
+342: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Time step t
+343: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Power (p.u.)
+344: <line stroke='#111111' stroke-width='0.8' x1='1127.5' x2='1127.5'> 
+345: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0
+346: <line stroke='#111111' stroke-width='0.8' x1='1158.7' x2='1158.7'> 
+347: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 2
+348: <line stroke='#111111' stroke-width='0.8' x1='1189.9' x2='1189.9'> 
+349: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 4
+350: <line stroke='#111111' stroke-width='0.8' x1='1221.1' x2='1221.1'> 
+351: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 6
+352: <line stroke='#111111' stroke-width='0.8' x1='1252.3' x2='1252.3'> 
+353: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 8
+354: <line stroke='#111111' stroke-width='0.8' x1='1283.5' x2='1283.5'> 
+355: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 10
+356: <line stroke='#111111' stroke-width='0.8' x1='1124.5' x2='1130.5'> 
+357: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.7
+358: <line stroke='#111111' stroke-width='0.8' x1='1124.5' x2='1130.5'> 
+359: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.9
+360: <line stroke='#111111' stroke-width='0.8' x1='1124.5' x2='1130.5'> 
+361: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 1.1
+362: <line stroke='#313a42' stroke-dasharray='2,3' stroke-width='1' x1='1127.5'> 
+363: <polyline fill='none' points='1127.5,434.406 1130.6836734693877,432.15891490786385 1133.8673469387754,429.2562796441998 1137.0510204081634,426.06333609079223 1140.234693877551,422.69151182177256 1143.4183673469388,419.2080946303418 1146.6020408163265,415.6629390445147 1149.7857142857142,412.09699969873344 1152.969387755102,408.54591363821567 1156.1530612244899,405.0417367597198 1159.3367346938776,401.6138570213336 1162.5204081632653,398.289494598886 1165.704081632653,395.0939770410334 1168.8877551020407,392.05088455003573 1172.0714285714287,389.18211733189673 1175.2551020408164,386.5079151896765 1178.438775510204,384.04684781597626 1181.6224489795918,381.81578758029036 1184.8061224489795,379.82987264002736 1187.9897959183672,378.10246574109243 1191.1734693877552,376.64511248498764 1194.357142857143,375.46750177566963 1197.5408163265306,374.5774304202371 1200.7244897959183,373.9807733233478 1203.908163265306,373.68146031244373 1207.091836734694,373.68146031244373 1210.2755102040817,373.9807733233478 1213.4591836734694,374.5774304202371 1216.642857142857,375.46750177566963 1219.8265306122448,376.64511248498764 1223.0102040816328,378.10246574109243 1226.1938775510205,379.82987264002736 1229.3775510204082,381.81578758029036 1232.561224489796,384.04684781597626 1235.7448979591836,386.5079151896765 1238.9285714285713,389.18211733189673 1242.1122448979593,392.05088455003573 1245.295918367347,395.0939770410333 1248.4795918367347,398.289494598886 1251.6632653061224,401.6138570213336 1254.8469387755101,405.0417367597198 1258.0306122448978,408.54591363821567 1261.2142857142858,412.09699969873344 1264.3979591836735,415.6629390445147 1267.5816326530612,419.2080946303418 1270.765306122449,422.69151182177256 1273.9489795918366,426.06333609079223 1277.1326530612246,429.2562796441998 1280.3163265306123,432.1589149078638 1283.5,434.406' stroke='#858d94' stroke-dasharray='8,5'> 
+364: <polyline fill='none' points='1127.5,434.406 1130.6836734693877,432.15891490786385 1133.8673469387754,429.2562796441998 1137.0510204081634,426.06333609079223 1140.234693877551,422.69151182177256 1143.4183673469388,419.2080946303418 1146.6020408163265,415.6629390445147 1149.7857142857142,412.09699969873344 1152.969387755102,408.54591363821567 1156.1530612244899,405.0417367597198 1159.3367346938776,402.426 1162.5204081632653,402.426 1165.704081632653,402.426 1168.8877551020407,402.426 1172.0714285714287,402.426 1175.2551020408164,402.426 1178.438775510204,402.426 1181.6224489795918,402.426 1184.8061224489795,402.426 1187.9897959183672,402.426 1191.1734693877552,402.426 1194.357142857143,402.426 1197.5408163265306,402.426 1200.7244897959183,402.426 1203.908163265306,402.426 1207.091836734694,402.426 1210.2755102040817,402.426 1213.4591836734694,402.426 1216.642857142857,402.426 1219.8265306122448,402.426 1223.0102040816328,402.426 1226.1938775510205,402.426 1229.3775510204082,402.426 1232.561224489796,402.426 1235.7448979591836,402.426 1238.9285714285713,402.426 1242.1122448979593,402.426 1245.295918367347,402.426 1248.4795918367347,402.426 1251.6632653061224,402.426 1254.8469387755101,405.0417367597198 1258.0306122448978,408.54591363821567 1261.2142857142858,412.09699969873344 1264.3979591836735,415.6629390445147 1267.5816326530612,419.2080946303418 1270.765306122449,422.69151182177256 1273.9489795918366,426.06333609079223 1277.1326530612246,429.2562796441998 1280.3163265306123,432.1589149078638 1283.5,434.406' stroke='#1676e8' stroke-width='3'> 
+365: <line stroke='#858d94' stroke-dasharray='7,4' stroke-width='2' x1='1301.5'> 
+366: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='11' font-style='normal'> raw forecast ŷᵣₐw
+367: <line stroke='#313a42' stroke-dasharray='2,3' stroke-width='1' x1='1301.5'> 
+368: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='11' font-style='normal'> physical bound
+369: <line stroke='#1676e8' stroke-width='3' x1='1301.5' x2='1329.5'> 
+370: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='11' font-style='normal'> projected output ŷₚᵣₒⱼ
+371: <rect fill='url(#g3)' height='303' rx='10' ry='10'> 
+372: <rect fill='none' height='295' rx='8' ry='8'> 
+373: <rect fill='none' height='1' rx='0' ry='0'> 
+374: <rect fill='url(#g3)' height='56' rx='7' ry='7'> 
+375: <rect fill='white' height='47' rx='4' ry='4'> 
+376: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='34' font-style='normal'> D3
+377: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='25' font-style='normal'> Inference Telemetry Requirements
+378: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='italic'> What external information is required at deployment?
+379: <rect fill='#ffffff' height='232' rx='5' ry='5'> 
+380: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> None
+381: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Historical target SCADA
+382: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='25' font-style='italic'> Pₜ₋ᴸ:ₜ
+383: <line stroke='#111111' stroke-width='1.2' x1='59' x2='137'> 
+384: <line stroke='#111111' stroke-width='1.2' x1='59' x2='59'> 
+385: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Power (p.u.)
+386: <polyline fill='none' points='59.0,646.717079382758 60.659574468085104,665.7386052867391 62.319148936170215,652.3059217604039 63.97872340425532,655.9584906473916 65.63829787234043,656.0976209147079 67.29787234042553,684.0840083374841 68.95744680851064,681.4826849431003 70.61702127659575,685.7852050895616 72.27659574468085,684.4969357491935 73.93617021276596,674.7741232873258 75.59574468085106,664.2518735838582 77.25531914893617,658.3268168912849 78.91489361702128,665.4130794291458 80.57446808510639,659.9544091359181 82.23404255319149,676.6810024868281 83.8936170212766,699.3 85.5531914893617,668.5001872149718 87.2127659574468,678.2786654424117 88.87234042553192,673.6828717454715 90.53191489361703,657.1689654269979 92.19148936170212,653.7094043364211 93.85106382978722,656.9974930573611 95.51063829787233,671.4787132249056 97.17021276595744,670.3023746230485 98.82978723404256,691.6412512860308 100.48936170212767,666.2133094205681 102.14893617021278,685.8792653722511 103.80851063829788,668.7174550207639 105.46808510638297,659.2356189953209 107.12765957446808,653.7815871873452 108.7872340425532,659.7636902520088 110.44680851063829,659.793306211544 112.1063829787234,699.3 113.76595744680851,680.1552358917517 115.42553191489361,681.5566399716073 117.08510638297872,679.4861417157935 118.74468085106383,654.2463715809683 120.40425531914894,669.0889625664254 122.06382978723404,657.5954747064244 123.72340425531915,676.9280199513086 125.38297872340425,663.0041833925363 127.04255319148936,688.0001181223488 128.70212765957444,693.3361686671598 130.36170212765956,659.0697345471956 132.02127659574467,669.20533527751 133.68085106382978,667.734080297459 135.3404255319149,658.7649372488536 137.0,669.7530671438543' stroke='#1676e8' stroke-width='2'> 
+387: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='144'> 
+388: <rect fill='#dcefff' height='47' rx='1' ry='1'> 
+389: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> forecast model
+390: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='231'> 
+391: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='24' font-style='italic'> ŷ
+392: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Time
+393: <rect fill='#ffffff' height='232' rx='5' ry='5'> 
+394: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='normal'> Forecast input
+395: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Future NWP
+396: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='22' font-style='italic'> NWPₜ₊₁:ₜ₊ᴴ ∈ ℝᴴˣᵈ
+397: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='13' font-style='italic'> v
+398: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='13' font-style='italic'> T
+399: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='13' font-style='italic'> P
+400: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='13' font-style='italic'> ⋮
+401: <rect fill='#8bd3dd' height='15' stroke='white' stroke-width='0.5'> 
+402: <rect fill='#67b7dc' height='15' stroke='white' stroke-width='0.5'> 
+403: <rect fill='#4ea2d8' height='15' stroke='white' stroke-width='0.5'> 
+404: <rect fill='#74c7b8' height='15' stroke='white' stroke-width='0.5'> 
+405: <rect fill='#8bd3dd' height='15' stroke='white' stroke-width='0.5'> 
+406: <rect fill='#6cb4d6' height='15' stroke='white' stroke-width='0.5'> 
+407: <rect fill='#91d5c6' height='15' stroke='white' stroke-width='0.5'> 
+408: <rect fill='#6ab0d7' height='15' stroke='white' stroke-width='0.5'> 
+409: <rect fill='#7cc7d1' height='15' stroke='white' stroke-width='0.5'> 
+410: <rect fill='#58a3d4' height='15' stroke='white' stroke-width='0.5'> 
+411: <rect fill='#7bcbbf' height='15' stroke='white' stroke-width='0.5'> 
+412: <rect fill='#95d7c8' height='15' stroke='white' stroke-width='0.5'> 
+413: <rect fill='#8bd3dd' height='15' stroke='white' stroke-width='0.5'> 
+414: <rect fill='#67b7dc' height='15' stroke='white' stroke-width='0.5'> 
+415: <rect fill='#4ea2d8' height='15' stroke='white' stroke-width='0.5'> 
+416: <rect fill='#74c7b8' height='15' stroke='white' stroke-width='0.5'> 
+417: <line stroke='#111111' stroke-width='1' x1='294.66666666666663' x2='360.66666666666663'> 
+418: <line stroke='#111111' stroke-width='1' x1='294.66666666666663' x2='294.66666666666663'> 
+419: <line stroke='#111111' stroke-width='1' x1='360.66666666666663' x2='360.66666666666663'> 
+420: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='italic'> H hours
+421: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='366.66666666666663'> 
+422: <rect fill='#dcefff' height='47' rx='1' ry='1'> 
+423: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> forecast model
+424: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='453.66666666666663'> 
+425: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='24' font-style='italic'> ŷ
+426: <rect fill='#ffffff' height='232' rx='5' ry='5'> 
+427: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='normal'> Contemporaneous state
+428: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Synchronized external measurements
+429: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='20' font-style='italic'> sₜᵉˣᵗ = [sₜ⁽¹⁾, …, sₜ⁽ᵏ⁾]
+430: <rect fill='#f8fbff' height='88' rx='2' ry='2'> 
+431: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> SCADA states grid signals turbine states ⋮
+432: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='589.3333333333333'> 
+433: <rect fill='#dcefff' height='48' rx='1' ry='1'> 
+434: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> forecast model
+435: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='674.3333333333333'> 
+436: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='24' font-style='italic'> ŷ
+437: <rect fill='url(#g4)' height='303' rx='10' ry='10'> 
+438: <rect fill='none' height='295' rx='8' ry='8'> 
+439: <rect fill='none' height='1' rx='0' ry='0'> 
+440: <rect fill='url(#g4)' height='56' rx='7' ry='7'> 
+441: <rect fill='white' height='47' rx='4' ry='4'> 
+442: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='34' font-style='normal'> D4
+443: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='25' font-style='normal'> Implementation Fidelity
+444: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='italic'> Can the published formulation be verified in executable code?
+445: <rect fill='#fffdf7' height='111' rx='5' ry='5'> 
+446: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='normal'> Code availability
+447: <rect fill='#fff' height='72' rx='4' ry='4'> 
+448: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='16' font-style='normal'> Public
+449: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='12' font-style='normal'> Source code available
+450: <rect fill='#eef6ff' height='23' rx='1' ry='1'> 
+451: <line stroke='#111111' stroke-width='1' x1='760' x2='777'> 
+452: <line stroke='#111111' stroke-width='1' x1='760' x2='779'> 
+453: <line stroke='#111111' stroke-width='1' x1='760' x2='774'> 
+454: <text fill='#111111' font-family='DejaVu Sans Mono, monospace' font-size='11' font-style='normal'> loss.py
+455: <text fill='#111111' font-family='DejaVu Sans Mono, monospace' font-size='11' font-style='normal'> model.py
+456: <text fill='#1676e8' font-family='DejaVu Sans Mono, monospace' font-size='11' font-style='normal'> return ℒₚₕᵧₛ
+457: <rect fill='#fff' height='72' rx='4' ry='4'> 
+458: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='16' font-style='normal'> Not found
+459: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='12' font-style='normal'> No accessible source code
+460: <rect fill='#f8fbfd' height='27' rx='3' ry='3'> 
+461: <text fill='#111111' font-family='DejaVu Sans Mono, monospace' font-size='10' font-style='normal'> code:
+462: <text fill='#111111' font-family='DejaVu Sans Mono, monospace' font-size='11' font-style='normal'> code:
+463: <text fill='#111111' font-family='DejaVu Sans Mono, monospace' font-size='11' font-style='normal'> not available
+464: <rect fill='#fffdf7' height='116' rx='5' ry='5'> 
+465: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='16' font-style='normal'> Equation-code parity
+466: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='13' font-style='italic'> If code is public, evaluate equation-code parity
+467: <rect fill='#ffe9ef' height='78' rx='4' ry='4'> 
+468: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Published equation
+469: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='23' font-style='italic'> ℒₚᵤᵦ(θ)
+470: <rect fill='#e9f4ff' height='78' rx='4' ry='4'> 
+471: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Source code
+472: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='23' font-style='italic'> ℒₑₓₑc(θ)
+473: <rect fill='#e7f9e9' height='78' rx='4' ry='4'> 
+474: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Aligned
+475: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> Executable implementation matches formulation
+476: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='23' font-style='italic'> ℒₚᵤᵦ(θ) = ℒₑₓₑc(θ)
+477: <rect fill='#ffe8ed' height='78' rx='4' ry='4'> 
+478: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='14' font-style='normal'> Mismatch
+479: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> Discrepancy between formulation and code
+480: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='23' font-style='italic'> ℒₚᵤᵦ(θ) ≠ ℒₑₓₑc(θ)
+481: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='27' font-style='normal'> ⇔
+482: <rect fill='url(#g5)' height='313' rx='10' ry='10'> 
+483: <rect fill='none' height='305' rx='8' ry='8'> 
+484: <rect fill='none' height='1' rx='0' ry='0'> 
+485: <rect fill='url(#g5)' height='56' rx='7' ry='7'> 
+486: <rect fill='white' height='47' rx='4' ry='4'> 
+487: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='34' font-style='normal'> D5
+488: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='25' font-style='normal'> Evaluation Validity & Harm Reporting
+489: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='italic'> Does the evaluation isolate the physical prior and expose failure regimes?
+490: <rect fill='#fff' height='242' rx='5' ry='5'> 
+491: <rect fill='#fff' height='242' rx='5' ry='5'> 
+492: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='normal'> Ablation semantics
+493: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='17' font-style='normal'> Failure / harm reporting
+494: <rect fill='#fff' height='208' rx='4' ry='4'> 
+495: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='15' font-style='normal'> Constraint on/off
+496: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> Identical backbone; λ = 0 ↔ λ > 0
+497: <line stroke='#111111' stroke-width='1.2' x1='57' x2='207'> 
+498: <line stroke='#111111' stroke-width='1.2' x1='57' x2='57'> 
+499: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Forecast horizon h
+500: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Power (p.u.)
+501: <line stroke='#111111' stroke-width='0.8' x1='57' x2='57'> 
+502: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0
+503: <line stroke='#111111' stroke-width='0.8' x1='106.5' x2='106.5'> 
+504: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 10
+505: <line stroke='#111111' stroke-width='0.8' x1='156.0' x2='156.0'> 
+506: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 20
+507: <line stroke='#111111' stroke-width='0.8' x1='207' x2='207'> 
+508: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 30
+509: <line stroke='#111111' stroke-width='0.8' x1='54' x2='60'> 
+510: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.6
+511: <line stroke='#111111' stroke-width='0.8' x1='54' x2='60'> 
+512: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.8
+513: <line stroke='#111111' stroke-width='0.8' x1='54' x2='60'> 
+514: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 1.0
+515: <polyline fill='none' points='57.0,940.5 60.06122448979592,946.7561015303471 63.12244897959184,949.6594687629648 66.18367346938776,951.9477590095445 69.24489795918367,953.9102471983175 72.3061224489796,955.6613296511181 75.36734693877551,957.2605002165068 78.42857142857143,958.7434810662457 81.48979591836735,960.1337511021516 84.55102040816327,961.4477396913883 87.61224489795919,962.6974858737183 90.6734693877551,963.8921297992579 93.73469387755102,965.0388086238811 96.79591836734694,966.1432243542157 99.85714285714286,967.2100196733453 102.91836734693878,968.2430357017608 105.9795918367347,969.2454941464167 109.0408163265306,970.2201293348298 112.10204081632654,971.1692860445539 115.16326530612244,972.0949933872581 118.22448979591837,972.999021553666 121.28571428571428,973.882926048833 124.34693877551021,974.7480826367969 127.40816326530613,975.5957152772697 130.46938775510205,976.4269187017715 133.53061224489795,977.2426768371384 136.59183673469389,978.0438779749318 139.6530612244898,978.8313273639242 142.71428571428572,979.605757742171 145.77551020408163,980.3678382069784 148.83673469387756,981.1181817330569 151.8979591836735,981.8573515828622 154.9591836734694,982.5858668026575 158.0204081632653,983.304206959063 161.0816326530612,984.0128162407783 164.14285714285714,984.7121070266479 167.20408163265307,985.4024630026962 170.26530612244898,986.0842418960364 173.32653061224488,986.7577778817813 176.3877551020408,987.423383709608 179.44897959183675,988.081352588951 182.51020408163265,988.7319598655434 185.57142857142856,989.3754645169071 188.6326530612245,990.0121104901693 191.69387755102042,990.6421279020981 194.75510204081633,991.2657341183408 197.81632653061226,991.8831347264311 200.87755102040816,992.4945244150937 203.93877551020407,993.100087770665 207.0,993.7' stroke='#1676e8' stroke-width='2.2'> 
+516: <polyline fill='none' points='57.0,929.1 60.06122448979592,936.6330854546368 63.12244897959184,939.9021074214281 66.18367346938776,942.4375464985616 69.24489795918367,944.5897386265876 72.3061224489796,946.4955152245487 75.36734693877551,948.2254447972675 78.42857142857143,949.8216280951642 81.48979591836735,951.3115919939888 84.55102040816327,952.714513292398 87.61224489795919,954.0443903481809 90.6734693877551,955.3118147734235 93.73469387755102,956.5250319376787 96.79591836734694,957.6906110423822 99.85714285714286,958.813887354493 102.91836734693878,959.8992647330242 105.9795918367347,960.9504289065666 109.0408163265306,961.970501733157 112.10204081632654,962.9621552649737 115.16326530612244,963.9276977296989 118.22448979591837,964.8691394483293 121.28571428571428,965.7882441344184 124.34693877551021,966.6865693543693 127.40816326530613,967.5654988246353 130.46938775510205,968.426268474036 133.53061224489795,969.269987682968 136.59183673469389,970.0976567482032 139.6530612244898,970.9101813625906 142.71428571428572,971.7083847109262 145.77551020408163,972.4930176451116 148.83673469387756,973.264767298949 151.8979591836735,974.0242644256215 154.9591836734694,974.7720896821262 158.0204081632653,975.5087790398062 161.0816326530612,976.2348284651738 164.14285714285714,976.9506979878995 167.20408163265307,977.6568152513358 170.26530612244898,978.3535786238751 173.32653061224488,979.0413599358106 176.3877551020408,979.7205068953973 179.44897959183675,980.3913452289418 182.51020408163265,981.0541805825229 185.57142857142856,981.7093002170352 188.6326530612245,982.3569745233797 191.69387755102042,982.9974583806089 194.75510204081633,983.630992376486 197.81632653061226,984.2578039071324 200.87755102040816,984.8781081700979 203.93877551020407,985.4921090632233 207.0,986.1' stroke='#1676e8' stroke-dasharray='7,4'> 
+517: <line stroke='#1676e8' stroke-width='2' x1='141' x2='166'> 
+518: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='9' font-style='normal'> no constraint (λ = 0)
+519: <line stroke='#1676e8' stroke-dasharray='6,3' stroke-width='2' x1='141'> 
+520: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='9' font-style='normal'> constrained (λ > 0)
+521: <rect fill='#fff' height='208' rx='4' ry='4'> 
+522: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='15' font-style='normal'> Module ablation
+523: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> Full model ↔ neural block removed
+524: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='12' font-style='normal'> Full:
+525: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='italic'> x
+526: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='338.0'> 
+527: <rect fill='#dbefff' height='35' rx='2' ry='2'> 
+528: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> backbone
+529: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='426.0'> 
+530: <rect fill='#dbefff' height='39' rx='2' ry='2'> 
+531: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> constraint module
+532: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='518.0'> 
+533: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='20' font-style='italic'> ŷ
+534: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='12' font-style='normal'> Ablated:
+535: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='18' font-style='italic'> x
+536: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='351.0'> 
+537: <rect fill='#dbefff' height='35' rx='2' ry='2'> 
+538: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> backbone
+539: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='435.0'> 
+540: <rect fill='#fff' height='39' rx='2' ry='2'> 
+541: <line marker-end='url(#arrow)' stroke='#111111' stroke-width='1.5' x1='522.0'> 
+542: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='20' font-style='italic'> ŷ
+543: <rect fill='#fff' height='208' rx='4' ry='4'> 
+544: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='15' font-style='normal'> Both
+545: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> Constraint on/off and module ablation
+546: <line stroke='#111111' stroke-width='1.2' x1='553.0' x2='704.0'> 
+547: <line stroke='#111111' stroke-width='1.2' x1='553.0' x2='553.0'> 
+548: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Forecast horizon h
+549: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Power (p.u.)
+550: <line stroke='#111111' stroke-width='0.8' x1='553.0' x2='553.0'> 
+551: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0
+552: <line stroke='#111111' stroke-width='0.8' x1='602.83' x2='602.83'> 
+553: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 10
+554: <line stroke='#111111' stroke-width='0.8' x1='652.66' x2='652.66'> 
+555: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 20
+556: <line stroke='#111111' stroke-width='0.8' x1='704.0' x2='704.0'> 
+557: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 30
+558: <line stroke='#111111' stroke-width='0.8' x1='550.0' x2='556.0'> 
+559: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.6
+560: <line stroke='#111111' stroke-width='0.8' x1='550.0' x2='556.0'> 
+561: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.8
+562: <line stroke='#111111' stroke-width='0.8' x1='550.0' x2='556.0'> 
+563: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 1.0
+564: <polyline fill='none' points='553.0,934.4 556.0816326530612,940.9618508532589 559.1632653061224,944.0071119731849 562.2448979591836,946.40723595362 565.3265306122449,948.465635219288 568.4081632653061,950.3022968897066 571.4897959183673,951.9796224075391 574.5714285714286,953.5350797649721 577.6530612244898,954.9932953289484 580.734693877551,956.371501405629 583.8163265306123,957.6823254088999 586.8979591836735,958.9353541879435 589.9795918367347,960.1380737070032 593.0612244897959,961.2964646422038 596.1428571428571,962.4153965746742 599.2244897959183,963.4988983488394 602.3061224489796,964.5503491234973 605.3877551020408,965.5726168587124 608.469387755102,966.5681609264307 611.5510204081633,967.5391096054324 614.6326530612245,968.4873195995218 617.7142857142857,969.4144224346783 620.795918367347,970.3218611115276 623.8775510204082,971.2109194073619 626.9591836734694,972.0827455556175 630.0408163265306,972.9383715697805 633.1224489795918,973.7787291541578 636.204081632653,974.6046629117851 639.2857142857142,975.4169413912246 642.3673469387755,976.2162663900261 645.4489795918367,977.0032808403115 648.530612244898,977.7785755324005 651.6122448979592,978.5426948794791 654.6938775510204,979.2961418856337 657.7755102040817,980.0393824480343 660.8571428571429,980.7728490993788 663.9387755102041,981.4969442772641 667.0204081632653,982.2120431917074 670.1020408163265,982.9184963496879 673.1836734693877,983.6166317856414 676.2653061224489,984.3067570387869 679.3469387755102,984.9891609116038 682.4285714285714,985.66411503841 685.5102040816327,986.331875288561 688.5918367346939,986.992683025133 691.6734693877551,987.6467662369063 694.7551020408164,988.2943405589258 697.8367346938776,988.9356101947787 700.9183673469388,989.5707687519382 704.0,990.2' stroke='#1676e8' stroke-width='2'> 
+565: <polyline fill='none' points='553.0,939.8 556.0816326530612,946.7851960695981 559.1632653061224,950.0269256488742 562.2448979591836,952.5818963377245 565.3265306122449,954.7730955560162 568.4081632653061,956.7282515277521 571.4897959183673,958.5137915951223 574.5714285714286,960.1696010401315 577.6530612244898,961.7218950275903 580.734693877551,963.189017625347 583.8163265306123,964.5844109191517 586.8979591836735,965.918280264585 589.9795918367347,967.1985945913259 593.0612244897959,968.4317204255717 596.1428571428571,969.6228415149758 599.2244897959183,970.7762466294097 602.3061224489796,971.8955329379164 605.3877551020408,972.9837534302422 608.469387755102,974.0435261474908 611.5510204081633,975.0771166767506 614.6326530612245,976.0865015091684 617.7142857142857,977.0734174304639 620.795918367347,978.0394005380778 623.8775510204082,978.9858174336433 626.9591836734694,979.9138904301735 630.0408163265306,980.8247181226697 633.1224489795918,981.7192923253938 636.204081632653,982.5985121319003 639.2857142857142,983.4631956745294 642.3673469387755,984.3140900280923 645.4489795918367,985.1518796042026 648.530612244898,985.9771933086845 651.6122448979592,986.7906106781552 654.6938775510204,987.5926671685778 657.7755102040817,988.3838587350043 660.8571428571429,989.1646458154678 663.9387755102041,989.9354568112811 667.0204081632653,990.6966911395594 670.1020408163265,991.4487219206354 673.1836734693877,992.1918983524571 676.2653061224489,992.9265478154829 679.3469387755102,993.6529777446104 682.4285714285714,994.3714772989526 685.5102040816327,995.0823188555651 688.5918367346939,995.7857593493351 691.6734693877551,996.4820414779971 694.7551020408164,997.1713947885339 697.8367346938776,997.854036658958 700.9183673469388,998.530173187547 704.0,999.2' stroke='#24a45a' stroke-dasharray='7,4'> 
+566: <polyline fill='none' points='553.0,948.8 556.0816326530612,955.5735234614285 559.1632653061224,958.7170188110296 562.2448979591836,961.1945661456723 565.3265306122449,963.319365387652 568.4081632653061,965.2152742087294 571.4897959183673,966.9467070013307 574.5714285714286,968.5523404025519 577.6530612244898,970.0575951782694 580.734693877551,971.480259515488 583.8163265306123,972.8333681640258 586.8979591836735,974.1268172262642 589.9795918367347,975.3683341491645 593.0612244897959,976.5640925338878 596.1428571428571,977.719119044825 599.2244897959183,978.8375724891246 602.3061224489796,979.9229410307069 605.3877551020408,980.9781851444774 608.469387755102,982.0058435369607 611.5510204081633,983.0081131410915 614.6326530612245,983.9869105543452 617.7142857142857,984.9439199325711 620.795918367347,985.8806308248027 623.8775510204082,986.7983684205026 626.9591836734694,987.6983179928955 630.0408163265306,988.5815448462251 633.1224489795918,989.4490107397758 636.204081632653,990.3015875218426 639.2857142857142,991.140068532877 642.3673469387755,991.9651782090592 645.4489795918367,992.777580222257 648.530612244898,993.5778844205424 651.6122448979592,994.3666527788171 654.6938775510204,995.1444045271057 657.7755102040817,995.9116205915193 660.8571428571429,996.6687474574233 663.9387755102041,997.4162005442726 667.0204081632653,998.1543671656334 670.1020408163265,998.8836091351616 673.1836734693877,999.6042650690492 676.2653061224489,1000.3166524271348 679.3469387755102,1001.0210693281072 682.4285714285714,1001.7177961686813 685.5102040816327,1002.407097072063 688.5918367346939,1003.0892211872341 691.6734693877551,1003.7644038574517 694.7551020408164,1004.4328676737298 697.8367346938776,1005.0948234268683 700.9183673469388,1005.7504709697427 704.0,1006.4' stroke='#75818a' stroke-dasharray='7,4'> 
+567: <line stroke='#1676e8' stroke-width='2' x1='636.0' x2='661.0'> 
+568: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='9' font-style='normal'> full model
+569: <line stroke='#24a45a' stroke-dasharray='6,3' stroke-width='2' x1='636.0'> 
+570: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='9' font-style='normal'> module ablated
+571: <line stroke='#75818a' stroke-dasharray='6,3' stroke-width='2' x1='636.0'> 
+572: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='9' font-style='normal'> no constraint
+573: <rect fill='#fff' height='208' rx='4' ry='4'> 
+574: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='15' font-style='normal'> Reported
+575: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> Degradation or failure boundary disclosed
+576: <line stroke='#111111' stroke-width='1.2' x1='820' x2='1024'> 
+577: <line stroke='#111111' stroke-width='1.2' x1='820' x2='820'> 
+578: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Corruption factor α
+579: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Normalized metric (–)
+580: <line stroke='#111111' stroke-width='0.8' x1='820' x2='820'> 
+581: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.0
+582: <line stroke='#111111' stroke-width='0.8' x1='860.8' x2='860.8'> 
+583: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.2
+584: <line stroke='#111111' stroke-width='0.8' x1='901.6' x2='901.6'> 
+585: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.4
+586: <line stroke='#111111' stroke-width='0.8' x1='942.4' x2='942.4'> 
+587: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.6
+588: <line stroke='#111111' stroke-width='0.8' x1='983.2' x2='983.2'> 
+589: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.8
+590: <line stroke='#111111' stroke-width='0.8' x1='1024' x2='1024'> 
+591: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 1.0
+592: <line stroke='#111111' stroke-width='0.8' x1='817' x2='823'> 
+593: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.0
+594: <line stroke='#111111' stroke-width='0.8' x1='817' x2='823'> 
+595: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.8
+596: <line stroke='#111111' stroke-width='0.8' x1='817' x2='823'> 
+597: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 1.6
+598: <line stroke='#24a45a' stroke-dasharray='6,4' stroke-width='1.6' x1='820'> 
+599: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+600: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+601: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+602: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+603: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+604: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+605: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+606: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+607: <rect fill='#ef3e46' height='6' stroke='#ef3e46' stroke-width='0.4'> 
+608: <polyline fill='none' points='820.0,982.7352941176471 845.5,975.1213235294117 871.0,967.5073529411765 896.5,959.8933823529412 922.0,952.2794117647059 947.5,944.6654411764706 973.0,937.0514705882352 998.5,929.4375 1024.0,921.8235294117648' stroke='#ef3e46' stroke-width='2'> 
+609: <line stroke='#ef3e46' stroke-dasharray='5,4' stroke-width='1' x1='842.44'> 
+610: <text fill='#ef3e46' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='italic'> α* ≈ 0.07
+611: <text fill='#ef3e46' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> Adverse regime
+612: <text fill='#24a45a' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> Beneficial
+613: <text fill='#24a45a' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> regime
+614: <text fill='#51635a' font-family='DejaVu Sans, Arial, sans-serif' font-size='8' font-style='normal'> Unconstrained baseline (no physics)
+615: <rect fill='#fff' height='208' rx='4' ry='4'> 
+616: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='15' font-style='normal'> Not reported
+617: <text fill='#111111' font-family='Tinos, Liberation Serif, DejaVu Serif, serif' font-size='11' font-style='normal'> No adverse regime documented
+618: <line stroke='#111111' stroke-width='1.2' x1='1146.0' x2='1326.0'> 
+619: <line stroke='#111111' stroke-width='1.2' x1='1146.0' x2='1146.0'> 
+620: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Wind speed (m/s)
+621: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='12' font-style='normal'> Power (p.u.)
+622: <line stroke='#111111' stroke-width='0.8' x1='1146.0' x2='1146.0'> 
+623: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0
+624: <line stroke='#111111' stroke-width='0.8' x1='1191.0' x2='1191.0'> 
+625: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 5
+626: <line stroke='#111111' stroke-width='0.8' x1='1236.0' x2='1236.0'> 
+627: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 10
+628: <line stroke='#111111' stroke-width='0.8' x1='1281.0' x2='1281.0'> 
+629: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 15
+630: <line stroke='#111111' stroke-width='0.8' x1='1326.0' x2='1326.0'> 
+631: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 20
+632: <line stroke='#111111' stroke-width='0.8' x1='1143.0' x2='1149.0'> 
+633: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.0
+634: <line stroke='#111111' stroke-width='0.8' x1='1143.0' x2='1149.0'> 
+635: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.4
+636: <line stroke='#111111' stroke-width='0.8' x1='1143.0' x2='1149.0'> 
+637: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='10' font-style='normal'> 0.8
+638: <polyline fill='none' points='1146.0,1000.7651120855206 1149.6734693877552,1000.2621181512723 1153.3469387755101,999.6660896537069 1157.0204081632653,998.9617135326653 1160.6938775510205,998.1319319306283 1164.3673469387754,997.1580650371251 1168.0408163265306,996.0200951822918 1171.7142857142858,994.697164335994 1175.3877551020407,993.1683377470504 1179.061224489796,991.4136775477394 1182.734693877551,989.4156468936367 1186.408163265306,987.1608232513377 1190.0816326530612,984.6418370931914 1193.7551020408164,981.8593734590797 1197.4285714285713,978.823991116123 1201.1020408163265,975.5574495337042 1204.7755102040817,972.0932162599206 1208.4489795918366,968.4758829443984 1212.1224489795918,964.7593582258828 1215.795918367347,961.0039135714725 1219.4693877551022,957.2723870800903 1223.142857142857,953.6260348598789 1226.8163265306123,950.1206004799009 1230.4897959183672,946.8031227027777 1234.1632653061224,943.7098374067115 1237.8367346938776,940.8653051137659 1241.5102040816328,938.2826773336898 1245.1836734693877,935.964855969942 1248.857142857143,933.9062242721484 1252.5306122448978,932.0946299241813 1256.204081632653,930.5133568366475 1259.8775510204082,929.1429029269656 1263.5510204081634,927.9624624223316 1267.2244897959183,926.9510781621933 1270.8979591836735,926.0884762342206 1274.5714285714287,925.3556226811851 1278.2448979591836,924.7350539178068 1281.9183673469388,924.2110337774442 1285.591836734694,923.7695851675111 1289.265306122449,923.3984364814587 1292.938775510204,923.0869143973597 1296.6122448979593,922.8258067559864 1300.2857142857142,922.6072124520715 1303.9591836734694,922.4243898627254 1307.6326530612246,922.2716112097773 1311.3061224489795,922.1440272295276 1314.9795918367347,922.0375443914298 1318.6530612244899,921.9487154621063 1322.3265306122448,921.8746432759128 1326.0,921.8128970045694' stroke='#1676e8' stroke-width='2.7'> 
+639: <circle cx='1146.0' cy='943.9190651200985' fill='#ef3e46' r='2.5'> 
+640: <circle cx='1158.0' cy='953.6399886916342' fill='#ef3e46' r='2.5'> 
+641: <circle cx='1170.0' cy='943.4628249331435' fill='#ef3e46' r='2.5'> 
+642: <circle cx='1182.0' cy='968.8366679551161' fill='#ef3e46' r='2.5'> 
+643: <circle cx='1194.0' cy='927.417666223206' fill='#ef3e46' r='2.5'> 
+644: <circle cx='1206.0' cy='926.7173063787714' fill='#ef3e46' r='2.5'> 
+645: <circle cx='1218.0' cy='938.3210313717934' fill='#ef3e46' r='2.5'> 
+646: <circle cx='1230.0' cy='971.965394460611' fill='#ef3e46' r='2.5'> 
+647: <circle cx='1242.0' cy='947.3796057845609' fill='#ef3e46' r='2.5'> 
+648: <circle cx='1254.0' cy='960.5371808493562' fill='#ef3e46' r='2.5'> 
+649: <circle cx='1266.0' cy='965.8423319481276' fill='#ef3e46' r='2.5'> 
+650: <circle cx='1278.0' cy='917.9025939866789' fill='#ef3e46' r='2.5'> 
+651: <circle cx='1290.0' cy='914.9190598773088' fill='#ef3e46' r='2.5'> 
+652: <circle cx='1302.0' cy='979.8555225444336' fill='#ef3e46' r='2.5'> 
+653: <circle cx='1314.0' cy='924.222699772472' fill='#ef3e46' r='2.5'> 
+654: <circle cx='1326.0' cy='941.7507877992227' fill='#ef3e46' r='2.5'> 
+655: <polyline fill='none' points='1146.0,943.9190651200985 1158.0,953.6399886916342 1170.0,943.4628249331435 1182.0,968.8366679551161 1194.0,927.417666223206 1206.0,926.7173063787714 1218.0,938.3210313717934 1230.0,971.965394460611 1242.0,947.3796057845609 1254.0,960.5371808493562 1266.0,965.8423319481276 1278.0,917.9025939866789 1290.0,914.9190598773088 1302.0,979.8555225444336 1314.0,924.222699772472 1326.0,941.7507877992227' stroke='#ef3e46' stroke-dasharray='7,4'> 
+656: <line stroke='#1676e8' stroke-width='2.5' x1='1161.0' x2='1185.0'> 
+657: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='9' font-style='normal'> Genuine prior Cₚ
+658: <line stroke='#ef3e46' stroke-dasharray='6,3' stroke-width='2' x1='1254.0'> 
+659: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='9' font-style='normal'> Scrambled prior Cₛcᵣₐmb
+660: <rect fill='#ffe1e6' height='98' rx='4' ry='4'> 
+661: <text fill='#111111' font-family='DejaVu Sans, Arial, sans-serif' font-size='11' font-style='normal'> Downstream decision-risk exposure not evaluated (failure boundary omitted)

@@ -1,0 +1,50 @@
+2026-02-23 04:58:06.622287: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-02-23 04:58:06.721117: I tensorflow/core/platform/cpu_feature_guard.cc:210]    LSTM: R2=0.9551
+  CNN-LSTM on wind_cn (seed=123)
+    CNN-LSTM: R2=0.9497
+
+  Seed: 456
+  ARIMA on wind_cn (seed=456)
+    ARIMA: R2=-2.2959
+  SVR on wind_cn (seed=456)
+    SVR: R2=0.9962
+  LSTM on wind_cn (seed=456)
+    LSTM: R2=0.9514
+  CNN-LSTM on wind_cn (seed=456)
+    CNN-LSTM: R2=0.9526
+
+wind_cn completed!
+port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Starting wind_cn...
+
+Seed: 42
+  ARIMA on wind_cn (seed=42)
+  ARIMA: R2=-2.2959
+  SVR on wind_cn (seed=42)
+  SVR: R2=0.9962
+  LSTM on wind_cn (seed=42)
+  LSTM: R2=0.9508
+  CNN-LSTM on wind_cn (seed=42)
+  CNN-LSTM: R2=0.9451
+
+Seed: 123
+  ARIMA on wind_cn (seed=123)
+  ARIMA: R2=-2.2959
+  SVR on wind_cn (seed=123)
+  SVR: R2=0.9962
+  LSTM on wind_cn (seed=123)
+  LSTM: R2=0.9563
+  CNN-LSTM on wind_cn (seed=123)
+  CNN-LSTM: R2=0.9493
+
+Seed: 456
+  ARIMA on wind_cn (seed=456)
+  ARIMA: R2=-2.2959
+  SVR on wind_cn (seed=456)
+  SVR: R2=0.9962
+  LSTM on wind_cn (seed=456)
+  LSTM: R2=0.9526
+  CNN-LSTM on wind_cn (seed=456)
+  CNN-LSTM: R2=0.9525
+
+wind_cn completed!

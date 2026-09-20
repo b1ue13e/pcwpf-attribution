@@ -1,0 +1,21 @@
+[2026-01-25 23:30:11] 步骤1: 运行脉冲噪声实验 (DLinear vs Ultra-LSNT)
+[2026-01-25 23:30:11] 开始运行: battle_dlinear.py
+[2026-01-25 23:30:39] 成功完成: battle_dlinear.py
+[2026-01-25 23:30:39] 步骤2: 运行漂移噪声测试 (修改 run_gbdt_robustness.py)
+[2026-01-25 23:30:39] 开始运行: run_gbdt_drift.py
+[2026-01-25 23:41:16] 成功完成: run_gbdt_drift.py
+[2026-01-25 23:41:16] 步骤3: 运行量化噪声测试
+[2026-01-25 23:41:16] 开始运行: run_gbdt_quantization.py
+[2026-01-25 23:51:02] 成功完成: run_gbdt_quantization.py
+[2026-01-25 23:51:02] 步骤4: 运行轻量化 Mamba (S6) 对比实验
+[2026-01-25 23:51:02] 开始运行: run_mamba_comparison.py
+[2026-01-25 23:52:59] 成功完成: run_mamba_comparison.py
+[2026-01-25 23:52:59] 步骤5: 生成三维散点图 (计算成本 vs 精度 vs 年度罚款减少额)
+[2026-01-25 23:52:59] 开始运行: plot_3d_scatter.py
+[2026-01-25 23:53:03] 成功完成: plot_3d_scatter.py
+[2026-01-25 23:53:03] 步骤6: 生成汇总报告
+[2026-01-25 23:53:03] 开始运行: generate_summary_report.py
+[2026-01-25 23:53:03] 成功完成: generate_summary_report.py
+[2026-01-25 23:53:03] 所有实验命令已完成
+[2026-01-25 23:53:03] 请查看 logs_complete/ 目录中的日志文件
+[2026-01-25 23:53:03] 结果摘要: tail -n 30 logs_complete/run_complete_20260125_233011.log

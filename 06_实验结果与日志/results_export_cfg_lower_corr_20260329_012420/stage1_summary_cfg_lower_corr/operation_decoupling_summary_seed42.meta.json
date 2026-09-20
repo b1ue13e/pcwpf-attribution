@@ -1,0 +1,26 @@
+{
+  "script": "build_decision_aware_dispatch_evidence.py",
+  "mode": "operation",
+  "generated_at_utc": "2026-03-28T16:08:46.160332+00:00",
+  "sources": {
+    "dispatch_agg_csv": "results/ae_recovery_stage1/cfg_lower_corr/dispatch/seed_42/risk_conditional_decoupling/dispatch_operation_seed42_risk_conditional_decoupling_aggregate.csv",
+    "dispatch_meta_json": "results/ae_recovery_stage1/cfg_lower_corr/dispatch/seed_42/risk_conditional_decoupling/dispatch_operation_seed42_risk_conditional_decoupling.meta.json",
+    "focus_mapping": "risk_conditional",
+    "focus_subset": "high_risk_shared",
+    "model_order": [
+      "iTransformer raw",
+      "iTransformer + FG-MoE",
+      "Ultra-LSNT raw",
+      "Ultra-LSNT + FG-MoE",
+      "DLinear",
+      "TimeMixer"
+    ],
+    "reserve_margin_available": true
+  },
+  "outputs": {
+    "summary_csv": "results/ae_recovery_stage1/cfg_lower_corr/summary/operation_decoupling_summary_seed42.csv",
+    "figure_pdf": "results/ae_recovery_stage1/cfg_lower_corr/summary/fig_operation_decoupling_seed42.pdf",
+    "figure_png": "results/ae_recovery_stage1/cfg_lower_corr/summary/fig_operation_decoupling_seed42.png",
+    "meta_json": "results/ae_recovery_stage1/cfg_lower_corr/summary/operation_decoupling_summary_seed42.meta.json"
+  }
+}

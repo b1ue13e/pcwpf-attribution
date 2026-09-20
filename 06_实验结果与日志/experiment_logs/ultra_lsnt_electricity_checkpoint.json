@@ -1,0 +1,10 @@
+{
+  "dataset": "electricity",
+  "model": "Ultra-LSNT-Lite",
+  "seed": 42,
+  "R2": 0.940199731535861,
+  "RMSE": 16505.575742834866,
+  "MAE": 13132.880126013428,
+  "params": 349368,
+  "source": "checkpoint_based_evaluation"
+}

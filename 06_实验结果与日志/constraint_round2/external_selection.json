@@ -1,0 +1,86 @@
+[
+  {
+    "backbone": "dlinear",
+    "family": "bounds",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "bounds",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "bounds",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "curve",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "curve",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "curve",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "distribution",
+    "factor": 0.9,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "distribution",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "distribution",
+    "factor": 1.1,
+    "control": "plain",
+    "lambda": 0.01
+  },
+  {
+    "backbone": "dlinear",
+    "family": "none",
+    "factor": 1.0,
+    "control": "augmentation",
+    "lambda": 0.0
+  },
+  {
+    "backbone": "dlinear",
+    "family": "none",
+    "factor": 1.0,
+    "control": "l2",
+    "lambda": 0.0
+  },
+  {
+    "backbone": "dlinear",
+    "family": "none",
+    "factor": 1.0,
+    "control": "plain",
+    "lambda": 0.0
+  }
+]

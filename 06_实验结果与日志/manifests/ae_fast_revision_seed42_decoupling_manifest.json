@@ -1,0 +1,34 @@
+{
+  "models": [
+    {
+      "name": "DLinear",
+      "path": "results/supplementary_evidence/dlinear_predictions_full.npz",
+      "order": 0
+    },
+    {
+      "name": "TimeMixer",
+      "path": "checkpoints_ts/TimeMixer_preds.npy",
+      "order": 1
+    },
+    {
+      "name": "iTransformer raw",
+      "path": "upload_results_ae_operation_20260328_104442/ae_operation_exports/windcn_itransformer/seed_42/prediction_archive_raw_windcn_itransformer_seed42.npz",
+      "order": 2
+    },
+    {
+      "name": "iTransformer + FG-MoE",
+      "path": "upload_results_ae_operation_20260328_104442/ae_operation_exports/windcn_itransformer/seed_42/prediction_archive_full_guardrail_windcn_itransformer_seed42.npz",
+      "order": 3
+    },
+    {
+      "name": "Ultra-LSNT raw",
+      "path": "upload_results_ae_operation_20260328_104442/ae_operation_exports/windcn_ultra/seed_42/prediction_archive_raw_windcn_ultra_seed42.npz",
+      "order": 4
+    },
+    {
+      "name": "Ultra-LSNT + FG-MoE",
+      "path": "upload_results_ae_operation_20260328_104442/ae_operation_exports/windcn_ultra/seed_42/prediction_archive_full_guardrail_windcn_ultra_seed42.npz",
+      "order": 5
+    }
+  ]
+}

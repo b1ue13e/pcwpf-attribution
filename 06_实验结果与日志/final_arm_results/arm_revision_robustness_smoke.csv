@@ -1,0 +1,16 @@
+model,scenario,fault,severity,R2,RMSE,MAE,over_rated_rate_pct,checkpoint,run_id,device,batch_size
+Ultra-LSNT (no guardrail),clean,clean,0.0,-0.15174078941345215,9674.1904296875,7264.03955078125,8.88671875,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT (no guardrail),gaussian_60pct,gaussian,0.6,-0.00953209400177002,9057.2705078125,7098.16015625,3.6458333333333335,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT (no guardrail),drift_60pct,drift,0.6,-0.6499102115631104,11578.90234375,9049.60546875,15.787760416666666,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT (no guardrail),quantization_60pct,quantization,0.6,-0.15978682041168213,9707.923828125,7289.56103515625,9.1796875,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT (no guardrail),missingness_60pct,missingness,0.6,0.13579446077346802,8380.0341796875,6207.22412109375,5.924479166666667,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT + clip-only (posthoc),clean,clean,0.0,-0.12669718265533447,9568.43359375,7189.93896484375,0.0,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT + clip-only (posthoc),gaussian_60pct,gaussian,0.6,-0.4286762475967407,10774.6748046875,7749.29052734375,0.0,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT + clip-only (posthoc),drift_60pct,drift,0.6,-0.5894054174423218,11364.611328125,8842.0244140625,0.0,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT + clip-only (posthoc),quantization_60pct,quantization,0.6,-0.1397535800933838,9623.71484375,7224.41796875,0.0,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+Ultra-LSNT + clip-only (posthoc),missingness_60pct,missingness,0.6,0.15601885318756104,8281.3974609375,6146.876953125,0.0,checkpoints_ts/main/best_model.pth,20260302T160907Z_arm_revision_eval,cpu,1
+FG-MoE (full-trained),clean,clean,0.0,0.36017441749572754,7210.54443359375,5803.86328125,0.0,results/supplementary_evidence/pi_moe_full_checkpoint.pth,20260302T160907Z_arm_revision_eval,cpu,1
+FG-MoE (full-trained),gaussian_60pct,gaussian,0.6,0.149569571018219,8312.978515625,6814.2265625,0.032552083333333336,results/supplementary_evidence/pi_moe_full_checkpoint.pth,20260302T160907Z_arm_revision_eval,cpu,1
+FG-MoE (full-trained),drift_60pct,drift,0.6,-0.19852375984191895,9868.7138671875,7466.74853515625,0.06510416666666667,results/supplementary_evidence/pi_moe_full_checkpoint.pth,20260302T160907Z_arm_revision_eval,cpu,1
+FG-MoE (full-trained),quantization_60pct,quantization,0.6,0.3545255661010742,7242.3046875,5820.08740234375,0.0,results/supplementary_evidence/pi_moe_full_checkpoint.pth,20260302T160907Z_arm_revision_eval,cpu,1
+FG-MoE (full-trained),missingness_60pct,missingness,0.6,0.46793365478515625,6575.36962890625,5248.56396484375,0.032552083333333336,results/supplementary_evidence/pi_moe_full_checkpoint.pth,20260302T160907Z_arm_revision_eval,cpu,1

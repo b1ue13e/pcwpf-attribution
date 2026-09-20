@@ -1,0 +1,9 @@
+[step] rebuild_main4_matrices
+[cmd] C:\Users\32110\AppData\Local\Programs\Python\Python310\python.exe build_main4_matrices_from_evidence.py --out_dir C:\Users\32110\Desktop\论文1\results\supplementary_evidence --audit_tag main4_matrix_build_4090_full_backfill
+
+Built main4 matrix evidence.
+run_id: 20260225T000551Z_main4_matrix_build_4090_full_backfill
+C:\Users\32110\Desktop\论文1\results\supplementary_evidence\main4_matrix1_protocol.csv
+C:\Users\32110\Desktop\论文1\results\supplementary_evidence\main4_matrix2_perf_robust_transfer.csv
+C:\Users\32110\Desktop\论文1\results\supplementary_evidence\main4_matrix3_hardware_safety_joint.csv
+C:\Users\32110\Desktop\论文1\results\supplementary_evidence\main4_matrix4_dispatch_value.csv

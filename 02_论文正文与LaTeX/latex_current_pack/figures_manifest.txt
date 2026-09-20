@@ -1,0 +1,14 @@
+﻿227: \includegraphics[width=0.85\textwidth]{figure2.pdf}
+377:\includegraphics[width=0.95\textwidth]{workflow_pipeline.pdf}
+448: \includegraphics[width=\linewidth]{data_statistics_2x2_real.pdf}
+619:\includegraphics[width=\linewidth]{Figure_3_Final.pdf}
+675: \includegraphics[width=0.85\linewidth]{robustness_curve.pdf}
+706: \includegraphics[width=0.90\linewidth]{drift_quant_results.pdf}
+754:\includegraphics[width=\linewidth]{fig_multi_domain.pdf}
+883:\includegraphics[width=0.98\linewidth]{fig_pareto_latency_rmse_lite.pdf}
+915:\includegraphics[width=\linewidth]{fig_efficiency.pdf}
+953:\includegraphics[width=0.90\linewidth]{tau_sweep_ultra_pareto_v3.pdf}
+1182: \includegraphics[width=\linewidth]{thumbnails/figure/noise_protocol_schematic.pdf}
+1263:\includegraphics[width=\linewidth]{fig_ablation.pdf}
+1295:\includegraphics[width=\linewidth]{Figure_5_Final.pdf}
+1302:\includegraphics[width=\linewidth]{fig_routing_heatmap_overlay_block1.pdf}

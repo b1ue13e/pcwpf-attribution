@@ -1,0 +1,1230 @@
+%% 
+%% Ultra-LSNT: Applied Energy Manuscript (Complete Merged Version)
+%% 
+\documentclass[review,1p,times]{elsarticle} 
+% Remove 'draft' for final version
+\raggedbottom
+
+%% ==================== PACKAGES ====================
+\usepackage{lineno}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{{./}{./figures/}{./ablation/}}
+% Robust figure inclusion: keeps compilation going if a figure file is missing.
+% In final submission, you can keep this (it is a drop-in replacement for \includegraphics).
+\makeatletter
+\newcommand{\safeincludegraphics}[2][]{%
+  \begingroup
+  \edef\ae@figfile{\detokenize{#2}}%
+  \IfFileExists{\ae@figfile}{%
+    \includegraphics[#1]{\ae@figfile}%
+  }{%
+    \fbox{\parbox{0.92\linewidth}{\centering Missing figure: \texttt{\ae@figfile}}}%
+  }%
+  \endgroup
+}
+\makeatother
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{siunitx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption}
+\captionsetup[table]{justification=raggedright,singlelinecheck=false}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{enumitem}
+\setlist[enumerate]{label=(\arabic*),leftmargin=*,itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\usepackage{xcolor}
+\usepackage{threeparttable}
+\usepackage{eurosym}
+% (Layout) Keep overfull boxes visible during review; fix them instead of hiding.
+\setlength{\emergencystretch}{2em}
+\AtBeginEnvironment{thebibliography}{\raggedright}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\aePanelHeading}[2]{%
+  \par\vspace{2pt}%
+  \noindent\begin{minipage}{\linewidth}
+    \centering
+    \textbf{#1}\par
+    \textbf{#2}\par
+  \end{minipage}%
+  \par\vspace{2pt}%
+}
+\newcommand{\aeTableNote}[1]{%
+  \par\vspace{2pt}%
+  \noindent\begin{minipage}{\linewidth}
+    \raggedright\footnotesize
+    Note: #1
+  \end{minipage}%
+  \par
+}
+\modulolinenumbers[5]
+
+% Encourage top placement of figures/tables in review layout.
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{8}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\floatplacement{figure}{!t}
+\floatplacement{table}{!t}
+
+\journal{Applied Energy}
+\biboptions{sort&compress}
+
+%% ==================== FRONTMATTER EXTRAS ====================
+% Applied Energy / Elsevier:
+% - Highlights are REQUIRED and must be uploaded as a separate editable file.
+% - Graphical Abstract is encouraged and must be uploaded as a separate file.
+% You may keep temporary notes in the manuscript for internal review.
+% Set this switch to true if you want Highlights/Graphical Abstract to appear in the compiled PDF.
+\newif\ifincludefrontmatterextras
+\includefrontmatterextrasfalse
+
+% Fallback stubs (in case a different class is used accidentally).
+\makeatletter
+\@ifundefined{highlights}{%
+ \newenvironment{highlights}{\par\noindent\textbf{Highlights}\par\begin{itemize}\itemsep0pt}{\end{itemize}\par}%
+}{}
+\@ifundefined{graphicalabstract}{%
+ \newenvironment{graphicalabstract}{\par\noindent\textbf{Graphical abstract}\par}{\par}%
+}{}
+\makeatother
+
+
+\bibliographystyle{elsarticle-num}
+\pdfstringdefDisableCommands{\def\corref#1{}}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% ==================== TITLE ====================
+\title{Wind power forecasting under corrupted SCADA for edge deployment: sparse MoE with feasibility guard}
+
+%% ==================== AUTHORS ====================
+\author[1]{Junyu Li}
+\ead{ljylikezmn999@gmail.com}
+
+\author[1]{Juntao Du\corref{cor1}}
+\ead{dujuntao@aufe.edu.cn}
+\cortext[cor1]{Corresponding author.}
+
+\affiliation[1]{organization={School of Statistics and Applied Mathematics, Anhui University of Finance and Economics},
+ city={Bengbu},
+ postcode={233030},
+ country={China}}
+
+%% ==================== GRAPHICAL ABSTRACT ====================
+% Submission note: upload the Graphical Abstract as a separate file in Editorial Manager.
+% It is not embedded in this manuscript source.
+
+%% ==================== HIGHLIGHTS ====================
+% Submission note: upload Highlights as a separate editable file in Editorial Manager
+% (3--5 bullets, each <=85 characters).
+\ifincludefrontmatterextras
+\begin{highlights}
+\item Sparse MoE preserves positive skill under severe SCADA corruption.
+\item Feasibility guards prevent non-physical outputs during sensor failures.
+\item Edge screening should use joint robustness-safety-deployability criteria.
+\item Dispatch paradox: lower DA curtailment can coexist with higher RT balancing.
+\item Model screening should couple robustness stress with grid-constrained value.
+\end{highlights}
+\fi
+
+%% ==================== ABSTRACT ====================
+\begin{abstract}
+In this study on Wind (CN), we examine forecasting under corrupted SCADA telemetry with batch-1 edge limits on latency and memory, and observe that clean-benchmark ranking can break down in dispatch-coupled operation on Wind (CN). We propose Ultra-LSNT, a sparse MoE forecaster, together with FG-MoE, a feasibility guard that suppresses physically invalid outputs during corrupted-input inference with minimal additional overhead in batch-1 deployment settings. On Wind CN, Ultra-LSNT retains positive skill in the severe Gaussian slice used in this study, with $\sigma_{\mathrm{eff}}=0.60$ and $R^2=0.7263$, and FG-MoE reduces over-rated violations from 0.0550\% to 0.0092\% against a matched no-guardrail backbone. Under a fixed affine mapped-dispatch protocol, Ultra-LSNT lowers L1 operating cost and fallback frequency versus DLinear, with cost reduction $-33.96\%$ and fallback days reduced from $75$ to $29$; ranking remains interface-sensitive, with mean Spearman $=0.60$ and Top-1 consistency $=0$, indicating that dispatch value depends on the forecast-to-grid interface rather than on point-forecast ranking alone.
+\end{abstract}
+
+
+
+
+
+%% ==================== KEYWORDS ====================
+\begin{keyword}
+Wind power forecasting \sep Economic dispatch \sep SCADA imperfections \sep Edge computing \sep Robustness \sep Wind power integration
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+\section{Introduction}
+\label{sec:intro}
+
+Wind-power forecasting for grid operation is often limited by three coupled constraints: imperfect SCADA telemetry, tight edge-controller inference budgets, and physical feasibility requirements. Drift, quantization, communication dropouts, and abnormal pulses are common in field data \citep{ren2020scada,letzgus2020,vervlimmeren2025scalable,martincalzada2025optimized}. When these perturbations enter dispatch pipelines, unstable predictions can increase fallback scheduling, curtailment, and balancing pressure \citep{khaloie2020coordinated,larrahondo2021acdcomp,li2024opf_highren}.
+
+In this study, we observe that clean-benchmark ranking may not transfer reliably to corrupted SCADA operation; the severe-slice evidence is summarized in Table~\ref{tab:main_wind_cn} and Figure~\ref{fig:robustness_drift_quant}. Dense deep sequence models achieve strong clean-data accuracy but typically rely on fixed computation pathways at inference \citep{wu2021autoformer,zhou2022fedformer,nie2023patchtst,liu2024itransformer,gu2023mamba}. Decomposition-optimization hybrids can also be highly accurate, yet their iterative decomposition and search loops are expensive for batch-1 controller-side use \citep{zhang2021windreview,li2023vmdcnn,xue2020ssawind,niu2020ceemdanbi,duan2025robust}. Time-series foundation models improve transfer capability, but their resource assumptions remain closer to cloud-scale deployment than to Remote Terminal Unit / Programmable Logic Controller (RTU/PLC) constraints on typical on-site controller hardware \citep{ansari2024chronos,woo2024moirai,liu2024moiraimoe,das2024decoderonly,shi2025timemoe}. Prior work has used turbine power-curve conventions and test-oriented feasibility checks to limit non-physical outputs \citep{burton2011wind,iec61400_12_1_2017}. Under corrupted inputs and batch-1 edge deployment, however, lightweight feasibility control coupled with conditional routing remains underexplored.
+
+We build Ultra-LSNT (Ultra-Lightweight Sparse Neural forecasTing) for this setting with Top-$K$ sparse routing, so computation can focus on difficult corrupted segments instead of a dense always-on path. We couple it with FG-MoE, which enforces turbine-envelope consistency through a lightweight forward-pass feasibility guard.
+
+\textbf{Contributions:} First, we develop a sparse-routing forecaster with an integrated feasibility guard for short-term wind prediction under corrupted telemetry. Second, we evaluate robustness, physical validity, edge efficiency, and dispatch-coupled outcomes in one shared protocol \mbox{\citep{stott2009dcpf,li2024opfhighren,khaloie2025opfml,yan2025economicvalue}}. Third, we report where conclusions are stable and where they are interface-sensitive, and summarize these boundaries in Discussion and the claim-scope appendix (\ref{app:claim_scope}).
+
+\section{Related work and theoretical background}
+\label{sec:related}
+
+Wind power forecasting sits at the intersection of meteorology, statistical learning, deep sequence modeling, and power-system operations. This section positions the methodological gap addressed in our deployment setting.
+
+\subsection{The representational-operational gap in sequence modeling}
+\label{subsec:related_gap}
+\label{subsec:related_deep}
+\label{subsec:related_hybrid}
+\label{subsec:related_tsfm}
+
+Dense attention models and state-space models provide strong temporal representation on curated benchmarks \citep{wu2021autoformer,zhou2022fedformer,liu2024itransformer,gu2023mamba}. Hybrid decomposition-optimization pipelines remain competitive in many energy studies \citep{xue2020ssawind,niu2020ceemdanbi,li2023vmdcnn}. Under corrupted telemetry, however, both families often rely on fixed inference pathways and leave less room to reallocate computation to difficult segments.
+
+Under drift, quantization, and intermittent dropouts, we empirically observe a larger clean-to-severe performance gap in fixed-pathway models in our benchmark, especially in always-on batch-1 inference settings; see Table~\ref{tab:main_wind_cn} and Figure~\ref{fig:robustness_drift_quant}. TSFMs such as Chronos and Moirai raise transfer upper bounds \citep{ansari2024chronos,woo2024moirai,liu2024moiraimoe}; we therefore report them in the context panel as cloud-side upper-bound references, while keeping controller-side hardware and deployability claims restricted to edge-feasible models.
+
+\subsection{SCADA hostility and the need for feasibility-guarded routing}
+\label{subsec:related_physics}
+
+Industrial SCADA streams are intrinsically imperfect: calibration drift, dropout, clipping, and communication jitter are common \citep{ren2020scada}. Predictors trained under clean assumptions can therefore produce trajectories that violate turbine envelopes, including over-rated outputs.
+
+In dispatch workflows, weak output-feasibility control can increase infeasible schedules and corrective recourse. We therefore focus on two mechanisms: \textbf{(i)} conditional sparse routing that reallocates computation under corrupted telemetry, and \textbf{(ii)} feasibility-constrained output projection that suppresses physically invalid forecasts in the forward graph.
+
+\section{Methodology}
+\label{sec:method}
+
+Given multivariate SCADA inputs, the model builds multi-scale embeddings, routes them through sparse experts, and applies feasibility-aware output projection.
+
+\subsection{Problem setup}
+\label{subsec:problem_formulation}
+
+Given a multivariate look-back window $\mathbf{X}\in\mathbb{R}^{L\times C}$ with $L$ historical steps and $C$ SCADA covariates, the task is to predict an $H$-step active-power trajectory $\hat{\mathbf{Y}}\in\mathbb{R}^{H\times 1}$. The constrained learning problem is
+\begin{equation}
+\min_{\theta} \; \mathbb{E}\left[\mathcal{L}_{\text{pred}}(\hat{\mathbf{Y}}, \mathbf{Y})\right].
+\end{equation}
+\begin{equation}
+\hat{y}_{t+h} \in \mathcal{F}_{\text{phys}}(v_{t+h}).
+\end{equation}
+where $\mathcal{F}_{\text{phys}}(\cdot)$ denotes the feasible power envelope. It is parameterized by turbine specifications $(P_{\mathrm{rated}},v_{\mathrm{in}},v_{\mathrm{rated}},v_{\mathrm{out}})$. The construction of $\mathcal{F}_{\text{phys}}$ is given in Section \ref{sec:fg_moe}.
+
+\subsection{Multi-scale decomposition and embedding}
+\label{subsec:decomposition}
+
+Wind-power trajectories contain low-frequency trends and high-frequency residual fluctuations. The input is decomposed as
+
+Following decomposition--fusion practice in renewable forecasting \citep{li2023vmdcnn,ma2022gcnwind}, we apply a moving-average operator:
+\begin{equation}
+\mathbf{X} = \mathbf{X}_{\text{trend}} + \mathbf{X}_{\text{season}}, \qquad 
+\mathbf{X}_{\text{trend}} = \text{MA}(\mathbf{X}),
+\end{equation}
+where $\text{MA}(\cdot)$ is the moving-average operator.
+
+The residual component is embedded through parallel 1D convolutions:
+\begin{align}
+\mathbf{E}_s &= \text{Conv1D}_{k_s}(\mathbf{X}_{\text{season}}), \\
+\mathbf{E}_m &= \text{Conv1D}_{k_m}(\mathbf{X}_{\text{season}}),
+\end{align}
+followed by learnable fusion:
+\begin{equation}
+\mathbf{E} = \phi\!\left(\mathbf{W}_s\mathbf{E}_s + \mathbf{W}_m\mathbf{E}_m\right),
+\end{equation}
+where $\phi(\cdot)$ is a pointwise nonlinearity and $\mathbf{W}_s,\mathbf{W}_m$ are projection matrices. This decomposition-embedding block provides the input representation for sparse routing.\label{sec:embedding}
+
+\subsection{Sparse routing module}
+\label{sec:moe}
+This module defines conditional computation through Top-$K$ sparse routing.
+Our routing formulation follows the classical sparse MoE line of conditional computation and load-balanced gating, adapted here to time-series forecasting with a Jump Gate and feasibility-aware output path \citep{jacobs1991moe,shazeer2017moe,fedus2022switch}.
+
+\subsubsection{Routing formulation}
+Given the decomposition-and-embedding front-end above, the routed representation is
+\begin{equation}
+\mathbf{E} = \phi\!\left(\mathbf{W}_s\mathbf{E}_s + \mathbf{W}_m\mathbf{E}_m\right),
+\end{equation}
+where $\mathbf{E}_s,\mathbf{E}_m \in \mathbb{R}^{L\times d}$ and $\mathbf{W}_s,\mathbf{W}_m \in \mathbb{R}^{d\times d}$.
+
+Figure~\ref{fig:architecture} shows the model interface under the main Wind (CN) setting ($L=96$, $H=24$): decomposition, sparse Top-$K$ routing, Jump Gate skipping, and feasibility-aware output control in one forward graph.
+
+\begin{figure}[htbp]
+ \centering
+ % Replace the path below with your actual figure path if needed
+ \safeincludegraphics[width=0.85\textwidth]{figure2.pdf}
+ \caption{Ultra-LSNT architecture with decomposition, multi-scale Conv1D embedding, Top-$K$ MoE routing, and a Jump Gate skip path.}
+ \label{fig:architecture}
+\end{figure}
+
+Conditional computation (Top-$K$ experts and Jump Gate) is coupled to an explicit feasibility-control output path rather than appended as post-processing. This coupling motivates evaluating routing and output validity together in later sections.
+
+Frequency-aware alternatives such as VMD/EEMD can be used in the same interface \cite{dragomiretskiy2014vmd,wu2009eemd}.
+
+\subsubsection{Training objective}
+% Label sec:moe already defined above
+Let $\mathbf{e}_t \in \mathbb{R}^{d}$ denote the embedding at step $t$. Let $\{E_i(\cdot)\}_{i=1}^{N}$ denote expert networks:
+\begin{equation}
+E_i(\mathbf{e}_t)=\sigma(\mathbf{W}_i\mathbf{e}_t+\mathbf{b}_i),
+\end{equation}
+where $\mathbf{W}_i \in \mathbb{R}^{d\times d}$ and $\mathbf{b}_i \in \mathbb{R}^{d}$.
+
+A router computes logits and probabilities:
+\begin{equation}
+\mathbf{z}_t = \mathbf{W}_r\mathbf{e}_t + \boldsymbol{\epsilon}_t,\qquad
+\mathbf{p}_t = \mathrm{Softmax}(\mathbf{z}_t),
+\label{eq:router_softmax}
+\end{equation}
+where $\mathbf{W}_r\in\mathbb{R}^{N\times d}$ and $\boldsymbol{\epsilon}_t\sim\mathcal{N}(0,\eta_e^2\mathbf{I})$. The exploration scale is annealed by epoch index $e$:
+\begin{equation}
+\eta_e=\eta_0\exp(-e/\tau_{\eta}).
+\label{eq:router_anneal}
+\end{equation}
+Top-$K$ routing selects $\mathcal{S}_t=\mathrm{TopK}(\mathbf{p}_t,K)$ and aggregates expert outputs as
+\begin{equation}
+\mathbf{o}_t = \sum_{i\in\mathcal{S}_t} p_{t,i}\,E_i(\mathbf{e}_t).
+\label{eq:moe_topk}
+\end{equation}
+
+
+\label{subsec:method_edge_train}
+Training uses prediction loss and routing regularization.
+
+Point forecasting is optimized by MSE:
+\begin{equation}
+\mathcal{L}_{\text{pred}} = \frac{1}{H}\sum_{h=1}^{H}\left\|\hat{y}_{t+h}-y_{t+h}\right\|_2^2.
+\label{eq:loss_pred}
+\end{equation}
+Router entropy and expert disagreement are defined as
+\begin{equation}
+H_t = -\sum_{i=1}^{N} p_{t,i} \log(p_{t,i} + \epsilon),
+\end{equation}
+with $\epsilon=10^{-8}$, and
+\begin{equation}
+D_t = \frac{1}{|\mathcal{S}_t|} \sum_{i \in \mathcal{S}_t} \left(\hat{y}^{(i)}_{t+h} - \bar{y}_{t+h}\right)^2.
+\end{equation}
+\begin{equation}
+\bar{y}_{t+h} = \frac{1}{|\mathcal{S}_t|} \sum_{i \in \mathcal{S}_t} \hat{y}^{(i)}_{t+h}.
+\end{equation}
+These quantities parameterize an adaptive reserve rule:
+\begin{equation}
+\sigma_{w,t} = \min\Big(\sigma_{\max}, \sigma_{\mathrm{base}} + \alpha_H H_t + \alpha_D D_t\Big),
+\end{equation}
+where $\sigma_{\mathrm{base}}$, $\alpha_H$, $\alpha_D$, and $\sigma_{\max}$ are fixed coefficients. Optional probabilistic heads are
+\begin{equation}
+\mathcal{L}_{\text{pin}}=\frac{1}{|\mathcal{Q}|H}\sum_{q\in\mathcal{Q}}\sum_{h=1}^{H}\rho_q\!\left(y_{t+h}-\hat{y}^{(q)}_{t+h}\right).
+\end{equation}
+\begin{equation}
+\rho_q(e)=\max(qe,(q-1)e).
+\end{equation}
+\begin{equation}
+\mathcal{L}_{\text{nll}}=\frac{1}{H}\sum_{h=1}^{H}\left(\frac{(y_{t+h}-\mu_{t+h})^2}{2\sigma_{t+h}^2}+\log\sigma_{t+h}\right).
+\end{equation}
+
+The router load-balancing regularizer is
+\begin{equation}
+\mathcal{L}_{\text{aux}} = \sum_{i=1}^{N}\left(\bar{p}_i - \frac{1}{N}\right)^2,\qquad
+\bar{p}_i=\frac{1}{T}\sum_{t=1}^{T}p_{t,i},
+\label{eq:loss_aux}
+\end{equation}
+\noindent and the routing-module objective is
+\begin{equation}
+\mathcal{L}_{\text{base}} = \mathcal{L}_{\text{pred}} + \lambda_r\,\mathcal{L}_{\text{aux}}.
+\label{eq:loss_base}
+\end{equation}
+
+\subsection{Feasibility-constrained output projection}
+\label{sec:fg_moe}
+FG-MoE adds physical constraints to the forward graph. The derivation starts from aerodynamic power conversion and then defines a SCADA-observable envelope.
+
+A horizontal-axis turbine is bounded by
+\begin{equation}
+P_{\mathrm{aero}}(v)=\frac{1}{2}\rho A v^3 C_p(\lambda_{\mathrm{tsr}},\beta),\qquad A=\pi R^2,
+\label{eq:fg_aero}
+\end{equation}
+where $\rho$ is air density, $A$ is rotor swept area, $v$ is hub-height wind speed, and $C_p$ is the power coefficient with $0\le C_p\le C_{p,\max}\le 16/27$. The operational envelope is parameterized by $(P_{\mathrm{rated}},v_{\mathrm{in}},v_{\mathrm{rated}},v_{\mathrm{out}})$ following standard wind-turbine power-curve conventions and test practice \citep{burton2011wind,iec61400_12_1_2017,martincalzada2025optimized}.
+
+When SCADA channels are incomplete (e.g., missing aerodynamic states such as $\beta$), FG-MoE uses a robust dynamic proxy for future wind speed. Define increments
+\begin{equation}
+\delta v_{t-i}=v_{t-i+1}-v_{t-i},\qquad i=1,\ldots,w.
+\label{eq:fg_proxy_diff}
+\end{equation}
+Then
+\begin{equation}
+\Delta v_t^{\mathrm{med}}=\operatorname{median}\!\big\{\delta v_{t-i}\big\}_{i=1}^{w},
+\label{eq:fg_proxy_med_diff}
+\end{equation}
+\begin{equation}
+s_t^{\mathrm{MAD}}=1.4826\cdot \operatorname{median}\!\big\{|\delta v_{t-i}-\Delta v_t^{\mathrm{med}}|\big\}_{i=1}^{w},
+\label{eq:fg_proxy_mad_scale}
+\end{equation}
+\begin{equation}
+g_t=\operatorname{clip}\!\Big(\Delta v_t^{\mathrm{med}},-\kappa s_t^{\mathrm{MAD}},+\kappa s_t^{\mathrm{MAD}}\Big),
+\label{eq:fg_proxy_clip}
+\end{equation}
+and the time-decayed proxy is
+\begin{equation}
+\hat{v}_{t+h}=v_t + \gamma_h\, h\, g_t,\qquad
+\gamma_h=\exp(-h/\tau_v).
+\label{eq:fg_proxy_robust}
+\end{equation}
+
+Using $\hat v_{t+h}$, the envelope is
+\begin{equation}
+P_{\mathrm{env}}(\hat{v})=
+\begin{cases}
+0, & \hat{v}<v_{\mathrm{in}},\\[2pt]
+P_{\mathrm{rated}}\left(\frac{\hat{v}-v_{\mathrm{in}}}{v_{\mathrm{rated}}-v_{\mathrm{in}}}\right)^3, & v_{\mathrm{in}}\le \hat{v}\le v_{\mathrm{rated}},\\[6pt]
+P_{\mathrm{rated}}, & v_{\mathrm{rated}}<\hat{v}<v_{\mathrm{out}},\\[2pt]
+0, & \hat{v}\ge v_{\mathrm{out}}.
+\end{cases}
+\label{eq:fg_env}
+\end{equation}
+
+Let $\tilde y_{t+h}^{\mathrm{raw}}=\hat y_{t+h}/P_{\mathrm{rated}}$ and $\tilde P_{\mathrm{env}}(\hat v_{t+h})=P_{\mathrm{env}}(\hat v_{t+h})/P_{\mathrm{rated}}$. The forward projection is
+\begin{equation}
+\tilde y_{t+h}^{\mathrm{phys}}
+=\operatorname{clip}\!\left(\tilde y_{t+h}^{\mathrm{raw}},\,0,\,\tilde P_{\mathrm{env}}(\hat v_{t+h})\right),
+\label{eq:fg_clip}
+\end{equation}
+which is used here as a feasible-set projection in the same spirit as constrained screening/projection workflows in power-system optimization pipelines \citep{stott2009dcpf,li2024opf_highren,khaloie2025opfml}.
+and the hinge-type physics loss is
+\begin{equation}
+\mathcal{L}_{\text{physics}}=
+\frac{1}{H}\sum_{h=1}^{H}\!w_h\Big[
+\max(0,-\tilde y_{t+h}^{\mathrm{raw}})^2
++\max(0,\tilde y_{t+h}^{\mathrm{raw}}-1)^2
++\max\!\big(0,\tilde y_{t+h}^{\mathrm{raw}}-\tilde P_{\mathrm{env}}(\hat v_{t+h})\big)^2
+\Big],
+\label{eq:loss_physics}
+\end{equation}
+where $w_h=\exp(-h/\tau_p)$. Combining Eqs.~\eqref{eq:loss_pred}, \eqref{eq:loss_aux}, and \eqref{eq:loss_physics}, the final objective is
+\begin{equation}
+\mathcal{L}_{\text{total}}
+=\mathcal{L}_{\text{pred}}(\tilde{\mathbf{y}}^{\mathrm{phys}},\mathbf{y})
++\lambda_r\mathcal{L}_{\text{aux}}
++\lambda_2\mathcal{L}_{\text{physics}}.
+\label{eq:loss_total}
+\end{equation}
+% [Moved to supplementary_material.tex] tab:pimoe_compare
+
+
+For reproducibility, end-to-end procedures are summarized in Algorithm~\ref{alg:train} (training with imperfection injection) and Algorithm~\ref{alg:infer} (edge inference with Jump Gate); Fig.~\ref{fig:workflow} provides a compact workflow from SCADA measurements to dispatch outcomes.\label{sec:algo_summary}
+
+\begin{algorithm}[t]
+\caption{Ultra-LSNT training workflow with SCADA imperfection injection.}
+\label{alg:train}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} training samples $(\mathbf{X},\mathbf{Y})$ with $\mathbf{X}\in\mathbb{R}^{L\times C}$, $\mathbf{Y}\in\mathbb{R}^{H\times 1}$
+\STATE \textbf{Hyperparameters:} experts $N$, Top-$K$, router regularizer $\lambda_r$, physics weight $\lambda_2$, noise config $\sigma_{\mathrm{cfg}}$, industrial scale $\alpha$, Jump Gate threshold $\tau$
+\STATE $\sigma_{\mathrm{eff}} \leftarrow \alpha \cdot \sigma_{\mathrm{cfg}}$
+\STATE $\tilde{\mathbf{X}} \leftarrow \mathrm{InjectImperfections}(\mathbf{X}; \sigma_{\mathrm{cfg}},\sigma_{\mathrm{eff}})$
+\STATE \hspace{1em}\textit{(Gaussian noise, drift, quantization; see Sec.~\ref{sec:robust_protocol} for definitions.)}
+\STATE $(\mathbf{X}_{\mathrm{trend}},\mathbf{X}_{\mathrm{resid}}) \leftarrow \mathrm{Decompose}(\tilde{\mathbf{X}})$
+\STATE $\mathbf{Z} \leftarrow \mathrm{MultiScaleEmbed}([\mathbf{X}_{\mathrm{trend}},\mathbf{X}_{\mathrm{resid}}])$
+\FOR{$b=1$ \TO $N_{\mathrm{blk}}$}
+ \STATE $\mathbf{g}\leftarrow \mathrm{Router}_b(\mathbf{Z})$ \hspace{1em}\textit{(routing probabilities)}
+ \STATE $\mathcal{E}\leftarrow \mathrm{TopK}(\mathbf{g},K)$ \hspace{1em}\textit{(selected experts)}
+ \STATE $\mathbf{Z}\leftarrow \mathrm{AggregateExperts}_b(\mathbf{Z},\mathcal{E})$
+ \STATE $\mathbf{Z}\leftarrow \mathbf{Z} + \mathrm{TrendInteract}_b(\mathbf{Z},\mathbf{X}_{\mathrm{trend}})$
+\ENDFOR
+\STATE $\hat{\mathbf{Y}}^{\mathrm{raw}} \leftarrow \mathrm{ForecastHead}(\mathbf{Z})$
+\STATE $\hat{\mathbf{Y}}^{\mathrm{phys}} \leftarrow \mathrm{PhysicsClip}(\hat{\mathbf{Y}}^{\mathrm{raw}},\hat{\mathbf{V}})$
+\STATE $\mathcal{L}_{\mathrm{pred}} \leftarrow \mathrm{MSE}(\hat{\mathbf{Y}}^{\mathrm{phys}},\mathbf{Y})$
+\STATE $\mathcal{L}_{\mathrm{aux}} \leftarrow \mathrm{LoadBalance}(\mathbf{g})$
+\STATE $\mathcal{L}_{\mathrm{physics}} \leftarrow \mathrm{PhysicsBarrier}(\hat{\mathbf{Y}}^{\mathrm{raw}},\hat{\mathbf{V}})$
+\STATE Update parameters to minimize $\mathcal{L}_{\mathrm{pred}} + \lambda_r\,\mathcal{L}_{\mathrm{aux}} + \lambda_2\,\mathcal{L}_{\mathrm{physics}}$
+\end{algorithmic}
+\end{algorithm}
+\begin{algorithm}[t]
+\caption{Edge inference workflow with Jump Gate conditional skipping.}
+\label{alg:infer}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} window $\mathbf{X}\in\mathbb{R}^{L\times C}$
+\STATE $(\mathbf{X}_{\mathrm{trend}},\mathbf{X}_{\mathrm{resid}}) \leftarrow \mathrm{Decompose}(\mathbf{X})$
+\STATE $\mathbf{Z} \leftarrow \mathrm{MultiScaleEmbed}([\mathbf{X}_{\mathrm{trend}},\mathbf{X}_{\mathrm{resid}}])$
+\FOR{$b=1$ \TO $N_{\mathrm{blk}}$}
+ \IF{$\mathrm{JumpGate}_b(\mathbf{Z};\tau)=\mathrm{SKIP}$}
+ \STATE \textbf{continue}
+ \ENDIF
+ \STATE Route experts and aggregate as in Algorithm~\ref{alg:train}
+\ENDFOR
+\STATE $\hat{\mathbf{Y}}^{\mathrm{raw}} \leftarrow \mathrm{ForecastHead}(\mathbf{Z})$
+\STATE $\hat{\mathbf{Y}}^{\mathrm{phys}} \leftarrow \mathrm{PhysicsClip}(\hat{\mathbf{Y}}^{\mathrm{raw}},\hat{\mathbf{V}})$
+\STATE \textbf{Output:} $\hat{\mathbf{Y}}^{\mathrm{phys}}$
+\end{algorithmic}
+\end{algorithm}
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=0.85\textwidth]{workflow_pipeline.pdf}
+\caption{Dispatch-coupled evaluation pipeline from SCADA window to dispatch outcomes.}
+\label{fig:workflow}
+\end{figure}
+Figure~\ref{fig:workflow} fixes the end-to-end chain used for dispatch evaluation, with scale mapping and feasibility clipping applied before DA/RT optimization. All downstream dispatch indicators are produced within this same pipeline.
+
+
+\subsection{Conditional skipping for edge inference}
+\label{sec:edge}
+The Jump Gate defines token-wise conditional skipping. The gate score is
+\begin{equation}
+I_t = \text{Sigmoid}(\mathbf{w}_g^\top \mathbf{e}_t),
+\end{equation}
+with hard-threshold transition
+\begin{equation}
+\mathbf{o}_t =
+\begin{cases}
+\mathbf{o}_{t-1}, & I_t < \tau, \\[4pt]
+\text{MoE}(\mathbf{e}_t), & \text{otherwise},
+\end{cases}
+\end{equation}
+where $\tau$ is the threshold parameter.
+
+During training, the hard gate is relaxed as
+\[
+\tilde z_t=\sigma\!\big((I_t-\tau)/s\big),\qquad
+\mathbf{o}_t = \tilde z_t\cdot\mathrm{MoE}(\mathbf{e}_t) + (1-\tilde z_t)\cdot\mathbf{o}_{t-1},
+\]
+where $s>0$ is temperature.
+
+
+Ultra-LSNT-Lite is defined by reducing sparse-module capacity with Top-$1$ routing:
+\begin{equation}
+(N,K,\text{\#MoE blocks},d) \ \rightarrow \ (2,1,1,96),
+\end{equation}
+where $d$ is the hidden dimension.
+
+
+Complexity follows directly.\label{sec:complexity}
+Let $d$ denote hidden dimension. A dense $N$-expert computation scales as $\mathcal{O}(N\cdot L \cdot d^2)$, whereas Top-$K$ routing scales as $\mathcal{O}(K\cdot L \cdot d^2)$ with $K\ll N$. If Jump Gate is enabled, the effective token count is multiplied by the non-skip ratio.
+
+
+\section{Experimental setup and robustness protocol}
+\label{sec:design}
+
+This section summarizes the shared evaluation pipeline: data preparation, benchmark selection, robustness protocol, and dispatch-coupled validation.
+
+\subsection{Data, preprocessing, and tasks}
+
+The primary case study is ultra-short-term wind-power forecasting using SCADA measurements from a utility-scale wind farm in Xinjiang, China. The setup is intended to reflect operational conditions with sensor uncertainty and non-stationary weather. Inputs include wind and environmental variables, and the target is aggregated active power.
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.02}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.33\linewidth}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}
+\caption{Dataset characteristics and SCADA degradation protocol.}
+\label{tab:table1_dataset_protocol}\label{tab:data_summary_windcn}\\
+\toprule
+Item & Specification \\
+\midrule
+\endfirsthead
+\caption[]{Dataset characteristics and SCADA degradation protocol (continued).}\\
+\toprule
+Item & Specification \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{2}{@{}c@{}}{\textbf{Panel A}} \\
+\multicolumn{2}{@{}c@{}}{\textbf{Multi-domain dataset spatiotemporal characteristics}} \\
+Wind (CN) SCADA (primary) & 15-min sampling, 121{,}528 records, train/test chronology $80\%/20\%$ (97{,}222/24{,}306), train range 2021-04-02 00:00 to 2022-03-12 15:45, test range 2022-03-12 16:00 to 2022-06-30 23:45, 8 input channels, target active power in kW. \\
+Wind (US) transfer & 5-min sampling, 105{,}120 records, full-year range 2012-01-01 00:00 to 2012-12-31 23:55, 10 input channels (time/covariates) with wind-power target in MW. \\
+Air Quality transfer & Daily city-panel records, 588{,}644 samples after preprocessing, range 2015-01-01 to 2023-05-31, 7 pollutant/air-quality channels (AQI, PM2.5, PM10, SO$_2$, NO$_2$, CO, O$_3$). \\
+GEFCom Load transfer & 1-hour sampling, 38{,}070 records, range 2004-01-01 00:00:00 to 2008-06-30 05:00:00, univariate load target with calendar-aligned chronological split. \\
+Unified task protocol & All datasets use chronological splitting, train-fitted z-score normalization, inverse scaling before metric reporting, and common QC (duplicate removal, missing-value handling, NaN/Inf sanity checks). Main forecasting setup uses lookback/horizon $(L,H)=(96,24)$. \\
+\addlinespace[2pt]
+\multicolumn{2}{@{}c@{}}{\textbf{Panel B}} \\
+\multicolumn{2}{@{}c@{}}{\textbf{SCADA degradation and stress protocol (Wind CN main benchmark)}} \\
+Gaussian noise (inference-time) & Configured severity $\sigma_{\mathrm{cfg}}\in\{0.00,0.10,0.20,0.30,0.40\}$ with industrial scaling $\sigma_{\mathrm{eff}}=\alpha\sigma_{\mathrm{cfg}}$, $\alpha=1.5$, giving effective tiers $\sigma_{\mathrm{eff}}\in\{0.00,0.15,0.30,0.45,0.60\}$. \\
+Drift bias (random-walk) & Persistent bias injected as a channel-wise random walk with step scale $\sigma_{\mathrm{eff}}\cdot \mathrm{std}(x)$; this emulates calibration drift and low-frequency sensor offset accumulation. \\
+Quantization noise & Deterministic rounding with step size $\Delta=\sigma_{\mathrm{eff}}\cdot \mathrm{std}(x)$, i.e., $x_t^{\mathrm{quant}}=\Delta \cdot \mathrm{round}(x_t/\Delta)$, to emulate low-precision SCADA/edge telemetry. \\
+Structured SCADA faults & Flatline, spike/heavy-tail outlier, and correlated dropout with contiguous windows; severity levels $\{0.2,0.6\}$, with level 0.6 used as the severe-certification slice in main robustness tables. \\
+Missingness and interpolation & i.i.d.\ masking rate $p\in\{0.1,0.3\}$ with paired \texttt{ffill}/linear interpolation (3 seeds, shared masks across models); burst/correlated missingness is represented by structured dropout faults. \\
+Empirical severity anchor & Channel-wise diff-proxy calibration on Wind (CN) yields median 0.045, P90 0.091, max 0.121; therefore $\sigma_{\mathrm{eff}}=0.15$ is treated as empirical upper-band neighborhood, while $\{0.30,0.45,0.60\}$ are explicit stress envelopes. \\
+Dispatch coupling protocol & For dispatch, 15-min Wind (CN) is aggregated to 1-hour resolution; 120-day rolling copper-plate and IEEE RTS-24 DC-OPF screening are both reported under fixed affine scale mapping and fixed feasibility clipping rules. \\
+\bottomrule
+\end{longtable}
+\endgroup
+Table~\ref{tab:data_summary_windcn} fixes dataset scope, stress tiers ($\sigma_{\mathrm{eff}}\in\{0.15,0.30,0.45,0.60\}$), and dispatch aggregation (15-min to hourly) in one place. Training split, corruption protocol, and dispatch coupling are therefore anchored to one shared protocol instead of ad hoc per-model settings.
+\begin{figure}[t]
+ \centering
+ \safeincludegraphics[width=\linewidth]{data_statistics_2x2_real.pdf}
+ \caption{Representative raw-series excerpts for Wind (CN), Wind (US), Air Quality, and GEFCom Load. Series are min-max normalized within each dataset for visual comparability and plotted with dataset-specific excerpt length.}
+ \label{fig:data_statistics}
+\end{figure}
+Figure~\ref{fig:data_statistics} shows that the study covers heterogeneous temporal patterns rather than a single profile. To test transfer behavior, we include three additional tasks: \emph{Wind (US)}, \emph{Air Quality}, and \emph{GEFCom Load}. All datasets are split chronologically to prevent leakage. Z-score normalization is fitted on the training split only and inverse scaling is applied before reporting physical-unit metrics. The same quality-control pipeline (duplicate removal, missing-value handling, NaN/Inf checks) is applied across all experiments.
+
+\subsection{Baselines, metrics, and robustness protocol}
+\label{sec:robust_protocol}
+
+Main-text robustness evidence uses two aligned views. Table~\ref{tab:main_wind_cn} Panel A is a clean-trained context panel with eight models (DLinear, TimeMixer, iTransformer, Ultra-LSNT, LightGBM, Persistence, Chronos-Bolt-Small, Moirai-2.0-R-Small) under identical test-time corruption. Panel B is a matched-control set (DLinear, TimeMixer, iTransformer, Ultra-LSNT) with clean-trained and fault-augmented counterparts (three seeds; four faults: Gaussian, drift, quantization, missingness). At the Gaussian severe slice ($\sigma_{\mathrm{eff}}=0.60$), fault-augmented training changes mean $R^2$ from 0.2402 to 0.3471 (DLinear), 0.7452 to 0.8417 (TimeMixer), 0.8478 to 0.8580 (iTransformer), and 0.8135 to 0.8180 (Ultra-LSNT), indicating that robustness differences are driven by both architecture and training protocol.
+Long-tail baselines (including decomposition-optimization hybrids and constrained-budget metaheuristic probes with population=3, iterations=1, one-epoch objective/final fitting) are retained as diagnostic evidence in Appendix. Metadata for these diagnostic probes is archived in \path{results/supplementary_evidence/extended_metaheuristic_meta.json}.
+TSFMs such as Chronos and Moirai are included in Panel A only as cloud-side upper-bound references. They are deliberately excluded from controller-side latency, memory, thermal, PLC/RTU, and batch-1 deployability claims.
+
+\noindent\textbf{LightGBM/Persistence protocol card:} To keep non-deep baselines protocol-aligned with deep models, we use the same chronological split, window sizes ($L=96$, $H=24$), train-fitted z-score normalization with inverse scaling, and identical test-time corruption settings. Gaussian stress uses the same effective-noise rule $\sigma_{\mathrm{eff}}=\alpha\sigma_{\mathrm{cfg}}$ with $\alpha=1.5$. LightGBM is implemented as \texttt{MultiOutputRegressor(LGBMRegressor)} on flattened historical windows using only $x_{t-L+1:t}$ (no future covariates), with fixed hyperparameters (\texttt{n\_estimators}=500, \texttt{learning\_rate}=0.05, \texttt{random\_state}=42, \texttt{n\_jobs}=-1) to avoid asymmetric tuning budgets. Persistence is defined as repeating the last observed target over the full prediction horizon.
+
+We evaluate point forecasting accuracy using $R^2$, RMSE, and MAE as the primary evidence, which reflect goodness-of-fit and absolute error in dataset-native physical units.
+We additionally define MAPE for completeness. For wind power series with frequent near-zero generation periods, ratio-based errors can be disproportionately inflated even with numerical safeguards, so MAPE is treated as a supplementary diagnostic rather than a headline metric.
+
+\begin{equation}
+R^2 = 1 - \frac{\sum_{t=1}^{T}(y_t - \hat{y}_t)^2}{\sum_{t=1}^{T}(y_t - \bar{y})^2}.
+\end{equation}
+\begin{equation}
+\text{RMSE} = \sqrt{\frac{1}{T}\sum_{t=1}^{T}(y_t - \hat{y}_t)^2}.
+\end{equation}
+\begin{equation}
+\text{MAE} = \frac{1}{T}\sum_{t=1}^{T}|y_t - \hat{y}_t|.
+\end{equation}
+\begin{equation}
+\text{MAPE} = \frac{100}{T}\sum_{t=1}^{T}\left|\frac{y_t - \hat{y}_t}{y_t + \epsilon}\right|.
+\end{equation}
+Here $\bar{y}$ is the sample mean of $y_t$, and $\epsilon$ is a small constant used to avoid numerical instability when $y_t$ approaches zero.
+
+Average errors can hide tail risk and ramp-timing errors relevant to dispatch. We report tail-error, ramp, smoothness, and routing-stability indicators in addition to $R^2$/RMSE/MAE; for probabilistic variants, we also report PICP, PINAW, and CRPS. Robustness tests include continuous perturbations (Gaussian noise, drift, quantization) and structured faults (flatline, spikes, correlated dropouts), with Gaussian stress up to 60\% of clean standard deviation and structured-fault severities $\{0.2,0.6\}$. The realistic anchor is $\sigma_{\mathrm{eff}}=0.15$, while $\sigma_{\mathrm{eff}}\in\{0.30,0.45,0.60\}$ is treated as an explicit stress envelope rather than a nominal sensor-error claim. The main robustness table uses two views: Panel A (context panel) and Panel B (matched clean/fault-augmented controls). At test time, all models use identical corruption protocols with train-fitted inverse scaling. Full perturbation definitions are provided in \ref{app:robust_details}. We also report latency, model size, parameter count, and an analytical energy proxy under fixed profiling settings \cite{schwartz2020greenai,strubell2019energy}.
+
+\subsection{Dispatch-coupling and reproducibility}
+\label{subsec:dispatch_setup}
+For operational coupling, we formulate day-ahead (DA) scheduling on a 24-hour horizon with 1-hour resolution \cite{dlt5002_2021}. Forecast impact is summarized by three indicators: (i) operating cost, (ii) wind curtailment, and (iii) feasibility-restoration (fallback) frequency. Monetary outcomes are reported in CNY.
+
+We also run a two-stage DA/RT DC-OPF supplement on IEEE RTS-24 and report total slack, congestion indicators, and OPF success ratio when available. This layer captures active-power congestion effects under linearized network physics \cite{larrahondo2021acdcomp}.
+
+To quantify forecast value in dispatch, we couple each model output to a simplified DA engine with one thermal unit, upward reserve procurement, and storage \cite{botterud2011operational,yan2025economicvalue}. Let $\hat{w}_t$ denote forecast wind power (kW), $d_t$ demand (kW), and let dispatch variables be thermal output $g_t$ (kW), reserve $r_t$ (kW), curtailment $u_t$ (kW), storage charge/discharge powers $p_{\text{ch},t},p_{\text{dis},t}$ (kW), and state-of-charge $s_t$ (kWh). The dispatch grid is hourly. We therefore aggregate Wind (CN) from 15-min to 1-hour resolution by averaging each 4 consecutive records (Table~\ref{tab:data_summary_windcn}).
+
+Ultra-LSNT is trained on this hourly series with $L=96,H=24$ and outputs $\hat{w}_{1:24}$ directly for dispatch input. With $\Delta t=1$\,h and horizon $T=24$, every forecaster provides a 24-step daily vector $\hat{w}_{1:T}$. We evaluate a 120-day rolling window for Ultra-LSNT, iTransformer, TimeMixer, and DLinear. A day is tagged as \texttt{fallback\_x0} when the optimizer needs conservative fallback initialization under unchanged algebraic constraints.
+
+To align forecast magnitudes with dispatch operating range, we release forecast-scaling metadata and apply one global affine mapping before clipping:
+\begin{equation}
+\hat{w}^{\text{map}}_t = a\hat{w}_t+b.
+\end{equation}
+\begin{equation}
+a=\frac{40{,}000-20{,}000}{131{,}839-14{,}250}=0.1701.
+\end{equation}
+\begin{equation}
+b=17{,}576.3.
+\end{equation}
+This mapping is fixed across models and is not tuned per model. Calibration uses a deterministic dispatch sandbox with $d_t=50{,}000$\,kW and $g_t\in[10{,}000,80{,}000]$\,kW, where a wind corridor of $[20{,}000,40{,}000]$\,kW corresponds to 40--80\% wind share and leaves thermal headroom for balancing and reserve actions.
+
+Raw and mapped outcomes are both reported in Table~\ref{tab:dispatch_raw_vs_mapped}. In raw-scale stress checks, all models stay in \texttt{fallback\_x0} for all 120 days, with optimized ratio 0. After fixed mapping, optimized ratios become non-zero and the resulting metrics are finite across models. The corresponding rolling-dispatch summaries are archived in the supplementary evidence bundle.
+
+To keep operating bounds consistent across models in rolling runs, we apply deterministic feasibility mapping to each daily forecast vector:
+\begin{equation}
+\tilde{w}_t=\mathrm{clip}(s\hat{w}_t,0,w_{\max}),
+\label{eq:dispatch_feas_map}
+\end{equation}
+\begin{equation}
+s=\min\left(1,\frac{w_{\max}}{\max_t \hat{w}_t + \epsilon}\right),
+\end{equation}
+where $w_{\max}=\max(w_{\text{train}})$ is computed on the hourly training split and $\epsilon$ is a small constant. Results under this mapping are reported in Table~\ref{tab:master_dispatch}, and both raw/mapped rolling summaries are included in supplementary evidence.
+
+All monetary coefficients are in CNY as implemented in \texttt{evaluate\_cost}. Because absolute totals depend on price coefficients and reference year, we report both absolute values and relative reductions against fixed baselines. With $\Delta t=1$\,h, summed kW schedules correspond to kWh energy over the horizon. We compute dispatch metrics against realized wind output on the same test day for all models (see \texttt{compare\_dispatch\_metrics.py} and \texttt{wind\_dispatch\_model.py}).
+
+We include one UQ-aware reserve variant where $\sigma_{w,t}$ scales with routing entropy and expert disagreement from the MoE forward pass. For comparability, we also report the fixed-proportional reserve rule $\sigma_{w,t}=0.2|\hat{w}_t|$.
+
+% [Moved to supplementary_material.tex] tab:dispatch_params
+
+
+Note on network constraints.
+The dispatch model above is single-node (copper-plate) and isolates how forecast errors propagate to reserve, curtailment, and operating cost. We additionally run network-constrained DC-OPF on IEEE RTS-24 using PYPOWER (\texttt{rundcopf}) with line thermal limits and archived wind-bus mapping metadata (\path{results/supplementary_evidence/dispatch_network_ieee24_dcopf_wmax260_meta.json}). DC-feasible schedules are not guaranteed to be AC-feasible.
+
+All experiments run in one pipeline with fixed preprocessing, chronological splitting, and consistent metric computation. Full environment/training settings are reported in \ref{app:impl_details}. Source code is released at \url{https://github.com/b1ue13e/Ultra-LSNT} (MIT), and Wind (CN) data plus preprocessing/evaluation scripts are released for end-to-end reproduction.
+
+\section{Results}
+\label{sec:results}
+%========================
+This section reports robustness, transfer, hardware/safety, dispatch, and $(K,\tau,\lambda_2)$ sensitivity results under the same evaluation pipeline.
+
+\subsection{Predictive robustness and transfer under SCADA corruption}
+\label{subsec:results_main}
+\label{subsec:results_robustness}
+\label{subsubsec:universal_noise}
+Table~\ref{tab:main_wind_cn} reports robustness on Wind (CN) through a context panel and a matched-control panel. In Panel A, DLinear is strongest on clean data ($R^2=0.9379$) but drops to $R^2=-1.5790$ at $\sigma_{\mathrm{eff}}=0.60$, while Ultra-LSNT remains positive at $R^2=0.7263$. At the realistic anchor $\sigma_{\mathrm{eff}}=0.15$, all six locally audited context baselines remain in positive-skill territory (DLinear 0.7814, LightGBM 0.8860, Persistence 0.9140, Ultra-LSNT 0.8687, TimeMixer 0.8847, iTransformer 0.8993), which is consistent with the empirical calibration in Appendix~\ref{app:robust_details} (median 0.045, P90 0.091, max 0.121). We therefore interpret $\sigma_{\mathrm{eff}}=0.15$ as the empirical upper-band neighborhood and $\sigma_{\mathrm{eff}}\in\{0.30,0.45,0.60\}$ as an explicit stress envelope for abnormal SCADA conditions. Panel B compares matched training protocols at the same severe slice and shows consistent gains from fault augmentation (for example, 0.2402 to 0.3471 for DLinear and 0.7452 to 0.8417 for TimeMixer).
+
+\begin{table}[t]
+\centering
+\caption{Protocol-consistent robustness evidence on Wind (CN).}
+\label{tab:table2_comprehensive}
+\label{tab:main4_perf_robust_transfer}
+\label{tab:main_wind_cn}
+\label{tab:master_robustness}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\aePanelHeading{Panel A}{Clean-trained context panel (8 models; edge baselines + cloud upper-bound references)}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccccc@{}}
+\toprule
+\textbf{Model} & \textbf{Clean $R^2$} & \textbf{Clean RMSE} & \textbf{$R^2@0.60$} & \textbf{RMSE@0.60} & \textbf{Rel. RMSE inc. (\%)} \\
+\midrule
+DLinear & 0.9494 & 7406.87 & -0.9903 & 46449.77 & 527.12 \\
+TimeMixer & 0.8886 & 8498.38 & 0.8337 & 10382.59 & 22.17 \\
+iTransformer & 0.9012 & 8004.05 & 0.8717 & 9117.01 & 13.90 \\
+Ultra-LSNT & 0.9346 & 8419.91 & 0.7863 & 15218.84 & 80.75 \\
+LightGBM & 0.9563 & 6880.91 & 0.7121 & 17665.50 & 156.73 \\
+Persistence & 0.9175 & 7313.94 & 0.8612 & 9485.55 & 29.69 \\
+Chronos-Bolt-Small & 0.9644 & 0.40 & 0.8792 & 0.73 & 84.09 \\
+Moirai-2.0-R-Small & 0.9686 & 0.37 & 0.8875 & 0.71 & 89.33 \\
+\bottomrule
+\end{tabular*}
+\vspace{4pt}
+\aePanelHeading{Panel B}{Matched-control severe-slice panel}
+\begin{tabular*}{0.92\linewidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+\textbf{Model} & \textbf{Clean-trained $R^2@0.60$} & \textbf{Fault-augmented $R^2@0.60$} & \textbf{Gain} \\
+\midrule
+DLinear & 0.2402 & 0.3471 & +0.1069 \\
+TimeMixer & 0.7452 & 0.8417 & +0.0965 \\
+iTransformer & 0.8478 & 0.8580 & +0.0102 \\
+Ultra-LSNT & 0.8135 & 0.8180 & +0.0045 \\
+\bottomrule
+\end{tabular*}
+\aeTableNote{Panel A provides an eight-model context view at clean and severe Gaussian slices. All Panel A rows are reported under one audited Wind (CN) protocol, with RMSE retained in the main table and MAE moved to Appendix~\ref{subsec:scale_error_audit} for completeness. The realistic operating anchor is $\sigma_{\mathrm{eff}}=0.15$, whereas $\sigma_{\mathrm{eff}}\in\{0.30,0.45,0.60\}$ is an explicit stress envelope; the full sweep is reported in Figure~\ref{fig:robustness_drift_quant}. Chronos and Moirai are cloud-side upper-bound references and are not used in controller-side deployability claims. Panel A is consolidated in \path{results/supplementary_evidence/windcn_context_audit_summary.csv}, populated from \path{results/robust_gaussian_windcn.csv}, \path{results/supplementary_evidence/deep_sota_gaussian_windcn.csv}, \path{results/supplementary_evidence/persistence_gaussian_windcn.csv}, \path{results/supplementary_evidence/lightgbm_gaussian_audit_windcn.csv}, \path{results/supplementary_evidence/chronos_family_windcn.csv}, and \path{results/supplementary_evidence/moirai_family_windcn.csv}. Panel B uses \path{experiment_results_20260302/01_fairness_closure/fairness_closure_fullfault_summary.csv}.}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Cross-domain transferability under a unified chronological protocol.}
+\label{tab:table3_transfer}
+\label{tab:multi_domain}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{0.84\linewidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+\textbf{Model} & \textbf{Wind (US) $R^2$} & \textbf{Air Quality $R^2$} & \textbf{GEFCom Load $R^2$} \\
+\midrule
+Ultra-LSNT & 0.7878 & \textbf{0.4861} & 0.7554 \\
+DLinear & 0.8779 & 0.3433 & 0.7370 \\
+iTransformer & 0.8563 & 0.4590 & 0.7467 \\
+TimeMixer & 0.8023 & 0.3869 & 0.7201 \\
+ARIMA (logged) & 0.6971 & 0.2008 & $-$0.4031 \\
+SVR (logged) & 0.5796 & 0.1716 & 0.8226 \\
+SSA-ELM & 0.8075 & 0.3152 & 0.7662 \\
+Mamba (logged) & 0.8866 & 0.3688 & $-$0.0083 \\
+\bottomrule
+\end{tabular*}
+\aeTableNote{Values from \path{results/supplementary_evidence/multi_domain_transfer_matrix_all_models.csv}.}
+\end{table}
+
+Table~\ref{tab:multi_domain} shows domain-dependent winners under one chronological protocol: Ultra-LSNT leads on Air Quality, Mamba on Wind (US), and SVR on GEFCom Load. No single model dominates all three tasks.
+
+\begin{figure}[htbp]
+ \centering
+ \safeincludegraphics[width=\linewidth]{fig_robustness_stress_test.pdf}
+\caption{Robustness summary under Gaussian noise, drift bias, and quantization perturbations on Wind (CN). Panel A reports the full Gaussian sweep ($\sigma_{\mathrm{eff}}\in\{0.00,0.15,0.30,0.45,0.60\}$) for Ultra-LSNT, DLinear, LightGBM, and Persistence, with $\sigma_{\mathrm{eff}}=0.15$ as the empirical upper-band anchor and $\sigma_{\mathrm{eff}}=0.60$ as the severe stress-envelope anchor. Panels B--C report drift and quantization trajectories for Ultra-LSNT and DLinear under the same protocol.}
+\label{fig:robustness_drift_quant}
+\end{figure}
+Figure~\ref{fig:robustness_drift_quant} shows robustness trajectories under Gaussian, drift, and quantization corruption on Wind (CN), with anchors at $\sigma_{\mathrm{eff}}=0.15$ and $0.60$. The full-$\sigma$ sweep complements Table~\ref{tab:main_wind_cn} by showing how performance gaps evolve across severity levels.
+
+\subsection{Hardware profiling and safety guardrails}
+\label{subsec:results_efficiency}
+Table~\ref{tab:master_hardware} compares deployability and safety under protocol P1 (no-guardrail, clip-only, FG-MoE). FG-MoE reduces over-rated violations from 0.0550\% to 0.0092\% while preserving clean/severe accuracy, whereas clip-only reaches 0\% violations at a large accuracy cost. Panel B provides the main safety result, and Panel A provides deployment context with direct and backfilled ARM measurements.
+
+\begin{table}[t]
+\centering
+\caption{Hardware profile and safety guardrail results under protocol P1.}
+\label{tab:table4_hardware_safety}
+\label{tab:main4_hardware_safety_joint}
+\label{tab:master_hardware}
+\label{tab:matrix_ablation_physics}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\aePanelHeading{Panel A}{Batch-1 edge profile (CPU/ARM)}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+\textbf{Model} & \textbf{CPU Latency (ms)} & \textbf{ARM Latency (ms)} & \textbf{CPU Throughput (Hz)} & \textbf{Memory (MiB)} \\
+\midrule
+Ultra-LSNT (full) & 3.714 & 8.795 & 269.3 & 22.2830 \\
+Ultra-LSNT-Lite (opt.) & 1.171 & 5.007 & 854.0 & 1.3327 \\
+DLinear & 0.265 & 0.102 & 3767.6 & 0.0178 \\
+Mamba (logged) (bf) & 0.861 & 0.861 & 1161.1 & 0.1468 \\
+VMD-PSO-LSTM (bf) & 10.297 & 10.297 & 97.1 & 0.2468 \\
+CEEMDAN-WOA-GRU (bf) & 11.082 & 11.082 & 90.2 & 0.2130 \\
+ARIMA (logged) (bf) & 2.183 & 2.183 & 458.0 & 0.0000 \\
+SVR (logged) (bf) & 2.750 & 2.750 & 363.6 & 0.5410 \\
+SSA-ELM (bf) & 0.024 & 0.024 & 42409.6 & 0.8107 \\
+\bottomrule
+\end{tabular*}
+\vspace{4pt}
+\aePanelHeading{Panel B}{Safety guardrail effect}
+\begin{tabular*}{0.82\linewidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+\textbf{Setting} & \textbf{Clean $R^2$} & \textbf{$R^2@0.60$} & \textbf{Over-rated violation (\%)} \\
+\midrule
+Ultra-LSNT (no guardrail) & 0.8727 & 0.8273 & 0.0550 \\
+Ultra-LSNT + clip-only (posthoc) & 0.4319 & 0.3120 & 0.0000 \\
+FG-MoE (full-trained) & 0.8747 & 0.8286 & 0.0092 \\
+\bottomrule
+\end{tabular*}
+\aeTableNote{Panel A CPU values are from \path{results/supplementary_evidence/main4_matrix3_hardware_safety_joint.csv}; Panel A ARM values are from \path{results/supplementary_evidence/latency_arm_full_backfill.csv}; Panel B three-way guardrail values are from \path{results/supplementary_evidence/main4_matrix3_hardware_safety_joint.csv} (source audit: \path{experiment_results_20260302/04_guardrail_physics/physics_closure.csv}, protocol P1). Unmarked rows correspond to direct ARM logs in this evidence pack; rows tagged ``(bf)'' are backfilled proxy entries produced by \path{backfill_table4_arm_latency.py} from logged latency CSVs.}
+\end{table}
+
+\subsection{Dispatch results under mapped comparison}
+\label{subsec:results_dispatch}
+Table~\ref{tab:master_dispatch} reports dispatch outcomes before and after mapping. Raw-scale runs are fallback-only for all models, while mapped runs produce finite metrics. Under mapped interfaces, ranking changes across affine, isotonic, and quantile transforms (mean Spearman $=0.60$, Top-1 consistency $=0$); Figure~\ref{fig:dispatch_value_evidence} shows cumulative and representative-day effects, and Figure~\ref{fig:mapping_ranking_sensitivity} visualizes the rank-flip mechanism. We interpret this as interface sensitivity rather than as an unstable leaderboard artifact: once forecasts are embedded into different grid-side interfaces, the forecast-to-dispatch transfer function becomes part of the model comparison itself.
+
+\begin{table}[t]
+\centering
+\caption{Dispatch outcomes under 120-day rolling and RTS-24 DC-OPF evaluation.}
+\label{tab:table5_dispatch_value}
+\label{tab:main4_dispatch_value}
+\label{tab:dispatch_raw_vs_mapped}
+\label{tab:master_dispatch}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\aePanelHeading{Panel A}{Scale-mapping comparability gate}
+\begin{tabular*}{0.90\linewidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+\textbf{Model} & \textbf{Raw opt.} & \textbf{Raw FB (\%)} & \textbf{Mapped opt.} & \textbf{Mapped FB (\%)} \\
+\midrule
+DLinear & 0.0000 & 100.0 & 0.3750 & 62.5 \\
+TimeMixer & 0.0000 & 100.0 & 0.7833 & 21.7 \\
+iTransformer & 0.0000 & 100.0 & 0.8333 & 16.7 \\
+Ultra-LSNT & 0.0000 & 100.0 & 0.7583 & 24.2 \\
+\bottomrule
+\end{tabular*}
+\vspace{4pt}
+\aePanelHeading{Panel B}{L1 mapped-protocol outcomes (copper-plate)}
+\begin{tabular*}{0.86\linewidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+\textbf{Model} & \textbf{L1 Cost (M CNY)} & \textbf{L1 Curt. (M kWh)} & \textbf{L1 FB (\%)} \\
+\midrule
+iTransformer & 32.16 & 15.22 & 16.7 \\
+TimeMixer & 34.90 & 19.60 & 21.7 \\
+Ultra-LSNT & 35.97 & 22.09 & 24.2 \\
+DLinear (base) & 54.47 & 55.71 & 62.5 \\
+\bottomrule
+\end{tabular*}
+\vspace{4pt}
+\aePanelHeading{Panel C}{L2 mapped-protocol outcomes (RTS-24 DC-OPF)}
+\begin{tabular*}{0.86\linewidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+\textbf{Model} & \textbf{L2 Curt. (MWh)} & \textbf{L2 Succ. (\%)} & \textbf{L2 Gain (\%)} \\
+\midrule
+iTransformer & 138,093.39 & 100.00 & +0.94 \\
+TimeMixer & 138,093.39 & 100.00 & +0.94 \\
+Ultra-LSNT & 138,093.39 & 100.00 & +0.94 \\
+DLinear (base) & 139,403.69 & 100.00 & +0.00 \\
+\bottomrule
+\end{tabular*}
+\aeTableNote{Panel A from \path{results/supplementary_evidence/dispatch_raw_vs_mapped_summary.csv}; Panel B from \path{results/supplementary_evidence/main4_matrix4_dispatch_value.csv}; Panel C from \path{results/supplementary_evidence/main4_matrix4_dispatch_value.csv}, cross-checked against \path{experiment_results_20260302/02_dispatch_closure/dispatch_closure_mapping_decision_aggregate.csv} and \path{experiment_results_20260302/02_dispatch_closure/dispatch_closure_mapping_decision_ranking_stability.csv}.}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=\linewidth]{fig_dispatch_economics.pdf}
+\caption{Dispatch value evidence under the fixed mapped protocol. Panel (a) shows 120-day cumulative cost saving against DLinear. Panels (b1) and (b2) show the representative day for DLinear and Ultra-LSNT, respectively.}
+\label{fig:dispatch_value_evidence}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=0.96\linewidth]{results/supplementary_evidence/fig_mapping_ranking_sensitivity.pdf}
+\caption{Ranking sensitivity under affine, isotonic, and quantile mappings. The upper panel reports rank by total RT cost, and the lower panel reports total RT cost. Summary statistics: mean Spearman rank correlation $=0.60$, Top-1 consistency $=0$, which here means that ranking is mapping-sensitive rather than invariant across interfaces.}
+\label{fig:mapping_ranking_sensitivity}
+\end{figure}
+
+Panels B and C report L1 copper-plate and L2 RTS-24 DC-OPF outcomes from the same mapped forecasts. In L2, an hour is counted as successful only when both DA and RT OPF return \texttt{success}; under this criterion, curtailment gains can coexist with limited direct cost transfer under network constraints.\label{subsec:disc_dispatch_network}\label{subsec:disc_dispatch}\label{subsec:disc_reliability}\label{subsec:disc_crossover}
+
+\subsection{Hyperparameter Pareto frontier}
+\label{subsec:results_joint_pareto}
+Table~\ref{tab:joint_parameter_analysis} quantifies the accuracy-safety Pareto in $(K,\tau,\lambda_2)$ space under protocol P2 (joint-sensitivity SOA scan with router overrides, $\lambda_2$ post-guard correction, and partial-batch evaluation). In this setting, low $\lambda_2$ keeps severe-noise $R^2$ near 0.93 with non-zero over-rated risk, while $\lambda_2=1.0$ removes violations but sharply reduces severe-slice accuracy. Figure~\ref{fig:lambda2_tradeoff_anchor} shows the same trade-off at the anchor setting $(N,K,\tau)=(8,2,0.5)$ and is used to select operating points within P2.
+
+\begin{table}[t]
+\centering
+\caption{Pareto operating points in $(K,\tau,\lambda_2)$ at $\sigma_{\mathrm{eff}}=0.60$ under protocol P2 (SOA proxy).}
+\label{tab:table6_joint_pareto}
+\label{tab:joint_parameter_analysis}
+\label{tab:joint_nkt_full_summary}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{0.86\linewidth}{@{\extracolsep{\fill}}cccccc@{}}
+\toprule
+\textbf{$K$} & \textbf{$\tau$} & \textbf{$\lambda_2$} & \textbf{Latency (ms)} & \textbf{$R^2@0.60$} & \textbf{Over-rated (SOA proxy, \%)} \\
+\midrule
+1 & 0.7 & 0.01 & 10.609 & 0.9301 & 19.1332 \\
+1 & 0.9 & 0.10 & 10.232 & 0.9257 & 18.0169 \\
+2 & 0.5 & 0.01 & 14.353 & 0.9294 & 19.0091 \\
+4 & 0.9 & 0.01 & 19.769 & 0.9299 & 18.9690 \\
+1 & 0.9 & 1.00 & 10.232 & 0.3831 & 0.0000 \\
+4 & 0.5 & 1.00 & 18.182 & 0.3913 & 0.0000 \\
+\bottomrule
+\end{tabular*}
+\aeTableNote{Values sampled from \path{results/supplementary_evidence/joint_sensitivity_pareto_frontier.csv} (protocol P2: router override + $\lambda_2$ post-guard + partial-batch evaluation); full grid in \path{results/supplementary_evidence/joint_parameter_full_windcn.csv}. Comparability boundaries between P1 and P2 are summarized in the protocol note in Section~\ref{sec:discussion}.}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=0.82\linewidth]{results/supplementary_evidence/fig_lambda2_tradeoff_anchor.pdf}
+\caption{$\lambda_2$ safety-accuracy trade-off at anchor $(N,K,\tau)=(8,2,0.5)$ under the severe slice $\sigma_{\mathrm{eff}}=0.60$. The left axis reports over-rated violation (\%), and the right axis reports $R^2@0.60$. The shaded band indicates the recommended operating region.}
+\label{fig:lambda2_tradeoff_anchor}
+\end{figure}
+
+
+\section{Discussion and limitations}
+\label{sec:discussion}
+
+\noindent\textbf{Protocol note:} This paper uses one evidence hierarchy with four boundaries. First, mapped dispatch ranking is interface-sensitive (mean Spearman $=0.60$, Top-1 consistency $=0$). Second, P1 safety values in Table~\ref{tab:master_hardware} and P2 SOA-proxy values in Table~\ref{tab:joint_parameter_analysis} come from different protocols and are not compared as same-name metrics. Third, L1 copper-plate and L2 RTS-24 DC-OPF are screening layers rather than operator certification. Fourth, DC-feasible schedules are not AC-feasible guarantees.
+Top-1 consistency $=0$ does not mean that dispatch evaluation is unusable; it means that no single forecaster is uniformly optimal across affine, isotonic, and quantile interfaces. This is an engineering insight rather than a weakness to be hidden. In practice, grid operators do not consume forecasts in a vacuum: they consume forecasts through interface choices, clipping rules, reserve heuristics, and feasibility constraints. For that reason, point-forecast leaderboards alone are insufficient for deployment decisions, and feasibility-preserving models such as Ultra-LSNT with FG-MoE are valuable even when the raw accuracy leader changes across interfaces.
+Clean-data ranking and severe-corruption ranking diverge in the matched-control setting. Within the protocol above, Table~\ref{tab:master_hardware} provides the primary safety evidence, Table~\ref{tab:master_dispatch} plus Figures~\ref{fig:dispatch_value_evidence}--\ref{fig:mapping_ranking_sensitivity} provide mapped-interface dispatch evidence, and Table~\ref{tab:joint_parameter_analysis} plus Figure~\ref{fig:lambda2_tradeoff_anchor} provide P2 operating diagnostics.
+For mechanism audit and directional statistical support, readers should consult the supplementary interpretability figures (Figures~\ref{fig:interpret_fig}--\ref{fig:routing_heatmap}) and DM significance matrix (Figure~\ref{fig:dm_matrix_2x2}); these validate inspectability and direction stability, not additional superiority claims.
+
+Three limitations remain. First, dispatch ranking depends on the chosen mapping interface. Second, the current operational layer stops at copper-plate plus RTS-24 DC-OPF screening and does not certify AC feasibility. Third, latency profiling is still pre-HIL, and long-tail supplementary baselines have not yet received full fault-augmented matched controls.
+\section{Conclusion and outlook}
+\label{sec:conclusion}
+
+This study shows that corrupted-input robustness and output-feasibility control can be improved together in one edge-oriented forecasting pipeline. On Wind (CN), Ultra-LSNT keeps positive severe-corruption skill in a regime where some high-clean baselines collapse, and FG-MoE strongly suppresses over-rated outputs.
+
+The current evidence does not support a single best model across all tasks and mapped interfaces. Strengths remain task-dependent, dispatch ranking changes when the mapping choice changes, and main comparative conclusions are restricted to the four-model matched-control set (DLinear, TimeMixer, iTransformer, Ultra-LSNT); long-tail and low-budget metaheuristic entries remain supplementary diagnostics.
+
+The next key validation step is system-grade closure: AC/operator-grade dispatch evaluation with site-specific calibration, together with board-level HIL verification of latency, power, and thermal behavior.
+
+\section*{CRediT authorship contribution statement}
+\textbf{Junyu Li}: Conceptualization, Methodology, Software, Validation, Formal analysis, Data curation, Writing -- original draft, Visualization.
+\textbf{Juntao Du}: Supervision, Writing -- review \& editing, Project administration.
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Data availability}
+\textbf{Wind (CN):} The Wind (CN) SCADA dataset used in this study is released publicly to support full reproducibility. The release includes the raw time series, the train/validation/test split indices, and the preprocessing scripts used to construct the learning task described in Table~\ref{tab:data_summary_windcn}. The dataset package is distributed via the project repository (\url{https://github.com/b1ue13e/Ultra-LSNT}) and will be mirrored to a long-term archival service at acceptance.
+
+\textbf{Public benchmarks:} The additional datasets used for cross-domain evaluation are publicly accessible: (i) Wind (US) from the NREL Wind Toolkit \cite{draxl2015windtoolkit}, (ii) Air Quality from the UCI repository \cite{devito2008}, and (iii) GEFCom load from the Global Energy Forecasting Competition (GEFCom2012) \cite{Hong2014GEFCom2012}. We report the exact dataset identifiers, preprocessing scripts, and evaluation protocols in the released code.
+
+In line with Elsevier's research data practices, we provide reproducibility assets (protocol definitions, supplementary evidence tables, and run scripts) in the project repository under \texttt{results/supplementary\_evidence}.
+
+\textbf{Code:} The implementation, training scripts, and evaluation protocols are available at \url{https://github.com/b1ue13e/Ultra-LSNT} (MIT license).
+
+\appendix
+
+\section{Nomenclature and abbreviations}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.92}
+\noindent
+\nolinenumbers
+\begin{longtable}{@{}p{0.17\linewidth}L{0.78\linewidth}@{}}
+\toprule
+Item & Description \\
+\midrule
+\endfirsthead
+\toprule
+Item & Description \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\multicolumn{2}{@{}l}{\textit{Abbreviations}} \\
+MoE & Mixture-of-Experts \\
+SCADA & Supervisory Control and Data Acquisition \\
+TSFM & Time-series foundation model \\
+SOTA & State-of-the-art \\
+RMSE & Root Mean Square Error \\
+MAE & Mean Absolute Error \\
+FG-MoE & Feasibility-Guarded MoE (main-text term in this manuscript) \\
+UQ & Uncertainty Quantification \\
+CRPS & Continuous Ranked Probability Score \\
+AC-OPF & AC Optimal Power Flow \\
+DC-OPF & DC Optimal Power Flow \\
+HIL & Hardware-in-the-Loop \\
+\addlinespace[2pt]
+\multicolumn{2}{@{}l}{\textit{Symbols}} \\
+$L$ & input length (time steps) \\
+$H$ & prediction horizon (time steps) \\
+$C$ & number of input variables/covariates \\
+$\mathbf{X}\in\mathbb{R}^{L\times C}$ & input sequence \\
+$\hat{\mathbf{Y}}\in\mathbb{R}^{H\times 1}$ & forecast output (wind power / target variable) \\
+$\sigma_{\mathrm{cfg}}$ & configured perturbation ratio in robustness tests (dimensionless) \\
+$\sigma_{\mathrm{eff}}$ & effective perturbation ratio, $\sigma_{\mathrm{eff}}=\alpha\sigma_{\mathrm{cfg}}$ \\
+$\alpha$ & scaling factor used to map configured to effective noise severity ($\sigma_{\mathrm{eff}}=\alpha\sigma_{\mathrm{cfg}}$, default $\alpha=1.5$) \\
+$K$ & number of selected experts in Top-$K$ routing \\
+$\lambda_r$ & load-balancing regularization coefficient for routing \\
+$\tau$ & Jump Gate threshold for conditional skipping \\
+$R^2$ & coefficient of determination (scale-free) \\
+RMSE/MAE & absolute errors in original physical units after inverse scaling \\
+$E_{\text{inf}}$ & estimated energy per sample inference (mJ) \\
+$B$ & batch size used in profiling (dimensionless) \\
+$N_{\text{call}}$ & number of forecasting calls per day \\
+$N_{\text{turb}}$ & number of turbines in a wind farm or fleet \\
+$c_f$ & fuel / purchase price coefficient in dispatch (CNY/kWh) \\
+$c_r$ & reserve price coefficient (CNY/kWh) \\
+$c_s$ & storage discharge cost coefficient (CNY/kWh) \\
+$c_{\text{su}}$ & start-up / shut-down cost coefficient (CNY) \\
+$P_{\text{ch},\max}$ & storage charging power limit (kW) \\
+$P_{\text{dis},\max}$ & storage discharging power limit (kW) \\
+$S_{\max}$ & storage energy capacity limit (kWh) \\
+$R_{\max}$ & thermal ramp-rate limit (kW per hour) \\
+$\bar{P}_{\text{dev}}$ & average device power during inference (W) \\
+$\rho$ & air density (kg/m$^3$), estimated from temperature/pressure \\
+$A$ & rotor swept area (m$^2$) \\
+$v$ & wind speed at hub height (m/s) \\
+$C_p(\lambda_{\mathrm{tsr}},\beta)$ & power coefficient (Betz-limited) \\
+$\lambda_{\mathrm{tsr}}$ & tip-speed ratio (dimensionless) \\
+$\beta$ & pitch angle (deg) \\
+$P_{\mathrm{rated}}$ & rated-power upper bound (kW) \\
+$v_{\mathrm{in}}, v_{\mathrm{out}}$ & cut-in / cut-out wind speeds (m/s) \\
+$w$ & median-smoothing window length in FG-MoE dynamic proxy ($w=5$) \\
+$\kappa$ & clipping coefficient in robust dynamic proxy ($\kappa=3$) \\
+$\Delta v_t^{\mathrm{med}}$ & median-smoothed wind-speed derivative used in FG-MoE \\
+$s_t^{\mathrm{MAD}}$ & robust derivative scale estimated by MAD in FG-MoE \\
+$\lambda_2$ & plausibility-penalty coefficient in heuristic FG-MoE (dimensionless) \\
+\end{longtable}
+\linenumbers
+\endgroup
+
+\section{Dispatch model details}\label{app:dispatch_details}
+This appendix provides the deterministic dispatch algebra used by the screening workflow in Section~\ref{subsec:dispatch_setup}. The formulation is included for reproducibility and serves as comparative screening infrastructure rather than AC-secure operational guidance.
+
+With horizon $T=24$ and $\Delta t=1$\,h, the objective is
+\begin{align}
+\min_{\cdot}\; C_{\text{dispatch}} &= C_{\text{fuel}} + C_{\text{reserve}} + C_{\text{purchase}} + C_{\text{storage}} + C_{\text{startup}} + C_{\text{shutdown}}, \label{eq:app_dispatch_obj}\\
+C_{\text{fuel}} &= c_f\sum_{t=1}^{T} g_t\Delta t, \nonumber\\
+C_{\text{reserve}} &= c_r\sum_{t=1}^{T} r_t\Delta t, \nonumber\\
+C_{\text{purchase}} &= c_f\sum_{t=1}^{T} p_{\text{ch},t}\Delta t, \nonumber\\
+C_{\text{storage}} &= c_s\sum_{t=1}^{T} p_{\text{dis},t}\Delta t, \nonumber\\
+C_{\text{startup}} &= c_{\text{su}}\sum_{t=2}^{T}\frac{\max(g_t-g_{t-1},0)}{R_{\max}}, \nonumber\\
+C_{\text{shutdown}} &= c_{\text{su}}\sum_{t=2}^{T}\frac{\max(g_{t-1}-g_t,0)}{R_{\max}}. \nonumber
+\end{align}
+
+Subject to
+\begin{align}
+g_t + \hat{w}_t + p_{\text{dis},t} - p_{\text{ch},t} - u_t &= d_t, \label{eq:app_dispatch_balance}\\
+0\le u_t &\le \hat{w}_t,\quad \forall t, \nonumber\\
+g_{\min}\le g_t &\le g_{\max}, \label{eq:app_dispatch_gen}\\
+0\le r_t, \quad g_t+r_t &\le g_{\max}, \nonumber\\
+|g_t-g_{t-1}| &\le R_{\max}, \nonumber\\
+0\le p_{\text{ch},t} &\le P_{\text{ch},\max}, \label{eq:app_dispatch_storage_power}\\
+0\le p_{\text{dis},t} &\le P_{\text{dis},\max}, \nonumber\\
+s_t &= s_{t-1} + \eta_{\text{ch}}p_{\text{ch},t}\Delta t - \eta_{\text{dis}}^{-1}p_{\text{dis},t}\Delta t, \label{eq:app_dispatch_storage_soc}\\
+0\le s_t &\le S_{\max}. \nonumber
+\end{align}
+and the fixed-proportional reserve protocol
+\begin{equation}
+\sigma_{w,t}=0.2\cdot|\hat{w}_t|,\; t=1,\ldots,T.
+\end{equation}
+which is a deterministic comparison rule and not UQ-aware dynamic reserve optimization.
+
+\section{Implementation and environment details}\label{app:impl_details}
+
+\subsection{Implementation details and computational environment}
+\label{app:impl_details_sub}
+
+All experiments are implemented in Python (v3.10) using PyTorch (v2.0+) with CUDA (v11.8) acceleration. The core scientific stack includes NumPy (v1.24+) and Pandas (v2.0+) for data handling, Matplotlib (v3.7+) and Seaborn (v0.12+) for visualization, and LightGBM (v4.0+) with Scikit-learn (v1.3+) for tree-based baselines. These versions are reported to ensure that both deep and non-deep baselines can be reproduced under consistent dependencies. The implementation is openly available at \url{https://github.com/b1ue13e/Ultra-LSNT} (MIT license), enabling inspection of model components (e.g., sparse routing, skipping gate) and exact reproduction of the reported protocols.
+
+The main training is conducted on a workstation equipped with an NVIDIA GeForce RTX~4090 GPU, an Intel i9-13900K CPU, and 64~GB RAM for reproducible optimization and ablation sweeps. To complement workstation profiling, we report batch-$1$ inference latency on commodity CPUs and an ARMv8 (aarch64) single-core platform (Huawei Kunpeng~920). The Kunpeng run is used as a server-class ARM reference for cross-ISA comparison rather than as an edge-device surrogate.
+
+% [Moved to supplementary_material.tex] tab:impl_hardware
+
+% [Moved to supplementary_material.tex] tab:model_config
+
+\noindent\textbf{Implementation and training:} We implement Ultra-LSNT in native PyTorch without third-party model dependencies. The sparse MoE core uses a custom \texttt{SparseMoELayer} with Top-$K$ routing ($K=2$ in the main model), and the dynamic skip path uses \texttt{ConsistentSkipGate} with \texttt{DualModePropagation}. To stabilize routing, the released configuration sets \texttt{aux\_loss\_coef} to $\lambda=0.01$ and keeps the router $z$-loss at 0.01, following standard MoE load-balancing and router-stabilization practice \citep{shazeer2017moe,fedus2022switch}; a controlled $\lambda\in\{0.01,0.05\}$ robustness check is summarized in Table~\ref{tab:matrix_ablation_physics}. The code mapping is explicit: MoE modules are defined in \texttt{ultra\_lsnt\_timeseries.py}, and training entry points are \texttt{train\_ultra\_lsnt\_stable.py} and \texttt{train\_ultra\_lsnt\_enhanced.py}. Unless otherwise stated, we train with $L=96$, $H=24$, chronological splits, train-fitted z-score normalization, AdamW $(\beta_1,\beta_2)=(0.9,0.999)$, weight decay 0.01, cosine annealing with warm-up, initial learning rate $10^{-3}$, and batch size 128; typical runs last 10--50 epochs depending on convergence.
+
+\noindent\textbf{Deployment profiling and reproducibility:} For deployment-oriented profiling, we enable \texttt{torch.compile} (max-autotune), memory reuse, and an optimized Lite fast path when applicable. We report these switches explicitly because efficiency claims depend on runtime configuration; in particular, compile/AMP is enabled only for selected Lite rows and is reported as a reproducible deployment recipe rather than a fully normalized cross-model systems bake-off. We profile inference under fixed batch-$1$ settings for x86/ARM latency screening (Table~\ref{tab:master_hardware}). To keep experiments reproducible, we fix random seeds (seed=42), enable deterministic CUDA settings when possible, run in isolated environments, and archive logs in dedicated directories (e.g., \texttt{logs/}, \texttt{logs\_complete/}) with separated raw/preprocessed data paths.
+
+\section{Robustness protocol details}\label{app:robust_details}
+\subsection{Perturbation definitions and comparison setup}
+\noindent\textbf{Additive Gaussian noise: sensor inaccuracy stress test.}
+Additive Gaussian corruption approximates short-lived measurement noise, such as electromagnetic interference and turbulent sensing jitter in SCADA channels.
+Formally, for a clean input series $x$, we generate a corrupted series
+\begin{equation}
+x_{\text{noisy}} = x + \sigma_{\mathrm{eff}}\,\mathrm{std}(x)\cdot \varepsilon, \qquad \varepsilon \sim \mathcal{N}(0,1),
+\end{equation}
+where $\mathrm{std}(x)$ is the standard deviation of the clean signal and $\sigma_{\mathrm{eff}}$ is the effective noise ratio.
+In our released noise generator, we use an industrial scaling factor $\alpha=1.5$. To strengthen empirical grounding, we additionally compute a channel-wise proxy noise ratio on Wind (CN) core channels (windspeed, winddirection, temperature, humidity, pressure, power):
+\begin{equation}
+r_c=\frac{\mathrm{std}(\Delta x_c)}{\sqrt{2}\,\mathrm{std}(x_c)},
+\end{equation}
+where $\Delta x_c=x_{t,c}-x_{t-1,c}$. On this dataset, the proxy statistics are median $0.045$, P90 $0.091$, and max $0.121$. Detailed CSV/JSON calibration artifacts are archived in the supplementary-evidence bundle.
+
+Based on this anchor, we treat $\sigma_{\mathrm{eff}}=0.15$ as an empirical upper-band neighborhood, while $\sigma_{\mathrm{eff}}\in\{0.30,0.45,0.60\}$ are explicit stress-envelope settings for robustness certification under abnormal SCADA conditions rather than nominal sensor-error claims. Throughout the manuscript, severity is reported by the \emph{effective} ratio $\sigma_{\mathrm{eff}}=\alpha\sigma_{\mathrm{cfg}}$, so the injected noise has standard deviation $\sigma_{\mathrm{eff}}\cdot\mathrm{std}(x)$. In configuration files and scripts, the user-facing parameter is $\sigma_{\mathrm{cfg}}$; we therefore report both $\sigma_{\mathrm{cfg}}$ and $\sigma_{\mathrm{eff}}$ when needed. Unless otherwise stated, the Gaussian sweep uses $\sigma_{\mathrm{eff}}\in\{0.00,0.15,0.30,0.45,0.60\}$ (equivalently $\sigma_{\mathrm{cfg}}\in\{0.00,0.10,0.20,0.30,0.40\}$).
+
+\noindent\textbf{Structured SCADA faults: flatlining, spikes, and correlated dropouts.}
+\label{subsubsec:robust_structured}
+Additive Gaussian noise provides controlled severity scaling, but real SCADA failures usually exhibit temporal persistence and cross-channel dependence. We synthesize three structured fault families on top of clean streams: flatlining (sensor-freeze windows generated by dwell-time processes such as geometric or semi-Markov sampling), spikes/heavy-tailed outliers (sparse impulsive corruption with amplitudes from Laplace or Student-$t$ distributions), and correlated multi-channel dropouts (common-cause masking events such as DAQ resets that affect multiple variables jointly for contiguous windows). We evaluate these faults on Wind (CN) at severities 0.2 and 0.6; the severe slice is summarized in Table~\ref{tab:master_robustness}, while full multi-severity rows are moved to supplementary material.
+
+To complement deep-model comparisons, we also run focused non-deep context baselines (LightGBM and Persistence) over configured noise $\sigma_{\mathrm{cfg}}\in\{0.00,0.10,0.20,0.30,0.40\}$ (effective $\sigma_{\mathrm{eff}}\in\{0.00,0.15,0.30,0.45,0.60\}$ with $\alpha=1.5$), so severe-slice behavior is inspected with both feature-engineered and naive-history references.
+
+\noindent\textbf{Special perturbations: drift and quantization noise.}
+Beyond additive Gaussian noise, we evaluate two perturbation families that are common in industrial sensing and edge pipelines: \emph{drift noise} and \emph{quantization noise}. Drift noise approximates systematic bias that accumulates over time due to calibration drift, sensor aging, or persistent environmental interference. Quantization noise approximates rounding and discretization errors introduced by low-precision telemetry, bandwidth-constrained transmission, or edge-side INT8/FP16 processing. To keep perturbation severity comparable, for both perturbations we report severity by the same effective ratio $\sigma_{\mathrm{eff}}$ used in the Gaussian protocol. Unless otherwise stated, we sweep
+
+\begin{equation}
+\sigma_{\mathrm{eff}} \in \{0.00, 0.15, 0.30, 0.45, 0.60\},
+\end{equation}
+which corresponds to configured $\sigma_{\mathrm{cfg}}\in\{0.00,0.10,0.20,0.30,0.40\}$ when $\alpha=1.5$.
+
+\noindent\textbf{Drift (random-walk bias):}
+Given a clean channel $x_{1:L}$, we draw i.i.d.\ $\varepsilon_t\sim\mathcal{N}(0,1)$ and define a persistent bias process
+\begin{equation}
+b_1 = 0.
+\end{equation}
+\begin{equation}
+b_t = b_{t-1} + \sigma_{\mathrm{eff}}\cdot \mathrm{std}(x)\cdot \varepsilon_t,\; t=2,\dots,L.
+\end{equation}
+then corrupt the input as $x^{\text{drift}}_t = x_t + b_t$. The process is applied independently to each feature channel and each test sample. We reset $b_1=0$ per sample for paired reproducibility, and use the same random seed across methods at a given $\sigma_{\mathrm{eff}}$; long contiguous fault persistence is covered separately by the structured-fault protocol.
+
+\noindent\textbf{Quantization (step-size rounding):}
+We implement quantization as deterministic rounding to a channel-wise step size proportional to the clean-signal standard deviation:
+\begin{equation}
+\Delta = \sigma_{\mathrm{eff}}\cdot \mathrm{std}(x).
+\end{equation}
+\begin{equation}
+x^{\text{quant}}_t = \Delta\cdot \mathrm{round}\!\left(\frac{x_t}{\Delta}\right).
+\end{equation}
+where $\mathrm{round}(\cdot)$ is round-to-nearest (half away from zero). When $\sigma_{\mathrm{eff}}=0$, no quantization is applied. This protocol yields a reproducible, severity-controlled discretization without requiring dataset-specific bit-range tuning. We report the corresponding robustness outcomes in Section~\ref{subsec:results_robustness} and interpret their operational implications in the Discussion, with emphasis on reliability under realistic sensing constraints and energy-aware (Green AI) deployment.
+
+
+
+\noindent\textbf{Missingness and interpolation artifacts:}
+SCADA telemetry frequently contains dropouts due to communication loss or sensor resets, and downstream pipelines often apply simple imputation such as forward-fill or linear interpolation. To emulate this setting, we sample a binary mask $m_{t,c}\sim\mathrm{Bernoulli}(1-p)$ over time steps $t$ and channels $c$ and define $\bar{x}_{t,c}=m_{t,c}x_{t,c}+(1-m_{t,c})\mathrm{NaN}$. We then apply an imputation operator $\mathrm{Imp}(\cdot)$ to obtain the corrupted series
+\begin{equation}
+x^{\text{miss}}=\mathrm{Imp}(\bar{x};\texttt{ffill/linear}),
+\end{equation}
+where \texttt{ffill} denotes forward filling and \texttt{linear} denotes piecewise-linear interpolation along the time axis. In the reported experiments, we use i.i.d.\ masking (no burst blocks) as a controlled imputation stress test, sweep $p\in\{0.1,0.3\}$, and repeat each configuration for three random seeds (0,1,2). For a fixed seed, the same missingness mask and imputation configuration are applied across models to preserve a paired comparison. Contiguous and correlated missingness is represented by the structured-fault dropout protocol. Results are provided in supplementary material.
+
+\section{Additional deployment and sensitivity figures}\label{app:extra_figs}
+Figures~\ref{fig:deploy_robustness}--\ref{fig:joint_nkt_pareto_3d_app} address four supplementary questions: where deployment bottlenecks emerge under severe corruption, how efficiency axes co-vary, how Jump Gate threshold shifts the accuracy-latency trade-off, and how the structural $N$-$K$-$\tau$ landscape behaves at fixed $\lambda_2$. Figure~\ref{fig:deploy_robustness} isolates corruption-level deployment bottlenecks, Figure~\ref{fig:efficiency_fig_app} visualizes accuracy-efficiency coupling, Figure~\ref{fig:tau_sweep_pareto_app} tracks threshold-driven accuracy-latency shifts, and Figure~\ref{fig:joint_nkt_pareto_3d_app} summarizes structural Pareto geometry. For Figure~\ref{fig:deploy_robustness}, severe-slice $R^2$ follows the matched-control track and is paired with Panel-A CPU latency from Table~\ref{tab:master_hardware} as supplementary deployment context.
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=\linewidth]{fig_deploy_robustness.pdf}
+\caption{Deployment-robustness trade-off under severe SCADA corruption ($\sigma_{\mathrm{eff}}=0.60$). CPU batch-1 latency is shown on the x-axis (log scale), and $R^2@0.60$ is shown on the y-axis. Point size encodes model size, and colors/markers indicate model family.}
+\label{fig:deploy_robustness}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=\linewidth]{fig_efficiency.pdf}
+\caption{Deployment-efficiency comparison across Ultra-LSNT variants and principal baselines. Energy, latency, and memory are reported jointly as edge-suitability indicators.}
+\label{fig:efficiency_fig_app}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=0.90\linewidth]{tau_sweep_ultra_pareto_v3.pdf}
+\caption{Jump Gate threshold sweep in supplementary view. The threshold-latency-accuracy trajectory should be read jointly with the archived skip-ratio logs.}
+\label{fig:tau_sweep_pareto_app}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=0.95\linewidth]{results/supplementary_evidence/fig_joint_nkt_pareto_3d.pdf}
+\caption{3D structural map ($N$-$K$-$\tau$) at $\lambda_2=0$ with Pareto points highlighted (Wind CN, $\sigma_{\mathrm{eff}}=0.60$). Main-text decision evidence is reported in Table~\ref{tab:joint_parameter_analysis} and Figure~\ref{fig:lambda2_tradeoff_anchor}.}
+\label{fig:joint_nkt_pareto_3d_app}
+\end{figure}
+\section{Claim scope and practical boundaries}\label{app:claim_scope}
+\textbf{Dispatch mapping dependence:} Dispatch ranking depends on the selected mapping interface (affine/isotonic/quantile) with feasibility clipping; raw-scale logs are released as sensitivity evidence.
+
+\textbf{Hardware status:} Cross-ISA latency profiling is pre-HIL, and board-level validation on target PLC/RTU hardware remains required.
+
+\textbf{Matched-control status:} This revision adds matched clean/fault-augmented controls for DLinear, TimeMixer, iTransformer, and Ultra-LSNT (three seeds; four faults), but full coverage for long-tail supplementary baselines remains future work.
+
+\section{Supplementary tables: ablations, interpretability, and significance}\label{app:supp_tables}
+
+\subsection{Evidence-file mapping for primary comparative numbers}
+\label{subsec:evidence_mapping}
+To keep the audit trail explicit, primary comparative numbers in this manuscript are mapped to archived result files rather than ad hoc extraction. Table~\ref{tab:main_wind_cn} Panel A maps to the consolidated summary \path{results/supplementary_evidence/windcn_context_audit_summary.csv}. Its feeder files are \path{results/robust_gaussian_windcn.csv}, \path{deep_sota_gaussian_windcn.csv}, \path{persistence_gaussian_windcn.csv}, \path{lightgbm_gaussian_audit_windcn.csv}, \path{chronos_family_windcn.csv}, and \path{moirai_family_windcn.csv} under \path{results/supplementary_evidence/}. Table~\ref{tab:main_wind_cn} Panel B maps to \path{experiment_results_20260302/01_fairness_closure/fairness_closure_fullfault_summary.csv}. Dispatch and hardware primary rows map to the matrix CSVs listed in \path{results/supplementary_evidence/main4_matrix_manifest.csv}.
+
+\subsection{Scale-error supplementary table for robustness audit}
+\label{subsec:scale_error_audit}
+Table~\ref{tab:scale_error_audit} provides directly logged RMSE/MAE evidence for the unified Wind (CN) audit. The main table already reports RMSE in Panel A; Appendix~G retains MAE and matched-control detail for completeness rather than as a substitute for the primary comparison.
+
+\begin{table}[t]
+\centering
+\caption{Supplementary scale-error evidence at clean and $\sigma_{\mathrm{eff}}=0.60$ for directly logged Wind (CN) rows.}
+\label{tab:scale_error_audit}
+\scriptsize
+\setlength{\tabcolsep}{3.4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llcccc@{}}
+\toprule
+\textbf{Model} & \textbf{Mode} & \textbf{RMSE (clean)} & \textbf{MAE (clean)} & \textbf{RMSE@0.60} & \textbf{MAE@0.60} \\
+\midrule
+DLinear & clean-trained & 6065.98 & 3865.18 & 22190.19 & 15183.13 \\
+TimeMixer & clean-trained & 9081.04 & 6789.63 & 12848.91 & 9674.21 \\
+iTransformer & clean-trained & 7743.06 & 6029.31 & 9933.03 & 7852.08 \\
+Ultra-LSNT & clean-trained & 9462.65 & 7360.92 & 10992.42 & 8705.76 \\
+DLinear & fault-augmented & 6328.26 & 4181.08 & 20569.46 & 14105.63 \\
+TimeMixer & fault-augmented & 8969.46 & 7067.89 & 10129.43 & 8034.08 \\
+iTransformer & fault-augmented & 8779.48 & 6975.59 & 9593.71 & 7700.04 \\
+Ultra-LSNT & fault-augmented & 9925.64 & 7858.85 & 10859.03 & 8675.17 \\
+Persistence & clean-trained & 7313.94 & 4760.16 & 9485.55 & 6783.51 \\
+\bottomrule
+\end{tabular*}
+\aeTableNote{Matched-control rows are extracted from \path{experiment_results_20260302/01_fairness_closure/fairness_closure_fullfault_summary.csv} (\texttt{test\_fault}=\texttt{clean}/\texttt{gaussian}, $\sigma_{\mathrm{eff}}=0.60$). Persistence rows are from \path{results/supplementary_evidence/persistence_gaussian_windcn.csv}. The same schema is used by the dedicated LightGBM, Chronos, and Moirai audit scripts introduced in this revision, so additional directly logged rows can be appended without changing the table protocol. On the directly logged subset shown here, severe-slice directional trends are consistent with the corresponding $R^2$ changes; this is an empirical subset observation, not a universal metric-equivalence claim.}
+\end{table}
+
+\subsection{Full structured SCADA fault robustness table}
+\label{subsec:robust_structured_full}
+Complete multi-severity and multi-metric structured-fault results for Wind (CN) are reported in supplementary material and linked to \path{results/supplementary_evidence/structured_scada_fault_robustness_windcn.csv}.
+
+% [Moved to supplementary_material.tex] tab:robust_structured_full
+
+\subsection{Diagnostic long-tail baseline matrix (diagnostic-only)}
+\label{subsec:diag_longtail}
+For transparency, we retain broad baseline rows, including traditional methods, hybrid methods, and constrained-budget metaheuristics, in the supplementary evidence bundle. These rows are diagnostic only and are excluded from the matched-control main comparisons.
+
+
+\subsection{Ablation results}
+\label{subsec:results_ablation}
+%----------------------------------------
+All ablations are conducted under a fixed training budget and identical evaluation protocol; we interpret them primarily through relative ranking and directional sensitivity, rather than expecting the absolute $R^2$ to exactly match the full benchmark runs.
+
+Supplementary ablation tables report kernel-size sensitivity from the archived ablation CSV. On Wind (CN), $k=3$ and $k=7$ are close, while $k=15$ is weaker. This supports using compact receptive fields for turbulence-dominant SCADA dynamics. Router-regularization robustness is reported in Table~\ref{tab:matrix_ablation_physics} using the two archived $\lambda$ checkpoints ($0.01$ and $0.05$).
+
+% [Moved to supplementary_material.tex] tab:ablation_kernel
+
+%----------------------------------------
+\subsection{XAI analysis: routing diagnostics for operational audit}
+\label{subsec:results_interpretability}
+%----------------------------------------
+Figures~\ref{fig:interpret_fig} and~\ref{fig:routing_heatmap} visualize sparse-routing statistics at complementary scales: diurnal/feature correlation and event-window temporal dynamics. This subsection is exploratory governance evidence, not proof of causal physical decomposition.
+Because routing is regularized by load-balancing objectives, expert activations should be interpreted as correlation-level diagnostics instead of deterministic physical role assignment.
+
+At the diurnal scale, activation shares remain bounded without collapse spikes, which supports auditability of conditional computation. At event windows, routing redistribution is observable and can be logged as a monitoring signal for anomaly triage, but these shifts alone should not be interpreted as direct physical regime identification.
+
+% [Moved to supplementary_material.tex] tab:expert_physics
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=\linewidth]{Figure_5_Final.pdf}
+\caption{Interpretability view of sparse routing and expert-feature correlation. The left panel reports diurnal expert-routing composition, and the right panel reports the expert-feature correlation heatmap.}
+\label{fig:interpret_fig}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=\linewidth]{fig_routing_heatmap_overlay_block1.pdf}
+\caption{Time-resolved routing probabilities (4 experts) over a representative 64-hour window with overlaid realized and predicted power. Marked event windows show temporal co-variation between routing redistribution and abrupt trajectory changes; the figure is provided for auditability rather than causal attribution.}
+\label{fig:routing_heatmap}
+\end{figure}
+
+
+%----------------------------------------
+\subsection{Statistical significance}
+\label{subsec:results_significance}
+%----------------------------------------
+We assess whether performance gaps are statistically significant using the Diebold--Mariano (DM) test on squared prediction errors \cite{diebold1995}.
+Let $d_t=\ell_t(\text{Ultra-LSNT})-\ell_t(\text{Baseline})$ denote the per-time step loss differential computed on the same test split; hence DM$<0$ indicates Ultra-LSNT has smaller average loss, while DM$>0$ favors the baseline.
+This significance check is reported to strengthen the auditability of our empirical claims, complementing the descriptive ranking in Table~\ref{tab:main_wind_cn}.
+Figure~\ref{fig:dm_matrix_2x2} summarizes the four-domain DM significance matrices used in this revision.
+Readers should treat the DM view as direction-stability evidence (paired loss differential under fixed splits), not as a replacement for protocol-bound robustness and dispatch screening claims in the main results.
+
+% [Moved to supplementary_material.tex] tab:dm_test
+\begin{figure}[t]
+\centering
+\safeincludegraphics[width=0.95\linewidth]{fig_dm_matrix_2x2.pdf}
+\caption{Direction-aware 2$\times$2 summary of Diebold--Mariano evidence (Ultra-LSNT vs principal baselines) across Wind (CN), Wind (US), GEFCom Load, and Air Quality. Cell entries report direction, p-value, and significance level; complete pairwise DM-statistic magnitude matrices would require dedicated reruns and are not reconstructed here.}
+\label{fig:dm_matrix_2x2}
+\end{figure}
+
+Supplementary DM-test tables indicate statistically significant loss differentials across representative recent backbones.
+Consistent with Table~\ref{tab:main_wind_cn}, the differentials favor TimeMixer and iTransformer under clean measurements (DM$>0$), whereas Ultra-LSNT significantly outperforms PatchTST (DM$<0$).
+We also provide scripts and the loss-differential series for the full set of backbones in the supplementary material.
+
+Several recent forecasters can achieve higher peak accuracy under clean measurements (Table~\ref{tab:main_wind_cn}), but peak clean-data accuracy is not always aligned with stability under realistic sensing imperfections.
+Accordingly, we report robustness stress tests and downstream dispatch evidence next, where reliability under noise and deployability constraints matter for renewable integration and operational efficiency.
+
+%----------------------------------------
+%----------------------------------------
+\section*{Generative AI and AI-assisted technologies statement}
+During the preparation of this work, the authors used \textit{ChatGPT} (OpenAI) for language polishing and grammar assistance. The authors performed all scientific interpretation, result reporting, and final manuscript decisions, and they take full responsibility for the content of the publication. No generative AI tools were used to generate or modify experimental data, figures, plots, or graphical abstracts.
+
+\section*{Acknowledgments}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+%% ==================== REFERENCES ====================
+\bibliography{refs_cited_only}
+
+\end{document}
+

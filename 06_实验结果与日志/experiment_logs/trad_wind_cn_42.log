@@ -1,0 +1,6 @@
+Starting Traditional GPU models on wind_cn seed=42
+  LSTM on wind_cn (seed=42)
+LSTM: R2=0.9482
+  CNN-LSTM on wind_cn (seed=42)
+CNN-LSTM: R2=0.9508
+Completed

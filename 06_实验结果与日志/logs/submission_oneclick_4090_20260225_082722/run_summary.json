@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-02-25T00:27:42.542132Z",
+  "script": "run_submission_oneclick_4090.py",
+  "args": {
+    "python": "C:\\Users\\32110\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "seed": 42,
+    "seeds": "42,123,2025",
+    "device": "auto",
+    "continue_on_error": false,
+    "dry_run": false,
+    "skip_full_backfill": true,
+    "skip_cross_domain": false,
+    "skip_seed_significance": true,
+    "skip_lite_robustness": true,
+    "skip_rebuild": true,
+    "seq_len": 96,
+    "pred_len": 24,
+    "ssa_pop_size": 2,
+    "ssa_iters": 2,
+    "skip_arima_svr_crossdomain": true,
+    "skip_mamba_crossdomain": true,
+    "mamba_epochs": 4,
+    "mamba_batch_size": 256,
+    "lite_epochs": 3,
+    "lite_batch_size": 256,
+    "lite_lr": 0.001
+  },
+  "steps": [
+    {
+      "name": "phase2_cross_domain_completion",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 20.166623830795288,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082722\\phase2_cross_domain_completion.log",
+      "note": ""
+    }
+  ],
+  "artifacts": {
+    "cross_domain_clean_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\cross_domain_additional_models_clean.csv",
+    "cross_domain_robust_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\cross_domain_additional_models_robust.csv",
+    "cross_domain_meta_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\cross_domain_additional_models_meta.csv",
+    "transfer_all_models_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\multi_domain_transfer_matrix_all_models.csv"
+  }
+}

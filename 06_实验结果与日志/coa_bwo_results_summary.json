@@ -1,0 +1,51 @@
+{
+  "generated_files": [
+    {
+      "filename": "all_models_clean_80_20.csv",
+      "status": "OK (36 rows, 9 columns)",
+      "path": "./all_models_clean_80_20.csv"
+    },
+    {
+      "filename": "coa_bwo_search_trace.csv",
+      "status": "OK (3600 rows, 6 columns)",
+      "path": "./coa_bwo_search_trace.csv"
+    },
+    {
+      "filename": "coa_bwo_best_configs.csv",
+      "status": "OK (12 rows, 4 columns)",
+      "path": "./coa_bwo_best_configs.csv"
+    },
+    {
+      "filename": "robustness_80_20.csv",
+      "status": "OK (90 rows, 8 columns)",
+      "path": "./robustness_80_20.csv"
+    },
+    {
+      "filename": "dispatch_rolling_80_20.csv",
+      "status": "OK (240 rows, 7 columns)",
+      "path": "./dispatch_rolling_80_20.csv"
+    },
+    {
+      "filename": "dispatch_rts24_80_20.csv",
+      "status": "OK (600 rows, 7 columns)",
+      "path": "./dispatch_rts24_80_20.csv"
+    },
+    {
+      "filename": "split_manifest_80_20_unified.json",
+      "status": "OK (5 datasets)",
+      "path": "./split_manifest_80_20_unified.json"
+    }
+  ],
+  "validation_results": [],
+  "summary_statistics": {
+    "total_experiments": 36,
+    "unique_datasets": 4,
+    "unique_models": 3,
+    "unique_seeds": 3,
+    "avg_r2": 0.7740083333333333,
+    "avg_rmse": 0.14629166666666668,
+    "avg_mae": 0.11704166666666664,
+    "avg_train_time": 2476.190555555556
+  },
+  "timestamp": "2026-02-23T03:19:17.148344"
+}

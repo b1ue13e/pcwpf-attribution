@@ -1,0 +1,34 @@
+[
+  {
+    "site": "hill_of_towie",
+    "family": "none",
+    "cost_dyn_recomputed": 0.08757943432716878,
+    "cash_gbp_turb_yr_recomputed": 17395.64301399102,
+    "negative_price_target_steps": 183,
+    "coverage_hours": 7599
+  },
+  {
+    "site": "hill_of_towie",
+    "family": "distribution",
+    "cost_dyn_recomputed": 0.08834576158465711,
+    "cash_gbp_turb_yr_recomputed": 17109.64854721529,
+    "negative_price_target_steps": 183,
+    "coverage_hours": 7599
+  },
+  {
+    "site": "kelmarsh",
+    "family": "none",
+    "cost_dyn_recomputed": 0.08828573315294051,
+    "cash_gbp_turb_yr_recomputed": 16266.041620680491,
+    "negative_price_target_steps": 204,
+    "coverage_hours": 8212
+  },
+  {
+    "site": "kelmarsh",
+    "family": "distribution",
+    "cost_dyn_recomputed": 0.08921751749719897,
+    "cash_gbp_turb_yr_recomputed": 17589.684215845173,
+    "negative_price_target_steps": 204,
+    "coverage_hours": 8212
+  }
+]

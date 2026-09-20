@@ -1,0 +1,4 @@
+mode,total_cost,reserve_cost,avg_outage,critical_hours
+point,,,,
+gaussian,,,,
+quantile,,,,

@@ -1,0 +1,228 @@
+启动并行超参数优化搜索...
+可用GPU数量: 1
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+执行并行随机搜索 (30 次试验)...
+使用 8 个工作进程进行并行搜索
+试验 1: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 4, 'num_experts': 4, 'top_k': 2, 'dropout': 0.1, 'learning_rate': 0.001, 'batch_size': 64, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 1 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 21: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 3, 'num_experts': 16, 'top_k': 4, 'dropout': 0.2, 'learning_rate': 0.0003, 'batch_size': 128, 'weight_decay': 0.001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 21 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 2: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 3, 'num_experts': 16, 'top_k': 4, 'dropout': 0.1, 'learning_rate': 0.001, 'batch_size': 128, 'weight_decay': 0.0001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 2 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 16: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 5, 'num_experts': 4, 'top_k': 2, 'dropout': 0.3, 'learning_rate': 0.0003, 'batch_size': 256, 'weight_decay': 0.0}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 16 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 17: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 3, 'num_experts': 4, 'top_k': 6, 'dropout': 0.1, 'learning_rate': 0.0003, 'batch_size': 64, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 17 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 18: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 4, 'num_experts': 16, 'top_k': 2, 'dropout': 0.3, 'learning_rate': 0.0003, 'batch_size': 64, 'weight_decay': 0.0001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 18 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 5: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 5, 'num_experts': 8, 'top_k': 4, 'dropout': 0.3, 'learning_rate': 0.0003, 'batch_size': 256, 'weight_decay': 0.0001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 5 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 15: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 3, 'num_experts': 16, 'top_k': 6, 'dropout': 0.2, 'learning_rate': 0.0001, 'batch_size': 64, 'weight_decay': 0.0}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 15 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 19: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 4, 'num_experts': 4, 'top_k': 2, 'dropout': 0.3, 'learning_rate': 0.0003, 'batch_size': 256, 'weight_decay': 0.0001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 19 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 22: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 5, 'num_experts': 16, 'top_k': 4, 'dropout': 0.3, 'learning_rate': 0.003, 'batch_size': 64, 'weight_decay': 0.001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 22 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 29: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 2, 'num_experts': 8, 'top_k': 6, 'dropout': 0.1, 'learning_rate': 0.001, 'batch_size': 64, 'weight_decay': 0.0001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 29 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 7: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 3, 'num_experts': 16, 'top_k': 6, 'dropout': 0.1, 'learning_rate': 0.0003, 'batch_size': 64, 'weight_decay': 0.0001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 7 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 10: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 5, 'num_experts': 4, 'top_k': 2, 'dropout': 0.3, 'learning_rate': 0.001, 'batch_size': 128, 'weight_decay': 0.0}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 10 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 11: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 2, 'num_experts': 4, 'top_k': 6, 'dropout': 0.2, 'learning_rate': 0.0003, 'batch_size': 64, 'weight_decay': 0.0}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 11 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 13: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 2, 'num_experts': 8, 'top_k': 4, 'dropout': 0.2, 'learning_rate': 0.003, 'batch_size': 256, 'weight_decay': 0.0}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 13 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 27: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 2, 'num_experts': 8, 'top_k': 2, 'dropout': 0.1, 'learning_rate': 0.001, 'batch_size': 128, 'weight_decay': 0.0}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 27 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 30: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 4, 'num_experts': 4, 'top_k': 6, 'dropout': 0.2, 'learning_rate': 0.003, 'batch_size': 128, 'weight_decay': 0.0001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 30 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 8: 在 cuda:0 上执行
+  参数: {'hidden_dim': 256, 'num_blocks': 2, 'num_experts': 8, 'top_k': 2, 'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 64, 'weight_decay': 0.0}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 8 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 12: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 2, 'num_experts': 4, 'top_k': 2, 'dropout': 0.3, 'learning_rate': 0.001, 'batch_size': 128, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 12 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 14: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 5, 'num_experts': 8, 'top_k': 6, 'dropout': 0.0, 'learning_rate': 0.0003, 'batch_size': 64, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 14 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 4: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 5, 'num_experts': 4, 'top_k': 6, 'dropout': 0.0, 'learning_rate': 0.0001, 'batch_size': 128, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 4 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 25: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 2, 'num_experts': 8, 'top_k': 4, 'dropout': 0.1, 'learning_rate': 0.0001, 'batch_size': 64, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 25 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 26: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 5, 'num_experts': 8, 'top_k': 2, 'dropout': 0.0, 'learning_rate': 0.0003, 'batch_size': 64, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 26 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 28: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 3, 'num_experts': 8, 'top_k': 6, 'dropout': 0.1, 'learning_rate': 0.003, 'batch_size': 256, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 28 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 3: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 2, 'num_experts': 16, 'top_k': 6, 'dropout': 0.3, 'learning_rate': 0.001, 'batch_size': 64, 'weight_decay': 0.0001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 3 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 9: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 4, 'num_experts': 4, 'top_k': 4, 'dropout': 0.1, 'learning_rate': 0.001, 'batch_size': 64, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 9 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 24: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 2, 'num_experts': 4, 'top_k': 2, 'dropout': 0.2, 'learning_rate': 0.001, 'batch_size': 64, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 24 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 6: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 3, 'num_experts': 4, 'top_k': 6, 'dropout': 0.3, 'learning_rate': 0.0003, 'batch_size': 64, 'weight_decay': 0.0}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 6 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 20: 在 cuda:0 上执行
+  参数: {'hidden_dim': 128, 'num_blocks': 3, 'num_experts': 16, 'top_k': 4, 'dropout': 0.3, 'learning_rate': 0.003, 'batch_size': 64, 'weight_decay': 0.001}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 20 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+试验 23: 在 cuda:0 上执行
+  参数: {'hidden_dim': 512, 'num_blocks': 5, 'num_experts': 16, 'top_k': 4, 'dropout': 0.0, 'learning_rate': 0.001, 'batch_size': 64, 'weight_decay': 0.01}
+   训练样本: 72797
+   验证样本: 24187
+   测试样本: 24187
+  试验 23 失败: Cannot re-initialize CUDA in forked subprocess. To use CUDA with multiprocessing, you must use the 'spawn' start method
+完成试验 3/30: R2=-1.0000, RMSE=9999.0000
+完成试验 7/30: R2=-1.0000, RMSE=9999.0000
+完成试验 10/30: R2=-1.0000, RMSE=9999.0000
+完成试验 8/30: R2=-1.0000, RMSE=9999.0000
+完成试验 11/30: R2=-1.0000, RMSE=9999.0000
+完成试验 12/30: R2=-1.0000, RMSE=9999.0000
+完成试验 5/30: R2=-1.0000, RMSE=9999.0000
+完成试验 2/30: R2=-1.0000, RMSE=9999.0000
+完成试验 16/30: R2=-1.0000, RMSE=9999.0000
+完成试验 17/30: R2=-1.0000, RMSE=9999.0000
+完成试验 15/30: R2=-1.0000, RMSE=9999.0000
+完成试验 6/30: R2=-1.0000, RMSE=9999.0000
+完成试验 1/30: R2=-1.0000, RMSE=9999.0000
+完成试验 19/30: R2=-1.0000, RMSE=9999.0000
+完成试验 20/30: R2=-1.0000, RMSE=9999.0000
+完成试验 9/30: R2=-1.0000, RMSE=9999.0000
+完成试验 4/30: R2=-1.0000, RMSE=9999.0000
+完成试验 25/30: R2=-1.0000, RMSE=9999.0000
+完成试验 13/30: R2=-1.0000, RMSE=9999.0000
+完成试验 26/30: R2=-1.0000, RMSE=9999.0000
+完成试验 22/30: R2=-1.0000, RMSE=9999.0000
+完成试验 27/30: R2=-1.0000, RMSE=9999.0000
+完成试验 21/30: R2=-1.0000, RMSE=9999.0000
+完成试验 18/30: R2=-1.0000, RMSE=9999.0000
+完成试验 29/30: R2=-1.0000, RMSE=9999.0000
+完成试验 30/30: R2=-1.0000, RMSE=9999.0000
+完成试验 14/30: R2=-1.0000, RMSE=9999.0000
+完成试验 24/30: R2=-1.0000, RMSE=9999.0000
+完成试验 28/30: R2=-1.0000, RMSE=9999.0000
+完成试验 23/30: R2=-1.0000, RMSE=9999.0000
+并行随机搜索完成，耗时: 3.49 秒
+完成试验数: 30/30
+
+并行随机搜索结果已保存: hyperparameter_random_search_results_parallel.csv
+警告: 没有成功的试验结果
+
+并行超参数优化完成!

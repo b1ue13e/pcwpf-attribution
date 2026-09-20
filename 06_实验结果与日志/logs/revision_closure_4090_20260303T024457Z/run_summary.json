@@ -1,0 +1,119 @@
+{
+  "script": "run_revision_closure_4090.py",
+  "generated_at_utc": "2026-03-03T02:44:57.234483+00:00",
+  "run_stamp": "20260303T024457Z",
+  "log_dir": "C:\\Users\\32110\\Desktop\\论文1\\logs\\revision_closure_4090_20260303T024457Z",
+  "config": {
+    "python": "C:\\Users\\32110\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "device": "cuda",
+    "seeds": "42,123,2025",
+    "epochs": 2,
+    "faults": "gaussian,drift,quantization,missingness",
+    "severity": 0.6,
+    "mapping_methods": "affine,isotonic,quantile",
+    "risk_q": 0.9,
+    "ramp_q": 0.9,
+    "out_dir": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence",
+    "audit_tag": "revision_closure_round1",
+    "skip_fairness": true,
+    "skip_dispatch": true,
+    "skip_decision_summary": false,
+    "skip_pi_moe_train": true,
+    "skip_guardrail": true,
+    "skip_build": true,
+    "force_pi_moe_train": false,
+    "continue_on_error": false,
+    "dry_run": true
+  },
+  "steps": [
+    {
+      "name": "fairness_closure",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "",
+      "command": [],
+      "skipped": true,
+      "note": "Skipped by --skip-fairness"
+    },
+    {
+      "name": "dispatch_closure",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "",
+      "command": [],
+      "skipped": true,
+      "note": "Skipped by --skip-dispatch"
+    },
+    {
+      "name": "decision_aware_summary",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\revision_closure_4090_20260303T024457Z\\decision_aware_summary.log",
+      "command": [
+        "C:\\Users\\32110\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "build_decision_aware_dispatch_evidence.py",
+        "--fairness-csv",
+        "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\fairness_closure_fullfault_hard_table.csv",
+        "--dispatch-l1-csv",
+        "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\dispatch_raw_vs_mapped_summary.csv",
+        "--matrix4-csv",
+        "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\main4_matrix4_dispatch_value.csv",
+        "--dispatch-agg-csv",
+        "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\dispatch_closure_mapping_decision_aggregate.csv",
+        "--rank-csv",
+        "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\dispatch_closure_mapping_decision_ranking_stability.csv",
+        "--out-summary-csv",
+        "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\decision_aware_robustness_summary.csv",
+        "--out-figure-prefix",
+        "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\fig_mapping_ranking_sensitivity",
+        "--out-meta",
+        "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\decision_aware_robustness_summary.meta.json"
+      ],
+      "skipped": false,
+      "note": ""
+    },
+    {
+      "name": "pi_moe_full_training",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "",
+      "command": [],
+      "skipped": true,
+      "note": "Skipped by --skip-pi-moe-train"
+    },
+    {
+      "name": "guardrail_physics_closure",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "",
+      "command": [],
+      "skipped": true,
+      "note": "Skipped by --skip-guardrail"
+    },
+    {
+      "name": "build_main4_matrices",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "",
+      "command": [],
+      "skipped": true,
+      "note": "Skipped by --skip-build"
+    }
+  ],
+  "outputs": {
+    "fairness_raw": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\fairness_closure_fullfault_raw.csv",
+    "dispatch_agg": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\dispatch_closure_mapping_decision_aggregate.csv",
+    "decision_aware_summary_csv": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\decision_aware_robustness_summary.csv",
+    "mapping_ranking_figure_pdf": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\fig_mapping_ranking_sensitivity.pdf",
+    "physics_closure": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\physics_closure.csv",
+    "main4_matrix2": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\main4_matrix2_perf_robust_transfer.csv",
+    "main4_matrix3": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\main4_matrix3_hardware_safety_joint.csv",
+    "main4_matrix4": "C:\\Users\\32110\\Desktop\\论文1\\results\\supplementary_evidence\\main4_matrix4_dispatch_value.csv"
+  }
+}

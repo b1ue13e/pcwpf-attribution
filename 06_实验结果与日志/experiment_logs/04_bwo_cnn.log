@@ -1,0 +1,26 @@
+Checking dependencies...
+All required files found.
+
+======================================================================
+BWO-CNN Experiment Suite V2
+======================================================================
+Datasets: ['wind_cn', 'electricity', 'air_quality', 'gefcom']
+Seeds: [42, 123, 456]
+Population: 40
+Iterations: 200
+Epochs: 30
+Early Stopping Patience: 5
+Sequence Length: 96
+Prediction Length: 24
+======================================================================
+
+======================================================================
+BWO-CNN Experiment: wind_cn (seed=42)
+======================================================================
+Dataset: wind_cn
+  Total samples: 121528
+  Training samples: 97222 (80.0%)
+  Testing samples: 24306 (20.0%)
+  Data loaded: X_train=(77682, 96, 12), X_val=(19421, 96, 12), X_test=(24187, 96, 12)
+
+Initializing BWO with population=40, iterations=200

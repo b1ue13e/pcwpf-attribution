@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-02-25T00:24:56.096225Z",
+  "script": "run_submission_oneclick_4090.py",
+  "args": {
+    "python": "C:\\Users\\32110\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "seed": 42,
+    "seeds": "42",
+    "device": "auto",
+    "continue_on_error": false,
+    "dry_run": false,
+    "skip_full_backfill": true,
+    "skip_cross_domain": true,
+    "skip_seed_significance": false,
+    "skip_lite_robustness": false,
+    "skip_rebuild": true,
+    "seq_len": 96,
+    "pred_len": 24,
+    "ssa_pop_size": 8,
+    "ssa_iters": 8,
+    "skip_mamba_crossdomain": false,
+    "mamba_epochs": 4,
+    "mamba_batch_size": 256,
+    "lite_epochs": 1,
+    "lite_batch_size": 256,
+    "lite_lr": 0.001
+  },
+  "steps": [
+    {
+      "name": "phase3_seed_stability_significance",
+      "ok": false,
+      "return_code": 1,
+      "elapsed_sec": 0.002011537551879883,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082456\\phase3_seed_stability_significance.log",
+      "note": "'gbk' codec can't encode character '\\u2705' in position 0: illegal multibyte sequence"
+    }
+  ],
+  "artifacts": {}
+}

@@ -1,0 +1,178 @@
+{
+  "optis2022": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "What do we mean by validating a prognostic model?",
+    "doi": "10.1002/(sici)1097-0258(20000229)19:4<453::aid-sim350>3.0.co;2-5",
+    "venue": "Statistics in Medicine",
+    "volume": "19",
+    "issue": "4",
+    "page": "453-473",
+    "year": 2000,
+    "type": "article"
+  },
+  "yan2016review": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "A review of wind power and wind speed forecasting methods with different time horizons",
+    "doi": "10.1109/naps.2010.5619586",
+    "venue": "",
+    "volume": null,
+    "issue": null,
+    "page": "1-8",
+    "year": 2010,
+    "type": "conference-paper"
+  },
+  "dao2018cointegration": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Condition monitoring of wind turbines based on cointegration analysis of gearbox and generator temperature data",
+    "doi": "10.29354/diag/81298",
+    "venue": "Diagnostyka",
+    "volume": "19",
+    "issue": "1",
+    "page": "63-71",
+    "year": 2018,
+    "type": "article"
+  },
+  "madsen2005": {
+    "status": "VERIFIED_CROSSREF",
+    "title": "Standardizing the Performance Evaluation of Short-Term Wind Power Prediction Models",
+    "doi": "10.1260/030952405776234599",
+    "venue": "Wind Engineering",
+    "volume": "29",
+    "issue": "6",
+    "page": "475-489",
+    "year": 2005,
+    "type": "journal-article"
+  },
+  "maldonadocorrea2020slr": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Wind power forecasting: A systematic literature review",
+    "doi": "10.1177/0309524x19891672",
+    "venue": "Wind Engineering",
+    "volume": "45",
+    "issue": "2",
+    "page": "413-426",
+    "year": 2019,
+    "type": "review"
+  },
+  "weron2014": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Electricity price forecasting: A review of the state-of-the-art with a look into the future",
+    "doi": "10.1016/j.ijforecast.2014.08.008",
+    "venue": "International Journal of Forecasting",
+    "volume": "30",
+    "issue": "4",
+    "page": "1030-1081",
+    "year": 2014,
+    "type": "article"
+  },
+  "zhang2014wind": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Review on probabilistic forecasting of wind power generation",
+    "doi": "10.1016/j.rser.2014.01.033",
+    "venue": "Renewable and Sustainable Energy Reviews",
+    "volume": "32",
+    "issue": null,
+    "page": "255-270",
+    "year": 2014,
+    "type": "article"
+  },
+  "yan2025economicvalue": {
+    "status": "VERIFIED_CROSSREF",
+    "title": "Wind power in electricity markets and the value of forecasting",
+    "doi": "10.1016/b978-0-08-100504-0.00010-x",
+    "venue": "Renewable Energy Forecasting",
+    "volume": "",
+    "issue": "",
+    "page": "259-278",
+    "year": 2017,
+    "type": "book-chapter"
+  },
+  "sheng2025annreview": {
+    "status": "VERIFIED_CROSSREF",
+    "title": "Probabilistic Wind Power Forecasting with Hybrid Artificial Neural Networks",
+    "doi": "10.1080/15325008.2016.1198437",
+    "venue": "Electric Power Components and Systems",
+    "volume": "44",
+    "issue": "15",
+    "page": "1656-1668",
+    "year": 2016,
+    "type": "journal-article"
+  },
+  "tricco2018": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation",
+    "doi": "10.7326/m18-0850",
+    "venue": "Annals of Internal Medicine",
+    "volume": "169",
+    "issue": "7",
+    "page": "467-473",
+    "year": 2018,
+    "type": "article"
+  },
+  "koenker2005": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Quantile Regression",
+    "doi": "10.1017/cbo9780511754098",
+    "venue": "Cambridge University Press eBooks",
+    "volume": null,
+    "issue": null,
+    "page": "None-None",
+    "year": 2005,
+    "type": "book"
+  },
+  "karniadakis2021physics": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Physics-informed machine learning",
+    "doi": "10.1038/s42254-021-00314-5",
+    "venue": "Nature Reviews Physics",
+    "volume": "3",
+    "issue": "6",
+    "page": "422-440",
+    "year": 2021,
+    "type": "review"
+  },
+  "raissi2019physics": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+    "doi": "10.1016/j.jcp.2018.10.045",
+    "venue": "Journal of Computational Physics",
+    "volume": "378",
+    "issue": null,
+    "page": "686-707",
+    "year": 2018,
+    "type": "article"
+  },
+  "krishnapriyan2021": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Characterizing possible failure modes in physics-informed neural networks",
+    "doi": "10.48550/arxiv.2109.01050",
+    "venue": "arXiv (Cornell University)",
+    "volume": "34",
+    "issue": null,
+    "page": "None-None",
+    "year": 2021,
+    "type": "preprint"
+  },
+  "damour2022": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "Underspecification Presents Challenges for Credibility in Modern Machine Learning",
+    "doi": "10.48550/arxiv.2011.03395",
+    "venue": "arXiv (Cornell University)",
+    "volume": null,
+    "issue": null,
+    "page": "None-None",
+    "year": 2020,
+    "type": "preprint"
+  },
+  "gundersen2018": {
+    "status": "VERIFIED_OPENALEX",
+    "title": "State of the Art: Reproducibility in Artificial Intelligence",
+    "doi": "10.1609/aaai.v32i1.11503",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "volume": "32",
+    "issue": "1",
+    "page": "None-None",
+    "year": 2018,
+    "type": "conference-paper"
+  }
+}

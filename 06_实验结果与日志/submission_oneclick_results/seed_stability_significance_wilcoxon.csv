@@ -1,0 +1,10 @@
+scenario,baseline,n_seed,wilcoxon_stat,wilcoxon_pvalue_one_sided_ultra_greater
+clean,DLinear,1,,
+clean,iTransformer,1,,
+clean,TimeMixer,1,,
+gaussian_60pct,DLinear,1,,
+gaussian_60pct,iTransformer,1,,
+gaussian_60pct,TimeMixer,1,,
+spike_60pct,DLinear,1,,
+spike_60pct,iTransformer,1,,
+spike_60pct,TimeMixer,1,,

@@ -1,0 +1,211 @@
+🚀 启动统计显著性测试 (5 Runs) - OMP 防弹版...
+   目标脚本: ultra_lsnt_timeseries.py
+   种子列表: [42, 43, 44, 45, 46]
+------------------------------------------------------------
+
+▶️ [Run 1/5] 正在运行 Seed = 42 ... (请耐心等待)
+Epoch 1/200 | LR: 0.000300 | Temp: 2.000
+[   0/331] Loss: 1.0449 | Main: 1.0425 | Aux: 0.2368
+[  10/331] Loss: 0.4085 | Main: 0.4061 | Aux: 0.2397
+[  20/331] Loss: 0.2875 | Main: 0.2852 | Aux: 0.2352
+[  30/331] Loss: 0.2286 | Main: 0.2263 | Aux: 0.2258
+[  40/331] Loss: 0.1950 | Main: 0.1929 | Aux: 0.2155
+[  50/331] Loss: 0.1730 | Main: 0.1709 | Aux: 0.2052
+[  60/331] Loss: 0.1568 | Main: 0.1549 | Aux: 0.1958
+[  70/331] Loss: 0.1443 | Main: 0.1424 | Aux: 0.1873
+[  80/331] Loss: 0.1345 | Main: 0.1327 | Aux: 0.1798
+[  90/331] Loss: 0.1256 | Main: 0.1239 | Aux: 0.1725
+[ 100/331] Loss: 0.1181 | Main: 0.1164 | Aux: 0.1657
+[ 110/331] Loss: 0.1120 | Main: 0.1104 | Aux: 0.1594
+[ 120/331] Loss: 0.1070 | Main: 0.1055 | Aux: 0.1536
+[ 130/331] Loss: 0.1028 | Main: 0.1013 | Aux: 0.1483
+[ 140/331] Loss: 0.0988 | Main: 0.0974 | Aux: 0.1434
+[ 150/331] Loss: 0.0955 | Main: 0.0941 | Aux: 0.1389
+[ 160/331] Loss: 0.0924 | Main: 0.0910 | Aux: 0.1347
+[ 170/331] Loss: 0.0895 | Main: 0.0882 | Aux: 0.1309
+[ 180/331] Loss: 0.0865 | Main: 0.0852 | Aux: 0.1273
+[ 190/331] Loss: 0.0841 | Main: 0.0829 | Aux: 0.1239
+[ 200/331] Loss: 0.0819 | Main: 0.0807 | Aux: 0.1207
+[ 210/331] Loss: 0.0798 | Main: 0.0786 | Aux: 0.1178
+[ 220/331] Loss: 0.0777 | Main: 0.0765 | Aux: 0.1150
+[ 230/331] Loss: 0.0758 | Main: 0.0747 | Aux: 0.1125
+[ 240/331] Loss: 0.0741 | Main: 0.0730 | Aux: 0.1101
+[ 250/331] Loss: 0.0725 | Main: 0.0715 | Aux: 0.1079
+[ 260/331] Loss: 0.0712 | Main: 0.0701 | Aux: 0.1058
+[ 270/331] Loss: 0.0696 | Main: 0.0686 | Aux: 0.1039
+[ 280/331] Loss: 0.0682 | Main: 0.0672 | Aux: 0.1020
+[ 290/331] Loss: 0.0670 | Main: 0.0660 | Aux: 0.1002
+[ 300/331] Loss: 0.0658 | Main: 0.0648 | Aux: 0.0986
+[ 310/331] Loss: 0.0647 | Main: 0.0637 | Aux: 0.0971
+[ 320/331] Loss: 0.0636 | Main: 0.0626 | Aux: 0.0957
+[ 330/331] Loss: 0.0625 | Main: 0.0616 | Aux: 0.0943
+print(f"  Train | Loss: {train_metrics['loss']:.4f} | MSE: {train_metrics['mse']:.4f}")
+   ❌ 运行失败 (Seed 42)！
+   最后报错日志: ['[ 320/331] Loss: 0.0636 | Main: 0.0626 | Aux: 0.0957', '[ 330/331] Loss: 0.0625 | Main: 0.0616 | Aux: 0.0943', 'Traceback (most recent call last):', 'File "/root/my/ultra_lsnt_timeseries.py", line 1768, in <module>', 'main()', 'File "/root/my/ultra_lsnt_timeseries.py", line 1754, in main', 'history, test_metrics = train(', 'File "/root/my/ultra_lsnt_timeseries.py", line 1476, in train', 'print(f"  Train | Loss: {train_metrics[\'loss\']:.4f} | MSE: {train_metrics[\'mse\']:.4f}")', "KeyError: 'mse'"]
+
+▶️ [Run 2/5] 正在运行 Seed = 43 ... (请耐心等待)
+Epoch 1/200 | LR: 0.000300 | Temp: 2.000
+[   0/331] Loss: 1.1611 | Main: 1.1587 | Aux: 0.2467
+[  10/331] Loss: 0.4448 | Main: 0.4424 | Aux: 0.2372
+[  20/331] Loss: 0.3178 | Main: 0.3155 | Aux: 0.2343
+[  30/331] Loss: 0.2548 | Main: 0.2525 | Aux: 0.2306
+[  40/331] Loss: 0.2155 | Main: 0.2132 | Aux: 0.2242
+[  50/331] Loss: 0.1893 | Main: 0.1872 | Aux: 0.2165
+[  60/331] Loss: 0.1707 | Main: 0.1686 | Aux: 0.2084
+[  70/331] Loss: 0.1551 | Main: 0.1531 | Aux: 0.1999
+[  80/331] Loss: 0.1434 | Main: 0.1415 | Aux: 0.1917
+[  90/331] Loss: 0.1336 | Main: 0.1318 | Aux: 0.1839
+[ 100/331] Loss: 0.1263 | Main: 0.1245 | Aux: 0.1767
+[ 110/331] Loss: 0.1195 | Main: 0.1178 | Aux: 0.1704
+[ 120/331] Loss: 0.1139 | Main: 0.1123 | Aux: 0.1645
+[ 130/331] Loss: 0.1091 | Main: 0.1075 | Aux: 0.1590
+[ 140/331] Loss: 0.1050 | Main: 0.1034 | Aux: 0.1539
+[ 150/331] Loss: 0.1009 | Main: 0.0994 | Aux: 0.1492
+[ 160/331] Loss: 0.0973 | Main: 0.0959 | Aux: 0.1448
+[ 170/331] Loss: 0.0939 | Main: 0.0924 | Aux: 0.1408
+[ 180/331] Loss: 0.0909 | Main: 0.0895 | Aux: 0.1369
+[ 190/331] Loss: 0.0881 | Main: 0.0868 | Aux: 0.1334
+[ 200/331] Loss: 0.0855 | Main: 0.0842 | Aux: 0.1300
+[ 210/331] Loss: 0.0833 | Main: 0.0820 | Aux: 0.1269
+[ 220/331] Loss: 0.0811 | Main: 0.0799 | Aux: 0.1240
+[ 230/331] Loss: 0.0791 | Main: 0.0778 | Aux: 0.1213
+[ 240/331] Loss: 0.0771 | Main: 0.0759 | Aux: 0.1188
+[ 250/331] Loss: 0.0754 | Main: 0.0742 | Aux: 0.1164
+[ 260/331] Loss: 0.0739 | Main: 0.0727 | Aux: 0.1141
+[ 270/331] Loss: 0.0723 | Main: 0.0712 | Aux: 0.1120
+[ 280/331] Loss: 0.0708 | Main: 0.0697 | Aux: 0.1100
+[ 290/331] Loss: 0.0694 | Main: 0.0683 | Aux: 0.1081
+[ 300/331] Loss: 0.0680 | Main: 0.0670 | Aux: 0.1063
+[ 310/331] Loss: 0.0667 | Main: 0.0657 | Aux: 0.1046
+[ 320/331] Loss: 0.0655 | Main: 0.0644 | Aux: 0.1030
+[ 330/331] Loss: 0.0644 | Main: 0.0633 | Aux: 0.1015
+print(f"  Train | Loss: {train_metrics['loss']:.4f} | MSE: {train_metrics['mse']:.4f}")
+   ❌ 运行失败 (Seed 43)！
+   最后报错日志: ['[ 320/331] Loss: 0.0655 | Main: 0.0644 | Aux: 0.1030', '[ 330/331] Loss: 0.0644 | Main: 0.0633 | Aux: 0.1015', 'Traceback (most recent call last):', 'File "/root/my/ultra_lsnt_timeseries.py", line 1768, in <module>', 'main()', 'File "/root/my/ultra_lsnt_timeseries.py", line 1754, in main', 'history, test_metrics = train(', 'File "/root/my/ultra_lsnt_timeseries.py", line 1476, in train', 'print(f"  Train | Loss: {train_metrics[\'loss\']:.4f} | MSE: {train_metrics[\'mse\']:.4f}")', "KeyError: 'mse'"]
+
+▶️ [Run 3/5] 正在运行 Seed = 44 ... (请耐心等待)
+Epoch 1/200 | LR: 0.000300 | Temp: 2.000
+[   0/331] Loss: 0.8586 | Main: 0.8560 | Aux: 0.2592
+[  10/331] Loss: 0.4428 | Main: 0.4403 | Aux: 0.2459
+[  20/331] Loss: 0.3175 | Main: 0.3151 | Aux: 0.2408
+[  30/331] Loss: 0.2587 | Main: 0.2564 | Aux: 0.2355
+[  40/331] Loss: 0.2206 | Main: 0.2183 | Aux: 0.2294
+[  50/331] Loss: 0.1938 | Main: 0.1916 | Aux: 0.2222
+[  60/331] Loss: 0.1735 | Main: 0.1713 | Aux: 0.2143
+[  70/331] Loss: 0.1579 | Main: 0.1559 | Aux: 0.2063
+[  80/331] Loss: 0.1453 | Main: 0.1433 | Aux: 0.1988
+[  90/331] Loss: 0.1359 | Main: 0.1340 | Aux: 0.1915
+[ 100/331] Loss: 0.1292 | Main: 0.1273 | Aux: 0.1846
+[ 110/331] Loss: 0.1224 | Main: 0.1206 | Aux: 0.1785
+[ 120/331] Loss: 0.1168 | Main: 0.1150 | Aux: 0.1728
+[ 130/331] Loss: 0.1117 | Main: 0.1101 | Aux: 0.1675
+[ 140/331] Loss: 0.1070 | Main: 0.1054 | Aux: 0.1624
+[ 150/331] Loss: 0.1029 | Main: 0.1013 | Aux: 0.1578
+[ 160/331] Loss: 0.0993 | Main: 0.0977 | Aux: 0.1532
+[ 170/331] Loss: 0.0959 | Main: 0.0944 | Aux: 0.1489
+[ 180/331] Loss: 0.0927 | Main: 0.0912 | Aux: 0.1448
+[ 190/331] Loss: 0.0901 | Main: 0.0887 | Aux: 0.1411
+[ 200/331] Loss: 0.0874 | Main: 0.0860 | Aux: 0.1376
+[ 210/331] Loss: 0.0850 | Main: 0.0836 | Aux: 0.1344
+[ 220/331] Loss: 0.0827 | Main: 0.0813 | Aux: 0.1313
+[ 230/331] Loss: 0.0806 | Main: 0.0793 | Aux: 0.1284
+[ 240/331] Loss: 0.0787 | Main: 0.0774 | Aux: 0.1257
+[ 250/331] Loss: 0.0771 | Main: 0.0758 | Aux: 0.1231
+[ 260/331] Loss: 0.0756 | Main: 0.0744 | Aux: 0.1207
+[ 270/331] Loss: 0.0741 | Main: 0.0729 | Aux: 0.1184
+[ 280/331] Loss: 0.0726 | Main: 0.0715 | Aux: 0.1162
+[ 290/331] Loss: 0.0712 | Main: 0.0701 | Aux: 0.1142
+[ 300/331] Loss: 0.0699 | Main: 0.0687 | Aux: 0.1123
+[ 310/331] Loss: 0.0685 | Main: 0.0674 | Aux: 0.1104
+[ 320/331] Loss: 0.0672 | Main: 0.0661 | Aux: 0.1087
+[ 330/331] Loss: 0.0660 | Main: 0.0650 | Aux: 0.1070
+print(f"  Train | Loss: {train_metrics['loss']:.4f} | MSE: {train_metrics['mse']:.4f}")
+   ❌ 运行失败 (Seed 44)！
+   最后报错日志: ['[ 320/331] Loss: 0.0672 | Main: 0.0661 | Aux: 0.1087', '[ 330/331] Loss: 0.0660 | Main: 0.0650 | Aux: 0.1070', 'Traceback (most recent call last):', 'File "/root/my/ultra_lsnt_timeseries.py", line 1768, in <module>', 'main()', 'File "/root/my/ultra_lsnt_timeseries.py", line 1754, in main', 'history, test_metrics = train(', 'File "/root/my/ultra_lsnt_timeseries.py", line 1476, in train', 'print(f"  Train | Loss: {train_metrics[\'loss\']:.4f} | MSE: {train_metrics[\'mse\']:.4f}")', "KeyError: 'mse'"]
+
+▶️ [Run 4/5] 正在运行 Seed = 45 ... (请耐心等待)
+Epoch 1/200 | LR: 0.000300 | Temp: 2.000
+[   0/331] Loss: 0.9255 | Main: 0.9228 | Aux: 0.2682
+[  10/331] Loss: 0.3910 | Main: 0.3885 | Aux: 0.2517
+[  20/331] Loss: 0.2852 | Main: 0.2827 | Aux: 0.2451
+[  30/331] Loss: 0.2298 | Main: 0.2274 | Aux: 0.2381
+[  40/331] Loss: 0.1985 | Main: 0.1962 | Aux: 0.2303
+[  50/331] Loss: 0.1753 | Main: 0.1731 | Aux: 0.2220
+[  60/331] Loss: 0.1574 | Main: 0.1552 | Aux: 0.2140
+[  70/331] Loss: 0.1443 | Main: 0.1423 | Aux: 0.2057
+[  80/331] Loss: 0.1331 | Main: 0.1311 | Aux: 0.1977
+[  90/331] Loss: 0.1246 | Main: 0.1227 | Aux: 0.1902
+[ 100/331] Loss: 0.1176 | Main: 0.1157 | Aux: 0.1834
+[ 110/331] Loss: 0.1113 | Main: 0.1096 | Aux: 0.1769
+[ 120/331] Loss: 0.1066 | Main: 0.1049 | Aux: 0.1707
+[ 130/331] Loss: 0.1024 | Main: 0.1008 | Aux: 0.1651
+[ 140/331] Loss: 0.0984 | Main: 0.0968 | Aux: 0.1600
+[ 150/331] Loss: 0.0951 | Main: 0.0936 | Aux: 0.1554
+[ 160/331] Loss: 0.0919 | Main: 0.0904 | Aux: 0.1511
+[ 170/331] Loss: 0.0890 | Main: 0.0876 | Aux: 0.1470
+[ 180/331] Loss: 0.0862 | Main: 0.0848 | Aux: 0.1432
+[ 190/331] Loss: 0.0838 | Main: 0.0824 | Aux: 0.1396
+[ 200/331] Loss: 0.0816 | Main: 0.0802 | Aux: 0.1361
+[ 210/331] Loss: 0.0795 | Main: 0.0781 | Aux: 0.1330
+[ 220/331] Loss: 0.0775 | Main: 0.0762 | Aux: 0.1299
+[ 230/331] Loss: 0.0756 | Main: 0.0743 | Aux: 0.1271
+[ 240/331] Loss: 0.0738 | Main: 0.0726 | Aux: 0.1244
+[ 250/331] Loss: 0.0721 | Main: 0.0709 | Aux: 0.1219
+[ 260/331] Loss: 0.0705 | Main: 0.0693 | Aux: 0.1195
+[ 270/331] Loss: 0.0690 | Main: 0.0678 | Aux: 0.1172
+[ 280/331] Loss: 0.0679 | Main: 0.0667 | Aux: 0.1151
+[ 290/331] Loss: 0.0667 | Main: 0.0656 | Aux: 0.1131
+[ 300/331] Loss: 0.0656 | Main: 0.0645 | Aux: 0.1112
+[ 310/331] Loss: 0.0644 | Main: 0.0633 | Aux: 0.1095
+[ 320/331] Loss: 0.0633 | Main: 0.0622 | Aux: 0.1078
+[ 330/331] Loss: 0.0623 | Main: 0.0612 | Aux: 0.1062
+print(f"  Train | Loss: {train_metrics['loss']:.4f} | MSE: {train_metrics['mse']:.4f}")
+   ❌ 运行失败 (Seed 45)！
+   最后报错日志: ['[ 320/331] Loss: 0.0633 | Main: 0.0622 | Aux: 0.1078', '[ 330/331] Loss: 0.0623 | Main: 0.0612 | Aux: 0.1062', 'Traceback (most recent call last):', 'File "/root/my/ultra_lsnt_timeseries.py", line 1768, in <module>', 'main()', 'File "/root/my/ultra_lsnt_timeseries.py", line 1754, in main', 'history, test_metrics = train(', 'File "/root/my/ultra_lsnt_timeseries.py", line 1476, in train', 'print(f"  Train | Loss: {train_metrics[\'loss\']:.4f} | MSE: {train_metrics[\'mse\']:.4f}")', "KeyError: 'mse'"]
+
+▶️ [Run 5/5] 正在运行 Seed = 46 ... (请耐心等待)
+Epoch 1/200 | LR: 0.000300 | Temp: 2.000
+[   0/331] Loss: 1.0358 | Main: 1.0334 | Aux: 0.2407
+[  10/331] Loss: 0.3853 | Main: 0.3829 | Aux: 0.2434
+[  20/331] Loss: 0.2850 | Main: 0.2826 | Aux: 0.2404
+[  30/331] Loss: 0.2344 | Main: 0.2321 | Aux: 0.2337
+[  40/331] Loss: 0.2014 | Main: 0.1991 | Aux: 0.2266
+[  50/331] Loss: 0.1779 | Main: 0.1757 | Aux: 0.2187
+[  60/331] Loss: 0.1598 | Main: 0.1577 | Aux: 0.2108
+[  70/331] Loss: 0.1470 | Main: 0.1449 | Aux: 0.2031
+[  80/331] Loss: 0.1364 | Main: 0.1344 | Aux: 0.1952
+[  90/331] Loss: 0.1278 | Main: 0.1259 | Aux: 0.1879
+[ 100/331] Loss: 0.1204 | Main: 0.1186 | Aux: 0.1811
+[ 110/331] Loss: 0.1140 | Main: 0.1122 | Aux: 0.1748
+[ 120/331] Loss: 0.1091 | Main: 0.1075 | Aux: 0.1689
+[ 130/331] Loss: 0.1046 | Main: 0.1029 | Aux: 0.1635
+[ 140/331] Loss: 0.1009 | Main: 0.0993 | Aux: 0.1586
+[ 150/331] Loss: 0.0970 | Main: 0.0954 | Aux: 0.1541
+[ 160/331] Loss: 0.0937 | Main: 0.0922 | Aux: 0.1499
+[ 170/331] Loss: 0.0907 | Main: 0.0892 | Aux: 0.1457
+[ 180/331] Loss: 0.0878 | Main: 0.0864 | Aux: 0.1419
+[ 190/331] Loss: 0.0853 | Main: 0.0839 | Aux: 0.1383
+[ 200/331] Loss: 0.0833 | Main: 0.0820 | Aux: 0.1351
+[ 210/331] Loss: 0.0813 | Main: 0.0800 | Aux: 0.1320
+[ 220/331] Loss: 0.0793 | Main: 0.0780 | Aux: 0.1290
+[ 230/331] Loss: 0.0773 | Main: 0.0761 | Aux: 0.1262
+[ 240/331] Loss: 0.0755 | Main: 0.0743 | Aux: 0.1236
+[ 250/331] Loss: 0.0738 | Main: 0.0726 | Aux: 0.1211
+[ 260/331] Loss: 0.0721 | Main: 0.0709 | Aux: 0.1187
+[ 270/331] Loss: 0.0707 | Main: 0.0695 | Aux: 0.1165
+[ 280/331] Loss: 0.0694 | Main: 0.0682 | Aux: 0.1144
+[ 290/331] Loss: 0.0682 | Main: 0.0671 | Aux: 0.1125
+[ 300/331] Loss: 0.0670 | Main: 0.0659 | Aux: 0.1106
+[ 310/331] Loss: 0.0658 | Main: 0.0647 | Aux: 0.1089
+[ 320/331] Loss: 0.0646 | Main: 0.0636 | Aux: 0.1072
+[ 330/331] Loss: 0.0635 | Main: 0.0624 | Aux: 0.1056
+print(f"  Train | Loss: {train_metrics['loss']:.4f} | MSE: {train_metrics['mse']:.4f}")
+   ❌ 运行失败 (Seed 46)！
+   最后报错日志: ['[ 320/331] Loss: 0.0646 | Main: 0.0636 | Aux: 0.1072', '[ 330/331] Loss: 0.0635 | Main: 0.0624 | Aux: 0.1056', 'Traceback (most recent call last):', 'File "/root/my/ultra_lsnt_timeseries.py", line 1768, in <module>', 'main()', 'File "/root/my/ultra_lsnt_timeseries.py", line 1754, in main', 'history, test_metrics = train(', 'File "/root/my/ultra_lsnt_timeseries.py", line 1476, in train', 'print(f"  Train | Loss: {train_metrics[\'loss\']:.4f} | MSE: {train_metrics[\'mse\']:.4f}")', "KeyError: 'mse'"]
+
+============================================================
+📊 统计显著性测试报告
+============================================================
+❌ 没有收集到有效数据。
+
+总耗时: 0.03 hours

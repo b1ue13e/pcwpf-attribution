@@ -1,0 +1,3 @@
+[2026-01-25 23:18:07] 步骤1: 运行脉冲噪声实验 (DLinear vs Ultra-LSNT)
+[2026-01-25 23:18:07] 开始运行: battle_dlinear.py
+[2026-01-25 23:18:11] 错误: battle_dlinear.py 执行失败

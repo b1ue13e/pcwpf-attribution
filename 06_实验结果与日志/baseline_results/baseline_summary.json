@@ -1,0 +1,22 @@
+{
+  "run_time": "2026-01-26 01:02:13",
+  "device": "cuda",
+  "models": [
+    {
+      "model": "LSTM",
+      "r2_score": 0.7053988873958588,
+      "result_file": "baseline_results/LSTM_results_20260126_005959.json"
+    },
+    {
+      "model": "MLP",
+      "r2_score": 0.665303498506546,
+      "result_file": "baseline_results/MLP_results_20260126_010031.json"
+    },
+    {
+      "model": "Transformer",
+      "r2_score": 0.74198317527771,
+      "result_file": "baseline_results/Transformer_results_20260126_010213.json"
+    }
+  ],
+  "ultra_lsnt_reference": 0.7513
+}

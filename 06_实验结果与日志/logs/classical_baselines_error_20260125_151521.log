@@ -1,0 +1,28 @@
+/root/miniconda3/lib/python3.10/site-packages/statsmodels/base/model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+加载风电数据（内存优化版本）...
+使用子样本: 60764 行
+数据形状: (60764, 8)
+训练 Persistence 模型...
+训练 Seasonal Naive 模型...
+训练 ARIMA 模型...
+ARIMA 训练失败: 'numpy.ndarray' object has no attribute 'values'
+训练 Power Curve 模型...
+训练 Random Forest (NWP) 模型...
+
+经典基线模型性能对比:
+                         MSE        RMSE         MAE        R2     MAPE
+Persistence     4.045874e+07   6360.7183   6243.3932  -26.3596  11.7233
+Seasonal_Naive  4.175448e+08  20433.9121  20307.0040 -281.3579  38.3763
+ARIMA                    NaN         NaN         NaN       NaN      NaN
+PowerCurve      2.750821e+09  52448.2672  46800.7495   -3.9060  99.9965
+RandomForest    2.628500e+08  16212.6505  11033.6646    0.5325  24.9865
+
+✅ 经典基线模型评估完成（内存优化版本）!
+                         MSE        RMSE         MAE        R2     MAPE
+Persistence     4.045874e+07   6360.7183   6243.3932  -26.3596  11.7233
+Seasonal_Naive  4.175448e+08  20433.9121  20307.0040 -281.3579  38.3763
+ARIMA                    NaN         NaN         NaN       NaN      NaN
+PowerCurve      2.750821e+09  52448.2672  46800.7495   -3.9060  99.9965
+RandomForest    2.628500e+08  16212.6505  11033.6646    0.5325  24.9865
+结果保存至: baseline_results/classical_baselines_optimized.csv

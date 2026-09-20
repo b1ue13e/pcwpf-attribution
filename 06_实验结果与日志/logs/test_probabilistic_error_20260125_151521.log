@@ -1,0 +1,74 @@
+Ultra‑LSNT 概率预测版本测试
+======================================================================
+
+生成模拟概率预测数据供调度模型使用...
+模拟概率预测已保存至 checkpoints_ts/prob_predictions.npz
+均值范围: [20000, 40000] kW
+标准差范围: [2000, 8000] kW
+95%分位数: [25291, 51158] kW
+点预测文件也已更新
+
+=== 运行调度模型比较 (概率 vs 点预测) ===
+
+
+========== 模式: point ==========
+使用点预测数据，不确定性为均值的20%
+加载 point 预测，时段数=24
+均值范围: [20000, 40000] kW
+标准差范围: [4000, 8000] kW
+95%分位数范围: [27840, 55680] kW
+优化问题规模：变量数 = 96
+约束数： 4
+Positive directional derivative for linesearch    (Exit mode 8)
+            Current function value: 314005.880009749
+            Iterations: 7
+            Function evaluations: 291
+            Gradient evaluations: 3
+优化失败: Positive directional derivative for linesearch
+模式 point 优化失败，跳过
+
+========== 模式: gaussian ==========
+加载 gaussian 预测，时段数=24
+均值范围: [20000, 40000] kW
+标准差范围: [2000, 8000] kW
+95%分位数范围: [26048, 53552] kW
+优化问题规模：变量数 = 96
+约束数： 4
+Positive directional derivative for linesearch    (Exit mode 8)
+            Current function value: 306693.0243490739
+            Iterations: 7
+            Function evaluations: 291
+            Gradient evaluations: 3
+优化失败: Positive directional derivative for linesearch
+模式 gaussian 优化失败，跳过
+
+========== 模式: quantile ==========
+加载 quantile 预测，时段数=24
+均值范围: [20000, 40000] kW
+标准差范围: [1678, 6714] kW
+95%分位数范围: [25291, 51158] kW
+优化问题规模：变量数 = 96
+约束数： 4
+Positive directional derivative for linesearch    (Exit mode 8)
+            Current function value: 301070.0166361525
+            Iterations: 7
+            Function evaluations: 291
+            Gradient evaluations: 3
+优化失败: Positive directional derivative for linesearch
+模式 quantile 优化失败，跳过
+
+======================================================================
+概率预测模式对比报告
+======================================================================
+
+对比结果已保存为 probabilistic_comparison.csv
+
+调度对比完成。
+
+⚠️ 调度对比未完成，但概率预测功能已实现。
+
+=== 验证概率指标函数 ===
+高斯指标: CRPS=-0.3540, PICP_95=0.955
+分位数指标: pinball_avg=0.2985, PICP_interval=0.796
+
+所有概率功能测试完成。

@@ -1,0 +1,17 @@
+[2026-02-09T16:08:56.930064] Task: multi_domain
+Command: /root/miniconda3/bin/python3 evaluate_multi_domain.py
+
+Summarizing multi-domain experimental results...
+============================================================
+
+Ultra-LSNT Multi-Domain Generalization Evaluation
+---------------------------------------------------------------------------
+    Dataset R2 Score      RMSE       MAE Skip Rate  Status
+  Wind (CN)   0.8728 9080.5547 7171.4165      0.0% Success
+  Wind (US)   0.7878    0.4556    0.2891     11.4% Success
+Air Quality   0.4861   32.2145   19.8663      0.0% Success
+GEFCom Load   0.7554 2836.9788 2049.4832      0.0% Success
+---------------------------------------------------------------------------
+
+Table saved as: table_multi_domain.csv
+Note: Use this data for the 'Results' section in your paper.

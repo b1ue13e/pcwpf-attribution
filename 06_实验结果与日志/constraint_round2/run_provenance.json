@@ -1,0 +1,20 @@
+{
+  "code_files": {
+    "assess.py": "296e2e29e87999a10c4184c0f88693310d408909bb5fbba1c7beaca3938fa8eb",
+    "core.py": "73c1d639e054fdc12de99c18902d2e698393978780c72cb8a1c21cf35819f196",
+    "download_hill.py": "aeac0a6b919b5fc3fa7000fe13cb9400ade3c6090863f2374f2cdd821afa68d7",
+    "prepare_hill.py": "2bb4fc00ba6c888c66aa89b4ea61333d5b6143465d9a2218651fd8c9488a670f",
+    "protocol.json": "aaff151cebe09435bc54bbbd688bde3486b3b6877fabc76e091f5d794a7d7eb2",
+    "run_host.py": "3793196e026ac7d1a1e4eb89d8225503c603eb9b1d37d92c47fb179e0990624b",
+    "summarize.py": "45a34f49d1ea7847a5d0fd682ab6634120f58b2cb3737662959c8faea82ed30c"
+  },
+  "new_external_source": "https://zenodo.org/records/20204946",
+  "raw_period": "2016-2017",
+  "historical_test_reuse": [
+    "kelmarsh",
+    "penmanshiel",
+    "smarteole"
+  ],
+  "new_test": "hill_of_towie 2017",
+  "real_human_recoding_completed": false
+}

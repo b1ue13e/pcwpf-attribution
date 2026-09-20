@@ -1,0 +1,145 @@
+/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+========================================
+修复版 COA-BiLSTM 实验
+开始时间: 2026-02-24 02:30:24
+========================================
+
+
+[1/12] 运行: COA-BiLSTM wind_cn seed=42
+开始: 02:30:24
+─────────────────────────────────────────
+[02:30:24] 检查僵尸进程...
+  备份旧日志: /root/experiment_logs/coa_wind_cn_42.log.bak.1771871424
+[02:30:24] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined
+运行时间: 0分钟3秒
+❌ 任务失败 (退出码: 1): wind_cn seed=42
+  查看日志: /root/experiment_logs/coa_wind_cn_42.log
+结束: 02:30:27
+
+更新结果到CSV...
+总计: 15 条记录
+─────────────────────────────────────────
+
+[2/12] 运行: COA-BiLSTM wind_cn seed=123
+开始: 02:30:38
+─────────────────────────────────────────
+[02:30:38] 检查僵尸进程...
+  备份旧日志: /root/experiment_logs/coa_wind_cn_123.log.bak.1771871438
+[02:30:38] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined
+运行时间: 0分钟3秒
+❌ 任务失败 (退出码: 1): wind_cn seed=123
+  查看日志: /root/experiment_logs/coa_wind_cn_123.log
+结束: 02:30:41
+
+更新结果到CSV...
+总计: 15 条记录
+─────────────────────────────────────────
+
+[3/12] 运行: COA-BiLSTM wind_cn seed=456
+开始: 02:30:52
+─────────────────────────────────────────
+[02:30:52] 检查僵尸进程...
+  备份旧日志: /root/experiment_logs/coa_wind_cn_456.log.bak.1771871452
+[02:30:52] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined
+运行时间: 0分钟3秒
+❌ 任务失败 (退出码: 1): wind_cn seed=456
+  查看日志: /root/experiment_logs/coa_wind_cn_456.log
+结束: 02:30:55
+
+更新结果到CSV...
+总计: 15 条记录
+─────────────────────────────────────────
+
+[4/12] 运行: COA-BiLSTM electricity seed=42
+开始: 02:31:06
+─────────────────────────────────────────
+[02:31:06] 检查僵尸进程...
+[02:31:06] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined
+运行时间: 0分钟4秒
+❌ 任务失败 (退出码: 1): electricity seed=42
+  查看日志: /root/experiment_logs/coa_electricity_42.log
+结束: 02:31:10
+
+更新结果到CSV...
+总计: 15 条记录
+─────────────────────────────────────────
+
+[5/12] 运行: COA-BiLSTM electricity seed=123
+开始: 02:31:20
+─────────────────────────────────────────
+[02:31:20] 检查僵尸进程...
+[02:31:20] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined
+运行时间: 0分钟4秒
+❌ 任务失败 (退出码: 1): electricity seed=123
+  查看日志: /root/experiment_logs/coa_electricity_123.log
+结束: 02:31:24
+
+更新结果到CSV...
+总计: 15 条记录
+─────────────────────────────────────────
+
+[6/12] 运行: COA-BiLSTM electricity seed=456
+开始: 02:31:34
+─────────────────────────────────────────
+[02:31:34] 检查僵尸进程...
+[02:31:34] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined
+运行时间: 0分钟4秒
+❌ 任务失败 (退出码: 1): electricity seed=456
+  查看日志: /root/experiment_logs/coa_electricity_456.log
+结束: 02:31:38
+
+更新结果到CSV...
+总计: 15 条记录
+─────────────────────────────────────────
+
+[7/12] 运行: COA-BiLSTM air_quality seed=42
+开始: 02:31:48
+─────────────────────────────────────────
+[02:31:48] 检查僵尸进程...
+[02:31:49] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined
+运行时间: 0分钟4秒
+❌ 任务失败 (退出码: 1): air_quality seed=42
+  查看日志: /root/experiment_logs/coa_air_quality_42.log
+结束: 02:31:52
+
+更新结果到CSV...
+总计: 15 条记录
+─────────────────────────────────────────
+
+[8/12] 运行: COA-BiLSTM air_quality seed=123
+开始: 02:32:03
+─────────────────────────────────────────
+[02:32:03] 检查僵尸进程...
+[02:32:03] 启动实验进程...
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'dataset' is not defined
+运行时间: 0分钟4秒
+❌ 任务失败 (退出码: 1): air_quality seed=123
+  查看日志: /root/experiment_logs/coa_air_quality_123.log
+结束: 02:32:07
+
+更新结果到CSV...
+总计: 15 条记录
+─────────────────────────────────────────

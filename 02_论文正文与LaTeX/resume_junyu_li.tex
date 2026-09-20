@@ -1,0 +1,163 @@
+\documentclass[10pt,a4paper]{article}
+
+% 页面设置
+\usepackage[margin=0.6in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{xeCJK}
+
+% 超链接设置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=blue!70!black,
+    citecolor=blue!70!black,
+    pdftitle={Junyu Li - Resume},
+    pdfauthor={Junyu Li},
+    pdfsubject={Resume},
+    pdfkeywords={Resume, CV, Deep Learning, Sparse MoE}
+}
+
+% 定义颜色 - 学术蓝
+\definecolor{headerblue}{RGB}{30,60,110}
+\definecolor{accentblue}{RGB}{45,85,140}
+\definecolor{lightgray}{RGB}{240,240,240}
+
+% 字体设置
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+
+% 节标题格式
+\titleformat{\section}
+{\normalsize\bfseries\color{headerblue}\scshape}
+{}{0em}{}[\color{headerblue}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+% 去除页码
+\pagestyle{empty}
+
+% 紧凑列表
+\setlist[itemize]{leftmargin=14pt, itemsep=1.5pt, topsep=3pt, parsep=0pt}
+
+\begin{document}
+
+% ========== 头部区域：姓名在左，照片在右 ==========
+\noindent
+\begin{minipage}[t]{0.70\textwidth}
+    \vspace{0pt}
+    {\Huge\bfseries\color{headerblue} Junyu Li}
+    
+    \vspace{6pt}
+    
+    {\small
+    \faPhone\ (+86) 153-8530-0488 \quad $\bullet$ \quad
+    \faEnvelope\ \href{mailto:ljylikezmn999@gmail.com}{ljylikezmn999@gmail.com}
+    
+    \vspace{3pt}
+    
+    \faGithub\ \href{https://github.com/b1ue13e}{github.com/b1ue13e}
+    }
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.22\textwidth}
+    \vspace{0pt}
+    \hfill
+    \begin{tikzpicture}
+        \clip (0,0) rectangle (2.6cm,3.25cm);
+        \node at (1.3cm,1.625cm) {\includegraphics[width=3.0cm]{68372053-70ec-4335-99dd-6fa606ea656b.png}};
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{6pt}
+
+% ========== OBJECTIVE ==========
+\section{Objective}
+\vspace{-2pt}
+{\small A highly motivated undergraduate in Statistics with a solid foundation in algorithm design and spatio-temporal modeling. Deeply passionate about Artificial Intelligence, Deep Learning Architectures, and Complex Systems Modeling, seeking a Summer Research Assistant position to contribute my experience in advanced model lightweighting (e.g., Sparse MoE) and cross-domain transfer learning while tackling fundamental AI challenges under expert guidance.}
+
+% ========== EDUCATION ==========
+\section{Education}
+\vspace{-2pt}
+{\small
+\textbf{Anhui University of Finance and Economics} \hfill \textit{Bengbu, China} \\[2pt]
+Bachelor of Science in Statistics \hfill \textbf{GPA:} 3.53/5.0 (Average: 87/100)
+
+\vspace{3pt}
+
+\textit{\textbf{Self-Driven Exploration:}} Motivated by the bottlenecks of modeling real-world noisy data, I independently navigated the transition from statistical theory to deep learning application, dedicating intensive effort to study model optimization and robust AI architectures, leading to my first paper submission.
+}
+
+% ========== ACADEMIC PUBLICATIONS ==========
+\section{Academic Publications}
+{\small (Note: First-Author for all listed works)}
+\vspace{3pt}
+
+{\small
+\textbf{1. Wind power forecasting under corrupted SCADA for edge deployment: sparse MoE with feasibility guidance}
+
+\textit{\textbf{Renewable Energy} (Under Review)} \hfill \href{https://github.com/b1ue13e}{\underline{[GitHub Repository]}}
+\begin{itemize}
+    \item Proposed \textbf{Ultra-LSNT}, a sparse mixture-of-experts (MoE) forecaster designed for highly efficient inference, aiming to balance predictive accuracy with computational efficiency in resource-constrained environments.
+    \item Designed \textbf{FG-MoE}, a physics-guided guardrail mechanism that effectively reduced rated-power exceedance from 0.0550\% to 0.0092\% in our experiments, demonstrating strong capabilities in building robust models against corrupted data.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{2. From Physical Energy to Market Regimes: Cross-Domain PI-MoE for Financial State Extraction} \hfill \textit{Working Paper}
+\begin{itemize}
+    \item Investigated cross-domain transfer learning challenges by developing \textbf{PI-MoE} (Physics-Informed Mixture-of-Experts), extracting persistence patterns from physical systems for quantitative finance applications.
+    \item Evaluated the model on a 2$\times$4 equity panel, achieving a zero-shot AUROC of 0.696 and a few-shot (10\% linear probe) AUROC of 0.834 in regime separation tasks.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{3. Physics-Aligned Gating for Mixture-of-Experts Forecasting under Regime Shifts} \hfill \textit{Working Paper}
+
+\textit{Case Studies in Wind Farms and ERA5}
+\begin{itemize}
+    \item Formulated a spatio-temporal graph forecasting framework to handle non-stationary regime transitions in highly complex energy datasets.
+    \item Integrated a directed-diffusion GRU encoder with a node-level MoE gate, applying regularization such as load balancing and graph smoothness to mathematically align the model with physical dynamics.
+\end{itemize}
+}
+
+% ========== RESEARCH EXPERIENCE ==========
+\section{Research Experience}
+\vspace{-2pt}
+{\small
+\textbf{Quantitative Finance Lab} \hfill \textit{Research Assistant}
+\begin{itemize}
+    \item Applied rigorous statistical methods and spatio-temporal graph models (STGCN) to complex quantitative finance datasets to identify subtle market regimes.
+    \item Explored sophisticated model optimization techniques, gaining hands-on experience in training and compressing MoE architectures for scenarios dealing with high-dimensional, noisy, and non-stationary data.
+\end{itemize}
+}
+
+% ========== TECHNICAL SKILLS ==========
+\section{Technical Skills}
+\vspace{-2pt}
+{\small
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{Programming \& Frameworks:} & Python, PyTorch, C/C++. \\[3pt]
+\textbf{Domain Focus:} & Deep Learning Architectures (Sparse MoE), Spatio-Temporal Modeling, Transfer Learning, Physics-Informed Neural Networks (PINN), Time Series Forecasting. \\[3pt]
+\textbf{Languages:} & Mandarin (Native), English (Proficient).
+\end{tabularx}
+}
+
+% ========== AWARDS & EXTRA-CURRICULAR ==========
+\section{Awards \& Extra-Curricular}
+\vspace{-2pt}
+{\small
+\begin{itemize}
+    \item \textbf{Xuancheng Social Science Award} (宣城市社会科学奖)
+    \item \textbf{Marathon Runner:} Completed Half-Marathon (PB: 1h 48m). Trained consistently to build stamina and long-term focus, traits I continually apply to my rigorous academic research.
+\end{itemize}
+}
+
+\end{document}

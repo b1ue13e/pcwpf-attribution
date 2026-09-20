@@ -1,0 +1,31 @@
+DM测试结果比较报告
+==================
+生成时间: Wed Jan 28 05:24:56 CST 2026
+测试配置: Ultra-LSNT vs Transformer (Table 3相同配置)
+
+1. 模型性能对比:
+   Ultra-LSNT: R² = 0.8728, RMSE = 9079.84
+   Transformer: R² = 0.8686, RMSE = 9227.60
+
+2. DM测试结果:
+   DM统计量: -2.9603
+   P值 (单侧): 1.5367e-03
+   结论: **Ultra-LSNT显著优于Transformer (p<0.01)**
+
+3. 与Table 3的对比:
+   Table 3 Ultra-LSNT R²: 0.8728
+   当前 Ultra-LSNT R²: 0.8728
+   Table 3 Transformer R²: 0.7439
+   当前 Transformer R²: 0.8686
+
+4. 差异分析:
+   Ultra-LSNT R²比Transformer高 0.0042
+
+5. 结论与建议:
+   - 如果p<0.05且DM统计量为负: Ultra-LSNT显著优于Transformer
+   - 如果p<0.05且DM统计量为正: Transformer显著优于Ultra-LSNT
+   - 如果p>=0.05: 两者无显著差异
+
+6. 对论文的影响:
+   - 如果结果与Table 3一致: 维持现有结论
+   - 如果结果与Table 3矛盾: 需要重新评估性能对比部分

@@ -1,0 +1,39 @@
+[2026-01-26 05:25:30] 第一步：检查实验环境...
+Python 3.10.8
+✅ PyTorch: 2.1.2+cu118
+   CUDA可用: NVIDIA GeForce RTX 4090 D
+✅ NumPy: 1.26.4
+✅ Matplotlib: 3.9.0
+✅ LightGBM: 4.6.0
+[0;32m[2026-01-26 05:25:33] ✅ 环境检查完成[0m
+[2026-01-26 05:25:33] 第二步：修复字体警告问题...
+[2026-01-26 05:25:33] 运行字体修复脚本...
+修复所有Python脚本中的字体警告...
+  ✅ 已修复: compare_robustness_real.py
+  ✅ 已修复: plot_arch.py
+  ✅ 已修复: plot_dlinear_victory.py
+  ✅ 已修复: plot_expert_heatmap.py
+  ✅ 已修复: plot_expert_heatmap_enhanced.py
+  ✅ 已修复: plot_multi_domain.py
+  ✅ 已修复: plot_paper_figs.py
+  ✅ 已修复: real_robustness.py
+  ✅ 已修复: run_ablation_study.py
+  ✅ 已修复: run_expert_physics.py
+  ✅ 已修复: run_gbdt_robustness.py
+  ✅ 已修复: run_real_noise_battle.py
+  ✅ 已修复: run_universal_significance.py
+  ✅ 已修复: test_efficiency.py
+  ✅ 已修复: run_gbdt_drift_temp.py
+  ✅ 已修复: run_gbdt_quantization_temp.py
+  ✅ 已修复: fix_fonts.py
+  ✅ 已修复: fix_fonts_final.py
+字体修复完成，共修复 18 个文件
+已创建通用字体设置脚本: font_setup_final.py
+[0;32m[2026-01-26 05:25:33] ✅ 字体修复完成[0m
+[2026-01-26 05:25:33] 第三步：修复消融实验的CUDA/CPU设备不匹配问题...
+[2026-01-26 05:25:33] 运行消融实验修复脚本...
+  File "/root/my/logs/fix_ablation_final.py", line 61
+    用法：在 run_ablation_study.py 的 main 函数开始时调用
+      ^
+SyntaxError: invalid character '：' (U+FF1A)
+[0;31m[2026-01-26 05:25:33] ❌ 消融实验修复失败[0m

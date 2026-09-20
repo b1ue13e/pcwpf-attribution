@@ -1,0 +1,39 @@
+硬件配置信息:
+硬件检测...
+  CPU核心数: 256
+  系统内存: 755GB
+  GPU型号: NVIDIA GeForce RTX 4090 D
+  GPU显存: 24564MB
+  检测到RTX 4090D级别GPU，启用优化配置:
+    BATCH_SIZE=512, HIDDEN_DIM=256
+    NUM_BLOCKS=4, NUM_EXPERTS=8, TOP_K=4
+  使用Python命令: python3
+
+=== 资源监控 ===
+  可用内存: 707061MB
+  GPU使用率: 0 %
+  GPU显存使用: 0 MiB
+  磁盘使用率: 7%
+=================
+第一步：修复和运行出错的脚本
+1.1 重新运行消融研究 (修复CUDA错误)...
+[2026-01-24 21:41:29] 开始运行: run_ablation_study.py
+  使用GPU优化参数运行
+[2026-01-24 21:55:56] ✅ 成功: run_ablation_study.py
+1.2 完成SOTA模型对比 (补全Autoformer)...
+[2026-01-24 21:55:56] 开始运行: run_sota.py
+  使用GPU优化参数运行
+[2026-01-24 21:55:58] ✅ 成功: run_sota.py
+第二步：运行效率测试脚本
+2.1 运行效率测试...
+  使用GPU优化参数运行效率测试
+[2026-01-24 21:55:58] 开始运行: test_efficiency.py
+  使用GPU优化参数运行
+[2026-01-24 21:56:13] ✅ 成功: test_efficiency.py
+2.2 运行MAPE测试...
+[2026-01-24 21:56:13] 开始运行: test_mape.py
+  使用GPU优化参数运行
+[2026-01-24 21:56:15] ✅ 成功: test_mape.py
+2.3 运行概率预测测试...
+[2026-01-24 21:56:15] 开始运行: test_probabilistic.py
+  使用GPU优化参数运行

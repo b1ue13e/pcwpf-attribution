@@ -1,0 +1,25 @@
+硬件检测...
+  CPU核心数: 256
+  GPU型号: NVIDIA GeForce RTX 4090 D
+  GPU显存: 24564MB
+  检测到高性能GPU，启用GPU优化模式
+  使用Python命令: python3
+
+=== 第一步：运行之前失败的脚本（已修复版本）===
+[2026-01-25 15:15:23] 开始运行修复脚本: test_probabilistic.py
+[2026-01-25 15:15:26] ✅ 成功: test_probabilistic.py
+[2026-01-25 15:15:26] 开始运行修复脚本: run_dm_test.py
+[2026-01-25 15:15:31] ✅ 成功: run_dm_test.py
+[2026-01-25 15:15:31] 开始运行修复脚本: run_gbdt_robustness.py
+[2026-01-25 15:24:24] ✅ 成功: run_gbdt_robustness.py
+[2026-01-25 15:53:31] ✅ 成功: classical_baselines.py (内存优化版本)
+
+=== 第二步：运行其他未完成的脚本 ===
+[2026-01-25 15:53:31] 开始运行修复脚本: validate_r2_correction.py
+[2026-01-25 15:53:37] ✅ 成功: validate_r2_correction.py
+[2026-01-25 15:53:37] 开始运行修复脚本: analyze_r2_issue.py
+[2026-01-25 15:53:43] ✅ 成功: analyze_r2_issue.py
+
+=== 完成总结 ===
+完成时间: Sun Jan 25 15:53:43 CST 2026
+主日志文件: logs/run_error_20260125_151521.log

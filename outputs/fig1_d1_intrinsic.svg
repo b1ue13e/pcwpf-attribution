@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="135.834594pt" height="88.0785pt" viewBox="0 0 135.834594 88.0785" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-13T00:53:08.121981</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 88.0785 
+L 135.834594 88.0785 
+L 135.834594 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 16.458594 71.136 
+L 128.634594 71.136 
+L 128.634594 7.2 
+L 16.458594 7.2 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="text_1">
+     <!-- $v$ -->
+     <g style="fill: #475569" transform="translate(70.146594 79.21475)">
+      <text>
+       <tspan x="0" y="-0.625" style="font-style: oblique; font-size: 8px; font-family: 'DejaVu Sans'; fill: #475569">v</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="text_2">
+     <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #475569" x="12.898828" y="39.168" transform="rotate(-90 12.898828 39.168)">Power</text>
+    </g>
+   </g>
+   <g id="line2d_1">
+    <path d="M 19.067338 15.192 
+L 97.329664 15.192 
+" clip-path="url(#p97071585eb)" style="fill: none; stroke-dasharray: 1.3,2.145; stroke-dashoffset: 0; stroke: #64748b; stroke-width: 1.3"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 19.067338 68.472 
+L 20.393818 68.471342 
+L 21.720298 68.466737 
+L 23.046778 68.454239 
+L 24.373258 68.4299 
+L 25.699738 68.389773 
+L 27.026219 68.329912 
+L 28.352699 68.246369 
+L 29.679179 68.135199 
+L 31.005659 67.992453 
+L 32.332139 67.814185 
+L 33.658619 67.596448 
+L 34.985099 67.335295 
+L 36.311579 67.02678 
+L 37.638059 66.666955 
+L 38.964539 66.251874 
+L 40.291019 65.777589 
+L 41.6175 65.240154 
+L 42.94398 64.635622 
+L 44.27046 63.960046 
+L 45.59694 63.209478 
+L 46.92342 62.379973 
+L 48.2499 61.467584 
+L 49.57638 60.468362 
+L 50.90286 59.378363 
+L 52.22934 58.193638 
+L 53.55582 56.91024 
+L 54.8823 55.524223 
+L 56.208781 54.031641 
+L 57.535261 52.428545 
+L 58.861741 50.71099 
+L 60.188221 48.875027 
+L 61.514701 46.916712 
+L 62.841181 44.832095 
+L 64.167661 42.617231 
+L 65.494141 40.268173 
+L 66.820621 37.780974 
+L 68.147101 35.151687 
+L 69.473582 32.376364 
+L 70.800062 29.45106 
+L 72.126542 26.371827 
+L 73.453022 23.134719 
+L 74.779502 19.735788 
+L 76.105982 16.171087 
+L 77.432462 15.192 
+L 78.758942 15.192 
+L 80.085422 15.192 
+L 81.411902 15.192 
+L 82.738382 15.192 
+L 84.064863 15.192 
+L 85.391343 15.192 
+L 86.717823 15.192 
+L 88.044303 15.192 
+L 89.370783 15.192 
+L 90.697263 15.192 
+L 92.023743 15.192 
+L 93.350223 15.192 
+L 94.676703 15.192 
+L 96.003183 15.192 
+L 97.329664 15.192 
+" clip-path="url(#p97071585eb)" style="fill: none; stroke: #0284c7; stroke-width: 2.2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 16.458594 71.136 
+L 16.458594 7.2 
+" style="fill: none; stroke: #64748b; stroke-width: 0.85; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 16.458594 71.136 
+L 128.634594 71.136 
+" style="fill: none; stroke: #64748b; stroke-width: 0.85; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_3">
+    <g id="patch_5">
+     <path d="M 98.35091 20.394 
+L 122.69491 20.394 
+L 122.69491 9.99 
+L 98.35091 9.99 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <!-- $C_p \leq \frac{16}{27}$ -->
+    <g style="fill: #64748b" transform="translate(98.89491 17.13)">
+     <text>
+      <tspan x="0" y="-0.254688" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #64748b">C</tspan>
+      <tspan x="4.713135" y="0.89375" style="font-style: oblique; font-size: 4.76px; font-family: 'DejaVu Sans'; fill: #64748b">p</tspan>
+      <tspan x="9.218872" y="-0.254688" style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #64748b">≤</tspan>
+      <tspan x="16.189697" y="-3.357813" style="font-size: 4.76px; font-family: 'DejaVu Sans'; fill: #64748b">1</tspan>
+      <tspan x="16.189697" y="2.475" style="font-size: 4.76px; font-family: 'DejaVu Sans'; fill: #64748b">2</tspan>
+      <tspan x="19.195886" y="-3.357813" style="font-size: 4.76px; font-family: 'DejaVu Sans'; fill: #64748b">6</tspan>
+      <tspan x="19.195886" y="2.475" style="font-size: 4.76px; font-family: 'DejaVu Sans'; fill: #64748b">7</tspan>
+     </text>
+     <rect x="16.189697" y="-2.592188" width="6.012378" height="0.425"/>
+    </g>
+   </g>
+   <g id="text_4">
+    <!-- $P \propto v^3$ -->
+    <g style="fill: #0284c7" transform="translate(56.633254 37.5696)">
+     <text>
+      <tspan x="0" y="-0.678125" style="font-style: oblique; font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #0284c7">P</tspan>
+      <tspan x="12.375977" y="-0.678125" style="font-style: oblique; font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #0284c7">v</tspan>
+      <tspan x="5.784424" y="-0.678125" style="font-size: 7.2px; font-family: 'DejaVu Sans'; fill: #0284c7">∝</tspan>
+      <tspan x="16.979134" y="-3.357812" style="font-size: 5.04px; font-family: 'DejaVu Sans'; fill: #0284c7">3</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p97071585eb">
+   <rect x="16.458594" y="7.2" width="112.176" height="63.936"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,34 @@
+[Tue Mar  3 00:09:00 CST 2026] Starting ARM evaluation...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+[latency] Ultra-LSNT (no guardrail)
+[smoke] Ultra-LSNT (no guardrail) @ clean
+[smoke] Ultra-LSNT (no guardrail) @ gaussian
+[smoke] Ultra-LSNT (no guardrail) @ drift
+[smoke] Ultra-LSNT (no guardrail) @ quantization
+[smoke] Ultra-LSNT (no guardrail) @ missingness
+[latency] Ultra-LSNT + clip-only (posthoc)
+[smoke] Ultra-LSNT + clip-only (posthoc) @ clean
+[smoke] Ultra-LSNT + clip-only (posthoc) @ gaussian
+[smoke] Ultra-LSNT + clip-only (posthoc) @ drift
+[smoke] Ultra-LSNT + clip-only (posthoc) @ quantization
+[smoke] Ultra-LSNT + clip-only (posthoc) @ missingness
+[latency] FG-MoE (full-trained)
+[smoke] FG-MoE (full-trained) @ clean
+[smoke] FG-MoE (full-trained) @ gaussian
+[smoke] FG-MoE (full-trained) @ drift
+[smoke] FG-MoE (full-trained) @ quantization
+[smoke] FG-MoE (full-trained) @ missingness
+[ok] wrote results/supplementary_evidence/arm_revision_latency_energy.csv
+[ok] wrote results/supplementary_evidence/arm_revision_robustness_smoke.csv
+[ok] wrote results/supplementary_evidence/arm_revision_eval.meta.json
+[Tue Mar  3 00:10:04 CST 2026] ARM evaluation finished with status: 0
+[Tue Mar  3 00:10:05 CST 2026] All tasks completed.

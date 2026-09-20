@@ -1,0 +1,66 @@
+[0;34m硬件检测...[0m
+  CPU核心数: 256
+  系统内存: 755GB
+  GPU型号: NVIDIA GeForce RTX 4090 D
+  GPU显存: 24564MB
+  [0;32m检测到高性能GPU，启用GPU优化模式[0m
+[0;34m检查必要文件...[0m
+  [0;32m✅ wind_final.csv 存在[0m
+  [0;32m✅ ultra_lsnt_timeseries.py 存在[0m
+  [0;32m✅ ultra_lsnt_linear_branch.py 存在[0m
+  [0;32m✅ analyze_expert_switching.py 存在[0m
+  [0;32m✅ analyze_expert_switching_standard.py 存在[0m
+  [0;32m✅ run_expert_physics.py 存在[0m
+  [0;32m✅ plot_expert_heatmap_enhanced.py 存在[0m
+[0;34m检查数据质量...[0m
+数据形状: (121528, 8)
+数据列名: ['windspeed', 'power', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)']
+找到风速列: windspeed
+风速范围: [0.00, 12.60]
+风速均值: 4.58
+缺失值总数: 0
+[1;33m第一步：训练带线性分支的Ultra-LSNT模型[0m
+  [0;32m检测到已有预训练权重，跳过训练[0m
+  [1;33m如果要重新训练，请删除 checkpoints_ts/ 目录[0m
+[1;33m等待训练任务完成...[0m
+[1;33m第二步：分析专家切换过程[0m
+  [0;32m使用标准模型分析脚本[0m
+[0;34m[2026-01-25 20:41:58] 开始运行: analyze_expert_switching_standard.py [0m
+  [0;32m[2026-01-25 20:42:09] ✅ 成功: analyze_expert_switching_standard.py[0m
+[1;33m第三步：运行专家物理可解释性分析[0m
+[0;34m[2026-01-25 20:42:09] 开始运行: run_expert_physics.py [0m
+  [0;31m[2026-01-25 20:42:13] ❌ 失败: run_expert_physics.py (退出码: 1)[0m
+[1;33m第四步：生成专家热力图[0m
+[0;34m[2026-01-25 20:42:13] 开始运行: plot_expert_heatmap_enhanced.py [0m
+  [0;31m[2026-01-25 20:42:18] ❌ 失败: plot_expert_heatmap_enhanced.py (退出码: 1)[0m
+[1;33m第五步：生成分析汇总报告[0m
+-rw-r--r-- 1 root root     2411 Jan 25 20:42 expert_analysis_summary.txt
+-rw-r--r-- 1 root root     2411 Jan 25 20:42 expert_analysis_summary_enhanced.txt
+-rw-r--r-- 1 root root     1942 Jan 25 20:42 expert_switching_analysis_report_standard.txt
+-rw-r--r-- 1 root root   250448 Jan 25 20:08 expert_switching_event_1_20260125_200758.png
+-rw-r--r-- 1 root root   250448 Jan 25 20:10 expert_switching_event_1_20260125_201040.png
+-rw-r--r-- 1 root root   250448 Jan 25 20:42 expert_switching_event_1_20260125_204203.png
+-rw-r--r-- 1 root root   249363 Jan 25 20:08 expert_switching_event_2_20260125_200800.png
+-rw-r--r-- 1 root root   249363 Jan 25 20:10 expert_switching_event_2_20260125_201042.png
+-rw-r--r-- 1 root root   249363 Jan 25 20:42 expert_switching_event_2_20260125_204205.png
+-rw-r--r-- 1 root root   249144 Jan 25 20:08 expert_switching_event_3_20260125_200802.png
+      Expert_1: 均值=0.1698, 标准差=0.0000
+      Expert_2: 均值=0.2319, 标准差=0.0000
+      Expert_3: 均值=0.2360, 标准差=0.0000
+      Expert_4: 均值=0.3622, 标准差=0.0000
+
+4. 建议和下一步工作
+----------------------------------------
+  • 检查专家切换可视化图，分析风速突变时的专家响应
+  • 分析专家分工模式：不同专家是否处理不同的风速模式（如稳定风、突变风）
+  • 验证专家激活权重与物理变量的相关性（如风速、湍流强度）
+  • 考虑调整线性分支权重以优化模型性能
+  • 可以尝试不同的突变检测阈值以获得更多分析案例
+  • 建议生成时间序列级别的专家激活数据以进行更精细的切换频率分析
+
+5. 技术备注
+----------------------------------------
+  • 当前分析基于标准Ultra-LSNT模型（hidden_dim=128, num_experts=4）
+  • 风速突变检测阈值: 5.0 m/s，时间窗口: 12个时间步
+  • 专家切换频率反映了模型对输入变化的敏感度和适应能力
+  • 高切换频率可能表示模型对不同风速模式有细粒度响应

@@ -1,0 +1,96 @@
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+✅ 启用GPU优化 (cuDNN基准模式)
+📊 加载数据...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   数据形状: (121528, 8)
+
+============================================================
+🚀 开始训练: PatchTST
+============================================================
+
+⚡ 训练最新模型: PatchTST 在 cuda 上
+   设备规格: RTX 4090D 24GB, 批大小: 256
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   总参数: 781,592 (可训练: 781,592)
+   周期 1/100 | 训练损失: 0.0762 | 验证损失: 0.1570
+   周期 10/100 | 训练损失: 0.0112 | 验证损失: 0.1169
+   周期 20/100 | 训练损失: 0.0084 | 验证损失: 0.1398
+   早停在周期 29
+   训练时间: 93.31s
+📈 PatchTST 结果:
+   R²: 0.8666
+   RMSE: 9298.0840
+   MAE: 7342.1587
+   训练时间: 93.31s
+   参数量: 781,592
+✅ PatchTST 训练完成!
+
+============================================================
+🚀 开始训练: TimeMixer
+============================================================
+
+⚡ 训练最新模型: TimeMixer 在 cuda 上
+   设备规格: RTX 4090D 24GB, 批大小: 256
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   总参数: 621,936 (可训练: 621,936)
+Traceback (most recent call last):
+  File "/root/my/run_latest_sota.py", line 626, in main
+    results = train_latest_model(model_name, data, args)
+  File "/root/my/run_latest_sota.py", line 450, in train_latest_model
+    pred, _ = model(batch_x)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/my/run_latest_sota.py", line 252, in forward
+    fused = torch.cat(multiscale_features, dim=-1)  # (batch, seq_len, d_model * len(scales))
+RuntimeError: Sizes of tensors must match except in dimension 2. Expected size 96 but got size 97 for tensor number 1 in the list.
+❌ TimeMixer 训练失败: Sizes of tensors must match except in dimension 2. Expected size 96 but got size 97 for tensor number 1 in the list.
+
+============================================================
+🚀 开始训练: iTransformer
+============================================================
+
+⚡ 训练最新模型: iTransformer 在 cuda 上
+   设备规格: RTX 4090D 24GB, 批大小: 256
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   总参数: 678,808 (可训练: 678,808)
+   周期 1/100 | 训练损失: 0.0684 | 验证损失: 0.0835
+   周期 10/100 | 训练损失: 0.0109 | 验证损失: 0.0908
+   周期 20/100 | 训练损失: 0.0088 | 验证损失: 0.0910
+   早停在周期 25
+   训练时间: 95.39s
+📈 iTransformer 结果:
+   R²: 0.9012
+   RMSE: 8004.0488
+   MAE: 6333.2939
+   训练时间: 95.39s
+   参数量: 678,808
+✅ iTransformer 训练完成!
+
+============================================================
+🏆 最终对比结果
+============================================================
+模型                 R²       RMSE        MAE       训练时间          参数量
+--------------------------------------------------------------------
+PatchTST       0.8666    9298.08    7342.16       93.3s      781,592
+iTransformer   0.9012    8004.05    6333.29       95.4s      678,808
+
+📁 结果已保存到: checkpoints_ts/latest_sota_summary.json
+
+🎉 所有实验完成!
+   查看详细日志: latest_sota.log
+   结果文件: checkpoints_ts/ 目录
+   预测数据: checkpoints_ts/*_preds.npy

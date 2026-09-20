@@ -1,0 +1,1177 @@
+Starting COA-BiLSTM on gefcom seed=456
+
+============================================================
+COA-BiLSTM: gefcom (seed=456)
+Population=40, Iterations=200
+============================================================
+Device: cuda
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+  Iter 0: Best = inf
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+  Iter 20: Best = inf
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)
+Dataset: gefcom
+  Total samples: 38070
+  Training samples: 30456 (80.0%)
+  Testing samples: 7614 (20.0%)

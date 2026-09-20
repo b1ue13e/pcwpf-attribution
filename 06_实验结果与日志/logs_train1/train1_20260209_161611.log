@@ -1,0 +1,232 @@
+================ train1 full pipeline ================
+Start time: 2026-02-09 16:16:11
+Root dir  : /root/.cache/论文
+Python    : python3
+Log dir   : logs_train1
+DRY_RUN   : 0
+Baseline2 : timemixer
+======================================================
+
+[2026-02-09 16:16:11] [STEP] multi_domain_ultra
+[2026-02-09 16:16:11] [CMD ] python3 evaluate_multi_domain.py
+Summarizing multi-domain experimental results...
+============================================================
+
+Ultra-LSNT Multi-Domain Generalization Evaluation
+---------------------------------------------------------------------------
+    Dataset R2 Score      RMSE       MAE Skip Rate  Status
+  Wind (CN)   0.8728 9080.5547 7171.4165      0.0% Success
+  Wind (US)   0.7878    0.4556    0.2891     11.4% Success
+Air Quality   0.4861   32.2145   19.8663      0.0% Success
+GEFCom Load   0.7554 2836.9788 2049.4832      0.0% Success
+---------------------------------------------------------------------------
+
+Table saved as: table_multi_domain.csv
+Note: Use this data for the 'Results' section in your paper.
+[2026-02-09 16:16:11] [ OK ] multi_domain_ultra
+
+[2026-02-09 16:16:11] [STEP] multi_domain_baselines
+[2026-02-09 16:16:11] [CMD ] python3 run_multi_domain_baselines.py --model2 timemixer --epochs 10 --batch-size 128
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+Using device: cuda
+Config: RunConfig(model2='timemixer', seq_len=96, pred_len=24, epochs=10, batch_size=128, lr=0.001, patience=5, d_model=128, nhead=4, num_layers=2, dropout=0.1, patch_len=16, stride=8, seed=42)
+
+=== Wind (CN) | target=power ===
+加载数据: /root/.cache/论文/wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+R2: DLinear=0.9415, timemixer=0.8894
+
+=== Wind (US) | target=power (MW) ===
+加载数据: /root/.cache/论文/wind_us.csv
+   原始形状: (105120, 11)
+   列数: 11
+   缺失值已全部处理
+   最终形状: (105120, 11)
+   特征: ['Year', 'Month', 'Day', 'Hour', 'Minute', 'wind speed at 100m (m/s)', 'hour_sin', 'hour_cos', 'day_sin', 'day_cos', 'power (MW)']
+   数据范围: [-1.0000, 2012.0000]
+   训练样本: 73465
+   验证样本: 15649
+   测试样本: 15649
+R2: DLinear=0.8796, timemixer=0.8023
+
+=== Air Quality | target=AQI ===
+加载数据: /root/.cache/论文/air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+R2: DLinear=0.3400, timemixer=0.3869
+
+=== GEFCom Load | target=load ===
+加载数据: /root/.cache/论文/gefcom_ready.csv
+   原始形状: (38070, 2)
+   列数: 2
+   删除了时间戳列: ['date']
+   缺失值已全部处理
+   最终形状: (38070, 1)
+   特征: ['load']
+   数据范围: [7319.0000, 45547.0000]
+   训练样本: 26530
+   验证样本: 5591
+   测试样本: 5592
+R2: DLinear=0.7363, timemixer=0.7271
+
+Saved: /root/.cache/论文/results/multi_domain_baselines_r2_20260209_162347.csv
+Saved: /root/.cache/论文/results/multi_domain_baselines_r2_latest.csv
+Saved: /root/.cache/论文/results/multi_domain_baselines_r2_20260209_162347.json
+[2026-02-09 16:23:48] [ OK ] multi_domain_baselines
+
+[2026-02-09 16:23:48] [STEP] kernel_ablation
+[2026-02-09 16:23:48] [CMD ] python3 run_universal_ablation.py
+启动全领域消融实验 (Kernel Sensitivity)...
+
+Dataset: Wind (CN)
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   Testing Kernel Size = 3 ...
+      -> R2: 0.8670
+   Testing Kernel Size = 7 ...
+      -> R2: 0.8264
+   Testing Kernel Size = 15 ...
+      -> R2: 0.8570
+
+Dataset: Air Quality
+加载数据: air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+   Testing Kernel Size = 3 ...
+      -> R2: 0.3190
+   Testing Kernel Size = 7 ...
+      -> R2: 0.3329
+   Testing Kernel Size = 15 ...
+      -> R2: 0.2649
+
+消融结果已保存: universal_ablation_results.csv
+       Dataset  Kernel        R2
+0    Wind (CN)       3  0.866957
+1    Wind (CN)       7  0.826390
+2    Wind (CN)      15  0.857013
+3  Air Quality       3  0.319039
+4  Air Quality       7  0.332853
+5  Air Quality      15  0.264913
+[2026-02-09 16:48:49] [ OK ] kernel_ablation
+
+[2026-02-09 16:48:49] [STEP] noise20
+[2026-02-09 16:48:49] [CMD ] python3 test_dlinear_noise_robustness.py
+🔬 测试DLinear噪声鲁棒性 (20%高斯噪声)
+使用设备: cuda
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+✅ 加载训练好的DLinear权重: dlinear_weights/dlinear_trained.pth
+  原始R²: 0.9379
+
+📊 噪声测试 (高斯噪声)
+--------------------------------------------------
+噪声 0.0 | R² = 0.9379 | MSE = 40231904
+噪声 0.1 | R² = 0.7778 | MSE = 144036288
+噪声 0.2 | R² = 0.2998 | MSE = 453789248
+噪声 0.3 | R² = -0.4873 | MSE = 963908416
+噪声 0.4 | R² = -1.6355 | MSE = 1708056064
+
+✅ 结果已保存: dlinear_noise_robustness_results.json
+✅ 报告已生成: dlinear_noise_robustness_report.txt
+
+📈 与现有数据对比
+--------------------------------------------------
+噪声20%下各模型R²:
+  DLinear: 0.2998
+  Ultra-LSNT: 0.8318
+  LightGBM: 0.8222
+✅ 对比结果已保存: noise_20_comparison.txt
+[2026-02-09 16:48:53] [ OK ] noise20
+
+[2026-02-09 16:48:53] [STEP] dm_extended
+[2026-02-09 16:48:53] [CMD ] python3 run_background_suite.py --tasks dm_extended --log-dir logs_train1
+🤖 加载 Ultra-LSNT 进行预测...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+✅ 从 checkpoints_ts/main/model_config.json 加载模型配置
+⚠️ 跳过权重 blocks.0.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+⚠️ 跳过权重 blocks.1.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+⚠️ 跳过权重 blocks.2.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+✅ 加载权重，成功加载 152/167 个参数
+加载数据: /root/.cache/论文/wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+[OK] dm_extended (3.8s)
+  log: logs_train1/dm_extended_20260209_164853.log
+  outputs: dm_results/dm_extended_20260209_164857.json, dm_results/dm_extended_20260209_164857.csv, dm_results/dm_extended_20260209_164857.tex
+Summary written to: logs_train1/suite_summary_20260209_164857.md
+[2026-02-09 16:48:58] [ OK ] dm_extended
+
+[2026-02-09 16:48:58] [STEP] lite_suite
+[2026-02-09 16:48:58] [CMD ] python3 run_background_suite.py --tasks lite_suite --log-dir logs_train1
+[OK] lite_suite (154.5s)
+  log: logs_train1/lite_summary_20260209_165133.log
+  outputs: results/ultra_lsnt_lite_suite_comparison_20260209_165133.csv, results/ultra_lsnt_lite_suite_comparison_20260209_165133.md
+Summary written to: logs_train1/suite_summary_20260209_165133.md
+[2026-02-09 16:51:33] [ OK ] lite_suite
+
+[2026-02-09 16:51:33] [STEP] paper_digest
+[2026-02-09 16:51:33] [CMD ] python3 run_background_suite.py --tasks paper_digest --log-dir logs_train1
+[OK] paper_digest (0.0s)
+  log: logs_train1/paper_digest_20260209_165133.log
+  outputs: results/paper_supplement_digest_20260209_165133.md, results/paper_supplement_digest_20260209_165133.json
+Summary written to: logs_train1/suite_summary_20260209_165133.md
+[2026-02-09 16:51:33] [ OK ] paper_digest
+
+End time : 2026-02-09 16:51:33
+Master log: logs_train1/train1_20260209_161611.log
+Digest md: results/paper_supplement_digest_20260209_165133.md
+Digest json: results/paper_supplement_digest_20260209_165133.json

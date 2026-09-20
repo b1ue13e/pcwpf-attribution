@@ -1,0 +1,13 @@
+============================================================
+🚀 Ultra-LSNT-Lite on Electricity Dataset
+============================================================
+Device: cuda
+加载数据: /root/论文1/Load_history.csv
+Traceback (most recent call last):
+  File "/root/run_ultra_lsnt_electricity.py", line 154, in <module>
+    results = evaluate_on_electricity()
+  File "/root/run_ultra_lsnt_electricity.py", line 35, in evaluate_on_electricity
+    data, _ = load_csv_data(data_path, 'load')
+  File "/root/论文1/ultra_lsnt_timeseries.py", line 410, in load_csv_data
+    raise ValueError(f"目标列 '{target}' 不在数据中。可用列: {list(df.columns)}")
+ValueError: 目标列 'load' 不在数据中。可用列: ['zone_id', 'year', 'month', 'day', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18', 'h19', 'h20', 'h21', 'h22', 'h23', 'h24']

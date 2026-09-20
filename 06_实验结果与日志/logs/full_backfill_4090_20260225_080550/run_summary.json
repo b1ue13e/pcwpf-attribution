@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-02-25T00:05:51.392770Z",
+  "steps": [
+    {
+      "name": "rebuild_main4_matrices",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.49790501594543457,
+      "log_file": "logs\\full_backfill_4090_20260225_080550\\rebuild_main4_matrices.log"
+    }
+  ],
+  "transfer_matrix_csv": "results\\supplementary_evidence\\multi_domain_transfer_matrix.csv"
+}

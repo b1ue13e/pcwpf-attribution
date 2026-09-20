@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="158.4pt" height="93.6pt" viewBox="0 0 158.4 93.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-13T00:53:08.412032</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 93.6 
+L 158.4 93.6 
+L 158.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 31.68 72.144 
+L 126.72 72.144 
+Q 132.48 72.144 132.48 68.976 
+L 132.48 23.04 
+Q 132.48 19.872 126.72 19.872 
+L 31.68 19.872 
+Q 25.92 19.872 25.92 23.04 
+L 25.92 68.976 
+Q 25.92 72.144 31.68 72.144 
+z
+" clip-path="url(#pecaacb8781)" style="fill: #f8fafc; stroke-dasharray: 4.07,1.76; stroke-dashoffset: 0; stroke: #94a3b8; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <!-- $\theta_{\mathrm{phys}} = \mathbf{?}$ -->
+    <g style="fill: #64748b" transform="translate(60.66 40.95)">
+     <text>
+      <tspan x="0" y="-0.09375" style="font-style: oblique; font-size: 9px; font-family: 'DejaVu Sans'; fill: #64748b">θ</tspan>
+      <tspan x="5.506348" y="1.382812" style="font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #64748b">p</tspan>
+      <tspan x="9.505371" y="1.382812" style="font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #64748b">h</tspan>
+      <tspan x="13.498242" y="1.382812" style="font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #64748b">y</tspan>
+      <tspan x="17.226562" y="1.382812" style="font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #64748b">s</tspan>
+      <tspan x="22.50835" y="-0.09375" style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #64748b">=</tspan>
+      <tspan x="31.802783" y="-0.09375" style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #64748b">?</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_2">
+    <text style="font-style: italic; font-size: 6.2px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #94a3b8" x="79.2" y="59.598813" transform="rotate(-0 79.2 59.598813)">calibration omitted</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pecaacb8781">
+   <rect x="7.2" y="7.2" width="144" height="79.2"/>
+  </clipPath>
+ </defs>
+</svg>

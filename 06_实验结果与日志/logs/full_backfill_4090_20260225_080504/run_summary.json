@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-02-25T00:05:04.997556Z",
+  "steps": [
+    {
+      "name": "core_mamba",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\core_mamba.log"
+    },
+    {
+      "name": "core_arima_svr",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\core_arima_svr.log"
+    },
+    {
+      "name": "core_ssa_elm",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\core_ssa_elm.log"
+    },
+    {
+      "name": "core_vmd_ceemdan",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\core_vmd_ceemdan.log"
+    },
+    {
+      "name": "core_pi_moe_bundle",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\core_pi_moe_bundle.log"
+    },
+    {
+      "name": "core_mustfix_bundle",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\core_mustfix_bundle.log"
+    },
+    {
+      "name": "core_lite_clean_eval",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\core_lite_clean_eval.log"
+    },
+    {
+      "name": "multidomain_itransformer_gpu",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\multidomain_itransformer_gpu.log"
+    },
+    {
+      "name": "multidomain_timemixer_gpu",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\multidomain_timemixer_gpu.log"
+    },
+    {
+      "name": "rebuild_main4_matrices",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_080504\\rebuild_main4_matrices.log"
+    }
+  ],
+  "transfer_matrix_csv": "results\\supplementary_evidence\\multi_domain_transfer_matrix.csv"
+}

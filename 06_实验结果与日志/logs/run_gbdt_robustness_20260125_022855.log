@@ -1,0 +1,24 @@
+⚔️ [真实对决] LightGBM vs Ultra-LSNT (数据实时计算中)...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+🤖 加载 Ultra-LSNT 真实权重...
+Traceback (most recent call last):
+  File "/root/my/run_gbdt_robustness.py", line 156, in <module>
+    run_real_battle()
+  File "/root/my/run_gbdt_robustness.py", line 64, in run_real_battle
+    model_ours.load_state_dict(ckpt['model_state_dict'] if 'model_state_dict' in ckpt else ckpt)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+	Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias". 
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).

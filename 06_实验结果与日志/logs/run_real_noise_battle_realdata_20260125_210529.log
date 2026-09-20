@@ -1,0 +1,115 @@
+🔬 启动【最终修复版】消融实验...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+
+[Part 1] Retesting Kernel Sizes (Violent Patch)...
+   ⚡ Testing k=3...
+      ❌ 警告：没有找到任何 AvgPool1d 层！代码结构可能不同。
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+      ✅ k=3 -> R2=0.8689
+   ⚡ Testing k=7...
+      ❌ 警告：没有找到任何 AvgPool1d 层！代码结构可能不同。
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+      ✅ k=7 -> R2=0.8689
+   ⚡ Testing k=15...
+      ❌ 警告：没有找到任何 AvgPool1d 层！代码结构可能不同。
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+      ✅ k=15 -> R2=0.8689
+   ⚡ Testing k=25...
+      ❌ 警告：没有找到任何 AvgPool1d 层！代码结构可能不同。
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+      ✅ k=25 -> R2=0.8689
+🎨 正在绘制最终 fig_ablation_final.png ...
+✅ 最终图表已生成: fig_ablation_final.png

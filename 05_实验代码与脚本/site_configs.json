@@ -1,0 +1,103 @@
+{
+  "sites": {
+    "wind_cn": {
+      "data": "../04_数据集/wind_final.csv",
+      "target": "power",
+      "name": "Wind_CN",
+      "source_frequency_minutes": 15,
+      "turbine": {
+        "p_rated_kw": null,
+        "v_in_mps": null,
+        "v_rated_mps": null,
+        "v_out_mps": null,
+        "note": "Xinjiang wind farm (proprietary/anonymized); no public nameplate -> IEC binning identification on train split (disclosed)"
+      },
+      "backbone_config": "../10_模型检查点与权重/checkpoints_ts/main/model_config.json",
+      "backbone_checkpoint": null
+    },
+    "kelmarsh": {
+      "data": "../04_数据集/prepared_priority_datasets/kelmarsh_uk_2016.csv",
+      "target": "power",
+      "name": "Kelmarsh_UK",
+      "source_frequency_minutes": 10,
+      "turbine": {
+        "model": "Senvion MM92",
+        "count": 6,
+        "p_rated_kw": 12300.0,
+        "v_in_mps": 3.0,
+        "v_rated_mps": 12.5,
+        "v_out_mps": 24.0,
+        "source": "Zenodo 5841834 (6x Senvion MM92) + wind-turbine-models.com MM92 3.0/12.5/24.0; thewindpower lists 3.5/13/22 (uncertainty disclosed in paper)",
+        "verified": true
+      },
+      "backbone_config": null,
+      "backbone_checkpoint": null
+    },
+    "penmanshiel": {
+      "data": "../04_数据集/prepared_priority_datasets/penmanshiel_scotland_2016.csv",
+      "target": "power",
+      "name": "Penmanshiel_UK",
+      "source_frequency_minutes": 10,
+      "turbine": {
+        "model": "Senvion MM82",
+        "count": 14,
+        "p_rated_kw": 28700.0,
+        "v_in_mps": 3.5,
+        "v_rated_mps": 14.5,
+        "v_out_mps": 25.0,
+        "source": "Zenodo 5946808 (14x Senvion MM82) + wind-turbine-models.com MM82 3.5/14.5/25.0",
+        "verified": true
+      },
+      "backbone_config": null,
+      "backbone_checkpoint": null
+    },
+    "smarteole": {
+      "data": "../04_数据集/prepared_priority_datasets/smarteole_france_2020.csv",
+      "target": "power",
+      "name": "SMARTEOLE_FR",
+      "source_frequency_minutes": 1,
+      "turbine": {
+        "model": "Senvion MM82",
+        "count": 7,
+        "p_rated_kw": 14350.0,
+        "v_in_mps": 3.5,
+        "v_rated_mps": 14.5,
+        "v_out_mps": 25.0,
+        "source": "Zenodo 7342466 (7x Senvion MM82, nominal 2.05 MW each) + wind-turbine-models.com MM82 3.5/14.5/25.0",
+        "verified": true
+      },
+      "backbone_config": null,
+      "backbone_checkpoint": null
+    },
+    "wind_us": {
+      "data": "../04_数据集/prepared_priority_datasets/wind_us_core_15min.csv",
+      "target": "power",
+      "name": "Wind_US",
+      "source_frequency_minutes": 5,
+      "turbine": {
+        "p_rated_kw": null,
+        "v_in_mps": null,
+        "v_rated_mps": null,
+        "v_out_mps": null,
+        "note": "Anonymized 16 MW Iowa site (SiteID 55567, 100m met mast); no public nameplate -> IEC binning identification (disclosed)",
+        "verified": false
+      },
+      "backbone_config": null,
+      "backbone_checkpoint": null
+    }
+  },
+  "protocol": {
+    "seq_len": 96,
+    "pred_len": 24,
+    "batch_size": 128,
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "corruption": "mixed SCADA (gaussian + drift + quantization + flatline/spike/dropout), sigma_eff=0.6 for severe slice"
+  },
+  "guardrail_variants": ["raw", "clip_only", "fgmoe", "physgate"],
+  "backbones": ["ultra", "itransformer"],
+  "seeds_mock": [42, 123, 456],
+  "seeds_main": [42, 123, 456, 789, 2024],
+  "note": "Nameplate theta verified from Zenodo manifests + wind-turbine-models.com where verified=true; null -> IEC binning on train split only, disclosed as theta_identified=true in run manifest."
+}

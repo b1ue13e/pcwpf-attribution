@@ -1,0 +1,3956 @@
+﻿[
+    {
+        "Name":  "cloud_4090_turbine_fault_bundle_20260324",
+        "Extension":  "",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774121371427)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.aux",
+        "Extension":  ".aux",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1775488972541)\/"
+    },
+    {
+        "Name":  "Mini_Proposal_MoE_Edge_Sensing_JunyuLi_Polished.aux",
+        "Extension":  ".aux",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774003579673)\/"
+    },
+    {
+        "Name":  "resume_junyu_li.aux",
+        "Extension":  ".aux",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773895929090)\/"
+    },
+    {
+        "Name":  "supplementary_material.aux",
+        "Extension":  ".aux",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774876348240)\/"
+    },
+    {
+        "Name":  "run_all_figures.bat",
+        "Extension":  ".bat",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966209)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.bbl",
+        "Extension":  ".bbl",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1775488968522)\/"
+    },
+    {
+        "Name":  "cas-refs.bib",
+        "Extension":  ".bib",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1775242594366)\/"
+    },
+    {
+        "Name":  "refs_cited_only.bib",
+        "Extension":  ".bib",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1774678492517)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.blg",
+        "Extension":  ".blg",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1775488968555)\/"
+    },
+    {
+        "Name":  "_pre_organize_inventory.csv",
+        "Extension":  ".csv",
+        "MB":  0.05,
+        "LastWriteTime":  "\/Date(1778560725491)\/"
+    },
+    {
+        "Name":  "air_quality.csv",
+        "Extension":  ".csv",
+        "MB":  28.96,
+        "LastWriteTime":  "\/Date(1770695017063)\/"
+    },
+    {
+        "Name":  "air_quality_expert_activation.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965287)\/"
+    },
+    {
+        "Name":  "air_quality_ready.csv",
+        "Extension":  ".csv",
+        "MB":  20.03,
+        "LastWriteTime":  "\/Date(1770695009890)\/"
+    },
+    {
+        "Name":  "all_models_clean_80_20.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876295910)\/"
+    },
+    {
+        "Name":  "artifact_full_coverage_20260211.csv",
+        "Extension":  ".csv",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1770772552126)\/"
+    },
+    {
+        "Name":  "benchmark_summary.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771782998384)\/"
+    },
+    {
+        "Name":  "citation_key_map.csv",
+        "Extension":  ".csv",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772079238814)\/"
+    },
+    {
+        "Name":  "coa_bwo_best_configs.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876230295)\/"
+    },
+    {
+        "Name":  "coa_bwo_search_trace.csv",
+        "Extension":  ".csv",
+        "MB":  0.45,
+        "LastWriteTime":  "\/Date(1771876211856)\/"
+    },
+    {
+        "Name":  "comprehensive_ablation_results_parallel.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965538)\/"
+    },
+    {
+        "Name":  "conflict_resolution_round2_20260303.csv",
+        "Extension":  ".csv",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772471654304)\/"
+    },
+    {
+        "Name":  "dedupe_applied_identical_20260303.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1772471765354)\/"
+    },
+    {
+        "Name":  "dispatch_rolling_80_20.csv",
+        "Extension":  ".csv",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876203317)\/"
+    },
+    {
+        "Name":  "dispatch_rts24_80_20.csv",
+        "Extension":  ".csv",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876198758)\/"
+    },
+    {
+        "Name":  "dispatch_schedule.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770726999506)\/"
+    },
+    {
+        "Name":  "dlinear_latency_results.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965625)\/"
+    },
+    {
+        "Name":  "efficiency_benchmark_results_enhanced.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965690)\/"
+    },
+    {
+        "Name":  "energy.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784703082)\/"
+    },
+    {
+        "Name":  "energy_fixed.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784709597)\/"
+    },
+    {
+        "Name":  "gefcom_ready.csv",
+        "Extension":  ".csv",
+        "MB":  0.98,
+        "LastWriteTime":  "\/Date(1770694971924)\/"
+    },
+    {
+        "Name":  "hyperparameter_random_search_results_parallel.csv",
+        "Extension":  ".csv",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965952)\/"
+    },
+    {
+        "Name":  "latency.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784721258)\/"
+    },
+    {
+        "Name":  "latency_fixed.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1772473781659)\/"
+    },
+    {
+        "Name":  "lightgbm_latency_results.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965967)\/"
+    },
+    {
+        "Name":  "Load_history.csv",
+        "Extension":  ".csv",
+        "MB":  6.99,
+        "LastWriteTime":  "\/Date(1770694995073)\/"
+    },
+    {
+        "Name":  "metaheuristic_best_configs.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876134291)\/"
+    },
+    {
+        "Name":  "metaheuristic_latency_energy.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876129486)\/"
+    },
+    {
+        "Name":  "metaheuristic_metrics_all_datasets.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876116197)\/"
+    },
+    {
+        "Name":  "metaheuristic_metrics_core_wind_electricity_audited.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771877168531)\/"
+    },
+    {
+        "Name":  "metaheuristic_search_trace.csv",
+        "Extension":  ".csv",
+        "MB":  0.3,
+        "LastWriteTime":  "\/Date(1771876103417)\/"
+    },
+    {
+        "Name":  "plot_data_multi_domain.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966059)\/"
+    },
+    {
+        "Name":  "probabilistic_comparison.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966162)\/"
+    },
+    {
+        "Name":  "processed_wind.csv",
+        "Extension":  ".csv",
+        "MB":  13.26,
+        "LastWriteTime":  "\/Date(1770695002517)\/"
+    },
+    {
+        "Name":  "robustness_80_20.csv",
+        "Extension":  ".csv",
+        "MB":  0.05,
+        "LastWriteTime":  "\/Date(1771876073005)\/"
+    },
+    {
+        "Name":  "table_multi_domain.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966511)\/"
+    },
+    {
+        "Name":  "table2_robustness_data.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774985620017)\/"
+    },
+    {
+        "Name":  "tau_sweep.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784740117)\/"
+    },
+    {
+        "Name":  "tau_sweep_fixed.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784732595)\/"
+    },
+    {
+        "Name":  "timemixer_efficiency_results.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966569)\/"
+    },
+    {
+        "Name":  "topk_sweep.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784753724)\/"
+    },
+    {
+        "Name":  "topk_sweep_fixed.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784744494)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite_efficiency_results.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966623)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite_optimized_efficiency_results.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966626)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite_optimized_performance.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966634)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite_optimized_quick_results.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966645)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite_optimized_results.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966659)\/"
+    },
+    {
+        "Name":  "unified_results_final.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784773773)\/"
+    },
+    {
+        "Name":  "unified_results_final_fixed.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784769755)\/"
+    },
+    {
+        "Name":  "unified_results_template.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771784779392)\/"
+    },
+    {
+        "Name":  "wind_expert_activation.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966708)\/"
+    },
+    {
+        "Name":  "wind_expert_activation_events.csv",
+        "Extension":  ".csv",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966697)\/"
+    },
+    {
+        "Name":  "wind_final.csv",
+        "Extension":  ".csv",
+        "MB":  5,
+        "LastWriteTime":  "\/Date(1770694993109)\/"
+    },
+    {
+        "Name":  "wind_main.csv",
+        "Extension":  ".csv",
+        "MB":  7.56,
+        "LastWriteTime":  "\/Date(1770694996783)\/"
+    },
+    {
+        "Name":  "wind_us.csv",
+        "Extension":  ".csv",
+        "MB":  10.02,
+        "LastWriteTime":  "\/Date(1770694999352)\/"
+    },
+    {
+        "Name":  "新疆_风电一场_2019.csv",
+        "Extension":  ".csv",
+        "MB":  5.11,
+        "LastWriteTime":  "\/Date(1770694993410)\/"
+    },
+    {
+        "Name":  "~$财经大学本科生科研创新基金项目申请书_完善版_20260311.docx",
+        "Extension":  ".docx",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773238990948)\/"
+    },
+    {
+        "Name":  "Author Biography.docx",
+        "Extension":  ".docx",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1775969664509)\/"
+    },
+    {
+        "Name":  "Highlights.docx",
+        "Extension":  ".docx",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1775969663233)\/"
+    },
+    {
+        "Name":  "Title page.docx",
+        "Extension":  ".docx",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1775969663181)\/"
+    },
+    {
+        "Name":  "Title page_20260412131452.docx",
+        "Extension":  ".docx",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1775970792000)\/"
+    },
+    {
+        "Name":  "result_3652ba11e76d4e65bfb309906232106e.drawio",
+        "Extension":  ".drawio",
+        "MB":  0.65,
+        "LastWriteTime":  "\/Date(1772607385819)\/"
+    },
+    {
+        "Name":  "result_5ef53a0b7601476499760e00e4aab2a8.drawio",
+        "Extension":  ".drawio",
+        "MB":  1.72,
+        "LastWriteTime":  "\/Date(1772604543717)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.fdb_latexmk",
+        "Extension":  ".fdb_latexmk",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1775488973462)\/"
+    },
+    {
+        "Name":  "supplementary_material.fdb_latexmk",
+        "Extension":  ".fdb_latexmk",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774876348399)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.fls",
+        "Extension":  ".fls",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1775488972573)\/"
+    },
+    {
+        "Name":  "supplementary_material.fls",
+        "Extension":  ".fls",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1774876348261)\/"
+    },
+    {
+        "Name":  "ae_fast_revision_audit_export_20260329_231703.tar.gz",
+        "Extension":  ".gz",
+        "MB":  241.27,
+        "LastWriteTime":  "\/Date(1774797605777)\/"
+    },
+    {
+        "Name":  "ae_operation_results_bundle_20260328_123756.tar.gz",
+        "Extension":  ".gz",
+        "MB":  1.02,
+        "LastWriteTime":  "\/Date(1774672746191)\/"
+    },
+    {
+        "Name":  "cross_domain_run_artifacts_20260330_184430.tar.gz",
+        "Extension":  ".gz",
+        "MB":  2.67,
+        "LastWriteTime":  "\/Date(1774867576238)\/"
+    },
+    {
+        "Name":  "uq_holdout_seed42_results_20260329T064822Z.tar.gz",
+        "Extension":  ".gz",
+        "MB":  1.56,
+        "LastWriteTime":  "\/Date(1774766951988)\/"
+    },
+    {
+        "Name":  "unnamed.jpg",
+        "Extension":  ".jpg",
+        "MB":  0.16,
+        "LastWriteTime":  "\/Date(1770694966721)\/"
+    },
+    {
+        "Name":  "微信图片_20260318231836_370_17.jpg",
+        "Extension":  ".jpg",
+        "MB":  0.85,
+        "LastWriteTime":  "\/Date(1773847148167)\/"
+    },
+    {
+        "Name":  "微信图片_20260330234645_422_17.jpg",
+        "Extension":  ".jpg",
+        "MB":  0.18,
+        "LastWriteTime":  "\/Date(1774986607380)\/"
+    },
+    {
+        "Name":  "artifact_full_coverage_stats_20260211.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770772552128)\/"
+    },
+    {
+        "Name":  "coa_bwo_results_summary.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876216813)\/"
+    },
+    {
+        "Name":  "dispatch_comparison_results.json",
+        "Extension":  ".json",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965587)\/"
+    },
+    {
+        "Name":  "dlinear_noise_robustness_results.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965667)\/"
+    },
+    {
+        "Name":  "experiment_protocol_v2.json",
+        "Extension":  ".json",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876194945)\/"
+    },
+    {
+        "Name":  "full_coverage_key_metrics_20260211.json",
+        "Extension":  ".json",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1770772583365)\/"
+    },
+    {
+        "Name":  "gbdt_results_complete.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965888)\/"
+    },
+    {
+        "Name":  "mamba_results.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966013)\/"
+    },
+    {
+        "Name":  "performance_metrics_3d.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966031)\/"
+    },
+    {
+        "Name":  "run_summary.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771975519934)\/"
+    },
+    {
+        "Name":  "split_manifest_80_20.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771875945020)\/"
+    },
+    {
+        "Name":  "split_manifest_80_20_unified.json",
+        "Extension":  ".json",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771875958790)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.log",
+        "Extension":  ".log",
+        "MB":  0.05,
+        "LastWriteTime":  "\/Date(1775488972590)\/"
+    },
+    {
+        "Name":  "supplementary_material.log",
+        "Extension":  ".log",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1774876348273)\/"
+    },
+    {
+        "Name":  "AE_abstract_final_20260328_en.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774801646260)\/"
+    },
+    {
+        "Name":  "AE_cover_letter_final_20260328_en.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1775246072327)\/"
+    },
+    {
+        "Name":  "AE_missing_results_triage_20260327.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774599475495)\/"
+    },
+    {
+        "Name":  "AE_response_letter_draft.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774544808240)\/"
+    },
+    {
+        "Name":  "AE_response_letter_final_20260328_en.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1775245991525)\/"
+    },
+    {
+        "Name":  "AE_results_discussion_draft_20260327_en.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774599853994)\/"
+    },
+    {
+        "Name":  "AE_results_discussion_final_20260328_en.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1775246010911)\/"
+    },
+    {
+        "Name":  "AE_reviewer_response_draft_20260327_en.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774599853996)\/"
+    },
+    {
+        "Name":  "AGENTS.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774196494892)\/"
+    },
+    {
+        "Name":  "ALL_CODE_COMPLETED_EXPERIMENTS_DETAILED_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1770694965025)\/"
+    },
+    {
+        "Name":  "ALL_EXPERIMENTS_AND_CODE_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694964976)\/"
+    },
+    {
+        "Name":  "citation_audit_20260309.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773035470298)\/"
+    },
+    {
+        "Name":  "citation_match_report.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1772079238825)\/"
+    },
+    {
+        "Name":  "cloud_unfinished_tasks_checklist_20260324.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774326637882)\/"
+    },
+    {
+        "Name":  "CODE_FIXES_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694964944)\/"
+    },
+    {
+        "Name":  "COLOR_UPDATE_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774986838550)\/"
+    },
+    {
+        "Name":  "COMPLETE_EXECUTION_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965036)\/"
+    },
+    {
+        "Name":  "conflict_resolution_log_20260303.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1772471486714)\/"
+    },
+    {
+        "Name":  "CROSS_DOMAIN_ASSESSMENT_FINAL.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774877590585)\/"
+    },
+    {
+        "Name":  "CURRENT_AE_OPERATION_EVIDENCE.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774720328732)\/"
+    },
+    {
+        "Name":  "DETAILED_EXPERIMENT_SUMMARY_ANALYSIS.md",
+        "Extension":  ".md",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694965031)\/"
+    },
+    {
+        "Name":  "DISPATCH_COMPARISON_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694964987)\/"
+    },
+    {
+        "Name":  "EXECUTION_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965093)\/"
+    },
+    {
+        "Name":  "experiment_data_completion_summary.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965725)\/"
+    },
+    {
+        "Name":  "EXPERIMENT_DETAILED_DECOMPOSITION_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1770694965104)\/"
+    },
+    {
+        "Name":  "EXPERIMENT_RESULTS_MASTER_REPORT_20260303.md",
+        "Extension":  ".md",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1772473419019)\/"
+    },
+    {
+        "Name":  "EXPERIMENT_RESULTS_MASTER_REPORT_20260303_CN.md",
+        "Extension":  ".md",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1772473419018)\/"
+    },
+    {
+        "Name":  "EXPERIMENT_RESULTS_MASTER_REPORT_20260303_FINAL.md",
+        "Extension":  ".md",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1772473419020)\/"
+    },
+    {
+        "Name":  "EXPERIMENT_RESULTS_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965108)\/"
+    },
+    {
+        "Name":  "EXPERIMENT_RESULTS_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965121)\/"
+    },
+    {
+        "Name":  "EXPERIMENTAL_RESULTS_COMPREHENSIVE.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965042)\/"
+    },
+    {
+        "Name":  "FIGURE_REVISION_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774985947279)\/"
+    },
+    {
+        "Name":  "FIGURE2_OPTIMIZATION_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774987249328)\/"
+    },
+    {
+        "Name":  "FINAL_EXECUTION_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965132)\/"
+    },
+    {
+        "Name":  "FINAL_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965173)\/"
+    },
+    {
+        "Name":  "FIXES_CHECKLIST.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965181)\/"
+    },
+    {
+        "Name":  "full_coverage_report_20260211.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770772888930)\/"
+    },
+    {
+        "Name":  "LATEX_VERIFICATION_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774986445568)\/"
+    },
+    {
+        "Name":  "MAX_GPU_STATUS.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876142705)\/"
+    },
+    {
+        "Name":  "PACKAGE_CHECKLIST.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774810213647)\/"
+    },
+    {
+        "Name":  "PROBABILISTIC_FORECASTING_GUIDE.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965189)\/"
+    },
+    {
+        "Name":  "python实验代码运行状态分析报告.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966151)\/"
+    },
+    {
+        "Name":  "QUICK_REFERENCE.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965206)\/"
+    },
+    {
+        "Name":  "QUICK_START_GUIDE.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965196)\/"
+    },
+    {
+        "Name":  "README_cloud_ae_fast_revision.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774782891982)\/"
+    },
+    {
+        "Name":  "README_cloud_ae_operation.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774767793330)\/"
+    },
+    {
+        "Name":  "README_cloud_missing_ae.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774588664287)\/"
+    },
+    {
+        "Name":  "README_申请书完善指南.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773236990279)\/"
+    },
+    {
+        "Name":  "REAL_VS_FICTIONAL_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965216)\/"
+    },
+    {
+        "Name":  "RUN_TURBINE_PRIMARY_README.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774447835574)\/"
+    },
+    {
+        "Name":  "SCRIPT_EXECUTION_SUMMARY.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965220)\/"
+    },
+    {
+        "Name":  "submission_results_traceability_note.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774544837161)\/"
+    },
+    {
+        "Name":  "TECHNICAL_REPORT.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965236)\/"
+    },
+    {
+        "Name":  "timemixer_ultralsn_lite_comparison_report.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966572)\/"
+    },
+    {
+        "Name":  "timemixer_vs_ultralsnt_optimized_comparison_report.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966575)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_and_lite_experiments_summary.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771682990458)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite_optimized_performance_report.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966648)\/"
+    },
+    {
+        "Name":  "Ultra-LSNT_论文实验全面整理报告.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965241)\/"
+    },
+    {
+        "Name":  "UPLOAD_GUIDE.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774810172044)\/"
+    },
+    {
+        "Name":  "verification_report_main_tables_20260303.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1772471455737)\/"
+    },
+    {
+        "Name":  "多数据集使用情况深度分析报告.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966724)\/"
+    },
+    {
+        "Name":  "脚本日志检查报告.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966781)\/"
+    },
+    {
+        "Name":  "快速指南_打印版.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773237030067)\/"
+    },
+    {
+        "Name":  "申请书更新说明.md",
+        "Extension":  ".md",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773151627257)\/"
+    },
+    {
+        "Name":  "申请书内容素材_快速参考卡.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773236952017)\/"
+    },
+    {
+        "Name":  "申请书完善_交付清单.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773237070033)\/"
+    },
+    {
+        "Name":  "申请书完善工作总结报告.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773236927469)\/"
+    },
+    {
+        "Name":  "申请书完善详细指南.md",
+        "Extension":  ".md",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1773236785190)\/"
+    },
+    {
+        "Name":  "实验数据结果综合总结.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966729)\/"
+    },
+    {
+        "Name":  "所有实验具体数据整理汇总.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966726)\/"
+    },
+    {
+        "Name":  "所有实验运行结果总结.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966733)\/"
+    },
+    {
+        "Name":  "所有运行结果整理汇总.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966753)\/"
+    },
+    {
+        "Name":  "完整实验报告_20260210.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770771870168)\/"
+    },
+    {
+        "Name":  "完整实验报告_全覆盖版_20260211.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770772888930)\/"
+    },
+    {
+        "Name":  "完整实验报告_最终版_20260210.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770773244015)\/"
+    },
+    {
+        "Name":  "未成功代码与无结果代码整理报告.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966769)\/"
+    },
+    {
+        "Name":  "未成功代码与修复方案报告.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966737)\/"
+    },
+    {
+        "Name":  "项目申请书扩充完成说明.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773151764985)\/"
+    },
+    {
+        "Name":  "最终实验结果综合报告.md",
+        "Extension":  ".md",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772415895111)\/"
+    },
+    {
+        "Name":  "preds_lgbm.npy",
+        "Extension":  ".npy",
+        "MB":  3.32,
+        "LastWriteTime":  "\/Date(1770694984079)\/"
+    },
+    {
+        "Name":  "robustness_scores_ultra_lsnt.npy",
+        "Extension":  ".npy",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966198)\/"
+    },
+    {
+        "Name":  "trues_lgbm.npy",
+        "Extension":  ".npy",
+        "MB":  1.66,
+        "LastWriteTime":  "\/Date(1770694974715)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.out",
+        "Extension":  ".out",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1775488972546)\/"
+    },
+    {
+        "Name":  "Mini_Proposal_MoE_Edge_Sensing_JunyuLi_Polished.out",
+        "Extension":  ".out",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774003579673)\/"
+    },
+    {
+        "Name":  "resume_junyu_li.out",
+        "Extension":  ".out",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773895929090)\/"
+    },
+    {
+        "Name":  "supplementary_material.out",
+        "Extension":  ".out",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774876347683)\/"
+    },
+    {
+        "Name":  "__comment_check__.pdf",
+        "Extension":  ".pdf",
+        "MB":  1.96,
+        "LastWriteTime":  "\/Date(1773048823993)\/"
+    },
+    {
+        "Name":  "architecture.pdf",
+        "Extension":  ".pdf",
+        "MB":  4.4,
+        "LastWriteTime":  "\/Date(1774458650159)\/"
+    },
+    {
+        "Name":  "data_statistics_2x2_real.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.14,
+        "LastWriteTime":  "\/Date(1773042343707)\/"
+    },
+    {
+        "Name":  "dispatch_comparison_charts.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772597254596)\/"
+    },
+    {
+        "Name":  "drift_quant_results.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772597270823)\/"
+    },
+    {
+        "Name":  "fig_ablation.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772597265646)\/"
+    },
+    {
+        "Name":  "fig_deploy_robustness.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1772720710945)\/"
+    },
+    {
+        "Name":  "fig_dispatch_economics.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.05,
+        "LastWriteTime":  "\/Date(1772597276194)\/"
+    },
+    {
+        "Name":  "fig_dm_matrix_2x2.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.54,
+        "LastWriteTime":  "\/Date(1772710272706)\/"
+    },
+    {
+        "Name":  "fig_efficiency.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1772641857833)\/"
+    },
+    {
+        "Name":  "fig_multi_domain.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772597265105)\/"
+    },
+    {
+        "Name":  "fig_noise_protocol.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1770694965779)\/"
+    },
+    {
+        "Name":  "fig_pareto_latency_rmse_lite.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772597272965)\/"
+    },
+    {
+        "Name":  "fig_robustness_scissor_2x2_v2.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694965830)\/"
+    },
+    {
+        "Name":  "fig_robustness_stress_test_updated2.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771136279117)\/"
+    },
+    {
+        "Name":  "fig_routing_heatmap_overlay_block1.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.21,
+        "LastWriteTime":  "\/Date(1772642179978)\/"
+    },
+    {
+        "Name":  "Figure_3_Final.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1772597269443)\/"
+    },
+    {
+        "Name":  "Figure_4_Final.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1772597250875)\/"
+    },
+    {
+        "Name":  "Figure_5_Final.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.05,
+        "LastWriteTime":  "\/Date(1772642078332)\/"
+    },
+    {
+        "Name":  "figure2.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.14,
+        "LastWriteTime":  "\/Date(1772599937675)\/"
+    },
+    {
+        "Name":  "junyu_li.pdf",
+        "Extension":  ".pdf",
+        "MB":  1.02,
+        "LastWriteTime":  "\/Date(1773849515471)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.pdf",
+        "Extension":  ".pdf",
+        "MB":  2.64,
+        "LastWriteTime":  "\/Date(1775488972584)\/"
+    },
+    {
+        "Name":  "main_test.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.96,
+        "LastWriteTime":  "\/Date(1771774856398)\/"
+    },
+    {
+        "Name":  "Mini_Proposal_MoE_Edge_Sensing_JunyuLi_Polished.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.08,
+        "LastWriteTime":  "\/Date(1774003579738)\/"
+    },
+    {
+        "Name":  "resume_junyu_li.pdf",
+        "Extension":  ".pdf",
+        "MB":  1.02,
+        "LastWriteTime":  "\/Date(1773895933490)\/"
+    },
+    {
+        "Name":  "robustness_curve.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772597270197)\/"
+    },
+    {
+        "Name":  "supplementary_material.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.3,
+        "LastWriteTime":  "\/Date(1774876348268)\/"
+    },
+    {
+        "Name":  "tau_sweep_ultra_pareto_v3.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1771520509194)\/"
+    },
+    {
+        "Name":  "Time-Series_Zoom-in.pdf",
+        "Extension":  ".pdf",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771130765655)\/"
+    },
+    {
+        "Name":  "ultra-lsnt.pdf",
+        "Extension":  ".pdf",
+        "MB":  2,
+        "LastWriteTime":  "\/Date(1773671550341)\/"
+    },
+    {
+        "Name":  "worflow.pdf",
+        "Extension":  ".pdf",
+        "MB":  5.39,
+        "LastWriteTime":  "\/Date(1774459624744)\/"
+    },
+    {
+        "Name":  "lgbm_model_dump.pkl",
+        "Extension":  ".pkl",
+        "MB":  27.18,
+        "LastWriteTime":  "\/Date(1770695016035)\/"
+    },
+    {
+        "Name":  "_debug_bottom_grid.png",
+        "Extension":  ".png",
+        "MB":  0.07,
+        "LastWriteTime":  "\/Date(1772631548530)\/"
+    },
+    {
+        "Name":  "_debug_top_grid.png",
+        "Extension":  ".png",
+        "MB":  0.08,
+        "LastWriteTime":  "\/Date(1772631636689)\/"
+    },
+    {
+        "Name":  "_rollback_bottom_check.png",
+        "Extension":  ".png",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1772632596592)\/"
+    },
+    {
+        "Name":  "_rollback_subblock_check.png",
+        "Extension":  ".png",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772632596601)\/"
+    },
+    {
+        "Name":  "_rollback_top_check.png",
+        "Extension":  ".png",
+        "MB":  0.07,
+        "LastWriteTime":  "\/Date(1772632596577)\/"
+    },
+    {
+        "Name":  "_zoom_current_after_move.png",
+        "Extension":  ".png",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772619454260)\/"
+    },
+    {
+        "Name":  "68372053-70ec-4335-99dd-6fa606ea656b.png",
+        "Extension":  ".png",
+        "MB":  1.11,
+        "LastWriteTime":  "\/Date(1773849283355)\/"
+    },
+    {
+        "Name":  "dispatch_comparison_charts.png",
+        "Extension":  ".png",
+        "MB":  0.39,
+        "LastWriteTime":  "\/Date(1772597254938)\/"
+    },
+    {
+        "Name":  "drift_quant_results.png",
+        "Extension":  ".png",
+        "MB":  0.27,
+        "LastWriteTime":  "\/Date(1772597271106)\/"
+    },
+    {
+        "Name":  "fig_ablation.png",
+        "Extension":  ".png",
+        "MB":  0.31,
+        "LastWriteTime":  "\/Date(1772597265933)\/"
+    },
+    {
+        "Name":  "fig_deploy_robustness.png",
+        "Extension":  ".png",
+        "MB":  0.24,
+        "LastWriteTime":  "\/Date(1772644537890)\/"
+    },
+    {
+        "Name":  "fig_dispatch_economics.png",
+        "Extension":  ".png",
+        "MB":  0.54,
+        "LastWriteTime":  "\/Date(1772597276696)\/"
+    },
+    {
+        "Name":  "fig_dm_matrix_2x2.png",
+        "Extension":  ".png",
+        "MB":  0.5,
+        "LastWriteTime":  "\/Date(1772597281837)\/"
+    },
+    {
+        "Name":  "fig_dm_matrix_Air_Quality.png",
+        "Extension":  ".png",
+        "MB":  0.13,
+        "LastWriteTime":  "\/Date(1772023596586)\/"
+    },
+    {
+        "Name":  "fig_dm_matrix_GEFCom_Load.png",
+        "Extension":  ".png",
+        "MB":  0.13,
+        "LastWriteTime":  "\/Date(1772023596553)\/"
+    },
+    {
+        "Name":  "fig_dm_matrix_Wind_CN.png",
+        "Extension":  ".png",
+        "MB":  0.12,
+        "LastWriteTime":  "\/Date(1772023596579)\/"
+    },
+    {
+        "Name":  "fig_dm_matrix_Wind_US.png",
+        "Extension":  ".png",
+        "MB":  0.12,
+        "LastWriteTime":  "\/Date(1772023596610)\/"
+    },
+    {
+        "Name":  "fig_efficiency.png",
+        "Extension":  ".png",
+        "MB":  0.4,
+        "LastWriteTime":  "\/Date(1772597266728)\/"
+    },
+    {
+        "Name":  "fig_multi_domain.png",
+        "Extension":  ".png",
+        "MB":  0.26,
+        "LastWriteTime":  "\/Date(1772597265341)\/"
+    },
+    {
+        "Name":  "fig_noise_protocol.png",
+        "Extension":  ".png",
+        "MB":  0.37,
+        "LastWriteTime":  "\/Date(1770694967168)\/"
+    },
+    {
+        "Name":  "fig_pareto_latency_rmse_lite.png",
+        "Extension":  ".png",
+        "MB":  0.2,
+        "LastWriteTime":  "\/Date(1772597273170)\/"
+    },
+    {
+        "Name":  "fig_robustness_scissor_2x2_v2.png",
+        "Extension":  ".png",
+        "MB":  0.53,
+        "LastWriteTime":  "\/Date(1770694968417)\/"
+    },
+    {
+        "Name":  "fig_robustness_stress_test_updated2.png",
+        "Extension":  ".png",
+        "MB":  0.54,
+        "LastWriteTime":  "\/Date(1771136279690)\/"
+    },
+    {
+        "Name":  "fig_routing_heatmap_overlay_block1.png",
+        "Extension":  ".png",
+        "MB":  0.31,
+        "LastWriteTime":  "\/Date(1772597275699)\/"
+    },
+    {
+        "Name":  "Figure_3_Final.png",
+        "Extension":  ".png",
+        "MB":  0.77,
+        "LastWriteTime":  "\/Date(1772597269912)\/"
+    },
+    {
+        "Name":  "Figure_4_Final.png",
+        "Extension":  ".png",
+        "MB":  0.55,
+        "LastWriteTime":  "\/Date(1772597251317)\/"
+    },
+    {
+        "Name":  "Figure_5_Final.png",
+        "Extension":  ".png",
+        "MB":  0.45,
+        "LastWriteTime":  "\/Date(1772597267715)\/"
+    },
+    {
+        "Name":  "page25.png",
+        "Extension":  ".png",
+        "MB":  0.15,
+        "LastWriteTime":  "\/Date(1772256988470)\/"
+    },
+    {
+        "Name":  "page25_tuned.png",
+        "Extension":  ".png",
+        "MB":  0.17,
+        "LastWriteTime":  "\/Date(1772257027976)\/"
+    },
+    {
+        "Name":  "page25_tuned2.png",
+        "Extension":  ".png",
+        "MB":  0.17,
+        "LastWriteTime":  "\/Date(1772257078105)\/"
+    },
+    {
+        "Name":  "page26_tuned.png",
+        "Extension":  ".png",
+        "MB":  0.16,
+        "LastWriteTime":  "\/Date(1772257040379)\/"
+    },
+    {
+        "Name":  "page26_tuned2.png",
+        "Extension":  ".png",
+        "MB":  0.16,
+        "LastWriteTime":  "\/Date(1772257078276)\/"
+    },
+    {
+        "Name":  "performance_analysis_grid.png",
+        "Extension":  ".png",
+        "MB":  0.41,
+        "LastWriteTime":  "\/Date(1770694967374)\/"
+    },
+    {
+        "Name":  "ref_page21-21.png",
+        "Extension":  ".png",
+        "MB":  0.39,
+        "LastWriteTime":  "\/Date(1772813732834)\/"
+    },
+    {
+        "Name":  "ref_page3-03.png",
+        "Extension":  ".png",
+        "MB":  0.59,
+        "LastWriteTime":  "\/Date(1772813732465)\/"
+    },
+    {
+        "Name":  "robustness_curve.png",
+        "Extension":  ".png",
+        "MB":  0.31,
+        "LastWriteTime":  "\/Date(1772597270562)\/"
+    },
+    {
+        "Name":  "tau_sweep_ultra_pareto_v3.png",
+        "Extension":  ".png",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1771520354459)\/"
+    },
+    {
+        "Name":  "Time-Series Zoom-in.png",
+        "Extension":  ".png",
+        "MB":  0.73,
+        "LastWriteTime":  "\/Date(1771130766163)\/"
+    },
+    {
+        "Name":  "build_ae_fast_revision_cloud_bundle.ps1",
+        "Extension":  ".ps1",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774782903762)\/"
+    },
+    {
+        "Name":  "build_ae_operation_cloud_bundle.ps1",
+        "Extension":  ".ps1",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774667223661)\/"
+    },
+    {
+        "Name":  "build_missing_ae_cloud_bundle.ps1",
+        "Extension":  ".ps1",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774588699372)\/"
+    },
+    {
+        "Name":  "cleanup_application_doc.ps1",
+        "Extension":  ".ps1",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773239928716)\/"
+    },
+    {
+        "Name":  "start_background_suite.ps1",
+        "Extension":  ".ps1",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966580)\/"
+    },
+    {
+        "Name":  "update_application_doc.ps1",
+        "Extension":  ".ps1",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1773239383821)\/"
+    },
+    {
+        "Name":  "ablation_device_fix.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965252)\/"
+    },
+    {
+        "Name":  "ablation_device_fix_final.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965259)\/"
+    },
+    {
+        "Name":  "ae_plot_style.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965279)\/"
+    },
+    {
+        "Name":  "aggregate_ae_operation_results.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774623115007)\/"
+    },
+    {
+        "Name":  "aggregate_ae_proxy_sensitivity_results.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774782369309)\/"
+    },
+    {
+        "Name":  "aggregate_missing_ae_results.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774588550634)\/"
+    },
+    {
+        "Name":  "analyze_expert_switching.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694965297)\/"
+    },
+    {
+        "Name":  "analyze_expert_switching_standard.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694965292)\/"
+    },
+    {
+        "Name":  "analyze_predictions.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965441)\/"
+    },
+    {
+        "Name":  "analyze_r2_issue.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965403)\/"
+    },
+    {
+        "Name":  "assemble_figures.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965407)\/"
+    },
+    {
+        "Name":  "audit_datasets.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774447138271)\/"
+    },
+    {
+        "Name":  "auto_enhance_docx.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773236810793)\/"
+    },
+    {
+        "Name":  "backfill_table2_tsfm_slots.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772153136215)\/"
+    },
+    {
+        "Name":  "backfill_table4_arm_latency.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772468625632)\/"
+    },
+    {
+        "Name":  "battle_dlinear.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965457)\/"
+    },
+    {
+        "Name":  "battle_economics.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965473)\/"
+    },
+    {
+        "Name":  "benchmark_arm.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771783011989)\/"
+    },
+    {
+        "Name":  "benchmark_arm_comprehensive.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771783016899)\/"
+    },
+    {
+        "Name":  "benchmark_full_real.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771783006100)\/"
+    },
+    {
+        "Name":  "benchmark_simple.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771783002371)\/"
+    },
+    {
+        "Name":  "benchmark_topk_tau.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771782981747)\/"
+    },
+    {
+        "Name":  "build_applied_energy_figure_system.py",
+        "Extension":  ".py",
+        "MB":  0.1,
+        "LastWriteTime":  "\/Date(1774982842993)\/"
+    },
+    {
+        "Name":  "build_core_audit_backfill.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771877133576)\/"
+    },
+    {
+        "Name":  "build_core_matrices_from_evidence.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771950331898)\/"
+    },
+    {
+        "Name":  "build_dataset_audit_table.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1773922538625)\/"
+    },
+    {
+        "Name":  "build_decision_aware_dispatch_evidence.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1774767801651)\/"
+    },
+    {
+        "Name":  "build_dispatch_mapping_daylevel_consistency.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772415812838)\/"
+    },
+    {
+        "Name":  "build_dispatch_mapping_sensitivity_from_archives.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772384191562)\/"
+    },
+    {
+        "Name":  "build_final_bundle.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774810127746)\/"
+    },
+    {
+        "Name":  "build_main4_matrices_from_evidence.py",
+        "Extension":  ".py",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1772824070756)\/"
+    },
+    {
+        "Name":  "build_main6_matrices_from_evidence.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771949959667)\/"
+    },
+    {
+        "Name":  "build_windcn_context_audit_summary.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772895041996)\/"
+    },
+    {
+        "Name":  "bwo_algorithm.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876270281)\/"
+    },
+    {
+        "Name":  "bwo_cnn_experiment.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876259118)\/"
+    },
+    {
+        "Name":  "bwo_cnn_experiment_v2.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876262861)\/"
+    },
+    {
+        "Name":  "bwo_svr_experiment.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876251641)\/"
+    },
+    {
+        "Name":  "bwo_svr_experiment_v2.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876255416)\/"
+    },
+    {
+        "Name":  "check_data.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965498)\/"
+    },
+    {
+        "Name":  "check_mamba.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965489)\/"
+    },
+    {
+        "Name":  "check_storage.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965513)\/"
+    },
+    {
+        "Name":  "check_training_status.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965501)\/"
+    },
+    {
+        "Name":  "classical_baselines.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694965506)\/"
+    },
+    {
+        "Name":  "clean_gefcom.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965516)\/"
+    },
+    {
+        "Name":  "coa_algorithm.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876243110)\/"
+    },
+    {
+        "Name":  "coa_bilstm_experiment.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876235846)\/"
+    },
+    {
+        "Name":  "coa_bilstm_experiment_v2.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876239215)\/"
+    },
+    {
+        "Name":  "coa_bwo_intensive_search_config.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876225897)\/"
+    },
+    {
+        "Name":  "coa_bwo_results_collector.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1771876221360)\/"
+    },
+    {
+        "Name":  "coa_bwo_unified_split.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876208087)\/"
+    },
+    {
+        "Name":  "compare_dispatch_metrics.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965532)\/"
+    },
+    {
+        "Name":  "compare_robustness_real.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965543)\/"
+    },
+    {
+        "Name":  "complete_noise_robustness_test.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694965556)\/"
+    },
+    {
+        "Name":  "create_enhanced_proposal.py",
+        "Extension":  ".py",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1773237759742)\/"
+    },
+    {
+        "Name":  "create_exact_vector_clone.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771214843213)\/"
+    },
+    {
+        "Name":  "create_us_wind_results.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965582)\/"
+    },
+    {
+        "Name":  "data_preprocess.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694965565)\/"
+    },
+    {
+        "Name":  "demo_run.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965576)\/"
+    },
+    {
+        "Name":  "demo_run_lite.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965592)\/"
+    },
+    {
+        "Name":  "dispatch_mapping_utils.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774243368932)\/"
+    },
+    {
+        "Name":  "elsevier_style.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965695)\/"
+    },
+    {
+        "Name":  "engineering_charts.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1770694965698)\/"
+    },
+    {
+        "Name":  "enhance_proposal.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1773237512680)\/"
+    },
+    {
+        "Name":  "ensure_paper_pdfs.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965711)\/"
+    },
+    {
+        "Name":  "evaluate_multi_domain.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965707)\/"
+    },
+    {
+        "Name":  "evaluate_multi_domain_with_explanation.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965722)\/"
+    },
+    {
+        "Name":  "evaluate_ultra_lsnt_optimized.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965718)\/"
+    },
+    {
+        "Name":  "export_guardrail_prediction_archives.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774781756890)\/"
+    },
+    {
+        "Name":  "export_pareto_and_routing_assets.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770900928873)\/"
+    },
+    {
+        "Name":  "extract_real_results.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876185211)\/"
+    },
+    {
+        "Name":  "extract_word_text.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773236645933)\/"
+    },
+    {
+        "Name":  "fig_data_overview_2x2.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773041783613)\/"
+    },
+    {
+        "Name":  "fig_from_tables.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965777)\/"
+    },
+    {
+        "Name":  "fig_noise_protocol_schematic.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965782)\/"
+    },
+    {
+        "Name":  "fig_overall_performance_windcn.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965795)\/"
+    },
+    {
+        "Name":  "fig_overall_performance_windcn_timeseries.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965786)\/"
+    },
+    {
+        "Name":  "fig_robustness_2x2.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965802)\/"
+    },
+    {
+        "Name":  "fig_robustness_gaussian_windcn.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965807)\/"
+    },
+    {
+        "Name":  "fig_robustness_scissor_2x2_v2.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965826)\/"
+    },
+    {
+        "Name":  "fig_scatter_pred_true_2x2.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965815)\/"
+    },
+    {
+        "Name":  "fig_timeseries_compare_2x2.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965833)\/"
+    },
+    {
+        "Name":  "final_enhance_proposal.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773236722258)\/"
+    },
+    {
+        "Name":  "finalize_metaheuristic_outputs.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876180800)\/"
+    },
+    {
+        "Name":  "fix_air_data.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965838)\/"
+    },
+    {
+        "Name":  "fix_gbdt_simple.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965847)\/"
+    },
+    {
+        "Name":  "fix_metrics_json.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965855)\/"
+    },
+    {
+        "Name":  "fix_missing_data.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876176427)\/"
+    },
+    {
+        "Name":  "font_setup.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965852)\/"
+    },
+    {
+        "Name":  "force_fix.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965861)\/"
+    },
+    {
+        "Name":  "gbdt_weight_adapter_final.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965903)\/"
+    },
+    {
+        "Name":  "generate_applied_energy_visuals.py",
+        "Extension":  ".py",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1773044637935)\/"
+    },
+    {
+        "Name":  "generate_elsevier_figures.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965898)\/"
+    },
+    {
+        "Name":  "generate_expert_summary.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965919)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_decay.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774985696013)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v2.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774986256013)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v3_morandi.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774986720741)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4_clear.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774987088062)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4b_fixed.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774987168851)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4c_spacing.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774987508695)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4d_noverlap.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774987870140)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4e_simple.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774988203680)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4f_no_boxes.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774988490855)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4g_zones.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774989325851)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4h_zones.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774989428458)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4i_zones.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774989540017)\/"
+    },
+    {
+        "Name":  "generate_figure2_robustness_v4j_zones.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774989894350)\/"
+    },
+    {
+        "Name":  "generate_figure3_dispatch_economics.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774985731683)\/"
+    },
+    {
+        "Name":  "generate_figure3_dispatch_v2.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774986290214)\/"
+    },
+    {
+        "Name":  "generate_figure3_dispatch_v3_morandi.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774986752741)\/"
+    },
+    {
+        "Name":  "generate_figure3_dispatch_v4_fixed.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774987809060)\/"
+    },
+    {
+        "Name":  "generate_figure3_dispatch_v5_short.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774988248111)\/"
+    },
+    {
+        "Name":  "generate_figure3_dispatch_v6_fixed.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774988825897)\/"
+    },
+    {
+        "Name":  "generate_figure3_dispatch_v7_final.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774989097715)\/"
+    },
+    {
+        "Name":  "generate_figures.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965932)\/"
+    },
+    {
+        "Name":  "generate_missing_figures.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965915)\/"
+    },
+    {
+        "Name":  "generate_parallel_final_report.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965927)\/"
+    },
+    {
+        "Name":  "generate_remaining_outputs.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876164213)\/"
+    },
+    {
+        "Name":  "generate_summary_report.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965943)\/"
+    },
+    {
+        "Name":  "generate_ultra_lsnt_mock.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876156937)\/"
+    },
+    {
+        "Name":  "get_model_stats.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965948)\/"
+    },
+    {
+        "Name":  "guardrail_backbones.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774588769984)\/"
+    },
+    {
+        "Name":  "guardrail_proxy_utils.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774781736959)\/"
+    },
+    {
+        "Name":  "make_latex_gai_figures.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965979)\/"
+    },
+    {
+        "Name":  "make_paper_figures.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965984)\/"
+    },
+    {
+        "Name":  "make_tsfm_slot_csv_from_arrays.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1772161072990)\/"
+    },
+    {
+        "Name":  "maximize_gpu_utilization.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876138485)\/"
+    },
+    {
+        "Name":  "measure_dlinear_latency.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694965998)\/"
+    },
+    {
+        "Name":  "measure_lightgbm_latency.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965992)\/"
+    },
+    {
+        "Name":  "noise_utils.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966027)\/"
+    },
+    {
+        "Name":  "paper_figure_style.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774197819461)\/"
+    },
+    {
+        "Name":  "plot_3d_scatter.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966048)\/"
+    },
+    {
+        "Name":  "plot_arch.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966052)\/"
+    },
+    {
+        "Name":  "plot_architecture_detailed.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966057)\/"
+    },
+    {
+        "Name":  "plot_deployment_evidence.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773885098685)\/"
+    },
+    {
+        "Name":  "plot_dispatch_comparison.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966065)\/"
+    },
+    {
+        "Name":  "plot_dlinear_victory.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966088)\/"
+    },
+    {
+        "Name":  "plot_expert_heatmap.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966081)\/"
+    },
+    {
+        "Name":  "plot_expert_heatmap_enhanced.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966069)\/"
+    },
+    {
+        "Name":  "plot_gbdt_battle_from_log.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966111)\/"
+    },
+    {
+        "Name":  "plot_multi_domain.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771510476681)\/"
+    },
+    {
+        "Name":  "plot_paper_figs.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966113)\/"
+    },
+    {
+        "Name":  "plot_results.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966108)\/"
+    },
+    {
+        "Name":  "plot_ultra_lsnt_simple.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966122)\/"
+    },
+    {
+        "Name":  "plot_universal_robustness_from_log.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966132)\/"
+    },
+    {
+        "Name":  "prepare_latex_assets.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966125)\/"
+    },
+    {
+        "Name":  "priority_dataset_hub.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774121371427)\/"
+    },
+    {
+        "Name":  "profile_energy.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966155)\/"
+    },
+    {
+        "Name":  "quick_baselines_experiment.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876080633)\/"
+    },
+    {
+        "Name":  "quick_ultra_lsnt_optimized_test.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966171)\/"
+    },
+    {
+        "Name":  "read_proposal.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773236573709)\/"
+    },
+    {
+        "Name":  "real_robustness.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966184)\/"
+    },
+    {
+        "Name":  "redesign_applied_energy_figures.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772596624088)\/"
+    },
+    {
+        "Name":  "redraw_gemini_architecture_vector.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771681203249)\/"
+    },
+    {
+        "Name":  "render_windcn_context_panel_tex.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1772895139514)\/"
+    },
+    {
+        "Name":  "rerun_lambda_robust_compare.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770823406313)\/"
+    },
+    {
+        "Name":  "robustness_faults.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1772457208939)\/"
+    },
+    {
+        "Name":  "run_ablation_study.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966200)\/"
+    },
+    {
+        "Name":  "run_ae_dispatch_param_sensitivity.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774782876051)\/"
+    },
+    {
+        "Name":  "run_ae_dispatch_reserve_ratio_sensitivity.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1775235921768)\/"
+    },
+    {
+        "Name":  "run_ae_proxy_sensitivity_case.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1774782325520)\/"
+    },
+    {
+        "Name":  "run_all_experiments_master.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876064928)\/"
+    },
+    {
+        "Name":  "run_all_figures.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966221)\/"
+    },
+    {
+        "Name":  "run_applied_energy_oneclick_4090.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772081080664)\/"
+    },
+    {
+        "Name":  "run_arima_svr_auditable_suite.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771951012307)\/"
+    },
+    {
+        "Name":  "run_background_suite.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1770694966226)\/"
+    },
+    {
+        "Name":  "run_baselines.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966242)\/"
+    },
+    {
+        "Name":  "run_chronos_family_windcn.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772896450070)\/"
+    },
+    {
+        "Name":  "run_clip_only_guardrail_control.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774781767537)\/"
+    },
+    {
+        "Name":  "run_comprehensive_ablation.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966251)\/"
+    },
+    {
+        "Name":  "run_comprehensive_ablation_parallel.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966271)\/"
+    },
+    {
+        "Name":  "run_dispatch_closure_mapping_decision_4090.py",
+        "Extension":  ".py",
+        "MB":  0.06,
+        "LastWriteTime":  "\/Date(1774767746987)\/"
+    },
+    {
+        "Name":  "run_dlinear.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966254)\/"
+    },
+    {
+        "Name":  "run_dlinear_fixed.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966280)\/"
+    },
+    {
+        "Name":  "run_dm_patchtst.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966288)\/"
+    },
+    {
+        "Name":  "run_dm_patchtst_fixed.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966295)\/"
+    },
+    {
+        "Name":  "run_dm_test.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966302)\/"
+    },
+    {
+        "Name":  "run_dm_transformer_fair.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966307)\/"
+    },
+    {
+        "Name":  "run_efficiency_benchmark.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966312)\/"
+    },
+    {
+        "Name":  "run_efficiency_benchmark_enhanced.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966326)\/"
+    },
+    {
+        "Name":  "run_expert_physics.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966328)\/"
+    },
+    {
+        "Name":  "run_extended_metaheuristic_baselines_4090.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1772148258287)\/"
+    },
+    {
+        "Name":  "run_fairness_closure_fullfault_4090.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1774327165887)\/"
+    },
+    {
+        "Name":  "run_final_benchmark.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771782962603)\/"
+    },
+    {
+        "Name":  "run_full_backfill_4090.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771977940246)\/"
+    },
+    {
+        "Name":  "run_full_coa_bwo_experiments.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771876036003)\/"
+    },
+    {
+        "Name":  "run_gbdt.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966333)\/"
+    },
+    {
+        "Name":  "run_gbdt_complete_fixed.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966342)\/"
+    },
+    {
+        "Name":  "run_gbdt_drift.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966359)\/"
+    },
+    {
+        "Name":  "run_gbdt_drift_temp.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966366)\/"
+    },
+    {
+        "Name":  "run_gbdt_quantization.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966354)\/"
+    },
+    {
+        "Name":  "run_gbdt_quantization_temp.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966350)\/"
+    },
+    {
+        "Name":  "run_gbdt_robustness.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966372)\/"
+    },
+    {
+        "Name":  "run_gbdt_robustness_fixed_final.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966394)\/"
+    },
+    {
+        "Name":  "run_guardrail_physics_closure_4090.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772458110395)\/"
+    },
+    {
+        "Name":  "run_hyperparameter_search.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966383)\/"
+    },
+    {
+        "Name":  "run_hyperparameter_search_parallel.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966389)\/"
+    },
+    {
+        "Name":  "run_joint_parameter_analysis_4090.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1773041812810)\/"
+    },
+    {
+        "Name":  "run_joint_sensitivity_soa.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771957304154)\/"
+    },
+    {
+        "Name":  "run_latest_sota.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1770694966401)\/"
+    },
+    {
+        "Name":  "run_lightgbm_gaussian_audit_windcn.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772819762396)\/"
+    },
+    {
+        "Name":  "run_mamba_auditable_suite.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771923311675)\/"
+    },
+    {
+        "Name":  "run_mamba_comparison.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966413)\/"
+    },
+    {
+        "Name":  "run_minimal_matched_robustness_controls.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1772347257599)\/"
+    },
+    {
+        "Name":  "run_minimal_matched_robustness_controls_v2.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1772383387543)\/"
+    },
+    {
+        "Name":  "run_minimal_vmd_pso_ceemdan_woa.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1771918472497)\/"
+    },
+    {
+        "Name":  "run_moirai_family_windcn.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772896467702)\/"
+    },
+    {
+        "Name":  "run_multi_domain_baselines.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771972171332)\/"
+    },
+    {
+        "Name":  "run_mustfix_supplementary_experiments.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771520331474)\/"
+    },
+    {
+        "Name":  "run_network_constrained_dispatch_ieee24.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770890241551)\/"
+    },
+    {
+        "Name":  "run_optimized_coa_bwo_experiments.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1771876011275)\/"
+    },
+    {
+        "Name":  "run_parallel_experiments.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876005725)\/"
+    },
+    {
+        "Name":  "run_persistence_windcn.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770944647883)\/"
+    },
+    {
+        "Name":  "run_pi_moe_evidence_bundle.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771966709757)\/"
+    },
+    {
+        "Name":  "run_pi_moe_full_training_evidence.py",
+        "Extension":  ".py",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1774782937404)\/"
+    },
+    {
+        "Name":  "run_real_experiments.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966468)\/"
+    },
+    {
+        "Name":  "run_real_missing_experiments.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771875984525)\/"
+    },
+    {
+        "Name":  "run_real_noise_battle.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966470)\/"
+    },
+    {
+        "Name":  "run_revision_arm_eval.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772457926813)\/"
+    },
+    {
+        "Name":  "run_revision_closure_4090.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772505889812)\/"
+    },
+    {
+        "Name":  "run_safety_deployment.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774588516678)\/"
+    },
+    {
+        "Name":  "run_significance.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966478)\/"
+    },
+    {
+        "Name":  "run_sota.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966481)\/"
+    },
+    {
+        "Name":  "run_ssa_elm_auditable_suite.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771957270459)\/"
+    },
+    {
+        "Name":  "run_submission_oneclick_4090.py",
+        "Extension":  ".py",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1772023741692)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_checkpoint.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771875979235)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_cross_site_4090.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1773933010017)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_electricity.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771875965935)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_electricity_v2.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771875974618)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_electricity_v3.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771875970331)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_sota_ensemble_4090.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1773918403020)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_sota_push_4090.py",
+        "Extension":  ".py",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1773932996623)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_sota_search_4090.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773933002845)\/"
+    },
+    {
+        "Name":  "run_ultra_lsnt_wind_cn_real.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771875962532)\/"
+    },
+    {
+        "Name":  "run_universal_ablation.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966495)\/"
+    },
+    {
+        "Name":  "run_universal_robustness.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966475)\/"
+    },
+    {
+        "Name":  "run_universal_significance.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966485)\/"
+    },
+    {
+        "Name":  "stratified_analysis.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966500)\/"
+    },
+    {
+        "Name":  "test_dlinear_noise_robustness.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966537)\/"
+    },
+    {
+        "Name":  "test_efficiency.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966529)\/"
+    },
+    {
+        "Name":  "test_mape.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966543)\/"
+    },
+    {
+        "Name":  "test_probabilistic.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966548)\/"
+    },
+    {
+        "Name":  "test_robustness_fix.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966562)\/"
+    },
+    {
+        "Name":  "test_timemixer_efficiency.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966552)\/"
+    },
+    {
+        "Name":  "test_ultra_lsnt_lite_efficiency.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966556)\/"
+    },
+    {
+        "Name":  "test_ultra_lsnt_lite_optimized.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966558)\/"
+    },
+    {
+        "Name":  "traditional_baselines_experiment.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771875933485)\/"
+    },
+    {
+        "Name":  "train_dlinear_with_save.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966597)\/"
+    },
+    {
+        "Name":  "train_ultra_lsnt_enhanced.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966590)\/"
+    },
+    {
+        "Name":  "train_ultra_lsnt_stable.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966619)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_linear_branch.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966621)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966608)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_sota_push.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773932556855)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_timeseries.py",
+        "Extension":  ".py",
+        "MB":  0.07,
+        "LastWriteTime":  "\/Date(1774243332774)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_v4.py",
+        "Extension":  ".py",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1770694966682)\/"
+    },
+    {
+        "Name":  "unified_experiment_framework.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771875929727)\/"
+    },
+    {
+        "Name":  "unified_split_utils.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771875925496)\/"
+    },
+    {
+        "Name":  "validate_citation_policy.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771949905681)\/"
+    },
+    {
+        "Name":  "validate_core_matrix_numbers.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771924051158)\/"
+    },
+    {
+        "Name":  "validate_latex_gai_figures.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966685)\/"
+    },
+    {
+        "Name":  "validate_main4_matrix_numbers.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771959153818)\/"
+    },
+    {
+        "Name":  "validate_main6_matrix_numbers.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771949892100)\/"
+    },
+    {
+        "Name":  "validate_paper_figures.py",
+        "Extension":  ".py",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966678)\/"
+    },
+    {
+        "Name":  "validate_r2_correction.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966690)\/"
+    },
+    {
+        "Name":  "validate_results.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771782945686)\/"
+    },
+    {
+        "Name":  "vectorize_pdf_to_pure_svg_exact.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771319203599)\/"
+    },
+    {
+        "Name":  "wind_dispatch_model.py",
+        "Extension":  ".py",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966702)\/"
+    },
+    {
+        "Name":  "windcn_audit_common.py",
+        "Extension":  ".py",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772896431289)\/"
+    },
+    {
+        "Name":  "auto_continue.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876278991)\/"
+    },
+    {
+        "Name":  "auto_restart_continue.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876274718)\/"
+    },
+    {
+        "Name":  "check_progress.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876247109)\/"
+    },
+    {
+        "Name":  "check_results.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965493)\/"
+    },
+    {
+        "Name":  "clean_and_plot.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965524)\/"
+    },
+    {
+        "Name":  "final_status_report.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876189428)\/"
+    },
+    {
+        "Name":  "fix1.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876168277)\/"
+    },
+    {
+        "Name":  "fix1_fixed.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876172184)\/"
+    },
+    {
+        "Name":  "gpu_parallel_status.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876151583)\/"
+    },
+    {
+        "Name":  "max_gpu_monitor.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876147173)\/"
+    },
+    {
+        "Name":  "monitor_coa.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876096891)\/"
+    },
+    {
+        "Name":  "monitor_experiments.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876092733)\/"
+    },
+    {
+        "Name":  "monitor_parallel.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876088242)\/"
+    },
+    {
+        "Name":  "monitor_plan_c.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876084553)\/"
+    },
+    {
+        "Name":  "restart_low_parallel.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876077268)\/"
+    },
+    {
+        "Name":  "run_ae_fast_revision_full_suite_4090.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774782527808)\/"
+    },
+    {
+        "Name":  "run_ae_fast_revision_quick_smoke.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774782508429)\/"
+    },
+    {
+        "Name":  "run_ae_operation_full_suite_4090.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774767782947)\/"
+    },
+    {
+        "Name":  "run_ae_operation_quick_smoke.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774623301834)\/"
+    },
+    {
+        "Name":  "run_all.sh",
+        "Extension":  ".sh",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966213)\/"
+    },
+    {
+        "Name":  "run_all_experiments_bg.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876068799)\/"
+    },
+    {
+        "Name":  "run_all_fixed.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966234)\/"
+    },
+    {
+        "Name":  "run_all_plots_final.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966248)\/"
+    },
+    {
+        "Name":  "run_alldata.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966230)\/"
+    },
+    {
+        "Name":  "run_coa_single_thread.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876054340)\/"
+    },
+    {
+        "Name":  "run_coa_single_thread_fixed.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876060186)\/"
+    },
+    {
+        "Name":  "run_complete.sh",
+        "Extension":  ".sh",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966263)\/"
+    },
+    {
+        "Name":  "run_data_fix_background.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876045646)\/"
+    },
+    {
+        "Name":  "run_dm.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966284)\/"
+    },
+    {
+        "Name":  "run_error.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694966322)\/"
+    },
+    {
+        "Name":  "run_experiments_background.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771876040975)\/"
+    },
+    {
+        "Name":  "run_expert.sh",
+        "Extension":  ".sh",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966339)\/"
+    },
+    {
+        "Name":  "run_fixed.sh",
+        "Extension":  ".sh",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966331)\/"
+    },
+    {
+        "Name":  "run_fixit.sh",
+        "Extension":  ".sh",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1770694966346)\/"
+    },
+    {
+        "Name":  "run_full_parallel.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876030186)\/"
+    },
+    {
+        "Name":  "run_gpu_parallel.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876024769)\/"
+    },
+    {
+        "Name":  "run_latest_sota_background.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966408)\/"
+    },
+    {
+        "Name":  "run_max_gpu.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876015486)\/"
+    },
+    {
+        "Name":  "run_max_gpu_v2.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771876020489)\/"
+    },
+    {
+        "Name":  "run_missing_ae_full_suite_4090.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774588632887)\/"
+    },
+    {
+        "Name":  "run_missing_ae_quick_smoke.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774588572522)\/"
+    },
+    {
+        "Name":  "run_perfect.sh",
+        "Extension":  ".sh",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1770694966462)\/"
+    },
+    {
+        "Name":  "run_perfect_parallel.sh",
+        "Extension":  ".sh",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1770694966473)\/"
+    },
+    {
+        "Name":  "run_plan_c.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771875998248)\/"
+    },
+    {
+        "Name":  "run_plot.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966465)\/"
+    },
+    {
+        "Name":  "run_priority_experiments.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1771875993855)\/"
+    },
+    {
+        "Name":  "run_real_experiments_background.sh",
+        "Extension":  ".sh",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771875988858)\/"
+    },
+    {
+        "Name":  "run_turbine_primary_by_stage.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774447792879)\/"
+    },
+    {
+        "Name":  "run_turbine_primary_full_suite_4090.sh",
+        "Extension":  ".sh",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774447730505)\/"
+    },
+    {
+        "Name":  "run_turbine_primary_quick_smoke.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774447744840)\/"
+    },
+    {
+        "Name":  "run_uq_holdout_only_from_archives.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774767782941)\/"
+    },
+    {
+        "Name":  "run_uq_holdout_only_from_archives_aggressive.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774773837559)\/"
+    },
+    {
+        "Name":  "start_fixed_experiment.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771875941270)\/"
+    },
+    {
+        "Name":  "test_fix.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771875937526)\/"
+    },
+    {
+        "Name":  "train1.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966603)\/"
+    },
+    {
+        "Name":  "watch_priority.sh",
+        "Extension":  ".sh",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771875921052)\/"
+    },
+    {
+        "Name":  "cloud_4090_cross_domain_bundle_20260330_024852.zip.sha256",
+        "Extension":  ".sha256",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774810133878)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.spl",
+        "Extension":  ".spl",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1775488972548)\/"
+    },
+    {
+        "Name":  "supplementary_material.spl",
+        "Extension":  ".spl",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774876347394)\/"
+    },
+    {
+        "Name":  "tau_sweep_ultra_pareto_v3.svg",
+        "Extension":  ".svg",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1771520354341)\/"
+    },
+    {
+        "Name":  "dm_complete_table.tex",
+        "Extension":  ".tex",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965682)\/"
+    },
+    {
+        "Name":  "local_compile_from_txt.tex",
+        "Extension":  ".tex",
+        "MB":  0.13,
+        "LastWriteTime":  "\/Date(1771520391560)\/"
+    },
+    {
+        "Name":  "local_compile_from_txt_build.tex",
+        "Extension":  ".tex",
+        "MB":  0.14,
+        "LastWriteTime":  "\/Date(1771520379122)\/"
+    },
+    {
+        "Name":  "main_PI-MoE_final_AE_ready_rewritten.tex",
+        "Extension":  ".tex",
+        "MB":  0.13,
+        "LastWriteTime":  "\/Date(1775488354549)\/"
+    },
+    {
+        "Name":  "Mini_Proposal_MoE_Edge_Sensing_JunyuLi_Polished.tex",
+        "Extension":  ".tex",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1774003567748)\/"
+    },
+    {
+        "Name":  "resume_junyu_li.tex",
+        "Extension":  ".tex",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1773895903677)\/"
+    },
+    {
+        "Name":  "supplementary_material.tex",
+        "Extension":  ".tex",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1774876248085)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_paper.tex",
+        "Extension":  ".tex",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966655)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_paper_complete.tex",
+        "Extension":  ".tex",
+        "MB":  0.05,
+        "LastWriteTime":  "\/Date(1770694966673)\/"
+    },
+    {
+        "Name":  "_section_143_212.txt",
+        "Extension":  ".txt",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1772995124582)\/"
+    },
+    {
+        "Name":  "_section_627_845.txt",
+        "Extension":  ".txt",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1772995124584)\/"
+    },
+    {
+        "Name":  "actual_figures.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965266)\/"
+    },
+    {
+        "Name":  "benchmark_technical_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771782993720)\/"
+    },
+    {
+        "Name":  "cited_keys_tmp.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771778342847)\/"
+    },
+    {
+        "Name":  "dlinear_latency_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965644)\/"
+    },
+    {
+        "Name":  "dlinear_noise_robustness_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965653)\/"
+    },
+    {
+        "Name":  "dlinear_vs_ultralsnt_comparison.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965672)\/"
+    },
+    {
+        "Name":  "efficiency_summary_enhanced.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965703)\/"
+    },
+    {
+        "Name":  "experiment_summary_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965731)\/"
+    },
+    {
+        "Name":  "expert_analysis_summary.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965741)\/"
+    },
+    {
+        "Name":  "expert_specialization_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965762)\/"
+    },
+    {
+        "Name":  "expert_switching_analysis_report_standard.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965775)\/"
+    },
+    {
+        "Name":  "FINAL_PLOT_GENERATION_REPORT_20260126_092052.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965153)\/"
+    },
+    {
+        "Name":  "FINAL_PLOT_GENERATION_REPORT_20260126_095206.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965178)\/"
+    },
+    {
+        "Name":  "image_list.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965958)\/"
+    },
+    {
+        "Name":  "lightgbm_latency_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965954)\/"
+    },
+    {
+        "Name":  "lightgbm_vs_others_comparison.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694965972)\/"
+    },
+    {
+        "Name":  "noise_20_comparison.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966015)\/"
+    },
+    {
+        "Name":  "power_validation_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966117)\/"
+    },
+    {
+        "Name":  "README_RESULTS.txt",
+        "Extension":  ".txt",
+        "MB":  0.01,
+        "LastWriteTime":  "\/Date(1770694965193)\/"
+    },
+    {
+        "Name":  "README_SOTA_PACKAGE.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774528507714)\/"
+    },
+    {
+        "Name":  "requirements_cloud_4090.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774608436824)\/"
+    },
+    {
+        "Name":  "submission_highlights.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1774801649530)\/"
+    },
+    {
+        "Name":  "timemixer_efficiency_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966566)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite_efficiency_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966617)\/"
+    },
+    {
+        "Name":  "ultra_lsnt_lite_optimized_efficiency_report.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1770694966637)\/"
+    },
+    {
+        "Name":  "validation_results.txt",
+        "Extension":  ".txt",
+        "MB":  0,
+        "LastWriteTime":  "\/Date(1771782950327)\/"
+    },
+    {
+        "Name":  "绘图要求.txt",
+        "Extension":  ".txt",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1770694966773)\/"
+    },
+    {
+        "Name":  "绘图要求1.txt",
+        "Extension":  ".txt",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1770694966779)\/"
+    },
+    {
+        "Name":  "实验报告2.txt",
+        "Extension":  ".txt",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1770694966722)\/"
+    },
+    {
+        "Name":  "文档内容检查.txt",
+        "Extension":  ".txt",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1773151668603)\/"
+    },
+    {
+        "Name":  "AE_submit.zip",
+        "Extension":  ".zip",
+        "MB":  5.24,
+        "LastWriteTime":  "\/Date(1775975024830)\/"
+    },
+    {
+        "Name":  "AE_submit_pkg_20260412_135713.zip",
+        "Extension":  ".zip",
+        "MB":  5.24,
+        "LastWriteTime":  "\/Date(1775974190825)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v1.zip",
+        "Extension":  ".zip",
+        "MB":  8.76,
+        "LastWriteTime":  "\/Date(1774726247525)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v2.zip",
+        "Extension":  ".zip",
+        "MB":  9.89,
+        "LastWriteTime":  "\/Date(1774726503992)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v3_scaled_horizon.zip",
+        "Extension":  ".zip",
+        "MB":  9.9,
+        "LastWriteTime":  "\/Date(1774756532088)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v4_rolling_bias.zip",
+        "Extension":  ".zip",
+        "MB":  9.9,
+        "LastWriteTime":  "\/Date(1774768078026)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v5_rolling_bias_aggressive.zip",
+        "Extension":  ".zip",
+        "MB":  9.9,
+        "LastWriteTime":  "\/Date(1774774100557)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_results_code_20260329_032543.zip",
+        "Extension":  ".zip",
+        "MB":  10.04,
+        "LastWriteTime":  "\/Date(1774754984428)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_fast_revision_bundle_v1.zip",
+        "Extension":  ".zip",
+        "MB":  32.1,
+        "LastWriteTime":  "\/Date(1774783005968)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_recovery_bundle_v1_full.zip",
+        "Extension":  ".zip",
+        "MB":  113.96,
+        "LastWriteTime":  "\/Date(1774689497814)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v1.zip",
+        "Extension":  ".zip",
+        "MB":  56.97,
+        "LastWriteTime":  "\/Date(1774608930025)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v2.zip",
+        "Extension":  ".zip",
+        "MB":  56.97,
+        "LastWriteTime":  "\/Date(1774623965142)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v3.zip",
+        "Extension":  ".zip",
+        "MB":  56.97,
+        "LastWriteTime":  "\/Date(1774667268410)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v4_patch.zip",
+        "Extension":  ".zip",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1774726247534)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v5_scaled_horizon_patch.zip",
+        "Extension":  ".zip",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1774756557551)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v6_rolling_bias_patch.zip",
+        "Extension":  ".zip",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1774768078201)\/"
+    },
+    {
+        "Name":  "cloud_4090_bugfix_sync_20260323_131733.zip",
+        "Extension":  ".zip",
+        "MB":  0.03,
+        "LastWriteTime":  "\/Date(1774243125359)\/"
+    },
+    {
+        "Name":  "cloud_4090_cross_domain_bundle_20260330_024852.zip",
+        "Extension":  ".zip",
+        "MB":  22.97,
+        "LastWriteTime":  "\/Date(1774810133366)\/"
+    },
+    {
+        "Name":  "cloud_4090_missing_ae_bundle_v1.zip",
+        "Extension":  ".zip",
+        "MB":  46.01,
+        "LastWriteTime":  "\/Date(1774588933449)\/"
+    },
+    {
+        "Name":  "cloud_4090_missing_ae_results_20260327_160833.zip",
+        "Extension":  ".zip",
+        "MB":  100.52,
+        "LastWriteTime":  "\/Date(1774598995421)\/"
+    },
+    {
+        "Name":  "cloud_4090_paper_upload_pack_20260323_123152.zip",
+        "Extension":  ".zip",
+        "MB":  1424.04,
+        "LastWriteTime":  "\/Date(1774241535835)\/"
+    },
+    {
+        "Name":  "cloud_4090_sota_bundle_v4_runtime_complete.zip",
+        "Extension":  ".zip",
+        "MB":  51.94,
+        "LastWriteTime":  "\/Date(1774121436632)\/"
+    },
+    {
+        "Name":  "cloud_4090_turbine_fault_bundle_v1_ready_upload.zip",
+        "Extension":  ".zip",
+        "MB":  28.75,
+        "LastWriteTime":  "\/Date(1774330923439)\/"
+    },
+    {
+        "Name":  "cloud_4090_turbine_fault_bundle_v1_ready_upload_clean.zip",
+        "Extension":  ".zip",
+        "MB":  205.04,
+        "LastWriteTime":  "\/Date(1774343166936)\/"
+    },
+    {
+        "Name":  "cloud_sota_search_package.zip",
+        "Extension":  ".zip",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1774528126978)\/"
+    },
+    {
+        "Name":  "cloud_sota_search_package_v2.zip",
+        "Extension":  ".zip",
+        "MB":  0.04,
+        "LastWriteTime":  "\/Date(1774528516298)\/"
+    },
+    {
+        "Name":  "fairness_closure_turbine_results.zip",
+        "Extension":  ".zip",
+        "MB":  137.21,
+        "LastWriteTime":  "\/Date(1774531428051)\/"
+    },
+    {
+        "Name":  "paper_figures_for_advisor.zip",
+        "Extension":  ".zip",
+        "MB":  1.8,
+        "LastWriteTime":  "\/Date(1773069424245)\/"
+    },
+    {
+        "Name":  "turbine_primary_results_bundle.zip",
+        "Extension":  ".zip",
+        "MB":  0.02,
+        "LastWriteTime":  "\/Date(1774499670064)\/"
+    },
+    {
+        "Name":  "turbine_v2_10seeds_bundle.zip",
+        "Extension":  ".zip",
+        "MB":  227.53,
+        "LastWriteTime":  "\/Date(1774527288446)\/"
+    },
+    {
+        "Name":  "论文.zip",
+        "Extension":  ".zip",
+        "MB":  25.6,
+        "LastWriteTime":  "\/Date(1773211744409)\/"
+    }
+]

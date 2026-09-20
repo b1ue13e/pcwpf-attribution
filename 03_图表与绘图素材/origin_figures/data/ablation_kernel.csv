@@ -1,0 +1,4 @@
+Kernel_Size,Kernel_Type,R2_Score,RMSE,MAE
+3,k=3 (Short),0.8505,4210.5,2850.1
+7,k=7 (Medium),0.8591,4012.3,2690.4
+15,k=15 (Long),0.8214,4650.8,3120.6

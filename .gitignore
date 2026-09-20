@@ -1,9 +1,69 @@
+# --- Python / environment ---
 .venv
 .venv_broken_20260525_223330
-10_ģ�ͼ�����Ȩ��
 .wheelhouse
-*.zip
+__pycache__/
+*.pyc
+
+# --- Model artifacts ---
+10_模型检查点与权重/
 *.pt
 *.bin
 *.pkl
-__pycache__
+
+# --- Archives / delivery packages / backups ---
+*.zip
+*.tar.gz
+*.tgz
+07_云端压缩包与交付包/
+07_审稿Rebuttal备用包/
+
+# --- Raw datasets (public on Zenodo / Elexon BMRS; too large for git) ---
+# Keep only the canonical analysis CSVs and market price series.
+04_数据集/*
+!04_数据集/constraint_rebuild_v2/
+04_数据集/constraint_rebuild_v2/*
+!04_数据集/constraint_rebuild_v2/*.csv
+!04_数据集/constraint_rebuild_v2/*.json
+!04_数据集/elexon_system_prices_2016_2024.csv
+
+# --- Heavy experiment caches (keep analysis-level evidence only) ---
+06_实验结果与日志/results/
+06_实验结果与日志/constraint_rebuild_v1/kelmarsh/
+06_实验结果与日志/constraint_rebuild_v1/penmanshiel/
+06_实验结果与日志/constraint_rebuild_v1/smarteole/
+06_实验结果与日志/constraint_rebuild_v1/classical/
+06_实验结果与日志/constraint_rebuild_v1/dlinear/
+06_实验结果与日志/constraint_rebuild_v1/verification_samples/
+06_实验结果与日志/constraint_round2/hill_of_towie/
+06_实验结果与日志/constraint_round2/kelmarsh/
+06_实验结果与日志/constraint_round2/penmanshiel/
+06_实验结果与日志/constraint_round2/smarteole/
+06_实验结果与日志/constraint_round2/verification/
+06_实验结果与日志/ae_fast_revision_export_20260329_220334/
+06_实验结果与日志/ae_operation_uq_holdout_seed42/
+06_实验结果与日志/ae_operation_uq_holdout_seed42_aggressive/
+06_实验结果与日志/cross_domain_run_artifacts_20260330_184430/
+
+# --- Figure production masters (TIFF/PNG; vector PDFs live with the manuscript) ---
+03_图表与绘图素材/figures_out/
+03_图表与绘图素材/paper_figures_canonical/
+
+# --- Third-party journal PDFs (reference copies; not redistributable) ---
+01_论文投稿材料/对标顶刊论文/
+
+# --- Personal / non-project materials ---
+09_项目申请_简历_个人材料/
+90_环境与第三方依赖/
+99_待确认归档/
+
+# --- Local scratch and agent tool state ---
+tmp/
+tmp_*/
+tmp_*.png
+tmp_*.txt
+tmp_*.py
+.zcode/
+.reasonix/
+.workbuddy/
+.experiment-to-paper/

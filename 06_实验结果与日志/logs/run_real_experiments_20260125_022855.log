@@ -1,0 +1,1313 @@
+============================================================
+🌟 Ultra-LSNT 真实实验全量运行流水线 (APEN 投稿专用)
+============================================================
+
+🚀 运行 LightGBM 基线并生成结果文件 (.npy)...
+执行命令: python run_gbdt.py
+  🌲 启动 LightGBM 基线训练 (能源界守门员)...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  🔄 正在展平数据...
+  训练集形状: (83968, 768)
+  ⏳ 开始训练 (这通常很快)...
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088476 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score -0.000054
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087978 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000022
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088411 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000012
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088560 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000022
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087113 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000066
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088172 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000136
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087731 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000124
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090127 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000128
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088150 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000161
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087076 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000208
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088671 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000189
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087917 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000200
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088534 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000234
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088188 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000299
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090026 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000275
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089102 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000276
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088608 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000299
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.091061 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000367
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088405 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000368
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090214 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000370
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089471 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000394
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089033 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000465
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089373 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000462
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088952 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133021
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000462
+  ✅ 训练完成，耗时: 859.58s
+  🚀 开始预测...
+  
+  📊 LightGBM 最终成绩:
+  R²  : 0.9055
+  MSE : 61217651.5819
+  MAE : 5590.2160
+  💾 预测结果已保存至 preds_lgbm.npy
+✅ 完成！耗时: 866.0s
+
+🚀 运行 DLinear 基线对比...
+执行命令: python run_dlinear.py
+  🚀 正在训练 DLinear (2023 SOTA Baseline)...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  Epoch 1: Loss 0.0564
+  Epoch 2: Loss 0.0492
+  Epoch 3: Loss 0.0489
+  Epoch 4: Loss 0.0481
+  Epoch 5: Loss 0.0486
+  Epoch 6: Loss 0.0483
+  Epoch 7: Loss 0.0490
+  Epoch 8: Loss 0.0486
+  Epoch 9: Loss 0.0483
+  Epoch 10: Loss 0.0483
+  
+  ✅ DLinear 最终 R2: 0.9309
+✅ 完成！耗时: 31.5s
+
+🚀 运行 LSTM/Transformer/MLP 基线对比...
+执行命令: python run_baselines.py
+  🚀 启动基线模型训练系统 (增强版)
+  ✨ 特性: 自动保存结果、生成报告、性能对比
+  ------------------------------------------------------------
+  🖥️ 使用设备: cuda
+  📅 开始时间: 2026-01-25 05:31:26
+  
+  ============================================================
+  🚀 开始训练 LSTM 模型
+  ============================================================
+  
+  🥊 正在训练强力基线: LSTM ...
+  加载数据: gefcom_ready.csv
+  原始形状: (38070, 2)
+  列数: 2
+  删除了时间戳列: ['date']
+  缺失值已全部处理
+  最终形状: (38070, 1)
+  特征: ['load']
+  数据范围: [7319.0000, 45547.0000]
+  ✅ 数据加载成功: (38070, 1)
+  训练样本: 26458
+  验证样本: 5519
+  测试样本: 5520
+  ⏳ Epoch 5/30 | Loss: 0.1872 | 耗时: 9.7s
+  ⏳ Epoch 10/30 | Loss: 0.1655 | 耗时: 19.0s
+  ⏳ Epoch 15/30 | Loss: 0.1516 | 耗时: 29.1s
+  ⏳ Epoch 20/30 | Loss: 0.1316 | 耗时: 39.1s
+  ⏳ Epoch 25/30 | Loss: 0.1355 | 耗时: 49.2s
+  ⏳ Epoch 30/30 | Loss: 0.0964 | 耗时: 58.3s
+  🚀 开始测试 LSTM...
+  ✅ LSTM 最终 R2: 0.7262
+  💾 结果已保存: baseline_results/LSTM_results_20260125_053225.json
+  💾 样本数据已保存: baseline_results/LSTM_samples_20260125_053225.npz
+  
+  ============================================================
+  🚀 开始训练 MLP 模型
+  ============================================================
+  
+  🥊 正在训练强力基线: MLP ...
+  加载数据: gefcom_ready.csv
+  原始形状: (38070, 2)
+  列数: 2
+  删除了时间戳列: ['date']
+  缺失值已全部处理
+  最终形状: (38070, 1)
+  特征: ['load']
+  数据范围: [7319.0000, 45547.0000]
+  ✅ 数据加载成功: (38070, 1)
+  训练样本: 26458
+  验证样本: 5519
+  测试样本: 5520
+  ⏳ Epoch 5/30 | Loss: 0.1659 | 耗时: 6.3s
+  ⏳ Epoch 10/30 | Loss: 0.1443 | 耗时: 11.1s
+  ⏳ Epoch 15/30 | Loss: 0.1268 | 耗时: 17.3s
+  ⏳ Epoch 20/30 | Loss: 0.1120 | 耗时: 23.2s
+  ⏳ Epoch 25/30 | Loss: 0.1001 | 耗时: 29.0s
+  ⏳ Epoch 30/30 | Loss: 0.0911 | 耗时: 34.6s
+  🚀 开始测试 MLP...
+  ✅ MLP 最终 R2: 0.6620
+  💾 结果已保存: baseline_results/MLP_results_20260125_053300.json
+  💾 样本数据已保存: baseline_results/MLP_samples_20260125_053300.npz
+  
+  ============================================================
+  🚀 开始训练 Transformer 模型
+  ============================================================
+  
+  🥊 正在训练强力基线: Transformer ...
+  加载数据: gefcom_ready.csv
+  原始形状: (38070, 2)
+  列数: 2
+  删除了时间戳列: ['date']
+  缺失值已全部处理
+  最终形状: (38070, 1)
+  特征: ['load']
+  数据范围: [7319.0000, 45547.0000]
+  ✅ 数据加载成功: (38070, 1)
+  训练样本: 26458
+  验证样本: 5519
+  测试样本: 5520
+  ⏳ Epoch 5/30 | Loss: 0.1924 | 耗时: 16.2s
+  ⏳ Epoch 10/30 | Loss: 0.1790 | 耗时: 34.3s
+  ⏳ Epoch 15/30 | Loss: 0.1694 | 耗时: 51.7s
+  ⏳ Epoch 20/30 | Loss: 0.1578 | 耗时: 67.3s
+  ⏳ Epoch 25/30 | Loss: 0.1467 | 耗时: 84.2s
+  ⏳ Epoch 30/30 | Loss: 0.1349 | 耗时: 101.1s
+  🚀 开始测试 Transformer...
+  ✅ Transformer 最终 R2: 0.7229
+  💾 结果已保存: baseline_results/Transformer_results_20260125_053441.json
+  💾 样本数据已保存: baseline_results/Transformer_samples_20260125_053441.npz
+  
+  ============================================================
+  🏆 【SCI 一区 终极排位赛】
+  ============================================================
+  LSTM            : 0.7262
+  MLP             : 0.6620
+  Transformer     : 0.7229
+  ----------------------------------------
+  Ultra-LSNT (Ours)  : 0.7513 (参考值)
+  ============================================================
+  
+  📊 汇总结果已保存: baseline_results/baseline_summary.json
+  📝 比较报告已生成: baseline_results/baseline_comparison_report.txt
+  
+  📋 报告摘要:
+  ----------------------------------------
+  基线模型性能比较报告
+  ============================================================
+  生成时间: 2026-01-25 05:34:41
+  
+  性能排名:
+  ----------------------------------------
+  1. LSTM            : R² = 0.7262
+  2. Transformer     : R² = 0.7229
+  3. MLP             : R² = 0.6620
+  
+  与Ultra-LSNT的比较:
+  ----------------------------------------
+  LSTM: 劣于Ultra-LSNT -0.0251
+  Transformer: 劣于Ultra-LSNT -0.0284
+  MLP: 劣于Ultra-LSNT -0.0893
+  
+  🎉 基线模型训练完成!
+  📁 所有结果保存在 'baseline_results/' 目录中
+  📊 查看 summary.json 获取详细结果
+  📝 查看 comparison_report.txt 获取分析报告
+✅ 完成！耗时: 198.2s
+
+🚀 执行真实鲁棒性噪声压力测试...
+执行命令: python real_robustness.py
+  ⚔️ 启动真实鲁棒性压力测试 (Real Data + Real Model)...
+  🖥️ 运行设备: cuda
+  📂 加载原始数据: wind_final.csv...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  🏗️ 重建模型架构 (UltraLSNTForecaster)...
+  💾 正在加载权重文件: checkpoints_ts/main/best_model.pth
+  Traceback (most recent call last):
+  File "/root/my/real_robustness.py", line 165, in <module>
+  run_real_robustness()
+  File "/root/my/real_robustness.py", line 80, in run_real_robustness
+  model.load_state_dict(checkpoint['model_state_dict'])
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+  raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+  RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+  Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias".
+  size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+  size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+  size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+❌ 失败！返回码: 1
+
+🚀 执行物理可解释性相关性分析...
+执行命令: python run_expert_physics.py
+  🌪️ 启动专家物理可解释性分析 (Real Weights)...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  Traceback (most recent call last):
+  File "/root/my/run_expert_physics.py", line 162, in <module>
+  analyze_physics()
+  File "/root/my/run_expert_physics.py", line 72, in analyze_physics
+  model.load_state_dict(ckpt['model_state_dict'] if 'model_state_dict' in ckpt else ckpt)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+  raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+  RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+  Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias".
+  size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+  size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+  size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+❌ 失败！返回码: 1
+
+🚀 提取真实专家激活热力图...
+执行命令: python plot_expert_heatmap.py
+  🧠 正在提取【真实】专家注意力分布...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  Traceback (most recent call last):
+  File "/root/my/plot_expert_heatmap.py", line 123, in <module>
+  extract_real_heatmap()
+  File "/root/my/plot_expert_heatmap.py", line 64, in extract_real_heatmap
+  model.load_state_dict(ckpt['model_state_dict'])
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+  raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+  RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+  Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias", "blocks.3.input_norm.weight", "blocks.3.input_norm.bias", "blocks.3.moe_router.uncertainty_net.0.weight", "blocks.3.moe_router.uncertainty_net.0.bias", "blocks.3.moe_router.uncertainty_net.2.weight", "blocks.3.moe_router.uncertainty_net.2.bias", "blocks.3.moe_router.router.weight", "blocks.3.moe_router.experts.0.0.weight", "blocks.3.moe_router.experts.0.0.bias", "blocks.3.moe_router.experts.0.2.weight", "blocks.3.moe_router.experts.0.2.bias", "blocks.3.moe_router.experts.1.0.weight", "blocks.3.moe_router.experts.1.0.bias", "blocks.3.moe_router.experts.1.2.weight", "blocks.3.moe_router.experts.1.2.bias", "blocks.3.moe_router.experts.2.0.weight", "blocks.3.moe_router.experts.2.0.bias", "blocks.3.moe_router.experts.2.2.weight", "blocks.3.moe_router.experts.2.2.bias", "blocks.3.moe_router.experts.3.0.weight", "blocks.3.moe_router.experts.3.0.bias", "blocks.3.moe_router.experts.3.2.weight", "blocks.3.moe_router.experts.3.2.bias", "blocks.3.dual_prop.mode_selector.0.weight", "blocks.3.dual_prop.mode_selector.0.bias", "blocks.3.dual_prop.mode_selector.2.weight", "blocks.3.dual_prop.mode_selector.2.bias", "blocks.3.dual_prop.fast_path.0.weight", "blocks.3.dual_prop.fast_path.0.bias", "blocks.3.dual_prop.fast_path.1.weight", "blocks.3.dual_prop.fast_path.1.bias", "blocks.3.dual_prop.slow_path.0.weight", "blocks.3.dual_prop.slow_path.0.bias", "blocks.3.dual_prop.slow_path.3.weight", "blocks.3.dual_prop.slow_path.3.bias", "blocks.3.dual_prop.slow_path.4.weight", "blocks.3.dual_prop.slow_path.4.bias", "blocks.3.dual_prop.skip_gate.threshold", "blocks.3.dual_prop.skip_gate.importance_net.0.weight", "blocks.3.dual_prop.skip_gate.importance_net.0.bias", "blocks.3.dual_prop.skip_gate.importance_net.2.weight", "blocks.3.dual_prop.skip_gate.importance_net.2.bias", "blocks.3.dual_prop.skip_gate.change_detector.0.weight", "blocks.3.dual_prop.skip_gate.change_detector.0.bias", "blocks.3.dual_prop.skip_gate.change_detector.2.weight", "blocks.3.dual_prop.skip_gate.change_detector.2.bias", "blocks.3.output_norm.weight", "blocks.3.output_norm.bias".
+  size mismatch for encoder.pos_embedding: copying a param with shape torch.Size([1, 96, 128]) from checkpoint, the shape in current model is torch.Size([1, 96, 256]).
+  size mismatch for encoder.feature_proj.weight: copying a param with shape torch.Size([128, 8]) from checkpoint, the shape in current model is torch.Size([256, 8]).
+  size mismatch for encoder.feature_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_conv.0.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+  size mismatch for encoder.temporal_conv.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_conv.2.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+  size mismatch for encoder.temporal_conv.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_attn.in_proj_weight: copying a param with shape torch.Size([384, 128]) from checkpoint, the shape in current model is torch.Size([768, 256]).
+  size mismatch for encoder.temporal_attn.in_proj_bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([768]).
+  size mismatch for encoder.temporal_attn.out_proj.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for encoder.temporal_attn.out_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.attn_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.attn_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.aggregate.0.weight: copying a param with shape torch.Size([256, 12288]) from checkpoint, the shape in current model is torch.Size([512, 24576]).
+  size mismatch for encoder.aggregate.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+  size mismatch for encoder.aggregate.2.weight: copying a param with shape torch.Size([128, 256]) from checkpoint, the shape in current model is torch.Size([256, 512]).
+  size mismatch for encoder.aggregate.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+  size mismatch for blocks.0.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.0.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.0.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+  size mismatch for blocks.1.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.1.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.1.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+  size mismatch for blocks.2.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.2.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.2.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for decoder.expand.0.weight: copying a param with shape torch.Size([3072, 128]) from checkpoint, the shape in current model is torch.Size([6144, 256]).
+  size mismatch for decoder.expand.0.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([6144]).
+  size mismatch for decoder.pred_head.0.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+  size mismatch for decoder.pred_head.0.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+  size mismatch for decoder.pred_head.2.weight: copying a param with shape torch.Size([1, 64]) from checkpoint, the shape in current model is torch.Size([1, 128]).
+❌ 失败！返回码: 1
+
+🚀 估算边缘端部署能耗与 FLOPs...
+执行命令: python profile_energy.py
+  Traceback (most recent call last):
+  File "/root/my/profile_energy.py", line 2, in <module>
+  from thop import profile  # 需要安装: pip install thop
+  ModuleNotFoundError: No module named 'thop'
+❌ 失败！返回码: 1
+
+🚀 对比模型存储空间占用...
+执行命令: python check_storage.py
+  💾 启动存储空间对比测试...
+  
+  1️⃣  Ultra-LSNT 模型文件: checkpoints_ts/main/best_model.pth
+  大小: 22.3409 MB
+  
+  2️⃣  正在生成 LightGBM 模型文件 (用于测重)...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  正在训练 (24个子模型)...
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089062 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000046
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090860 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000085
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087455 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000081
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087701 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000087
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.091004 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000153
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.086631 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000193
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089242 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000214
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089652 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000216
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087405 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000272
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088050 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000323
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.086771 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000317
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087282 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000320
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088563 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000373
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.086555 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000419
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087095 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000406
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088360 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000432
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088311 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000497
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087048 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000533
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088034 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000548
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090684 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000562
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.086475 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000611
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087505 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000630
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.087734 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000638
+  [LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088253 seconds.
+  You can set `force_col_wise=true` to remove the overhead.
+  [LightGBM] [Info] Total Bins 133044
+  [LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+  [LightGBM] [Info] Start training from score 0.000672
+  大小: 27.1665 MB
+  
+  ==================================================
+  📊 边缘端部署可行性报告 (Edge Deployment Report)
+  ==================================================
+  Ultra-LSNT (Ours) :  22.34 MB  ✅ (适合嵌入式芯片)
+  LightGBM (Baseline):  27.17 MB  ❌ (过于庞大)
+  --------------------------------------------------
+  结论: LightGBM 的体积是 Ultra-LSNT 的 1.2 倍！
+  在内存受限的 ARM 芯片(如树莓派/单片机)上，LightGBM 难以进行 OTA 热更新。
+  
+  注：LightGBM 模型已保存为 lgbm_model_dump.pkl，你可以去文件夹查看。
+✅ 完成！耗时: 796.0s
+
+🚀 执行 Diebold-Mariano 显著性检验 (需 .npy 文件)...
+执行命令: python run_dm_test.py
+  📊 启动 DM Test 显著性检验...
+  🤖 加载 Ultra-LSNT 进行预测...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  Traceback (most recent call last):
+  File "/root/my/run_dm_test.py", line 150, in <module>
+  run_significance_test()
+  File "/root/my/run_dm_test.py", line 108, in run_significance_test
+  preds_ours, trues = get_model_preds()
+  File "/root/my/run_dm_test.py", line 82, in get_model_preds
+  model.load_state_dict(ckpt['model_state_dict'])
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+  raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+  RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+  Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.0.moe_router.experts.4.0.weight", "blocks.0.moe_router.experts.4.0.bias", "blocks.0.moe_router.experts.4.2.weight", "blocks.0.moe_router.experts.4.2.bias", "blocks.0.moe_router.experts.5.0.weight", "blocks.0.moe_router.experts.5.0.bias", "blocks.0.moe_router.experts.5.2.weight", "blocks.0.moe_router.experts.5.2.bias", "blocks.0.moe_router.experts.6.0.weight", "blocks.0.moe_router.experts.6.0.bias", "blocks.0.moe_router.experts.6.2.weight", "blocks.0.moe_router.experts.6.2.bias", "blocks.0.moe_router.experts.7.0.weight", "blocks.0.moe_router.experts.7.0.bias", "blocks.0.moe_router.experts.7.2.weight", "blocks.0.moe_router.experts.7.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.experts.4.0.weight", "blocks.1.moe_router.experts.4.0.bias", "blocks.1.moe_router.experts.4.2.weight", "blocks.1.moe_router.experts.4.2.bias", "blocks.1.moe_router.experts.5.0.weight", "blocks.1.moe_router.experts.5.0.bias", "blocks.1.moe_router.experts.5.2.weight", "blocks.1.moe_router.experts.5.2.bias", "blocks.1.moe_router.experts.6.0.weight", "blocks.1.moe_router.experts.6.0.bias", "blocks.1.moe_router.experts.6.2.weight", "blocks.1.moe_router.experts.6.2.bias", "blocks.1.moe_router.experts.7.0.weight", "blocks.1.moe_router.experts.7.0.bias", "blocks.1.moe_router.experts.7.2.weight", "blocks.1.moe_router.experts.7.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.experts.4.0.weight", "blocks.2.moe_router.experts.4.0.bias", "blocks.2.moe_router.experts.4.2.weight", "blocks.2.moe_router.experts.4.2.bias", "blocks.2.moe_router.experts.5.0.weight", "blocks.2.moe_router.experts.5.0.bias", "blocks.2.moe_router.experts.5.2.weight", "blocks.2.moe_router.experts.5.2.bias", "blocks.2.moe_router.experts.6.0.weight", "blocks.2.moe_router.experts.6.0.bias", "blocks.2.moe_router.experts.6.2.weight", "blocks.2.moe_router.experts.6.2.bias", "blocks.2.moe_router.experts.7.0.weight", "blocks.2.moe_router.experts.7.0.bias", "blocks.2.moe_router.experts.7.2.weight", "blocks.2.moe_router.experts.7.2.bias", "blocks.3.input_norm.weight", "blocks.3.input_norm.bias", "blocks.3.moe_router.uncertainty_net.0.weight", "blocks.3.moe_router.uncertainty_net.0.bias", "blocks.3.moe_router.uncertainty_net.2.weight", "blocks.3.moe_router.uncertainty_net.2.bias", "blocks.3.moe_router.router.weight", "blocks.3.moe_router.experts.0.0.weight", "blocks.3.moe_router.experts.0.0.bias", "blocks.3.moe_router.experts.0.2.weight", "blocks.3.moe_router.experts.0.2.bias", "blocks.3.moe_router.experts.1.0.weight", "blocks.3.moe_router.experts.1.0.bias", "blocks.3.moe_router.experts.1.2.weight", "blocks.3.moe_router.experts.1.2.bias", "blocks.3.moe_router.experts.2.0.weight", "blocks.3.moe_router.experts.2.0.bias", "blocks.3.moe_router.experts.2.2.weight", "blocks.3.moe_router.experts.2.2.bias", "blocks.3.moe_router.experts.3.0.weight", "blocks.3.moe_router.experts.3.0.bias", "blocks.3.moe_router.experts.3.2.weight", "blocks.3.moe_router.experts.3.2.bias", "blocks.3.moe_router.experts.4.0.weight", "blocks.3.moe_router.experts.4.0.bias", "blocks.3.moe_router.experts.4.2.weight", "blocks.3.moe_router.experts.4.2.bias", "blocks.3.moe_router.experts.5.0.weight", "blocks.3.moe_router.experts.5.0.bias", "blocks.3.moe_router.experts.5.2.weight", "blocks.3.moe_router.experts.5.2.bias", "blocks.3.moe_router.experts.6.0.weight", "blocks.3.moe_router.experts.6.0.bias", "blocks.3.moe_router.experts.6.2.weight", "blocks.3.moe_router.experts.6.2.bias", "blocks.3.moe_router.experts.7.0.weight", "blocks.3.moe_router.experts.7.0.bias", "blocks.3.moe_router.experts.7.2.weight", "blocks.3.moe_router.experts.7.2.bias", "blocks.3.dual_prop.mode_selector.0.weight", "blocks.3.dual_prop.mode_selector.0.bias", "blocks.3.dual_prop.mode_selector.2.weight", "blocks.3.dual_prop.mode_selector.2.bias", "blocks.3.dual_prop.fast_path.0.weight", "blocks.3.dual_prop.fast_path.0.bias", "blocks.3.dual_prop.fast_path.1.weight", "blocks.3.dual_prop.fast_path.1.bias", "blocks.3.dual_prop.slow_path.0.weight", "blocks.3.dual_prop.slow_path.0.bias", "blocks.3.dual_prop.slow_path.3.weight", "blocks.3.dual_prop.slow_path.3.bias", "blocks.3.dual_prop.slow_path.4.weight", "blocks.3.dual_prop.slow_path.4.bias", "blocks.3.dual_prop.skip_gate.threshold", "blocks.3.dual_prop.skip_gate.importance_net.0.weight", "blocks.3.dual_prop.skip_gate.importance_net.0.bias", "blocks.3.dual_prop.skip_gate.importance_net.2.weight", "blocks.3.dual_prop.skip_gate.importance_net.2.bias", "blocks.3.dual_prop.skip_gate.change_detector.0.weight", "blocks.3.dual_prop.skip_gate.change_detector.0.bias", "blocks.3.dual_prop.skip_gate.change_detector.2.weight", "blocks.3.dual_prop.skip_gate.change_detector.2.bias", "blocks.3.output_norm.weight", "blocks.3.output_norm.bias".
+  size mismatch for encoder.pos_embedding: copying a param with shape torch.Size([1, 96, 128]) from checkpoint, the shape in current model is torch.Size([1, 96, 256]).
+  size mismatch for encoder.feature_proj.weight: copying a param with shape torch.Size([128, 8]) from checkpoint, the shape in current model is torch.Size([256, 8]).
+  size mismatch for encoder.feature_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_conv.0.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+  size mismatch for encoder.temporal_conv.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_conv.2.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+  size mismatch for encoder.temporal_conv.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_attn.in_proj_weight: copying a param with shape torch.Size([384, 128]) from checkpoint, the shape in current model is torch.Size([768, 256]).
+  size mismatch for encoder.temporal_attn.in_proj_bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([768]).
+  size mismatch for encoder.temporal_attn.out_proj.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for encoder.temporal_attn.out_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.attn_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.attn_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.aggregate.0.weight: copying a param with shape torch.Size([256, 12288]) from checkpoint, the shape in current model is torch.Size([512, 24576]).
+  size mismatch for encoder.aggregate.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+  size mismatch for encoder.aggregate.2.weight: copying a param with shape torch.Size([128, 256]) from checkpoint, the shape in current model is torch.Size([256, 512]).
+  size mismatch for encoder.aggregate.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([8, 257]).
+  size mismatch for blocks.0.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.0.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.0.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([8, 257]).
+  size mismatch for blocks.1.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.1.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.1.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([8, 257]).
+  size mismatch for blocks.2.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.2.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.2.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for decoder.expand.0.weight: copying a param with shape torch.Size([3072, 128]) from checkpoint, the shape in current model is torch.Size([6144, 256]).
+  size mismatch for decoder.expand.0.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([6144]).
+  size mismatch for decoder.pred_head.0.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+  size mismatch for decoder.pred_head.0.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+  size mismatch for decoder.pred_head.2.weight: copying a param with shape torch.Size([1, 64]) from checkpoint, the shape in current model is torch.Size([1, 128]).
+❌ 失败！返回码: 1
+
+🚀 一键合成论文 Final Figures (PDF/PNG)...
+执行命令: python assemble_figures.py
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  🎨 正在绘制 SCI 对比图...
+  ✅ 已生成: fig_comparison.png
+  🎨 正在绘制消融实验图...
+  ✅ 已生成: fig_ablation.png
+  🧠 正在提取【真实】专家注意力分布...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  Traceback (most recent call last):
+  File "/root/my/plot_expert_heatmap.py", line 123, in <module>
+  extract_real_heatmap()
+  File "/root/my/plot_expert_heatmap.py", line 64, in extract_real_heatmap
+  model.load_state_dict(ckpt['model_state_dict'])
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+  raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+  RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+  Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias", "blocks.3.input_norm.weight", "blocks.3.input_norm.bias", "blocks.3.moe_router.uncertainty_net.0.weight", "blocks.3.moe_router.uncertainty_net.0.bias", "blocks.3.moe_router.uncertainty_net.2.weight", "blocks.3.moe_router.uncertainty_net.2.bias", "blocks.3.moe_router.router.weight", "blocks.3.moe_router.experts.0.0.weight", "blocks.3.moe_router.experts.0.0.bias", "blocks.3.moe_router.experts.0.2.weight", "blocks.3.moe_router.experts.0.2.bias", "blocks.3.moe_router.experts.1.0.weight", "blocks.3.moe_router.experts.1.0.bias", "blocks.3.moe_router.experts.1.2.weight", "blocks.3.moe_router.experts.1.2.bias", "blocks.3.moe_router.experts.2.0.weight", "blocks.3.moe_router.experts.2.0.bias", "blocks.3.moe_router.experts.2.2.weight", "blocks.3.moe_router.experts.2.2.bias", "blocks.3.moe_router.experts.3.0.weight", "blocks.3.moe_router.experts.3.0.bias", "blocks.3.moe_router.experts.3.2.weight", "blocks.3.moe_router.experts.3.2.bias", "blocks.3.dual_prop.mode_selector.0.weight", "blocks.3.dual_prop.mode_selector.0.bias", "blocks.3.dual_prop.mode_selector.2.weight", "blocks.3.dual_prop.mode_selector.2.bias", "blocks.3.dual_prop.fast_path.0.weight", "blocks.3.dual_prop.fast_path.0.bias", "blocks.3.dual_prop.fast_path.1.weight", "blocks.3.dual_prop.fast_path.1.bias", "blocks.3.dual_prop.slow_path.0.weight", "blocks.3.dual_prop.slow_path.0.bias", "blocks.3.dual_prop.slow_path.3.weight", "blocks.3.dual_prop.slow_path.3.bias", "blocks.3.dual_prop.slow_path.4.weight", "blocks.3.dual_prop.slow_path.4.bias", "blocks.3.dual_prop.skip_gate.threshold", "blocks.3.dual_prop.skip_gate.importance_net.0.weight", "blocks.3.dual_prop.skip_gate.importance_net.0.bias", "blocks.3.dual_prop.skip_gate.importance_net.2.weight", "blocks.3.dual_prop.skip_gate.importance_net.2.bias", "blocks.3.dual_prop.skip_gate.change_detector.0.weight", "blocks.3.dual_prop.skip_gate.change_detector.0.bias", "blocks.3.dual_prop.skip_gate.change_detector.2.weight", "blocks.3.dual_prop.skip_gate.change_detector.2.bias", "blocks.3.output_norm.weight", "blocks.3.output_norm.bias".
+  size mismatch for encoder.pos_embedding: copying a param with shape torch.Size([1, 96, 128]) from checkpoint, the shape in current model is torch.Size([1, 96, 256]).
+  size mismatch for encoder.feature_proj.weight: copying a param with shape torch.Size([128, 8]) from checkpoint, the shape in current model is torch.Size([256, 8]).
+  size mismatch for encoder.feature_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_conv.0.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+  size mismatch for encoder.temporal_conv.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_conv.2.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+  size mismatch for encoder.temporal_conv.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.temporal_attn.in_proj_weight: copying a param with shape torch.Size([384, 128]) from checkpoint, the shape in current model is torch.Size([768, 256]).
+  size mismatch for encoder.temporal_attn.in_proj_bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([768]).
+  size mismatch for encoder.temporal_attn.out_proj.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for encoder.temporal_attn.out_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.attn_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.attn_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for encoder.aggregate.0.weight: copying a param with shape torch.Size([256, 12288]) from checkpoint, the shape in current model is torch.Size([512, 24576]).
+  size mismatch for encoder.aggregate.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+  size mismatch for encoder.aggregate.2.weight: copying a param with shape torch.Size([128, 256]) from checkpoint, the shape in current model is torch.Size([256, 512]).
+  size mismatch for encoder.aggregate.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+  size mismatch for blocks.0.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.0.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.0.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.0.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.0.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.0.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.0.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.0.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.0.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+  size mismatch for blocks.1.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.1.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.1.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.1.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.1.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.1.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.1.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.1.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.1.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+  size mismatch for blocks.2.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.2.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+  size mismatch for blocks.2.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+  size mismatch for blocks.2.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+  size mismatch for blocks.2.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+  size mismatch for blocks.2.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+  size mismatch for blocks.2.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+  size mismatch for blocks.2.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for blocks.2.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+  size mismatch for decoder.expand.0.weight: copying a param with shape torch.Size([3072, 128]) from checkpoint, the shape in current model is torch.Size([6144, 256]).
+  size mismatch for decoder.expand.0.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([6144]).
+  size mismatch for decoder.pred_head.0.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+  size mismatch for decoder.pred_head.0.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+  size mismatch for decoder.pred_head.2.weight: copying a param with shape torch.Size([1, 64]) from checkpoint, the shape in current model is torch.Size([1, 128]).
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+  ✅ 胜利之图已生成: fig_battle_dlinear_victory.png
+  💰 启动【经济性】终极对决：Ultra-LSNT vs DLinear ...
+  加载数据: wind_final.csv
+  原始形状: (121528, 8)
+  列数: 8
+  缺失值已全部处理
+  最终形状: (121528, 8)
+  特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+  数据范围: [-592.0000, 151939.0000]
+  训练样本: 84950
+  验证样本: 18110
+  测试样本: 18111
+  🤖 [选手 A] 加载 Ultra-LSNT...
+  ⚠️ 警告：未找到 Ultra-LSNT 权重，将使用随机权重（测试用）
+  🤖 [选手 B] 训练 DLinear (Baseline)...
+  
+  📉 开始计算罚款金额...
+  Traceback (most recent call last):
+  File "/root/my/battle_economics.py", line 138, in <module>
+  run_economic_battle()
+  File "/root/my/battle_economics.py", line 90, in run_economic_battle
+  preds_d.append(out_d.cpu().numpy()[:, :, -1])  # 取最后一维
+  IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+  
+  🧩 Assembling Figure 2 (Performance & Efficiency)...
+  🚀 Running plot_paper_figs.py...
+  🚀 Running plot_expert_heatmap.py...
+  ❌ Missing fig_real_expert_heatmap.png, skipping assembly.
+  
+  🧩 Assembling Figure 3 (Robustness & Economics)...
+  🚀 Running plot_dlinear_victory.py...
+  🚀 Running battle_economics.py...
+  ✅ Figure 3 Assembled: Figure_3_Final.png
+✅ 完成！耗时: 14.6s
+
+============================================================
+📊 实验流水线运行报告: 成功 5/10
+============================================================
+📖 下一步：请检查生成的 Figure_2_Final.png 和 Figure_3_Final.png

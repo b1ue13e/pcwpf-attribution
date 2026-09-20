@@ -1,0 +1,199 @@
+Starting COA-BiLSTM on electricity...
+
+  Seed: 42
+
+============================================================
+COA-BiLSTM: electricity (seed=42)
+Population=40, Iterations=200
+============================================================
+Device: cuda
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)

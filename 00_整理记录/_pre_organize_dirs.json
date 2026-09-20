@@ -1,0 +1,390 @@
+﻿[
+    {
+        "Name":  "%APPDATA%",
+        "LastWriteTime":  "\/Date(1773075581111)\/"
+    },
+    {
+        "Name":  "%OUTDIR%",
+        "LastWriteTime":  "\/Date(1773075581330)\/"
+    },
+    {
+        "Name":  "（美国）风电场数据-2012",
+        "LastWriteTime":  "\/Date(1773920744753)\/"
+    },
+    {
+        "Name":  "（新疆）风电场风速",
+        "LastWriteTime":  "\/Date(1773920657831)\/"
+    },
+    {
+        "Name":  ".venv",
+        "LastWriteTime":  "\/Date(1773075895809)\/"
+    },
+    {
+        "Name":  "__pycache__",
+        "LastWriteTime":  "\/Date(1774982852205)\/"
+    },
+    {
+        "Name":  "_inspect_ae_fast_revision_audit_export_20260329_231703",
+        "LastWriteTime":  "\/Date(1774797656152)\/"
+    },
+    {
+        "Name":  "_inspect_ae_operation_results_bundle_20260328_123756",
+        "LastWriteTime":  "\/Date(1774672801266)\/"
+    },
+    {
+        "Name":  "_inspect_upload_results_ae_operation_20260328_104442",
+        "LastWriteTime":  "\/Date(1774666144200)\/"
+    },
+    {
+        "Name":  "_tmp_docx_extract",
+        "LastWriteTime":  "\/Date(1773236629874)\/"
+    },
+    {
+        "Name":  "adjustText",
+        "LastWriteTime":  "\/Date(1774888791414)\/"
+    },
+    {
+        "Name":  "advisor_package_20260311",
+        "LastWriteTime":  "\/Date(1773211689991)\/"
+    },
+    {
+        "Name":  "ae_fast_revision_export_20260329_220334",
+        "LastWriteTime":  "\/Date(1774793113877)\/"
+    },
+    {
+        "Name":  "ae_operation_uq_holdout_seed42",
+        "LastWriteTime":  "\/Date(1774773287382)\/"
+    },
+    {
+        "Name":  "ae_operation_uq_holdout_seed42_aggressive",
+        "LastWriteTime":  "\/Date(1774776848114)\/"
+    },
+    {
+        "Name":  "AE_submit_groups_20260412_135713",
+        "LastWriteTime":  "\/Date(1775973453567)\/"
+    },
+    {
+        "Name":  "AE_submit_pkg_20260412_135713",
+        "LastWriteTime":  "\/Date(1775974172518)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v1",
+        "LastWriteTime":  "\/Date(1774774092723)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v2",
+        "LastWriteTime":  "\/Date(1774773840849)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v3_scaled_horizon",
+        "LastWriteTime":  "\/Date(1774761859148)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v4_rolling_bias",
+        "LastWriteTime":  "\/Date(1774768194380)\/"
+    },
+    {
+        "Name":  "ae_uq_holdout_bundle_v5_rolling_bias_aggressive",
+        "LastWriteTime":  "\/Date(1774774415654)\/"
+    },
+    {
+        "Name":  "applied_energy_final_results",
+        "LastWriteTime":  "\/Date(1773075896359)\/"
+    },
+    {
+        "Name":  "awesome-ai-research-writing-main",
+        "LastWriteTime":  "\/Date(1775491413436)\/"
+    },
+    {
+        "Name":  "baseline_results",
+        "LastWriteTime":  "\/Date(1773075896972)\/"
+    },
+    {
+        "Name":  "build",
+        "LastWriteTime":  "\/Date(1774720609348)\/"
+    },
+    {
+        "Name":  "build_refcheck",
+        "LastWriteTime":  "\/Date(1774980174212)\/"
+    },
+    {
+        "Name":  "checkpoints_ts",
+        "LastWriteTime":  "\/Date(1773075901625)\/"
+    },
+    {
+        "Name":  "checkpoints_ts_enhanced",
+        "LastWriteTime":  "\/Date(1773075902474)\/"
+    },
+    {
+        "Name":  "checkpoints_ts_gpu",
+        "LastWriteTime":  "\/Date(1773075902512)\/"
+    },
+    {
+        "Name":  "checkpoints_ts_stable",
+        "LastWriteTime":  "\/Date(1773075902565)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_fast_revision_bundle_v1",
+        "LastWriteTime":  "\/Date(1774783130143)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_recovery_bundle_v1",
+        "LastWriteTime":  "\/Date(1774689061798)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_recovery_bundle_v1_full",
+        "LastWriteTime":  "\/Date(1774689661881)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v1",
+        "LastWriteTime":  "\/Date(1774611604329)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v2",
+        "LastWriteTime":  "\/Date(1774624088923)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v3",
+        "LastWriteTime":  "\/Date(1774667376464)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v4_patch",
+        "LastWriteTime":  "\/Date(1774726371924)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v5_scaled_horizon_patch",
+        "LastWriteTime":  "\/Date(1774762094739)\/"
+    },
+    {
+        "Name":  "cloud_4090_ae_revision_operation_bundle_v6_rolling_bias_patch",
+        "LastWriteTime":  "\/Date(1774768210141)\/"
+    },
+    {
+        "Name":  "cloud_4090_cross_domain_bundle",
+        "LastWriteTime":  "\/Date(1774810094796)\/"
+    },
+    {
+        "Name":  "cloud_4090_cross_domain_bundle_20260330_024852",
+        "LastWriteTime":  "\/Date(1774810286072)\/"
+    },
+    {
+        "Name":  "cloud_4090_missing_ae_bundle_v1",
+        "LastWriteTime":  "\/Date(1774590559046)\/"
+    },
+    {
+        "Name":  "cloud_4090_sota_bundle_v2",
+        "LastWriteTime":  "\/Date(1774121396937)\/"
+    },
+    {
+        "Name":  "cloud_4090_turbine_fault_bundle_v1_ready",
+        "LastWriteTime":  "\/Date(1774330898682)\/"
+    },
+    {
+        "Name":  "CLOUD_SOTA_SEARCH_PACKAGE",
+        "LastWriteTime":  "\/Date(1774528116082)\/"
+    },
+    {
+        "Name":  "cross_domain_run_artifacts_20260330_184430",
+        "LastWriteTime":  "\/Date(1774970640189)\/"
+    },
+    {
+        "Name":  "data_fix_logs",
+        "LastWriteTime":  "\/Date(1771876668313)\/"
+    },
+    {
+        "Name":  "dispatch",
+        "LastWriteTime":  "\/Date(1773075907551)\/"
+    },
+    {
+        "Name":  "dlinear_results",
+        "LastWriteTime":  "\/Date(1773075907595)\/"
+    },
+    {
+        "Name":  "dlinear_weights",
+        "LastWriteTime":  "\/Date(1773075907642)\/"
+    },
+    {
+        "Name":  "dm_results",
+        "LastWriteTime":  "\/Date(1773075907745)\/"
+    },
+    {
+        "Name":  "elsevier_figures",
+        "LastWriteTime":  "\/Date(1773075907790)\/"
+    },
+    {
+        "Name":  "engineering_charts",
+        "LastWriteTime":  "\/Date(1773075907814)\/"
+    },
+    {
+        "Name":  "experiment_logs",
+        "LastWriteTime":  "\/Date(1773075909477)\/"
+    },
+    {
+        "Name":  "extracted_turbine_fullrun_bundle",
+        "LastWriteTime":  "\/Date(1774343433378)\/"
+    },
+    {
+        "Name":  "figure",
+        "LastWriteTime":  "\/Date(1771165346276)\/"
+    },
+    {
+        "Name":  "figures_out",
+        "LastWriteTime":  "\/Date(1773075930278)\/"
+    },
+    {
+        "Name":  "final_arm_results",
+        "LastWriteTime":  "\/Date(1773075931827)\/"
+    },
+    {
+        "Name":  "fix",
+        "LastWriteTime":  "\/Date(1773075932047)\/"
+    },
+    {
+        "Name":  "fix1",
+        "LastWriteTime":  "\/Date(1773075932160)\/"
+    },
+    {
+        "Name":  "fix2",
+        "LastWriteTime":  "\/Date(1773075932308)\/"
+    },
+    {
+        "Name":  "GEFCom2012年全球能源预测大赛电力负荷预测数据集",
+        "LastWriteTime":  "\/Date(1773920658467)\/"
+    },
+    {
+        "Name":  "latex_current_pack",
+        "LastWriteTime":  "\/Date(1773075933010)\/"
+    },
+    {
+        "Name":  "logs",
+        "LastWriteTime":  "\/Date(1773075934374)\/"
+    },
+    {
+        "Name":  "logs_ae_operation",
+        "LastWriteTime":  "\/Date(1774722546146)\/"
+    },
+    {
+        "Name":  "logs_background",
+        "LastWriteTime":  "\/Date(1773075934981)\/"
+    },
+    {
+        "Name":  "logs_complete",
+        "LastWriteTime":  "\/Date(1773075935123)\/"
+    },
+    {
+        "Name":  "logs_expert",
+        "LastWriteTime":  "\/Date(1773075935357)\/"
+    },
+    {
+        "Name":  "logs_perfect",
+        "LastWriteTime":  "\/Date(1773075935386)\/"
+    },
+    {
+        "Name":  "logs_perfect_parallel",
+        "LastWriteTime":  "\/Date(1773075935462)\/"
+    },
+    {
+        "Name":  "logs_train1",
+        "LastWriteTime":  "\/Date(1773075935639)\/"
+    },
+    {
+        "Name":  "manifests",
+        "LastWriteTime":  "\/Date(1774782488342)\/"
+    },
+    {
+        "Name":  "optimized_logs",
+        "LastWriteTime":  "\/Date(1773075935888)\/"
+    },
+    {
+        "Name":  "paper_figures_canonical",
+        "LastWriteTime":  "\/Date(1774971615476)\/"
+    },
+    {
+        "Name":  "paper_figures_for_advisor",
+        "LastWriteTime":  "\/Date(1773075936211)\/"
+    },
+    {
+        "Name":  "paper_submission_assets",
+        "LastWriteTime":  "\/Date(1773075937117)\/"
+    },
+    {
+        "Name":  "prepared_priority_datasets",
+        "LastWriteTime":  "\/Date(1773922910479)\/"
+    },
+    {
+        "Name":  "proposal_figures",
+        "LastWriteTime":  "\/Date(1773151593438)\/"
+    },
+    {
+        "Name":  "results",
+        "LastWriteTime":  "\/Date(1775235706532)\/"
+    },
+    {
+        "Name":  "results_export_cfg_lower_corr_20260329_012420",
+        "LastWriteTime":  "\/Date(1774720332118)\/"
+    },
+    {
+        "Name":  "stratified_results",
+        "LastWriteTime":  "\/Date(1773075946323)\/"
+    },
+    {
+        "Name":  "submission_oneclick_results",
+        "LastWriteTime":  "\/Date(1773075946387)\/"
+    },
+    {
+        "Name":  "thumbnails",
+        "LastWriteTime":  "\/Date(1773075946410)\/"
+    },
+    {
+        "Name":  "tmp_compare",
+        "LastWriteTime":  "\/Date(1773075946516)\/"
+    },
+    {
+        "Name":  "tmp_docx_extract",
+        "LastWriteTime":  "\/Date(1773237149352)\/"
+    },
+    {
+        "Name":  "training_results_summary",
+        "LastWriteTime":  "\/Date(1773075946687)\/"
+    },
+    {
+        "Name":  "tsfm_slots_results",
+        "LastWriteTime":  "\/Date(1773075947010)\/"
+    },
+    {
+        "Name":  "tupian",
+        "LastWriteTime":  "\/Date(1770694966432)\/"
+    },
+    {
+        "Name":  "upload_full_suite_20260327_222947",
+        "LastWriteTime":  "\/Date(1774621985319)\/"
+    },
+    {
+        "Name":  "upload_results_ae_operation_20260328_104442",
+        "LastWriteTime":  "\/Date(1774720332120)\/"
+    },
+    {
+        "Name":  "电力负荷数据集（二）",
+        "LastWriteTime":  "\/Date(1773920665150)\/"
+    },
+    {
+        "Name":  "电力系统短期负荷预测数据集",
+        "LastWriteTime":  "\/Date(1773920665545)\/"
+    },
+    {
+        "Name":  "风电机组运行数据集",
+        "LastWriteTime":  "\/Date(1773920667582)\/"
+    },
+    {
+        "Name":  "负荷预测数据集（一）",
+        "LastWriteTime":  "\/Date(1773920667673)\/"
+    },
+    {
+        "Name":  "内蒙古风速50425",
+        "LastWriteTime":  "\/Date(1773920667845)\/"
+    },
+    {
+        "Name":  "全国空气质量监测数据集",
+        "LastWriteTime":  "\/Date(1773920748297)\/"
+    }
+]

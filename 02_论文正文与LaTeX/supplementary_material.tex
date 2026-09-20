@@ -1,0 +1,276 @@
+\documentclass[3p,times]{elsarticle}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\journal{Patterns}
+
+\begin{document}
+
+\begin{frontmatter}
+\title{Supplementary Material: Auditing Physics Constraints in Wind Power Forecasting}
+\author[1]{Junyu Li}
+\author[2]{Juntao Du}
+\author[1]{Collaborating Authors}
+\address[1]{School of Electrical and Information Engineering, China}
+\address[2]{Independent Empirical Audit Group, China}
+\end{frontmatter}
+
+\section*{Overview}
+This supplementary document provides complete supporting ledgers, empirical evaluation logs, inter-rater reliability data, and reporting compliance tables for the main manuscript:
+\begin{itemize}
+    \item \textbf{Section S1 (Table~S1)}: The complete study-level scoping retrieval ledger and multi-dimensional coding table across all 48 evaluated records (46 included studies and 2 explicitly excluded studies).
+    \item \textbf{Section S2 (Table~S2)}: Detailed inter-rater agreement statistics between Coder~A and independent Coder~C (Juntao Du) across the calibration subset ($N=26$).
+    \item \textbf{Section S3 (Table~S3)}: Full numerical results for the 3-Arm Guardrail benchmark across all 48 experimental configurations (5 random seeds $\times$ 4 noise regimes $\times$ 6 penalty weights).
+    \item \textbf{Section S4 (Table~S4)}: Exploratory Kelmarsh gradient-matching downstream optimization logs across 5 independent seeds.
+    \item \textbf{Section S5 (Table~S5)}: PRISMA-ScR scoping review checklist compliance table.
+\end{itemize}
+
+\newpage
+\section*{Section S1: Complete Scoping Audit Corpus Ledger}
+
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{lp{0.7cm}p{3.8cm}p{1.6cm}p{2.0cm}p{1.5cm}p{1.4cm}p{1.6cm}}
+\caption{Comprehensive 48-Study Scoping Audit Ledger and Lifecycle Classifications (Schema v4).} \label{tab:supp_corpus} \\
+\toprule
+\textbf{ID} & \textbf{Year} & \textbf{Study Title} & \textbf{D1: Provenance} & \textbf{D2: Stage} & \textbf{D3: Telemetry} & \textbf{D4: Fidelity} & \textbf{D5: Ablation} \\
+\midrule
+\endfirsthead
+\multicolumn{8}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\toprule
+\textbf{ID} & \textbf{Year} & \textbf{Study Title} & \textbf{D1: Provenance} & \textbf{D2: Stage} & \textbf{D3: Telemetry} & \textbf{D4: Fidelity} & \textbf{D5: Ablation} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{\textit{Continued on next page}} \\
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+S01 & 2025 & Physics-constrained wind power forecasting al... & historical-static & training-loss & none & not-found & constraint-on-off \\
+S02 & 2026 & Physics-constrained transformer for wind powe... & historical-static & training-loss & none & code-mismatch & constraint-on-off \\
+S03 & 2026 & Physics-constrained generative augmentation a... & intrinsic & data-generation & none & not-found & module-ablation \\
+S04 & 2026 & A Physics-Constrained Dual-Stream Dynamic Fra... & intrinsic & training-loss & forecast-input & not-found & both \\
+S05 & 2026 & A physics-constrained temporal modeling frame... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S06 & 2026 & Physics-Constrained and Generalization-Enhanc... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S07 & 2026 & NCF: A physics-constrained pre-trained method... & intrinsic & inference-architecture & forecast-input & not-found & module-ablation \\
+S08 & 2026 & Physics-constrained graph attention learning ... & intrinsic & training-loss & none & not-found & both \\
+S09 & 2024 & Physics-informed reinforcement learning for p... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S10 & 2025 & Prediction of wind turbines power with physic... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S11 & 2026 & A novel non-dimensional multiple operating co... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S12 & 2025 & Physics-Informed Adaptive-Weight NBeatsx for ... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S13 & 2025 & High-precision short-term predicting method o... & intrinsic & training-loss & none & not-found & both \\
+S14 & 2025 & Physics-Informed Neural Networks for Enhanced... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S15 & 2026 & PSTG-Net: A physics-informed spatiotemporal m... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S16 & 2026 & Physics informed virtual sensor modeling for ... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S17 & 2025 & Physics informed data-driven approach for ult... & intrinsic & inference-architecture & forecast-input & not-found & module-ablation \\
+S18 & 2026 & Physics-informed dynamic wake graphs for prob... & intrinsic & training-loss & none & not-found & both \\
+S19 & 2026 & Physics-Informed Adaptive Conformal Predictio... & intrinsic & post-hoc-correction & none & not-found & module-ablation \\
+S20 & 2026 & A branch-adaptive framework for multi-timesca... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S21 & 2026 & Physics-informed LLM-guided dynamic spatio-te... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S22 & 2026 & Physics-informed neural network modelling of ... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S23 & 2026 & A Physics-informed Operating Condition Attent... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S24 & 2025 & Physics-Informed Hybrid KNN-MLP for Enhanced ... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S25 & 2026 & Physics-Informed dual-branch graph neural net... & intrinsic & training-loss & none & not-found & both \\
+S26 & 2026 & \multicolumn{6}{l}{\textit{Excluded: wind-speed-only / no-explicit-power-constraint}} \\
+S27 & 2026 & UniWind: Toward Unified Day-Ahead Wind Power ... & historical-static & inference-architecture & none & not-found & both \\
+S28 & 2026 & Platform-Yaw-Aware Physics-Informed Meta-Lear... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S29 & 2026 & A Dual-Track Feature-Enhanced Physics-Informe... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S30 & 2026 & DSTC-Net: A Physics-Informed Dynamic Spatio-T... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S31 & 2026 & Short-Term Solar-Wind Power Forecasting via P... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S32 & 2026 & Adaptive Physics-Informed Neural Network for ... & learned-online & inference-architecture & none & not-found & module-ablation \\
+S33 & 2026 & High-Penetration New Energy Power System Outa... & intrinsic & training-loss & contemporaneous-state & not-found & constraint-on-off \\
+S34 & 2023 & Physics-Guided Machine Learning for Wind-Farm... & intrinsic & inference-architecture & none & not-found & both \\
+S35 & 2026 & Development of a physics-guided bidirectional... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S36 & 2026 & Spatiotemporal physics-guided graph neural ne... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S37 & 2025 & Regional wind power forecasting guided by phy... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S38 & 2025 & Wind Power Prediction Method Based on Physics... & historical-static & training-loss & none & not-found & constraint-on-off \\
+S39 & 2026 & Physics-Guided Deep Learning for Short-Term O... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S40 & 2026 & Physics-guided multiscale fusion network for ... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S41 & 2026 & Physics-Guided Spatio-Temporal Transformers t... & intrinsic & training-loss & none & not-found & constraint-on-off \\
+S42 & 2026 & \multicolumn{6}{l}{\textit{Excluded: no-explicit-physics-constraint}} \\
+S43 & 2025 & Physics-Guided Short-Term Offshore Wind Power... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+S44 & 2026 & Short-term wind power forecasting for data-li... & intrinsic & training-loss & none & not-found & both \\
+S45 & 2026 & Cross-Domain Few-Shot Wind Power Forecasting ... & historical-static & inference-architecture & none & not-found & module-ablation \\
+S46 & 2026 & Enhancing Wind Power Forecasting via Multi-Fa... & intrinsic & inference-architecture & contemporaneous-state & not-found & module-ablation \\
+S47 & 2026 & Advancing short-term wind power forecasting v... & intrinsic & inference-architecture & forecast-input & not-found & module-ablation \\
+S48 & 2026 & Physics-guided tri-modal spatio-temporal grap... & intrinsic & inference-architecture & none & not-found & module-ablation \\
+\end{longtable}
+\endgroup
+
+\newpage
+\section*{Section S2: Inter-Rater Reliability on Calibration Subset ($N=26$)}
+
+Table~\ref{tab:supp_interrater} documents the agreement between the lead author (Coder~A) and the independent double-coder (Coder~C, Juntao Du) across the pre-registered calibration subset ($N=26$).
+
+\begin{table*}[h]
+\centering
+\small
+\caption{Inter-Rater Reliability Metrics on the Calibration Subset ($N=26$ Studies).}
+\label{tab:supp_interrater}
+\begin{tabularx}{\textwidth}{lp{3.5cm}rrp{6.0cm}}
+\toprule
+\textbf{Dimension} & \textbf{Audited Feature} & \textbf{Direct Agree (\%)} & \textbf{Cohen's $\kappa$} & \textbf{Methodological Notes and Consensus Rationale} \\
+\midrule
+$\mathcal{D}_1$ & Parameter Provenance & 57.7\% (15/26) & 0.436 & Moderate $\kappa$ reflects initial ambiguity between binned empirical curves and intrinsic laws; arbitrated via explicit equations. \\
+$\mathcal{D}_2$ & Application Stage & 73.1\% (19/26) & 0.426 & High raw agreement; differences in dual forward/loss regularizers arbitrated by gradient computational path. \\
+$\mathcal{D}_3$ & Inference Telemetry & 53.8\% (14/26) & 0.385 & Moderate agreement stemming from whether NWP input was mandatory or optional; resolved by test-time input schemas. \\
+$\mathcal{D}_4$ & Implementation Fidelity & 92.3\% (24/26) & 0.480 & Raw 11.5\% caused by vocabulary mismatch (\texttt{unverified} vs \texttt{no-code}); 92.3\% aligned upon unifying schema. \\
+$\mathcal{D}_5$ & Harm \& Violation Reporting & 88.5\% (23/26) & -0.040 & Both raters concurred that 23/26 studies reported zero negative effects. Negative $\kappa$ is a classic artifact of extreme prevalence imbalance. \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\newpage
+\section*{Section S3: Extended 3-Arm Guardrail Benchmark Results}
+
+Table~\ref{tab:supp_guardrail_full} presents the complete numerical results for the 3-Arm Guardrail ablation across all 48 evaluated experimental configurations. Each metric reports the sample mean $\pm$ standard deviation across 5 independent random seeds ($42, 123, 456, 789, 1024$).
+
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{p{3.8cm}crrccc}
+\caption{Complete Downstream Guardrail Evaluation across Noise Regimes and Penalty Weights (Wind-CN, 5 Seeds).} \label{tab:supp_guardrail_full} \\
+\toprule
+\textbf{Experimental Strategy / Arm} & \textbf{$\sigma$} & \textbf{$\lambda$} & \textbf{Post-hoc Clip} & \textbf{RMSE (kW)} & \textbf{MAE (kW)} & \textbf{Violation Rate (\%)} \\
+\midrule
+\endfirsthead
+\multicolumn{7}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\toprule
+\textbf{Experimental Strategy / Arm} & \textbf{$\sigma$} & \textbf{$\lambda$} & \textbf{Post-hoc Clip} & \textbf{RMSE (kW)} & \textbf{MAE (kW)} & \textbf{Violation Rate (\%)} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{\textit{Continued on next page}} \\
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+Arm 1: No Guardrail & 0.0 & 0.00 & No & $6151.3 \pm 48.7$ & $3907.4 \pm 39.1$ & $1.14\% \pm 0.31\%$ \\
+Arm 1: No Guardrail & 0.2 & 0.00 & No & $15148.7 \pm 82.3$ & $11773.4 \pm 76.9$ & $6.81\% \pm 0.65\%$ \\
+Arm 1: No Guardrail & 0.4 & 0.00 & No & $28428.6 \pm 119.6$ & $22254.2 \pm 100.2$ & $16.52\% \pm 0.53\%$ \\
+Arm 1: No Guardrail & 0.6 & 0.00 & No & $41923.5 \pm 432.7$ & $32919.9 \pm 312.9$ & $25.76\% \pm 0.59\%$ \\
+Arm 2: Post-hoc Clipping & 0.0 & 0.00 & Yes & $6148.1 \pm 50.9$ & $3937.6 \pm 35.4$ & $0.00\% \pm 0.00\%$ \\
+Arm 2: Post-hoc Clipping & 0.2 & 0.00 & Yes & $14522.8 \pm 30.7$ & $11262.6 \pm 21.8$ & $0.00\% \pm 0.00\%$ \\
+Arm 2: Post-hoc Clipping & 0.4 & 0.00 & Yes & $25007.6 \pm 161.7$ & $19529.8 \pm 131.2$ & $0.00\% \pm 0.00\%$ \\
+Arm 2: Post-hoc Clipping & 0.6 & 0.00 & Yes & $33553.8 \pm 174.4$ & $26333.1 \pm 133.0$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.0 & 0.01 & Yes & $6148.4 \pm 50.8$ & $3937.9 \pm 35.5$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.0 & 0.05 & Yes & $6149.6 \pm 50.3$ & $3939.3 \pm 35.8$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.0 & 0.10 & Yes & $6151.0 \pm 49.7$ & $3941.0 \pm 36.2$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.0 & 0.50 & Yes & $6162.3 \pm 46.0$ & $3954.6 \pm 39.6$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.0 & 1.00 & Yes & $6175.1 \pm 43.3$ & $3969.1 \pm 44.7$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.2 & 0.01 & Yes & $14520.2 \pm 30.8$ & $11260.6 \pm 21.8$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.2 & 0.05 & Yes & $14509.9 \pm 30.9$ & $11252.6 \pm 22.0$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.2 & 0.10 & Yes & $14497.0 \pm 31.1$ & $11242.7 \pm 22.3$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.2 & 0.50 & Yes & $14394.9 \pm 33.8$ & $11163.9 \pm 25.4$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.2 & 1.00 & Yes & $14270.1 \pm 38.3$ & $11067.3 \pm 30.1$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.4 & 0.01 & Yes & $25002.9 \pm 161.4$ & $19526.3 \pm 130.9$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.4 & 0.05 & Yes & $24984.1 \pm 160.0$ & $19512.1 \pm 129.9$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.4 & 0.10 & Yes & $24960.7 \pm 158.2$ & $19494.4 \pm 128.6$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.4 & 0.50 & Yes & $24775.2 \pm 144.7$ & $19354.2 \pm 118.6$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.4 & 1.00 & Yes & $24547.8 \pm 128.7$ & $19181.9 \pm 106.6$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.6 & 0.01 & Yes & $33548.3 \pm 174.3$ & $26328.9 \pm 132.9$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.6 & 0.05 & Yes & $33526.3 \pm 173.9$ & $26311.8 \pm 132.6$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.6 & 0.10 & Yes & $33498.9 \pm 173.4$ & $26290.4 \pm 132.3$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.6 & 0.50 & Yes & $33281.1 \pm 171.2$ & $26121.0 \pm 130.5$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Clipped) & 0.6 & 1.00 & Yes & $33011.7 \pm 170.4$ & $25911.3 \pm 129.8$ & $0.00\% \pm 0.00\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.0 & 0.01 & No & $6151.5 \pm 48.6$ & $3907.8 \pm 39.2$ & $1.14\% \pm 0.31\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.0 & 0.05 & No & $6152.5 \pm 48.1$ & $3909.1 \pm 39.5$ & $1.13\% \pm 0.30\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.0 & 0.10 & No & $6153.8 \pm 47.5$ & $3910.8 \pm 40.0$ & $1.13\% \pm 0.30\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.0 & 0.50 & No & $6163.3 \pm 43.6$ & $3924.1 \pm 43.8$ & $1.09\% \pm 0.24\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.0 & 1.00 & No & $6174.5 \pm 40.9$ & $3938.5 \pm 49.1$ & $1.06\% \pm 0.20\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.2 & 0.01 & No & $15145.5 \pm 82.3$ & $11770.9 \pm 76.9$ & $6.81\% \pm 0.65\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.2 & 0.05 & No & $15132.8 \pm 82.6$ & $11761.2 \pm 77.1$ & $6.79\% \pm 0.65\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.2 & 0.10 & No & $15116.9 \pm 82.9$ & $11749.1 \pm 77.3$ & $6.77\% \pm 0.65\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.2 & 0.50 & No & $14992.3 \pm 85.4$ & $11653.5 \pm 79.0$ & $6.65\% \pm 0.63\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.2 & 1.00 & No & $14841.4 \pm 88.5$ & $11537.2 \pm 81.1$ & $6.50\% \pm 0.61\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.4 & 0.01 & No & $28421.6 \pm 119.4$ & $22248.9 \pm 100.0$ & $16.52\% \pm 0.53\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.4 & 0.05 & No & $28393.4 \pm 118.6$ & $22227.5 \pm 99.3$ & $16.50\% \pm 0.53\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.4 & 0.10 & No & $28358.3 \pm 117.7$ & $22201.0 \pm 98.5$ & $16.47\% \pm 0.54\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.4 & 0.50 & No & $28082.3 \pm 110.9$ & $21991.6 \pm 92.4$ & $16.26\% \pm 0.53\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.4 & 1.00 & No & $27748.2 \pm 103.8$ & $21737.2 \pm 85.6$ & $16.00\% \pm 0.53\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.6 & 0.01 & No & $41912.7 \pm 432.7$ & $32911.7 \pm 313.0$ & $25.76\% \pm 0.59\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.6 & 0.05 & No & $41869.7 \pm 432.9$ & $32879.0 \pm 313.2$ & $25.73\% \pm 0.59\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.6 & 0.10 & No & $41816.0 \pm 433.0$ & $32838.4 \pm 313.4$ & $25.69\% \pm 0.59\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.6 & 0.50 & No & $41394.2 \pm 433.8$ & $32518.1 \pm 314.7$ & $25.40\% \pm 0.60\%$ \\
+Arm 3: Joint Guardrail (Raw) & 0.6 & 1.00 & No & $40883.4 \pm 433.5$ & $32128.8 \pm 315.6$ & $25.05\% \pm 0.60\%$ \\
+\end{longtable}
+\endgroup
+
+\newpage
+\section*{Section S4: Downstream Kelmarsh Optimization Benchmark}
+
+Table~\ref{tab:supp_gradmatch} details the 5-seed exploratory gradient-matching optimization experiment on the open Kelmarsh SCADA dataset (40 epochs per seed), verifying the downstream convergence consequences of divergence argument directionality.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Downstream Convergence Comparison on Kelmarsh Wind Farm Telemetry (Test RMSE across 5 Seeds).}
+\label{tab:supp_gradmatch}
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Objective Formulation} & \textbf{Seed 0} & \textbf{Seed 1} & \textbf{Seed 2} & \textbf{Seed 3} & \textbf{Seed 4} & \textbf{Mean $\pm$ Std} \\
+\midrule
+Unconstrained MSE Baseline & 0.0835 & 0.0789 & 0.0800 & 0.0694 & 0.0780 & $\mathbf{0.0780 \pm 0.0052}$ \\
+Paper-Specified Symmetric JS & 0.1485 & 0.1194 & 0.1016 & 0.0948 & 0.1116 & $0.1152 \pm 0.0209$ \\
+Codebase Reverse-JS Divergence & 0.2134 & 0.1462 & 0.2675 & 0.2883 & 0.2459 & $0.2323 \pm 0.0555$ \\
+Direct Uncalibrated 1:1 Reverse KL & 0.5388 & 0.4223 & 0.4075 & 0.5173 & 0.4647 & $0.4701 \pm 0.0574$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{Section S5: PRISMA-ScR Scoping Review Checklist Compliance}
+
+Table~\ref{tab:supp_prismascr} documents adherence to the 22 reporting items of the PRISMA-ScR statement.
+
+\begin{table*}[h]
+\centering
+\small
+\caption{PRISMA-ScR Itemized Scoping Review Reporting Checklist.}
+\label{tab:supp_prismascr}
+\begin{tabularx}{\textwidth}{lXl}
+\toprule
+\textbf{Item No.} & \textbf{PRISMA-ScR Checklist Item Description} & \textbf{Manuscript Location} \\
+\midrule
+1 & Title: Identify the report as a scoping review/audit & Title, Abstract \\
+2 & Structured summary: Objectives, eligibility, participants, results, conclusions & Abstract \\
+3 & Rationale: Describe the rationale for the review & Section 1 (Introduction) \\
+4 & Objectives: Provide an explicit statement of questions being addressed & Section 1.1, Section 8.1 \\
+5 & Protocol and registration: Indicate whether a protocol exists & Section 4 \\
+6 & Eligibility criteria: Specify characteristics used as criteria for inclusion & Section 4.2 \\
+7 & Information sources: Describe all information sources in the search & Section 4.1 \\
+8 & Search: Present the full electronic search strategy for at least one database & Section 4.1 \\
+9 & Selection of sources of evidence: Process for selecting sources & Section 4.2, Figure 2 \\
+10 & Data charting process: Methods of charting data & Section 4.3 \\
+11 & Data items: List and define all variables for which data were sought & Section 3.2, Table 2 \\
+12 & Critical appraisal: Auditing methodology and fidelity & Section 4, Section 5 \\
+13 & Synthesis of results: Summarize the scoping review findings & Section 5, Table 3, Table 4 \\
+14 & Selection of sources of evidence: Report results of search and screening & Section 4.2, Figure 2 \\
+15 & Characteristics of sources of evidence: Present data on study characteristics & Section 5.1, Table 3 \\
+16 & Critical appraisal of individual sources: Summarize code/ablation audit & Section 5.2, Section 5.3 \\
+17 & Results of individual sources of evidence: Detailed case study & Section 6 (PCT case) \\
+18 & Synthesis of results: Summarize quantitative lifecycle distributions & Section 5.1, Figure 3 \\
+19 & Summary of evidence: Summarize main results and implications & Section 8.1 \\
+20 & Limitations: Discuss limitations of the scoping review process & Section 9 (Limitations) \\
+21 & Conclusions: Provide a general interpretation of the results & Section 10 (Conclusion) \\
+22 & Funding: Describe sources of funding and competing interests & Frontmatter, End matter \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\end{document}

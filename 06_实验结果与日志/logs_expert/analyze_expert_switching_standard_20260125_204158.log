@@ -1,0 +1,61 @@
+======================================================================
+专家切换过程分析 - 使用标准Ultra-LSNT模型
+======================================================================
+使用设备: cuda
+
+1. 加载风电数据...
+  风速序列长度: 121528
+  风速范围: [0.00, 12.60] m/s
+
+2. 检测风速突变事件...
+  检测到 53 个突变事件
+  事件 1: increase from 1.2 to 9.4 m/s (Δ=8.2)
+  事件 2: increase from 1.2 to 9.4 m/s (Δ=8.2)
+  事件 3: increase from 1.2 to 9.4 m/s (Δ=8.2)
+
+3. 加载标准Ultra-LSNT模型...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+  加载权重文件: checkpoints_ts/main/best_model.pth
+  权重加载完成: 155/199 个参数匹配
+  警告: 有 44 个参数未从检查点加载
+
+4. 获取测试样本...
+  样本批次形状: torch.Size([64, 96, 8])
+
+5. 分析专家切换行为...
+
+  分析事件 1: increase (Δ=8.2 m/s)
+可视化已保存: expert_switching_event_1_20260125_204203.png
+    可视化已保存: expert_switching_event_1_20260125_204203.png
+
+  分析事件 2: increase (Δ=8.2 m/s)
+可视化已保存: expert_switching_event_2_20260125_204205.png
+    可视化已保存: expert_switching_event_2_20260125_204205.png
+
+  分析事件 3: increase (Δ=8.2 m/s)
+可视化已保存: expert_switching_event_3_20260125_204206.png
+    可视化已保存: expert_switching_event_3_20260125_204206.png
+
+6. 生成分析汇总报告...
+分析报告已保存: expert_switching_analysis_report_standard.txt
+
+======================================================================
+分析完成摘要
+======================================================================
+分析事件数: 3
+生成文件:
+  - expert_switching_event_1_20260125_204203.png
+  - expert_switching_event_2_20260125_204205.png
+  - expert_switching_event_3_20260125_204206.png
+  - expert_switching_analysis_report_standard.txt
+======================================================================
+专家激活数据已保存: wind_expert_activation_events.csv

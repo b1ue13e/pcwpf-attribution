@@ -1,0 +1,9 @@
+
+======================================================================
+BWO-SVR Experiment: electricity (seed=123)
+======================================================================
+Warning: Actual data size (31720) differs from expected (33000). Adjusting split proportionally.
+Dataset: electricity
+  Total samples: 31720
+  Training samples: 25376 (80.0%)
+  Testing samples: 6344 (20.0%)

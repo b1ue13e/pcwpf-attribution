@@ -1,0 +1,3 @@
+[2026-02-09T16:08:57.310156] Task: multi_domain_baselines
+Command: /root/miniconda3/bin/python3 run_multi_domain_baselines.py --model2 timemixer
+

@@ -1,0 +1,16 @@
+Ultra-LSNT 完整完善实验 (run_perfect.sh)
+开始时间: Sun Jan 25 16:42:08 CST 2026
+================================================================
+硬件检测...
+  CPU核心数: 256
+  系统内存: 755GB
+  GPU型号: NVIDIA GeForce RTX 4090 D
+  GPU显存: 24564MB
+创建实验脚本...
+  ✅ 创建 run_comprehensive_ablation.py
+  ✅ 创建 run_efficiency_benchmark.py
+  ✅ 创建 run_hyperparameter_search.py
+
+第一步：运行基础实验验证数据完整性
+1.1 运行基础消融研究...
+[2026-01-25 16:42:08] 开始运行: run_ablation_study.py

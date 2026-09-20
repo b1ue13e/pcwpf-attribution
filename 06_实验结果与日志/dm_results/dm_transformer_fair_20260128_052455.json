@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-28T05:24:55.333906",
+  "dataset": "wind_final.csv",
+  "samples": 434664,
+  "ultra_lsnt": {
+    "r2": 0.8727929890155792,
+    "rmse": 9079.837890625,
+    "mae": 7174.708984375
+  },
+  "transformer": {
+    "r2": 0.8686190545558929,
+    "rmse": 9227.599609375,
+    "mae": 7121.32568359375
+  },
+  "dm_test": {
+    "statistic": -2.9602972785358346,
+    "p_value": 0.001536711582843371,
+    "criterion": "MSE",
+    "conclusion": "**Ultra-LSNT\u663e\u8457\u4f18\u4e8eTransformer (p<0.01)**"
+  },
+  "table3_reference": {
+    "ultra_lsnt_r2": 0.8727728724479675,
+    "transformer_r2": 0.743889570236206,
+    "ultra_lsnt_rmse": 9080.5546875,
+    "transformer_rmse": 2916.826416015625
+  }
+}

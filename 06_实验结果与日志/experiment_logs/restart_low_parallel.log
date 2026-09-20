@@ -1,0 +1,146 @@
+========================================
+低并行度实验重启
+最大并行数: 3 (避免系统过载)
+========================================
+启动时间: 2026-02-23 14:26:46
+
+【检查已完成的实验】
+  Traditional完成: 9 / 12
+
+【需要运行的实验】
+
+需要运行的实验: 36 个
+
+【优先队列】
+1. COA-BiLSTM (12个实验) - 元启发式核心
+2. BWO-SVR (12个实验) - 已完成的可能不需要
+3. BWO-CNN (12个实验) - 可选
+
+【启动COA-BiLSTM实验 (串行运行，避免系统过载)】
+
+启动: COA-BiLSTM wind_cn seed=42
+  PID: 281491
+启动: COA-BiLSTM wind_cn seed=123
+  PID: 281495
+启动: COA-BiLSTM wind_cn seed=456
+  PID: 281499
+
+等待前3个实验完成...
+继续下一批...
+
+备份旧日志: /root/experiment_logs/coa_electricity_42.log
+启动: COA-BiLSTM electricity seed=42
+  PID: 281800
+备份旧日志: /root/experiment_logs/coa_electricity_123.log
+启动: COA-BiLSTM electricity seed=123
+  PID: 281806
+备份旧日志: /root/experiment_logs/coa_electricity_456.log
+启动: COA-BiLSTM electricity seed=456
+  PID: 281812
+
+等待前3个实验完成...
+继续下一批...
+
+启动: COA-BiLSTM air_quality seed=42
+  PID: 282099
+启动: COA-BiLSTM air_quality seed=123
+  PID: 282103
+启动: COA-BiLSTM air_quality seed=456
+  PID: 282107
+
+等待前3个实验完成...
+继续下一批...
+
+备份旧日志: /root/experiment_logs/coa_gefcom_42.log
+启动: COA-BiLSTM gefcom seed=42
+  PID: 282240
+备份旧日志: /root/experiment_logs/coa_gefcom_123.log
+启动: COA-BiLSTM gefcom seed=123
+  PID: 282246
+备份旧日志: /root/experiment_logs/coa_gefcom_456.log
+启动: COA-BiLSTM gefcom seed=456
+  PID: 282252
+
+等待前3个实验完成...
+./restart_low_parallel.sh: line 132: 282240 Killed                  python3 <<EOF > "$logfile" 2>&1
+import sys
+sys.path.append('/root')
+import warnings
+warnings.filterwarnings('ignore')
+import torch
+
+print(f"Starting COA-BiLSTM on $dataset seed=$seed")
+print(f"Time: {__import__('datetime').datetime.now()}")
+print(f"GPU: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+print("="*60)
+
+try:
+    from coa_bilstm_experiment_v2 import run_coa_bilstm_experiment
+    result = run_coa_bilstm_experiment('$dataset', $seed)
+    print(f"\n{'='*60}")
+    print(f"Completed! R2={result['metrics']['R2']:.4f}")
+    print(f"Time: {__import__('datetime').datetime.now()}")
+except Exception as e:
+    print(f"\nError: {e}")
+    import traceback
+    traceback.print_exc()
+EOF
+
+./restart_low_parallel.sh: line 132: 282252 Killed                  python3 <<EOF > "$logfile" 2>&1
+import sys
+sys.path.append('/root')
+import warnings
+warnings.filterwarnings('ignore')
+import torch
+
+print(f"Starting COA-BiLSTM on $dataset seed=$seed")
+print(f"Time: {__import__('datetime').datetime.now()}")
+print(f"GPU: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+print("="*60)
+
+try:
+    from coa_bilstm_experiment_v2 import run_coa_bilstm_experiment
+    result = run_coa_bilstm_experiment('$dataset', $seed)
+    print(f"\n{'='*60}")
+    print(f"Completed! R2={result['metrics']['R2']:.4f}")
+    print(f"Time: {__import__('datetime').datetime.now()}")
+except Exception as e:
+    print(f"\nError: {e}")
+    import traceback
+    traceback.print_exc()
+EOF
+
+./restart_low_parallel.sh: line 132: 282246 Killed                  python3 <<EOF > "$logfile" 2>&1
+import sys
+sys.path.append('/root')
+import warnings
+warnings.filterwarnings('ignore')
+import torch
+
+print(f"Starting COA-BiLSTM on $dataset seed=$seed")
+print(f"Time: {__import__('datetime').datetime.now()}")
+print(f"GPU: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+print("="*60)
+
+try:
+    from coa_bilstm_experiment_v2 import run_coa_bilstm_experiment
+    result = run_coa_bilstm_experiment('$dataset', $seed)
+    print(f"\n{'='*60}")
+    print(f"Completed! R2={result['metrics']['R2']:.4f}")
+    print(f"Time: {__import__('datetime').datetime.now()}")
+except Exception as e:
+    print(f"\nError: {e}")
+    import traceback
+    traceback.print_exc()
+EOF
+
+继续下一批...
+
+
+等待所有COA-BiLSTM完成...
+COA-BiLSTM全部完成!
+
+========================================
+实验完成!
+结束时间: 2026-02-23 14:37:42
+========================================

@@ -1,0 +1,11 @@
+{
+  "hill_windows": {
+    "train": 7035,
+    "val": 344,
+    "cal": 367,
+    "test": 7599
+  },
+  "disjoint_train_select_calibrate_test_targets": true,
+  "regular_timestamps": true,
+  "asymmetric_quantile_direction": true
+}

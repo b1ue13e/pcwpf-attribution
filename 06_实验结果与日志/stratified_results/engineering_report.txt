@@ -1,0 +1,48 @@
+风电预测模型工况分层分析报告
+======================================================================
+生成时间: 2026-01-25 11:40:29
+涉及模型: LSTM, MLP, Transformer
+工况数量: 20
+
+总体平均 RMSE 排名（越低越好）:
+----------------------------------------
+1. Transformer: 3004.3957
+2. MLP: 3141.2418
+3. LSTM: 3205.0726
+
+各模型表现最差的工况（RMSE最高）:
+----------------------------------------
+LSTM: ramp_down (RMSE=4543.2658, 样本=10)
+MLP: dir_north (RMSE=4059.7484, 样本=2352)
+Transformer: daytime (RMSE=3618.1305, 样本=12000)
+
+各工况表现最佳的模型（RMSE最低）:
+----------------------------------------
+autumn: Transformer (RMSE=3552.3118)
+daytime: LSTM (RMSE=3385.4592)
+dir_east: LSTM (RMSE=3273.5360)
+dir_north: Transformer (RMSE=3347.4998)
+dir_south: LSTM (RMSE=3277.8923)
+dir_west: LSTM (RMSE=3083.2232)
+night: Transformer (RMSE=2980.9842)
+power_high: Transformer (RMSE=2198.9065)
+power_low: Transformer (RMSE=1602.3178)
+power_medium: LSTM (RMSE=3330.1374)
+ramp_any: Transformer (RMSE=2714.4137)
+ramp_down: Transformer (RMSE=2915.5866)
+spring: LSTM (RMSE=2988.5773)
+summer: LSTM (RMSE=3349.5004)
+wind_cut_in: Transformer (RMSE=3268.2645)
+wind_high: MLP (RMSE=2018.0508)
+wind_low: LSTM (RMSE=3320.1042)
+wind_medium: Transformer (RMSE=2749.9087)
+wind_rated: MLP (RMSE=2018.0508)
+winter: LSTM (RMSE=3006.8563)
+
+工程建议:
+----------------------------------------
+1. 对于低风速工况（<5 m/s），功率曲线非线性强，建议使用物理模型或分位数回归。
+2. 对于爬坡事件（风速突变），所有模型误差均会增大，建议引入爬坡检测与自适应调整。
+3. 夜间风速通常更平稳，模型表现较好；日间受湍流影响，不确定性增加。
+4. 高风速工况（≥10 m/s）接近额定功率，误差绝对值可能较大，但相对误差较小。
+5. 风向对风机功率有显著影响（尾流效应），建议加入风向扇区特征。

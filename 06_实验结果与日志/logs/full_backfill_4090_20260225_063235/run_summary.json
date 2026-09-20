@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-02-24T22:32:35.841184Z",
+  "steps": [
+    {
+      "name": "core_mamba",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_063235\\core_mamba.log"
+    },
+    {
+      "name": "core_arima_svr",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_063235\\core_arima_svr.log"
+    },
+    {
+      "name": "core_ssa_elm",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_063235\\core_ssa_elm.log"
+    },
+    {
+      "name": "core_vmd_ceemdan",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_063235\\core_vmd_ceemdan.log"
+    },
+    {
+      "name": "core_pi_moe_bundle",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_063235\\core_pi_moe_bundle.log"
+    },
+    {
+      "name": "core_mustfix_bundle",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_063235\\core_mustfix_bundle.log"
+    },
+    {
+      "name": "core_lite_clean_eval",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_063235\\core_lite_clean_eval.log"
+    },
+    {
+      "name": "rebuild_main4_matrices",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "logs\\full_backfill_4090_20260225_063235\\rebuild_main4_matrices.log"
+    }
+  ],
+  "transfer_matrix_csv": ""
+}

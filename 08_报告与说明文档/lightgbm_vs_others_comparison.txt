@@ -1,0 +1,10 @@
+LightGBM vs 其他模型 延迟对比分析
+==================================================
+LightGBM (CPU模拟树莓派): 50.40 ms
+DLinear (CPU模拟树莓派): 0.27 ms
+Ultra-LSNT (GPU RTX 4090): 15.29 ms
+TimeMixer (GPU RTX 4090): 3.36 ms
+延迟比 LightGBM/DLinear: 189.88x
+延迟比 LightGBM/Ultra-LSNT: 3.30x
+
+注: 对比需考虑硬件差异 (CPU vs GPU)

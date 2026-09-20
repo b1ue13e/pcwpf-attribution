@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "elexon_2017_stats": {
+    "settlement_periods": 17520,
+    "mean_price_gbp_per_mwh": 44.27,
+    "peak_price_gbp_per_mwh": 1509.8,
+    "negative_price_periods_count": 68
+  },
+  "zero_bid_diagnostic": [
+    {
+      "site": "kelmarsh",
+      "origins": 8212,
+      "complete_settlement_periods": 16396,
+      "observed_days": 360,
+      "zero_bid_shortfall_penalty_gbp": 0.0,
+      "zero_bid_net_cashflow_per_turb_yr_gbp": 223882.13989529686,
+      "expected_net_cashflow_gbp": 223882.15
+    },
+    {
+      "site": "hill_of_towie",
+      "origins": 7599,
+      "complete_settlement_periods": 15152,
+      "observed_days": 345,
+      "zero_bid_shortfall_penalty_gbp": 0.0,
+      "zero_bid_net_cashflow_per_turb_yr_gbp": 239299.300942487,
+      "expected_net_cashflow_gbp": 239299.3
+    },
+    {
+      "site": "penmanshiel",
+      "origins": 8440,
+      "complete_settlement_periods": 16861,
+      "observed_days": 365,
+      "zero_bid_shortfall_penalty_gbp": 0.0,
+      "zero_bid_net_cashflow_per_turb_yr_gbp": 243449.80218707776,
+      "expected_net_cashflow_gbp": 243449.8
+    }
+  ],
+  "discrepancies": []
+}

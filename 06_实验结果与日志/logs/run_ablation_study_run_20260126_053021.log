@@ -1,0 +1,40 @@
+开始时间: Mon Jan 26 05:30:25 CST 2026
+脚本: run_ablation_study.py
+实验: 消融研究
+========================================
+🔬 启动【最终修正版 V2】消融实验...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+
+[Part 1] Retesting Encoder Kernel Sizes...
+   ⚡ Testing Kernel=3...
+      🔧 手术成功：已将 2 个 Encoder Conv1d 层的 Kernel 替换为 3
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+      ✅ k=3 -> R2=0.8635
+   ⚡ Testing Kernel=5...
+      🔧 手术成功：已将 2 个 Encoder Conv1d 层的 Kernel 替换为 5
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+      ✅ k=5 -> R2=0.8572
+   ⚡ Testing Kernel=7...
+      🔧 手术成功：已将 2 个 Encoder Conv1d 层的 Kernel 替换为 7
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+      ✅ k=7 -> R2=0.8781
+   ⚡ Testing Kernel=9...
+      🔧 手术成功：已将 2 个 Encoder Conv1d 层的 Kernel 替换为 9
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+      ✅ k=9 -> R2=0.8657
+🎨 正在绘制 fig_ablation_final.png ...
+✅ 最终图表已生成: fig_ablation_final.png

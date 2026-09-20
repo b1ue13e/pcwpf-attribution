@@ -1,0 +1,4 @@
+model_label,backend,model_id,model,scenario,sigma_cfg,sigma_eff,R2,RMSE,MAE,run_id
+Chronos-Bolt-Small,chronos-forecasting,amazon/chronos-bolt-small,Chronos-Bolt-Small,clean,0.0,0.0,-1.0939114093780518,7061.9580078125,5225.7509765625,20260307T071956Z_chronos_family_windcn
+Chronos-Bolt-Small,chronos-forecasting,amazon/chronos-bolt-small,Chronos-Bolt-Small,gaussian_sigma_eff_015,0.1,0.15000000000000002,-1.7751798629760742,8130.0185546875,6335.29931640625,20260307T071956Z_chronos_family_windcn
+Chronos-Bolt-Small,chronos-forecasting,amazon/chronos-bolt-small,Chronos-Bolt-Small,gaussian_sigma_eff_060,0.4,0.6000000000000001,-3.361992359161377,10192.6806640625,8870.8896484375,20260307T071956Z_chronos_family_windcn

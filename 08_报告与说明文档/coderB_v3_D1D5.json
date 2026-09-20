@@ -1,0 +1,184 @@
+{
+ "HUANG2026": [
+  "unreported",
+  "training-loss",
+  "none",
+  "unverified",
+  "none-reported"
+ ],
+ "JARA2024": [
+  "unreported",
+  "inference-architecture",
+  "latent-state",
+  "unverified",
+  "none-reported"
+ ],
+ "MLPINN": [
+  "intrinsic",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "MMD-PGF": [
+  "historical-static",
+  "unreported",
+  "contemporaneous-state",
+  "unverified",
+  "none-reported"
+ ],
+ "PCT": [
+  "historical-static",
+  "training-loss",
+  "contemporaneous-state",
+  "code-mismatch",
+  "none-reported"
+ ],
+ "PHYCELL": [
+  "unreported",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "TANG2025": [
+  "intrinsic",
+  "training-loss",
+  "forecast-input",
+  "no-code",
+  "none-reported"
+ ],
+ "TgDPF": [
+  "historical-static",
+  "unreported",
+  "none",
+  "unverified",
+  "none-reported"
+ ],
+ "WANG2026": [
+  "unreported",
+  "inference-architecture",
+  "latent-state",
+  "unverified",
+  "none-reported"
+ ],
+ "PISTNET2025": [
+  "forecast-derived",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "PIBPNN2025": [
+  "intrinsic",
+  "training-loss",
+  "unreported",
+  "unverified",
+  "none-reported"
+ ],
+ "PITFN2025": [
+  "intrinsic",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "TCNTFT2025": [
+  "forecast-derived",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "CPDIGITAL2025": [
+  "unreported",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "XAIPC2023": [
+  "forecast-derived",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "RISKREG2025": [
+  "unreported",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "SETVAL2025": [
+  "unreported",
+  "unreported",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "PHYWINDNET2026": [
+  "intrinsic",
+  "training-loss",
+  "contemporaneous-state",
+  "unverified",
+  "none-reported"
+ ],
+ "PGMFNET2026": [
+  "forecast-derived",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "NCF2026": [
+  "forecast-derived",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "EGU26AFNO2026": [
+  "forecast-derived",
+  "training-loss",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "DUALSTREAM2026": [
+  "unreported",
+  "training-loss",
+  "unreported",
+  "unverified",
+  "none-reported"
+ ],
+ "JENSENWAKE2026": [
+  "forecast-derived",
+  "unreported",
+  "forecast-input",
+  "unverified",
+  "harm-quantified"
+ ],
+ "MCMAMBA2026": [
+  "forecast-derived",
+  "data-generation",
+  "forecast-input",
+  "unverified",
+  "none-reported"
+ ],
+ "TCNTRANS2026": [
+  "unreported",
+  "unreported",
+  "unreported",
+  "no-code",
+  "none-reported"
+ ],
+ "VARFORMERCQR2026": [
+  "unreported",
+  "training-loss",
+  "unreported",
+  "unverified",
+  "none-reported"
+ ]
+}

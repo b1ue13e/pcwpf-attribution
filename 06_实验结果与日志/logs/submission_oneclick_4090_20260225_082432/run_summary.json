@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-02-25T00:24:32.533659Z",
+  "script": "run_submission_oneclick_4090.py",
+  "args": {
+    "python": "C:\\Users\\32110\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "seed": 42,
+    "seeds": "42,123,2025",
+    "device": "auto",
+    "continue_on_error": true,
+    "dry_run": true,
+    "skip_full_backfill": false,
+    "skip_cross_domain": false,
+    "skip_seed_significance": false,
+    "skip_lite_robustness": false,
+    "skip_rebuild": false,
+    "seq_len": 96,
+    "pred_len": 24,
+    "ssa_pop_size": 8,
+    "ssa_iters": 8,
+    "skip_mamba_crossdomain": false,
+    "mamba_epochs": 4,
+    "mamba_batch_size": 256,
+    "lite_epochs": 3,
+    "lite_batch_size": 256,
+    "lite_lr": 0.001
+  },
+  "steps": [
+    {
+      "name": "phase1_full_backfill",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082432\\phase1_full_backfill.log",
+      "note": ""
+    },
+    {
+      "name": "phase2_cross_domain_completion",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0065212249755859375,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082432\\phase2_cross_domain_completion.log",
+      "note": ""
+    },
+    {
+      "name": "phase3_seed_stability_significance",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0019998550415039062,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082432\\phase3_seed_stability_significance.log",
+      "note": ""
+    },
+    {
+      "name": "phase4_lite_robustness_completion",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0009989738464355469,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082432\\phase4_lite_robustness_completion.log",
+      "note": ""
+    },
+    {
+      "name": "phase5_rebuild_main4_matrices",
+      "ok": true,
+      "return_code": 0,
+      "elapsed_sec": 0.0,
+      "log_file": "C:\\Users\\32110\\Desktop\\论文1\\logs\\submission_oneclick_4090_20260225_082432\\phase5_rebuild_main4_matrices.log",
+      "note": ""
+    }
+  ],
+  "artifacts": {
+    "cross_domain_clean_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\cross_domain_additional_models_clean.csv",
+    "seed_metrics_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\seed_stability_metrics.csv",
+    "lite_robustness_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\lite_robustness_windcn.csv"
+  }
+}

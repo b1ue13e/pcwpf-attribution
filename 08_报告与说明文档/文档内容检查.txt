@@ -1,0 +1,135 @@
+=== 扩充版申请书内容概要 ===
+
+0: 安徽财经大学本科生科研创新基金项目
+1: 申  请  书
+2: 课 题 名 称　受损SCADA场景下风电功率边缘鲁棒预测研究
+3: 课 题 类 别　　　　　重点项目
+4: 课 题 申 请 人　                    李俊宇
+5: 所  在 学  院        统计与应用数学学院
+6: 专 业 班 级　　　24统计二班
+7: 课题指导教师　杜俊涛    副教授
+8: 填 表 日 期　2026年3月9日
+9: 安  徽  财  经  大  学
+10: 二○二六年一月 制
+11: 填 报 说 明
+12: 一、请实事求是、逐条、认真地填写申请书的各项内容。表达应明确、严谨、简洁，字迹工整。
+13: 二、外语要同时用原文和中文表达。第一次出现的缩写词须注明全称。
+14: 三、申请书为A4本双面印制，页面空格不够时请自行加页，并于左侧装订成册。
+15: 四、正式申请时需提交一式一份申请书，需指导教师和所在院系审查、签署意见并加盖印章。
+16: 五、同年度每名指导教师指导的项目原则上不超过两项。
+17: 六、凡格式不符合要求的申请书，不予接收。
+18: 一、基本信息
+19: 项目名称
+20: 受损SCADA场景下风电功率边缘鲁棒预测研究
+21: 项目类别
+22: A
+23: 重点项目
+24: 申请人
+25: 姓  名
+26: 李俊宇
+27: 院系
+28: 班级
+29: 统计与应用数学学院  24统计二班
+30: 申请人
+31: 学 号
+32: 20244353
+33: 联系方式
+34: ljylikezmn999@gmail.com
+35: 项目来源
+36: ☑学生自主立题   □教师推荐选题  □ 导师研究项目
+37: 指导教师姓名
+38: 杜俊涛
+39: 指导教师
+40: 联系方式
+41: dujuntao@aufe.edu.cn
+42: 课题组主要成员
+43: 姓名
+44: 学号
+45: 院系班级
+46: 联系方式
+47: 签名
+48: 李俊宇
+49: 20244353
+50: 24统计二班
+51: 15385300488
+52: 内容摘要
+53: （限200字）
+54: 本项目聚焦风电场监控与数据采集系统（SCADA）受损场景下的短期功率预测问题，面向风电场控制器侧部署需求，研究在缺失、噪声、重复记录与漂移干扰下仍具备稳定精度、较低计算开销与物理可行性的预测方法。项目拟构建稀疏混合专家模型，引入多尺度分解、动态路由与可行性约束，兼顾预测精度、鲁棒性和边缘部署效率，并通过调度价值指标验证模型应用效果。
+55: 二、项目论证
+56: 选题依据
+57: 风电并网规模不断扩大，短期功率预测已不只是统计意义上的误差比较，而会直接影响备用容量安排、弃风控制、平衡成本和调度安全。现有不少研究在清洗后的理想数据集上验证模型，但真实风电场SCADA数据常伴随缺失、重复、异常点、量测漂移和告警混杂等问题，导致模型在实际部署时出现性能塌缩。与此同时，控制器侧部署还受限于批量为1、时延敏感、内存受限等边缘计算条件，难以直接使用参数量大、推理路径固定的深层模型。
+58: 近年来，风电预测研究主要沿三条路线推进：一是分解重构与混合建模，通过分离趋势、波动和突变提升非平稳序列建模能力；二是基于注意力、图结构与时间序列基础模块的深度模型，提升多变量时序表征能力；三是加入物理约束或不确定性建模，抑制超额定功率等不合理输出。但这三类工作往往分别关注“精度”“表示能力”或“物理一致性”，较少将受损SCADA、边缘部署与可行性控制放在同一框架下统筹研究。
+59: 因此，本项目拟以论文现有工作为基础，围绕受损SCADA场景下的风电功率边缘预测展开研究，既回应数据质量不稳定带来的工程难题，也服务学校在统计建模、机器学习与能源数据分析交叉方向的人才培养需求。
+60: 研究内容
+61: 本项目以风电场SCADA时间序列为研究对象，目标是在受损数据输入与边缘部署约束并存的条件下，实现“预测准确、鲁棒稳定、推理轻量、输出可行”的短期风电功率预测。
+62: 主要研究内容包括：1. 数据层：构建受损SCADA场景库，系统刻画缺失、重复、噪声注入、量测漂移与异常扰动对预测任务的影响，并形成统一的数据预处理与评估接口。2. 模型层：设计基于稀疏混合专家（Mixture of Experts, MoE）的预测模型，在主干中融合多尺度分解与轻量时序建模模块，通过Top-K路由与跳跃门控机制，使模型能够对复杂时段分配更多计算、对平稳时段保持轻量推理。3. 可行性层：围绕风电功率物理边界与部署一致性，构建训练期可行性引导机制，约束预测结果避免出现明显超额定、剧烈不合理波动等问题，提升模型在真实场景中的可用性。4. 评估层：除常规R²、RMSE、MAE等指标外，引入鲁棒性切片评估、超限率、调度筛选成本、后备替代天数等应用指标，验证模型对下游决策的实际价值。
+63: 项目重难点在于：一是如何在数据受损条件下保持模型泛化稳定；二是如何在控制器侧部署约束下实现高效推理；三是如何将物理可行性约束嵌入训练过程而不显著牺牲精度。
+64: 创新点主要体现在：一是将受损SCADA、边缘部署和可行性约束三类实际约束放入统一研究问题；二是提出适用于风电短期预测的轻量稀疏MoE框架；三是把预测效果与调度价值联动评价，增强研究的工程解释力。
+65: 研
+66: 究
+67: 方
+68: 案
+69: 研究方法上，项目采用“数据构建—模型设计—对比实验—调度验证”的技术路线。首先基于风电SCADA数据构建干净集与受损集，并统一归一化、切片与噪声注入流程；其次实现DLinear、iTransformer等代表性基线，并在此基础上构建稀疏MoE模型与可行性引导模块；再次从精度、鲁棒性、超限率、时延与参数量等维度开展系统对比；最后将预测结果接入共享调度筛选接口，评估其经济价值。
+70: 研究计划拟分四阶段推进：2026年3-4月完成文献梳理、方案细化与数据整理；2026年5-6月完成模型复现与核心模块实现；2026年7-8月完成鲁棒性实验、消融实验与边缘部署测试；2026年9-10月完成论文修改、项目总结与成果凝练。
+71: 可行性方面，申请人已完成相关英文论文手稿和主要实验，具备一定的统计建模与Python实现基础；指导教师长期从事统计学习与数据分析研究，可提供方法与论文指导；现有工作已经形成可直接延展的实验平台。
+72: 预期成果包括：形成1篇较完整的投稿论文，完成项目研究报告，沉淀可复现实验代码与数据处理流程，并力争在本科生科研项目结项中形成高质量成果。
+73: 前期成果
+74: 申请人已围绕本课题完成英文论文手稿《Wind power forecasting under corrupted SCADA for edge deployment: sparse MoE with feasibility guidance》，完成数据预处理、受损场景构造、基线复现、鲁棒性评估和调度价值评估等主要实验。现已具备继续深化课题、补充对比实验和凝练中文项目成果的良好基础。
+75: 三、经费预算和评审意见
+76: 经费预算
+77: 1. 资料与文献打印：200元；2. 数据整理与调研费用：300元；3. 文具与办公耗材：100元；4. 论文打印、装订与结项材料：200元。合计：800元。
+78: 申请人承诺
+79: 我保证填报内容的真实性。如果获得资助，我与本项目其他成员将遵守《安徽财经大学本科生科研创新基金管理办法》等有关规定，切实保证研究工作时间，按计划认真开展研究工作，按约定承诺及时报送有关材料。
+80: 申请人签名：
+81: 年   月   日
+82: 指导教师
+83: 意见
+84: 该课题选题紧密结合风电功率预测的实际需求，具有较强的理论价值和应用意义。申请人前期已完成较扎实的文献梳理与实验基础，具备继续开展研究的能力。研究方案较为清晰，可行性较强，同意申报重点项目。
+85: 指导教师签名：                             年   月   日
+86: 学院审批
+87: 意见
+88: 单位盖章                                      年   月   日
+89: 学校审批
+90: 意见
+91: 单位盖章                                      年   月   日
+92: （二）研究内容
+93: 2.1 研究目的
+94: 本研究旨在解决受损SCADA数据场景下风电功率边缘预测的鲁棒性问题。具体研究目的包括：
+95: （1）构建稀疏混合专家（MoE）预测模型，通过Top-K路由和Jump Gate跳过机制，在保持预测精度的同时降低边缘计算开销，使模型能够在批量为1、时延敏感的控制器侧环境中高效运行。
+96: （2）设计可行性引导的正则化框架（FG-MoE），利用部署可用的风速代理变量，在训练阶段引入物理包络约束，抑制超额定功率等不合理预测输出，提升模型的物理一致性。
+97: （3）建立统一的SCADA退化评估协议，涵盖高斯噪声、漂移偏差、量化误差及结构化故障（平坦线、尖峰、相关丢失）等多种扰动类型，系统评估模型在非理想数据条件下的鲁棒性。
+98: （4）构建预测-调度耦合评估框架，通过固定的映射与裁剪接口，将预测结果与经济调度模型连接，从运行成本、弃风量和可行性恢复频率等多维度验证预测方法的实际应用价值。
+99: 2.2 研究意义
+100: （1）理论意义：本研究将稀疏混合专家网络引入风电功率预测领域，探索了条件计算在时序预测中的应用，为边缘智能预测提供了新的方法论支撑。同时，可行性引导训练框架的提出，为物理引导机器学习在能源预测中的应用提供了新思路。
+101: （2）实践意义：随着风电装机规模的不断扩大，准确可靠的功率预测对电网安全稳定运行至关重要。本研究针对真实SCADA数据质量问题，提出鲁棒预测解决方案，可直接应用于风电场控制器侧的功率预测系统，具有明确的工程应用价值。
+102: （3）方法创新：本研究将数据退化、边缘部署与可行性控制纳入统一框架，填补了现有研究往往分别关注"精度""表示能力"或"物理一致性"的不足，为构建面向真实部署环境的预测系统提供了完整的方法论参考。
+103: （4）人才培养：本项目依托安徽财经大学统计与应用数学学院，培养学生在统计建模、机器学习与能源数据分析交叉方向的科研能力，服务于学校"新工科"建设和交叉学科人才培养目标。
+104: 2.3 主要研究内容
+105: 本研究围绕受损SCADA场景下的风电功率边缘鲁棒预测，开展以下五个方面的研究工作：
+106: （1）稀疏混合专家预测模型构建。针对边缘计算环境的资源约束，构建Ultra-LSNT（Ultra-Lightweight Sparse Network for Time-series）预测模型。模型采用多尺度分解前端，将输入序列分离为趋势项和季节项；通过并行1D卷积进行多尺度嵌入；核心模块采用Top-K稀疏路由机制，仅激活少量专家网络处理每个时间步的表征；引入Jump Gate条件跳过机制，对简单样本跳过部分计算模块。这种设计使模型能够根据输入复杂度动态分配计算资源，在保证精度的同时显著降低边缘推理开销。
+107: （2）可行性引导训练框架设计。针对预测结果物理一致性问题，提出FG-MoE（Feasibility-Guided MoE）训练框架。利用风机功率曲线参数（切入风速、额定风速、切出风速、额定功率）构建物理可行包络；采用最后时刻观测风速作为代理变量，构建部署可用的可行性约束；在训练目标中增加物理违背惩罚项，包括负功率惩罚、超额定功率惩罚、包络违背惩罚和切出区非零预测惩罚。通过与简单的后处理裁剪对比，验证训练阶段引入物理约束的优越性。
+108: （3）统一鲁棒性评估协议建立。建立系统化的SCADA退化评估协议。连续扰动包括：高斯噪声（模拟传感器测量误差）、漂移偏差（随机游走模拟校准漂移）、量化误差（模拟低精度边缘处理）；结构化故障包括：平坦线（传感器冻结）、尖峰/重尾异常（稀疏脉冲干扰）、相关丢失（多通道共同原因失效）。通过配置不同严重度参数，构建从正常运行到极端压力的多层级测试场景。
+109: （4）预测-调度耦合评估体系。构建预测结果与调度价值的关联评估框架。采用24小时日前调度模型，包含热电机组、风电、储能及向上备用；通过固定映射与裁剪接口处理预测输出；评估指标包括运行成本、弃风量、可行性恢复频率；补充IEEE RTS-24网络的DC-OPF筛选，验证模型在网络约束场景下的适用性。通过120天滚动评估，全面检验预测方法的实际应用价值。
+110: （5）多域迁移与可解释性分析。开展跨域迁移实验，验证模型在美国风电、空气质量、电力负荷等多类型时序数据上的泛化能力；分析稀疏路由的激活模式，探索专家网络与时间特征（如日内周期）、气象条件之间的关联，为模型的可解释性提供实证支撑。
+111: （四）主要参考文献
+112: [1] Khaloie H, Abdollahi A, Shafie-khah M, et al. Coordinated wind-thermal-energy storage offering strategy in energy and spinning reserve markets using a multi-stage model. Applied Energy, 2020, 259: 114168.
+113: [2] Houben N, Cosic A, Stadler M, et al. Optimal dispatch of a multi-energy system microgrid under uncertainty: A renewable energy community in Austria. Applied Energy, 2023, 337: 120913.
+114: [3] Yan J, Li X, Wang H, et al. The economic value of wind power forecasting: a data-driven method and its application in various scenarios. Energy, 2025, 340: 139151.
+115: [4] Leahy K, Gallagher C, O'Donovan P, et al. Issues with Data Quality for Wind Turbine Condition Monitoring and Reliability Analyses. Energies, 2019, 12(2): 201.
+116: [5] Letzgus S. Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models. Wind Energy Science, 2020, 5: 1375-1397.
+117: [6] Renström N, Bangalore P, Highcock E. System-wide anomaly detection in wind turbines using deep autoencoders. Renewable Energy, 2020, 157: 647-659.
+118: [7] Verdone A, Panella M, De Santis E, et al. A review of solar and wind energy forecasting: From single-site to multi-site paradigm. Applied Energy, 2025, 392: 126016.
+119: [8] Zhang Y, Liu K, Qian J. Wind Power Prediction Based on Variational Mode Decomposition and Artificial Intelligence Algorithms: A Review. Energy Conversion and Management, 2021, 227: 113615.
+120: [9] Duan W, Zhang Z, Zhong A, et al. A Robust Wind Power Forecasting Framework for Non-Stationary Signals via Decomposition and Metaheuristic Optimization. Energies, 2025, 18(24): 6515.
+121: [10] Ma Z, Mei G. A hybrid attention-based deep learning approach for wind power prediction. Applied Energy, 2022, 323: 119608.
+122: [11] Zhou H, Zhang S, Peng J, et al. Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting. AAAI, 2021, 35(12): 11106-11115.
+123: [12] Wu H, Xu J, Wang J, et al. Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting. NeurIPS, 2021, 34: 22419-22430.
+124: [13] Nie Y, Nguyen N H, Sinthong P, et al. A Time Series is Worth 64 Words: Long-term Forecasting with Transformers. ICLR, 2023.
+125: [14] Liu Y, Hu T, Zhang H, et al. iTransformer: Inverted Transformers Are Effective for Time Series Forecasting. ICLR, 2024.
+126: [15] Wang S, Wu H, Shi X, et al. TimeMixer: Decomposable Multiscale Mixing for Time Series Forecasting. ICLR, 2024.
+127: [16] Gao M, Zhou S, Gu W, et al. MMGPT4LF: Leveraging an optimized pre-trained GPT-2 model with multi-modal cross-attention for load forecasting. Applied Energy, 2025, 392: 125965.
+128: [17] Wu T, Ling Q. STELLM: Spatio-temporal enhanced pre-trained large language model for wind speed forecasting. Applied Energy, 2024, 375: 124034.
+129: [18] Astolfi D, Castellani F, Garinei A, et al. Data mining techniques for performance analysis of onshore wind farms. Applied Energy, 2015, 148: 220-233.
+130: [19] Martín-Calzada P, Martín Sánchez P, Rodríguez-Sánchez F J, et al. Optimized Sensor Data Preprocessing Using Parameter-Transfer Learning for Wind Turbine Power Curve Modeling. Sensors, 2025, 25(17): 5329.
+131: [20] Liu Y, Wang J, Liu L. Physics-informed reinforcement learning for probabilistic wind power forecasting under extreme events. Applied Energy, 2024, 376: 124068.
+132: [21] Liao W, Fang J, Ye L, et al. Can we trust explainable artificial intelligence in wind power forecasting? Applied Energy, 2024, 376: 124273.

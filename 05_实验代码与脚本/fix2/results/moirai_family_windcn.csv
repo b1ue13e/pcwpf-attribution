@@ -1,0 +1,4 @@
+model_label,backend,model_id,model,scenario,sigma_cfg,sigma_eff,R2,RMSE,MAE,residual_gaussian_pvalue,run_id
+Moirai-2.0-R-Small,uni2ts-moirai2,Salesforce/moirai-2.0-R-small,Moirai-2.0-R-Small,clean,0.0,0.0,0.9686032794415951,0.3738696575164795,0.2217607945203781,0.0,20260307T143730Z_moirai_family_windcn
+Moirai-2.0-R-Small,uni2ts-moirai2,Salesforce/moirai-2.0-R-small,Moirai-2.0-R-Small,gaussian_sigma_eff_015,0.1,0.15000000000000002,0.9429994262754917,0.5037530660629272,0.34376147389411926,0.0,20260307T143730Z_moirai_family_windcn
+Moirai-2.0-R-Small,uni2ts-moirai2,Salesforce/moirai-2.0-R-small,Moirai-2.0-R-Small,gaussian_sigma_eff_060,0.4,0.6000000000000001,0.8874514177441597,0.7078611254692078,0.5239917039871216,0.0,20260307T143730Z_moirai_family_windcn

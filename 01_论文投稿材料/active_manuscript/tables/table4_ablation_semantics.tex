@@ -3,17 +3,18 @@
 \footnotesize
 \renewcommand{\arraystretch}{0.92}
 \setlength{\tabcolsep}{3.5pt}
-\caption{Semantic Classification and Causal Interpretability of Reported Ablation Studies Across the Audited Scoping Corpus ($N=46$).}
+\caption{Semantic Classification and Attributional Interpretability of Reported Ablation Studies Across the Audited Scoping Corpus ($N=46$).}
 \label{tab:ablation_semantics}
 \begin{tabularx}{\textwidth}{p{4.0cm}rrX}
 \toprule
-\textbf{Reported Ablation Semantic} & \textbf{Count ($N=46$)} & \textbf{Proportion (\%)} & \textbf{Causal Validity and Interpretability} \\
+\textbf{Reported Ablation Semantic} & \textbf{Count ($N=46$)} & \textbf{Proportion (\%)} & \textbf{Attributional Validity and Interpretability} \\
 \midrule
-\texttt{constraint-on-off} & 17 & 37.0\% & \textbf{Strict Isolation}: Explicitly evaluates $\lambda=0$ vs. $\lambda > 0$ under identical neural architecture, causally isolating the physical regularizer. \\
+\texttt{constraint-on-off} & 17 & 37.0\% & \textbf{Strict Isolation}: Explicitly evaluates $\lambda=0$ vs. $\lambda > 0$ under identical neural architecture, isolating the physical regularizer under matched parameter capacity. \\
 \texttt{both} & 6 & 13.0\% & \textbf{Strict Isolation}: Executes both isolated parameter toggles ($\lambda=0$) and broader structural ablations, satisfying unconfounded control. \\
 \texttt{module-ablation} & 23 & 50.0\% & \textbf{Broader Architecture}: Excises an entire neural submodule (e.g., spatial GNN branch); evaluates collective module capacity rather than isolating the constraint. \\
 \midrule
-\textbf{Total Strict Isolation} & \textbf{23} & \textbf{50.0\%} & Only approximately half of the audited literature causally isolates the physical constraint itself. \\
+\textbf{Total Strict Isolation} & \textbf{23} & \textbf{50.0\%} & Only approximately half of the audited literature uses an ablation that attempts to isolate the physical constraint itself. \\
 \bottomrule
 \end{tabularx}
 \end{table*}
+

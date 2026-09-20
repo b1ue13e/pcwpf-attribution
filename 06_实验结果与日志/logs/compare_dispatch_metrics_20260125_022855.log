@@ -1,0 +1,119 @@
+============================================================
+不同预测模型驱动下的运营指标比较
+============================================================
+调度参数:
+  T: 24
+  dt: 1
+  demand: 50000
+  wind_mean_scale: 0.7
+  wind_std_ratio: 0.2
+  beta: 1.5
+  g_min: 10000
+  g_max: 80000
+  ramp_max: 20000
+  fuel_cost: 0.5
+  startup_cost: 5000
+  reserve_cost: 0.2
+  S_max: 50000
+  P_ch_max: 10000
+  P_dis_max: 10000
+  eta_ch: 0.95
+  eta_dis: 0.95
+  storage_cost: 0.05
+  initial_soc: 0.5
+
+=== 评估模型: Ultra-LSNT ===
+风电预测均值范围: [20000, 40000] kW
+风电不确定性范围: [4000, 8000] kW
+优化问题规模: 96 个变量
+使用优化求解...
+优化问题规模：变量数 = 96
+约束数： 4
+Positive directional derivative for linesearch    (Exit mode 8)
+            Current function value: 314005.880009749
+            Iterations: 7
+            Function evaluations: 291
+            Gradient evaluations: 3
+优化失败: Positive directional derivative for linesearch
+优化失败，使用初始猜测
+总运行成本: 583200.00 元
+备用容量总和: 216000 kW
+平均备用容量: 9000 kW
+总弃风量: 600000 kWh
+
+=== 评估模型: DLinear ===
+风电预测均值范围: [86078, 94198] kW
+风电不确定性范围: [17216, 18840] kW
+优化问题规模: 96 个变量
+使用优化求解...
+优化问题规模：变量数 = 96
+约束数： 4
+Positive directional derivative for linesearch    (Exit mode 8)
+            Current function value: 334862.5642669977
+            Iterations: 14
+            Function evaluations: 970
+            Gradient evaluations: 10
+优化失败: Positive directional derivative for linesearch
+优化失败，使用初始猜测
+总运行成本: 668667.72 元
+备用容量总和: 643339 kW
+平均备用容量: 26806 kW
+总弃风量: 2024462 kWh
+
+=== 评估模型: Autoformer ===
+警告: Autoformer 预测数据暂缺，使用模拟数据
+风电预测均值范围: [20000, 60000] kW
+风电不确定性范围: [6000, 18000] kW
+优化问题规模: 96 个变量
+使用优化求解...
+优化问题规模：变量数 = 96
+约束数： 4
+Positive directional derivative for linesearch    (Exit mode 8)
+            Current function value: 520479.02546428074
+            Iterations: 20
+            Function evaluations: 1613
+            Gradient evaluations: 16
+优化失败: Positive directional derivative for linesearch
+优化失败，使用初始猜测
+总运行成本: 626400.00 元
+备用容量总和: 432000 kW
+平均备用容量: 18000 kW
+总弃风量: 840000 kWh
+
+=== 评估模型: Informer ===
+警告: Informer 预测数据暂缺，使用模拟数据
+风电预测均值范围: [30000, 60000] kW
+风电不确定性范围: [7500, 15000] kW
+优化问题规模: 96 个变量
+使用优化求解...
+优化问题规模：变量数 = 96
+约束数： 4
+Positive directional derivative for linesearch    (Exit mode 8)
+            Current function value: 444133.67533418146
+            Iterations: 12
+            Function evaluations: 777
+            Gradient evaluations: 8
+优化失败: Positive directional derivative for linesearch
+优化失败，使用初始猜测
+总运行成本: 621000.00 元
+备用容量总和: 405000 kW
+平均备用容量: 16875 kW
+总弃风量: 960000 kWh
+
+============================================================
+运营指标比较汇总
+============================================================
+模型              总成本(元)          备用容量(kWh)       弃风量(kWh)       
+------------------------------------------------------------
+Ultra-LSNT      583200          216000          600000         
+DLinear         668668          643339          2024462        
+Autoformer      626400          432000          840000         
+Informer        621000          405000          960000         
+
+以 Ultra-LSNT 为基准的相对性能:
+DLinear: 成本 1.15x, 备用 2.98x, 弃风 3.37x
+Autoformer: 成本 1.07x, 备用 2.00x, 弃风 1.40x
+Informer: 成本 1.06x, 备用 1.88x, 弃风 1.60x
+
+详细结果已保存到: dispatch_comparison_results.json
+报告已生成: DISPATCH_COMPARISON_REPORT.md

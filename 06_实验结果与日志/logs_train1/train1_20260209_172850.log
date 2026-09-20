@@ -1,0 +1,941 @@
+================ train1 full pipeline ================
+Start time: 2026-02-09 17:28:50
+Root dir  : /root/.cache/论文
+Python    : python3
+Log dir   : logs_train1
+DRY_RUN   : 0
+Baseline2 : timemixer
+======================================================
+
+[2026-02-09 17:28:50] [STEP] multi_domain_ultra
+[2026-02-09 17:28:50] [CMD ] python3 evaluate_multi_domain.py
+Summarizing multi-domain experimental results...
+============================================================
+
+Ultra-LSNT Multi-Domain Generalization Evaluation
+---------------------------------------------------------------------------
+    Dataset R2 Score      RMSE       MAE Skip Rate  Status
+  Wind (CN)   0.8728 9080.5547 7171.4165      0.0% Success
+  Wind (US)   0.7878    0.4556    0.2891     11.4% Success
+Air Quality   0.4861   32.2145   19.8663      0.0% Success
+GEFCom Load   0.7554 2836.9788 2049.4832      0.0% Success
+---------------------------------------------------------------------------
+
+Table saved as: table_multi_domain.csv
+Note: Use this data for the 'Results' section in your paper.
+[2026-02-09 17:28:51] [ OK ] multi_domain_ultra
+
+[2026-02-09 17:28:51] [STEP] multi_domain_baselines
+[2026-02-09 17:28:51] [CMD ] python3 run_multi_domain_baselines.py --model2 timemixer --epochs 10 --batch-size 512
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+Using device: cuda
+Config: RunConfig(model2='timemixer', seq_len=96, pred_len=24, epochs=10, batch_size=512, lr=0.001, patience=5, d_model=128, nhead=4, num_layers=2, dropout=0.1, patch_len=16, stride=8, seed=42)
+
+=== Wind (CN) | target=power ===
+加载数据: /root/.cache/论文/wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+R2: DLinear=0.9412, timemixer=0.9038
+
+=== Wind (US) | target=power (MW) ===
+加载数据: /root/.cache/论文/wind_us.csv
+   原始形状: (105120, 11)
+   列数: 11
+   缺失值已全部处理
+   最终形状: (105120, 11)
+   特征: ['Year', 'Month', 'Day', 'Hour', 'Minute', 'wind speed at 100m (m/s)', 'hour_sin', 'hour_cos', 'day_sin', 'day_cos', 'power (MW)']
+   数据范围: [-1.0000, 2012.0000]
+   训练样本: 73465
+   验证样本: 15649
+   测试样本: 15649
+R2: DLinear=0.8806, timemixer=0.7893
+
+=== Air Quality | target=AQI ===
+加载数据: /root/.cache/论文/air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+R2: DLinear=0.3449, timemixer=0.3772
+
+=== GEFCom Load | target=load ===
+加载数据: /root/.cache/论文/gefcom_ready.csv
+   原始形状: (38070, 2)
+   列数: 2
+   删除了时间戳列: ['date']
+   缺失值已全部处理
+   最终形状: (38070, 1)
+   特征: ['load']
+   数据范围: [7319.0000, 45547.0000]
+   训练样本: 26530
+   验证样本: 5591
+   测试样本: 5592
+R2: DLinear=0.7315, timemixer=0.7191
+
+Saved: /root/.cache/论文/results/multi_domain_baselines_r2_20260209_173300.csv
+Saved: /root/.cache/论文/results/multi_domain_baselines_r2_latest.csv
+Saved: /root/.cache/论文/results/multi_domain_baselines_r2_20260209_173300.json
+[2026-02-09 17:33:01] [ OK ] multi_domain_baselines
+
+[2026-02-09 17:33:01] [STEP] lightgbm_baseline
+[2026-02-09 17:33:01] [CMD ] python3 run_gbdt.py
+🌲 启动 LightGBM 基线训练 (能源界守门员)...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   🔄 正在展平数据...
+   训练集形状: (83968, 768)
+   ⏳ 开始训练 (这通常很快)...
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.091877 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000172
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.100289 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000190
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.093970 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000190
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089976 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000233
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.093680 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000249
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.097349 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000271
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089789 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000259
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.094135 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000287
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.094131 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000304
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.092543 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000338
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090430 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000342
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.094531 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000377
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089408 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000399
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.092971 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000442
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.093828 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000458
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090143 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000495
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090150 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000527
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089366 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000574
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.091988 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000588
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.094592 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000618
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.114681 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000644
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.108753 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000676
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.117723 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000718
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.101211 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 132973
+[LightGBM] [Info] Number of data points in the train set: 83968, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000729
+   ✅ 训练完成，耗时: 909.04s
+   🚀 开始预测...
+
+📊 LightGBM 最终成绩:
+   R²  : 0.9065
+   MSE : 60577473.5685
+   MAE : 5572.4571
+   💾 预测结果已保存至 preds_lgbm.npy
+[2026-02-09 17:48:17] [ OK ] lightgbm_baseline
+
+[2026-02-09 17:48:17] [STEP] patchtst_comparison
+[2026-02-09 17:48:17] [CMD ] python3 run_dm_patchtst_fixed.py
+✅ 成功导入DM测试函数
+================================================================================
+运行DM测试：Ultra-LSNT vs PatchTST (ICLR 2023)
+================================================================================
+
+🤖 加载Ultra-LSNT预测...
+🤖 加载Ultra-LSNT预测（运行推理）...
+🤖 加载 Ultra-LSNT 进行预测...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+✅ 从 checkpoints_ts/main/model_config.json 加载模型配置
+⚠️ 跳过权重 blocks.0.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+⚠️ 跳过权重 blocks.1.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+⚠️ 跳过权重 blocks.2.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+✅ 加载权重，成功加载 152/167 个参数
+   Ultra-LSNT预测样本数: 434664
+
+🤖 加载PatchTST预测...
+✅ 加载PatchTST预测: 434664 个样本
+
+📊 样本统计:
+   样本数: 434664
+   实际值范围: [14250.00, 131839.00]
+   实际值均值: 40835.40 ± 25457.90
+
+📈 性能对比:
+   Ultra-LSNT:   R²=0.8727, RMSE=9084.11, MAE=7182.74
+   PatchTST:     R²=0.8666, RMSE=9298.08, MAE=7342.16
+   差异 (Ultra-LSNT - PatchTST):
+     ΔR²: 0.0061
+     ΔRMSE: -213.98
+     ΔMAE: -159.42
+
+⚔️ 运行DM Test (Newey-West HAC)...
+   DM统计量: -5.9716
+   P值 (单侧): 1.1748e-09
+   结论: **Ultra-LSNT显著优于PatchTST (p<0.01)**
+   (负DM统计量表示Ultra-LSNT误差更小)
+
+💾 结果已保存: dm_results/dm_patchtst_20260209_174821.json
+
+📋 LaTeX格式结果表:
+\begin{table}[htbp]
+\centering
+\caption{Diebold-Mariano显著性检验结果 (Ultra-LSNT vs PatchTST - ICLR 2023)}
+\label{tab:dm_patchtst}
+\begin{tabular}{lccc}
+\hline
+模型 & R² & RMSE & DM统计量 \\
+\hline
+Ultra-LSNT & 0.8727 & 9084.11 & --- \\
+PatchTST & 0.8666 & 9298.08 & -5.9716 \\
+\hline
+\multicolumn{4}{l}{p值 (单侧): 1.1748e-09} \\
+\multicolumn{4}{l}{结论: **Ultra-LSNT显著优于PatchTST (p<0.01)**} \\
+\hline
+\end{tabular}
+\end{table}
+
+✅ DM测试完成!
+💡 关键发现: **Ultra-LSNT显著优于PatchTST (p<0.01)**
+[2026-02-09 17:48:22] [ OK ] patchtst_comparison
+
+[2026-02-09 17:48:22] [STEP] ultra_lsnt_lite_optimized
+[2026-02-09 17:48:22] [CMD ] python3 test_ultra_lsnt_lite_optimized.py
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+============================================================
+🚀 Ultra-LSNT-Lite优化效率基准测试
+============================================================
+测试设备: cuda
+GPU: NVIDIA GeForce RTX 4090 D
+CUDA版本: 11.8
+
+📊 加载数据...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+数据形状: (121528, 8), 输入维度: 8
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+
+============================================================
+1. 模型初始化与参数量统计（RTX 4090适配配置）
+============================================================
+优化配置:
+  input_dim: 8
+  hidden_dim: 256
+  seq_len: 96
+  pred_len: 24
+  num_blocks: 2
+  num_experts: 4
+  top_k: 2
+  scales: [1, 2, 4]
+
+模型总参数量: 5,339,672
+可训练参数量: 5,339,672
+模型大小 (MB): 20.37
+🔄 应用模型优化...
+  → 启用torch.compile (模式='max-autotune')
+  ✅ torch.compile成功
+
+============================================================
+2. 推理延迟测试（应用优化）
+============================================================
+充分预热模型...
+AUTOTUNE addmm(98304x256, 98304x8, 8x256)
+  triton_mm_6 0.0604 ms 100.0%
+  triton_mm_8 0.0604 ms 99.9%
+  triton_mm_0 0.0606 ms 99.7%
+  triton_mm_1 0.0614 ms 98.3%
+  triton_mm_2 0.0614 ms 98.3%
+  triton_mm_3 0.0614 ms 98.3%
+  triton_mm_4 0.0614 ms 98.3%
+  triton_mm_7 0.0614 ms 98.3%
+  bias_addmm 0.0635 ms 95.1%
+  triton_mm_5 0.0645 ms 93.6%
+SingleProcess AUTOTUNE takes 3.4499 seconds
+AUTOTUNE mm(98304x768, 768x256)
+  triton_mm_13 0.2796 ms 100.0%
+  triton_mm_14 0.2867 ms 97.5%
+  triton_mm_12 0.2877 ms 97.2%
+  mm 0.2898 ms 96.5%
+  triton_mm_15 0.2908 ms 96.1%
+  triton_mm_19 0.3009 ms 92.9%
+  triton_mm_11 0.3369 ms 83.0%
+  triton_mm_18 0.3370 ms 83.0%
+  triton_mm_16 0.4095 ms 68.3%
+  triton_mm_17 0.4157 ms 67.2%
+SingleProcess AUTOTUNE takes 4.4764 seconds
+AUTOTUNE bmm(96x1024x256, 96x256x768)
+  triton_bmm_25 0.2857 ms 100.0%
+  triton_bmm_24 0.2888 ms 98.9%
+  triton_bmm_26 0.2980 ms 95.9%
+  triton_bmm_27 0.2990 ms 95.5%
+  bmm 0.3041 ms 93.9%
+  triton_bmm_30 0.3072 ms 93.0%
+  triton_bmm_23 0.3164 ms 90.3%
+  triton_bmm_31 0.3297 ms 86.6%
+  triton_bmm_29 0.4352 ms 65.6%
+  triton_bmm_28 0.4413 ms 64.7%
+SingleProcess AUTOTUNE takes 4.1125 seconds
+AUTOTUNE bmm(4096x96x64, 4096x64x96)
+  triton_bmm_36 0.2058 ms 100.0%
+  triton_bmm_38 0.2058 ms 100.0%
+  triton_bmm_42 0.2079 ms 99.0%
+  triton_bmm_37 0.2099 ms 98.0%
+  triton_bmm_43 0.2099 ms 98.0%
+  triton_bmm_44 0.2099 ms 98.0%
+  bmm 0.2109 ms 97.6%
+  triton_bmm_35 0.2109 ms 97.6%
+  triton_bmm_39 0.2109 ms 97.6%
+  triton_bmm_45 0.2118 ms 97.2%
+SingleProcess AUTOTUNE takes 3.8379 seconds
+AUTOTUNE bmm(4096x96x96, 4096x96x64)
+  triton_bmm_49 0.2171 ms 100.0%
+  triton_bmm_54 0.2181 ms 99.5%
+  triton_bmm_55 0.2181 ms 99.5%
+  triton_bmm_51 0.2191 ms 99.1%
+  triton_bmm_53 0.2191 ms 99.1%
+  triton_bmm_48 0.2202 ms 98.6%
+  triton_bmm_50 0.2202 ms 98.6%
+  triton_bmm_47 0.2209 ms 98.3%
+  triton_bmm_52 0.2222 ms 97.7%
+  triton_bmm_56 0.2231 ms 97.3%
+SingleProcess AUTOTUNE takes 3.6588 seconds
+AUTOTUNE mm(98304x256, 256x256)
+  mm 0.1260 ms 100.0%
+  triton_mm_62 0.1269 ms 99.3%
+  triton_mm_60 0.1270 ms 99.2%
+  triton_mm_61 0.1270 ms 99.2%
+  triton_mm_63 0.1280 ms 98.4%
+  triton_mm_67 0.1280 ms 98.4%
+  triton_mm_66 0.1318 ms 95.5%
+  triton_mm_59 0.1321 ms 95.3%
+  triton_mm_64 0.1628 ms 77.4%
+  triton_mm_65 0.1649 ms 76.4%
+SingleProcess AUTOTUNE takes 3.9976 seconds
+AUTOTUNE mm(857x256, 256x512)
+  triton_mm_79 0.0072 ms 100.0%
+  triton_mm_77 0.0075 ms 95.7%
+  mm 0.0082 ms 87.5%
+  triton_mm_76 0.0082 ms 87.5%
+  triton_mm_72 0.0092 ms 77.8%
+  triton_mm_73 0.0092 ms 77.8%
+  triton_mm_74 0.0092 ms 77.8%
+  triton_mm_75 0.0092 ms 77.8%
+  triton_mm_80 0.0092 ms 77.8%
+  triton_mm_71 0.0102 ms 70.0%
+SingleProcess AUTOTUNE takes 3.8930 seconds
+AUTOTUNE addmm(857x256, 857x512, 512x256)
+  triton_mm_88 0.0101 ms 100.0%
+  triton_mm_89 0.0102 ms 98.7%
+  triton_mm_92 0.0102 ms 98.7%
+  bias_addmm 0.0103 ms 98.4%
+  triton_mm_91 0.0113 ms 89.8%
+  addmm 0.0123 ms 82.3%
+  triton_mm_86 0.0123 ms 82.3%
+  triton_mm_87 0.0123 ms 82.3%
+  triton_mm_84 0.0133 ms 76.0%
+  triton_mm_85 0.0143 ms 70.5%
+SingleProcess AUTOTUNE takes 4.5320 seconds
+AUTOTUNE mm(554x256, 256x512)
+  triton_mm_101 0.0072 ms 100.0%
+  triton_mm_103 0.0072 ms 100.0%
+  triton_mm_100 0.0073 ms 98.2%
+  triton_mm_104 0.0080 ms 89.2%
+  mm 0.0082 ms 87.5%
+  triton_mm_98 0.0082 ms 87.5%
+  triton_mm_99 0.0082 ms 87.5%
+  triton_mm_96 0.0092 ms 77.8%
+  triton_mm_97 0.0092 ms 77.8%
+  triton_mm_95 0.0095 ms 75.3%
+SingleProcess AUTOTUNE takes 3.9501 seconds
+AUTOTUNE addmm(554x256, 554x512, 512x256)
+  triton_mm_113 0.0087 ms 100.0%
+  triton_mm_112 0.0092 ms 94.4%
+  triton_mm_116 0.0092 ms 94.4%
+  triton_mm_115 0.0094 ms 92.2%
+  bias_addmm 0.0095 ms 91.6%
+  triton_mm_111 0.0113 ms 77.3%
+  addmm 0.0123 ms 70.8%
+  triton_mm_108 0.0123 ms 70.8%
+  triton_mm_109 0.0123 ms 70.8%
+  triton_mm_110 0.0123 ms 70.8%
+SingleProcess AUTOTUNE takes 4.5440 seconds
+AUTOTUNE mm(360x256, 256x512)
+  mm 0.0072 ms 100.0%
+  triton_mm_124 0.0072 ms 100.0%
+  triton_mm_125 0.0072 ms 100.0%
+  triton_mm_128 0.0072 ms 100.0%
+  triton_mm_127 0.0081 ms 88.5%
+  triton_mm_121 0.0082 ms 87.5%
+  triton_mm_122 0.0082 ms 87.5%
+  triton_mm_123 0.0082 ms 87.5%
+  triton_mm_120 0.0083 ms 86.2%
+  triton_mm_119 0.0092 ms 77.8%
+SingleProcess AUTOTUNE takes 1.3948 seconds
+AUTOTUNE addmm(360x256, 360x512, 512x256)
+  bias_addmm 0.0083 ms 100.0%
+  triton_mm_140 0.0084 ms 98.9%
+  triton_mm_136 0.0092 ms 89.9%
+  triton_mm_137 0.0092 ms 89.9%
+  triton_mm_139 0.0092 ms 89.9%
+  triton_mm_134 0.0113 ms 73.6%
+  triton_mm_135 0.0115 ms 71.9%
+  addmm 0.0123 ms 67.4%
+  triton_mm_132 0.0123 ms 67.4%
+  triton_mm_133 0.0123 ms 67.4%
+SingleProcess AUTOTUNE takes 1.5134 seconds
+AUTOTUNE mm(277x256, 256x512)
+  triton_mm_148 0.0064 ms 100.0%
+  triton_mm_152 0.0068 ms 93.0%
+  mm 0.0072 ms 88.8%
+  triton_mm_149 0.0072 ms 88.8%
+  triton_mm_151 0.0072 ms 88.8%
+  triton_mm_145 0.0082 ms 77.7%
+  triton_mm_146 0.0082 ms 77.7%
+  triton_mm_147 0.0082 ms 77.7%
+  triton_mm_144 0.0091 ms 69.7%
+  triton_mm_143 0.0092 ms 69.1%
+SingleProcess AUTOTUNE takes 1.3943 seconds
+AUTOTUNE addmm(277x256, 277x512, 512x256)
+  bias_addmm 0.0082 ms 100.0%
+  triton_mm_164 0.0082 ms 100.0%
+  triton_mm_160 0.0089 ms 92.4%
+  triton_mm_161 0.0090 ms 91.3%
+  triton_mm_163 0.0092 ms 88.9%
+  triton_mm_156 0.0113 ms 72.7%
+  triton_mm_158 0.0113 ms 72.7%
+  triton_mm_159 0.0113 ms 72.7%
+  addmm 0.0123 ms 66.7%
+  triton_mm_157 0.0123 ms 66.7%
+SingleProcess AUTOTUNE takes 1.5084 seconds
+AUTOTUNE addmm(1024x1024, 1024x256, 256x1024)
+  triton_mm_175 0.0121 ms 100.0%
+  triton_mm_171 0.0123 ms 98.4%
+  triton_mm_169 0.0123 ms 98.1%
+  triton_mm_167 0.0133 ms 90.9%
+  triton_mm_168 0.0133 ms 90.9%
+  triton_mm_170 0.0133 ms 90.9%
+  triton_mm_173 0.0143 ms 84.8%
+  triton_mm_172 0.0143 ms 84.4%
+  triton_mm_176 0.0143 ms 84.4%
+  bias_addmm 0.0154 ms 78.8%
+SingleProcess AUTOTUNE takes 4.4082 seconds
+AUTOTUNE mm(1024x1024, 1024x256)
+  mm 0.0132 ms 100.0%
+  triton_mm_187 0.0174 ms 75.9%
+  triton_mm_188 0.0174 ms 75.9%
+  triton_mm_184 0.0184 ms 71.7%
+  triton_mm_185 0.0195 ms 67.9%
+  triton_mm_182 0.0215 ms 61.5%
+  triton_mm_183 0.0215 ms 61.5%
+  triton_mm_181 0.0236 ms 56.1%
+  triton_mm_180 0.0266 ms 49.6%
+  triton_mm_179 0.0287 ms 46.1%
+SingleProcess AUTOTUNE takes 4.2239 seconds
+AUTOTUNE mm(656x256, 256x512)
+  mm 0.0082 ms 100.0%
+  triton_mm_196 0.0082 ms 100.0%
+  triton_mm_197 0.0082 ms 100.0%
+  triton_mm_199 0.0082 ms 100.0%
+  triton_mm_200 0.0082 ms 100.0%
+  triton_mm_192 0.0092 ms 88.9%
+  triton_mm_193 0.0092 ms 88.9%
+  triton_mm_194 0.0092 ms 88.9%
+  triton_mm_195 0.0092 ms 88.9%
+  triton_mm_191 0.0102 ms 80.0%
+SingleProcess AUTOTUNE takes 3.9233 seconds
+AUTOTUNE addmm(656x256, 656x512, 512x256)
+  triton_mm_208 0.0092 ms 100.0%
+  triton_mm_209 0.0092 ms 100.0%
+  triton_mm_212 0.0092 ms 100.0%
+  bias_addmm 0.0102 ms 90.1%
+  triton_mm_211 0.0102 ms 90.0%
+  triton_mm_204 0.0123 ms 75.0%
+  triton_mm_206 0.0123 ms 75.0%
+  triton_mm_207 0.0123 ms 75.0%
+  triton_mm_205 0.0124 ms 74.3%
+  addmm 0.0133 ms 69.2%
+SingleProcess AUTOTUNE takes 4.5781 seconds
+AUTOTUNE mm(967x256, 256x512)
+  triton_mm_223 0.0082 ms 100.0%
+  triton_mm_218 0.0085 ms 96.4%
+  triton_mm_219 0.0090 ms 91.1%
+  mm 0.0092 ms 88.9%
+  triton_mm_217 0.0092 ms 88.9%
+  triton_mm_220 0.0092 ms 88.9%
+  triton_mm_221 0.0092 ms 88.9%
+  triton_mm_216 0.0102 ms 80.0%
+  triton_mm_224 0.0102 ms 80.0%
+  triton_mm_215 0.0103 ms 79.5%
+SingleProcess AUTOTUNE takes 1.3968 seconds
+AUTOTUNE addmm(967x256, 967x512, 512x256)
+  triton_mm_236 0.0111 ms 100.0%
+  bias_addmm 0.0113 ms 98.2%
+  triton_mm_232 0.0113 ms 98.2%
+  triton_mm_235 0.0113 ms 98.2%
+  addmm 0.0123 ms 90.0%
+  triton_mm_233 0.0123 ms 90.0%
+  triton_mm_230 0.0133 ms 83.1%
+  triton_mm_231 0.0133 ms 83.1%
+  triton_mm_228 0.0143 ms 77.1%
+  triton_mm_229 0.0143 ms 77.1%
+SingleProcess AUTOTUNE takes 1.7370 seconds
+AUTOTUNE mm(148x256, 256x512)
+  triton_mm_244 0.0061 ms 100.0%
+  triton_mm_245 0.0061 ms 100.0%
+  triton_mm_247 0.0061 ms 100.0%
+  triton_mm_248 0.0061 ms 100.0%
+  mm 0.0062 ms 99.2%
+  triton_mm_243 0.0080 ms 76.8%
+  triton_mm_240 0.0082 ms 75.0%
+  triton_mm_241 0.0082 ms 75.0%
+  triton_mm_242 0.0082 ms 75.0%
+  triton_mm_239 0.0092 ms 66.7%
+SingleProcess AUTOTUNE takes 1.3989 seconds
+AUTOTUNE addmm(148x256, 148x512, 512x256)
+  bias_addmm 0.0072 ms 100.0%
+  triton_mm_260 0.0074 ms 97.0%
+  triton_mm_256 0.0082 ms 87.5%
+  triton_mm_257 0.0082 ms 87.5%
+  triton_mm_259 0.0082 ms 87.5%
+  addmm 0.0113 ms 63.6%
+  triton_mm_252 0.0113 ms 63.6%
+  triton_mm_253 0.0113 ms 63.6%
+  triton_mm_254 0.0113 ms 63.6%
+  triton_mm_255 0.0113 ms 63.6%
+SingleProcess AUTOTUNE takes 1.5149 seconds
+AUTOTUNE mm(1024x256, 256x512)
+  mm 0.0092 ms 100.0%
+  triton_mm_315 0.0092 ms 100.0%
+  triton_mm_319 0.0092 ms 100.0%
+  triton_mm_314 0.0092 ms 99.7%
+  triton_mm_313 0.0102 ms 90.0%
+  triton_mm_316 0.0102 ms 90.0%
+  triton_mm_317 0.0102 ms 90.0%
+  triton_mm_320 0.0103 ms 89.7%
+  triton_mm_312 0.0110 ms 84.0%
+  triton_mm_311 0.0113 ms 81.8%
+SingleProcess AUTOTUNE takes 1.3993 seconds
+AUTOTUNE addmm(1024x24, 1024x512, 512x24)
+  bias_addmm 0.0082 ms 100.0%
+  triton_mm_329 0.0082 ms 99.8%
+  triton_mm_331 0.0082 ms 99.8%
+  triton_mm_332 0.0082 ms 99.8%
+  triton_mm_328 0.0089 ms 91.6%
+  triton_mm_324 0.0092 ms 88.7%
+  triton_mm_326 0.0092 ms 88.7%
+  triton_mm_327 0.0092 ms 88.7%
+  addmm 0.0100 ms 81.4%
+  triton_mm_325 0.0113 ms 72.6%
+SingleProcess AUTOTUNE takes 3.6447 seconds
+AUTOTUNE mm(828x256, 256x512)
+  triton_mm_343 0.0072 ms 100.0%
+  triton_mm_341 0.0072 ms 99.1%
+  mm 0.0082 ms 87.5%
+  triton_mm_338 0.0082 ms 87.5%
+  triton_mm_339 0.0082 ms 87.5%
+  triton_mm_340 0.0082 ms 87.5%
+  triton_mm_336 0.0092 ms 78.0%
+  triton_mm_337 0.0092 ms 77.8%
+  triton_mm_344 0.0092 ms 77.8%
+  triton_mm_335 0.0093 ms 77.2%
+SingleProcess AUTOTUNE takes 1.3994 seconds
+AUTOTUNE addmm(828x256, 828x512, 512x256)
+  bias_addmm 0.0102 ms 100.0%
+  triton_mm_352 0.0102 ms 100.0%
+  triton_mm_353 0.0102 ms 100.0%
+  triton_mm_356 0.0102 ms 100.0%
+  triton_mm_355 0.0113 ms 90.9%
+  addmm 0.0123 ms 83.3%
+  triton_mm_350 0.0123 ms 83.3%
+  triton_mm_351 0.0123 ms 83.3%
+  triton_mm_348 0.0133 ms 76.9%
+  triton_mm_349 0.0143 ms 71.4%
+SingleProcess AUTOTUNE takes 1.5141 seconds
+  预热迭代 1/10
+  预热迭代 3/10
+  预热迭代 5/10
+  预热迭代 7/10
+  预热迭代 9/10
+单次推理测试...
+单次推理延迟: 23.63 ms
+批量推理测试（20批次）...
+AUTOTUNE addmm(196608x256, 196608x8, 8x256)
+  triton_mm_367 0.1190 ms 100.0%
+  triton_mm_359 0.1196 ms 99.6%
+  triton_mm_360 0.1198 ms 99.4%
+  triton_mm_361 0.1198 ms 99.4%
+  triton_mm_362 0.1198 ms 99.4%
+  triton_mm_363 0.1198 ms 99.4%
+  triton_mm_365 0.1198 ms 99.4%
+  triton_mm_366 0.1198 ms 99.4%
+  bias_addmm 0.1208 ms 98.5%
+  triton_mm_369 0.1219 ms 97.7%
+SingleProcess AUTOTUNE takes 3.5150 seconds
+AUTOTUNE mm(196608x768, 768x256)
+  triton_mm_374 0.5489 ms 100.0%
+  triton_mm_373 0.5540 ms 99.1%
+  triton_mm_372 0.5580 ms 98.4%
+  triton_mm_371 0.5601 ms 98.0%
+  mm 0.5683 ms 96.6%
+  triton_mm_378 0.6001 ms 91.5%
+  triton_mm_377 0.6308 ms 87.0%
+  triton_mm_370 0.6328 ms 86.7%
+  triton_mm_375 0.8146 ms 67.4%
+  triton_mm_376 0.8192 ms 67.0%
+SingleProcess AUTOTUNE takes 4.5998 seconds
+AUTOTUNE bmm(96x2048x256, 96x256x768)
+  triton_bmm_384 0.5652 ms 100.0%
+  triton_bmm_383 0.5765 ms 98.0%
+  bmm 0.5868 ms 96.3%
+  triton_bmm_385 0.5970 ms 94.7%
+  triton_bmm_389 0.5970 ms 94.7%
+  triton_bmm_386 0.5980 ms 94.5%
+  triton_bmm_382 0.6236 ms 90.6%
+  triton_bmm_390 0.6840 ms 82.6%
+  triton_bmm_388 0.9262 ms 61.0%
+  triton_bmm_387 0.9400 ms 60.1%
+SingleProcess AUTOTUNE takes 4.2603 seconds
+AUTOTUNE bmm(8192x96x64, 8192x64x96)
+  triton_bmm_397 0.3972 ms 100.0%
+  triton_bmm_395 0.3973 ms 100.0%
+  triton_bmm_401 0.3994 ms 99.5%
+  triton_bmm_394 0.4004 ms 99.2%
+  triton_bmm_396 0.4004 ms 99.2%
+  triton_bmm_398 0.4004 ms 99.2%
+  triton_bmm_402 0.4004 ms 99.2%
+  triton_bmm_403 0.4004 ms 99.2%
+  bmm 0.4014 ms 99.0%
+  triton_bmm_399 0.4024 ms 98.7%
+SingleProcess AUTOTUNE takes 1.5594 seconds
+AUTOTUNE bmm(8192x96x96, 8192x96x64)
+  triton_bmm_408 0.4096 ms 100.0%
+  triton_bmm_412 0.4096 ms 100.0%
+  triton_bmm_409 0.4103 ms 99.8%
+  triton_bmm_407 0.4106 ms 99.8%
+  triton_bmm_410 0.4106 ms 99.8%
+  triton_bmm_411 0.4106 ms 99.8%
+  triton_bmm_414 0.4106 ms 99.8%
+  bmm 0.4116 ms 99.5%
+  triton_bmm_413 0.4116 ms 99.5%
+  triton_bmm_406 0.4126 ms 99.3%
+SingleProcess AUTOTUNE takes 3.7438 seconds
+AUTOTUNE mm(196608x256, 256x256)
+  mm 0.2355 ms 100.0%
+  triton_mm_419 0.2376 ms 99.1%
+  triton_mm_420 0.2376 ms 99.1%
+  triton_mm_421 0.2376 ms 99.1%
+  triton_mm_422 0.2376 ms 99.1%
+  triton_mm_425 0.2397 ms 98.3%
+  triton_mm_418 0.2437 ms 96.6%
+  triton_mm_426 0.2437 ms 96.6%
+  triton_mm_423 0.3092 ms 76.2%
+  triton_mm_424 0.3215 ms 73.2%
+SingleProcess AUTOTUNE takes 4.0675 seconds
+AUTOTUNE mm(2048x256, 256x1024)
+  triton_mm_438 0.0157 ms 100.0%
+  triton_mm_431 0.0164 ms 95.7%
+  triton_mm_433 0.0164 ms 95.7%
+  triton_mm_434 0.0164 ms 95.7%
+  triton_mm_430 0.0165 ms 94.9%
+  triton_mm_432 0.0174 ms 90.1%
+  triton_mm_435 0.0195 ms 80.6%
+  triton_mm_436 0.0195 ms 80.6%
+  mm 0.0205 ms 76.6%
+  triton_mm_437 0.0205 ms 76.6%
+SingleProcess AUTOTUNE takes 3.9566 seconds
+AUTOTUNE mm(2048x1024, 1024x256)
+  triton_mm_450 0.0193 ms 100.0%
+  mm 0.0214 ms 90.3%
+  triton_mm_446 0.0225 ms 85.7%
+  triton_mm_445 0.0246 ms 78.5%
+  triton_mm_447 0.0256 ms 75.4%
+  triton_mm_451 0.0256 ms 75.4%
+  triton_mm_444 0.0264 ms 73.1%
+  triton_mm_448 0.0284 ms 67.8%
+  triton_mm_443 0.0287 ms 67.3%
+  triton_mm_442 0.0327 ms 58.9%
+SingleProcess AUTOTUNE takes 4.3407 seconds
+  批次 1/20: 40143.13 ms
+  批次 6/20: 23.48 ms
+
+平均推理延迟: 4540.18 ms (±12588.57 ms)
+最小推理延迟: 21.96 ms
+最大推理延迟: 40143.13 ms
+测试批次数: 9
+
+📈 性能提升对比:
+  原始Ultra-LSNT-Lite: 8.94 ms (基准)
+  优化Ultra-LSNT-Lite: 4540.18 ms
+  延迟降低: 0.0%
+
+============================================================
+3. 内存占用测试
+============================================================
+初始化后内存: 1352.3 MB, GPU内存: 25.5 MB
+推理后内存: 1352.4 MB, GPU内存: 26.5 MB
+内存增量: 0.1 MB
+GPU内存增量: 1.0 MB
+
+============================================================
+4. 能耗估算（基于推理延迟和GPU功耗）
+============================================================
+平均推理时间: 4540.18 ms (4.540182 s)
+假设GPU推理功耗: 150.0 W
+每次推理能耗: 681.027352 J (681027.35 mJ)
+每百万次推理能耗: 681,027,351,630 mJ
+
+对比TimeMixer (7.27 ms):
+  TimeMixer能耗: 1090.50 mJ
+  Ultra-LSNT-Lite能耗: 681027.35 mJ
+  能耗比 (Ultra-LSNT/TimeMixer): 624.51x
+
+============================================================
+5. 保存优化测试结果
+============================================================
+✅ 优化效率测试结果已保存: ultra_lsnt_lite_optimized_efficiency_results.csv
+✅ 详细报告已保存: ultra_lsnt_lite_optimized_efficiency_report.txt
+
+============================================================
+🎉 Ultra-LSNT-Lite优化效率测试完成!
+============================================================
+[2026-02-09 17:50:55] [ OK ] ultra_lsnt_lite_optimized
+
+[2026-02-09 17:50:55] [STEP] kernel_ablation
+[2026-02-09 17:50:55] [CMD ] python3 run_universal_ablation.py
+启动全领域消融实验 (Kernel Sensitivity)...
+
+Dataset: Wind (CN)
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   Testing Kernel Size = 3 ...
+      -> R2: 0.8488
+   Testing Kernel Size = 7 ...
+      -> R2: 0.8264
+   Testing Kernel Size = 15 ...
+      -> R2: 0.8333
+
+Dataset: Air Quality
+加载数据: air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+   Testing Kernel Size = 3 ...
+      -> R2: 0.4365
+   Testing Kernel Size = 7 ...
+      -> R2: 0.3151
+   Testing Kernel Size = 15 ...
+      -> R2: 0.3008
+
+消融结果已保存: universal_ablation_results.csv
+       Dataset  Kernel        R2
+0    Wind (CN)       3  0.848755
+1    Wind (CN)       7  0.826429
+2    Wind (CN)      15  0.833308
+3  Air Quality       3  0.436518
+4  Air Quality       7  0.315075
+5  Air Quality      15  0.300775
+[2026-02-09 18:20:55] [ OK ] kernel_ablation
+
+[2026-02-09 18:20:55] [STEP] noise20
+[2026-02-09 18:20:55] [CMD ] python3 test_dlinear_noise_robustness.py
+🔬 测试DLinear噪声鲁棒性 (20%高斯噪声)
+使用设备: cuda
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+✅ 加载训练好的DLinear权重: dlinear_weights/dlinear_trained.pth
+  原始R²: 0.9379
+
+📊 噪声测试 (高斯噪声)
+--------------------------------------------------
+噪声 0.0 | R² = 0.9379 | MSE = 40231904
+噪声 0.1 | R² = 0.7817 | MSE = 141479712
+噪声 0.2 | R² = 0.3116 | MSE = 446184736
+噪声 0.3 | R² = -0.4956 | MSE = 969304192
+噪声 0.4 | R² = -1.6383 | MSE = 1709903488
+
+✅ 结果已保存: dlinear_noise_robustness_results.json
+✅ 报告已生成: dlinear_noise_robustness_report.txt
+
+📈 与现有数据对比
+--------------------------------------------------
+噪声20%下各模型R²:
+  DLinear: 0.3116
+  Ultra-LSNT: 0.8318
+  LightGBM: 0.8222
+✅ 对比结果已保存: noise_20_comparison.txt
+[2026-02-09 18:20:59] [ OK ] noise20
+
+[2026-02-09 18:20:59] [STEP] dm_extended
+[2026-02-09 18:20:59] [CMD ] python3 run_background_suite.py --tasks dm_extended --log-dir logs_train1
+🤖 加载 Ultra-LSNT 进行预测...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+✅ 从 checkpoints_ts/main/model_config.json 加载模型配置
+⚠️ 跳过权重 blocks.0.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+⚠️ 跳过权重 blocks.1.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+⚠️ 跳过权重 blocks.2.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+✅ 加载权重，成功加载 152/167 个参数
+加载数据: /root/.cache/论文/wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+[OK] dm_extended (3.7s)
+  log: logs_train1/dm_extended_20260209_182059.log
+  outputs: dm_results/dm_extended_20260209_182103.json, dm_results/dm_extended_20260209_182103.csv, dm_results/dm_extended_20260209_182103.tex
+Summary written to: logs_train1/suite_summary_20260209_182103.md
+[2026-02-09 18:21:04] [ OK ] dm_extended
+
+[2026-02-09 18:21:04] [STEP] lite_suite
+[2026-02-09 18:21:04] [CMD ] python3 run_background_suite.py --tasks lite_suite --log-dir logs_train1

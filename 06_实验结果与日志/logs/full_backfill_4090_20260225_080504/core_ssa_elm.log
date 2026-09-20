@@ -1,0 +1,2 @@
+DRY RUN
+C:\Users\32110\AppData\Local\Programs\Python\Python310\python.exe run_ssa_elm_auditable_suite.py --out_dir C:\Users\32110\Desktop\论文1\results\supplementary_evidence --audit_tag ssa_elm_auditable_suite_4090

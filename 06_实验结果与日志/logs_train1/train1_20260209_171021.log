@@ -1,0 +1,29 @@
+================ train1 full pipeline ================
+Start time: 2026-02-09 17:10:21
+Root dir  : /root/.cache/论文
+Python    : python3
+Log dir   : logs_train1
+DRY_RUN   : 1
+Baseline2 : timemixer
+======================================================
+
+[2026-02-09 17:10:21] [STEP] multi_domain_ultra
+[2026-02-09 17:10:21] [CMD ] python3 evaluate_multi_domain.py
+[2026-02-09 17:10:21] [SKIP] DRY_RUN=1
+
+[2026-02-09 17:10:21] [STEP] multi_domain_baselines
+[2026-02-09 17:10:21] [CMD ] python3 run_multi_domain_baselines.py --model2 timemixer --epochs 10 --batch-size 128
+[2026-02-09 17:10:21] [SKIP] DRY_RUN=1
+
+[2026-02-09 17:10:21] [STEP] lightgbm_baseline
+[2026-02-09 17:10:21] [CMD ] python3 run_gbdt.py
+[2026-02-09 17:10:21] [SKIP] DRY_RUN=1
+
+[2026-02-09 17:10:21] [STEP] patchtst_comparison
+[2026-02-09 17:10:21] [CMD ] python3 run_dm_patchtst_fixed.py
+[2026-02-09 17:10:21] [SKIP] DRY_RUN=1
+
+[2026-02-09 17:10:21] [STEP] ultra_lsnt_lite_optimized
+[2026-02-09 17:10:21] [CMD ] python3 test_ultra_lsnt_lite_optimized.py
+[2026-02-09 17:10:21] [SKIP] DRY_RUN=1
+

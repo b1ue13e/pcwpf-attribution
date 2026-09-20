@@ -1,0 +1,102 @@
+================================================================================
+TASK E: COMPUTATIONAL REPLICATION RUN LOG & INDEPENDENT AUDIT METRICS
+================================================================================
+Auditor: 杜俊涛
+Date: 2026-09-04
+Target Server: 192.168.17.251:25329 (Hostname: grokking)
+Status: COMPLETED (Exit Code 0)
+================================================================================
+
+1. COMPUTE ENVIRONMENT & HARDWARE AUDIT
+--------------------------------------------------------------------------------
+OS: Linux grokking 5.4.0-100-generic #113-Ubuntu SMP Thu Feb 3 18:43:29 UTC 2022 x86_64
+Distribution: Ubuntu 22.04.4 LTS
+CPU: Intel(R) Xeon(R) Platinum 8558 (2 Sockets, 48 Cores/Socket, 192 vCPUs)
+Memory: 503 GiB total, 398 GiB free
+GPU Devices: 4 × NVIDIA GeForce RTX 4090 (24,564 MiB total per GPU)
+  - GPU 0: NVIDIA GeForce RTX 4090 (Driver: 550.127.05, Free Mem: 24,211 MiB)
+  - GPU 1: NVIDIA GeForce RTX 4090 (Driver: 550.127.05, Free Mem: 24,211 MiB)
+  - GPU 2: NVIDIA GeForce RTX 4090 (Driver: 550.127.05, Free Mem: 24,211 MiB)
+  - GPU 3: NVIDIA GeForce RTX 4090 (Driver: 550.127.05, Free Mem: 24,211 MiB)
+Python Version: Python 3.10.12 (/usr/bin/python3)
+PyTorch Version: 2.3.0a0+6ddf5cf85e.nv24.04 (CUDA 12.4 runtime, CUDA available: True)
+Environment Adjustment: export LD_LIBRARY_PATH=/opt/hpcx/ucx/lib:/opt/hpcx/ucc/lib
+  (Resolves Mellanox HPC-X UCC/UCX symbol dependency error)
+
+2. SCRIPT INTEGRITY & SHA-256 HASH VERIFICATION
+--------------------------------------------------------------------------------
+Preregistered Protocol Reference: E:\论文1\08_报告与说明文档\重跑预注册协议.md (Section 5)
+Remote Code Directory: /root/paper1/05_实验代码与脚本
+
+File: pct_faithful_runner.py
+  - Preregistered SHA-256: efa073874546ab6ead69a1f6f573d98c2e71d32799136ea22ad49d319821cc00
+  - Remote Server SHA-256: efa073874546ab6ead69a1f6f573d98c2e71d32799136ea22ad49d319821cc00
+  - Verification: MATCH (100% Identical)
+
+File: pitfn_audit.py
+  - Preregistered SHA-256: d932cfbfe9d38309fd6339cdd8088b256f45ab3c50e7b3a2354be8a4ba19c4ad
+  - Remote Server SHA-256: d932cfbfe9d38309fd6339cdd8088b256f45ab3c50e7b3a2354be8a4ba19c4ad
+  - Verification: MATCH (100% Identical)
+
+File: pct_fulltrain_v3_runner.py (Core shared dependency)
+  - Remote Server SHA-256: 6f63239236c1a5df3eafa1cf57c8dd263b826455ed5f6e7bdcf0abea737e63f3
+
+3. EXECUTION TERMINAL LOGS & STEP-BY-STEP REPLICATION
+--------------------------------------------------------------------------------
+[RUN 1] PCT Runner — Architecture: Transformer
+Command:
+python3 pct_faithful_runner.py --site kelmarsh --seed 0 --epochs 2 --arch transformer --out /root/paper1/05_实验代码与脚本/result_transformer_seed0.txt
+Start Time (UTC): 2026-09-03T20:26:39Z
+End Time (UTC):   2026-09-03T20:26:44Z
+Duration: ~5 seconds
+Standard Output:
+js_ratio=1.0
+kelmarsh transformer seed=0 epochs=2 window=720 horizon=1 | constrained=0.47316 unconstrained=0.35528 rel=+33.2%
+File Output (result_transformer_seed0.txt):
+kelmarsh transformer seed=0 epochs=2 window=720 horizon=1 | constrained=0.47316 unconstrained=0.35528 rel=+33.2%
+
+[RUN 2] PCT Runner — Architecture: LSTM
+Command:
+python3 pct_faithful_runner.py --site kelmarsh --seed 0 --epochs 2 --arch lstm --out /root/paper1/05_实验代码与脚本/result_lstm_seed0.txt
+Start Time (UTC): 2026-09-03T20:26:44Z
+End Time (UTC):   2026-09-03T20:26:50Z
+Duration: ~6 seconds
+Standard Output:
+js_ratio=1.0
+kelmarsh lstm seed=0 epochs=2 window=720 horizon=1 | constrained=0.42507 unconstrained=0.35363 rel=+20.2%
+File Output (result_lstm_seed0.txt):
+kelmarsh lstm seed=0 epochs=2 window=720 horizon=1 | constrained=0.42507 unconstrained=0.35363 rel=+20.2%
+
+[RUN 3] PI-TFN Loss-Level Reconstruction — 4 Pointwise Penalties & Variants
+Command:
+python3 pitfn_audit.py --site kelmarsh --seed 0 --epochs 2 --out /root/paper1/05_实验代码与脚本/result_pitfn_seed0.txt
+Start Time (UTC): 2026-09-03T20:26:50Z
+End Time (UTC):   2026-09-03T20:27:01Z
+Duration: ~11 seconds
+Standard Output:
+kelmarsh seed=0 epochs=2 | paper_spec=0.18804 unconst=0.08247 no_phi=0.17460 fixed_cp=0.17189
+File Output (result_pitfn_seed0.txt):
+kelmarsh seed=0 epochs=2 | paper_spec=0.18804 unconst=0.08247 no_phi=0.17460 fixed_cp=0.17189
+
+4. SUMMARY OF METRICS & AUDIT FINDINGS
+--------------------------------------------------------------------------------
+1. PCT Model Comparison (Site: Kelmarsh, Seed: 0, Epochs: 2, Window: 720, Horizon: 1):
+   - Transformer:
+     * Constrained RMSE (Official JS): 0.47316 pu
+     * Unconstrained RMSE (Pure MSE): 0.35528 pu
+     * Relative Change (rel): +33.2%
+   - LSTM:
+     * Constrained RMSE (Official JS): 0.42507 pu
+     * Unconstrained RMSE (Pure MSE): 0.35363 pu
+     * Relative Change (rel): +20.2%
+
+2. PI-TFN Loss-Level Ablation (Site: Kelmarsh, Seed: 0, Epochs: 2):
+   - paper-spec (All 4 penalties, learned Cp): 0.18804 pu
+   - unconstrained (Pure MSE):                 0.08247 pu
+   - no-phi (3 boundary penalties, drop phys): 0.17460 pu
+   - fixed-cp (Betz bound Cp = 16/27 fixed):   0.17189 pu
+
+3. Critical Confirmation:
+   - The prior 1000× unit bug (/1000 missing) had caused fixed_cp RMSE to blow up to ~88 pu.
+   - In this independent run, fixed_cp RMSE is 0.17189 pu (normal order of magnitude), proving complete resolution of the unit scaling defect.
+================================================================================

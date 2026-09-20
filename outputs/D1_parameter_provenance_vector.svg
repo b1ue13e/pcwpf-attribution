@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="506" height="274" viewBox="0 0 506 274">
+  <defs>
+    <style>
+      .serif { font-family: "DejaVu Serif", "Times New Roman", serif; fill:#111; }
+      .small { font-size: 9.8px; }
+      .body { font-size: 10.8px; }
+      .head { font-size: 12.7px; font-weight: 700; }
+      .title { font-size: 17px; font-weight: 700; }
+      .subtitle { font-size: 13px; font-style: italic; font-weight: 600; }
+      .math { font-size: 16px; font-style: italic; }
+    </style>
+    <marker id="arrowBlue" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#2f88d8"/>
+    </marker>
+    <marker id="arrowBlack" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#111"/>
+    </marker>
+    <clipPath id="plotClip">
+      <rect x="154" y="111" width="94" height="94"/>
+    </clipPath>
+  </defs>
+
+  <!-- overall frame -->
+  <rect x="1" y="1" width="504" height="272" rx="5" ry="5" fill="#f7a9aa" stroke="#111" stroke-width="1.6"/>
+  <rect x="3.8" y="4" width="498.4" height="265" rx="4" ry="4" fill="#ffd0d0" stroke="#fff" stroke-width="1.2"/>
+
+  <!-- header -->
+  <rect x="7" y="7" width="52" height="35" rx="2" ry="2" fill="#fff0f0" stroke="#454545" stroke-width="1.1"/>
+  <text x="18" y="34" class="serif" font-size="25" font-weight="700">D1</text>
+  <text x="73" y="26" class="serif title">Parameter Provenance</text>
+  <text x="74" y="43" class="serif subtitle">Where does the constraint originate?</text>
+
+  <!-- content cards -->
+  <rect x="6" y="50" width="123" height="213" rx="3" fill="#fbfbfb" stroke="#666" stroke-width="1.2"/>
+  <rect x="131" y="50" width="123" height="213" rx="3" fill="#fbfbfb" stroke="#666" stroke-width="1.2"/>
+  <rect x="256" y="50" width="123" height="213" rx="3" fill="#fbfbfb" stroke="#666" stroke-width="1.2"/>
+  <rect x="381" y="50" width="119" height="213" rx="3" fill="#fbfbfb" stroke="#666" stroke-width="1.2"/>
+
+  <!-- Column 1 -->
+  <text x="67.5" y="70" text-anchor="middle" class="serif head">Intrinsic</text>
+  <text x="67.5" y="86" text-anchor="middle" class="serif body">Governing laws /</text>
+  <text x="67.5" y="100" text-anchor="middle" class="serif body">physical limits</text>
+
+  <!-- airflow lines -->
+  <g fill="none" stroke="#2f88d8" stroke-width="1.0" marker-end="url(#arrowBlue)">
+    <path d="M18 128 C33 128, 43 126, 57 125"/>
+    <path d="M18 138 C33 139, 44 135, 58 134"/>
+    <path d="M18 148 C32 148, 43 145, 58 144"/>
+    <path d="M18 158 C33 158, 43 157, 59 156"/>
+    <path d="M18 169 C33 169, 43 170, 58 169"/>
+    <path d="M18 179 C33 179, 43 183, 58 182"/>
+  </g>
+  <g fill="none" stroke="#2f88d8" stroke-width="1.0" marker-end="url(#arrowBlue)">
+    <path d="M88 124 C101 124, 110 122, 118 121"/>
+    <path d="M88 134 C101 134, 110 133, 118 132"/>
+    <path d="M88 144 C101 144, 110 144, 118 143"/>
+    <path d="M88 156 C101 156, 110 157, 118 156"/>
+    <path d="M88 168 C101 168, 110 170, 118 170"/>
+    <path d="M88 181 C101 181, 110 184, 118 184"/>
+  </g>
+
+  <!-- turbine -->
+  <g transform="translate(75,155)" fill="#103b5c" stroke="#103b5c">
+    <ellipse cx="0" cy="0" rx="4.7" ry="2.6"/>
+    <path d="M-1.6 -1 L-7.5 -30 Q-5.8 -37 -3.3 -34 L2.0 -3 Z"/>
+    <path d="M1.8 1.0 L28.0 2.7 Q33.7 4.7 28.2 6.5 L3.0 4.0 Z"/>
+    <path d="M-0.7 2.0 L-12 25 Q-15 31 -10.5 27 L1.8 4.0 Z"/>
+    <path d="M-2.2 3.0 L-5.8 42 L6.0 42 L2.0 3.0 Z"/>
+  </g>
+
+  <text x="68" y="238" text-anchor="middle" class="serif math">Cₚ ≤ 16/27</text>
+
+  <!-- Column 2 -->
+  <text x="192.5" y="70" text-anchor="middle" class="serif head" font-size="12.1">Historical-static</text>
+  <text x="192.5" y="86" text-anchor="middle" class="serif body">Offline SCADA-</text>
+  <text x="192.5" y="100" text-anchor="middle" class="serif body">derived prior</text>
+
+  <!-- plot axes -->
+  <g stroke="#111" fill="none" stroke-width="1.3" marker-end="url(#arrowBlack)">
+    <path d="M154 205 L154 111"/>
+    <path d="M154 205 L248 205"/>
+  </g>
+  <g clip-path="url(#plotClip)">
+    <circle cx="195.60" cy="136.55" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="167.12" cy="204.80" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="186.22" cy="173.62" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="160.29" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="193.00" cy="140.15" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="175.11" cy="196.65" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="181.33" cy="184.33" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="163.91" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="177.84" cy="194.81" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="179.12" cy="186.74" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="163.52" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="201.14" cy="121.11" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="210.00" cy="125.44" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="179.08" cy="191.05" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="185.73" cy="165.02" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="174.78" cy="194.27" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="169.91" cy="203.01" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="172.81" cy="199.55" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="166.50" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="228.45" cy="135.56" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="200.65" cy="135.86" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="180.87" cy="182.87" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="184.27" cy="171.43" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="192.18" cy="142.76" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="186.48" cy="164.29" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="177.85" cy="190.50" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="185.23" cy="170.95" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="179.89" cy="185.65" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="178.32" cy="190.81" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="178.33" cy="187.84" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="162.69" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="181.27" cy="179.66" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="183.85" cy="174.16" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="167.84" cy="204.12" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="175.45" cy="197.96" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="171.45" cy="201.03" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="180.84" cy="178.78" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="201.85" cy="135.57" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="178.70" cy="188.42" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="225.37" cy="135.57" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="180.85" cy="180.20" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="175.55" cy="196.24" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="192.15" cy="143.53" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="164.36" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="178.82" cy="188.73" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="205.55" cy="135.69" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="160.55" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="184.35" cy="174.22" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="183.92" cy="168.27" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="170.74" cy="201.56" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="182.59" cy="176.26" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="182.27" cy="178.17" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="157.61" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="169.72" cy="201.71" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="215.97" cy="127.38" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="216.42" cy="135.56" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="189.36" cy="163.85" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="163.83" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="178.23" cy="188.46" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="167.71" cy="203.71" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="178.70" cy="185.95" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="180.07" cy="185.91" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="214.31" cy="135.67" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="168.78" cy="203.47" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="192.52" cy="143.05" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="180.31" cy="184.22" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="224.89" cy="135.60" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="180.80" cy="182.42" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="172.15" cy="199.77" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="198.35" cy="145.71" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="210.39" cy="135.67" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="176.84" cy="191.57" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="169.38" cy="202.66" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="158.72" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="179.03" cy="186.06" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="165.79" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="195.06" cy="141.72" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="183.52" cy="174.60" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="173.63" cy="198.63" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="203.55" cy="127.77" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="180.69" cy="179.89" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="171.22" cy="200.46" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="177.09" cy="191.33" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="178.76" cy="186.77" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="162.86" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="188.99" cy="155.32" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="211.88" cy="135.67" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="165.04" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="175.00" cy="194.97" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="162.09" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="178.18" cy="188.37" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="183.99" cy="169.79" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="189.44" cy="154.19" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="184.28" cy="171.86" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="195.41" cy="141.36" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="176.12" cy="193.86" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="164.30" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="185.09" cy="171.30" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="176.65" cy="195.39" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="177.87" cy="190.30" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="164.54" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="162.93" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="190.34" cy="149.30" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="193.86" cy="146.50" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="192.14" cy="149.85" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="166.69" cy="204.82" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="212.87" cy="135.60" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="184.90" cy="169.50" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="163.12" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="172.10" cy="200.66" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="179.29" cy="185.78" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="179.03" cy="188.84" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="163.87" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="166.79" cy="204.49" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="168.77" cy="203.97" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="163.51" cy="205.00" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="188.49" cy="161.05" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="196.23" cy="137.88" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="233.45" cy="135.61" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <circle cx="174.23" cy="196.73" r="0.75" fill="#9fb0bf" opacity="0.55"/>
+    <polyline points="154.0,205.0 163.6,205.0 155.9,205.0 159.8,205.0 163.6,205.0 167.4,204.2 171.2,200.9 175.1,195.3 178.9,187.8 182.8,177.6 186.6,166.3 190.4,153.4 194.2,143.3 198.1,137.8 201.9,135.0 205.8,133.6 209.6,134.2 213.4,131.4 217.2,130.4 221.1,135.9 224.9,135.1 228.8,134.6 232.6,136.8 236.4,148.3" fill="none" stroke="#0968e8" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <text x="201" y="220" text-anchor="middle" class="serif body">Wind speed</text>
+  <text x="145" y="160" text-anchor="middle" class="serif body" transform="rotate(-90 145 160)">Power</text>
+
+  <!-- Column 3 -->
+  <text x="317.5" y="70" text-anchor="middle" class="serif head" font-size="12.3">Learned-online</text>
+  <text x="317.5" y="86" text-anchor="middle" class="serif body">Adaptive learned</text>
+  <text x="317.5" y="100" text-anchor="middle" class="serif body">parameters</text>
+
+  <text x="265" y="153" class="serif body" font-style="italic">
+    x<tspan baseline-shift="sub" font-size="9">t-1</tspan>
+  </text>
+  <path d="M287 149 L303 149" stroke="#111" stroke-width="1.2" marker-end="url(#arrowBlack)"/>
+  <rect x="304" y="132" width="40" height="31" fill="#e5f4fb" stroke="#333" stroke-width="1.1"/>
+  <text x="324" y="153" text-anchor="middle" class="serif" font-size="15" font-style="italic">
+    g<tspan baseline-shift="sub" font-size="10">ϕ</tspan>
+  </text>
+  <path d="M344 149 L359 149" stroke="#111" stroke-width="1.2" marker-end="url(#arrowBlack)"/>
+  <text x="362" y="154" class="serif body" font-style="italic">
+    θ<tspan baseline-shift="sub" font-size="9">t</tspan>
+  </text>
+  <path d="M324 189 L324 165" stroke="#111" stroke-width="1.2" marker-end="url(#arrowBlack)"/>
+  <text x="324" y="200" text-anchor="middle" class="serif body" font-style="italic">
+    θ<tspan baseline-shift="sub" font-size="9">t-1</tspan>
+  </text>
+  <text x="324" y="220" text-anchor="middle" class="serif body">online update</text>
+
+  <!-- Column 4 -->
+  <text x="440.5" y="70" text-anchor="middle" class="serif head">Unreported</text>
+  <text x="440.5" y="86" text-anchor="middle" class="serif body">Provenance</text>
+  <text x="440.5" y="100" text-anchor="middle" class="serif body">unspecified</text>
+  <rect x="396" y="125" width="91" height="69" rx="2" fill="#fff" stroke="#5a7590" stroke-width="1.3" stroke-dasharray="4 3"/>
+  <text x="441.5" y="155" text-anchor="middle" class="serif body">provenance: —</text>
+  <text x="441.5" y="174" text-anchor="middle" class="serif body">not specified</text>
+</svg>

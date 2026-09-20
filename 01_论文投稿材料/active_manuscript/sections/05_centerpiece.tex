@@ -1,0 +1,38 @@
+\section{Empirical Centerpiece: When Does a Physical Prior Provide Genuine Value?}
+\label{sec:centerpiece}
+
+This section presents the core empirical findings of our Controlled Attribution Protocol. Across three operational commercial wind farms, we evaluate prior-specific mapping effects in this sample-restricted setting, evaluate weak-regularization numerical mimicry, and decouple domain geometric structure from auxiliary historical data volume under matched model capacities.
+
+\subsection{Prior Specificity under Sample Restriction}
+On the Penmanshiel wind farm evaluated under a sample-restricted training regime ($N_{\text{train}} = 1{,}583$), the unconstrained DLinear model exhibits empirical over-fitting, yielding a normalized asymmetric dispatch loss of $0.09852 \pm 0.00018$ ($\text{Cost}_{\text{static}}$ at $r=2, q=1/3$; Table~\ref{tab:controlled_ablation}, Figure~\ref{fig:ablation_3d}a). Embedding the authentic empirical power curve prior under strong regularization ($\lambda=1.0$) reduces normalized dispatch cost to $0.09726 \pm 0.00022$ (a $-1.28\%$ risk reduction).
+
+\input{tables/table2_dynamic_settlement.tex}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_causal_ablation.pdf}
+\caption{Prospective Controlled Attribution Benchmark across Three Operational Wind Farms. (a) Prior-specific mapping effects under strong regularization on Penmanshiel ($N_{\text{train}}=1{,}583$): authentic empirical prior guidance provides downside risk reduction ($-1.28\%$), whereas permuting the aerodynamic mapping (Pseudo-Scrambled prior) triggers a $+61.2\%$ surge in operational dispatch cost. (b) Weak-penalty numerical regularization mimicry on Kelmarsh ($N=5{,}098$), where genuine and scrambled priors yield closely matched outcomes at $\lambda = 0.01$, with no clear empirical separation and outcomes consistent with non-specific numerical regularization. (c) Monotonic cost inflation under training proxy staleness: dispatch cost escalation across all three farms as historical wind proxy lag $k$ in the training loss increases from 1\,h to 6\,h. (d) Decoupling of symmetric point error (RMSE) from asymmetric decision risk ($r=2$), demonstrating that point metrics mask tail operational hazards.}
+\label{fig:ablation_3d}
+\end{figure*}
+
+In sharp contrast, evaluating the form- and weight-matched Pseudo-Scrambled negative control---sharing the identical DLinear architecture, data split, training seed, and penalty multiplier ($\lambda=1.0$), but permuting the power output values along the wind speed axis---inflates dispatch cost to $0.15884 \pm 0.01588$ (a $+61.2\%$ surge). Because the scrambled control preserves identical gradient capacity and loss formulation, this divergence demonstrates that under strong regularization in sample-restricted regimes, the model specifically benefits from authentic aerodynamic domain structure: valid domain structure provides measurable downside protection, whereas an unaligned mapping inflicts severe operational penalties.
+
+\subsection{Weak-Penalty Scale: Non-Specific Numerical Regularization Mimicry}
+A prevalent assertion in the physics-informed literature is that minor performance gains observed under weak penalty weights (e.g., $\lambda \le 0.01$) demonstrate that deep networks internalize physical domain principles. Our Controlled Attribution Protocol directly interrogates this premise.
+
+At weak regularization ($\lambda = 0.01$) on Kelmarsh ($N_{\text{train}}=5{,}098$), the genuine physical power curve prior yields a normalized dispatch cost of $0.08803 \pm 0.00005$, while the form-matched pseudo-scrambled control yields $0.08792 \pm 0.00008$ (Table~\ref{tab:controlled_ablation}, Figure~\ref{fig:ablation_3d}b). On Hill of Towie ($N_{\text{train}}=7{,}035$), genuine and scrambled priors yield $0.08913 \pm 0.00005$ and $0.08910 \pm 0.00005$, respectively. Across both wind farms, genuine and scrambled priors yield closely matched outcomes with no clear empirical separation (differences $< 0.0001$, within multi-seed error margins).
+
+Because structurally permuted negative controls reproduce the empirical outcomes of genuine aerodynamics under weak penalty scaling, the observed effect cannot be specifically attributed to the physical mapping and remains consistent with non-specific numerical regularization. This result provides a critical negative control: minor accuracy gains under weak penalty multipliers should not be cited as evidence of domain physical reasoning without form-matched permutation controls.
+
+\subsection{Information-Budget Alignment: Decoupling Domain Geometry from Data Volume}
+A central threat to the attribution of physical priors in low-sample regimes is the \textit{information budget discrepancy}: when an empirical prior is fitted on an extensive historical archive (e.g., 7 to 10 months of SCADA telemetry), does its advantage stem from domain aerodynamic geometry or from the unacknowledged volume of historical operational data?
+
+To resolve this question, we implemented a strictly budget-matched information control at $N_{\text{train}}=500$ ($\approx 21$ consecutive days of telemetry; Table~\ref{tab:information_budget}, all prior arms $\lambda=1.0$, five random seeds). Models trained on this restricted window were evaluated against: (i) an unconstrained baseline ($\lambda=0$); (ii) a budget-matched genuine prior fitted strictly on the exact same 500 training samples ($N_{\text{prior}}=N_{\text{train}}=500$); (iii) a full-historical genuine prior fitted on the multi-month record; (iv) a budget-matched scrambled control; and (v) a full-historical scrambled control.
+
+\input{tables/table_information_budget.tex}
+
+As detailed in Table~\ref{tab:information_budget}, the unconstrained baseline yields a normalized dispatch cost of $0.09648 \pm 0.00314$ on Kelmarsh and $0.10444 \pm 0.00312$ on Hill of Towie. Introducing the strictly budget-matched genuine prior ($N_{\text{prior}}=500$) reduces dispatch cost to $0.09499 \pm 0.00307$ ($-1.54\%$) on Kelmarsh and $0.10095 \pm 0.00305$ ($-3.34\%$) on Hill of Towie. The budget-matched genuine prior retains approximately 77\% of the full-history mean benefit on Kelmarsh ($-1.54\%$ vs.\ $-2.00\%$) and approximately 92\% on Hill of Towie ($-3.34\%$ vs.\ $-3.62\%$).
+
+Evaluated under paired differences across the five identical random seeds, the budget-matched genuine prior achieves a statistically significant mean paired risk reduction of $-0.00149$ ($95\%$ CI: $[-0.00174, -0.00124]$, $p < 0.01$) on Kelmarsh and $-0.00349$ ($95\%$ CI: $[-0.00368, -0.00331]$, $p < 0.01$) on Hill of Towie relative to unconstrained baselines. Expanding the prior fitting set to the full historical record yields an incremental reduction of only $-0.00044$ ($95\%$ CI: $[-0.00075, -0.00013]$) on Kelmarsh and $-0.00029$ ($95\%$ CI: $[-0.00041, -0.00016]$) on Hill of Towie. In contrast, evaluating the budget-matched scrambled control inflates dispatch cost to $0.13827 \pm 0.02333$ ($+43.3\%$) on Kelmarsh and $0.15248 \pm 0.00253$ ($+46.0\%$) on Hill of Towie.
+
+These findings provide strong controlled evidence that \textbf{the majority of the observed benefit cannot be explained by additional historical data volume alone}. The algebraic and geometric structure of the empirical power curve provides genuine inductive guidance in this sample-restricted setting, even when estimated strictly from the limited contemporaneous training sample.

@@ -1,0 +1,111 @@
+测试修改后的模型加载逻辑
+模型创建成功: UltraLSNTForecaster(
+  (encoder): TemporalEncoder(
+    (feature_proj): Linear(in_features=8, out_features=128, bias=True)
+    (temporal_conv): Sequential(
+      (0): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,))
+      (1): GELU(approximate='none')
+      (2): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,))
+    )
+    (temporal_attn): MultiheadAttention(
+      (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+    )
+    (attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (aggregate): Sequential(
+      (0): Linear(in_features=12288, out_features=256, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=256, out_features=128, bias=True)
+    )
+  )
+  (blocks): ModuleList(
+    (0-2): 3 x UltraLSNTBlock(
+      (input_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (moe_router): HeteroscedasticMoERouter(
+        (uncertainty_net): Sequential(
+          (0): Linear(in_features=128, out_features=16, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=16, out_features=1, bias=True)
+          (3): Softplus(beta=1, threshold=20)
+        )
+        (router): Linear(in_features=129, out_features=4, bias=False)
+        (experts): ModuleList(
+          (0-3): 4 x Sequential(
+            (0): Linear(in_features=128, out_features=512, bias=True)
+            (1): GELU(approximate='none')
+            (2): Linear(in_features=512, out_features=128, bias=True)
+          )
+        )
+      )
+      (dual_prop): DualModePropagation(
+        (mode_selector): Sequential(
+          (0): Linear(in_features=128, out_features=32, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=32, out_features=1, bias=True)
+          (3): Sigmoid()
+        )
+        (fast_path): Sequential(
+          (0): Linear(in_features=128, out_features=128, bias=True)
+          (1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        )
+        (slow_path): Sequential(
+          (0): Linear(in_features=128, out_features=512, bias=True)
+          (1): GELU(approximate='none')
+          (2): Dropout(p=0.1, inplace=False)
+          (3): Linear(in_features=512, out_features=128, bias=True)
+          (4): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        )
+        (skip_gate): ConsistentSkipGate(
+          (importance_net): Sequential(
+            (0): Linear(in_features=128, out_features=32, bias=True)
+            (1): GELU(approximate='none')
+            (2): Linear(in_features=32, out_features=1, bias=True)
+            (3): Sigmoid()
+          )
+          (change_detector): Sequential(
+            (0): Linear(in_features=256, out_features=32, bias=True)
+            (1): GELU(approximate='none')
+            (2): Linear(in_features=32, out_features=1, bias=True)
+            (3): Sigmoid()
+          )
+        )
+      )
+      (output_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (decoder): TemporalDecoder(
+    (expand): Sequential(
+      (0): Linear(in_features=128, out_features=3072, bias=True)
+      (1): GELU(approximate='none')
+    )
+    (pred_head): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+)
+输入维度: 8
+隐藏维度: 128
+
+状态字典键数量: 167
+
+测试strict=False加载...
+模型1 hidden_dim: 128
+模型2 hidden_dim: 256
+  strict=True 加载失败（预期）: Error(s) in loading state_dict for UltraLSNTForecaster:
+	size mismatch for encoder.pos_embedding: co...
+  strict=False 加载也失败: Error(s) in loading state_dict for UltraLSNTForecaster:
+	size mismatch for encoder.pos_embedding: co...
+
+测试配置保存/加载...
+配置字典: 128
+
+MAPE测试:
+  MAPE值: 12.2222% (应该是一个合理值，而不是异常高的值)
+
+字体配置测试:
+  当前字体设置: ['sans-serif']
+  期望: 使用默认字体，不再硬编码Times New Roman
+
+所有测试完成

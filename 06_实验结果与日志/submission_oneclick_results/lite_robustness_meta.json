@@ -1,0 +1,31 @@
+{
+  "script": "run_submission_oneclick_4090.py",
+  "phase": "lite_robustness_completion",
+  "generated_at": "2026-02-25T00:26:07.127945Z",
+  "seed": 42,
+  "device": "cuda",
+  "train_history": [
+    0.1112546055856248
+  ],
+  "config": {
+    "seq_len": 96,
+    "pred_len": 24,
+    "epochs": 1,
+    "batch_size": 256,
+    "lr": 0.001,
+    "model": {
+      "input_dim": 8,
+      "hidden_dim": 96,
+      "seq_len": 96,
+      "pred_len": 24,
+      "num_blocks": 1,
+      "num_experts": 2,
+      "top_k": 1,
+      "scales": [
+        1,
+        2
+      ]
+    }
+  },
+  "output_csv": "C:\\Users\\32110\\Desktop\\论文1\\submission_oneclick_results\\lite_robustness_windcn.csv"
+}

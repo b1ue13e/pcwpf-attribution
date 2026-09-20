@@ -64,7 +64,7 @@
 
 \begin{frontmatter}
 
-\title{Auditing the Decision Value of Physics-Constrained Wind Power Forecasting}
+\title{Conditional Inductive Guardrails: Identifying When Physical Priors Enhance, Mimic, or Impair Decisions in Wind Power Forecasting}
 
 \author[1]{Junyu Li\corref{cor1}}
 \ead{ljylikezmn999@gmail.com}
@@ -75,34 +75,32 @@
 \cortext[cor1]{Corresponding author}
 
 \begin{highlights}
-\item Scoping audit of 46 physics-constrained wind forecasting studies reveals 95.7\% open-code deficit.
-\item No negative trade-offs were reported in the audited 46-study cohort.
-\item Code audit of PCT identifies inverted divergence arguments altering loss gradient scaling.
-\item Form-matched negative controls distinguish domain priors from numerical smoothing.
-\item Degenerate zero-bid diagnostic shows standalone balancing cashflows decouple from forecast skill.
+\item Physical priors act as conditional guardrails rather than universal enhancers.
+\item In sample restriction, authentic priors cut risk; scrambled priors add $+61.2\%$.
+\item At large samples, unconstrained deep models match or surpass fixed priors.
+\item Weak penalties exhibit non-specific numerical mimicry without physical bias.
+\item Point metrics and standalone cashflows decouple from true operational risk.
 \end{highlights}
 
 \begin{abstract}
-Reductions in point forecasting error from physical constraints do not establish that empirical gains stem from valid physical information, nor do they guarantee operational decision value. In the published literature, physical constraints are widely credited with improving renewable energy forecasts, but existing evaluation protocols rarely isolate domain physical guidance from parametric capacity, audit software execution fidelity, or measure asymmetric operational costs. We audit the attributional foundation of physics-constrained wind power forecasting through systematic literature scoping ($N=46$), static software code inspection, and prospective controlled ablations across three commercial UK wind farms. Within the scoped cohort (2023--2026), 0.0\% of studies document operational failure boundaries, 95.7\% lack public source code, and 50.0\% evaluate constraints via confounded module excisions. Software inspection of the open-source PCT benchmark uncovers an inverted argument in its divergence loss that induces an analytical gradient singularity, though its bivariate kernel coupling remains mathematically sound. In controlled experiments holding the neural backbone and post-hoc quantile calibration constant, strong empirical power curve constraints ($\lambda=1.0$) reduce normalized asymmetric decision loss by 1.22\% under sample restriction (Penmanshiel), whereas form- and weight-matched scrambled priors inflate loss by 68.1\%, demonstrating prior specificity under data scarcity. Conversely, weak penalties ($\lambda=0.01$) mimic non-specific numerical smoothing, while offline historical weather proxy staleness ($k > 12$) monotonically degrades performance across all sites. Finally, degenerate zero-bid probing demonstrates that standalone unhedged balancing cashflows decouple from forecast quality under forward-contracted wholesale accounting, indicating that verifiable physical forecasting claims require backbone-matched negative controls, disclosed data budgets, and decision-aligned evaluation.
+Physical constraints are widely credited with improving wind power forecasting, but error reductions often conflate physical guidance with capacity shifts, auxiliary data budgets, non-specific regularization, proxy misalignment, or metric artifacts. Across three commercial UK wind farms holding backbone, capacity, data splits, and calibration constant, we contrast authentic empirical power curve priors against form- and weight-matched pseudo-scrambled negative controls across sample regimes, penalty scales, and proxy latencies across five synchronized random seeds. In sample-restricted regimes ($N_{\text{train}}=1{,}583$, Penmanshiel), strong empirical curve constraints ($\lambda=1.0$) reduce asymmetric dispatch loss by 1.28\%, whereas permuting the aerodynamic mapping triggers a 61.2\% surge in dispatch loss, providing evidence of prior-specific mapping effects in this tested setting. A budget-matched information control ($N_{\text{prior}}=N_{\text{train}}=500$) confirms that domain-structured priors retain 77\%--92\% of the full-history benefit, indicating that most observed gains cannot be explained by additional data volume alone. However, as training data expand to $N_{\text{train}}=5{,}000$, unconstrained data-driven models match or slightly outperform fixed priors under the tested strong-prior setting (+0.33\% on Kelmarsh, +1.73\% on Hill of Towie). Under weak regularization ($\lambda=0.01$), genuine aerodynamic curves and scrambled negative controls yield closely matched outcomes, so observed gains cannot be specifically attributed to physical mapping and remain consistent with non-specific numerical regularization. Training objectives regularized against lagged weather proxies exceed the unconstrained reference by the first evaluated lag ($k=6$, 1\,h) on Hill of Towie and deteriorate monotonically through $k=36$, while continuous corruption crosses the baseline around $\alpha \approx 0.07$ on Penmanshiel. Downstream, symmetric point accuracy (RMSE) decouples from operational dispatch loss, and a degenerate zero-bid baseline mechanically generates six-figure balancing cashflows without forecasting skill. Auditing 46 contemporary studies reveals that surveyed publications reported exclusively within nominal envelopes, while 50.0\% relied on confounded module-level ablations. Physical priors should therefore be evaluated not as universal enhancers, but as conditional inductive guardrails requiring negative controls, boundary stress tests, and decision-aligned evaluation.
 \end{abstract}
 
 \begin{keyword}
-Physics-Constrained Deep Learning \sep Wind Power Forecasting \sep Prediction-Decision Decoupling \sep Conditional Inductive Priors \sep Systematic Audit \sep Implementation Fidelity \sep Machine Learning Reproducibility
+Physics-Constrained Deep Learning \sep Wind Power Forecasting \sep Prediction-Decision Decoupling \sep Conditional Inductive Guardrails \sep Attributional Identification \sep Reproducibility and Auditing \sep Machine Learning in Energy Systems
 \end{keyword}
 
 \end{frontmatter}
 
 \input{sections/01_intro.tex}
 \input{sections/02_related.tex}
-\input{sections/03_framework.tex}
-\input{sections/04_protocol.tex}
-\input{sections/05_results.tex}
-\input{sections/06_code_audit.tex}
-\input{sections/07_theory.tex}
+\input{sections/03_theory.tex}
+\input{sections/04_methodology.tex}
+\input{sections/05_centerpiece.tex}
+\input{sections/06_boundaries.tex}
+\input{sections/07_alignment_forensics.tex}
 \input{sections/08_discussion.tex}
 \input{sections/09_conclusion.tex}
-
-\input{sections/11_starmethods.tex}
 
 \appendix
 \input{sections/10_appendix.tex}
@@ -111,13 +109,16 @@ Physics-Constrained Deep Learning \sep Wind Power Forecasting \sep Prediction-De
 The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 \section*{Author Contributions (CRediT)}
-\textbf{Junyu Li}: Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Visualization, Project administration, Writing -- original draft, Writing -- review \& editing. \textbf{Juntao Du}: Validation, Data curation, Software (Inter-rater reliability arbitration), Investigation, Writing -- review \& editing.
+\textbf{Junyu Li}: Conceptualization, Methodology, Software, Formal analysis, Data curation, Investigation, Visualization, Project administration, Writing -- original draft, Writing -- review \& editing. \textbf{Juntao Du}: Methodology (review protocol), Validation, Data curation (scoping extraction double-coding), Writing -- review \& editing.
 
 \section*{Declaration of Generative AI in the Writing Process}
 During the preparation of this work, the authors used ChatGPT and Google Gemini to assist with literature synthesis, manuscript organization, language refinement, code review, and consistency checking. All scientific claims, calculations, references, experimental results, and final wording were independently reviewed and verified by the authors, who take full responsibility for the content.
 
 \section*{Acknowledgments}
 We thank the open science teams at Zenodo, Cubico Sustainable Investments, RES, TRIG, and Elexon for maintaining transparent public repositories of operational renewable energy telemetry and market clearing records. Computations were supported by dedicated high-performance computing infrastructure.
+
+\section*{Data and Code Availability}
+Raw operational SCADA telemetry from the Kelmarsh (DOIs: \href{https://doi.org/10.5281/zenodo.5841834}{10.5281/zenodo.5841834}) and Penmanshiel (\href{https://doi.org/10.5281/zenodo.5946808}{10.5281/zenodo.5946808}) wind farms is openly available on Zenodo under CC-BY 4.0 licenses from Cubico Sustainable Investments. Operational SCADA telemetry from the Hill of Towie wind farm is openly available on Zenodo under CC-BY 4.0 license released by RES on behalf of The Renewables Infrastructure Group (TRIG) (DOI: \href{https://doi.org/10.5281/zenodo.20204946}{10.5281/zenodo.20204946}). Elexon System Buy Price records are freely accessible through the Elexon BMRS portal under the UK Open Government Licence v3.0. The complete code suite, AST auditing scripts, and the 46-study scoping extraction database with verbatim quotes and multi-coder consensus scores are openly accessible for peer review via the anonymous repository: \url{https://github.com/anonymous-audit/pcwpf-audit}.
 
 \setlength{\bibsep}{2.5pt plus 0.5pt minus 0.5pt}
 \small

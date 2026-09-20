@@ -1,0 +1,285 @@
+⚔️ [真实对决] LightGBM vs Ultra-LSNT (数据实时计算中)...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+🤖 加载 Ultra-LSNT 真实权重...
+   ⚠️ 跳过权重 blocks.0.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+   ⚠️ 跳过权重 blocks.1.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+   ⚠️ 跳过权重 blocks.2.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+   ✅ Ultra-LSNT 就位，成功加载 152/167 个参数
+🌲 正在训练 LightGBM (使用全量训练集)...
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090779 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000268
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.094241 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000308
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.098053 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000360
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.097028 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000385
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.091766 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000370
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.091811 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000406
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.092713 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000461
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090450 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000491
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.088386 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000473
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089751 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000515
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090464 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000557
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090169 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000602
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090430 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000590
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.090981 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000627
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.092090 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000653
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089787 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000696
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.089822 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000684
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.103151 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000713
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.104667 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000745
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.102494 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000785
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.107029 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000779
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.105894 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000791
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.102341 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000836
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.104271 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 133050
+[LightGBM] [Info] Number of data points in the train set: 84480, number of used features: 768
+[LightGBM] [Info] Start training from score 0.000859
+   ✅ LightGBM 训练完毕
+
+🌪️ 开始注入真实噪音 (gaussian)...
+   Noise 0.00 | Ultra-LSNT: 0.8713 vs LightGBM: 0.9068
+   Noise 0.10 | Ultra-LSNT: 0.8612 vs LightGBM: 0.8863
+   Noise 0.20 | Ultra-LSNT: 0.8307 vs LightGBM: 0.8230
+   Noise 0.30 | Ultra-LSNT: 0.7817 vs LightGBM: 0.7282
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+   Noise 0.40 | Ultra-LSNT: 0.7288 vs LightGBM: 0.6168
+
+✅ 真实数据图表已生成: fig_gbdt_battle.png

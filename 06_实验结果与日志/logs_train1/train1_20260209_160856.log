@@ -1,0 +1,10 @@
+================ train1.sh ================
+Start time: 2026-02-09 16:08:56
+Root dir: /root/.cache/论文
+Python: python3
+Tasks: multi_domain,multi_domain_baselines,kernel_ablation,noise20,dm_extended,paper_digest,lite_suite
+Log dir: logs_train1
+Continue on error: 1
+Dry run: 0
+===========================================
+Command: python3 run_background_suite.py --tasks multi_domain,multi_domain_baselines,kernel_ablation,noise20,dm_extended,paper_digest,lite_suite --log-dir logs_train1 --continue-on-error

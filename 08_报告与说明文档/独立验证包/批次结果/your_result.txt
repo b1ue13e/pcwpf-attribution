@@ -1,0 +1,10 @@
+=== PCT Transformer Smoke (seed=0, epochs=2) ===
+js_ratio=1.0
+kelmarsh transformer seed=0 epochs=2 window=720 horizon=1 | constrained=0.47316 unconstrained=0.35528 rel=+33.2%
+
+=== PCT LSTM Smoke (seed=0, epochs=2) ===
+js_ratio=1.0
+kelmarsh lstm seed=0 epochs=2 window=720 horizon=1 | constrained=0.42507 unconstrained=0.35363 rel=+20.2%
+
+=== PI-TFN Smoke (seed=0, epochs=2) ===
+kelmarsh seed=0 epochs=2 | paper_spec=0.18804 unconst=0.08247 no_phi=0.17460 fixed_cp=0.17189

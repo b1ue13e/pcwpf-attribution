@@ -1,0 +1,4 @@
+run_id,model,device,batch_size,warmup,iters,checkpoint,latency_mean_ms,latency_p95_ms,latency_std_ms,throughput_hz,energy_per_inference_mj,avg_power_w,energy_method
+20260302T160907Z_arm_revision_eval,Ultra-LSNT (no guardrail),cpu,1,20,100,checkpoints_ts/main/best_model.pth,40.31178455799818,44.262986816465855,2.64471662513747,24.806641803745006,1209.4917587935925,30.0,estimated_constant_power
+20260302T160907Z_arm_revision_eval,Ultra-LSNT + clip-only (posthoc),cpu,1,20,100,checkpoints_ts/main/best_model.pth,43.14868628978729,52.9668478295207,4.763686477032727,23.17567661930617,1294.6070350706577,30.0,estimated_constant_power
+20260302T160907Z_arm_revision_eval,FG-MoE (full-trained),cpu,1,20,100,results/supplementary_evidence/pi_moe_full_checkpoint.pth,37.290971875190735,40.887033008039,1.6230039170429742,26.816142077146797,1118.881380558014,30.0,estimated_constant_power

@@ -1,0 +1,313 @@
+[2026-02-09T18:21:45.101162] Task: lite_opt_eff
+Command: /root/miniconda3/bin/python3 test_ultra_lsnt_lite_optimized.py
+
+✅ 成功导入 ultra_lsnt_timeseries 工具库
+============================================================
+🚀 Ultra-LSNT-Lite优化效率基准测试
+============================================================
+测试设备: cuda
+GPU: NVIDIA GeForce RTX 4090 D
+CUDA版本: 11.8
+
+📊 加载数据...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+数据形状: (121528, 8), 输入维度: 8
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+
+============================================================
+1. 模型初始化与参数量统计（RTX 4090适配配置）
+============================================================
+优化配置:
+  input_dim: 8
+  hidden_dim: 256
+  seq_len: 96
+  pred_len: 24
+  num_blocks: 2
+  num_experts: 4
+  top_k: 2
+  scales: [1, 2, 4]
+
+模型总参数量: 5,339,672
+可训练参数量: 5,339,672
+模型大小 (MB): 20.37
+🔄 应用模型优化...
+  → 启用torch.compile (模式='max-autotune')
+  ✅ torch.compile成功
+
+============================================================
+2. 推理延迟测试（应用优化）
+============================================================
+充分预热模型...
+AUTOTUNE mm(384x256, 256x512)
+  triton_mm_76 0.0072 ms 100.0%
+  triton_mm_77 0.0072 ms 100.0%
+  triton_mm_80 0.0072 ms 100.0%
+  triton_mm_79 0.0079 ms 90.3%
+  mm 0.0082 ms 87.5%
+  triton_mm_73 0.0082 ms 87.5%
+  triton_mm_72 0.0092 ms 77.8%
+  triton_mm_74 0.0092 ms 77.8%
+  triton_mm_75 0.0092 ms 77.8%
+  triton_mm_71 0.0102 ms 70.4%
+SingleProcess AUTOTUNE takes 3.9042 seconds
+AUTOTUNE addmm(384x256, 384x512, 512x256)
+  triton_mm_88 0.0090 ms 100.0%
+  bias_addmm 0.0092 ms 97.6%
+  triton_mm_89 0.0092 ms 97.6%
+  triton_mm_92 0.0092 ms 97.6%
+  triton_mm_91 0.0102 ms 87.8%
+  triton_mm_87 0.0113 ms 79.8%
+  triton_mm_86 0.0115 ms 78.3%
+  addmm 0.0123 ms 73.2%
+  triton_mm_84 0.0123 ms 73.2%
+  triton_mm_85 0.0128 ms 70.2%
+SingleProcess AUTOTUNE takes 4.5512 seconds
+AUTOTUNE mm(74x256, 256x512)
+  triton_mm_104 0.0054 ms 100.0%
+  triton_mm_100 0.0061 ms 87.5%
+  triton_mm_101 0.0061 ms 87.5%
+  triton_mm_103 0.0061 ms 87.5%
+  mm 0.0063 ms 85.9%
+  triton_mm_98 0.0074 ms 73.0%
+  triton_mm_97 0.0079 ms 68.3%
+  triton_mm_99 0.0082 ms 65.9%
+  triton_mm_96 0.0082 ms 65.6%
+  triton_mm_95 0.0092 ms 58.3%
+SingleProcess AUTOTUNE takes 1.4751 seconds
+AUTOTUNE addmm(74x256, 74x512, 512x256)
+  bias_addmm 0.0072 ms 100.0%
+  triton_mm_112 0.0072 ms 100.0%
+  triton_mm_116 0.0072 ms 100.0%
+  triton_mm_113 0.0079 ms 90.7%
+  triton_mm_115 0.0082 ms 87.5%
+  addmm 0.0092 ms 77.8%
+  triton_mm_108 0.0113 ms 63.6%
+  triton_mm_109 0.0113 ms 63.6%
+  triton_mm_110 0.0113 ms 63.6%
+  triton_mm_111 0.0113 ms 63.6%
+SingleProcess AUTOTUNE takes 1.5920 seconds
+AUTOTUNE mm(696x256, 256x512)
+  mm 0.0082 ms 100.0%
+  triton_mm_124 0.0082 ms 100.0%
+  triton_mm_125 0.0082 ms 100.0%
+  triton_mm_127 0.0082 ms 100.0%
+  triton_mm_128 0.0082 ms 100.0%
+  triton_mm_123 0.0090 ms 91.1%
+  triton_mm_120 0.0092 ms 88.9%
+  triton_mm_121 0.0092 ms 88.9%
+  triton_mm_122 0.0092 ms 88.9%
+  triton_mm_119 0.0102 ms 80.0%
+SingleProcess AUTOTUNE takes 1.3971 seconds
+AUTOTUNE addmm(696x256, 696x512, 512x256)
+  triton_mm_136 0.0102 ms 100.0%
+  triton_mm_137 0.0102 ms 100.0%
+  triton_mm_140 0.0102 ms 100.0%
+  bias_addmm 0.0111 ms 92.5%
+  triton_mm_139 0.0113 ms 90.9%
+  triton_mm_134 0.0123 ms 83.3%
+  triton_mm_135 0.0124 ms 82.3%
+  triton_mm_132 0.0131 ms 78.0%
+  addmm 0.0133 ms 76.9%
+  triton_mm_133 0.0143 ms 71.4%
+SingleProcess AUTOTUNE takes 1.5096 seconds
+AUTOTUNE mm(894x256, 256x512)
+  triton_mm_148 0.0082 ms 100.0%
+  triton_mm_149 0.0082 ms 100.0%
+  triton_mm_151 0.0082 ms 100.0%
+  mm 0.0090 ms 91.4%
+  triton_mm_146 0.0092 ms 88.9%
+  triton_mm_147 0.0092 ms 88.9%
+  triton_mm_152 0.0101 ms 81.3%
+  triton_mm_144 0.0102 ms 80.0%
+  triton_mm_145 0.0102 ms 80.0%
+  triton_mm_143 0.0113 ms 72.7%
+SingleProcess AUTOTUNE takes 1.3973 seconds
+AUTOTUNE addmm(894x256, 894x512, 512x256)
+  bias_addmm 0.0113 ms 100.0%
+  triton_mm_160 0.0113 ms 100.0%
+  triton_mm_164 0.0113 ms 100.0%
+  addmm 0.0123 ms 91.7%
+  triton_mm_161 0.0123 ms 91.7%
+  triton_mm_163 0.0123 ms 91.7%
+  triton_mm_158 0.0133 ms 84.6%
+  triton_mm_159 0.0133 ms 84.6%
+  triton_mm_156 0.0154 ms 73.3%
+  triton_mm_157 0.0154 ms 73.3%
+SingleProcess AUTOTUNE takes 1.5092 seconds
+AUTOTUNE mm(746x256, 256x512)
+  mm 0.0082 ms 100.0%
+  triton_mm_197 0.0082 ms 100.0%
+  triton_mm_199 0.0082 ms 100.0%
+  triton_mm_196 0.0083 ms 98.5%
+  triton_mm_193 0.0092 ms 88.9%
+  triton_mm_194 0.0092 ms 88.9%
+  triton_mm_195 0.0092 ms 88.9%
+  triton_mm_200 0.0092 ms 88.9%
+  triton_mm_191 0.0102 ms 80.0%
+  triton_mm_192 0.0102 ms 80.0%
+SingleProcess AUTOTUNE takes 1.3979 seconds
+AUTOTUNE addmm(746x256, 746x512, 512x256)
+  triton_mm_212 0.0102 ms 100.0%
+  bias_addmm 0.0111 ms 92.5%
+  triton_mm_208 0.0111 ms 92.4%
+  triton_mm_209 0.0113 ms 90.9%
+  triton_mm_211 0.0115 ms 88.8%
+  triton_mm_206 0.0123 ms 83.3%
+  triton_mm_207 0.0133 ms 76.9%
+  addmm 0.0141 ms 72.4%
+  triton_mm_204 0.0143 ms 71.4%
+  triton_mm_205 0.0154 ms 66.7%
+SingleProcess AUTOTUNE takes 1.5098 seconds
+AUTOTUNE mm(509x256, 256x512)
+  triton_mm_224 0.0072 ms 100.0%
+  triton_mm_223 0.0080 ms 89.6%
+  mm 0.0082 ms 87.5%
+  triton_mm_218 0.0082 ms 87.5%
+  triton_mm_219 0.0082 ms 87.5%
+  triton_mm_220 0.0082 ms 87.5%
+  triton_mm_221 0.0082 ms 87.5%
+  triton_mm_216 0.0092 ms 77.8%
+  triton_mm_217 0.0092 ms 77.8%
+  triton_mm_215 0.0102 ms 70.0%
+SingleProcess AUTOTUNE takes 1.3957 seconds
+AUTOTUNE addmm(509x256, 509x512, 512x256)
+  triton_mm_236 0.0092 ms 100.0%
+  bias_addmm 0.0102 ms 90.0%
+  triton_mm_232 0.0102 ms 90.0%
+  triton_mm_233 0.0102 ms 90.0%
+  triton_mm_235 0.0102 ms 90.0%
+  triton_mm_230 0.0113 ms 81.8%
+  triton_mm_228 0.0123 ms 75.0%
+  triton_mm_231 0.0123 ms 75.0%
+  addmm 0.0133 ms 69.2%
+  triton_mm_229 0.0133 ms 69.2%
+SingleProcess AUTOTUNE takes 1.5105 seconds
+AUTOTUNE mm(606x256, 256x512)
+  triton_mm_247 0.0072 ms 100.0%
+  triton_mm_248 0.0081 ms 89.7%
+  mm 0.0082 ms 88.3%
+  triton_mm_243 0.0082 ms 88.3%
+  triton_mm_244 0.0082 ms 88.3%
+  triton_mm_245 0.0082 ms 88.3%
+  triton_mm_242 0.0083 ms 87.6%
+  triton_mm_240 0.0092 ms 78.5%
+  triton_mm_241 0.0092 ms 78.5%
+  triton_mm_239 0.0102 ms 70.6%
+SingleProcess AUTOTUNE takes 1.3941 seconds
+AUTOTUNE addmm(606x256, 606x512, 512x256)
+  bias_addmm 0.0102 ms 100.0%
+  triton_mm_256 0.0102 ms 100.0%
+  triton_mm_257 0.0102 ms 100.0%
+  triton_mm_260 0.0102 ms 100.0%
+  triton_mm_259 0.0113 ms 90.9%
+  triton_mm_254 0.0123 ms 83.3%
+  triton_mm_255 0.0123 ms 83.3%
+  addmm 0.0133 ms 76.9%
+  triton_mm_252 0.0133 ms 76.9%
+  triton_mm_253 0.0143 ms 71.4%
+SingleProcess AUTOTUNE takes 1.5108 seconds
+AUTOTUNE mm(187x256, 256x512)
+  triton_mm_268 0.0061 ms 100.0%
+  triton_mm_271 0.0063 ms 97.5%
+  mm 0.0072 ms 85.7%
+  triton_mm_269 0.0072 ms 85.7%
+  triton_mm_272 0.0072 ms 85.7%
+  triton_mm_264 0.0082 ms 75.0%
+  triton_mm_265 0.0082 ms 75.0%
+  triton_mm_266 0.0082 ms 75.0%
+  triton_mm_267 0.0082 ms 75.0%
+  triton_mm_263 0.0092 ms 66.7%
+SingleProcess AUTOTUNE takes 1.6296 seconds
+AUTOTUNE addmm(187x256, 187x512, 512x256)
+  bias_addmm 0.0080 ms 100.0%
+  triton_mm_280 0.0082 ms 97.3%
+  triton_mm_281 0.0082 ms 97.3%
+  triton_mm_283 0.0082 ms 97.3%
+  triton_mm_284 0.0082 ms 97.3%
+  triton_mm_276 0.0113 ms 70.7%
+  triton_mm_278 0.0113 ms 70.7%
+  triton_mm_279 0.0113 ms 70.7%
+  triton_mm_277 0.0120 ms 66.4%
+  addmm 0.0123 ms 64.8%
+SingleProcess AUTOTUNE takes 1.5121 seconds
+AUTOTUNE mm(409x256, 256x512)
+  triton_mm_340 0.0072 ms 100.0%
+  triton_mm_341 0.0072 ms 100.0%
+  triton_mm_344 0.0072 ms 100.0%
+  mm 0.0080 ms 89.6%
+  triton_mm_343 0.0082 ms 87.5%
+  triton_mm_339 0.0084 ms 85.8%
+  triton_mm_338 0.0084 ms 85.7%
+  triton_mm_336 0.0092 ms 77.8%
+  triton_mm_337 0.0092 ms 77.8%
+  triton_mm_335 0.0102 ms 70.0%
+SingleProcess AUTOTUNE takes 1.4080 seconds
+AUTOTUNE addmm(409x256, 409x512, 512x256)
+  bias_addmm 0.0092 ms 100.0%
+  triton_mm_352 0.0092 ms 100.0%
+  triton_mm_353 0.0092 ms 100.0%
+  triton_mm_356 0.0092 ms 100.0%
+  triton_mm_355 0.0102 ms 90.0%
+  addmm 0.0113 ms 81.8%
+  triton_mm_350 0.0113 ms 81.8%
+  triton_mm_351 0.0122 ms 75.7%
+  triton_mm_348 0.0123 ms 75.0%
+  triton_mm_349 0.0133 ms 69.2%
+SingleProcess AUTOTUNE takes 1.5136 seconds
+  预热迭代 1/10
+  预热迭代 3/10
+  预热迭代 5/10
+  预热迭代 7/10
+  预热迭代 9/10
+单次推理测试...
+单次推理延迟: 21.02 ms
+批量推理测试（20批次）...
+AUTOTUNE mm(1x256, 256x512)
+  triton_mm_481 0.0051 ms 100.0%
+  triton_mm_482 0.0051 ms 100.0%
+  triton_mm_483 0.0051 ms 100.0%
+  triton_mm_484 0.0051 ms 100.0%
+  triton_mm_486 0.0051 ms 100.0%
+  triton_mm_487 0.0051 ms 100.0%
+  mm 0.0060 ms 85.1%
+  triton_mm_480 0.0061 ms 84.2%
+  triton_mm_479 0.0061 ms 83.3%
+  triton_mm_478 0.0072 ms 71.4%
+SingleProcess AUTOTUNE takes 3.1525 seconds
+AUTOTUNE addmm(1x256, 1x512, 512x256)
+  triton_mm_495 0.0061 ms 100.0%
+  triton_mm_496 0.0061 ms 100.0%
+  triton_mm_498 0.0061 ms 100.0%
+  triton_mm_499 0.0061 ms 100.0%
+  triton_mm_494 0.0069 ms 88.9%
+  bias_addmm 0.0072 ms 85.7%
+  addmm 0.0072 ms 85.7%
+  triton_mm_493 0.0072 ms 85.7%
+  triton_mm_492 0.0082 ms 75.0%
+  triton_mm_491 0.0082 ms 74.7%
+SingleProcess AUTOTUNE takes 3.3982 seconds
+  批次 1/20: 6154.61 ms
+  批次 6/20: 20.97 ms
+
+平均推理延迟: 1567.15 ms (±2913.49 ms)
+最小推理延迟: 20.81 ms
+最大推理延迟: 7785.63 ms
+测试批次数: 9
+
+📈 性能提升对比:
+  原始Ultra-LSNT-Lite: 8.94 ms (基准)
+  优化Ultra-LSNT-Lite: 1567.15 ms
+  延迟降低: 0.0%
+
+============================================================
+3. 内存占用测试
+============================================================
+初始化后内存: 1241.9 MB, GPU内存: 25.5 MB

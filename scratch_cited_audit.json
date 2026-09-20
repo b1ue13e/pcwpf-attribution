@@ -1,0 +1,1081 @@
+[
+  {
+    "key": "damour2022",
+    "bib_title": "Underspecification presents challenges for credibility in modern machine learning",
+    "bib_author": "D'Amour, Alexander and Heller, Katherine and Moldovan, Dan and Adlam, Ben and Alabdulmohsin, Ibrahim and Celis, L Elisa and Frankle, Jonathan and George, Charles and Hobson, Matthew and Hu, Alex and others",
+    "bib_year": "",
+    "bib_venue": "Journal of Machine Learning Research",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Underspecification Presents Challenges for Credibility in Modern Machine Learning",
+      "authors": [
+        "Alexander D’Amour",
+        "Katherine Heller",
+        "Dan Moldovan",
+        "Ben Adlam",
+        "Babak Alipanahi",
+        "Alex Beutel",
+        "Christina Chen",
+        "Jonathan Deaton",
+        "Jacob Eisenstein",
+        "Matthew D. Hoffman",
+        "Farhad Hormozdiari",
+        "Neil Houlsby",
+        "Shaobo Hou",
+        "Ghassen Jerfel",
+        "Alan Karthikesalingam",
+        "Mario Lučić",
+        "Yi-An Ma",
+        "Cory Y. McLean",
+        "Diana Mincu",
+        "Akinori Mitani",
+        "Andrea Montanari",
+        "Zachary Nado",
+        "Vivek Natarajan",
+        "Christopher Nielson",
+        "Thomas F. Osborne",
+        "Rajiv Raman",
+        "Kim Ramasamy",
+        "Rory Sayres",
+        "Jessica Schrouff",
+        "Martin Seneviratne",
+        "Shannon Sequeira",
+        "Harini Suresh",
+        "Victor Veitch",
+        "Max Vladymyrov",
+        "Xuezhi Wang",
+        "Kellie Webster",
+        "Steve Yadlowsky",
+        "Taedong Yun",
+        "Xiaohua Zhai",
+        "D. Sculley"
+      ],
+      "venue": "arXiv (Cornell University)",
+      "year": 2020,
+      "volume": null,
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.48550/arxiv.2011.03395",
+      "type": "preprint",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "\\subsection{Reproducibility Standards and Software Auditing in Scientific AI} Empirical machine learning has faced increasing scrutiny over data leakage, underspecification, and implementation discrepancies \\cite{damour2022,gundersen2018,kapoor2023,lipton2019}."
+      ],
+      [
+        "02_related.tex",
+        "\\cite{damour2022} showed that models with equivalent in-distribution test accuracy often diverge under distribution shift due to underspecified training criteria."
+      ]
+    ]
+  },
+  {
+    "key": "dao2018cointegration",
+    "bib_title": "Condition monitoring and fault detection in wind turbines based on cointegration analysis of {SCADA} data",
+    "bib_author": "Dao, Phong B. and Staszewski, Wieslaw J. and Barszcz, Tomasz and Uhl, Tadeusz",
+    "bib_year": "2018",
+    "bib_venue": "Renewable Energy",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Condition monitoring and fault detection in wind turbines based on cointegration analysis of SCADA data",
+      "authors": [
+        "Phong B. Dao",
+        "Wiesław J. Staszewski",
+        "Tomasz Barszcz",
+        "Tadeusz Uhl"
+      ],
+      "venue": "Renewable Energy",
+      "year": 2017,
+      "volume": "116",
+      "issue": null,
+      "page": "107-122",
+      "doi": "10.1016/j.renene.2017.06.089",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "Downstream grid dispatch penalizes reserve shortfalls far more severely than excess generation \\cite{dao2018cointegration,yan2025economicvalue}."
+      ]
+    ]
+  },
+  {
+    "key": "gundersen2018",
+    "bib_title": "State of the art: Reproducibility in artificial intelligence",
+    "bib_author": "Gundersen, Odd Erik and Kjensmo, Sigbj{\\\\o}rn",
+    "bib_year": "",
+    "bib_venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "State of the Art: Reproducibility in Artificial Intelligence",
+      "authors": [
+        "Odd Erik Gundersen",
+        "Sigbjørn Kjensmo"
+      ],
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "year": 2018,
+      "volume": "32",
+      "issue": "1",
+      "page": "None-None",
+      "doi": "10.1609/aaai.v32i1.11503",
+      "type": "conference-paper",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "Second, public source code availability remains rare in this domain, leaving the mathematical fidelity of published loss formulations and computational graph executions largely uninspected \\cite{gundersen2018,kapoor2023,pineau2021}."
+      ],
+      [
+        "02_related.tex",
+        "\\subsection{Reproducibility Standards and Software Auditing in Scientific AI} Empirical machine learning has faced increasing scrutiny over data leakage, underspecification, and implementation discrepancies \\cite{damour2022,gundersen2018,kapoor2023,lipton2019}."
+      ],
+      [
+        "02_related.tex",
+        "Gundersen and Kjensmo \\cite{gundersen2018} evaluated 400 papers from major AI conferences, finding that fewer than 20\\% shared executable source code or reproducible experimental protocols.."
+      ]
+    ]
+  },
+  {
+    "key": "holttinen2021",
+    "bib_title": "Design and operation of power systems with large amounts of wind power",
+    "bib_author": "Holttinen, Hannele and others",
+    "bib_year": "",
+    "bib_venue": "",
+    "bib_doi": "",
+    "verified_meta": null,
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "In electric power systems and wholesale electricity markets, the operational value of wind power forecasting is governed by asymmetric decision losses in unit commitment, economic dispatch, and real-time balancing settlement \\cite{holttinen2021,weron2014}."
+      ]
+    ]
+  },
+  {
+    "key": "kapoor2023",
+    "bib_title": "Leakage and the reproducibility crisis in machine-learning-based science",
+    "bib_author": "Kapoor, Sayash and Narayanan, Arvind",
+    "bib_year": "2023",
+    "bib_venue": "Patterns",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+      "authors": [
+        "Sayash Kapoor",
+        "Arvind Narayanan"
+      ],
+      "venue": "Patterns",
+      "year": 2023,
+      "volume": "4",
+      "issue": "9",
+      "page": "100804-100804",
+      "doi": "10.1016/j.patter.2023.100804",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "Second, public source code availability remains rare in this domain, leaving the mathematical fidelity of published loss formulations and computational graph executions largely uninspected \\cite{gundersen2018,kapoor2023,pineau2021}."
+      ],
+      [
+        "02_related.tex",
+        "\\subsection{Reproducibility Standards and Software Auditing in Scientific AI} Empirical machine learning has faced increasing scrutiny over data leakage, underspecification, and implementation discrepancies \\cite{damour2022,gundersen2018,kapoor2023,lipton2019}."
+      ],
+      [
+        "02_related.tex",
+        "Kapoor and Narayanan \\cite{kapoor2023} documented how subtle data leakage vectors undermine reproducibility across seventeen scientific domains."
+      ]
+    ]
+  },
+  {
+    "key": "kapoor2024reforms",
+    "bib_title": "{REFORMS}: Reporting standards for machine learning based science",
+    "bib_author": "Kapoor, Sayash and Cantrell, Emily and Peng, Kenny and Pham, Tuan Dung and Bail, Christopher A. and De-Arteaga, Maria and Frankle, Jonathan and Hardt, Moritz and Hashimoto, Tatsunori and Henderson, Peter and Khani, Fereshteh and Lipton, Zachary C. and Narayanan, Arvind",
+    "bib_year": "2024",
+    "bib_venue": "Science",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "REFORMS: Reporting Standards for Machine Learning Based Science",
+      "authors": [
+        "Sayash Kapoor",
+        "Emily M. Cantrell",
+        "Kenny Peng",
+        "Thanh Hien Pham",
+        "Christopher A. Bail",
+        "Odd Erik Gundersen",
+        "Jake M. Hofman",
+        "Jessica Hullman",
+        "Michael A. Lones",
+        "Momin M. Malik",
+        "Priyanka Nanayakkara",
+        "Russell A. Poldrack",
+        "Inioluwa Deborah Raji",
+        "Michael Roberts",
+        "Matthew Salganik",
+        "Marta Serra-García",
+        "Brandon Stewart",
+        "Gilles Vandewiele",
+        "Arvind Narayanan"
+      ],
+      "venue": "arXiv (Cornell University)",
+      "year": 2023,
+      "volume": null,
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.48550/arxiv.2308.07832",
+      "type": "preprint",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": []
+  },
+  {
+    "key": "karniadakis2021physics",
+    "bib_title": "Physics-informed machine learning",
+    "bib_author": "Karniadakis, George Em and Kevrekidis, Ioannis G and Lu, Lu and Perdikaris, Paris and Wang, Sifan and Yang, Liu",
+    "bib_year": "",
+    "bib_venue": "Nature Reviews Physics",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Physics-informed machine learning",
+      "authors": [
+        "George Em Karniadakis",
+        "Ioannis G. Kevrekidis",
+        "Lu Lu",
+        "Paris Perdikaris",
+        "Sifan Wang",
+        "Liu Yang"
+      ],
+      "venue": "Nature Reviews Physics",
+      "year": 2021,
+      "volume": "3",
+      "issue": "6",
+      "page": "422-440",
+      "doi": "10.1038/s42254-021-00314-5",
+      "type": "review",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "To improve generalization and enforce physically realistic outputs, an expanding body of literature embeds aerodynamic limits, empirical power curves, kinematic wake equations, and joint probability distribution constraints directly into deep neural network architectures and loss functions \\cite{karniadakis2021physics,raissi2019physics,sheng2025annreview,pct2026}."
+      ],
+      [
+        "02_related.tex",
+        "\\subsection{Physical Constraints in Wind Power Forecasting} Embedding physical domain knowledge into neural networks aims to combine governing physical principles with data-driven function approximation \\cite{karniadakis2021physics,raissi2019physics}."
+      ],
+      [
+        "02_related.tex",
+        "(2021) \\cite{karniadakis2021physics} & Conceptual & Conceptual & No & No & No \\\\ Optis et al."
+      ]
+    ]
+  },
+  {
+    "key": "koenker2005",
+    "bib_title": "Quantile Regression",
+    "bib_author": "Koenker, Roger",
+    "bib_year": "2005",
+    "bib_venue": "Cambridge University Press",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Quantile Regression",
+      "authors": [
+        "Roger Koenker"
+      ],
+      "venue": "Cambridge University Press eBooks",
+      "year": 2005,
+      "volume": null,
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.1017/cbo9780511754098",
+      "type": "book",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "03_theory.tex",
+        "\\subsection{Lemma 1: Exact Integral Excess Operational Risk} Lemma~\\ref{lem:excess_risk} formalizes a classical excess risk analytical identity in statistical decision theory and quantile regression, grounded in the foundational formulations of Koenker \\cite{koenker2005} and electricity market bidding principles established by Pinson et al."
+      ],
+      [
+        "03_theory.tex",
+        "\\begin{lemma}[Exact Integral Excess Operational Risk \\cite{koenker2005,pinson2007trading}] \\label{lem:excess_risk} For any dispatch decision rule $p(X) \\in [0, 1]$, the excess operational risk relative to the Bayes-optimal quantile $q_\\tau(X)$ satisfies the exact integral identity: \\begin{equation} \\begin{aligned} \\mathcal{R}(p) - \\mathcal{R}(q_\\tau) &= (r + 1) \\, \\mathbb{E}_X \\left[ \\int_{q_\\tau(X)}^{p(X)} \\Big( F_{Y|X}(u) - \\tau \\Big) \\, du \\right] \\\\ &\\ge 0, \\end{aligned} \\label{eq:exact_integral} \\end{equation} which is non-negative everywhere."
+      ]
+    ]
+  },
+  {
+    "key": "krishnapriyan2021",
+    "bib_title": "Characterizing possible failure modes in physics-informed neural networks",
+    "bib_author": "Krishnapriyan, Aditi and Gholami, Amir and Zhe, Shandian and Kirby, Robert and Mahoney, Michael W",
+    "bib_year": "",
+    "bib_venue": "Advances in Neural Information Processing Systems",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Characterizing possible failure modes in physics-informed neural networks",
+      "authors": [
+        "Aditi S. Krishnapriyan",
+        "Amir Gholami",
+        "Shandian Zhe",
+        "Robert M. Kirby",
+        "Michael W. Mahoney"
+      ],
+      "venue": "arXiv (Cornell University)",
+      "year": 2021,
+      "volume": "34",
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.48550/arxiv.2109.01050",
+      "type": "preprint",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "\\paragraph{Distributional Regularization} Penalizing deviations from historical joint wind speed--power distributions via statistical divergence objectives (such as Wasserstein distance or Jensen--Shannon divergence \\cite{pct2026,tgdpf2025}) introduces additional optimization dynamics \\cite{krishnapriyan2021}."
+      ]
+    ]
+  },
+  {
+    "key": "lipton2019",
+    "bib_title": "Troubling trends in machine learning scholarship",
+    "bib_author": "Lipton, Zachary C and Steinhardt, Jacob",
+    "bib_year": "",
+    "bib_venue": "Communications of the ACM",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Troubling Trends in Machine Learning Scholarship",
+      "authors": [
+        "Zachary C. Lipton",
+        "Jacob Steinhardt"
+      ],
+      "venue": "Queue",
+      "year": 2019,
+      "volume": "17",
+      "issue": "1",
+      "page": "45-77",
+      "doi": "10.1145/3317287.3328534",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "In these asymmetric operational regimes, conventional symmetric regression metrics, such as Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE), fail to reflect tail operational risk and downside financial exposure \\cite{lipton2019,pinson2007trading}."
+      ],
+      [
+        "02_related.tex",
+        "\\subsection{Reproducibility Standards and Software Auditing in Scientific AI} Empirical machine learning has faced increasing scrutiny over data leakage, underspecification, and implementation discrepancies \\cite{damour2022,gundersen2018,kapoor2023,lipton2019}."
+      ],
+      [
+        "02_related.tex",
+        "Concurrently, Lipton and Steinhardt \\cite{lipton2019} analyzed recurring pitfalls in empirical scholarship: confusing empirical association with theoretical explanation, failing to isolate independent sources of performance gains, and employing decorative mathematics that does not govern empirical outcomes.."
+      ],
+      [
+        "04_methodology.tex",
+        "\\subsection{The Five-Dimensional Constraint Lifecycle Taxonomy} Designating a neural network as ``physics-constrained'' often groups disparate mathematical, structural, and empirical operations under a single umbrella term \\cite{lipton2019}."
+      ]
+    ]
+  },
+  {
+    "key": "madsen2005",
+    "bib_title": "Standardizing the performance evaluation of short-term wind power prediction models",
+    "bib_author": "Madsen, Henrik and Pinson, Pierre and Kariniotakis, George and Nielsen, Torben S and Nielsen, Henrik Aa",
+    "bib_year": "",
+    "bib_venue": "Wind Engineering",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Standardizing the Performance Evaluation of Short-Term Wind Power Prediction Models",
+      "authors": [
+        "Henrik Madsen",
+        "Pierre Pinson",
+        "Georges Kariniotakis",
+        "Henrik Aa. Nielsen",
+        "Torben Skov Nielsen"
+      ],
+      "venue": "Wind Engineering",
+      "year": 2005,
+      "volume": "29",
+      "issue": "6",
+      "page": "475-489",
+      "doi": "10.1260/030952405776234599",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "\\subsection{Decision-Theoretic Evaluation and Settlement Mechanics} Wind power forecasting models have traditionally been evaluated using symmetric statistical error metrics, such as MAE, RMSE, and $R^2$ \\cite{madsen2005,optis2022}."
+      ],
+      [
+        "02_related.tex",
+        "\\cite{madsen2005} established standardized verification protocols highlighting the importance of evaluating models across horizons, operational regimes, and normalized capacity metrics."
+      ]
+    ]
+  },
+  {
+    "key": "maldonadocorrea2020slr",
+    "bib_title": "Using {SCADA} Data for Wind Turbine Condition Monitoring: A Systematic Literature Review",
+    "bib_author": "Maldonado-Correa, Jorge and Mart{\\'i}n-Mart{\\'i}nez, Sergio and Artigao, Estefan{\\'i}a and G{\\'o}mez-L{\\'a}zaro, Emilio",
+    "bib_year": "2020",
+    "bib_venue": "Energies",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Using SCADA Data for Wind Turbine Condition Monitoring: A Systematic Literature Review",
+      "authors": [
+        "Jorge Maldonado-Correa",
+        "Sergio Martín‐Martínez",
+        "Estefanía Artigao",
+        "Emilio Gómez‐Lázaro"
+      ],
+      "venue": "Energies",
+      "year": 2020,
+      "volume": "13",
+      "issue": "12",
+      "page": "3132-3132",
+      "doi": "10.3390/en13123132",
+      "type": "review",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "(2020) \\cite{maldonadocorrea2020slr} & No & No & No & No & No \\\\ Karniadakis et al."
+      ]
+    ]
+  },
+  {
+    "key": "morales2014",
+    "bib_title": "Integrating Renewables in Electricity Markets: Operational Problems",
+    "bib_author": "Morales, Juan M. and Conejo, Antonio J. and Madsen, Henrik and Pinson, Pierre and Zugno, Marco",
+    "bib_year": "2014",
+    "bib_venue": "Springer Science \\& Business Media",
+    "bib_doi": "",
+    "verified_meta": null,
+    "citing_sentences": [
+      [
+        "03_theory.tex",
+        "\\subsection{Two-Settlement Wholesale Accounting and Real-Time BSC Imbalance Netting} In wholesale electricity markets, wind power producers operate within a two-settlement framework coupling forward contracts and physical real-time imbalance settlement \\cite{morales2014,pinson2007trading}."
+      ]
+    ]
+  },
+  {
+    "key": "nie2023patchtst",
+    "bib_title": "A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
+    "bib_author": "Nie, Yuqi and Nguyen, Nam H. and Sinthong, Phanwadee and Kalagnanam, Jayant",
+    "bib_year": "2023",
+    "bib_venue": "The Eleventh International Conference on Learning Representations (ICLR 2023)",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
+      "authors": [
+        "Yuqi Nie",
+        "Nam Hoai Nguyen",
+        "Phanwadee Sinthong",
+        "Jayant Kalagnanam"
+      ],
+      "venue": "arXiv (Cornell University)",
+      "year": 2022,
+      "volume": null,
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.48550/arxiv.2211.14730",
+      "type": "preprint",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": [
+      [
+        "04_methodology.tex",
+        "\\item \\textit{Architectural Sensitivity Probe (PatchTST)}: Multi-patch channel-independent Transformer (\\cite{nie2023patchtst}, patch length 6, stride 4, 2-layer encoder with RevIN) evaluated across 60 independently trained models (3 farms $\\times$ 4 constraints $\\times$ 5 seeds) under nominal regularization ($\\lambda=0.01$)."
+      ],
+      [
+        "06_experiments.tex",
+        "\\subsection{Cross-Backbone Architectural Sensitivity Probe (PatchTST)} To assess whether empirical boundary behaviors extend beyond linear representations, we evaluated PatchTST \\cite{nie2023patchtst} across 60 independently trained models (3 farms $\\times$ 4 constraint conditions $\\times$ 5 seeds; Table~\\ref{tab:patchtst_and_rules})."
+      ]
+    ]
+  },
+  {
+    "key": "optis2022",
+    "bib_title": "Evaluating wind speed and power forecasts using {WE-Validate}: An open-source and systematic validation framework",
+    "bib_author": "Optis, Mike and Bodini, Nicola and Redfern, Stephanie and Fang, Jeffrey",
+    "bib_year": "",
+    "bib_venue": "Renewable Energy",
+    "bib_doi": "",
+    "verified_meta": null,
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "\\subsection{Decision-Theoretic Evaluation and Settlement Mechanics} Wind power forecasting models have traditionally been evaluated using symmetric statistical error metrics, such as MAE, RMSE, and $R^2$ \\cite{madsen2005,optis2022}."
+      ],
+      [
+        "02_related.tex",
+        "introduced the \\textit{WE-Validate} framework \\cite{optis2022}, emphasizing distributionally resistant metrics tailored to complex atmospheric conditions.."
+      ],
+      [
+        "02_related.tex",
+        "(WE-Validate, 2022) \\cite{optis2022} & No & No & Partial & Open Benchmark & No \\\\ Sheng et al."
+      ]
+    ]
+  },
+  {
+    "key": "pct2026",
+    "bib_title": "Physics-constrained transformer for wind power forecasting",
+    "bib_author": "Wang, Ding and Luo, Qiang and Gao, Jiaxin and Zhang, Dongxiao and Chen, Yuntian",
+    "bib_year": "2026",
+    "bib_venue": "Scientific Reports",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Physics-constrained transformer for wind power forecasting",
+      "authors": [
+        "Ding Wang",
+        "Qiang Luo",
+        "Jiaxin Gao",
+        "Dongxiao Zhang",
+        "Yuntian Chen"
+      ],
+      "venue": "Scientific Reports",
+      "year": 2026,
+      "volume": "16",
+      "issue": "1",
+      "page": "4237-4237",
+      "doi": "10.1038/s41598-025-34348-x",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "To improve generalization and enforce physically realistic outputs, an expanding body of literature embeds aerodynamic limits, empirical power curves, kinematic wake equations, and joint probability distribution constraints directly into deep neural network architectures and loss functions \\cite{karniadakis2021physics,raissi2019physics,sheng2025annreview,pct2026}."
+      ],
+      [
+        "02_related.tex",
+        "\\paragraph{Distributional Regularization} Penalizing deviations from historical joint wind speed--power distributions via statistical divergence objectives (such as Wasserstein distance or Jensen--Shannon divergence \\cite{pct2026,tgdpf2025}) introduces additional optimization dynamics \\cite{krishnapriyan2021}."
+      ],
+      [
+        "05_audit.tex",
+        "The Physics-Constrained Transformer (PCT \\cite{pct2026}, \\textit{Scientific Reports} 2026; commit \\texttt{65941ec}) represents the sole publicly accessible training codebase for end-to-end physics-constrained Transformers and the sole audited repository exhibiting an implementation divergence between published text and code execution ($\\mathcal{D}_4 = \\texttt{code-mismatch}$).."
+      ]
+    ]
+  },
+  {
+    "key": "pineau2021",
+    "bib_title": "Improving reproducibility in machine learning research: A report from the {NeurIPS} 2019 reproducibility program",
+    "bib_author": "Pineau, Joelle and Vincent-Lamarre, Philippe and Sinha, Koustuv and Larivi{\\\\'e}re, Vincent and Beygelzimer, Alina and d'Alch{\\\\'e}-Buc, Florence and Fox, Emily and Larochelle, Hugo",
+    "bib_year": "",
+    "bib_venue": "Journal of Machine Learning Research",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Improving Reproducibility in Machine Learning Research (A Report from the NeurIPS 2019 Reproducibility Program)",
+      "authors": [
+        "Joëlle Pineau",
+        "Philippe Vincent‐Lamarre",
+        "Koustuv Sinha",
+        "Vincent Larivière",
+        "Alina Beygelzimer",
+        "Florence d’Alché–Buc",
+        "Emily B. Fox",
+        "Hugo Larochelle"
+      ],
+      "venue": "arXiv (Cornell University)",
+      "year": 2020,
+      "volume": null,
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.48550/arxiv.2003.12206",
+      "type": "preprint",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "Second, public source code availability remains rare in this domain, leaving the mathematical fidelity of published loss formulations and computational graph executions largely uninspected \\cite{gundersen2018,kapoor2023,pineau2021}."
+      ],
+      [
+        "02_related.tex",
+        "\\cite{pineau2021} developed the NeurIPS Machine Learning Reproducibility Checklist, demonstrating that explicit reporting mandates improve disclosure of code, data, hyperparameter choices, and error bounds."
+      ]
+    ]
+  },
+  {
+    "key": "pinson2007trading",
+    "bib_title": "Trading wind generation from short-term probabilistic forecasts—Coordinated electricity market",
+    "bib_author": "Pinson, Pierre and Chevallier, Christophe and Kariniotakis, George N",
+    "bib_year": "2007",
+    "bib_venue": "IEEE Transactions on Power Systems",
+    "bib_doi": "",
+    "verified_meta": null,
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "In these asymmetric operational regimes, conventional symmetric regression metrics, such as Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE), fail to reflect tail operational risk and downside financial exposure \\cite{lipton2019,pinson2007trading}."
+      ],
+      [
+        "02_related.tex",
+        "\\cite{pinson2007trading} demonstrated that optimal bidding under asymmetric imbalance penalties is governed by conditional quantiles matching the cost ratio, highlighting the operational decoupling between point error and decision risk."
+      ],
+      [
+        "03_theory.tex",
+        "\\cite{pinson2007trading}."
+      ],
+      [
+        "03_theory.tex",
+        "\\begin{lemma}[Exact Integral Excess Operational Risk \\cite{koenker2005,pinson2007trading}] \\label{lem:excess_risk} For any dispatch decision rule $p(X) \\in [0, 1]$, the excess operational risk relative to the Bayes-optimal quantile $q_\\tau(X)$ satisfies the exact integral identity: \\begin{equation} \\begin{aligned} \\mathcal{R}(p) - \\mathcal{R}(q_\\tau) &= (r + 1) \\, \\mathbb{E}_X \\left[ \\int_{q_\\tau(X)}^{p(X)} \\Big( F_{Y|X}(u) - \\tau \\Big) \\, du \\right] \\\\ &\\ge 0, \\end{aligned} \\label{eq:exact_integral} \\end{equation} which is non-negative everywhere."
+      ],
+      [
+        "03_theory.tex",
+        "\\subsection{Two-Settlement Wholesale Accounting and Real-Time BSC Imbalance Netting} In wholesale electricity markets, wind power producers operate within a two-settlement framework coupling forward contracts and physical real-time imbalance settlement \\cite{morales2014,pinson2007trading}."
+      ]
+    ]
+  },
+  {
+    "key": "raissi2019physics",
+    "bib_title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+    "bib_author": "Raissi, Maziar and Perdikaris, Paris and Karniadakis, George E",
+    "bib_year": "",
+    "bib_venue": "Journal of Computational Physics",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+      "authors": [
+        "Maziar Raissi",
+        "Paris Perdikaris",
+        "George Em Karniadakis"
+      ],
+      "venue": "Journal of Computational Physics",
+      "year": 2018,
+      "volume": "378",
+      "issue": null,
+      "page": "686-707",
+      "doi": "10.1016/j.jcp.2018.10.045",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "To improve generalization and enforce physically realistic outputs, an expanding body of literature embeds aerodynamic limits, empirical power curves, kinematic wake equations, and joint probability distribution constraints directly into deep neural network architectures and loss functions \\cite{karniadakis2021physics,raissi2019physics,sheng2025annreview,pct2026}."
+      ],
+      [
+        "02_related.tex",
+        "\\subsection{Physical Constraints in Wind Power Forecasting} Embedding physical domain knowledge into neural networks aims to combine governing physical principles with data-driven function approximation \\cite{karniadakis2021physics,raissi2019physics}."
+      ]
+    ]
+  },
+  {
+    "key": "s34_prx2023",
+    "bib_title": "Physics-Guided Machine Learning for Wind-Farm Power Prediction: Toward Interpretability and Generalizability",
+    "bib_author": "Zehtabiyan-Rezaie, Navid and Iosifidis, Alexandros and Abkar, Mahdi",
+    "bib_year": "2023",
+    "bib_venue": "PRX Energy",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Physics-Guided Machine Learning for Wind-Farm Power Prediction: Toward Interpretability and Generalizability",
+      "authors": [
+        "Navid Zehtabiyan-Rezaie",
+        "Alexandros Iosifidis",
+        "Mahdi Abkar"
+      ],
+      "venue": "PRX Energy",
+      "year": 2023,
+      "volume": "2",
+      "issue": "1",
+      "page": "None-None",
+      "doi": "10.1103/prxenergy.2.013009",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "\\paragraph{Kinematic Wake Formulations} Spatio-temporal models commonly embed steady-state kinematic wake equations---such as the 1D Jensen or Bastankhah--Port\\'{e}-Agel Gaussian deficit models \\cite{sheng2025annreview,s34_prx2023}---into Graph Neural Network (GNN) adjacency matrices."
+      ]
+    ]
+  },
+  {
+    "key": "sheng2025annreview",
+    "bib_title": "A review of {SCADA}-based condition monitoring for wind turbines via artificial neural networks",
+    "bib_author": "Sheng, Li and Li, Chunyu and Gao, Ming and Xi, Xiaopeng and Zhou, Donghua",
+    "bib_year": "2025",
+    "bib_venue": "Neurocomputing",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "A review of SCADA-based condition monitoring for wind turbines via artificial neural networks",
+      "authors": [
+        "Li Sheng",
+        "Chunyu Li",
+        "Ming Gao",
+        "Xiaopeng Xi",
+        "Donghua Zhou"
+      ],
+      "venue": "Neurocomputing",
+      "year": 2025,
+      "volume": "633",
+      "issue": null,
+      "page": "129830-129830",
+      "doi": "10.1016/j.neucom.2025.129830",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "To improve generalization and enforce physically realistic outputs, an expanding body of literature embeds aerodynamic limits, empirical power curves, kinematic wake equations, and joint probability distribution constraints directly into deep neural network architectures and loss functions \\cite{karniadakis2021physics,raissi2019physics,sheng2025annreview,pct2026}."
+      ],
+      [
+        "02_related.tex",
+        "\\paragraph{Kinematic Wake Formulations} Spatio-temporal models commonly embed steady-state kinematic wake equations---such as the 1D Jensen or Bastankhah--Port\\'{e}-Agel Gaussian deficit models \\cite{sheng2025annreview,s34_prx2023}---into Graph Neural Network (GNN) adjacency matrices."
+      ],
+      [
+        "02_related.tex",
+        "(2025) \\cite{sheng2025annreview} & No & Partial & No & No & No \\\\ \\midrule \\textbf{This Scoping Empirical Audit} & \\textbf{Yes (Schema v4)} & \\textbf{Yes (Schema v4)} & \\textbf{Yes (Schema v4)} & \\textbf{Yes (Static Audit)} & \\textbf{Yes (Strict Isolation)} \\\\ \\bottomrule \\end{tabularx} \\end{table*}."
+      ]
+    ]
+  },
+  {
+    "key": "tgdpf2025",
+    "bib_title": "Physics-constrained wind power forecasting aligned with probability distributions for noise-resilient deep learning",
+    "bib_author": "Gao, Jiaxin and Cheng, Yuanqi and Zhang, Dongxiao and Chen, Yahong",
+    "bib_year": "2025",
+    "bib_venue": "Applied Energy",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Physics-constrained wind power forecasting aligned with probability distributions for noise-resilient deep learning",
+      "authors": [
+        "Jiaxin Gao",
+        "Yuanqi Cheng",
+        "Dongxiao Zhang",
+        "Yahong Chen"
+      ],
+      "venue": "Applied Energy",
+      "year": 2025,
+      "volume": "383",
+      "issue": null,
+      "page": "125295-125295",
+      "doi": "10.1016/j.apenergy.2025.125295",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "\\paragraph{Operational Envelope Bounds} Enforcing aerodynamic operating thresholds (such as cut-in, rated, and cut-out wind speeds, or theoretical Betz envelopes) via bounded activation functions or post-hoc projections guarantees that outputs respect physical capacity boundaries \\cite{tgdpf2025}."
+      ],
+      [
+        "02_related.tex",
+        "\\paragraph{Distributional Regularization} Penalizing deviations from historical joint wind speed--power distributions via statistical divergence objectives (such as Wasserstein distance or Jensen--Shannon divergence \\cite{pct2026,tgdpf2025}) introduces additional optimization dynamics \\cite{krishnapriyan2021}."
+      ]
+    ]
+  },
+  {
+    "key": "tricco2018",
+    "bib_title": "{PRISMA} extension for scoping reviews ({PRISMA-ScR}): checklist and explanation",
+    "bib_author": "Tricco, Andrea C and Lillie, Erin and Zarin, Wasifa and O'Brien, Kelly K and Colquhoun, Heather and Levac, Danielle and Moher, David and Peters, Micah DJ and Horsley, Tanya and Weeks, Laura and others",
+    "bib_year": "",
+    "bib_venue": "Annals of Internal Medicine",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation",
+      "authors": [
+        "Andrea C. Tricco",
+        "Erin Lillie",
+        "Wasifa Zarin",
+        "Kelly K. O’Brien",
+        "Heather Colquhoun",
+        "Danielle Levac",
+        "David Moher",
+        "Micah D.J. Peters",
+        "Tanya Horsley",
+        "Laura Weeks",
+        "Susanne Hempel",
+        "Elie A. Akl",
+        "Christine Chang",
+        "Jessie McGowan",
+        "Lesley Stewart",
+        "Lisa Hartling",
+        "Adrian Aldcroft",
+        "Michael G. Wilson",
+        "Chantelle Garritty",
+        "Simon Lewin",
+        "Christina Godfrey",
+        "Marilyn Macdonald",
+        "Étienne V Langlois",
+        "Karla Soares‐Weiser",
+        "Jo Moriarty",
+        "Tammy Clifford",
+        "Özge Tunçalp",
+        "Sharon E. Straus"
+      ],
+      "venue": "Annals of Internal Medicine",
+      "year": 2018,
+      "volume": "169",
+      "issue": "7",
+      "page": "467-473",
+      "doi": "10.7326/m18-0850",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "04_methodology.tex",
+        "\\subsection{Systematic Literature Audit Protocol (PRISMA-ScR)} We conducted an empirical scoping audit in accordance with the PRISMA Extension for Scoping Reviews (PRISMA-ScR) guidelines \\cite{tricco2018}."
+      ]
+    ]
+  },
+  {
+    "key": "walsh2021dome",
+    "bib_title": "{DOME}: recommendations for supervised machine learning validation in biology and medicine",
+    "bib_author": "Walsh, Ian and Fishman, Dmytro and Garcia-Gasulla, Dario and Titov, Mikhail and Pollastri, Gianluca and Harrow, Jennifer and Psomopoulos, Fotis and Tosatto, Silvio C. E.",
+    "bib_year": "2021",
+    "bib_venue": "Nature Methods",
+    "bib_doi": "",
+    "verified_meta": null,
+    "citing_sentences": []
+  },
+  {
+    "key": "weron2014",
+    "bib_title": "Electricity price forecasting: A review of the state-of-the-art",
+    "bib_author": "Weron, Rafa{\\l}",
+    "bib_year": "",
+    "bib_venue": "International Journal of Forecasting",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Electricity price forecasting: A review of the state-of-the-art with a look into the future",
+      "authors": [
+        "Rafał Weron"
+      ],
+      "venue": "International Journal of Forecasting",
+      "year": 2014,
+      "volume": "30",
+      "issue": "4",
+      "page": "1030-1081",
+      "doi": "10.1016/j.ijforecast.2014.08.008",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "In electric power systems and wholesale electricity markets, the operational value of wind power forecasting is governed by asymmetric decision losses in unit commitment, economic dispatch, and real-time balancing settlement \\cite{holttinen2021,weron2014}."
+      ],
+      [
+        "02_related.tex",
+        "However, power system operations demonstrate that statistical error reductions do not guarantee economic value under asymmetric market penalties \\cite{weron2014,zhang2014wind}."
+      ],
+      [
+        "03_theory.tex",
+        "In operational power system balancing, transmission system operators evaluate declared bids under asymmetric pinball dispatch penalties \\cite{weron2014,zhang2014wind}: \\begin{equation} \\ell(p, Y; r) = c_+ \\max(p - Y, 0) + c_- \\max(Y - p, 0), \\label{eq:pinball_loss} \\end{equation} where $p \\in [0, 1]$ is the declared dispatch commitment, $c_+$ is the shortfall unit penalty (under-generation where declared power exceeds physical delivery, $p > Y$, requiring expensive tertiary reserve activation), $c_-$ is the surplus unit penalty (over-generation, $Y > p$, inducing downward redispatch or curtailment), and $r = c_+ / c_-$ represents the cost asymmetry ratio."
+      ]
+    ]
+  },
+  {
+    "key": "yan2016review",
+    "bib_title": "Reviews on wind speed and wind power forecasting methods",
+    "bib_author": "Yan, Jie and Liu, Yongqian and Han, Shuang and Wang, Yang and Feng, Shuang",
+    "bib_year": "",
+    "bib_venue": "Renewable and Sustainable Energy Reviews",
+    "bib_doi": "",
+    "verified_meta": null,
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "(2016) \\cite{yan2016review} & Partial & No & Partial & No & No \\\\ Maldonado-Correa et al."
+      ]
+    ]
+  },
+  {
+    "key": "yan2025economicvalue",
+    "bib_title": "The economic value of wind power forecasting: a data-driven method and its application in various scenarios",
+    "bib_author": "Yan, Jie and Li, Xiuyu and Wang, Han and Si, Fangyuan and Qiao, Wenjie and Liu, Yongqian",
+    "bib_year": "2025",
+    "bib_venue": "Energy",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "The economic value of wind power forecasting: a data-driven method and its application in various scenarios",
+      "authors": [
+        "Jie Yan",
+        "Xiuyu Li",
+        "Han Wang",
+        "Fangyuan Si",
+        "Wenjie Qiao",
+        "Yongqian Liu"
+      ],
+      "venue": "Energy",
+      "year": 2025,
+      "volume": "340",
+      "issue": null,
+      "page": "139151-139151",
+      "doi": "10.1016/j.energy.2025.139151",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "02_related.tex",
+        "Downstream grid dispatch penalizes reserve shortfalls far more severely than excess generation \\cite{dao2018cointegration,yan2025economicvalue}."
+      ]
+    ]
+  },
+  {
+    "key": "zeng2023dlinear",
+    "bib_title": "Are transformers effective for time series?",
+    "bib_author": "Zeng, Ailing and Chen, Muxi and Zhang, Lei and Xu, Qiang",
+    "bib_year": "",
+    "bib_venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "bib_doi": "",
+    "verified_meta": null,
+    "citing_sentences": [
+      [
+        "04_methodology.tex",
+        "The core forecasting suite spans: \\begin{enumerate}[leftmargin=*] \\item \\textit{Unconstrained DLinear}: Baseline linear mapping across trend and seasonal decomposition \\cite{zeng2023dlinear}."
+      ]
+    ]
+  },
+  {
+    "key": "zenodo_hilloftowie",
+    "bib_title": "{Hill of Towie Wind Farm Open SCADA Data}",
+    "bib_author": "{Renewable Energy Systems} and {The Renewables Infrastructure Group}",
+    "bib_year": "2025",
+    "bib_venue": "Zenodo",
+    "bib_doi": "10.5281/zenodo.20204946",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Hill of Towie wind farm open dataset",
+      "authors": [
+        "Alex Clerc",
+        "Elizabeth Lingkan"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.5281/zenodo.20204946",
+      "type": "dataset",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": [
+      [
+        "04_methodology.tex",
+        "\\item \\textbf{Hill of Towie Wind Farm} (Drummuir, Scotland): Located in complex upland terrain featuring micro-topographical wake interactions, comprising 21 Siemens SWT-2.3-82 turbines (rated 2.3~MW each, hub height 60~m, farm capacity 48.3~MW), evaluated as an independent spatiotemporal extrapolation benchmark across full-year 2017 with 7,599 forecast origins (45,594 delivery steps) \\cite{zenodo_hilloftowie}."
+      ]
+    ]
+  },
+  {
+    "key": "zenodo_kelmarsh",
+    "bib_title": "{Kelmarsh Wind Farm Open SCADA Data}",
+    "bib_author": "{Cubico Sustainable Investments Ltd}",
+    "bib_year": "2021",
+    "bib_venue": "Zenodo",
+    "bib_doi": "10.5281/zenodo.5841834",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Kelmarsh wind farm data",
+      "authors": [
+        "Charlie Plumley"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2022,
+      "volume": null,
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.5281/zenodo.5841834",
+      "type": "dataset",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": [
+      [
+        "04_methodology.tex",
+        "\\subsection{Multi-Site Operational Wind Farm Testbed and SCADA Telemetry} To ground the empirical audit in real-world power system operations across diverse terrains, we established an operational testbed across three commercial UK wind farms with 10-minute SCADA telemetry: \\begin{itemize}[leftmargin=*] \\item \\textbf{Kelmarsh Wind Farm} (Northamptonshire, England): Located in flat open agricultural terrain, comprising six Senvion MM92 turbines (rated 2.05~MW each, hub height 78~m, farm capacity 12.3~MW), evaluated over $N_{\\text{train}} = 5,098$ clean intervals as our primary development benchmark (8,212 test origins, 49,272 forward delivery steps across full-year 2017) \\cite{zenodo_kelmarsh}."
+      ]
+    ]
+  },
+  {
+    "key": "zenodo_penmanshiel",
+    "bib_title": "{Penmanshiel Wind Farm Open SCADA Data}",
+    "bib_author": "{Cubico Sustainable Investments Ltd}",
+    "bib_year": "2022",
+    "bib_venue": "Zenodo",
+    "bib_doi": "10.5281/zenodo.5946808",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Penmanshiel Wind Farm Data",
+      "authors": [
+        "Charlie Plumley"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2022,
+      "volume": null,
+      "issue": null,
+      "page": "None-None",
+      "doi": "10.5281/zenodo.5946808",
+      "type": "dataset",
+      "is_peer_reviewed": false
+    },
+    "citing_sentences": [
+      [
+        "04_methodology.tex",
+        "\\item \\textbf{Penmanshiel Wind Farm} (Scottish Borders): Located in undulating upland terrain, comprising 14 Senvion MM82 turbines (rated 2.05~MW each, farm capacity 28.7~MW), configured with a restricted training partition ($N_{\\text{train}} = 1,583$) across 8,440 test origins to evaluate model behavior under sample-restricted regimes \\cite{zenodo_penmanshiel}."
+      ]
+    ]
+  },
+  {
+    "key": "zhang2014wind",
+    "bib_title": "Review on probabilistic forecasting of wind power generation",
+    "bib_author": "Zhang, Yao and Wang, Jianxue and Wang, Xifan",
+    "bib_year": "",
+    "bib_venue": "Renewable and Sustainable Energy Reviews",
+    "bib_doi": "",
+    "verified_meta": {
+      "source": "openalex",
+      "title": "Review on probabilistic forecasting of wind power generation",
+      "authors": [
+        "Yao Zhang",
+        "Jianxue Wang",
+        "Xifan Wang"
+      ],
+      "venue": "Renewable and Sustainable Energy Reviews",
+      "year": 2014,
+      "volume": "32",
+      "issue": null,
+      "page": "255-270",
+      "doi": "10.1016/j.rser.2014.01.033",
+      "type": "article",
+      "is_peer_reviewed": true
+    },
+    "citing_sentences": [
+      [
+        "01_intro.tex",
+        "Under standard market clearing and system balancing rules, reserve shortfall penalties for under-delivery are typically substantially more severe than downward redispatch or spill penalties for over-delivery \\cite{zhang2014wind}."
+      ],
+      [
+        "02_related.tex",
+        "However, power system operations demonstrate that statistical error reductions do not guarantee economic value under asymmetric market penalties \\cite{weron2014,zhang2014wind}."
+      ],
+      [
+        "03_theory.tex",
+        "In operational power system balancing, transmission system operators evaluate declared bids under asymmetric pinball dispatch penalties \\cite{weron2014,zhang2014wind}: \\begin{equation} \\ell(p, Y; r) = c_+ \\max(p - Y, 0) + c_- \\max(Y - p, 0), \\label{eq:pinball_loss} \\end{equation} where $p \\in [0, 1]$ is the declared dispatch commitment, $c_+$ is the shortfall unit penalty (under-generation where declared power exceeds physical delivery, $p > Y$, requiring expensive tertiary reserve activation), $c_-$ is the surplus unit penalty (over-generation, $Y > p$, inducing downward redispatch or curtailment), and $r = c_+ / c_-$ represents the cost asymmetry ratio."
+      ]
+    ]
+  }
+]

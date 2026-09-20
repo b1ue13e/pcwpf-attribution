@@ -1,0 +1,443 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{wang2011wind}
+J.~Wang, A.~Botterud, R.~Bessa, H.~Keko, L.~Carvalho, D.~Issicaba, J.~Sumaili,
+  V.~Miranda, Wind power forecasting uncertainty and unit commitment, Applied
+  Energy 88~(11) (2011) 4014--4023.
+
+\bibitem{houben2023optimal}
+N.~Houben, A.~Cosic, M.~Stadler, M.~Mansoor, M.~Zellinger, H.~Auer,
+  A.~Ajanovic, R.~Haas, Optimal dispatch of a multi-energy system microgrid
+  under uncertainty: A renewable energy community in austria, Applied Energy
+  337 (2023) 120913.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2023.120913}
+  {\path{doi:10.1016/j.apenergy.2023.120913}}.
+
+\bibitem{yan2025economicvalue}
+J.~Yan, X.~Li, H.~Wang, F.~Si, W.~Qiao, Y.~Liu, The economic value of wind
+  power forecasting: a data-driven method and its application in various
+  scenarios, Energy 340 (2025) 139151.
+\newblock \href {https://doi.org/10.1016/j.energy.2025.139151}
+  {\path{doi:10.1016/j.energy.2025.139151}}.
+
+\bibitem{khaloie2020coordinated}
+H.~Khaloie, A.~Abdollahi, M.~Shafie-khah, A.~Anvari-Moghaddam, S.~Nojavan,
+  P.~Siano, J.~P. Catal{\~a}o, Coordinated wind-thermal-energy storage offering
+  strategy in energy and spinning reserve markets using a multi-stage model,
+  Applied Energy 259 (2020) 114168.
+
+\bibitem{li2024opf_highren}
+C.~Li, A.~Kies, K.~Zhou, M.~Schlott, O.~E. Sayed, M.~Bilousova, H.~St{\"o}cker,
+  Optimal power flow in a highly renewable power system based on attention
+  neural networks, Applied Energy 359 (2024) 122779.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2024.122779}
+  {\path{doi:10.1016/j.apenergy.2024.122779}}.
+
+\bibitem{tautzweinert2017review}
+J.~Tautz-Weinert, S.~J. Watson, Using {SCADA} data for wind turbine condition
+  monitoring: A review, IET Renewable Power Generation 11~(4) (2017) 382--394.
+\newblock \href {https://doi.org/10.1049/iet-rpg.2016.0248}
+  {\path{doi:10.1049/iet-rpg.2016.0248}}.
+
+\bibitem{leahy2019dataquality}
+K.~Leahy, C.~Gallagher, P.~O'Donovan, D.~T.~J. O'Sullivan, Issues with data
+  quality for wind turbine condition monitoring and reliability analyses,
+  Energies 12~(2) (2019) 201.
+\newblock \href {https://doi.org/10.3390/en12020201}
+  {\path{doi:10.3390/en12020201}}.
+
+\bibitem{maldonadocorrea2020slr}
+J.~Maldonado-Correa, S.~Mart{\'i}n-Mart{\'i}nez, E.~Artigao,
+  E.~G{\'o}mez-L{\'a}zaro, Using {SCADA} data for wind turbine condition
+  monitoring: A systematic literature review, Energies 13~(12) (2020) 3132.
+\newblock \href {https://doi.org/10.3390/en13123132}
+  {\path{doi:10.3390/en13123132}}.
+
+\bibitem{sheng2025annreview}
+L.~Sheng, C.~Li, M.~Gao, X.~Xi, D.~Zhou, A review of {SCADA}-based condition
+  monitoring for wind turbines via artificial neural networks, Neurocomputing
+  633 (2025) 129830.
+\newblock \href {https://doi.org/10.1016/j.neucom.2025.129830}
+  {\path{doi:10.1016/j.neucom.2025.129830}}.
+
+\bibitem{vervlimmeren2025scalable}
+I.~Vervlimmeren, X.~Chesterman, T.~Verstraeten, A.~Now{\'e}, J.~Helsen,
+  \href{https://wes.copernicus.org/articles/10/2615/2025/}{Scalable
+  scada-driven failure prediction for offshore wind turbines using
+  autoencoder-based nbm and fleet-median filtering}, Wind Energy Science 10
+  (2025) 2615--2637.
+\newline\urlprefix\url{https://wes.copernicus.org/articles/10/2615/2025/}
+
+\bibitem{martincalzada2025optimized}
+P.~Mart{\'i}n-Calzada, P.~Mart{\'i}n~S{\'a}nchez, F.~J.
+  Rodr{\'i}guez-S{\'a}nchez, C.~Santos-P{\'e}rez, J.~Ballesteros, Optimized
+  sensor data preprocessing using parameter-transfer learning for wind turbine
+  power curve modeling, Sensors 25~(17) (2025) 5329.
+\newblock \href {https://doi.org/10.3390/s25175329}
+  {\path{doi:10.3390/s25175329}}.
+
+\bibitem{verdone2025review}
+A.~Verdone, M.~Panella, E.~De~Santis, A.~Rizzi, A review of solar and wind
+  energy forecasting: From single-site to multi-site paradigm, Applied Energy
+  392 (2025) 126016.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2025.126016}
+  {\path{doi:10.1016/j.apenergy.2025.126016}}.
+
+\bibitem{zhang2021windreview}
+Y.~Zhang, K.~Liu, J.~Qian, Wind power prediction based on variational mode
+  decomposition and artificial intelligence algorithms: A review, Energy
+  Conversion and Management 227 (2021) 113615.
+\newblock \href {https://doi.org/10.1016/j.enconman.2020.113615}
+  {\path{doi:10.1016/j.enconman.2020.113615}}.
+
+\bibitem{duan2025robust}
+W.~Duan, Z.~Zhang, A.~Zhong, Z.~Tang, A robust wind power forecasting framework
+  for non-stationary signals via decomposition and metaheuristic optimization,
+  Energies 18~(24) (2025) 6515.
+\newblock \href {https://doi.org/10.3390/en18246515}
+  {\path{doi:10.3390/en18246515}}.
+
+\bibitem{zhu2025realtime}
+Y.~Zhu, Y.~Liu, N.~Wang, Z.~Zhang, Y.~Li, Real-time error compensation transfer
+  learning with echo state networks for enhanced wind power prediction, Applied
+  Energy 379 (2025) 124893.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2024.124893}
+  {\path{doi:10.1016/j.apenergy.2024.124893}}.
+
+\bibitem{ma2022gcnwind}
+Z.~Ma, G.~Mei, A hybrid attention-based deep learning approach for wind power
+  prediction, Applied Energy 323 (2022) 119608.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2022.119608}
+  {\path{doi:10.1016/j.apenergy.2022.119608}}.
+
+\bibitem{gao2025mmgpt}
+M.~Gao, S.~Zhou, W.~Gu, Z.~Wu, H.~Liu, A.~Zhou, X.~Wang, Mmgpt4lf: Leveraging
+  an optimized pre-trained gpt-2 model with multi-modal cross-attention for
+  load forecasting, Applied Energy 392 (2025) 125965.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2025.125965}
+  {\path{doi:10.1016/j.apenergy.2025.125965}}.
+
+\bibitem{wu2024stellm}
+T.~Wu, Q.~Ling, Stellm: Spatio-temporal enhanced pre-trained large language
+  model for wind speed forecasting, Applied Energy 375 (2024) 124034.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2024.124034}
+  {\path{doi:10.1016/j.apenergy.2024.124034}}.
+
+\bibitem{liu2019dataprocessing}
+H.~Liu, C.~Chen, Data processing strategies in wind energy forecasting models
+  and applications: A comprehensive review, Applied Energy 249 (2019) 392--408.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2019.04.188}
+  {\path{doi:10.1016/j.apenergy.2019.04.188}}.
+
+\bibitem{wang2021datacleaning}
+S.~Wang, B.~Li, G.~Li, B.~Yao, J.~Wu, Short-term wind power prediction based on
+  multidimensional data cleaning and feature reconfiguration, Applied Energy
+  292 (2021) 116851.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2021.116851}
+  {\path{doi:10.1016/j.apenergy.2021.116851}}.
+
+\bibitem{yang2013condition}
+W.~Yang, R.~Court, J.~Jiang, Wind turbine condition monitoring by the approach
+  of {SCADA} data analysis, Renewable Energy 53 (2013) 365--376.
+\newblock \href {https://doi.org/10.1016/j.renene.2012.11.030}
+  {\path{doi:10.1016/j.renene.2012.11.030}}.
+
+\bibitem{bangalore2018earlyfault}
+P.~Bangalore, M.~Patriksson, Analysis of {SCADA} data for early fault
+  detection, with application to the maintenance management of wind turbines,
+  Renewable Energy 115 (2018) 521--532.
+\newblock \href {https://doi.org/10.1016/j.renene.2017.08.073}
+  {\path{doi:10.1016/j.renene.2017.08.073}}.
+
+\bibitem{letzgus2020}
+S.~Letzgus, Change-point detection in wind turbine {SCADA} data for robust
+  condition monitoring with normal behaviour models, Wind Energy Science 5
+  (2020) 1375--1397.
+\newblock \href {https://doi.org/10.5194/wes-5-1375-2020}
+  {\path{doi:10.5194/wes-5-1375-2020}}.
+
+\bibitem{renstrom2020autoencoder}
+N.~Renstr{\"o}m, P.~Bangalore, E.~Highcock, System-wide anomaly detection in
+  wind turbines using deep autoencoders, Renewable Energy 157 (2020) 647--659.
+\newblock \href {https://doi.org/10.1016/j.renene.2020.04.148}
+  {\path{doi:10.1016/j.renene.2020.04.148}}.
+
+\bibitem{tawn2020missingdata}
+J.~Tawn, E.~Browell, I.~Dinwoodie, Missing data in wind farm time series:
+  Properties and effect on forecasts, Electric Power Systems Research 189
+  (2020) 106640.
+\newblock \href {https://doi.org/10.1016/j.epsr.2020.106640}
+  {\path{doi:10.1016/j.epsr.2020.106640}}.
+
+\bibitem{wen2024fcsmissing}
+H.~Wen, R.~McCrea, E.~J. Browell, Wind energy forecasting with missing values
+  within a fully conditional specification framework, International Journal of
+  Forecasting 40~(4) (2024) 1361--1382.
+\newblock \href {https://doi.org/10.1016/j.ijforecast.2022.12.006}
+  {\path{doi:10.1016/j.ijforecast.2022.12.006}}.
+
+\bibitem{zhou2019edge}
+Z.~Zhou, X.~Chen, E.~Li, L.~Zeng, K.~Luo, J.~Zhang, Edge intelligence: Paving
+  the last mile of artificial intelligence with edge computing, Proceedings of
+  the IEEE 107~(8) (2019) 1738--1762.
+\newblock \href {https://doi.org/10.1109/JPROC.2019.2918951}
+  {\path{doi:10.1109/JPROC.2019.2918951}}.
+
+\bibitem{gooi2023edgeintelligence}
+H.~B. Gooi, Z.~Wang, Y.~Tang, Edge intelligence for smart grid: A survey of
+  applications, techniques and challenges, CSEE Journal of Power and Energy
+  Systems 9~(5) (2023) 1623--1640.
+\newblock \href {https://doi.org/10.17775/CSEEJPES.2022.02210}
+  {\path{doi:10.17775/CSEEJPES.2022.02210}}.
+
+\bibitem{mwangi2024sdniiotedge}
+A.~Mwangi, R.~Sahay, E.~Fumagalli, M.~Gryning, M.~Gibescu, Towards a
+  software-defined industrial {IoT}-edge network for next-generation offshore
+  wind farms: State of the art, resilience, and self-x network and service,
+  Energies 17~(12) (2024) 2897.
+\newblock \href {https://doi.org/10.3390/en17122897}
+  {\path{doi:10.3390/en17122897}}.
+
+\bibitem{astolfi2015datamining}
+D.~Astolfi, F.~Castellani, A.~Garinei, L.~Terzi, Data mining techniques for
+  performance analysis of onshore wind farms, Applied Energy 148 (2015)
+  220--233.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2015.03.075}
+  {\path{doi:10.1016/j.apenergy.2015.03.075}}.
+
+\bibitem{liu2024physics}
+Y.~Liu, J.~Wang, L.~Liu, Physics-informed reinforcement learning for
+  probabilistic wind power forecasting under extreme events, Applied Energy 376
+  (2024) 124068.
+
+\bibitem{liao2024trust}
+W.~Liao, J.~Fang, L.~Ye, B.~Bak-Jensen, Z.~Yang, F.~Port{\'e}-Agel, Can we
+  trust explainable artificial intelligence in wind power forecasting?, Applied
+  Energy 376 (2024) 124273.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2024.124273}
+  {\path{doi:10.1016/j.apenergy.2024.124273}}.
+
+\bibitem{jacobs1991moe}
+R.~A. Jacobs, M.~I. Jordan, S.~J. Nowlan, G.~E. Hinton, Adaptive mixtures of
+  local experts, Neural Computation 3~(1) (1991) 79--87.
+\newblock \href {https://doi.org/10.1162/neco.1991.3.1.79}
+  {\path{doi:10.1162/neco.1991.3.1.79}}.
+
+\bibitem{fedus2022switch}
+W.~Fedus, B.~Zoph, N.~Shazeer, Switch transformers: Scaling to trillion
+  parameter models, Journal of Machine Learning Research 23 (2022) 1--39.
+
+\bibitem{davis2024impact}
+D.~Davis, M.~J. Brear, Impact of short-term wind forecast accuracy on the
+  performance of decarbonising wholesale electricity markets, Energy Economics
+  130 (2024) 107304.
+\newblock \href {https://doi.org/10.1016/j.eneco.2024.107304}
+  {\path{doi:10.1016/j.eneco.2024.107304}}.
+
+\bibitem{quan2015computational}
+H.~Quan, D.~Srinivasan, A.~M. Khambadkone, A.~Khosravi, A computational
+  framework for uncertainty integration in stochastic unit commitment with
+  intermittent renewable energy sources, Applied Energy 152 (2015) 71--82.
+
+\bibitem{guo2023marketdesign}
+Y.~Guo, X.~Han, X.~Zhou, G.~Hug, Incorporate day-ahead robustness and real-time
+  incentives for electricity market design, Applied Energy 332 (2023) 120484.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2022.120484}
+  {\path{doi:10.1016/j.apenergy.2022.120484}}.
+
+\bibitem{srinivasan2023flexibility}
+A.~Srinivasan, R.~Wu, P.~Heer, G.~Sansavini, Impact of forecast uncertainty and
+  electricity markets on the flexibility provision and economic performance of
+  highly-decarbonized multi-energy systems, Applied Energy 338 (2023) 120825.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2023.120825}
+  {\path{doi:10.1016/j.apenergy.2023.120825}}.
+
+\bibitem{lechl2025flexcalc}
+M.~Lechl, H.~de~Meer, T.~F{\"u}rmann, A stochastic flexibility calculus for
+  uncertainty-aware energy flexibility management, Applied Energy 379 (2025)
+  124907.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2024.124907}
+  {\path{doi:10.1016/j.apenergy.2024.124907}}.
+
+\bibitem{terren2025extreme}
+G.~Terr{\'e}n-Serrano, M.~Ludkovski, Extreme day-ahead renewables scenario
+  selection in power grid operations, Applied Energy 391 (2025) 125747.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2025.125747}
+  {\path{doi:10.1016/j.apenergy.2025.125747}}.
+
+\bibitem{huo2025pricesignal}
+W.~Huo, Y.~Zhang, H.~Zhao, F.~Lin, J.~Wang, Price signal forecasting for
+  day-ahead offering strategy of price-maker renewable producers considering
+  different risk preferences, Applied Energy 401 (2025) 126819.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2025.126819}
+  {\path{doi:10.1016/j.apenergy.2025.126819}}.
+
+\bibitem{liu2024vscopf}
+J.~Liu, L.~Wang, T.~Jiao, W.~Yang, R.~Xu, K.~Wu, H.~Ha, Multi-period voltage
+  stability-constrained optimal power flow with uncertainties, Applied Energy
+  369 (2024) 123522.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2024.123522}
+  {\path{doi:10.1016/j.apenergy.2024.123522}}.
+
+\bibitem{larrahondo2021acdcomp}
+D.~Larrahondo, R.~Moreno, H.~R. Chamorro, F.~Gonzalez-Longatt, Comparative
+  performance of multi-period acopf and multi-period dcopf under high
+  integration of wind power, Energies 14~(15) (2021) 4540.
+\newblock \href {https://doi.org/10.3390/en14154540}
+  {\path{doi:10.3390/en14154540}}.
+
+\bibitem{zhang2025shapmoe}
+H.~Zhang, G.~Qin, X.~Chen, L.~Lu, Z.~Zhang, J.~Song, A day-ahead wind power
+  dynamic explainable prediction method based on shap analysis and mixture of
+  experts, Energies 19~(1) (2025) 124.
+\newblock \href {https://doi.org/10.3390/en19010124}
+  {\path{doi:10.3390/en19010124}}.
+
+\bibitem{liu2024moiraimoe}
+X.~Liu, J.~Liu, G.~Woo, T.~Aksu, Y.~Liang, R.~Zimmermann, C.~Liu, S.~Savarese,
+  C.~Xiong, D.~Sahoo,
+  \href{https://proceedings.mlr.press/v267/liu25an.html}{Moirai-{MoE}:
+  Empowering time series foundation models with sparse mixture of experts}, in:
+  Proceedings of the 42nd International Conference on Machine Learning (ICML
+  2025), Vol. 267 of Proceedings of Machine Learning Research, 2025, pp.
+  38940--38962.
+\newline\urlprefix\url{https://proceedings.mlr.press/v267/liu25an.html}
+
+\bibitem{shi2025timemoe}
+X.~Shi, S.~Wang, Y.~Nie, D.~Li, Z.~Ye, Q.~Wen, M.~Jin,
+  \href{https://openreview.net/forum?id=e1wDDFmlVu}{Time-moe: Billion-scale
+  time series foundation models with mixture of experts}, in: International
+  Conference on Learning Representations (ICLR), 2025, pp. 1--33.
+\newline\urlprefix\url{https://openreview.net/forum?id=e1wDDFmlVu}
+
+\bibitem{burton2011wind}
+T.~Burton, N.~Jenkins, D.~Sharpe, E.~Bossanyi, Wind Energy Handbook, 2nd
+  Edition, Wiley, 2011.
+
+\bibitem{iec61400_12_1_2017}
+{International Electrotechnical Commission},
+  \href{https://webstore.iec.ch/en/publication/26603}{{IEC 61400-12-1:2017}
+  wind energy generation systems -- part 12-1: Power performance measurements
+  of electricity producing wind turbines}, International Standard, edition 2.0
+  (2017).
+\newline\urlprefix\url{https://webstore.iec.ch/en/publication/26603}
+
+\bibitem{parsa2025physics}
+S.~M. Parsa, Physics-informed machine learning meets renewable energy systems:
+  A review of advances, challenges, guidelines, and future outlooks, Applied
+  Energy 402 (2025) 126925.
+
+\bibitem{wang2025review}
+Y.~Wang, F.~Zhang, H.~Kou, R.~Zou, Q.~Hu, J.~Wang, D.~Srinivasan, A review of
+  predictive uncertainty modeling techniques and evaluation metrics in
+  probabilistic wind speed and wind power forecasting, Applied Energy 396
+  (2025) 126234.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2025.126234}
+  {\path{doi:10.1016/j.apenergy.2025.126234}}.
+
+\bibitem{liang2024edgepower}
+S.~Liang, S.~Jin, Y.~Chen, A review of edge computing technology and its
+  applications in power systems, Energies 17~(13) (2024) 3230.
+\newblock \href {https://doi.org/10.3390/en17133230}
+  {\path{doi:10.3390/en17133230}}.
+
+\bibitem{chen2025selfawareedge}
+Y.~Chen, Z.~Yu, Y.~Jin, C.~Mwase, X.~Hu, L.~D. Xu, Z.~Zou, L.~Zheng, Self-aware
+  collaborative edge inference with embedded devices for {IIoT}, Future
+  Generation Computer Systems 163 (2025) 107535.
+\newblock \href {https://doi.org/10.1016/j.future.2024.107535}
+  {\path{doi:10.1016/j.future.2024.107535}}.
+
+\bibitem{ortiz2025tinyml}
+L.~A. Pazmi{\~n}o~Ortiz, I.~F. Maldonado~Soliz, V.~K. Guevara~Balarezo,
+  Advancing {TinyML} in {IoT}: A holistic system-level perspective for
+  resource-constrained {AI}, Future Internet 17~(6) (2025) 257.
+\newblock \href {https://doi.org/10.3390/fi17060257}
+  {\path{doi:10.3390/fi17060257}}.
+
+\bibitem{li2024forecastmpc}
+T.~Li, J.~Yang, A.~Ioannou, Wind forecasting-based model predictive control of
+  generator, pitch, and yaw for output stabilisation -- a 15-megawatt offshore,
+  Energy Conversion and Management 302 (2024) 118155.
+\newblock \href {https://doi.org/10.1016/j.enconman.2024.118155}
+  {\path{doi:10.1016/j.enconman.2024.118155}}.
+
+\bibitem{guo2019windfarmmpc}
+Y.~Guo, H.~Gao, Q.~Wu, J.~{\O}stergaard, D.~Yu, M.~Shahidehpour, Distributed
+  coordinated active and reactive power control of wind farms based on model
+  predictive control, International Journal of Electrical Power \& Energy
+  Systems 104 (2019) 78--88.
+\newblock \href {https://doi.org/10.1016/j.ijepes.2018.06.043}
+  {\path{doi:10.1016/j.ijepes.2018.06.043}}.
+
+\bibitem{li2023vmdcnn}
+K.~Li, Y.~Mu, F.~Yang, H.~Wang, Y.~Yan, C.~Zhang, A novel short-term
+  multi-energy load forecasting method for integrated energy system based on
+  feature separation-fusion technology and improved cnn, Applied Energy 351
+  (2023) 121823.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2023.121823}
+  {\path{doi:10.1016/j.apenergy.2023.121823}}.
+
+\bibitem{dragomiretskiy2014vmd}
+K.~Dragomiretskiy, D.~Zosso, Variational mode decomposition, IEEE Transactions
+  on Signal Processing 62~(3) (2014) 531--544.
+\newblock \href {https://doi.org/10.1109/TSP.2013.2288675}
+  {\path{doi:10.1109/TSP.2013.2288675}}.
+
+\bibitem{wu2009eemd}
+Z.~Wu, N.~E. Huang, Ensemble empirical mode decomposition: A noise-assisted
+  data analysis method, Advances in Adaptive Data Analysis 1~(1) (2009) 1--41.
+\newblock \href {https://doi.org/10.1142/S1793536909000047}
+  {\path{doi:10.1142/S1793536909000047}}.
+
+\bibitem{schwartz2020greenai}
+R.~Schwartz, J.~Dodge, N.~A. Smith, O.~Etzioni,
+  \href{https://doi.org/10.1145/3381831}{Green {AI}}, Communications of the ACM
+  63~(12) (2020) 54--63.
+\newblock \href {https://doi.org/10.1145/3381831} {\path{doi:10.1145/3381831}}.
+\newline\urlprefix\url{https://doi.org/10.1145/3381831}
+
+\bibitem{strubell2019energy}
+E.~Strubell, A.~Ganesh, A.~McCallum,
+  \href{https://aclanthology.org/P19-1355/}{Energy and policy considerations
+  for deep learning in {NLP}}, in: Proceedings of the 57th Annual Meeting of
+  the Association for Computational Linguistics, 2019, pp. 3645--3650.
+\newblock \href {https://doi.org/10.18653/v1/P19-1355}
+  {\path{doi:10.18653/v1/P19-1355}}.
+\newline\urlprefix\url{https://aclanthology.org/P19-1355/}
+
+\bibitem{botterud2011operational}
+A.~Botterud, Z.~Zhou, Use of wind power forecasting in operational decisions,
+  Tech. rep., Argonne National Laboratory, technical report (2011).
+
+\bibitem{dlt5002_2021}
+{National Energy Administration of China}, {DL/T 5002-2021} {Design code for
+  dispatch automation of regional power grids}, DL/T 5002-2021, industry
+  standard issued by the National Energy Administration of China; implemented
+  on 2021-10-26 (in Chinese). (2021).
+
+\bibitem{ren2020scada}
+J.~Ren, W.~Guo, Z.~Liu, M.~Wu, X.~Du, A review of scada systems in power grids:
+  Security, architecture, and perspectives, IEEE Internet of Things Journal
+  8~(16) (2021) 12741--12759.
+\newblock \href {https://doi.org/10.1109/JIOT.2020.3044893}
+  {\path{doi:10.1109/JIOT.2020.3044893}}.
+
+\bibitem{draxl2015windtoolkit}
+C.~Draxl, A.~Clifton, B.-M. Hodge, J.~McCaa, The wind integration national
+  dataset (wind) toolkit, Applied Energy 151 (2015) 355--366.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2015.03.121}
+  {\path{doi:10.1016/j.apenergy.2015.03.121}}.
+
+\bibitem{diebold1995}
+F.~X. Diebold, R.~S. Mariano, Comparing predictive accuracy, Journal of
+  Business \& Economic Statistics 13~(3) (1995) 253--263.
+\newblock \href {https://doi.org/10.1080/07350015.1995.10524599}
+  {\path{doi:10.1080/07350015.1995.10524599}}.
+
+\end{thebibliography}

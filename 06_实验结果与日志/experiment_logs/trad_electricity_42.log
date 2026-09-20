@@ -1,0 +1,6 @@
+Starting Traditional GPU models on electricity seed=42
+  LSTM on electricity (seed=42)
+LSTM: R2=0.7051
+  CNN-LSTM on electricity (seed=42)
+CNN-LSTM: R2=0.6919
+Completed

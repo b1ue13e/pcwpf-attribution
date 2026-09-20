@@ -1,0 +1,2 @@
+model,timestamp,device,total_parameters,trainable_parameters,model_size_mb,R2,RMSE,MAE,MAPE,MSE,training_epochs,batch_size,seq_len,pred_len,input_dim,hidden_dim,num_blocks,num_experts,top_k,scales
+Ultra-LSNT-Lite-Optimized,2026-02-09 16:51:32,cuda,349368,349368,1.332733154296875,0.864831954240799,9359.6494140625,7375.47216796875,28.892919421195984,87603032.0,3,256,96,24,8,96,1,2,1,"[1, 2]"

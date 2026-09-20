@@ -1,0 +1,2 @@
+DRY RUN
+C:\Users\32110\AppData\Local\Programs\Python\Python310\python.exe run_multi_domain_baselines.py --model2 itransformer --epochs 10 --batch-size 128 --seed 42 --device cuda --datasets all --output-prefix multi_domain_baselines_r2_itransformer

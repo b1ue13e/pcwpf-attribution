@@ -1,0 +1,3 @@
+model_label,backend,model_id,model,scenario,sigma_cfg,sigma_eff,R2,RMSE,MAE,residual_gaussian_pvalue,run_id
+Chronos-Bolt-Small,chronos-forecasting,amazon/chronos-bolt-small,Chronos-Bolt-Small,clean,0.0,0.0,0.964355356991291,0.3983595073223114,0.24470649659633636,0.0,20260307T143646Z_chronos_family_windcn
+Chronos-Bolt-Small,chronos-forecasting,amazon/chronos-bolt-small,Chronos-Bolt-Small,gaussian_sigma_eff_060,0.4,0.6000000000000001,0.8792077004909515,0.7333270311355591,0.5387657284736633,0.0,20260307T143646Z_chronos_family_windcn

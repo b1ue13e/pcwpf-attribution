@@ -1,0 +1,19 @@
+﻿{
+  "require_all_nonblocked_tasks_verified": true,
+  "require_evidence_for_verified_tasks": true,
+  "require_independent_review": true,
+  "require_verification_report": true,
+  "required_files": [
+    "01_论文投稿材料/active_manuscript/main.pdf"
+  ],
+  "forbidden_patterns": [
+    {
+      "pattern": "Penmanshiel: Specificity in Data Scarcity",
+      "paths": [
+        "01_论文投稿材料/active_manuscript/main.tex",
+        "01_论文投稿材料/active_manuscript/sections"
+      ]
+    }
+  ],
+  "commands": []
+}

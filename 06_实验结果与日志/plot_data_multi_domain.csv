@@ -1,0 +1,4 @@
+Dataset,R2_Score,Skip_Rate
+Wind (CN),0.8728,0.0
+Wind (US),0.7878,11.4
+Air Quality,0.4861,0.0

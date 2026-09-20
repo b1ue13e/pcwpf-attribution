@@ -1,0 +1,33 @@
+======================================================================
+Quick Traditional Baselines - 80/20 Unified
+======================================================================
+
+Dataset: wind_cn
+--------------------------------------------------
+
+  Seed: 42
+  ARIMA on wind_cn (seed=42)
+    R2=-2.2959, RMSE=63816.9356
+  SVR on wind_cn (seed=42)
+    R2=0.9962, RMSE=2024.3957
+  LSTM on wind_cn (seed=42)
+    R2=0.9501, RMSE=7370.5736
+  CNN-LSTM on wind_cn (seed=42)
+    R2=0.9463, RMSE=7641.6506
+
+  Seed: 123
+  ARIMA on wind_cn (seed=123)
+    R2=-2.2959, RMSE=63816.9356
+  SVR on wind_cn (seed=123)
+    R2=0.9962, RMSE=2024.3957
+  LSTM on wind_cn (seed=123)
+    R2=0.9572, RMSE=6822.0571
+  CNN-LSTM on wind_cn (seed=123)
+    R2=0.9501, RMSE=7367.5597
+
+  Seed: 456
+  ARIMA on wind_cn (seed=456)
+    R2=-2.2959, RMSE=63816.9356
+  SVR on wind_cn (seed=456)
+    R2=0.9962, RMSE=2024.3957
+  LSTM on wind_cn (seed=456)

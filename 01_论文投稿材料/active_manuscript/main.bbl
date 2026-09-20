@@ -6,201 +6,284 @@
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
 \bibitem{holttinen2021}
-H.~Holttinen, et~al., Design and operation of power systems with large amounts
-  of wind power, Tech. rep., IEA Wind TCP Task 25 (2021).
+H.~Holttinen, et~al., \href{https://iea-wind.org/task25/}{Design and operation
+  of power systems with large amounts of wind power}, Tech. rep., IEA Wind TCP
+  Task 25 Technical Report (2021).
+\newline\urlprefix\url{https://iea-wind.org/task25/}
 
 \bibitem{weron2014}
-R.~Weron, Electricity price forecasting: A review of the state-of-the-art,
-  International Journal of Forecasting 30~(4) (2014) 1030--1081.
+R.~Weron, \href{https://doi.org/10.1016/j.ijforecast.2014.08.008}{Electricity
+  price forecasting: A review of the state-of-the-art with a look into the
+  future}, International Journal of Forecasting 30~(4) (2014) 1030--1081.
+\newblock \href {https://doi.org/10.1016/j.ijforecast.2014.08.008}
+  {\path{doi:10.1016/j.ijforecast.2014.08.008}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.ijforecast.2014.08.008}
+
+\bibitem{zhang2014wind}
+Y.~Zhang, J.~Wang, X.~Wang,
+  \href{https://doi.org/10.1016/j.rser.2014.01.033}{Review on probabilistic
+  forecasting of wind power generation}, Renewable and Sustainable Energy
+  Reviews 32 (2014) 255--270.
+\newblock \href {https://doi.org/10.1016/j.rser.2014.01.033}
+  {\path{doi:10.1016/j.rser.2014.01.033}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.rser.2014.01.033}
 
 \bibitem{lipton2019}
-Z.~C. Lipton, J.~Steinhardt, Troubling trends in machine learning scholarship,
-  Communications of the ACM 62~(6) (2019) 45--53.
+Z.~C. Lipton, J.~Steinhardt, \href{https://doi.org/10.1145/3316774}{Research
+  for practice: Troubling trends in machine-learning scholarship},
+  Communications of the ACM 62~(6) (2019) 45--53, preprint:
+  https://arxiv.org/abs/1807.03341.
+\newblock \href {https://doi.org/10.1145/3316774} {\path{doi:10.1145/3316774}}.
+\newline\urlprefix\url{https://doi.org/10.1145/3316774}
 
 \bibitem{pinson2007trading}
-P.~Pinson, C.~Chevallier, G.~N. Kariniotakis, Trading wind generation from
-  short-term probabilistic forecasts—coordinated electricity market, IEEE
-  Transactions on Power Systems 22~(3) (2007) 1148--1156.
-\newblock \href {https://doi.org/10.1109/TPWRS.2007.901611}
-  {\path{doi:10.1109/TPWRS.2007.901611}}.
+P.~Pinson, C.~Chevallier, G.~N. Kariniotakis,
+  \href{https://doi.org/10.1109/TPWRS.2007.901117}{Trading wind generation from
+  short-term probabilistic forecasts of wind power}, IEEE Transactions on Power
+  Systems 22~(3) (2007) 1148--1156.
+\newblock \href {https://doi.org/10.1109/TPWRS.2007.901117}
+  {\path{doi:10.1109/TPWRS.2007.901117}}.
+\newline\urlprefix\url{https://doi.org/10.1109/TPWRS.2007.901117}
 
-\bibitem{raissi2019physics}
-M.~Raissi, P.~Perdikaris, G.~E. Karniadakis, Physics-informed neural networks:
-  A deep learning framework for solving forward and inverse problems involving
-  nonlinear partial differential equations, Journal of Computational Physics
-  378 (2019) 686--707.
+\bibitem{bastankhah2014new}
+M.~Bastankhah, F.~Port{\'e}-Agel,
+  \href{https://doi.org/10.1016/j.renene.2014.04.034}{A new analytical model
+  for wind-turbine wakes}, Renewable Energy 70 (2014) 116--123.
+\newblock \href {https://doi.org/10.1016/j.renene.2014.04.034}
+  {\path{doi:10.1016/j.renene.2014.04.034}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.renene.2014.04.034}
 
 \bibitem{karniadakis2021physics}
 G.~E. Karniadakis, I.~G. Kevrekidis, L.~Lu, P.~Perdikaris, S.~Wang, L.~Yang,
-  Physics-informed machine learning, Nature Reviews Physics 3~(6) (2021)
-  422--440.
+  \href{https://doi.org/10.1038/s42254-021-00314-5}{Physics-informed machine
+  learning}, Nature Reviews Physics 3~(6) (2021) 422--440.
+\newblock \href {https://doi.org/10.1038/s42254-021-00314-5}
+  {\path{doi:10.1038/s42254-021-00314-5}}.
+\newline\urlprefix\url{https://doi.org/10.1038/s42254-021-00314-5}
 
-\bibitem{sheng2025annreview}
-L.~Sheng, C.~Li, M.~Gao, X.~Xi, D.~Zhou, A review of {SCADA}-based condition
-  monitoring for wind turbines via artificial neural networks, Neurocomputing
-  633 (2025) 129830.
-\newblock \href {https://doi.org/10.1016/j.neucom.2025.129830}
-  {\path{doi:10.1016/j.neucom.2025.129830}}.
-
-\bibitem{pct2026}
-D.~Wang, Q.~Luo, J.~Gao, D.~Zhang, Y.~Chen, Physics-constrained transformer for
-  wind power forecasting, Scientific Reports 16~(1) (2026) 4237.
-\newblock \href {https://doi.org/10.1038/s41598-025-34348-x}
-  {\path{doi:10.1038/s41598-025-34348-x}}.
-
-\bibitem{kapoor2023}
-S.~Kapoor, A.~Narayanan, Leakage and the reproducibility crisis in
-  machine-learning-based science, Patterns 4~(9) (2023) 100804.
-
-\bibitem{pineau2021}
-J.~Pineau, P.~Vincent-Lamarre, K.~Sinha, V.~Larivi{\\'e}re, A.~Beygelzimer,
-  F.~d'Alch{\\'e} Buc, E.~Fox, H.~Larochelle, Improving reproducibility in
-  machine learning research: A report from the {NeurIPS} 2019 reproducibility
-  program, Journal of Machine Learning Research 22~(164) (2021) 1--20.
-
-\bibitem{tgdpf2025}
-J.~Gao, Y.~Cheng, D.~Zhang, Y.~Chen, Physics-constrained wind power forecasting
-  aligned with probability distributions for noise-resilient deep learning,
-  Applied Energy 383 (2025) 125295.
-\newblock \href {https://doi.org/10.1016/j.apenergy.2025.125295}
-  {\path{doi:10.1016/j.apenergy.2025.125295}}.
+\bibitem{raissi2019physics}
+M.~Raissi, P.~Perdikaris, G.~E. Karniadakis,
+  \href{https://doi.org/10.1016/j.jcp.2018.10.045}{Physics-informed neural
+  networks: A deep learning framework for solving forward and inverse problems
+  involving nonlinear partial differential equations}, Journal of Computational
+  Physics 378 (2019) 686--707, preprint: https://arxiv.org/abs/1711.10561.
+\newblock \href {https://doi.org/10.1016/j.jcp.2018.10.045}
+  {\path{doi:10.1016/j.jcp.2018.10.045}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.jcp.2018.10.045}
 
 \bibitem{s34_prx2023}
-N.~Zehtabiyan-Rezaie, A.~Iosifidis, M.~Abkar, Physics-guided machine learning
-  for wind-farm power prediction: Toward interpretability and generalizability,
-  PRX Energy 2~(1) (2023) 013009.
+N.~Zehtabiyan-Rezaie, A.~Iosifidis, M.~Abkar,
+  \href{https://doi.org/10.1103/PRXEnergy.2.013009}{Physics-guided machine
+  learning for wind-farm power prediction: Toward interpretability and
+  generalizability}, PRX Energy 2~(1) (2023) 013009.
 \newblock \href {https://doi.org/10.1103/PRXEnergy.2.013009}
   {\path{doi:10.1103/PRXEnergy.2.013009}}.
+\newline\urlprefix\url{https://doi.org/10.1103/PRXEnergy.2.013009}
+
+\bibitem{pct2026}
+D.~Wang, Q.~Luo, J.~Gao, D.~Zhang, Y.~Chen,
+  \href{https://doi.org/10.1038/s41598-025-34348-x}{Physics-constrained
+  transformer for wind power forecasting}, Scientific Reports 16~(1) (2026)
+  4237.
+\newblock \href {https://doi.org/10.1038/s41598-025-34348-x}
+  {\path{doi:10.1038/s41598-025-34348-x}}.
+\newline\urlprefix\url{https://doi.org/10.1038/s41598-025-34348-x}
+
+\bibitem{tgdpf2025}
+J.~Gao, Y.~Cheng, D.~Zhang, Y.~Chen,
+  \href{https://doi.org/10.1016/j.apenergy.2025.125295}{Physics-constrained
+  wind power forecasting aligned with probability distributions for
+  noise-resilient deep learning}, Applied Energy 383 (2025) 125295.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2025.125295}
+  {\path{doi:10.1016/j.apenergy.2025.125295}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.apenergy.2025.125295}
+
+\bibitem{jensen1983note}
+N.~O. Jensen, A note on wind generator interaction, Tech. Rep. Ris{\o}-M-2411,
+  Ris{\o} National Laboratory, Roskilde, Denmark (1983).
 
 \bibitem{krishnapriyan2021}
-A.~Krishnapriyan, A.~Gholami, S.~Zhe, R.~Kirby, M.~W. Mahoney, Characterizing
-  possible failure modes in physics-informed neural networks, in: Advances in
-  Neural Information Processing Systems, Vol.~34, 2021, pp. 26548--26560.
+A.~S. Krishnapriyan, A.~Gholami, S.~Zhe, R.~M. Kirby, M.~W. Mahoney,
+  \href{https://proceedings.neurips.cc/paper/2021/hash/df438e5207241bc0e175970104b15d85-Abstract.html}{Characterizing
+  possible failure modes in physics-informed neural networks}, Advances in
+  Neural Information Processing Systems 34 (2021) 26548--26560, preprint:
+  https://arxiv.org/abs/2109.01050.
+\newline\urlprefix\url{https://proceedings.neurips.cc/paper/2021/hash/df438e5207241bc0e175970104b15d85-Abstract.html}
 
 \bibitem{madsen2005}
-H.~Madsen, P.~Pinson, G.~Kariniotakis, T.~S. Nielsen, H.~A. Nielsen,
-  Standardizing the performance evaluation of short-term wind power prediction
-  models, Wind Engineering 29~(6) (2005) 475--489.
+H.~Madsen, P.~Pinson, G.~Kariniotakis, H.~A. Nielsen, T.~S. Nielsen,
+  \href{https://doi.org/10.1260/030952405776234599}{Standardizing the
+  performance evaluation of short-term wind power prediction models}, Wind
+  Engineering 29~(6) (2005) 475--489.
+\newblock \href {https://doi.org/10.1260/030952405776234599}
+  {\path{doi:10.1260/030952405776234599}}.
+\newline\urlprefix\url{https://doi.org/10.1260/030952405776234599}
 
-\bibitem{optis2022}
-M.~Optis, N.~Bodini, S.~Redfern, J.~Fang, Evaluating wind speed and power
-  forecasts using {WE-Validate}: An open-source and systematic validation
-  framework, Renewable Energy 199 (2022) 1577--1589.
-
-\bibitem{zhang2014wind}
-Y.~Zhang, J.~Wang, X.~Wang, Review on probabilistic forecasting of wind power
-  generation, Renewable and Sustainable Energy Reviews 32 (2014) 255--270.
-
-\bibitem{dao2018cointegration}
-P.~B. Dao, W.~J. Staszewski, T.~Barszcz, T.~Uhl, Condition monitoring and fault
-  detection in wind turbines based on cointegration analysis of {SCADA} data,
-  Renewable Energy 116 (2018) 107--122.
-\newblock \href {https://doi.org/10.1016/j.renene.2017.06.089}
-  {\path{doi:10.1016/j.renene.2017.06.089}}.
+\bibitem{morales2014}
+J.~M. Morales, A.~J. Conejo, H.~Madsen, P.~Pinson, M.~Zugno,
+  \href{https://doi.org/10.1007/978-1-4614-9411-9}{Integrating Renewables in
+  Electricity Markets: Operational Problems}, Vol. 205 of International Series
+  in Operations Research \& Management Science, Springer, 2014.
+\newblock \href {https://doi.org/10.1007/978-1-4614-9411-9}
+  {\path{doi:10.1007/978-1-4614-9411-9}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-1-4614-9411-9}
 
 \bibitem{yan2025economicvalue}
-J.~Yan, X.~Li, H.~Wang, F.~Si, W.~Qiao, Y.~Liu, The economic value of wind
-  power forecasting: a data-driven method and its application in various
-  scenarios, Energy 340 (2025) 139151.
+J.~Yan, X.~Li, H.~Wang, F.~Si, W.~Qiao, Y.~Liu,
+  \href{https://doi.org/10.1016/j.energy.2025.139151}{The economic value of
+  wind power forecasting: a data-driven method and its application in various
+  scenarios}, Energy 340 (2025) 139151.
 \newblock \href {https://doi.org/10.1016/j.energy.2025.139151}
   {\path{doi:10.1016/j.energy.2025.139151}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.energy.2025.139151}
 
 \bibitem{damour2022}
-A.~D'Amour, K.~Heller, D.~Moldovan, B.~Adlam, I.~Alabdulmohsin, L.~E. Celis,
-  J.~Frankle, C.~George, M.~Hobson, A.~Hu, et~al., Underspecification presents
-  challenges for credibility in modern machine learning, Journal of Machine
-  Learning Research 23 (2022) 1--61.
+A.~D'Amour, K.~Heller, D.~Moldovan, B.~Adlam, B.~Alipanahi, A.~Beutel, C.~Chen,
+  J.~Deaton, J.~Eisenstein, M.~D. Hoffman, F.~Hormozdiari, N.~Houlsby, S.~Hou,
+  G.~Jerfel, A.~Karthikesalingam, M.~Lucic, Y.~Ma, C.~McLean, D.~Mincu,
+  A.~Mitani, A.~Montanari, Z.~Nado, V.~Natarajan, C.~Nielson, T.~F. Osborne,
+  R.~Raman, K.~Ramasamy, R.~Sayres, J.~Schrouff, M.~Seneviratne, S.~Sequeira,
+  H.~Suresh, V.~Veitch, M.~Vladymyrov, X.~Wang, K.~Webster, S.~Yadlowsky,
+  T.~Yun, X.~Zhai, D.~Sculley,
+  \href{https://www.jmlr.org/papers/v23/20-1335.html}{Underspecification
+  presents challenges for credibility in modern machine learning}, Journal of
+  Machine Learning Research 23~(226) (2022) 1--61, preprint:
+  https://arxiv.org/abs/2011.03395.
+\newline\urlprefix\url{https://www.jmlr.org/papers/v23/20-1335.html}
 
 \bibitem{gundersen2018}
-O.~E. Gundersen, S.~Kjensmo, State of the art: Reproducibility in artificial
-  intelligence, in: Proceedings of the AAAI Conference on Artificial
-  Intelligence, Vol.~32, 2018, pp. 1644--1651.
+O.~E. Gundersen, S.~Kjensmo,
+  \href{https://doi.org/10.1609/aaai.v32i1.11503}{State of the art:
+  Reproducibility in artificial intelligence}, in: Proceedings of the AAAI
+  Conference on Artificial Intelligence, Vol.~32, 2018, pp. 1644--1651.
+\newblock \href {https://doi.org/10.1609/aaai.v32i1.11503}
+  {\path{doi:10.1609/aaai.v32i1.11503}}.
+\newline\urlprefix\url{https://doi.org/10.1609/aaai.v32i1.11503}
+
+\bibitem{kapoor2023}
+S.~Kapoor, A.~Narayanan,
+  \href{https://doi.org/10.1016/j.patter.2023.100804}{Leakage and the
+  reproducibility crisis in machine-learning-based science}, Patterns 4~(9)
+  (2023) 100804, preprint: https://arxiv.org/abs/2207.07048.
+\newblock \href {https://doi.org/10.1016/j.patter.2023.100804}
+  {\path{doi:10.1016/j.patter.2023.100804}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.patter.2023.100804}
+
+\bibitem{pineau2021}
+J.~Pineau, P.~Vincent-Lamarre, K.~Sinha, V.~Larivière, A.~Beygelzimer,
+  F.~d'Alché Buc, E.~B. Fox, H.~Larochelle,
+  \href{https://www.jmlr.org/papers/v22/20-303.html}{Improving reproducibility
+  in machine learning research (a report from the neurips 2019 reproducibility
+  program)}, Journal of Machine Learning Research 22~(164) (2021) 1--20,
+  preprint: https://arxiv.org/abs/2003.12206.
+\newline\urlprefix\url{https://www.jmlr.org/papers/v22/20-303.html}
 
 \bibitem{yan2016review}
-J.~Yan, Y.~Liu, S.~Han, Y.~Wang, S.~Feng, Reviews on wind speed and wind power
-  forecasting methods, Renewable and Sustainable Energy Reviews 58 (2016)
-  429--441.
+J.~Yan, Y.~Liu, S.~Han, Y.~Wang, S.~Feng,
+  \href{https://doi.org/10.1016/j.rser.2015.07.197}{Reviews on uncertainty
+  analysis of wind power forecasting}, Renewable and Sustainable Energy Reviews
+  52 (2015) 1322--1330.
+\newblock \href {https://doi.org/10.1016/j.rser.2015.07.197}
+  {\path{doi:10.1016/j.rser.2015.07.197}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.rser.2015.07.197}
 
 \bibitem{maldonadocorrea2020slr}
-J.~Maldonado-Correa, S.~Mart{\'i}n-Mart{\'i}nez, E.~Artigao,
-  E.~G{\'o}mez-L{\'a}zaro, Using {SCADA} data for wind turbine condition
-  monitoring: A systematic literature review, Energies 13~(12) (2020) 3132.
-\newblock \href {https://doi.org/10.3390/en13123132}
-  {\path{doi:10.3390/en13123132}}.
+J.~Maldonado-Correa, J.~Solano, M.~Rojas-Moncayo,
+  \href{https://doi.org/10.1177/0309524X19891672}{Wind power forecasting: A
+  systematic literature review}, Wind Engineering 45~(2) (2021) 413--426.
+\newblock \href {https://doi.org/10.1177/0309524X19891672}
+  {\path{doi:10.1177/0309524X19891672}}.
+\newline\urlprefix\url{https://doi.org/10.1177/0309524X19891672}
 
-\bibitem{tricco2018}
-A.~C. Tricco, E.~Lillie, W.~Zarin, K.~K. O'Brien, H.~Colquhoun, D.~Levac,
-  D.~Moher, M.~D. Peters, T.~Horsley, L.~Weeks, et~al., {PRISMA} extension for
-  scoping reviews ({PRISMA-ScR}): checklist and explanation, Annals of Internal
-  Medicine 169~(7) (2018) 467--473.
+\bibitem{wang2021review}
+Y.~Wang, R.~Zou, F.~Liu, L.-J. Zhang, Q.-X. Liu,
+  \href{https://doi.org/10.1016/j.rser.2021.111306}{A review of wind power
+  forecasting: Modern techniques, challenges and prospects}, Renewable and
+  Sustainable Energy Reviews 148 (2021) 111306.
+\newblock \href {https://doi.org/10.1016/j.rser.2021.111306}
+  {\path{doi:10.1016/j.rser.2021.111306}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.rser.2021.111306}
 
-\bibitem{levac2010}
-D.~Levac, H.~Colquhoun, K.~K. O'Brien, Scoping studies: advancing the
-  methodology, Implementation Science 5~(1) (2010) 69.
-
-\bibitem{s27_uniwind2026}
-R.~Xu, T.~Wu, G.~Zhang, Y.~Li, C.~Guo, B.~Yang, Y.~Li, Uniwind: Toward unified
-  day-ahead wind power forecasting via physics-informed state routing, arXiv
-  preprint arXiv:2607.01670 (2026).
-
-\bibitem{zenodo_hilloftowie}
-{Renewable Energy Systems}, {The Renewables Infrastructure Group},
-  \href{https://doi.org/10.5281/zenodo.20204946}{{Hill of Towie Wind Farm Open
-  SCADA Data}} (2025).
-\newblock \href {https://doi.org/10.5281/zenodo.20204946}
-  {\path{doi:10.5281/zenodo.20204946}}.
-\newline\urlprefix\url{https://doi.org/10.5281/zenodo.20204946}
+\bibitem{koenker2005}
+R.~Koenker, \href{https://doi.org/10.1017/CBO9780511754098}{Quantile
+  regression}, Econometric Society Monographs (Cambridge University Press) 38
+  (2005) 1--349.
+\newblock \href {https://doi.org/10.1017/CBO9780511754098}
+  {\path{doi:10.1017/CBO9780511754098}}.
+\newline\urlprefix\url{https://doi.org/10.1017/CBO9780511754098}
 
 \bibitem{zenodo_kelmarsh}
-{Cubico Sustainable Investments Ltd},
-  \href{https://doi.org/10.5281/zenodo.5841834}{{Kelmarsh Wind Farm Open SCADA
-  Data}} (2021).
+C.~Plumley, \href{https://doi.org/10.5281/zenodo.5841834}{Kelmarsh wind farm
+  data}, Zenodo (2022).
 \newblock \href {https://doi.org/10.5281/zenodo.5841834}
   {\path{doi:10.5281/zenodo.5841834}}.
 \newline\urlprefix\url{https://doi.org/10.5281/zenodo.5841834}
 
+\bibitem{zenodo_hilloftowie}
+A.~Clerc, E.~Lingkan, \href{https://doi.org/10.5281/zenodo.20204946}{Hill of
+  towie wind farm open dataset}, Zenodo (2026).
+\newblock \href {https://doi.org/10.5281/zenodo.20204946}
+  {\path{doi:10.5281/zenodo.20204946}}.
+\newline\urlprefix\url{https://doi.org/10.5281/zenodo.20204946}
+
 \bibitem{zenodo_penmanshiel}
-{Cubico Sustainable Investments Ltd},
-  \href{https://doi.org/10.5281/zenodo.5946808}{{Penmanshiel Wind Farm Open
-  SCADA Data}} (2022).
+C.~Plumley, \href{https://doi.org/10.5281/zenodo.5946808}{Penmanshiel wind farm
+  data}, Zenodo (2022).
 \newblock \href {https://doi.org/10.5281/zenodo.5946808}
   {\path{doi:10.5281/zenodo.5946808}}.
 \newline\urlprefix\url{https://doi.org/10.5281/zenodo.5946808}
 
+\bibitem{zeng2023dlinear}
+A.~Zeng, M.~Chen, L.~Zhang, Q.~Xu,
+  \href{https://doi.org/10.1609/aaai.v37i9.26317}{Are transformers effective
+  for time series forecasting?}, in: Proceedings of the AAAI Conference on
+  Artificial Intelligence, Vol.~37, 2023, pp. 11121--11128, preprint:
+  https://arxiv.org/abs/2205.13504.
+\newblock \href {https://doi.org/10.1609/aaai.v37i9.26317}
+  {\path{doi:10.1609/aaai.v37i9.26317}}.
+\newline\urlprefix\url{https://doi.org/10.1609/aaai.v37i9.26317}
+
 \bibitem{nie2023patchtst}
 Y.~Nie, N.~H. Nguyen, P.~Sinthong, J.~Kalagnanam,
-  \href{https://openreview.net/forum?id=Jbdc0vTOcol}{A time series is worth 64
+  \href{https://openreview.net/forum?id=J3mQqLeSB63}{A time series is worth 64
   words: Long-term forecasting with transformers}, in: The Eleventh
   International Conference on Learning Representations (ICLR 2023), 2023, pp.
-  1--15.
-\newline\urlprefix\url{https://openreview.net/forum?id=Jbdc0vTOcol}
-
-\bibitem{s10_pinnuq2025}
-C.~Xu, J.~Wang, L.~Zhang, Y.~Liu, Physics-informed neural networks with
-  uncertainty quantification for wind turbine power modeling, Engineering
-  Applications of Artificial Intelligence 140 (2025) 109650.
-\newblock \href {https://doi.org/10.1016/j.engappai.2024.109650}
-  {\path{doi:10.1016/j.engappai.2024.109650}}.
-
-\bibitem{koenker2005}
-R.~Koenker, Quantile Regression, Cambridge University Press, 2005.
-\newblock \href {https://doi.org/10.1017/CBO9780511754098}
-  {\path{doi:10.1017/CBO9780511754098}}.
+  1--25, preprint: https://arxiv.org/abs/2211.14730.
+\newline\urlprefix\url{https://openreview.net/forum?id=J3mQqLeSB63}
 
 \bibitem{kapoor2024reforms}
-S.~Kapoor, E.~Cantrell, K.~Peng, T.~D. Pham, C.~A. Bail, M.~De-Arteaga,
-  J.~Frankle, M.~Hardt, T.~Hashimoto, P.~Henderson, F.~Khani, Z.~C. Lipton,
-  A.~Narayanan, {REFORMS}: Reporting standards for machine learning based
-  science, Science 384~(6696) (2024) 624--626.
-\newblock \href {https://doi.org/10.1126/science.adk3452}
-  {\path{doi:10.1126/science.adk3452}}.
+S.~Kapoor, E.~M. Cantrell, K.~Peng, T.~H. Pham, C.~A. Bail, O.~E. Gundersen,
+  J.~M. Hofman, J.~Hullman, M.~A. Lones, M.~M. Malik, P.~Nanayakkara, R.~A.
+  Poldrack, I.~D. Raji, M.~Roberts, M.~J. Salganik, M.~Serra-Garcia, B.~M.
+  Stewart, G.~Vandewiele, A.~Narayanan,
+  \href{https://doi.org/10.1126/sciadv.adk3452}{Reforms: Consensus-based
+  recommendations for machine-learning-based science}, Science Advances 10~(18)
+  (2024) eadk3452, preprint: https://arxiv.org/abs/2308.07832.
+\newblock \href {https://doi.org/10.1126/sciadv.adk3452}
+  {\path{doi:10.1126/sciadv.adk3452}}.
+\newline\urlprefix\url{https://doi.org/10.1126/sciadv.adk3452}
 
 \bibitem{walsh2021dome}
-I.~Walsh, D.~Fishman, D.~Garcia-Gasulla, M.~Titov, G.~Pollastri, J.~Harrow,
-  F.~Psomopoulos, S.~C.~E. Tosatto, {DOME}: recommendations for supervised
-  machine learning validation in biology and medicine, Nature Methods 18~(10)
+I.~Walsh, D.~Fishman, D.~Garcia-Gasulla, T.~Titma, G.~Pollastri, E.~M. L.~F.
+  Group, J.~Harrow, F.~E. Psomopoulos, S.~C.~E. Tosatto,
+  \href{https://doi.org/10.1038/s41592-021-01205-4}{Dome: recommendations for
+  supervised machine learning validation in biology}, Nature Methods 18~(10)
   (2021) 1122--1127.
 \newblock \href {https://doi.org/10.1038/s41592-021-01205-4}
   {\path{doi:10.1038/s41592-021-01205-4}}.
+\newline\urlprefix\url{https://doi.org/10.1038/s41592-021-01205-4}
+
+\bibitem{tricco2018}
+A.~C. Tricco, E.~Lillie, W.~Zarin, K.~K. O'Brien, H.~Colquhoun, D.~Levac,
+  D.~Moher, M.~D. Peters, T.~Horsley, L.~Weeks, S.~Hempel, E.~A. Akl, C.~Chang,
+  J.~McGowan, L.~Stewart, L.~Hartling, A.~Aldcroft, M.~G. Wilson, C.~Garritty,
+  S.~Lewin, C.~M. Godfrey, M.~T. Macdonald, E.~V. Langlois, K.~Soares-Weiser,
+  J.~Moriarty, T.~Clifford, Özge Tunçalp, S.~E. Straus,
+  \href{https://doi.org/10.7326/M18-0850}{Prisma extension for scoping reviews
+  (prisma-scr): Checklist and explanation}, Annals of Internal Medicine 169~(7)
+  (2018) 467--473.
+\newblock \href {https://doi.org/10.7326/M18-0850}
+  {\path{doi:10.7326/M18-0850}}.
+\newline\urlprefix\url{https://doi.org/10.7326/M18-0850}
 
 \end{thebibliography}

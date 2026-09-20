@@ -1,0 +1,14 @@
+Engineering Comparison Charts Summary
+==================================================
+Generation time: 2026-01-26 09:48:56.172318
+Number of models: 9
+Number of charts: 7
+
+Chart list:
+1. overall_performance.png - Overall forecast performance comparison
+2. probabilistic_metrics.png - Probabilistic forecast metrics
+3. dispatch_economics.png - Dispatch economics comparison
+4. stratified_heatmap.png - Condition-stratified performance heatmap
+5. reliability_diagram.png - Reliability diagram (quantile calibration)
+6. prediction_intervals.png - Prediction interval visualization
+7. spider_chart.png - Comprehensive radar chart

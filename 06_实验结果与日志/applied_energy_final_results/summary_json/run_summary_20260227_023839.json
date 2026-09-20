@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-02-26T19:10:27.653597Z",
+  "script": "run_applied_energy_oneclick_4090.py",
+  "args": {
+    "python": "/root/miniconda3/bin/python",
+    "seed": 42,
+    "seeds": "42,123,2025",
+    "device": "cuda",
+    "continue_on_error": false,
+    "dry_run": false,
+    "out_dir": "/root/论文1/results/applied_energy_expansion_4090",
+    "skip_base_bundle": false,
+    "skip_latest_sota": false,
+    "skip_minimal_hybrid": false,
+    "skip_extended_hybrid": false,
+    "skip_joint_analysis": false,
+    "latest_epochs": 80,
+    "latest_batch_size": 256,
+    "joint_n_grid": "2,4,8",
+    "joint_topk_grid": "1,2",
+    "joint_tau_grid": "0.3,0.5,0.7,0.9",
+    "joint_lambda2_grid": "0.0,0.01,0.1,1.0",
+    "chronos_cmd": "",
+    "moirai_cmd": ""
+  },
+  "status": "failed",
+  "error": "Step failed: phase1_submission_bundle",
+  "steps": [
+    {
+      "name": "phase1_submission_bundle",
+      "ok": false,
+      "return_code": 1,
+      "elapsed_sec": 1907.9877808094025,
+      "log_file": "/root/论文1/logs/applied_energy_expansion_4090_20260227_023839/phase1_submission_bundle.log",
+      "note": ""
+    }
+  ],
+  "artifacts": {},
+  "log_dir": "/root/论文1/logs/applied_energy_expansion_4090_20260227_023839"
+}

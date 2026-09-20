@@ -1,0 +1,46 @@
+启动全领域消融实验 (Kernel Sensitivity)...
+
+Dataset: Wind (CN)
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   Testing Kernel Size = 3 ...
+      -> R2: 0.8505
+   Testing Kernel Size = 7 ...
+      -> R2: 0.8591
+   Testing Kernel Size = 15 ...
+      -> R2: 0.8214
+
+Dataset: Air Quality
+加载数据: air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+   Testing Kernel Size = 3 ...
+      -> R2: 0.2773
+   Testing Kernel Size = 7 ...
+      -> R2: 0.2528
+   Testing Kernel Size = 15 ...
+      -> R2: 0.3532
+
+消融结果已保存: universal_ablation_results.csv
+       Dataset  Kernel        R2
+0    Wind (CN)       3  0.850532
+1    Wind (CN)       7  0.859058
+2    Wind (CN)      15  0.821409
+3  Air Quality       3  0.277348
+4  Air Quality       7  0.252772
+5  Air Quality      15  0.353228

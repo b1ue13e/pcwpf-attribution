@@ -1,0 +1,436 @@
+启动全领域鲁棒性压力测试 (Universal Robustness Test)...
+
+正在测试数据集: Wind (CN) (wind_final.csv)...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   加载权重: checkpoints_ts/main/best_model.pth
+Traceback (most recent call last):
+  File "/root/my_project/run_universal_robustness.py", line 123, in <module>
+    run_universal_robustness()
+  File "/root/my_project/run_universal_robustness.py", line 76, in run_universal_robustness
+    model.load_state_dict(ckpt['model_state_dict'] if 'model_state_dict' in ckpt else ckpt)
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+	Missing key(s) in state_dict: "blocks.0.moe_router.experts.4.0.weight", "blocks.0.moe_router.experts.4.0.bias", "blocks.0.moe_router.experts.4.2.weight", "blocks.0.moe_router.experts.4.2.bias", "blocks.0.moe_router.experts.5.0.weight", "blocks.0.moe_router.experts.5.0.bias", "blocks.0.moe_router.experts.5.2.weight", "blocks.0.moe_router.experts.5.2.bias", "blocks.0.moe_router.experts.6.0.weight", "blocks.0.moe_router.experts.6.0.bias", "blocks.0.moe_router.experts.6.2.weight", "blocks.0.moe_router.experts.6.2.bias", "blocks.0.moe_router.experts.7.0.weight", "blocks.0.moe_router.experts.7.0.bias", "blocks.0.moe_router.experts.7.2.weight", "blocks.0.moe_router.experts.7.2.bias", "blocks.1.moe_router.experts.4.0.weight", "blocks.1.moe_router.experts.4.0.bias", "blocks.1.moe_router.experts.4.2.weight", "blocks.1.moe_router.experts.4.2.bias", "blocks.1.moe_router.experts.5.0.weight", "blocks.1.moe_router.experts.5.0.bias", "blocks.1.moe_router.experts.5.2.weight", "blocks.1.moe_router.experts.5.2.bias", "blocks.1.moe_router.experts.6.0.weight", "blocks.1.moe_router.experts.6.0.bias", "blocks.1.moe_router.experts.6.2.weight", "blocks.1.moe_router.experts.6.2.bias", "blocks.1.moe_router.experts.7.0.weight", "blocks.1.moe_router.experts.7.0.bias", "blocks.1.moe_router.experts.7.2.weight", "blocks.1.moe_router.experts.7.2.bias", "blocks.2.moe_router.experts.4.0.weight", "blocks.2.moe_router.experts.4.0.bias", "blocks.2.moe_router.experts.4.2.weight", "blocks.2.moe_router.experts.4.2.bias", "blocks.2.moe_router.experts.5.0.weight", "blocks.2.moe_router.experts.5.0.bias", "blocks.2.moe_router.experts.5.2.weight", "blocks.2.moe_router.experts.5.2.bias", "blocks.2.moe_router.experts.6.0.weight", "blocks.2.moe_router.experts.6.0.bias", "blocks.2.moe_router.experts.6.2.weight", "blocks.2.moe_router.experts.6.2.bias", "blocks.2.moe_router.experts.7.0.weight", "blocks.2.moe_router.experts.7.0.bias", "blocks.2.moe_router.experts.7.2.weight", "blocks.2.moe_router.experts.7.2.bias", "blocks.3.input_norm.weight", "blocks.3.input_norm.bias", "blocks.3.moe_router.router.weight", "blocks.3.moe_router.experts.0.0.weight", "blocks.3.moe_router.experts.0.0.bias", "blocks.3.moe_router.experts.0.2.weight", "blocks.3.moe_router.experts.0.2.bias", "blocks.3.moe_router.experts.1.0.weight", "blocks.3.moe_router.experts.1.0.bias", "blocks.3.moe_router.experts.1.2.weight", "blocks.3.moe_router.experts.1.2.bias", "blocks.3.moe_router.experts.2.0.weight", "blocks.3.moe_router.experts.2.0.bias", "blocks.3.moe_router.experts.2.2.weight", "blocks.3.moe_router.experts.2.2.bias", "blocks.3.moe_router.experts.3.0.weight", "blocks.3.moe_router.experts.3.0.bias", "blocks.3.moe_router.experts.3.2.weight", "blocks.3.moe_router.experts.3.2.bias", "blocks.3.moe_router.experts.4.0.weight", "blocks.3.moe_router.experts.4.0.bias", "blocks.3.moe_router.experts.4.2.weight", "blocks.3.moe_router.experts.4.2.bias", "blocks.3.moe_router.experts.5.0.weight", "blocks.3.moe_router.experts.5.0.bias", "blocks.3.moe_router.experts.5.2.weight", "blocks.3.moe_router.experts.5.2.bias", "blocks.3.moe_router.experts.6.0.weight", "blocks.3.moe_router.experts.6.0.bias", "blocks.3.moe_router.experts.6.2.weight", "blocks.3.moe_router.experts.6.2.bias", "blocks.3.moe_router.experts.7.0.weight", "blocks.3.moe_router.experts.7.0.bias", "blocks.3.moe_router.experts.7.2.weight", "blocks.3.moe_router.experts.7.2.bias", "blocks.3.dual_prop.mode_selector.0.weight", "blocks.3.dual_prop.mode_selector.0.bias", "blocks.3.dual_prop.mode_selector.2.weight", "blocks.3.dual_prop.mode_selector.2.bias", "blocks.3.dual_prop.fast_path.0.weight", "blocks.3.dual_prop.fast_path.0.bias", "blocks.3.dual_prop.fast_path.1.weight", "blocks.3.dual_prop.fast_path.1.bias", "blocks.3.dual_prop.slow_path.0.weight", "blocks.3.dual_prop.slow_path.0.bias", "blocks.3.dual_prop.slow_path.3.weight", "blocks.3.dual_prop.slow_path.3.bias", "blocks.3.dual_prop.slow_path.4.weight", "blocks.3.dual_prop.slow_path.4.bias", "blocks.3.dual_prop.skip_gate.threshold", "blocks.3.dual_prop.skip_gate.importance_net.0.weight", "blocks.3.dual_prop.skip_gate.importance_net.0.bias", "blocks.3.dual_prop.skip_gate.importance_net.2.weight", "blocks.3.dual_prop.skip_gate.importance_net.2.bias", "blocks.3.dual_prop.skip_gate.change_detector.0.weight", "blocks.3.dual_prop.skip_gate.change_detector.0.bias", "blocks.3.dual_prop.skip_gate.change_detector.2.weight", "blocks.3.dual_prop.skip_gate.change_detector.2.bias", "blocks.3.output_norm.weight", "blocks.3.output_norm.bias". 
+	size mismatch for encoder.pos_embedding: copying a param with shape torch.Size([1, 96, 128]) from checkpoint, the shape in current model is torch.Size([1, 96, 256]).
+	size mismatch for encoder.feature_proj.weight: copying a param with shape torch.Size([128, 8]) from checkpoint, the shape in current model is torch.Size([256, 8]).
+	size mismatch for encoder.feature_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.temporal_conv.0.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+	size mismatch for encoder.temporal_conv.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.temporal_conv.2.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+	size mismatch for encoder.temporal_conv.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.temporal_attn.in_proj_weight: copying a param with shape torch.Size([384, 128]) from checkpoint, the shape in current model is torch.Size([768, 256]).
+	size mismatch for encoder.temporal_attn.in_proj_bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for encoder.temporal_attn.out_proj.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for encoder.temporal_attn.out_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.attn_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.attn_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.aggregate.0.weight: copying a param with shape torch.Size([256, 12288]) from checkpoint, the shape in current model is torch.Size([512, 24576]).
+	size mismatch for encoder.aggregate.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for encoder.aggregate.2.weight: copying a param with shape torch.Size([128, 256]) from checkpoint, the shape in current model is torch.Size([256, 512]).
+	size mismatch for encoder.aggregate.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([8, 256]).
+	size mismatch for blocks.0.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.0.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.0.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.0.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for blocks.0.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.0.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+	size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.0.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.0.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([8, 256]).
+	size mismatch for blocks.1.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.1.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.1.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.1.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for blocks.1.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.1.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+	size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.1.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.1.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([8, 256]).
+	size mismatch for blocks.2.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.2.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.2.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.2.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for blocks.2.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.2.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.2.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for decoder.expand.0.weight: copying a param with shape torch.Size([3072, 128]) from checkpoint, the shape in current model is torch.Size([6144, 256]).
+	size mismatch for decoder.expand.0.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([6144]).
+	size mismatch for decoder.pred_head.0.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+	size mismatch for decoder.pred_head.0.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for decoder.pred_head.2.weight: copying a param with shape torch.Size([1, 64]) from checkpoint, the shape in current model is torch.Size([1, 128]).
+启动全领域鲁棒性压力测试 (Universal Robustness Test)...
+
+正在测试数据集: Wind (CN) (wind_final.csv)...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+   加载模型配置: checkpoints_ts/main/model_config.json
+   使用配置: hidden_dim=128, num_blocks=3, num_experts=4, top_k=2
+   加载权重: checkpoints_ts/main/best_model.pth
+      噪音 0%: R2=0.8728
+      噪音 5%: R2=0.8718
+      噪音 10%: R2=0.8688
+      噪音 15%: R2=0.8628
+      噪音 20%: R2=0.8563
+
+正在测试数据集: Wind (US) (wind_us.csv)...
+加载数据: wind_us.csv
+   原始形状: (105120, 11)
+   列数: 11
+   缺失值已全部处理
+   最终形状: (105120, 11)
+   特征: ['Year', 'Month', 'Day', 'Hour', 'Minute', 'wind speed at 100m (m/s)', 'hour_sin', 'hour_cos', 'day_sin', 'day_cos', 'power (MW)']
+   数据范围: [-1.0000, 2012.0000]
+   训练样本: 73465
+   验证样本: 15649
+   测试样本: 15649
+   加载模型配置: checkpoints_ts/exp_wind_us/model_config.json
+   使用配置: hidden_dim=128, num_blocks=3, num_experts=4, top_k=2
+   加载权重: checkpoints_ts/exp_wind_us/best_model.pth
+      噪音 0%: R2=0.7750
+      噪音 5%: R2=0.7719
+      噪音 10%: R2=0.7620
+      噪音 15%: R2=0.7505
+      噪音 20%: R2=0.7308
+
+正在测试数据集: GEFCom Load (gefcom_ready.csv)...
+加载数据: gefcom_ready.csv
+   原始形状: (38070, 2)
+   列数: 2
+   删除了时间戳列: ['date']
+   缺失值已全部处理
+   最终形状: (38070, 1)
+   特征: ['load']
+   数据范围: [7319.0000, 45547.0000]
+   训练样本: 26530
+   验证样本: 5591
+   测试样本: 5592
+   加载模型配置: checkpoints_ts/exp_gefcom/model_config.json
+   使用配置: hidden_dim=128, num_blocks=3, num_experts=4, top_k=2
+   加载权重: checkpoints_ts/exp_gefcom/best_model.pth
+      噪音 0%: R2=0.7554
+      噪音 5%: R2=0.7533
+      噪音 10%: R2=0.7480
+      噪音 15%: R2=0.7405
+      噪音 20%: R2=0.7266
+
+正在测试数据集: Air Quality (air_quality_ready.csv)...
+加载数据: air_quality_ready.csv
+   原始形状: (588644, 7)
+   列数: 7
+   缺失值已全部处理
+   最终形状: (588644, 7)
+   特征: ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'AQI']
+   数据范围: [0.0000, 856.0000]
+   训练样本: 411931
+   验证样本: 88178
+   测试样本: 88178
+   加载模型配置: checkpoints_ts/exp_air_quality/model_config.json
+   使用配置: hidden_dim=128, num_blocks=3, num_experts=4, top_k=2
+   加载权重: checkpoints_ts/exp_air_quality/best_model.pth
+      噪音 0%: R2=0.4885
+      噪音 5%: R2=0.4869
+      噪音 10%: R2=0.4829
+      噪音 15%: R2=0.4748
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+findfont: Generic family 'serif' not found because none of the following families were found: Times New Roman
+      噪音 20%: R2=0.4647
+
+全领域鲁棒性图表已生成: fig_universal_robustness.png

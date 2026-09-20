@@ -1,0 +1,14 @@
+Starting COA-BiLSTM on air_quality seed=42
+Time: 2026-02-23 14:34:05.626986
+GPU: NVIDIA GeForce RTX 4090 D
+============================================================
+
+============================================================
+COA-BiLSTM: air_quality (seed=42)
+Population=40, Iterations=200
+============================================================
+Device: cuda
+Dataset: air_quality
+  Total samples: 588644
+  Training samples: 470915 (80.0%)
+  Testing samples: 117729 (20.0%)

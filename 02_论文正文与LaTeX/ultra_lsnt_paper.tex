@@ -1,0 +1,196 @@
+\documentclass[a4paper,fleqn]{cas-sc}
+\usepackage[numbers]{natbib}
+\usepackage{graphicx}
+\usepackage{geometry}
+
+% --- 作者简称定义 ---
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+\tsc{EP}
+\tsc{PMS}
+\tsc{BEC}
+\tsc{DE}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+% ================= 头部信息 (Front Matter) =================
+
+% 1. 标题
+\shorttitle{Ultra-LSNT: Edge-Native Wind Power Forecasting}
+\shortauthors{Junyu Li et al.}
+\title [mode = title]{Ultra-LSNT: An Efficient Sparse Mixture-of-Experts Network for Edge-Native Wind Power Forecasting}
+
+% 2. 作者：Junyu Li
+\author[1]{Junyu Li}[type=editor,
+                        auid=000,bioid=1,
+                        role=Conceptualization,
+                        orcid=0000-0000-0000-0000]
+\cormark[2] % 标记为第一作者
+\ead{ljylikezmn999@gmail.com}
+
+% 3. 作者：Juntao Du (通讯)
+\author[1]{Juntao Du}[type=editor,
+                        auid=001,bioid=2,
+                        role=Supervision,
+                        orcid=0000-0000-0000-0000]
+\cormark[1] % 标记为通讯作者
+\ead{dujuntao@aufe.edu.cn}
+
+% 4. 单位
+\address[1]{School of Statistics and Applied Mathematics, Anhui University of Finance and Economics, Bengbu 233030, China}
+\cortext[cor1]{Corresponding author}
+
+% 5. 摘要
+\begin{abstract}
+Wind power forecasting is critical for grid stability but faces dual challenges: the inherent stochasticity of wind data and the strict computational constraints of edge devices (e.g., smart meters). While recent Transformers (e.g., PatchTST \cite{patchtst2023}) and linear models (e.g., DLinear \cite{dlinear2023}) achieve high accuracy on clean benchmarks, they often suffer from either prohibitive computational costs or catastrophic degradation under sensor noise. To bridge this gap, we propose \textbf{Ultra-LSNT}, a noise-robust Sparse Mixture-of-Experts (MoE) framework. Unlike standard dense models, Ultra-LSNT utilizes a multi-scale decomposition to route continuous temporal patterns to specialized experts, activating only Top-2 experts per step. Extensive experiments on the GEFCom2012 benchmark and a real-world Xinjiang wind dataset show that while Ultra-LSNT sacrifices marginal accuracy ($<6\%$) compared to DLinear on clean data, it achieves superior \textbf{robustness}, maintaining an $R^2$ of 0.8382 under 20\% noise where linear baselines collapse ($R^2 \approx 0.65$). Furthermore, it reduces inference latency by 45$\times$ compared to standard Transformers, offering an optimal trade-off for reliable edge-native deployment.
+\end{abstract}
+
+% 6. 亮点
+\begin{highlights}
+\item Proposed Ultra-LSNT, a sparse MoE framework for edge-native forecasting.
+\item Achieved linear computational complexity $O(L)$, 45x faster than Transformers.
+\item Demonstrated superior robustness against 20\% sensor noise compared to SOTA baselines.
+\item Visualized interpretable expert specialization for peak and base load patterns.
+\end{highlights}
+
+% 7. 关键词
+\begin{keywords}
+Wind Power Forecasting \sep Sparse Mixture-of-Experts \sep Edge Computing \sep Robustness \sep Time Series Analysis
+\end{keywords}
+
+% 8. 生成标题页
+\maketitle
+
+% ================= 正文开始 =================
+
+\section{Introduction}
+Wind power forecasting plays a pivotal role in the global transition toward carbon neutrality. However, the inherent volatility of wind energy and the resource constraints of edge devices present significant challenges for real-time deployment. Existing state-of-the-art (SOTA) models, such as Transformers \cite{transformer2017}, typically suffer from quadratic computational complexity ($O(L^2)$), making them unsuitable for deployment on resource-limited edge terminals (e.g., wind turbine controllers). Furthermore, sensors in industrial environments are prone to calibration errors and noise interference. Our experiments reveal that while linear baselines like DLinear perform well on clean data, they exhibit catastrophic degradation under noise conditions (see Fig. 1).
+
+It is worth noting that while recent advanced models like \textbf{PatchTST} \cite{patchtst2023} and \textbf{TimesNet} have set new accuracy records, their heavy parameterization and high memory footprint (often requiring GPUs) make them unsuitable for deployment on resource-constrained edge devices (e.g., embedded controllers with $<500$mW power budget). Conversely, lightweight linear models like \textbf{DLinear} \cite{dlinear2023} are efficient but lack the non-linear capacity to handle signal corruption. Ultra-LSNT positions itself in this research gap: providing "good enough" accuracy with extreme efficiency and industrial-grade robustness.
+
+It is crucial to distinguish Ultra-LSNT from recent Time-Series Foundation Models like MOIRAI-MoE (2025). While foundation models achieve generalized performance via massive pre-training, they require substantial computational resources (GPUs) irrelevant to edge endpoints. Ultra-LSNT focuses on \textit{edge-native specialization}: enabling a standalone wind turbine controller to learn robust patterns from scratch with minimal resources, distinct from the cloud-centric foundation model paradigm.
+
+The main contributions of this work are:
+
+% Table 1: 文献对比
+\begin{table}[width=\linewidth,pos=h]
+\caption{Summary of Related Works and Their Limitations (Research Gap).}
+\begin{tabular*}{\tblwidth}{@{} LLL @{} }
+\toprule
+\textbf{Model Type} & \textbf{Core Technique} & \textbf{Limitations for Edge Deployment} \\
+\midrule
+LSTM (1997) & Gating Mechanism & Sequential processing limits speed; fails on long sequences. \\
+Transformer (2017) & Self-Attention & $O(L^2)$ complexity; high memory footprint. \\
+\textbf{PatchTST (2023)} & \textbf{Patching + Attention} & \textbf{SOTA accuracy but extremely heavy parameters ($>$500K); high latency.} \\
+\textbf{TimesNet (2023)} & \textbf{2D Variations} & \textbf{Complex 2D convolution logic unsuitable for low-power chips.} \\
+\textbf{Ultra-LSNT (Ours)} & \textbf{Sparse MoE} & \textbf{Linear $O(L)$ complexity; balances SOTA-level robustness with edge efficiency.} \\
+\bottomrule
+\end{tabular*}
+\label{tab:literature}
+\end{table}
+
+\begin{enumerate}
+    \item We propose Ultra-LSNT, an edge-friendly architecture that achieves comparable accuracy to Transformers with 45\% fewer parameters.
+    \item We demonstrate that Ultra-LSNT exhibits superior robustness, maintaining an $R^2 > 0.83$ even under 20\% severe noise, whereas current SOTA baselines fail.
+    \item We provide interpretable visualizations of expert specialization, confirming the model's ability to adapt to diverse wind patterns.
+\end{enumerate}
+
+\section{Related Work}
+
+\subsection{Deep Learning for Wind Power Forecasting}
+Early approaches largely relied on statistical methods like ARIMA and SVM. With the advent of deep learning, Recurrent Neural Networks (RNNs), particularly LSTM \cite{lstm1997} and GRU, became the dominant paradigm due to their ability to capture temporal dependencies. However, RNNs suffer from sequential processing limitations, making them slow for long sequences. Recently, Transformer-based architectures have achieved SOTA results by leveraging self-attention mechanisms \cite{transformer2017}. Despite their accuracy, standard Transformers exhibit quadratic complexity $O(L^2)$, which hinders their deployment on resource-constrained edge devices in wind farms.
+
+\subsection{Efficient Time-Series Transformers}
+To address the computational bottleneck, several efficient Transformer variants have been proposed. \textbf{Informer} \cite{informer2021} introduced a ProbSparse attention mechanism to reduce complexity to $O(L \log L)$. \textbf{Autoformer} \cite{autoformer2021} replaced the point-wise attention with a decomposition-based correlation mechanism. \textbf{PatchTST} \cite{patchtst2023} further improved performance by segmenting time series into patches, treating them as tokens. While these models reduce theoretical complexity, they often retain a dense activation pattern, activating all parameters for every input, which is suboptimal for energy-constrained edge scenarios.
+
+\subsection{Sparse Mixture-of-Experts (MoE)}
+Mixture-of-Experts (MoE) scales model capacity without increasing inference cost by conditionally activating a subset of parameters. Originally popularized in NLP (e.g., Switch Transformer), MoE has seen limited application in time-series forecasting. Ultra-LSNT bridges this gap by adapting Sparse MoE \cite{moe2017} for continuous time-series data. Unlike NLP models that route discrete word tokens, we introduce a multi-scale embedding to create semantic-rich tokens from continuous signals, enabling the router to learn meaningful temporal specializations (e.g., peak vs. valley loads).
+
+\section{Methodology}
+In this section, we formulate the wind power forecasting problem and detail the proposed Ultra-LSNT framework. The architecture is designed to balance model capacity with computational efficiency for edge deployment.
+
+\subsection{Problem Formulation}
+Let $\mathcal{X} = \{x_{t-L+1}, \dots, x_t\}$ denote the historical multivariate inputs of length $L$, where $x_t \in \mathbb{R}^{C_{in}}$ represents the feature vector (e.g., wind speed, direction) at time step $t$. The goal is to predict the future power generation sequence $\mathcal{Y} = \{y_{t+1}, \dots, y_{t+H}\}$ of length $H$. The problem is modeled as learning a mapping function $f_\theta: \mathcal{X} \mapsto \mathcal{Y}$ that minimizes the prediction error.
+
+\subsection{Multi-scale Decomposition}
+To decouple the complex temporal dynamics mentioned in Fig. \ref{fig:arch}, we employ a moving-average based decomposition. Given input sequence $\mathcal{X} \in \mathbb{R}^{L \times C}$, the trend component $\mathcal{X}_{trend}$ is extracted via a mean pooling operation:
+\begin{equation}
+    \mathcal{X}_{trend} = \text{AvgPool}(\text{Padding}(\mathcal{X}), \text{kernel\_size}=k)
+\end{equation}
+The seasonal (fluctuation) component is then derived as $\mathcal{X}_{seasonal} = \mathcal{X} - \mathcal{X}_{trend}$. Ultra-LSNT uses the Sparse MoE encoder to model the non-linear $\mathcal{X}_{seasonal}$, while $\mathcal{X}_{trend}$ is handled by a lightweight linear branch to preserve global statistics.
+
+\subsection{Multi-scale Temporal Embedding}
+To capture both short-term fluctuations and long-term trends, we employ a parallel multi-scale embedding strategy. Unlike standard Transformers that use a single patch size, Ultra-LSNT applies a bank of 1D convolutions with varying kernel sizes $K=\{k_1, k_2\}$.
+\begin{equation}
+    H_{emb}^{(k)} = \text{GELU}(\text{Conv1D}_k(\mathcal{X}))
+\end{equation}
+The outputs are concatenated and augmented with learnable positional encodings $P \in \mathbb{R}^{L \times D}$:
+\begin{equation}
+    H_0 = \text{Concat}([H_{emb}^{(k_1)}, H_{emb}^{(k_2)}]) \cdot W_{proj} + P
+\end{equation}
+where $W_{proj}$ projects the concatenated features to the hidden dimension $D$. In this work, we set $k_1=3$ to capture local turbulence and $k_2=5$ for broader trend patterns.
+
+\subsection{Sparse Mixture-of-Experts (MoE) Encoder}
+The core efficient computation engine is the Sparse MoE layer. Instead of a dense Feed-Forward Network (FFN), we utilize a set of $N$ experts $\{E_i\}_{i=1}^N$ and a trainable router $\mathcal{R}$.
+
+\subsubsection{Top-K Gating Mechanism}
+For each token representation $h_t$, the router computes a gating score using a Softmax function. To ensure differentiability and load balancing, we add Gaussian noise during training:
+\begin{equation}
+    s(h_t) = \text{Softmax}(\text{TopK}(h_t W_g + \epsilon, k))
+\end{equation}
+where $W_g \in \mathbb{R}^{D \times N}$ is the gating weight, and $\epsilon \sim \mathcal{N}(0, \frac{1}{N^2})$ is the standard normal noise. The $\text{TopK}(\cdot, k)$ operation retains only the $k$ largest values and sets the rest to $-\infty$.
+
+
+
+\subsubsection{Expert Computation}
+The final output is the weighted sum of the selected experts. Crucially, experts with zero gating weights are not computed, reducing FLOPs significantly:
+\begin{equation}
+    h_t' = \sum_{i \in \mathcal{T}} s(h_t)_i \cdot E_i(h_t) + h_t
+\end{equation}
+where $\mathcal{T}$ is the set of indices of the active Top-$k$ experts. Each expert $E_i$ is a lightweight Multi-Layer Perceptron (MLP): $E_i(x) = \phi(x W_{1,i}) W_{2,i}$.
+
+\subsection{Optimization and Loss Function}
+To prevent "Expert Collapse" (where the router chooses the same few experts for all inputs), we introduce an auxiliary load-balancing loss. The total training objective $\mathcal{L}$ is:
+\begin{equation}
+    \mathcal{L} = \mathcal{L}_{MSE} + \lambda \cdot \mathcal{L}_{aux}
+\end{equation}
+The primary loss $\mathcal{L}_{MSE}$ measures forecasting accuracy:
+\begin{equation}
+    \mathcal{L}_{MSE} = \frac{1}{H} \sum_{i=1}^H (y_{t+i} - \hat{y}_{t+i})^2
+\end{equation}
+The auxiliary loss $\mathcal{L}_{aux}$ minimizes the coefficient of variation of expert importance:
+\begin{equation}
+    \mathcal{L}_{aux} = N \sum_{i=1}^N f_i \cdot P_i
+\end{equation}
+where $f_i$ is the fraction of samples dispatched to expert $i$, and $P_i\) is the average gating probability. We set $\lambda=0.01$ to balance accuracy and expert diversity.
+
+\subsection{Implementation Details}
+The model was implemented in PyTorch and trained on a single NVIDIA RTX 4060 GPU. We used the AdamW optimizer with an initial learning rate of $1e^{-3}$ and a cosine annealing schedule. The batch size was set to 64, and the training ran for 100 epochs with early stopping (patience=10).
+
+% 架构图
+\begin{figure*}[pos=!htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{fig_architecture.png}
+    \caption{\textbf{Overview of Ultra-LSNT Framework.} The model decomposes the time series into trend and seasonal components. The seasonal part is processed by a Sparse MoE layer, which dynamically routes tokens to specialized experts (e.g., Expert 1 for peak hours, Expert 2 for valley hours), ensuring both efficiency and interpretability.}
+    \label{fig:arch}
+\end{figure*}
+
+\section{Results and Discussion}
+In this section, we present a comprehensive evaluation of the proposed Ultra-LSNT framework. We validate its superiority through distinct dimensions: (1) Main forecasting accuracy compared to SOTA baselines; (2) Architectural decisions via ablation studies; (3) Computational efficiency boundaries; (4) Robustness under noise stress; and (5) Model interpretability.
+
+\subsection{Main Forecasting Performance}
+We evaluated the model on two distinct datasets: (1) GEFCom2012 benchmark; and (2) \textbf{Xinjiang Wind}, a real-world dataset collected from a terrestrial wind farm in Xinjiang, China (2019-2020). The dataset contains 15-minute interval samples of active power, wind speed, wind direction, temperature, and humidity. We adopted a strictly chronological split of \textbf{70\% for training, 10\% for validation, and 20\% for testing} to prevent data leakage. Data standardization (Z-score) was applied to stabilize training.
+
+Table \ref{tab:comparison} and Fig. \ref{fig:gefcom} summarize the performance comparison against MLP, LSTM, and the state-of-the-art (SOTA) Transformer \cite{transformer2017}.
+
+\textbf{Superior Accuracy:} On the GEFCom2012 dataset, Ultra-LSNT achieved an $R^2$ of \textbf{0.7513}, outperforming the Transformer ($R^2=0.7268$) by 2.45\%. This indicates that our Multi-scale Temporal Encoder captures local periodicities more effectively than the global attention mechanism.
+
+\textbf{Competitive Performance:} On the highly volatile Wind Power dataset, Ultra-LSNT achieved a competitive $R^2$ of \textbf{0.8728} (within 7.7\% of DLinear's state-of-the-art 0.9400), while offering significantly better robustness against sensor noise (see Section~4.4). This accuracy-robustness trade-off is essential for reliable edge deployment.
+
+% ================= Table 2 终极版 =================
+\begin{table}[width=.9\linewidth,cols=5,pos=!htbp]
+\caption{Comprehensive Performance Comparison ($R^2$) on the Real-world Xinjiang Wind Power Dataset. Results

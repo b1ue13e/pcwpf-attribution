@@ -1,0 +1,17 @@
+nohup: ignoring input
+[stage1] exporting iTransformer archives
+[stage1] completed export_itransformer_seed42
+[stage1] completed export_itransformer_seed123
+[stage1] completed export_itransformer_seed2025
+[stage1] launching main dispatch rebuild
+[stage1] completed dispatch_seed42_risk_conditional
+[stage1] completed dispatch_seed123_risk_conditional
+[stage1] completed dispatch_seed2025_risk_conditional
+[stage1] launching decoupling rebuild
+[stage1] completed dispatch_seed42_risk_conditional_decoupling
+[stage1] building summaries
+[stage1] summary files:
+  results/ae_recovery_stage1/cfg_lower_corr/summary/operation_high_risk_summary_seed42.csv
+  results/ae_recovery_stage1/cfg_lower_corr/summary/operation_decoupling_summary_seed42.csv
+  results/ae_recovery_stage1/cfg_lower_corr/summary/operation_seed_stability_mean_std.csv
+[stage1] done

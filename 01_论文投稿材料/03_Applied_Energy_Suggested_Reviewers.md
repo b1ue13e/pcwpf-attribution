@@ -18,8 +18,8 @@
 - **Expertise**: Grey-box physical modeling, wind power prediction, stochastic time series analysis, renewable integration.
 - **Rationale for Nomination**: Prof. Madsen is a pioneer in combining physical differential/aerodynamic equations with statistical models. His deep background in model identification and physical validity makes him an excellent reviewer for our constraint lifecycle taxonomy and low-lambda regularization mimicry results.
 
-### Reviewer 4: Dr. Bri-Mathias Hodge
-- **Title & Affiliation**: Associate Professor, Department of Electrical, Computer & Energy Engineering, University of Colorado Boulder; Chief Scientist, National Renewable Energy Laboratory (NREL), USA.
+### Reviewer 4: Prof. Bri-Mathias Hodge
+- **Title & Affiliation**: Professor, Department of Electrical, Computer & Energy Engineering, University of Colorado Boulder; Chief Scientist, National Renewable Energy Laboratory (NREL), USA.
 - **Email**: `bri-mathias.hodge@colorado.edu`
 - **Expertise**: Wind and solar forecasting integration, power system operations, grid reliability benchmarks.
 - **Rationale for Nomination**: Dr. Hodge leads major international initiatives on operational forecasting evaluation and grid integration benchmarks. He possesses deep insight into the practical grid risks of model failure and observation staleness in commercial wind telemetry.

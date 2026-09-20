@@ -1,0 +1,2 @@
+[cmd] /root/miniconda3/bin/python run_extended_metaheuristic_baselines_4090.py --seed 42 --device cuda
+

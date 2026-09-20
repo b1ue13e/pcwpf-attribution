@@ -1,0 +1,2 @@
+DRY RUN
+C:\Users\32110\AppData\Local\Programs\Python\Python310\python.exe run_mamba_auditable_suite.py --device cuda --epochs 8 --out_dir C:\Users\32110\Desktop\论文1\results\supplementary_evidence --audit_tag mamba_auditable_suite_4090

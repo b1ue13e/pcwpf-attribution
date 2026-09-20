@@ -1,0 +1,152 @@
+硬件配置信息:
+硬件检测...
+  CPU核心数: 256
+  系统内存: 755GB
+  GPU型号: NVIDIA GeForce RTX 4090 D
+  GPU显存: 24564MB
+  检测到RTX 4090D级别GPU，启用GPU优化模式
+  注意：具体参数（BATCH_SIZE等）由各脚本的--gpu_optimized参数控制
+  使用Python命令: python3
+
+=== 资源监控 ===
+  可用内存: 693692MB
+  GPU使用率: 0 %
+  GPU显存使用: 0 MiB
+  磁盘使用率: 7%
+=================
+第一步：修复和运行出错的脚本
+1.1 重新运行消融研究 (修复CUDA错误)...
+[2026-01-25 02:28:57] 开始运行: run_ablation_study.py
+[2026-01-25 02:43:30] ✅ 成功: run_ablation_study.py
+1.2 完成SOTA模型对比 (补全Autoformer)...
+[2026-01-25 02:43:30] 开始运行: run_sota.py
+  使用GPU优化参数运行
+[2026-01-25 02:43:33] ✅ 成功: run_sota.py
+第二步：运行效率测试脚本
+2.1 运行效率测试...
+  使用GPU优化参数运行效率测试
+[2026-01-25 02:43:33] 开始运行: test_efficiency.py
+[2026-01-25 02:43:48] ✅ 成功: test_efficiency.py
+2.2 运行MAPE测试...
+[2026-01-25 02:43:48] 开始运行: test_mape.py
+[2026-01-25 02:43:50] ✅ 成功: test_mape.py
+2.3 运行概率预测测试...
+[2026-01-25 02:43:50] 开始运行: test_probabilistic.py
+[2026-01-25 02:43:53] ❌ 失败: test_probabilistic.py (退出码: 1)
+  失败日志片段:
+    Traceback (most recent call last):
+      File "/root/my/test_probabilistic.py", line 223, in <module>
+        main()
+      File "/root/my/test_probabilistic.py", line 209, in main
+        metrics = compute_probabilistic_metrics(pred_gaussian, y_true, mode='gaussian')
+      File "/root/my/ultra_lsnt_timeseries.py", line 1250, in compute_probabilistic_metrics
+        Phi = 0.5 * (1 + np.erf(z / np.sqrt(2)))
+      File "/root/miniconda3/lib/python3.10/site-packages/numpy/__init__.py", line 333, in __getattr__
+        raise AttributeError("module {!r} has no attribute "
+    AttributeError: module 'numpy' has no attribute 'erf'
+2.4 运行鲁棒性修复测试...
+[2026-01-25 02:43:53] 开始运行: test_robustness_fix.py
+[2026-01-25 02:43:56] ✅ 成功: test_robustness_fix.py
+第三步：运行统计显著性测试
+3.1 运行Diebold-Mariano检验...
+[2026-01-25 02:43:56] 开始运行: run_dm_test.py
+[2026-01-25 02:44:00] ❌ 失败: run_dm_test.py (退出码: 1)
+  失败日志片段:
+    	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+    	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+    	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+    	size mismatch for blocks.2.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+    	size mismatch for blocks.2.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+    	size mismatch for decoder.expand.0.weight: copying a param with shape torch.Size([3072, 128]) from checkpoint, the shape in current model is torch.Size([6144, 256]).
+    	size mismatch for decoder.expand.0.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([6144]).
+    	size mismatch for decoder.pred_head.0.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+    	size mismatch for decoder.pred_head.0.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+    	size mismatch for decoder.pred_head.2.weight: copying a param with shape torch.Size([1, 64]) from checkpoint, the shape in current model is torch.Size([1, 128]).
+3.2 运行统计显著性测试...
+[2026-01-25 02:44:00] 开始运行: run_significance.py
+[2026-01-25 02:45:41] ✅ 成功: run_significance.py
+3.3 运行通用显著性测试...
+[2026-01-25 02:45:41] 开始运行: run_universal_significance.py
+[2026-01-25 05:07:15] ✅ 成功: run_universal_significance.py
+第四步：运行鲁棒性对比实验
+4.1 运行GBDT鲁棒性对比...
+[2026-01-25 05:07:15] 开始运行: run_gbdt_robustness.py
+=== 资源监控 ===
+  可用内存: 700918MB
+  GPU使用率: 9 %
+  GPU显存使用: 0 MiB
+  磁盘使用率: 7%
+=================
+[2026-01-25 05:07:20] ❌ 失败: run_gbdt_robustness.py (退出码: 1)
+  失败日志片段:
+        run_real_battle()
+      File "/root/my/run_gbdt_robustness.py", line 64, in run_real_battle
+        model_ours.load_state_dict(ckpt['model_state_dict'] if 'model_state_dict' in ckpt else ckpt)
+      File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+        raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+    RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+    	Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias". 
+    	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+    	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+    	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 129]).
+4.2 运行真实噪声对战...
+[2026-01-25 05:07:20] 开始运行: run_real_noise_battle.py
+[2026-01-25 05:16:26] ✅ 成功: run_real_noise_battle.py
+4.3 运行真实实验...
+[2026-01-25 05:16:26] 开始运行: run_real_experiments.py
+[2026-01-25 05:48:30] ✅ 成功: run_real_experiments.py
+第五步：运行消融研究扩展
+5.1 运行通用消融研究...
+[2026-01-25 05:48:30] 开始运行: run_universal_ablation.py
+[2026-01-25 06:12:00] ✅ 成功: run_universal_ablation.py
+5.2 运行DLinear修复版本...
+[2026-01-25 06:12:00] 开始运行: run_dlinear_fixed.py
+[2026-01-25 06:12:32] ✅ 成功: run_dlinear_fixed.py
+第六步：运行分析和可视化脚本
+6.1 生成所有图表...
+[2026-01-25 06:12:32] 开始运行: run_all_figures.py
+[2026-01-25 06:13:02] ✅ 成功: run_all_figures.py
+6.2 运行经典基线模型...
+[2026-01-25 06:13:02] 开始运行: classical_baselines.py
+[2026-01-25 11:40:27] ❌ 失败: classical_baselines.py (退出码: 137)
+  失败日志片段:
+6.3 运行分层分析...
+[2026-01-25 11:40:27] 开始运行: stratified_analysis.py
+[2026-01-25 11:40:30] ✅ 成功: stratified_analysis.py
+6.4 运行调度指标对比...
+[2026-01-25 11:40:30] 开始运行: compare_dispatch_metrics.py
+[2026-01-25 11:40:31] ✅ 成功: compare_dispatch_metrics.py
+第七步：重新运行部分成功的脚本以确保完整性
+7.1 重新运行通用鲁棒性测试...
+[2026-01-25 11:40:31] 开始运行: run_universal_robustness.py
+[2026-01-25 11:40:58] ✅ 成功: run_universal_robustness.py
+7.2 运行GBDT脚本 (fixed版本)...
+[2026-01-25 11:40:58] 开始运行: run_gbdt.py
+=== 资源监控 ===
+  可用内存: 659086MB
+  GPU使用率: 15 %
+  GPU显存使用: 0 MiB
+  磁盘使用率: 7%
+=================
+[2026-01-25 11:56:11] ✅ 成功: run_gbdt.py
+实验补全完成!
+完成时间: Sun Jan 25 11:56:11 CST 2026
+主日志文件: logs/run_all_20260125_022855.log
+最终资源状态:
+=== 资源监控 ===
+  可用内存: 656172MB
+  GPU使用率: 12 %
+  GPU显存使用: 0 MiB
+  磁盘使用率: 7%
+=================
+生成实验执行汇总报告...
+实验脚本总数: 20
+成功脚本数: 16
+失败脚本数: 4
+
+关键实验状态检查:
+
+所有实验日志保存在 logs/ 目录中
+使用命令查看详细日志: tail -f logs/run_all_20260125_022855.log
+
+磁盘空间最终检查:

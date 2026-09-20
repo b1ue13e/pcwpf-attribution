@@ -1,0 +1,24 @@
+📊 启动 DM Test 显著性检验...
+🤖 加载 Ultra-LSNT 进行预测...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+✅ 从 checkpoints_ts/main/model_config.json 加载模型配置
+⚠️ 跳过权重 blocks.0.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+⚠️ 跳过权重 blocks.1.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+⚠️ 跳过权重 blocks.2.moe_router.router.weight：形状不匹配 torch.Size([4, 128]) vs torch.Size([4, 129])
+✅ 加载权重，成功加载 152/167 个参数
+   ✅ 成功加载 LightGBM 预测结果
+
+⚔️ Ultra-LSNT vs LightGBM:
+   DM Statistic: 128.9795
+   P-Value     : 0.0000e+00
+   Result      : **Significant (p<0.01)**
+   (正值表示 Baseline 误差更小，失败)

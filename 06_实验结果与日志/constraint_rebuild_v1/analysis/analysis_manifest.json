@@ -1,0 +1,9 @@
+{
+  "metric_files": 32,
+  "total_metric_rows": 20880,
+  "neural_training_completed": 30,
+  "neural_evaluation_completed": 30,
+  "classical_complete": true,
+  "uncertainty": "circular 7-day blocks on available scored days, averaged over optimization seeds; pointwise exploratory",
+  "caveat": "missing days can make a block span more than 7 calendar days; not population-level field generalization"
+}

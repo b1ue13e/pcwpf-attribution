@@ -1,0 +1,109 @@
+\documentclass[10pt,a4paper]{article}
+
+% 页面设置
+\usepackage[margin=0.75in, top=0.6in, bottom=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% 超链接设置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=blue!70!black,
+    pdftitle={Mini-Proposal: Edge-Deployable Sparse MoE for Real-Time Smart Health Sensing},
+    pdfauthor={Junyu Li}
+}
+
+% 定义颜色
+\definecolor{headerblue}{RGB}{30,60,110}
+
+% 字体设置
+\setmainfont{Times New Roman}
+
+% 节标题格式
+\titleformat{\section}
+{\normalsize\bfseries\color{headerblue}\scshape}
+{}{0em}{}[\color{headerblue}\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% 去除页码
+\pagestyle{empty}
+
+% 紧凑列表
+\setlist[itemize]{leftmargin=12pt, itemsep=1pt, topsep=3pt, parsep=0pt}
+
+\begin{document}
+
+% ========== 头部信息 ==========
+\begin{center}
+    {\Large\bfseries Hardware-Aware Sparse MoE for Real-Time\\[2pt]
+    Smart Health Sensing on Resource-Constrained MCUs}
+    
+    \vspace{4pt}
+    
+    {\small Junyu Li | Statistics (Undergraduate) | ljylikezmn999@gmail.com}
+    
+    \vspace{2pt}
+    
+    {\footnotesize Target Position: Summer Research Assistant (Smart Health Sensing)}
+\end{center}
+
+\vspace{4pt}
+
+% ========== 1. Research Motivation ==========
+\section{Research Motivation \& Problem Formulation}
+\vspace{-2pt}
+{\small In the domain of ``Smart Health Sensing'' (e.g., wearable ECG/PPG monitoring), a critical bottleneck exists between algorithmic complexity and physical hardware limits. Continuous extraction of non-stationary physiological signals demands high-fidelity representation learning. However, wearable MCUs (e.g., STM32/ESP32) present extreme constraints: lack of advanced FPUs, minimal SRAM ($<$512 KB), and strict micro-watt power budgets. Deploying dense, monolithic networks (CNNs/RNNs) is inherently anti-hardware, as it incurs maximum computational penalty for every inference step, even when the user is merely resting. My objective is to bridge this gap by bringing statistical rigor into hardware-aware architecture design.}
+
+% ========== 2. Proposed Architecture ==========
+\section{Proposed Architecture: Hardware-Aware Sparse MoE}
+\vspace{-2pt}
+{\small Drawing from my experience in spatio-temporal modeling and tracking non-stationary regime transitions, I propose a \textbf{Hardware-Aware Sparse Mixture-of-Experts (MoE)} tailored for MCUs. Instead of dense computation, inference is dynamically decoupled.
+
+Mathematically, the output $y$ for an input physiological signal $x$ is defined as:
+\vspace{-4pt}
+\begin{equation}
+\small y = \sum_{i=1}^{K} G(x)_i \cdot E_i(x)
+\end{equation}
+\vspace{-4pt}
+
+To guarantee batch-1 latency and strict memory adherence, we enforce a sparse routing constraint $\|G(x)\|_0 = 1$. Beyond traditional accuracy optimization, I propose injecting a \textbf{hardware penalty} directly into the statistical routing mechanism:
+\vspace{-4pt}
+\begin{equation}
+\small \mathcal{L}_{\text{total}} = \mathcal{L}_{\text{task}}(y, \hat{y}) + \lambda \sum_{i=1}^{K} G(x)_i \cdot \text{Cost}(E_i)
+\end{equation}
+\vspace{-4pt}
+
+Here, $\text{Cost}(E_i)$ quantifies the specific SRAM/Flash footprint and MAC operations of the activated expert.
+
+\textbf{On-Demand Expert Activation:}
+\begin{itemize}
+    \item \textbf{Resting-State Expert (Low-Cost):} Activated during $>$90\% of daily life, utilizing minimal parameters (e.g., simple linear models) to maintain near-zero dynamic power.
+    \item \textbf{Anomaly-State Expert (High-Cost):} A highly expressive, quantized TCN activated only during sudden signal shifts (e.g., arrhythmia), justifying its compute cost for medical-grade accuracy.
+\end{itemize}
+}
+
+% ========== 3. Hardware Deployment ==========
+\section{Hardware Deployment \& Co-Optimization Strategy}
+\vspace{-2pt}
+{\small Theoretical model compression must respect rigid physical memory hierarchies. To deploy this architecture on ESP32/STM32 platforms, the co-optimization strategy involves:
+\begin{itemize}
+    \item \textbf{Aggressive Post-Training Quantization (PTQ):} Compressing PyTorch FP32 models to INT8/INT4 using calibration datasets, slashing the memory footprint by 75\% while exploiting integer SIMD instructions native to modern MCUs.
+    
+    \item \textbf{Static Memory Allocation (SRAM/Flash Mapping):} Rather than relying on risky, high-latency DMA on-the-fly fetching, I propose statically pinning the Router and the lightweight Resting Expert to SRAM. The weights of the complex Anomaly Expert reside in Flash and are executed directly via XIP (Execute-In-Place) or pre-allocated SRAM buffers, guaranteeing deterministic latency.
+    
+    \item \textbf{Physics-Guided Guardrails:} Statistical priors will be coded as lightweight C/C++ assertion layers, ensuring the model's output trajectories never violate fundamental human physiological limits.
+\end{itemize}
+}
+
+% ========== 4. Expected Contributions ==========
+\section{Expected Contributions}
+\vspace{-2pt}
+{\small By bringing statistical rigor and hardware-aware architectural optimization into your research loop, I am eager to contribute immediately to the lab's benchmarks while deepening my expertise in embedded systems deployment under expert guidance.}
+
+\end{document}

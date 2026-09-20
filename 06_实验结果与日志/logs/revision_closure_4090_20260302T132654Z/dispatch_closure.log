@@ -1,0 +1,2 @@
+DRY RUN
+C:\Users\32110\AppData\Local\Programs\Python\Python310\python.exe run_dispatch_closure_mapping_decision_4090.py --device cuda --mapping-methods affine,isotonic,quantile --risk-q 0.9 --ramp-q 0.9

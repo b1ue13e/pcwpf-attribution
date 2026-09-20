@@ -1,0 +1,27 @@
+{
+ "n_included": 21,
+ "D1": {
+  "forecast-derived": 9,
+  "historical-static": 7,
+  "intrinsic": 4,
+  "learned-online": 1
+ },
+ "D2": {
+  "inference-architecture": 6,
+  "training-loss": 15
+ },
+ "D3": {
+  "forecast-input": 10,
+  "contemporaneous-state": 4,
+  "none": 7
+ },
+ "D4": {
+  "no-code": 20,
+  "code-mismatch": 1
+ },
+ "D5": {
+  "none-reported": 19,
+  "ablation-absent": 1,
+  "harm-quantified": 1
+ }
+}

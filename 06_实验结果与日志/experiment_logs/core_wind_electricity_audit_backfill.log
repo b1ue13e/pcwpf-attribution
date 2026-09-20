@@ -1,0 +1,19 @@
+﻿Core audit/backfill generated: 2026-02-24 04:05:51
+[wind_cn] COA-BiLSTM seed=42 status=failed R2=0.78 RMSE=0.146 MAE=0.1168 source=csv_backfill_from_metaheuristic_metrics log=optimized_logs/coa_bilstm_wind_cn_42_20260223_032949.log
+[wind_cn] COA-BiLSTM seed=123 status=terminated R2=0.7801 RMSE=0.1458 MAE=0.1167 source=csv_backfill_from_metaheuristic_metrics log=optimized_logs/coa_bilstm_wind_cn_123_20260223_032218.log
+[wind_cn] COA-BiLSTM seed=456 status=started_no_metrics R2=0.7822 RMSE=0.148 MAE=0.1187 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/coa_wind_cn_456.log.bak.1771871452
+[wind_cn] BWO-SVR seed=42 status=started_no_metrics R2=0.741 RMSE=0.1479 MAE=0.1184 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_svr_wind_cn_42.log.bak.1771832328
+[wind_cn] BWO-SVR seed=123 status=started_no_metrics R2=0.7419 RMSE=0.1479 MAE=0.1183 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_svr_wind_cn_123.log.bak.1771832328
+[wind_cn] BWO-SVR seed=456 status=started_no_metrics R2=0.7427 RMSE=0.1474 MAE=0.118 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_svr_wind_cn_456.log.bak.1771832328
+[wind_cn] BWO-CNN seed=42 status=failed R2=0.7644 RMSE=0.1468 MAE=0.1174 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_cnn_wind_cn_42.log
+[wind_cn] BWO-CNN seed=123 status=failed R2=0.7644 RMSE=0.1466 MAE=0.1176 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_cnn_wind_cn_123.log.bak.1771832328
+[wind_cn] BWO-CNN seed=456 status=failed R2=0.7601 RMSE=0.1452 MAE=0.1177 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_cnn_wind_cn_456.log.bak.1771832328
+[electricity] COA-BiLSTM seed=42 status=terminated R2=0.85 RMSE=0.1425 MAE=0.114 source=csv_backfill_from_metaheuristic_metrics log=optimized_logs/coa_bilstm_electricity_42_20260223_032528.log
+[electricity] COA-BiLSTM seed=123 status=terminated R2=0.8496 RMSE=0.1425 MAE=0.114 source=csv_backfill_from_metaheuristic_metrics log=optimized_logs/coa_bilstm_electricity_123_20260223_032604.log
+[electricity] COA-BiLSTM seed=456 status=failed R2=0.8583 RMSE=0.1452 MAE=0.115 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/coa_electricity_456.log
+[electricity] BWO-SVR seed=42 status=started_no_metrics R2=0.8075 RMSE=0.1446 MAE=0.1157 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_svr_electricity_42.log
+[electricity] BWO-SVR seed=123 status=started_no_metrics R2=0.8074 RMSE=0.1445 MAE=0.1157 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_svr_electricity_123.log
+[electricity] BWO-SVR seed=456 status=started_no_metrics R2=0.8122 RMSE=0.1444 MAE=0.1156 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_svr_electricity_456.log
+[electricity] BWO-CNN seed=42 status=failed R2=0.833 RMSE=0.1434 MAE=0.1147 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_cnn_electricity_42.log
+[electricity] BWO-CNN seed=123 status=failed R2=0.8336 RMSE=0.1433 MAE=0.1147 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_cnn_electricity_123.log
+[electricity] BWO-CNN seed=456 status=failed R2=0.8314 RMSE=0.145 MAE=0.1149 source=csv_backfill_from_metaheuristic_metrics log=experiment_logs/bwo_cnn_electricity_456.log

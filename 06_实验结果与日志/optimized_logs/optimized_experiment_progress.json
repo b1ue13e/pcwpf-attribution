@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-02-23T03:27:15.518460",
+  "status": {
+    "total_experiments": 45,
+    "completed": 0,
+    "failed": 8,
+    "running": -8,
+    "queued": 45
+  },
+  "elapsed_time": "0:04:57.415273",
+  "gpu_memory_usage": [
+    0,
+    0
+  ],
+  "running_tasks": [
+    [
+      "coa_bilstm",
+      "electricity",
+      999
+    ]
+  ],
+  "cpu_percent": 7.0,
+  "memory_percent": 7.8
+}

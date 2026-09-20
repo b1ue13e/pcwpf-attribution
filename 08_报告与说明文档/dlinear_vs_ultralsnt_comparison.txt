@@ -1,0 +1,9 @@
+DLinear vs Ultra-LSNT 延迟对比分析
+==================================================
+DLinear (CPU模拟树莓派): 0.27 ms
+Ultra-LSNT (GPU RTX 4090): 15.29 ms
+TimeMixer (GPU RTX 4090): 3.36 ms
+延迟比 DLinear/Ultra-LSNT: 0.02x
+延迟比 DLinear/TimeMixer: 0.08x
+
+注: 对比需考虑硬件差异 (CPU vs GPU)

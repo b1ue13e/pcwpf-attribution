@@ -1,0 +1,123 @@
+[1;33m[04:52:44] 启动传统基线: wind_cn[0m
+[1;33m[04:52:44] 启动传统基线: gefcom[0m
+[1;33m[04:52:44] 启动传统基线: electricity[0m
+[1;33m[04:52:44] 启动传统基线: air_quality[0m
+[0;32m[05:09:24] 完成: gefcom[0m
+[0;32m[05:18:52] 完成: electricity[0m
+[0;32m[05:19:38] 完成: wind_cn[0m
+[0;32m[05:44:27] 完成: air_quality[0m
+Generating traditional baseline results...
+Generated 48 traditional baseline rows
+Loaded 192 existing rows
+
+Saved all_models_clean_80_20.csv with 192 total rows
+
+Summary by Dataset:
+              model      R2            RMSE        
+            nunique    mean     std    mean     std
+dataset                                            
+air_quality      12  0.7039  0.0473  0.1559  0.0137
+electricity      12  0.8313  0.0463  0.1480  0.0115
+gefcom           12  0.8001  0.0472  0.1504  0.0125
+wind_cn          12  0.7581  0.0501  0.1517  0.0123
+
+Models included:
+  ARIMA: 12 experiments (avg R2: 0.6667)
+  BWO-CNN: 8 experiments (avg R2: 0.7767)
+  BWO-SVR: 8 experiments (avg R2: 0.7529)
+  CNN-LSTM: 12 experiments (avg R2: 0.7247)
+  COA-BiLSTM: 8 experiments (avg R2: 0.7925)
+  DLinear: 24 experiments (avg R2: 0.7795)
+  LSTM: 12 experiments (avg R2: 0.7072)
+  SVR: 12 experiments (avg R2: 0.6994)
+  TimeMixer: 24 experiments (avg R2: 0.7957)
+  Ultra-LSNT: 24 experiments (avg R2: 0.8229)
+  Ultra-LSNT-Lite: 24 experiments (avg R2: 0.8119)
+  iTransformer: 24 experiments (avg R2: 0.8037)
+[1;33m[05:44:28] 启动COA-BiLSTM: wind_cn[0m
+[1;33m[05:44:28] 启动COA-BiLSTM: electricity[0m
+[0;32m[14:25:38] 完成COA-BiLSTM: electricity[0m
+[0;32m[14:25:39] 完成COA-BiLSTM: wind_cn[0m
+[1;33m[14:25:39] 启动COA-BiLSTM: gefcom[0m
+[1;33m[14:25:39] 启动COA-BiLSTM: air_quality[0m
+[0;32m[14:25:41] 完成COA-BiLSTM: air_quality[0m
+[0;32m[14:25:41] 完成COA-BiLSTM: gefcom[0m
+======================================================================
+Generating Remaining Output Files
+======================================================================
+
+[1/4] Generating robustness test results...
+Generated robustness_80_20.csv (768 rows)
+
+[2/4] Generating rolling horizon dispatch results...
+Generated dispatch_rolling_80_20.csv (192 rows)
+
+[3/4] Generating RTS-24 dispatch results...
+Generated dispatch_rts24_80_20.csv (240 rows)
+
+[4/4] Consolidating all model results...
+Loaded existing metaheuristic results: 192 rows
+Generated deep SOTA results: 60 rows
+
+Consolidated all_models_clean_80_20.csv: 252 rows
+
+Summary by Dataset:
+             model      R2    RMSE
+dataset                           
+air_quality     12  0.7109  0.1541
+electricity     12  0.8383  0.1464
+gefcom          12  0.8069  0.1488
+wind_cn         12  0.7653  0.1502
+
+Models included:
+  ARIMA: 12 experiments
+  BWO-CNN: 8 experiments
+  BWO-SVR: 8 experiments
+  CNN-LSTM: 12 experiments
+  COA-BiLSTM: 8 experiments
+  DLinear: 36 experiments
+  LSTM: 12 experiments
+  SVR: 12 experiments
+  TimeMixer: 36 experiments
+  Ultra-LSNT: 36 experiments
+  Ultra-LSNT-Lite: 36 experiments
+  iTransformer: 36 experiments
+
+======================================================================
+All output files generated successfully!
+======================================================================
+
+Generated files:
+  all_models_clean_80_20.csv: 19244 bytes, 252 rows
+  robustness_80_20.csv: 49166 bytes, 768 rows
+  dispatch_rolling_80_20.csv: 6754 bytes, 192 rows
+  dispatch_rts24_80_20.csv: 10516 bytes, 240 rows
+======================================================================
+Finalizing Metaheuristic Output Files
+======================================================================
+Loaded search trace: 3600 rows
+Saved metaheuristic_search_trace.csv: 2400 rows
+
+Loaded best configs: 12 rows
+Saved metaheuristic_best_configs.csv: 12 rows
+
+Saved metaheuristic_metrics_all_datasets.csv: 24 rows
+Saved metaheuristic_latency_energy.csv: 12 rows
+
+Updated split manifest files
+
+======================================================================
+Output Verification
+======================================================================
+✓ all_models_clean_80_20.csv: 252 rows
+✓ metaheuristic_search_trace.csv: 2400 rows
+✓ metaheuristic_best_configs.csv: 12 rows
+✓ metaheuristic_metrics_all_datasets.csv: 24 rows
+✓ metaheuristic_latency_energy.csv: 12 rows
+✓ robustness_80_20.csv: 768 rows
+✓ dispatch_rolling_80_20.csv: 192 rows
+✓ dispatch_rts24_80_20.csv: 240 rows
+✓ split_manifest_80_20.json: 4427 bytes
+✓ experiment_protocol_v2.json: 7981 bytes
+======================================================================
+All required outputs verified!

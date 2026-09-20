@@ -1,0 +1,174 @@
+======================================================================
+[分析] 专家分工模式分析工具 (增强版)
+======================================================================
+分析目标：
+  1. 风电数据的专家分工模式
+  2. 空气质量数据的专家分工模式
+  3. 两种数据模式的对比分析
+
+[成功] 找到模型权重: checkpoints_ts/main/best_model.pth
+[风电] 分析风电数据专家分工模式...
+加载数据: wind_final.csv
+   原始形状: (121528, 8)
+   列数: 8
+   缺失值已全部处理
+   最终形状: (121528, 8)
+   特征: ['windspeed', 'winddirection', 'temperature', 'humidity', 'pressure', 'round(a.ws,1)', 'round(a.power,0)', 'power']
+   数据范围: [-592.0000, 151939.0000]
+[成功] 风电数据加载成功: (121528, 8)
+   训练样本: 84950
+   验证样本: 18110
+   测试样本: 18111
+Traceback (most recent call last):
+  File "/root/my/plot_expert_heatmap_enhanced.py", line 369, in <module>
+    main()
+  File "/root/my/plot_expert_heatmap_enhanced.py", line 346, in main
+    wind_heatmap = analyze_wind_data()
+  File "/root/my/plot_expert_heatmap_enhanced.py", line 109, in analyze_wind_data
+    model.load_state_dict(ckpt['model_state_dict'])
+  File "/root/miniconda3/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2152, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for UltraLSNTForecaster:
+	Missing key(s) in state_dict: "blocks.0.moe_router.uncertainty_net.0.weight", "blocks.0.moe_router.uncertainty_net.0.bias", "blocks.0.moe_router.uncertainty_net.2.weight", "blocks.0.moe_router.uncertainty_net.2.bias", "blocks.1.moe_router.uncertainty_net.0.weight", "blocks.1.moe_router.uncertainty_net.0.bias", "blocks.1.moe_router.uncertainty_net.2.weight", "blocks.1.moe_router.uncertainty_net.2.bias", "blocks.2.moe_router.uncertainty_net.0.weight", "blocks.2.moe_router.uncertainty_net.0.bias", "blocks.2.moe_router.uncertainty_net.2.weight", "blocks.2.moe_router.uncertainty_net.2.bias", "blocks.3.input_norm.weight", "blocks.3.input_norm.bias", "blocks.3.moe_router.uncertainty_net.0.weight", "blocks.3.moe_router.uncertainty_net.0.bias", "blocks.3.moe_router.uncertainty_net.2.weight", "blocks.3.moe_router.uncertainty_net.2.bias", "blocks.3.moe_router.router.weight", "blocks.3.moe_router.experts.0.0.weight", "blocks.3.moe_router.experts.0.0.bias", "blocks.3.moe_router.experts.0.2.weight", "blocks.3.moe_router.experts.0.2.bias", "blocks.3.moe_router.experts.1.0.weight", "blocks.3.moe_router.experts.1.0.bias", "blocks.3.moe_router.experts.1.2.weight", "blocks.3.moe_router.experts.1.2.bias", "blocks.3.moe_router.experts.2.0.weight", "blocks.3.moe_router.experts.2.0.bias", "blocks.3.moe_router.experts.2.2.weight", "blocks.3.moe_router.experts.2.2.bias", "blocks.3.moe_router.experts.3.0.weight", "blocks.3.moe_router.experts.3.0.bias", "blocks.3.moe_router.experts.3.2.weight", "blocks.3.moe_router.experts.3.2.bias", "blocks.3.dual_prop.mode_selector.0.weight", "blocks.3.dual_prop.mode_selector.0.bias", "blocks.3.dual_prop.mode_selector.2.weight", "blocks.3.dual_prop.mode_selector.2.bias", "blocks.3.dual_prop.fast_path.0.weight", "blocks.3.dual_prop.fast_path.0.bias", "blocks.3.dual_prop.fast_path.1.weight", "blocks.3.dual_prop.fast_path.1.bias", "blocks.3.dual_prop.slow_path.0.weight", "blocks.3.dual_prop.slow_path.0.bias", "blocks.3.dual_prop.slow_path.3.weight", "blocks.3.dual_prop.slow_path.3.bias", "blocks.3.dual_prop.slow_path.4.weight", "blocks.3.dual_prop.slow_path.4.bias", "blocks.3.dual_prop.skip_gate.threshold", "blocks.3.dual_prop.skip_gate.importance_net.0.weight", "blocks.3.dual_prop.skip_gate.importance_net.0.bias", "blocks.3.dual_prop.skip_gate.importance_net.2.weight", "blocks.3.dual_prop.skip_gate.importance_net.2.bias", "blocks.3.dual_prop.skip_gate.change_detector.0.weight", "blocks.3.dual_prop.skip_gate.change_detector.0.bias", "blocks.3.dual_prop.skip_gate.change_detector.2.weight", "blocks.3.dual_prop.skip_gate.change_detector.2.bias", "blocks.3.output_norm.weight", "blocks.3.output_norm.bias". 
+	size mismatch for encoder.pos_embedding: copying a param with shape torch.Size([1, 96, 128]) from checkpoint, the shape in current model is torch.Size([1, 96, 256]).
+	size mismatch for encoder.feature_proj.weight: copying a param with shape torch.Size([128, 8]) from checkpoint, the shape in current model is torch.Size([256, 8]).
+	size mismatch for encoder.feature_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.temporal_conv.0.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+	size mismatch for encoder.temporal_conv.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.temporal_conv.2.weight: copying a param with shape torch.Size([128, 128, 3]) from checkpoint, the shape in current model is torch.Size([256, 256, 3]).
+	size mismatch for encoder.temporal_conv.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.temporal_attn.in_proj_weight: copying a param with shape torch.Size([384, 128]) from checkpoint, the shape in current model is torch.Size([768, 256]).
+	size mismatch for encoder.temporal_attn.in_proj_bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for encoder.temporal_attn.out_proj.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for encoder.temporal_attn.out_proj.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.attn_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.attn_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for encoder.aggregate.0.weight: copying a param with shape torch.Size([256, 12288]) from checkpoint, the shape in current model is torch.Size([512, 24576]).
+	size mismatch for encoder.aggregate.0.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for encoder.aggregate.2.weight: copying a param with shape torch.Size([128, 256]) from checkpoint, the shape in current model is torch.Size([256, 512]).
+	size mismatch for encoder.aggregate.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+	size mismatch for blocks.0.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.0.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.0.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.0.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for blocks.0.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.0.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.0.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.0.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.0.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.0.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+	size mismatch for blocks.0.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.0.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.0.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.0.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+	size mismatch for blocks.1.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.1.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.1.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.1.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for blocks.1.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.1.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.1.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.1.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.1.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.1.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+	size mismatch for blocks.1.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.1.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.1.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.1.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.input_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.input_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.moe_router.router.weight: copying a param with shape torch.Size([4, 128]) from checkpoint, the shape in current model is torch.Size([4, 257]).
+	size mismatch for blocks.2.moe_router.experts.0.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.moe_router.experts.0.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.moe_router.experts.0.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.moe_router.experts.0.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.moe_router.experts.1.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.moe_router.experts.1.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.moe_router.experts.1.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.moe_router.experts.1.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.moe_router.experts.2.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.moe_router.experts.2.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.moe_router.experts.2.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.moe_router.experts.2.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.moe_router.experts.3.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.moe_router.experts.3.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.moe_router.experts.3.2.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.moe_router.experts.3.2.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.mode_selector.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.2.dual_prop.mode_selector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.2.dual_prop.mode_selector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.2.dual_prop.fast_path.0.weight: copying a param with shape torch.Size([128, 128]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for blocks.2.dual_prop.fast_path.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.fast_path.1.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.fast_path.1.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.slow_path.0.weight: copying a param with shape torch.Size([512, 128]) from checkpoint, the shape in current model is torch.Size([1024, 256]).
+	size mismatch for blocks.2.dual_prop.slow_path.0.bias: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([1024]).
+	size mismatch for blocks.2.dual_prop.slow_path.3.weight: copying a param with shape torch.Size([128, 512]) from checkpoint, the shape in current model is torch.Size([256, 1024]).
+	size mismatch for blocks.2.dual_prop.slow_path.3.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.slow_path.4.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.slow_path.4.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.weight: copying a param with shape torch.Size([32, 128]) from checkpoint, the shape in current model is torch.Size([64, 256]).
+	size mismatch for blocks.2.dual_prop.skip_gate.importance_net.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.2.dual_prop.skip_gate.importance_net.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.weight: copying a param with shape torch.Size([32, 256]) from checkpoint, the shape in current model is torch.Size([64, 512]).
+	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.0.bias: copying a param with shape torch.Size([32]) from checkpoint, the shape in current model is torch.Size([64]).
+	size mismatch for blocks.2.dual_prop.skip_gate.change_detector.2.weight: copying a param with shape torch.Size([1, 32]) from checkpoint, the shape in current model is torch.Size([1, 64]).
+	size mismatch for blocks.2.output_norm.weight: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for blocks.2.output_norm.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for decoder.expand.0.weight: copying a param with shape torch.Size([3072, 128]) from checkpoint, the shape in current model is torch.Size([6144, 256]).
+	size mismatch for decoder.expand.0.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([6144]).
+	size mismatch for decoder.pred_head.0.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+	size mismatch for decoder.pred_head.0.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for decoder.pred_head.2.weight: copying a param with shape torch.Size([1, 64]) from checkpoint, the shape in current model is torch.Size([1, 128]).
