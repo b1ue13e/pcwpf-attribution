@@ -1,0 +1,41 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verification-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run canonical consistency verification gate
+        run: python .agents/scripts/verify_gate.py
+
+  build-manuscript-pdf:
+    runs-on: ubuntu-latest
+    needs: verification-gate
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - name: Compile manuscript (tectonic)
+        working-directory: 01_论文投稿材料/active_manuscript
+        run: tectonic -X compile --keep-logs main.tex
+      - name: Upload compiled PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-pdf
+          path: 01_论文投稿材料/active_manuscript/main.pdf
+          if-no-files-found: error
