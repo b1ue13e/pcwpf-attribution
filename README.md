@@ -1,59 +1,54 @@
-# 条件性归纳护栏：物理先验何时增强、模仿或损害风电预测决策
+# Conditional Inductive Guardrails
+
+[中文说明](README.zh-CN.md) · [Repository](https://github.com/b1ue13e/pcwpf-attribution)
 
 > **Conditional Inductive Guardrails: Identifying When Physical Priors Enhance, Mimic, or Impair Decisions in Wind Power Forecasting**
->
-> Applied Energy 投稿项目。当前状态：**minor revision 修订中**。本仓库为**私有仓库**，审稿结束后可转公开。
 
-## 项目定位
+This repository investigates empirical attribution in wind power forecasting: how much of the performance gain attributed to physical domain priors actually arises from physical domain knowledge rather than regularized capacity, feature scaling, or evaluation artifacts.
 
-论文的核心问题只有一个：**归因**——文献中报告的"物理先验带来的性能提升"，有多少真正来自先验里的物理内容本身？通过形式与权重完全匹配的伪置乱（pseudo-scrambled）安慰剂对照、预算匹配的信息消融、边界压力测试与决策对齐度量（非对称调度损失，r=2），把物理先验刻画为**条件性归纳护栏**（conditional inductive guardrails），并给出 C1–C5 报告清单。
+## Overview and Current Scope
 
-## 目录结构
+The default branch (`main`) serves as a reproducible evidence and manuscript archive. The investigation uses pseudo-scrambled placebos, budget-matched ablations, boundary stress tests, and asymmetric dispatch loss to characterize physical priors as conditional inductive guardrails.
 
-| 目录 | 内容 |
-|---|---|
-| `01_论文投稿材料/active_manuscript/` | **canonical 投稿正文**：LaTeX 源、figures、tables、main.pdf |
-| `01_论文投稿材料/chinese_manuscript/` | 中文对照稿 |
-| `04_数据集/constraint_rebuild_v2/*.csv` | 三风场规范 10 分钟 SCADA CSV + Elexon 系统价格（原始 zip 与全量数据从 Zenodo / BMRS 获取） |
-| `05_实验代码与脚本/` | 全部实验、审计与图生成脚本 |
-| `06_实验结果与日志/` | 分析级证据（审计报告 JSON、bootstrap CSV、消融对比表）；大体积运行缓存不入库 |
-| `03_图表与绘图素材/` | 矢量图源（TIFF 生产母版不入库） |
-| `.agents/scripts/verify_gate.py` | 验证门：任务状态 + 跨工件数值一致性检查 |
-| `.agent_state/` | 任务台账 / 证据台账 / 决策日志 / 评审报告（可靠性协议状态） |
+The active manuscript draft is organized under the four-level evidence structure (Centerpiece -> Boundary Map -> Decision Alignment -> Supporting Forensics).
 
-## 本地验证
+## Setup and Verification
+
+The repository relies on standard Python 3.12 tooling and Tectonic for document compilation.
+
+### Run Verification Gate
+
+Run the canonical numerical and state consistency gate across registered claims:
 
 ```bash
-python .agents/scripts/verify_gate.py   # exit 0 即 PASS
+python .agents/scripts/verify_gate.py
 ```
 
-## 本地编译投稿 PDF
+This script audits task state, claim ledger consistency, and core numerical assertions across manuscript and evidence files.
+
+### Compile Manuscript
+
+To compile the manuscript PDF from source using Tectonic:
 
 ```bash
-# 方式一（推荐，单二进制）
-tectonic 01_论文投稿材料/active_manuscript/main.tex
-# 方式二（传统工具链）
-cd 01_论文投稿材料/active_manuscript && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+cd "01_论文投稿材料/active_manuscript"
+tectonic -X compile --keep-logs main.tex
 ```
 
-## CI（GitHub Actions）
+The compiled PDF is also uploaded as a build artifact in CI via [`.github/workflows/verify.yml`](.github/workflows/verify.yml).
 
-[![verify](https://github.com/b1ue13e/pcwpf-attribution/actions/workflows/verify.yml/badge.svg)](https://github.com/b1ue13e/pcwpf-attribution/actions/workflows/verify.yml)
+### Reproducibility and Data Boundary
 
-每次 push / PR：① 运行验证门（状态文件 + 规范数值一致性）→ ② tectonic 云端编译 `main.tex` → ③ 上传 `main.pdf` 为构建产物。
+- **Tracked material**: Manuscript sources, claim-evidence matrices, forensic audits, verification scripts, and publication figures.
+- **Excluded material**: Raw 10-minute SCADA telemetry from external wind farms and heavy multi-seed training runs are omitted from this Git repository per `.gitignore` to preserve a clean repository size.
+- **Evidence audit**: Refer to [`CLAIM_EVIDENCE_MATRIX.md`](CLAIM_EVIDENCE_MATRIX.md) and [`PHASE5_SUBMISSION_READINESS_REPORT.md`](PHASE5_SUBMISSION_READINESS_REPORT.md) for full provenance of reported empirical figures.
 
-## 数据来源（公开许可）
+## Documentation Navigation
 
-- Kelmarsh：`10.5281/zenodo.5841834`（Cubico，CC-BY 4.0）
-- Penmanshiel：`10.5281/zenodo.5946808`（Cubico，CC-BY 4.0）
-- Hill of Towie：`10.5281/zenodo.20204946`（RES/TRIG，CC-BY 4.0）
-- Elexon System Buy Price：BMRS portal（UK Open Government Licence v3.0）
+- [Claim-Evidence Matrix](CLAIM_EVIDENCE_MATRIX.md) and [Claim Map](claim_evidence_map.md): complete mapping from manuscript claims to empirical evidence.
+- [Manuscript Architecture](NEW_MANUSCRIPT_ARCHITECTURE.md): the four-tier evidence hierarchy and section design.
+- [Phase 5 Review Report](PHASE5_SUBMISSION_READINESS_REPORT.md): independent review record verifying headline figures and noting residual text boundaries.
+- [Task Contract](START_PROMPT.md): execution standards, non-negotiable checks, and anti-drift rules.
+- [CI Workflow](.github/workflows/verify.yml): automated validation configuration.
 
-## 分支与发布
-
-- 本地 `revision` 分支同步推送到远端默认分支 `main`
-- Release `v2026.09-r1`：修订快照，附 `main.pdf`
-
-## 隐私
-
-未发表稿件内容请勿外传；`09_项目申请_简历_个人材料/`、`90_环境与第三方依赖/`、`99_待确认归档/` 等目录已被 .gitignore 排除，不会进入 GitHub。
+Local development checkouts and feature branches may contain private working notes or unpushed logs; this documentation describes only the files checked into the remote default branch.
